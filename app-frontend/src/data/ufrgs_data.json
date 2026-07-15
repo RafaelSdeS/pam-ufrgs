@@ -1,0 +1,2065 @@
+{
+    "curriculum": [
+        {
+            "etapa": "Etapa 1",
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "carater": "Obrigatória",
+            "creditos": "6",
+            "carga_horaria": "90",
+            "pre_requisitos": []
+        },
+        {
+            "etapa": "Etapa 1",
+            "codigo": "MAT01353",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA I - A",
+            "carater": "Obrigatória",
+            "creditos": "6",
+            "carga_horaria": "90",
+            "pre_requisitos": []
+        },
+        {
+            "etapa": "Etapa 1",
+            "codigo": "INF01087",
+            "nome": "INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": []
+        },
+        {
+            "etapa": "Etapa 1",
+            "codigo": "INF05508",
+            "nome": "LÓGICA PARA COMPUTAÇÃO",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": []
+        },
+        {
+            "etapa": "Etapa 1",
+            "codigo": "INF05008",
+            "nome": "PENSAMENTO COMPUTACIONAL N",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": []
+        },
+        {
+            "etapa": "Etapa 2",
+            "codigo": "INF01075",
+            "nome": "ARQUITETURA DE COMPUTADORES",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01087 - INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO",
+                "INF01202 - ALGORÍTMOS E PROGRAMAÇÃO - CIC"
+            ]
+        },
+        {
+            "etapa": "Etapa 2",
+            "codigo": "MAT01354",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+            "carater": "Obrigatória",
+            "creditos": "6",
+            "carga_horaria": "90",
+            "pre_requisitos": [
+                "MAT01353 - CÁLCULO E GEOMETRIA ANALÍTICA I - A"
+            ]
+        },
+        {
+            "etapa": "Etapa 2",
+            "codigo": "INF01203",
+            "nome": "ESTRUTURAS DE DADOS",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01202 - ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+                "INF05008 - PENSAMENTO COMPUTACIONAL N"
+            ]
+        },
+        {
+            "etapa": "Etapa 2",
+            "codigo": "MAT01375",
+            "nome": "MATEMÁTICA DISCRETA B",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": []
+        },
+        {
+            "etapa": "Etapa 2",
+            "codigo": "MAT02219",
+            "nome": "PROBABILIDADE E ESTATÍSTICA",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "MAT01353 - CÁLCULO E GEOMETRIA ANALÍTICA I - A"
+            ]
+        },
+        {
+            "etapa": "Etapa 2",
+            "codigo": "INF01088",
+            "nome": "TESTE E VERIFICAÇÃO DE SOFTWARE",
+            "carater": "Obrigatória",
+            "creditos": "2",
+            "carga_horaria": "30",
+            "pre_requisitos": [
+                "INF01202 - ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+                "INF05508 - LÓGICA PARA COMPUTAÇÃO"
+            ]
+        },
+        {
+            "etapa": "Etapa 3",
+            "codigo": "INF01145",
+            "nome": "BANCOS DE DADOS",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01203 - ESTRUTURAS DE DADOS"
+            ]
+        },
+        {
+            "etapa": "Etapa 3",
+            "codigo": "INF01120",
+            "nome": "DESENVOLVIMENTO DE SOFTWARE",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01203 - ESTRUTURAS DE DADOS"
+            ]
+        },
+        {
+            "etapa": "Etapa 3",
+            "codigo": "INF01086",
+            "nome": "PROJETO DE CIRCUITOS DIGITAIS",
+            "carater": "Obrigatória",
+            "creditos": "6",
+            "carga_horaria": "90",
+            "pre_requisitos": [
+                "INF01075 - ARQUITETURA DE COMPUTADORES"
+            ]
+        },
+        {
+            "etapa": "Etapa 3",
+            "codigo": "INF05027",
+            "nome": "PROJETO E ANÁLISE DE ALGORITMOS I",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01203 - ESTRUTURAS DE DADOS",
+                "MAT01353 - CÁLCULO E GEOMETRIA ANALÍTICA I - A",
+                "MAT01375 - MATEMÁTICA DISCRETA B"
+            ]
+        },
+        {
+            "etapa": "Etapa 3",
+            "codigo": "INF05005",
+            "nome": "TEORIA DA COMPUTAÇÃO I",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF05508 - LÓGICA PARA COMPUTAÇÃO",
+                "MAT01375 - MATEMÁTICA DISCRETA B"
+            ]
+        },
+        {
+            "etapa": "Etapa 4",
+            "codigo": "MAT01355",
+            "nome": "ÁLGEBRA LINEAR I - A",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "MAT01353 - CÁLCULO E GEOMETRIA ANALÍTICA I - A"
+            ]
+        },
+        {
+            "etapa": "Etapa 4",
+            "codigo": "INF01127",
+            "nome": "ENGENHARIA DE SOFTWARE N",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01120 - DESENVOLVIMENTO DE SOFTWARE"
+            ]
+        },
+        {
+            "etapa": "Etapa 4",
+            "codigo": "INF01043",
+            "nome": "INTERAÇÃO HUMANO-COMPUTADOR E EXPERIÊNCIA DO USUÁRIO",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01120 - DESENVOLVIMENTO DE SOFTWARE"
+            ]
+        },
+        {
+            "etapa": "Etapa 4",
+            "codigo": "INF01113",
+            "nome": "ORGANIZAÇÃO DE COMPUTADORES",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01086 - PROJETO DE CIRCUITOS DIGITAIS"
+            ]
+        },
+        {
+            "etapa": "Etapa 4",
+            "codigo": "INF05028",
+            "nome": "PROJETO E ANÁLISE DE ALGORITMOS II",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF05027 - PROJETO E ANÁLISE DE ALGORITMOS I"
+            ]
+        },
+        {
+            "etapa": "Etapa 4",
+            "codigo": "INF05501",
+            "nome": "TEORIA DA COMPUTAÇÃO II",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF05005 - TEORIA DA COMPUTAÇÃO I"
+            ]
+        },
+        {
+            "etapa": "Etapa 5",
+            "codigo": "MAT01032",
+            "nome": "CÁLCULO NUMÉRICO A",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01202 - ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+                "MAT01355 - ÁLGEBRA LINEAR I - A"
+            ]
+        },
+        {
+            "etapa": "Etapa 5",
+            "codigo": "INF01047",
+            "nome": "COMPUTAÇÃO GRÁFICA E VISUALIZAÇÃO I",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01203 - ESTRUTURAS DE DADOS",
+                "MAT01354 - CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+                "MAT01355 - ÁLGEBRA LINEAR I - A"
+            ]
+        },
+        {
+            "etapa": "Etapa 5",
+            "codigo": "INF01048",
+            "nome": "INTELIGÊNCIA ARTIFICIAL",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF05027 - PROJETO E ANÁLISE DE ALGORITMOS I",
+                "MAT02219 - PROBABILIDADE E ESTATÍSTICA"
+            ]
+        },
+        {
+            "etapa": "Etapa 5",
+            "codigo": "INF99003",
+            "nome": "PROJETO EM CIÊNCIA E INOVAÇÃO",
+            "carater": "Obrigatória",
+            "creditos": "8",
+            "carga_horaria": "120",
+            "pre_requisitos": [
+                "INF01087 - INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO",
+                "INF01120 - DESENVOLVIMENTO DE SOFTWARE",
+                "INF05027 - PROJETO E ANÁLISE DE ALGORITMOS I",
+                "MAT02219 - PROBABILIDADE E ESTATÍSTICA"
+            ]
+        },
+        {
+            "etapa": "Etapa 5",
+            "codigo": "INF01142",
+            "nome": "SISTEMAS OPERACIONAIS I N",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01075 - ARQUITETURA DE COMPUTADORES",
+                "INF01203 - ESTRUTURAS DE DADOS"
+            ]
+        },
+        {
+            "etapa": "Etapa 6",
+            "codigo": "INF01017",
+            "nome": "APRENDIZADO DE MÁQUINA",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01203 - ESTRUTURAS DE DADOS",
+                "MAT01354 - CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+                "MAT01355 - ÁLGEBRA LINEAR I - A",
+                "MAT02219 - PROBABILIDADE E ESTATÍSTICA"
+            ]
+        },
+        {
+            "etapa": "Etapa 6",
+            "codigo": "INF05029",
+            "nome": "LINGUAGENS DE PROGRAMAÇÃO I",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01203 - ESTRUTURAS DE DADOS",
+                "INF05005 - TEORIA DA COMPUTAÇÃO I"
+            ]
+        },
+        {
+            "etapa": "Etapa 6",
+            "codigo": "INF01046",
+            "nome": "PROCESSAMENTO DE IMAGENS E VISÃO COMPUTACIONAL I",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01203 - ESTRUTURAS DE DADOS",
+                "MAT01354 - CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+                "MAT01355 - ÁLGEBRA LINEAR I - A"
+            ]
+        },
+        {
+            "etapa": "Etapa 6",
+            "codigo": "INF01008",
+            "nome": "PROGRAMAÇÃO PARALELA",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01142 - SISTEMAS OPERACIONAIS I N"
+            ]
+        },
+        {
+            "etapa": "Etapa 6",
+            "codigo": "INF01084",
+            "nome": "REDES DE COMPUTADORES E INTERNET",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01075 - ARQUITETURA DE COMPUTADORES"
+            ]
+        },
+        {
+            "etapa": "Etapa 7",
+            "codigo": "INF01045",
+            "nome": "CIBERSEGURANÇA",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01202 - ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+                "MAT01375 - MATEMÁTICA DISCRETA B",
+                "MAT02219 - PROBABILIDADE E ESTATÍSTICA"
+            ]
+        },
+        {
+            "etapa": "Etapa 7",
+            "codigo": "INF01083",
+            "nome": "LINGUAGENS DE PROGRAMAÇÃO II",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01075 - ARQUITETURA DE COMPUTADORES",
+                "INF05029 - LINGUAGENS DE PROGRAMAÇÃO I"
+            ]
+        },
+        {
+            "etapa": "Etapa 7",
+            "codigo": "INF05010",
+            "nome": "OTIMIZAÇÃO COMBINATÓRIA",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF05027 - PROJETO E ANÁLISE DE ALGORITMOS I",
+                "INF05501 - TEORIA DA COMPUTAÇÃO II",
+                "MAT01355 - ÁLGEBRA LINEAR I - A"
+            ]
+        },
+        {
+            "etapa": "Etapa 7",
+            "codigo": "INF01100",
+            "nome": "PROCESSAMENTO DE LINGUAGEM NATURAL",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01017 - APRENDIZADO DE MÁQUINA"
+            ]
+        },
+        {
+            "etapa": "Etapa 7",
+            "codigo": "INF01085",
+            "nome": "SISTEMAS DISTRIBUÍDOS E TOLERANTES A FALHAS",
+            "carater": "Obrigatória",
+            "creditos": "4",
+            "carga_horaria": "60",
+            "pre_requisitos": [
+                "INF01142 - SISTEMAS OPERACIONAIS I N"
+            ]
+        },
+        {
+            "etapa": "Etapa 8",
+            "codigo": "INF99004",
+            "nome": "PROJETO INTEGRADOR EM COMPUTAÇÃO",
+            "carater": "Obrigatória",
+            "creditos": "8",
+            "carga_horaria": "120",
+            "pre_requisitos": [
+                "Créditos Obrigatórios - 130",
+                "INF99003 - PROJETO EM CIÊNCIA E INOVAÇÃO"
+            ]
+        },
+        {
+            "etapa": "Etapa 9",
+            "codigo": "",
+            "nome": "TRABALHO DE CONCLUSÃO DE CURSO - CIÊNCIA DA COMPUTAÇÃO",
+            "carater": "Obrigatória",
+            "creditos": "0",
+            "carga_horaria": "240",
+            "pre_requisitos": [
+                "Créditos Obrigatórios - 166",
+                "INF99004 - PROJETO INTEGRADOR EM COMPUTAÇÃO"
+            ]
+        }
+    ],
+    "schedules": [
+        {
+            "codigo": "MAT01355",
+            "nome": "ÁLGEBRA LINEAR I - A",
+            "creditos": "4",
+            "turma": "A1",
+            "vagas_veteranos": "33",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "Sala 102 - Campus: Vale",
+                "Sala 102 - Campus: Vale"
+            ],
+            "professores": [
+                "CARLOS HOPPEN - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01355",
+            "nome": "ÁLGEBRA LINEAR I - A",
+            "creditos": "4",
+            "turma": "B2",
+            "vagas_veteranos": "13",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "Sala 103 - Campus: Vale",
+                "Sala 103 - Campus: Vale"
+            ],
+            "professores": [
+                "LILIANE BASSO BARICHELLO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01355",
+            "nome": "ÁLGEBRA LINEAR I - A",
+            "creditos": "4",
+            "turma": "C1",
+            "vagas_veteranos": "14",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "Sala 102 - Campus: Vale",
+                "Sala 102 - Campus: Vale"
+            ],
+            "professores": [
+                "ADRIANA NEUMANN DE OLIVEIRA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "A",
+            "vagas_veteranos": "9",
+            "vagas_calouros": "11",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "LABORATORIO DE ENSINO 102 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ALBERTO EGON SCHAEFFER FILHO - Regente de 02/03/2026 a 13/07/2026",
+                "LUCIANA REGINA BENCKE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "B",
+            "vagas_veteranos": "16",
+            "vagas_calouros": "4",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "Laboratório de Ensino 102 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "ALBERTO EGON SCHAEFFER FILHO - Regente de 02/03/2026 a 13/07/2026",
+                "Eder John Scheid - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "C",
+            "vagas_veteranos": "0",
+            "vagas_calouros": "20",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2",
+                "Sexta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "LABORATORIO DE ENSINO 102 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "Eder John Scheid - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito",
+                "LUCIANA REGINA BENCKE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "D",
+            "vagas_veteranos": "3",
+            "vagas_calouros": "17",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2",
+                "Sexta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "Laboratório de Ensino 102 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "Eder John Scheid - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "I",
+            "vagas_veteranos": "2",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2",
+                "Sexta 13:30-15:10 2"
+            ],
+            "locais": [
+                "AUDITÓRIO 1 - Campus: Vale",
+                "AUDITÓRIO 1 - Campus: Vale",
+                "LABORATORIO DE ENSINO 104 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARCELO WALTER - Regente de 02/03/2026 a 13/07/2026",
+                "LUCAS RAFAEL COSTELLA PESSUTTO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "J",
+            "vagas_veteranos": "3",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2",
+                "Sexta 15:30-17:10 2"
+            ],
+            "locais": [
+                "AUDITÓRIO 1 - Campus: Vale",
+                "AUDITÓRIO 1 - Campus: Vale",
+                "LABORATORIO DE ENSINO 104 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARCELO WALTER - Regente de 02/03/2026 a 13/07/2026",
+                "LUCAS RAFAEL COSTELLA PESSUTTO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "L",
+            "vagas_veteranos": "2",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale",
+                "LABORATÓRIO DE ENSINO (INTRODUTÓRIAS) 105 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "CLAUDIO ROSITO JUNG - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito",
+                "SERGIO LUIS CECHIN - Regente de 02/03/2026 a 13/07/2026"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "M",
+            "vagas_veteranos": "8",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale",
+                "Laboratório de Ensino 103 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "DENNIS GIOVANI BALREIRA - Regente de 31/03/2026 a 13/07/2026",
+                "RAFAEL OLEQUES NUNES - Ministrante de 27/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01202",
+            "nome": "ALGORÍTMOS E PROGRAMAÇÃO - CIC",
+            "creditos": "6",
+            "turma": "N",
+            "vagas_veteranos": "1",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "DENNIS GIOVANI BALREIRA - Regente de 02/03/2026 a 13/07/2026",
+                "RAFAEL OLEQUES NUNES - Ministrante de 27/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01017",
+            "nome": "APRENDIZADO DE MÁQUINA",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "5",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "MARIANA RECAMONDE MENDOZA GUERREIRO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01075",
+            "nome": "ARQUITETURA DE COMPUTADORES",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "35",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "AUDITÓRIO 1 - Campus: Vale",
+                "AUDITÓRIO 1 - Campus: Vale"
+            ],
+            "professores": [
+                "SERGIO LUIS CECHIN - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01075",
+            "nome": "ARQUITETURA DE COMPUTADORES",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "35",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "Claudio Machado Diniz - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01075",
+            "nome": "ARQUITETURA DE COMPUTADORES",
+            "creditos": "4",
+            "turma": "C",
+            "vagas_veteranos": "5",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "Laboratório de Ensino 101 - 43413 - Campus: Vale",
+                "Laboratório de Ensino 101 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "FERNANDA GUSMAO DE LIMA KASTENSMIDT - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01145",
+            "nome": "BANCOS DE DADOS",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "27",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "KARIN BECKER - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01145",
+            "nome": "BANCOS DE DADOS",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "22",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 15:30-17:10 2",
+                "Quarta 15:30-17:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "RENATA DE MATOS GALANTE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01353",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA I - A",
+            "creditos": "6",
+            "turma": "A1",
+            "vagas_veteranos": "19",
+            "vagas_calouros": "36",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 8:30-10:10 2"
+            ],
+            "locais": [
+                "Sala 101 - Campus: Vale",
+                "Sala 101 - Campus: Vale",
+                "Sala 101 - Campus: Vale"
+            ],
+            "professores": [
+                "JACQUES AVELINE LOUREIRO DA SILVA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01353",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA I - A",
+            "creditos": "6",
+            "turma": "B1",
+            "vagas_veteranos": "21",
+            "vagas_calouros": "14",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2",
+                "Sexta 10:30-12:10 2"
+            ],
+            "locais": [
+                "Sala 101 - Campus: Vale",
+                "Sala 101 - Campus: Vale",
+                "Sala 101 - Campus: Vale"
+            ],
+            "professores": [
+                "JOSE AFONSO BARRIONUEVO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01353",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA I - A",
+            "creditos": "6",
+            "turma": "D3",
+            "vagas_veteranos": "4",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 15:30-18:00 3",
+                "Quinta 15:30-18:00 3"
+            ],
+            "locais": [],
+            "professores": [
+                "Felipe Crivellaro Minuzzi - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01354",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+            "creditos": "6",
+            "turma": "A1",
+            "vagas_veteranos": "39",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 8:30-10:10 2"
+            ],
+            "locais": [
+                "Sala 104 - Campus: Vale",
+                "Sala 104 - Campus: Vale",
+                "Sala 104 - Campus: Vale"
+            ],
+            "professores": [
+                "JOANA MOHR - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01354",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+            "creditos": "6",
+            "turma": "B1",
+            "vagas_veteranos": "6",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2",
+                "Sexta 10:30-12:10 2"
+            ],
+            "locais": [
+                "Sala 104 - Campus: Vale",
+                "Sala 104 - Campus: Vale",
+                "Sala 104 - Campus: Vale"
+            ],
+            "professores": [
+                "JACQUES AVELINE LOUREIRO DA SILVA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01354",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+            "creditos": "6",
+            "turma": "C1",
+            "vagas_veteranos": "11",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2",
+                "Sexta 13:30-15:10 2"
+            ],
+            "locais": [
+                "Sala 103 - Campus: Vale",
+                "Sala 103 - Campus: Vale",
+                "Sala 103 - Campus: Vale"
+            ],
+            "professores": [
+                "JULIANA SARTORI ZIEBELL - Ministrante de 02/03/2026 a 13/07/2026",
+                "SUSANA FROMETA FERNANDEZ - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01354",
+            "nome": "CÁLCULO E GEOMETRIA ANALÍTICA II - A",
+            "creditos": "6",
+            "turma": "D1",
+            "vagas_veteranos": "2",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 15:30-17:10 2",
+                "Quarta 15:30-17:10 2",
+                "Sexta 15:30-17:10 2"
+            ],
+            "locais": [
+                "Sala 103 - Campus: Vale",
+                "Sala 103 - Campus: Vale",
+                "Sala 103 - Campus: Vale"
+            ],
+            "professores": [
+                "SAMUEL VOLKWEIS LEITE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito",
+                "Thaisa Raupp Tamusiunas - Ministrante de 04/03/2026 a 13/07/2026"
+            ]
+        },
+        {
+            "codigo": "MAT01032",
+            "nome": "CÁLCULO NUMÉRICO A",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "45",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 15:30-17:10 2",
+                "Quinta 15:30-17:10 2"
+            ],
+            "locais": [
+                "F115 Laboratório de Informática - Campus: Vale",
+                "F115 Laboratório de Informática - Campus: Vale"
+            ],
+            "professores": [
+                "RUDNEI DIAS DA CUNHA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01045",
+            "nome": "CIBERSEGURANÇA",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "3",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "Jeferson Campos Nobre - Regente de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01047",
+            "nome": "COMPUTAÇÃO GRÁFICA E VISUALIZAÇÃO I",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "25",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "EDUARDO SIMÕES LOPES GASTAL - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01047",
+            "nome": "COMPUTAÇÃO GRÁFICA E VISUALIZAÇÃO I",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "25",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "EDUARDO SIMÕES LOPES GASTAL - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01120",
+            "nome": "DESENVOLVIMENTO DE SOFTWARE",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "Karina Kohl Silveira - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01120",
+            "nome": "DESENVOLVIMENTO DE SOFTWARE",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "Karina Kohl Silveira - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01120",
+            "nome": "DESENVOLVIMENTO DE SOFTWARE",
+            "creditos": "4",
+            "turma": "C",
+            "vagas_veteranos": "9",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARCELO SOARES PIMENTA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01120",
+            "nome": "DESENVOLVIMENTO DE SOFTWARE",
+            "creditos": "4",
+            "turma": "D",
+            "vagas_veteranos": "9",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARCELO SOARES PIMENTA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01127",
+            "nome": "ENGENHARIA DE SOFTWARE N",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "29",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCINÉIA HELOISA THOM - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01127",
+            "nome": "ENGENHARIA DE SOFTWARE N",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "29",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCINÉIA HELOISA THOM - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01127",
+            "nome": "ENGENHARIA DE SOFTWARE N",
+            "creditos": "4",
+            "turma": "C",
+            "vagas_veteranos": "2",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LETICIA DOS SANTOS MACHADO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01203",
+            "nome": "ESTRUTURAS DE DADOS",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "35",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "RENATA DE MATOS GALANTE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01203",
+            "nome": "ESTRUTURAS DE DADOS",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "4",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "JOAO LUIZ DIHL COMBA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01048",
+            "nome": "INTELIGÊNCIA ARTIFICIAL",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCAS RAFAEL COSTELLA PESSUTTO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01048",
+            "nome": "INTELIGÊNCIA ARTIFICIAL",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "Joel Luis Carbonera - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01043",
+            "nome": "INTERAÇÃO HUMANO-COMPUTADOR E EXPERIÊNCIA DO USUÁRIO",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ANDERSON MACIEL - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01043",
+            "nome": "INTERAÇÃO HUMANO-COMPUTADOR E EXPERIÊNCIA DO USUÁRIO",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCIANA PORCHER NEDEL - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01043",
+            "nome": "INTERAÇÃO HUMANO-COMPUTADOR E EXPERIÊNCIA DO USUÁRIO",
+            "creditos": "4",
+            "turma": "C",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Sexta 8:30-11:50 4"
+            ],
+            "locais": [
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "CARLA MARIA DAL SASSO FREITAS - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01043",
+            "nome": "INTERAÇÃO HUMANO-COMPUTADOR E EXPERIÊNCIA DO USUÁRIO",
+            "creditos": "4",
+            "turma": "D",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 15:30-17:10 2",
+                "Quarta 15:30-17:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ANDERSON MACIEL - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01087",
+            "nome": "INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "17",
+            "vagas_calouros": "23",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 108 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "DENNIS GIOVANI BALREIRA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01087",
+            "nome": "INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "8",
+            "vagas_calouros": "32",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "AUDITÓRIO 0 - Campus: Vale",
+                "AUDITÓRIO 0 - Campus: Vale"
+            ],
+            "professores": [
+                "Mateus Grellert da Silva - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05029",
+            "nome": "LINGUAGENS DE PROGRAMAÇÃO I",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "29",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale",
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ÁLVARO FREITAS MOREIRA - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01083",
+            "nome": "LINGUAGENS DE PROGRAMAÇÃO II",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "28",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "NICOLAS BRUNO MAILLARD - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05508",
+            "nome": "LÓGICA PARA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "38",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 15:30-17:10 2",
+                "Quarta 15:30-17:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ÁLVARO GUGLIELMIN BECKER - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito",
+                "LUCIO MAURO DUARTE - Regente de 05/05/2026 a 15/07/2026"
+            ]
+        },
+        {
+            "codigo": "INF05508",
+            "nome": "LÓGICA PARA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "15",
+            "vagas_calouros": "5",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale",
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ROSA MARIA VICARI - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05508",
+            "nome": "LÓGICA PARA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "C",
+            "vagas_veteranos": "20",
+            "vagas_calouros": "20",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale",
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCIO MAURO DUARTE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05508",
+            "nome": "LÓGICA PARA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "D",
+            "vagas_veteranos": "12",
+            "vagas_calouros": "28",
+            "horarios": [
+                "Terça 15:30-17:10 2",
+                "Quinta 15:30-17:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale",
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARCIO DORN - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05508",
+            "nome": "LÓGICA PARA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "F",
+            "vagas_veteranos": "10",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 15:30-17:10 2",
+                "Quinta 15:30-17:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ÁLVARO GUGLIELMIN BECKER - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito",
+                "LUCIO MAURO DUARTE - Regente de 02/03/2026 a 15/07/2026"
+            ]
+        },
+        {
+            "codigo": "INF05508",
+            "nome": "LÓGICA PARA COMPUTAÇÃO",
+            "creditos": "4",
+            "turma": "G",
+            "vagas_veteranos": "20",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "FREDERICO MESSA SCHWARTZHAUPT - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01375",
+            "nome": "MATEMÁTICA DISCRETA B",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "25",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "Sala 104 - Campus: Vale",
+                "Sala 104 - Campus: Vale"
+            ],
+            "professores": [
+                "RICARDO MISTURINI - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT01375",
+            "nome": "MATEMÁTICA DISCRETA B",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "Sala 104 - Campus: Vale",
+                "Sala 104 - Campus: Vale"
+            ],
+            "professores": [
+                "RICARDO MISTURINI - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01113",
+            "nome": "ORGANIZAÇÃO DE COMPUTADORES",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "35",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "LUIGI CARRO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01113",
+            "nome": "ORGANIZAÇÃO DE COMPUTADORES",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "15",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "ANTONIO CARLOS SCHNEIDER BECK FILHO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01113",
+            "nome": "ORGANIZAÇÃO DE COMPUTADORES",
+            "creditos": "4",
+            "turma": "C",
+            "vagas_veteranos": "0",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 15:30-17:10 2",
+                "Quinta 15:30-17:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "GABRIEL LUCA NAZAR - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05010",
+            "nome": "OTIMIZAÇÃO COMBINATÓRIA",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "28",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARCUS ROLF PETER RITT - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05008",
+            "nome": "PENSAMENTO COMPUTACIONAL N",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "6",
+            "vagas_calouros": "20",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LEILA RIBEIRO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05008",
+            "nome": "PENSAMENTO COMPUTACIONAL N",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "12",
+            "vagas_calouros": "17",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCIO MAURO DUARTE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05008",
+            "nome": "PENSAMENTO COMPUTACIONAL N",
+            "creditos": "4",
+            "turma": "C",
+            "vagas_veteranos": "13",
+            "vagas_calouros": "13",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCAS NUNES ALEGRE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05008",
+            "nome": "PENSAMENTO COMPUTACIONAL N",
+            "creditos": "4",
+            "turma": "D",
+            "vagas_veteranos": "22",
+            "vagas_calouros": "5",
+            "horarios": [
+                "Terça 15:30-17:10 2",
+                "Quinta 15:30-17:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 109 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LEILA RIBEIRO - Regente de 02/03/2026 a 15/07/2026",
+                "PEDRO HENRIQUE BONIATTI COLLE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT02219",
+            "nome": "PROBABILIDADE E ESTATÍSTICA",
+            "creditos": "4",
+            "turma": "A1",
+            "vagas_veteranos": "50",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "AUDITÓRIO PROF. JOSÉ CASTILHO - Campus: Vale",
+                "AUDITÓRIO PROF. JOSÉ CASTILHO - Campus: Vale"
+            ],
+            "professores": [
+                "MÁRCIA HELENA BARBIAN - Regente de 02/03/2026 a 13/07/2026",
+                "MARCO ANTONIO GIACOMELLI - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "MAT02219",
+            "nome": "PROBABILIDADE E ESTATÍSTICA",
+            "creditos": "4",
+            "turma": "B2",
+            "vagas_veteranos": "50",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "AUDITÓRIO PROF. JOSÉ CASTILHO - Campus: Vale",
+                "AUDITÓRIO PROF. JOSÉ CASTILHO - Campus: Vale"
+            ],
+            "professores": [
+                "GABRIELA BETTELLA CYBIS - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito",
+                "MÁRCIA HELENA BARBIAN - Regente de 02/03/2026 a 13/07/2026"
+            ]
+        },
+        {
+            "codigo": "INF01046",
+            "nome": "PROCESSAMENTO DE IMAGENS E VISÃO COMPUTACIONAL I",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "29",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "Laboratório de Ensino 104 - 43413 - Campus: Vale",
+                "Laboratório de Ensino 104 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "JACOB SCHARCANSKI - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01100",
+            "nome": "PROCESSAMENTO DE LINGUAGEM NATURAL",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "5",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "VIVIANE PEREIRA MOREIRA - Regente de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01008",
+            "nome": "PROGRAMAÇÃO PARALELA",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "5",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [],
+            "professores": [
+                "Arthur Francisco Lorenzon - Regente de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01086",
+            "nome": "PROJETO DE CIRCUITOS DIGITAIS",
+            "creditos": "6",
+            "turma": "A",
+            "vagas_veteranos": "28",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 8:30-10:10 2",
+                "Quarta 8:30-10:10 2",
+                "Sexta 8:30-10:10 2"
+            ],
+            "locais": [
+                "Laboratório de Ensino 101 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "ANDRE INACIO REIS - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01086",
+            "nome": "PROJETO DE CIRCUITOS DIGITAIS",
+            "creditos": "6",
+            "turma": "B",
+            "vagas_veteranos": "28",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2",
+                "Sexta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 118 - PRÉDIO 43425 - Campus: Vale",
+                "Laboratório de Ensino 101 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "José Rodrigo Furlanetto de Azambuja - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01086",
+            "nome": "PROJETO DE CIRCUITOS DIGITAIS",
+            "creditos": "6",
+            "turma": "C",
+            "vagas_veteranos": "28",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2",
+                "Sexta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale",
+                "Laboratório de Ensino 101 - 43413 - Campus: Vale"
+            ],
+            "professores": [
+                "RENATO PEREZ RIBAS - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05027",
+            "nome": "PROJETO E ANÁLISE DE ALGORITMOS I",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "14",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCAS NUNES ALEGRE - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05027",
+            "nome": "PROJETO E ANÁLISE DE ALGORITMOS I",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "14",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "BRUNO IOCHINS GRISCI - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05028",
+            "nome": "PROJETO E ANÁLISE DE ALGORITMOS II",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "25",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "Henrique Becker - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05028",
+            "nome": "PROJETO E ANÁLISE DE ALGORITMOS II",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "25",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 113 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "André Grahl Pereira - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01084",
+            "nome": "REDES DE COMPUTADORES E INTERNET",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "10",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 13:30-15:10 2",
+                "Quarta 13:30-15:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 111 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "ALEXANDRE DA SILVA CARISSIMI - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01084",
+            "nome": "REDES DE COMPUTADORES E INTERNET",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "30",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 13:30-15:10 2",
+                "Quinta 13:30-15:10 2"
+            ],
+            "locais": [
+                "AUDITÓRIO 0 - Campus: Vale",
+                "AUDITÓRIO 0 - Campus: Vale"
+            ],
+            "professores": [
+                "WEVERTON LUIS DA COSTA CORDEIRO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01085",
+            "nome": "SISTEMAS DISTRIBUÍDOS E TOLERANTES A FALHAS",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "15",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 116 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "WEVERTON LUIS DA COSTA CORDEIRO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01142",
+            "nome": "SISTEMAS OPERACIONAIS I N",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "35",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 8:30-10:10 2",
+                "Quinta 8:30-10:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "LUCAS MELLO SCHNORR - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF01142",
+            "nome": "SISTEMAS OPERACIONAIS I N",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "5",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Terça 10:30-12:10 2",
+                "Quinta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 112 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARCELO DE OLIVEIRA JOHANN - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05005",
+            "nome": "TEORIA DA COMPUTAÇÃO I",
+            "creditos": "4",
+            "turma": "A",
+            "vagas_veteranos": "29",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale",
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "Henrique Becker - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05005",
+            "nome": "TEORIA DA COMPUTAÇÃO I",
+            "creditos": "4",
+            "turma": "B",
+            "vagas_veteranos": "29",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 15:30-17:10 2",
+                "Quarta 15:30-17:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale",
+                "SALA DE AULA 107 - P. 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "MARIANA LUDERITZ KOLBERG FERNANDES - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        },
+        {
+            "codigo": "INF05501",
+            "nome": "TEORIA DA COMPUTAÇÃO II",
+            "creditos": "4",
+            "turma": "U",
+            "vagas_veteranos": "29",
+            "vagas_calouros": "0",
+            "horarios": [
+                "Segunda 10:30-12:10 2",
+                "Quarta 10:30-12:10 2"
+            ],
+            "locais": [
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale",
+                "SALA DE AULA 114 - PRÉDIO 43425 - Campus: Vale"
+            ],
+            "professores": [
+                "RODRIGO MACHADO - Ministrante de 02/03/2026 a 13/07/2026 - Responsável conceito"
+            ]
+        }
+    ]
+}

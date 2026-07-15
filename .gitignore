@@ -1,0 +1,16 @@
+## PYTHON
+__pycache__/
+*.pyc
+.venv/
+**/__pycache__/
+*.pyc
+venv/
+
+## NODE
+node_modules/
+dist/
+build/
+
+
+## proj
+turmas_data/
