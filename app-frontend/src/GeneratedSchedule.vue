@@ -1,12 +1,20 @@
 <script setup>
-import { onMounted, ref, computed, reactive } from 'vue'
+import { onMounted, ref, computed, reactive, watch } from 'vue'
+import { useDisplay, useTheme } from 'vuetify'
 import { dataService } from './services/dataService'
 import { scheduleGeneratorService } from './services/scheduleGeneratorService'
 import { curriculumService } from './services/curriculumService'
 import ElectiveSuggestionsModal from './components/ElectiveSuggestionsModal.vue'
-import { useTheme } from 'vuetify'
 
 const theme = useTheme()
+const { mobile } = useDisplay()
+
+const scheduleViewMode = ref(mobile.value ? 'timeline' : 'grid')
+const selectedTimelineDay = ref(1) // Segunda
+
+watch(() => mobile.value, (val) => {
+  scheduleViewMode.value = val ? 'timeline' : 'grid'
+})
 
 const props = defineProps({
   studentId: {
@@ -1372,8 +1380,102 @@ onMounted(() => {
                 </div>
               </v-card-title>
 
+              <!-- Alternador de Modo de Visualização (Grade / Dia a Dia) -->
+              <div class="px-4 pt-3 pb-1 d-flex align-center justify-space-between flex-wrap gap-2">
+                <div class="text-caption text-medium-emphasis">
+                  <span v-if="scheduleViewMode === 'timeline'">Visualizando grade em formato Dia a Dia (otimizado para celular/lista)</span>
+                  <span v-else>Visualizando tabela horária completa (deslize horizontalmente se necessário)</span>
+                </div>
+                <v-btn-group variant="outlined" density="compact" color="primary" class="rounded-lg">
+                  <v-btn
+                    :variant="scheduleViewMode === 'grid' ? 'flat' : 'outlined'"
+                    prepend-icon="mdi-grid"
+                    class="text-none font-weight-bold text-caption"
+                    @click="scheduleViewMode = 'grid'"
+                  >
+                    Grade 2D
+                  </v-btn>
+                  <v-btn
+                    :variant="scheduleViewMode === 'timeline' ? 'flat' : 'outlined'"
+                    prepend-icon="mdi-view-day-outline"
+                    class="text-none font-weight-bold text-caption"
+                    @click="scheduleViewMode = 'timeline'"
+                  >
+                    Dia a Dia
+                  </v-btn>
+                </v-btn-group>
+              </div>
+
               <v-card-text class="pa-4">
-                <div class="calendar-wrapper rounded-xl border-thin bg-surface">
+                <!-- Modo Dia a Dia (Timeline / Mobile) -->
+                <div v-if="scheduleViewMode === 'timeline'">
+                  <v-tabs v-model="selectedTimelineDay" color="primary" density="compact" show-arrows class="mb-4 border-b">
+                    <v-tab v-for="dia in daysArray" :key="dia.index" :value="dia.index" class="font-weight-bold text-none">
+                      {{ dia.name }}
+                      <v-chip size="x-small" :color="gradeObj.groupedByDay[dia.index]?.length ? 'primary' : 'medium-emphasis'" class="ml-1 font-weight-bold">
+                        {{ gradeObj.groupedByDay[dia.index]?.length || 0 }}
+                      </v-chip>
+                    </v-tab>
+                  </v-tabs>
+
+                  <div v-if="gradeObj.groupedByDay[selectedTimelineDay] && gradeObj.groupedByDay[selectedTimelineDay].length > 0" class="d-flex flex-column gap-3">
+                    <v-card
+                      v-for="item in gradeObj.groupedByDay[selectedTimelineDay]"
+                      :key="item.id || item.course_code + '-' + item.start_time"
+                      variant="outlined"
+                      :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))"
+                      class="pa-4 rounded-xl d-flex flex-column gap-2"
+                      :class="{ 'bg-error-suttle': getCellConflict(gradeObj.items, item) }"
+                    >
+                      <div class="d-flex justify-space-between align-center flex-wrap gap-2">
+                        <div class="d-flex align-center gap-2">
+                          <span v-if="hasCampusWarning(gradeObj.items, item)" title="Campus não informado em aula próxima a outra">⚠️</span>
+                          <span class="font-weight-bold text-subtitle-1 text-primary">{{ item.course_code }} - {{ item.course_name }}</span>
+                        </div>
+                        <v-chip size="small" :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))" variant="flat" class="font-weight-bold">
+                          {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
+                        </v-chip>
+                      </div>
+
+                      <div class="d-flex align-center gap-4 text-body-2 flex-wrap">
+                        <span class="d-flex align-center"><strong>Turma:</strong>&nbsp;{{ item.section_code }}</span>
+                        <span v-if="dataService.getSectionCapacity(item, curriculumService.getSelectedCourse()) !== null" class="d-inline-flex align-center text-caption opacity-90">
+                          <v-icon icon="mdi-account-group" size="x-small" class="mr-1"></v-icon>{{ dataService.getSectionCapacity(item, curriculumService.getSelectedCourse()) }} vagas
+                        </span>
+                        <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-account</v-icon> {{ item.professor_name || 'A definir' }}</span>
+                        <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-map-marker</v-icon> Campus: {{ item.campus || extractCampus(item.room) }}</span>
+                        <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-door</v-icon> Sala: {{ formatRoom(item.room) }}</span>
+                      </div>
+
+                      <v-alert v-if="getCellConflict(gradeObj.items, item)" type="error" variant="tonal" density="compact" class="mt-1 text-caption">
+                        Colisão de horário ou conflito detectado nesta disciplina.
+                      </v-alert>
+
+                      <v-divider class="my-1"></v-divider>
+
+                      <div>
+                        <v-btn
+                          :color="fixedSections[item.course_code] === item.section_code ? 'error' : 'primary'"
+                          variant="tonal"
+                          size="small"
+                          class="text-none font-weight-bold rounded-lg"
+                          :prepend-icon="fixedSections[item.course_code] === item.section_code ? 'mdi-pin-off' : 'mdi-pin'"
+                          @click="togglePinSection(item.course_code, item.section_code)"
+                        >
+                          {{ fixedSections[item.course_code] === item.section_code ? 'Desafixar Turma ' + item.section_code : 'Fixar esta turma (' + item.section_code + ')' }}
+                        </v-btn>
+                      </div>
+                    </v-card>
+                  </div>
+                  <div v-else class="text-center pa-8 border rounded-xl bg-surface-light text-medium-emphasis">
+                    <v-icon icon="mdi-calendar-check-outline" size="40" class="mb-2"></v-icon>
+                    <div class="font-weight-bold text-body-1">Nenhuma aula programada para este dia!</div>
+                    <div class="text-caption">Seu dia está livre na grade letiva selecionada.</div>
+                  </div>
+                </div>
+
+                <!-- Modo Grade 2D (Tabela / Desktop) -->
+                <div v-else class="calendar-wrapper rounded-xl border-thin bg-surface">
                   <div class="calendar-container">
                     
                     <!-- Cabeçalho de Dias -->

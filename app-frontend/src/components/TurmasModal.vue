@@ -1,6 +1,7 @@
 <script setup>
 import { ref, computed } from 'vue'
 import { dataService } from '../services/dataService'
+import { curriculumService } from '../services/curriculumService'
 
 const props = defineProps({
   modelValue: Boolean
@@ -11,7 +12,11 @@ const emit = defineEmits(['update:modelValue', 'turmas-updated'])
 const fileInput = ref(null)
 const uploadError = ref('')
 const uploadSuccess = ref('')
-const sourceInfo = ref(dataService.getTurmasSourceInfo())
+const sourceUpdateTrigger = ref(0)
+const sourceInfo = computed(() => {
+  sourceUpdateTrigger.value
+  return dataService.getTurmasSourceInfo(curriculumService.selectedCourseRef.value)
+})
 const totalTurmas = computed(() => dataService.getTurmas().length)
 
 const readFileWithEncodingFallback = async (file) => {
@@ -55,7 +60,7 @@ const onFileChange = async (event) => {
     const fileDate = file.lastModified ? new Date(file.lastModified) : new Date()
     const fileTimestamp = fileDate.toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
     dataService.saveCustomTurmas(parsed, fileTimestamp)
-    sourceInfo.value = dataService.getTurmasSourceInfo()
+    sourceUpdateTrigger.value++
     uploadSuccess.value = `Sucesso! ${parsed.length} turmas carregadas com sucesso do arquivo ${file.name}.`
     emit('turmas-updated')
   } catch (err) {
@@ -66,7 +71,7 @@ const onFileChange = async (event) => {
 
 const resetToOfficial = () => {
   dataService.resetToOfficialTurmas()
-  sourceInfo.value = dataService.getTurmasSourceInfo()
+  sourceUpdateTrigger.value++
   uploadSuccess.value = 'Restaurado para as turmas do servidor.'
   emit('turmas-updated')
 }

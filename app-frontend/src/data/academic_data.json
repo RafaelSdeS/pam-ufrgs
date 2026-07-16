@@ -1288,9 +1288,9 @@
       "course_code": "ECP99002",
       "section_code": "U",
       "semester": "2026/2",
-      "capacity": 35,
+      "capacity": 0,
       "capacity_by_curriculum": {
-        "ECP": 35
+        "ECP": 0
       },
       "professor_name": "RENATO VENTURA BAYAN HENRIQUES",
       "ministrantes": [
@@ -2100,9 +2100,9 @@
       "course_code": "FIS01181",
       "section_code": "C1",
       "semester": "2026/2",
-      "capacity": 18,
+      "capacity": 1,
       "capacity_by_curriculum": {
-        "ECP": 18
+        "ECP": 1
       },
       "professor_name": "LEANDRO LANGIE ARAUJO",
       "ministrantes": [
@@ -2176,9 +2176,9 @@
       "course_code": "FIS01181",
       "section_code": "F3",
       "semester": "2026/2",
-      "capacity": 18,
+      "capacity": 0,
       "capacity_by_curriculum": {
-        "ECP": 18
+        "ECP": 0
       },
       "professor_name": "LEANDRO LANGIE ARAUJO",
       "ministrantes": [
@@ -4246,9 +4246,9 @@
       "course_code": "INF01087",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 40,
+      "capacity": 13,
       "capacity_by_curriculum": {
-        "CIC": 40
+        "CIC": 13
       },
       "professor_name": "ANDERSON ROCHA TAVARES",
       "ministrantes": [
@@ -4278,9 +4278,9 @@
       "course_code": "INF01087",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 40,
+      "capacity": 13,
       "capacity_by_curriculum": {
-        "CIC": 40
+        "CIC": 13
       },
       "professor_name": "Professor não definido.",
       "ministrantes": [
@@ -5122,9 +5122,9 @@
       "course_code": "INF01202",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 8,
       "capacity_by_curriculum": {
-        "CIC": 20
+        "CIC": 8
       },
       "professor_name": "SERGIO LUIS CECHIN",
       "ministrantes": [
@@ -5160,9 +5160,9 @@
       "course_code": "INF01202",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 5,
       "capacity_by_curriculum": {
-        "CIC": 20
+        "CIC": 5
       },
       "professor_name": "SERGIO LUIS CECHIN",
       "ministrantes": [
@@ -5198,9 +5198,9 @@
       "course_code": "INF01202",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 5,
       "capacity_by_curriculum": {
-        "CIC": 20
+        "CIC": 5
       },
       "professor_name": "Eder John Scheid",
       "ministrantes": [
@@ -5236,9 +5236,9 @@
       "course_code": "INF01202",
       "section_code": "D",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 8,
       "capacity_by_curriculum": {
-        "CIC": 20
+        "CIC": 8
       },
       "professor_name": "Eder John Scheid",
       "ministrantes": [
@@ -5274,9 +5274,9 @@
       "course_code": "INF01202",
       "section_code": "E",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 0,
       "capacity_by_curriculum": {
-        "ECP": 20
+        "ECP": 0
       },
       "professor_name": "LUCAS RAFAEL COSTELLA PESSUTTO",
       "ministrantes": [
@@ -5312,9 +5312,9 @@
       "course_code": "INF01202",
       "section_code": "F",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 5,
       "capacity_by_curriculum": {
-        "ECP": 20
+        "ECP": 5
       },
       "professor_name": "LUCAS RAFAEL COSTELLA PESSUTTO",
       "ministrantes": [
@@ -5722,9 +5722,9 @@
       "course_code": "INF05008",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 28,
+      "capacity": 1,
       "capacity_by_curriculum": {
-        "CIC": 28
+        "CIC": 1
       },
       "professor_name": "LUCIO MAURO DUARTE",
       "ministrantes": [
@@ -5754,9 +5754,9 @@
       "course_code": "INF05008",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 28,
+      "capacity": 1,
       "capacity_by_curriculum": {
-        "CIC": 28
+        "CIC": 1
       },
       "professor_name": "LUCAS NUNES ALEGRE",
       "ministrantes": [
@@ -6328,10 +6328,10 @@
       "course_code": "INF05508",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 29,
+      "capacity": 2,
       "capacity_by_curriculum": {
-        "CIC": 29,
-        "ECP": 10
+        "CIC": 2,
+        "ECP": 0
       },
       "professor_name": "LUCIO MAURO DUARTE",
       "ministrantes": [
@@ -6362,10 +6362,10 @@
       "course_code": "INF05508",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 25,
+      "capacity": 14,
       "capacity_by_curriculum": {
         "CIC": 14,
-        "ECP": 25
+        "ECP": 0
       },
       "professor_name": "ROSA MARIA VICARI",
       "ministrantes": [
@@ -6396,9 +6396,9 @@
       "course_code": "INF05508",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 39,
+      "capacity": 12,
       "capacity_by_curriculum": {
-        "CIC": 39
+        "CIC": 12
       },
       "professor_name": "Professor não definido.",
       "ministrantes": [
@@ -7113,9 +7113,9 @@
       "course_code": "MAT01353",
       "section_code": "A1",
       "semester": "2026/2",
-      "capacity": 23,
+      "capacity": 0,
       "capacity_by_curriculum": {
-        "CIC": 23
+        "CIC": 0
       },
       "professor_name": "JOSE AFONSO BARRIONUEVO",
       "ministrantes": [
@@ -7151,10 +7151,10 @@
       "course_code": "MAT01353",
       "section_code": "A2",
       "semester": "2026/2",
-      "capacity": 23,
+      "capacity": 5,
       "capacity_by_curriculum": {
-        "CIC": 4,
-        "ECP": 23
+        "CIC": 0,
+        "ECP": 5
       },
       "professor_name": "JULIANE GOLUBINSKI CAPAVERDE",
       "ministrantes": [
@@ -7191,10 +7191,10 @@
       "course_code": "MAT01353",
       "section_code": "B1",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 3,
       "capacity_by_curriculum": {
-        "CIC": 12,
-        "ECP": 20
+        "CIC": 0,
+        "ECP": 3
       },
       "professor_name": "JACQUES AVELINE LOUREIRO DA SILVA",
       "ministrantes": [
@@ -7231,9 +7231,9 @@
       "course_code": "MAT01353",
       "section_code": "B2",
       "semester": "2026/2",
-      "capacity": 19,
+      "capacity": 4,
       "capacity_by_curriculum": {
-        "CIC": 19
+        "CIC": 4
       },
       "professor_name": "JOSE AFONSO BARRIONUEVO",
       "ministrantes": [
@@ -8119,5 +8119,9 @@
       "course_name": "PROBABILIDADE E ESTATÍSTICA"
     }
   ],
-  "last_updated": "2026-07-15 13:36:10"
+  "last_updated": "16/07/26 - 12:46",
+  "last_updated_by_curriculum": {
+    "CIC": "16/07/26 - 12:46",
+    "ECP": "16/07/26 - 12:45"
+  }
 }

@@ -1,5 +1,8 @@
 <script setup>
+import { useDisplay } from 'vuetify'
+
 const emit = defineEmits(['change-page'])
+const { mobile } = useDisplay()
 </script>
 
 <template>
@@ -10,7 +13,7 @@ const emit = defineEmits(['change-page'])
 
     <v-divider class="mb-6"></v-divider>
 
-    <v-card class="pa-6" elevation="2" rounded="lg">
+    <v-card class="pa-4 pa-md-6" elevation="2" rounded="lg">
       <v-row align="center">
         <v-col cols="12" md="8">
           <h2 class="text-h5 mb-4">Bem-vindo ao Planejador de Matrícula UFRGS!</h2>
@@ -23,24 +26,28 @@ const emit = defineEmits(['change-page'])
             Acesse a <strong>Matriz Curricular</strong> para visualizar seu progresso e fazer upload do histórico, e depois utilize a seção <strong>Gerar Grade</strong> para montar sua grade letiva sem conflito de horários.
           </v-alert>
 
-          <div class="d-flex flex-wrap gap-3">
+          <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 w-100">
             <v-btn
               color="primary"
-              size="large"
+              :size="mobile ? 'medium' : 'large'"
+              :block="mobile"
               prepend-icon="mdi-sitemap"
+              class="text-none font-weight-bold"
               @click="emit('change-page', 'curriculum')"
             >
-              Ver matriz e fazer upload do histórico
+              Ver Matriz e Histórico
             </v-btn>
 
             <v-btn
               color="secondary"
               variant="outlined"
-              size="large"
+              :size="mobile ? 'medium' : 'large'"
+              :block="mobile"
               prepend-icon="mdi-calendar-clock"
+              class="text-none font-weight-bold"
               @click="emit('change-page', 'generate_schedules')"
             >
-              Gerar grade de horários para o próximo semestre
+              Gerar Grade de Horários
             </v-btn>
           </div>
         </v-col>

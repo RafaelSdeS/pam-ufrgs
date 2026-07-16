@@ -46,6 +46,30 @@ def parse_semestre_dir_name(dir_name):
     return dir_name
 
 
+def extrair_situacao_em(caminho_html):
+    """
+    Extrai o timestamp 'Situação em DD/MM/YY(YY) - HH:MM' do arquivo HTML do portal.
+    """
+    try:
+        from gerar_csvs_portal import ler_arquivo_com_fallback
+        conteudo = ler_arquivo_com_fallback(caminho_html)
+    except Exception:
+        with open(caminho_html, 'rb') as f:
+            raw = f.read()
+        try:
+            conteudo = raw.decode('utf-8')
+        except UnicodeDecodeError:
+            try:
+                conteudo = raw.decode('windows-1252')
+            except UnicodeDecodeError:
+                conteudo = raw.decode('latin1', errors='replace')
+    
+    m = re.search(r'Situa\w*\s+em\s+([0-9]{1,2}/[0-9]{1,2}/[0-9]{2,4}\s*(?:-\s*|às\s*|as\s*|\s+)[0-9]{1,2}:[0-9]{2})', conteudo, re.IGNORECASE)
+    if m:
+        return m.group(1).strip()
+    return None
+
+
 def converter_horario_para_lista(horario_str):
     """
     Converte a string de horários extraída no formato oficial em uma lista de objetos estruturados.
@@ -188,9 +212,23 @@ def main():
 
         novas_turmas_por_chave = {}
         novas_disciplinas_map = {}
+        situacao_por_curriculo = data_json.get('last_updated_by_curriculum', {})
+        if not isinstance(situacao_por_curriculo, dict):
+            situacao_por_curriculo = {}
 
         for h_file in html_files:
             print(f"  -> Extraindo dados de: {h_file} ...")
+            situacao_str = extrair_situacao_em(h_file)
+            if situacao_str:
+                fname_lower = os.path.basename(h_file).lower()
+                if 'cic' in fname_lower or 'cc' in fname_lower:
+                    situacao_por_curriculo['CIC'] = situacao_str
+                elif 'ecp' in fname_lower or 'eng' in fname_lower:
+                    situacao_por_curriculo['ECP'] = situacao_str
+                else:
+                    situacao_por_curriculo['GERAL'] = situacao_str
+                print(f"     [TIMESTAMP] Situação em: {situacao_str}")
+
             t_list, d_map = parse_html_portal(h_file, semestre_padrao=semestre_str)
             novas_disciplinas_map.update(d_map)
 
@@ -363,7 +401,11 @@ def main():
                     'credits': disc_info['credits']
                 }
 
-        data_json['last_updated'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        if situacao_por_curriculo:
+            data_json['last_updated_by_curriculum'] = situacao_por_curriculo
+            data_json['last_updated'] = situacao_por_curriculo.get('CIC') or situacao_por_curriculo.get('ECP') or situacao_por_curriculo.get('GERAL') or datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+        else:
+            data_json['last_updated'] = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
         with open(args.json_path, 'w', encoding='utf-8') as f:
             json.dump(data_json, f, ensure_ascii=False, indent=2)

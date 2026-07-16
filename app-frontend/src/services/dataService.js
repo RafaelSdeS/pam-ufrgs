@@ -12,6 +12,35 @@ const STORAGE_KEYS = {
 }
 
 export const dataService = {
+  _getScopedKey(baseKey, courseCode = null) {
+    const code = (courseCode || curriculumService.getSelectedCourse() || 'CIC').toUpperCase()
+    return `${baseKey}_${code}`
+  },
+
+  _getItemScoped(baseKey, courseCode = null) {
+    const code = (courseCode || curriculumService.getSelectedCourse() || 'CIC').toUpperCase()
+    const scopedKey = `${baseKey}_${code}`
+    let raw = localStorage.getItem(scopedKey)
+    if (raw === null && code === 'CIC') {
+      raw = localStorage.getItem(baseKey)
+      if (raw !== null) {
+        localStorage.setItem(scopedKey, raw)
+        localStorage.removeItem(baseKey)
+      }
+    }
+    return raw
+  },
+
+  _setItemScoped(baseKey, value, courseCode = null) {
+    const scopedKey = this._getScopedKey(baseKey, courseCode)
+    localStorage.setItem(scopedKey, value)
+  },
+
+  _removeItemScoped(baseKey, courseCode = null) {
+    const scopedKey = this._getScopedKey(baseKey, courseCode)
+    localStorage.removeItem(scopedKey)
+  },
+
   // --- Academic Data Getters ---
   getCoursesMap() {
     return academicData.courses || {}
@@ -85,7 +114,7 @@ export const dataService = {
   // --- Turmas Management ---
   getTurmas() {
     let list = academicData.turmas || []
-    const customStr = localStorage.getItem(STORAGE_KEYS.CUSTOM_TURMAS)
+    const customStr = this._getItemScoped(STORAGE_KEYS.CUSTOM_TURMAS)
     if (customStr) {
       try {
         const parsed = JSON.parse(customStr)
@@ -104,25 +133,44 @@ export const dataService = {
     }))
   },
 
-  getTurmasSourceInfo() {
-    const isCustom = !!localStorage.getItem(STORAGE_KEYS.CUSTOM_TURMAS)
+  getTurmasSourceInfo(courseCode = null) {
+    const selectedCode = courseCode || curriculumService.getSelectedCourse() || 'CIC'
+    const isCustom = !!this._getItemScoped(STORAGE_KEYS.CUSTOM_TURMAS, selectedCode)
     if (isCustom) {
       return {
         isCustom: true,
         date: 'Arquivo carregado pelo usuário',
-        label: 'Arquivo carregado pelo usuário'
+        label: 'Arquivo carregado pelo usuário',
+        courseCode: selectedCode
       }
     }
-    let rawDate = academicData.last_updated || '2026/2'
-    if (rawDate && /^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}/.test(rawDate)) {
-      const parts = rawDate.split(' ')
-      const dateParts = parts[0].split('-')
-      rawDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]} às ${parts[1]}`
+    let rawDate = null
+    if (academicData.last_updated_by_curriculum && typeof academicData.last_updated_by_curriculum === 'object') {
+      rawDate = academicData.last_updated_by_curriculum[selectedCode] ||
+                academicData.last_updated_by_curriculum['CIC'] ||
+                academicData.last_updated_by_curriculum['ECP'] ||
+                academicData.last_updated_by_curriculum['GERAL']
+    }
+    if (!rawDate && typeof academicData.last_updated === 'object' && academicData.last_updated !== null) {
+      rawDate = academicData.last_updated[selectedCode] || academicData.last_updated['CIC'] || Object.values(academicData.last_updated)[0]
+    }
+    if (!rawDate) {
+      rawDate = academicData.last_updated || '2026/2'
+    }
+    if (typeof rawDate === 'string') {
+      if (/^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}/.test(rawDate)) {
+        const parts = rawDate.split(' ')
+        const dateParts = parts[0].split('-')
+        rawDate = `${dateParts[2]}/${dateParts[1]}/${dateParts[0]} às ${parts[1]}`
+      } else {
+        rawDate = rawDate.replace(/\s*-\s*(\d{1,2}:\d{2})/, ' às $1')
+      }
     }
     return {
       isCustom: false,
       date: rawDate,
-      label: 'Turmas oficiais UFRGS (' + rawDate + ')'
+      courseCode: selectedCode,
+      label: `Turmas oficiais UFRGS (${selectedCode} - ${rawDate})`
     }
   },
 
@@ -149,14 +197,14 @@ export const dataService = {
   },
 
   saveCustomTurmas(turmasArray, timestampStr = null) {
-    localStorage.setItem(STORAGE_KEYS.CUSTOM_TURMAS, JSON.stringify(turmasArray))
+    this._setItemScoped(STORAGE_KEYS.CUSTOM_TURMAS, JSON.stringify(turmasArray))
     const now = timestampStr || new Date().toLocaleString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' })
-    localStorage.setItem(STORAGE_KEYS.CUSTOM_TURMAS_DATE, now)
+    this._setItemScoped(STORAGE_KEYS.CUSTOM_TURMAS_DATE, now)
   },
 
   resetToOfficialTurmas() {
-    localStorage.removeItem(STORAGE_KEYS.CUSTOM_TURMAS)
-    localStorage.removeItem(STORAGE_KEYS.CUSTOM_TURMAS_DATE)
+    this._removeItemScoped(STORAGE_KEYS.CUSTOM_TURMAS)
+    this._removeItemScoped(STORAGE_KEYS.CUSTOM_TURMAS_DATE)
   },
 
   parseTurmasCsv(csvText) {
@@ -292,7 +340,7 @@ export const dataService = {
 
   // --- User Completed Courses (Histórico) ---
   getCompletedCourses() {
-    const raw = localStorage.getItem(STORAGE_KEYS.COMPLETED_COURSES)
+    const raw = this._getItemScoped(STORAGE_KEYS.COMPLETED_COURSES)
     if (!raw) return []
     try {
       const parsed = JSON.parse(raw)
@@ -304,7 +352,7 @@ export const dataService = {
 
   saveCompletedCourses(codesArray) {
     const unique = [...new Set(codesArray.filter(Boolean).map(c => c.toUpperCase()))]
-    localStorage.setItem(STORAGE_KEYS.COMPLETED_COURSES, JSON.stringify(unique))
+    this._setItemScoped(STORAGE_KEYS.COMPLETED_COURSES, JSON.stringify(unique))
     return unique
   },
 
@@ -319,11 +367,11 @@ export const dataService = {
 
   // --- Curriculum Selection ---
   getSelectedCurriculum() {
-    return localStorage.getItem(STORAGE_KEYS.SELECTED_CURRICULUM) || 'cc'
+    return this._getItemScoped(STORAGE_KEYS.SELECTED_CURRICULUM) || (curriculumService.getSelectedCourse() === 'ECP' ? 'ecp' : 'cc')
   },
 
   setSelectedCurriculum(key) {
-    localStorage.setItem(STORAGE_KEYS.SELECTED_CURRICULUM, key)
+    this._setItemScoped(STORAGE_KEYS.SELECTED_CURRICULUM, key)
   },
 
   // --- Eligible Courses Calculation ---
@@ -354,7 +402,7 @@ export const dataService = {
 
   // --- Desired Courses (Cadeiras que o aluno quer fazer) ---
   getDesiredCourses() {
-    const raw = localStorage.getItem(STORAGE_KEYS.DESIRED_COURSES)
+    const raw = this._getItemScoped(STORAGE_KEYS.DESIRED_COURSES)
     if (!raw) return []
     try {
       const parsed = JSON.parse(raw)
@@ -365,12 +413,12 @@ export const dataService = {
   },
 
   saveDesiredCourses(list) {
-    localStorage.setItem(STORAGE_KEYS.DESIRED_COURSES, JSON.stringify(list))
+    this._setItemScoped(STORAGE_KEYS.DESIRED_COURSES, JSON.stringify(list))
   },
 
   // --- Time & Preference Restrictions ---
   getRestrictions() {
-    const raw = localStorage.getItem(STORAGE_KEYS.RESTRICTIONS)
+    const raw = this._getItemScoped(STORAGE_KEYS.RESTRICTIONS)
     if (!raw) return []
     try {
       const parsed = JSON.parse(raw)
@@ -398,12 +446,12 @@ export const dataService = {
           return Boolean(day && start && end && start !== ':' && end !== ':' && start !== 'das :' && end !== 'as :')
         })
       : []
-    localStorage.setItem(STORAGE_KEYS.RESTRICTIONS, JSON.stringify(validList))
+    this._setItemScoped(STORAGE_KEYS.RESTRICTIONS, JSON.stringify(validList))
   },
 
   // --- Saved Schedules ---
   getSavedSchedules() {
-    const raw = localStorage.getItem(STORAGE_KEYS.SAVED_SCHEDULES)
+    const raw = this._getItemScoped(STORAGE_KEYS.SAVED_SCHEDULES)
     if (!raw) return []
     try {
       const parsed = JSON.parse(raw)
@@ -414,6 +462,6 @@ export const dataService = {
   },
 
   saveSavedSchedules(list) {
-    localStorage.setItem(STORAGE_KEYS.SAVED_SCHEDULES, JSON.stringify(list))
+    this._setItemScoped(STORAGE_KEYS.SAVED_SCHEDULES, JSON.stringify(list))
   }
 }

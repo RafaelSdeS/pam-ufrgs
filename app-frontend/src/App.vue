@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useDisplay } from 'vuetify'
 import { dataService } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
@@ -13,13 +13,23 @@ import TurmasModal from './components/TurmasModal.vue'
 import SavedSchedules from './SavedSchedules.vue'
 
 const { mobile } = useDisplay()
+const showMobileWarning = ref(true)
 
-const drawer = ref(true)
+const drawer = ref(!mobile.value)
+
+watch(() => mobile.value, (isMobile) => {
+  drawer.value = !isMobile
+})
+
 const currentPage = ref('home')
 const showTurmasModal = ref(false)
 const showCourseModal = ref(false)
 const isChangingCourse = ref(false)
-const turmasInfo = ref(dataService.getTurmasSourceInfo())
+const turmasUpdateTrigger = ref(0)
+const turmasInfo = computed(() => {
+  turmasUpdateTrigger.value
+  return dataService.getTurmasSourceInfo(curriculumService.selectedCourseRef.value)
+})
 
 const selectedCourse = curriculumService.selectedCourseRef
 const coursesList = curriculumService.getCoursesList()
@@ -36,6 +46,13 @@ onMounted(() => {
     isChangingCourse.value = false
     modalSelectedCourse.value = selectedCourse.value || 'CIC'
     showCourseModal.value = true
+  }
+})
+
+watch(() => curriculumService.selectedCourseRef.value, () => {
+  turmasUpdateTrigger.value++
+  if (currentPage.value === 'generated_schedule') {
+    currentPage.value = 'generate_schedules'
   }
 })
 
@@ -59,7 +76,7 @@ const navigateTo = (pageName) => {
 }
 
 const refreshTurmasInfo = () => {
-  turmasInfo.value = dataService.getTurmasSourceInfo()
+  turmasUpdateTrigger.value++
 }
 
 const clearAllBrowserData = () => {
@@ -76,23 +93,26 @@ const clearAllBrowserData = () => {
     <SideBar
       v-model="drawer"
       :current-page="currentPage"
+      :current-course-name="currentCourseName"
       @change-page="navigateTo"
       @open-turmas-modal="showTurmasModal = true"
+      @open-course-modal="openCourseModal"
+      @clear-browser-data="clearAllBrowserData"
     />
 
     <!-- Barra Superior Global -->
-    <v-app-bar elevation="1" class="px-3" height="68">
+    <v-app-bar elevation="1" class="px-2 px-md-3" height="68">
       <v-app-bar-nav-icon
         v-if="mobile"
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
 
-      <v-toolbar-title class="font-weight-bold d-flex align-center gap-2 text-h6 mr-4" style="flex: 0 1 auto;">
+      <v-toolbar-title class="font-weight-bold d-flex align-center gap-2 mr-2 mr-md-4" :class="mobile ? 'text-subtitle-1' : 'text-h6'" style="flex: 0 1 auto;">
         <span>Matrícula UFRGS</span>
       </v-toolbar-title>
 
-      <!-- Botão para Trocar Curso no Topo -->
-      <div class="d-flex align-center">
+      <!-- Botão para Trocar Curso no Topo (Desktop) -->
+      <div v-if="!mobile" class="d-flex align-center">
         <v-btn
           variant="outlined"
           color="primary"
@@ -105,11 +125,26 @@ const clearAllBrowserData = () => {
           Curso: {{ currentCourseName }} (Trocar Curso)
         </v-btn>
       </div>
+      <!-- Botão para Trocar Curso no Topo (Mobile Compacto) -->
+      <div v-else class="d-flex align-center">
+        <v-btn
+          variant="outlined"
+          color="primary"
+          rounded="lg"
+          size="small"
+          class="font-weight-bold px-2"
+          @click="openCourseModal"
+        >
+          <v-icon icon="mdi-school-outline" size="small" class="mr-1"></v-icon>
+          {{ selectedCourse || 'CIC' }}
+        </v-btn>
+      </div>
 
       <v-spacer></v-spacer>
 
-      <div class="d-flex align-center gap-2">
+      <div class="d-flex align-center gap-1 gap-md-2">
         <v-btn
+          v-if="!mobile"
           variant="tonal"
           color="primary"
           rounded="lg"
@@ -117,8 +152,17 @@ const clearAllBrowserData = () => {
           prepend-icon="mdi-calendar-sync"
           @click="showTurmasModal = true"
         >
-          Última atualização das turmas: {{ turmasInfo.date }}
+          Última atualização das turmas {{ turmasInfo.courseCode }}: {{ turmasInfo.date }}
         </v-btn>
+        <v-btn
+          v-else
+          variant="tonal"
+          color="primary"
+          icon="mdi-calendar-sync"
+          size="small"
+          @click="showTurmasModal = true"
+          title="Status das turmas"
+        ></v-btn>
 
         <!-- Botão Limpar Dados do Navegador -->
         <v-btn
@@ -126,11 +170,13 @@ const clearAllBrowserData = () => {
           color="error"
           rounded="lg"
           size="small"
-          prepend-icon="mdi-delete-sweep-outline"
+          :icon="mobile"
+          :prepend-icon="!mobile ? 'mdi-delete-sweep-outline' : undefined"
           @click="clearAllBrowserData"
           title="Limpar todos os dados salvos no navegador"
         >
-          <span class="d-none d-sm-inline">Limpar Dados</span>
+          <v-icon v-if="mobile" icon="mdi-delete-sweep-outline" size="small"></v-icon>
+          <span v-else>Limpar Dados</span>
         </v-btn>
       </div>
     </v-app-bar>
@@ -138,6 +184,23 @@ const clearAllBrowserData = () => {
     <!-- Conteúdo Principal -->
     <v-main>
       <v-container fluid class="pa-4 pa-md-6">
+        <!-- Aviso de Site Desktop-First para usuários mobile -->
+        <v-alert
+          v-if="mobile && showMobileWarning"
+          type="info"
+          variant="tonal"
+          color="primary"
+          icon="mdi-monitor-cellphone"
+          closable
+          class="mb-4 rounded-xl border-thin shadow-premium"
+          @click:close="showMobileWarning = false"
+        >
+          <div class="font-weight-bold mb-1">Aviso: Site Desktop-First</div>
+          <div class="text-caption">
+            Este site foi projetado idealmente para uso em computadores (desktop-first). O acesso via celular conta com adaptações e otimizações, mas para a melhor experiência visual ao explorar fluxogramas e grades completas, recomenda-se o acesso por um computador.
+          </div>
+        </v-alert>
+
         <Home
           v-if="currentPage === 'home'"
           @change-page="navigateTo"

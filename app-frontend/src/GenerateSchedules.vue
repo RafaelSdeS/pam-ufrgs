@@ -30,16 +30,18 @@
             density="compact"
             class="mb-3 border-b"
           >
-            <v-tab value="eligible" class="text-none font-weight-bold">
+            <v-tab value="eligible" class="text-none font-weight-bold px-2 px-sm-4">
               <v-icon start>mdi-check-decagram-outline</v-icon>
-              Disponíveis para Cursar (Vide Histórico)
+              <span v-if="!mobile">Disponíveis para Cursar (Vide Histórico)</span>
+              <span v-else>Disponíveis</span>
               <v-chip size="x-small" color="primary" class="ml-2 font-weight-bold">
                 {{ courseSelectionTab === 'eligible' ? filteredCourses.length : eligibleCoursesList.length }}
               </v-chip>
             </v-tab>
-            <v-tab value="all" class="text-none font-weight-bold">
+            <v-tab value="all" class="text-none font-weight-bold px-2 px-sm-4">
               <v-icon start>mdi-view-list</v-icon>
-              Todas as Disciplinas Oferecidas
+              <span v-if="!mobile">Todas as Disciplinas Oferecidas</span>
+              <span v-else>Todas</span>
             </v-tab>
           </v-tabs>
 
@@ -197,8 +199,39 @@
             Clique diretamente nas faixas de horário da grade abaixo para indicar quando você <strong>NÃO pode ter aulas</strong> (ex: trabalho, estágio ou outros compromissos). O gerador de grades evitará selecionar turmas que colidam com estes horários.
           </div>
 
-          <!-- Grade Semanal de Bloqueios -->
-          <div class="overflow-x-auto mb-6">
+          <!-- Seletor e Grade Semanal para Mobile -->
+          <div v-if="mobile" class="mb-6">
+            <div class="text-caption font-weight-bold text-primary mb-2">Selecione o dia para alternar os bloqueios:</div>
+            <v-chip-group v-model="mobileBlockDay" color="error" mandatory class="mb-4">
+              <v-chip v-for="day in weeklyCalendarDays" :key="day" :value="day" variant="outlined" filter class="font-weight-bold">
+                {{ day.split('-')[0] }}
+              </v-chip>
+            </v-chip-group>
+
+            <div class="d-flex flex-column gap-2">
+              <v-card
+                v-for="slot in weeklyTimeSlots"
+                :key="slot.start"
+                variant="outlined"
+                :color="isSlotBlocked(mobileBlockDay, slot) ? 'error' : 'default'"
+                class="pa-3 rounded-lg d-flex align-center justify-space-between cursor-pointer transition-swing"
+                :class="{ 'bg-error-suttle': isSlotBlocked(mobileBlockDay, slot) }"
+                @click="toggleSlotBlock(mobileBlockDay, slot)"
+              >
+                <div>
+                  <div class="font-weight-bold text-body-2">{{ slot.start.slice(0,5) }} - {{ slot.end.slice(0,5) }}</div>
+                  <div class="text-caption text-medium-emphasis">{{ slot.label.split('(')[1]?.replace(')', '') || slot.label }}</div>
+                </div>
+                <v-chip size="small" :color="isSlotBlocked(mobileBlockDay, slot) ? 'error' : 'success'" variant="flat" class="font-weight-bold">
+                  <v-icon :icon="isSlotBlocked(mobileBlockDay, slot) ? 'mdi-cancel' : 'mdi-check'" start></v-icon>
+                  {{ isSlotBlocked(mobileBlockDay, slot) ? 'Bloqueado' : 'Livre' }}
+                </v-chip>
+              </v-card>
+            </div>
+          </div>
+
+          <!-- Grade Semanal de Bloqueios (Desktop) -->
+          <div v-else class="overflow-x-auto mb-6">
             <v-table class="border rounded-xl text-center" density="comfortable">
               <thead>
                 <tr class="bg-surface-light">
@@ -498,6 +531,7 @@
 
 <script setup>
 import { onMounted, reactive, ref, computed, watch } from 'vue'
+import { useDisplay } from 'vuetify'
 import { dataService } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
 
@@ -509,6 +543,9 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['go-generate-schedule'])
+
+const { mobile } = useDisplay()
+const mobileBlockDay = ref('Segunda-feira')
 
 const allCoursesList = ref([])
 const eligibleCoursesList = ref([])
@@ -702,7 +739,16 @@ watch(selectedSemester, (val) => {
 
 watch(() => curriculumService.selectedCourseRef.value, () => {
   loadCourses()
+  loadDesiredCourses()
+  loadRestrictions()
+  loadSectionsForSemester()
   currentForm.course = null
+  currentForm.importanceLevel = 'medium'
+  currentForm.preferredProfessor = ''
+  currentForm.preferenceOrder = 1
+  customRestrictionForm.days = []
+  customRestrictionForm.startTime = ''
+  customRestrictionForm.endTime = ''
 })
 
 watch(() => currentForm.course, () => {

@@ -1,11 +1,20 @@
 <script setup>
-import { ref, onMounted, reactive } from 'vue'
+import { ref, onMounted, reactive, watch } from 'vue'
+import { useDisplay } from 'vuetify'
 import { dataService } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
 import { scheduleGeneratorService } from './services/scheduleGeneratorService'
 import ElectiveSuggestionsModal from './components/ElectiveSuggestionsModal.vue'
 
 const emit = defineEmits(['change-page'])
+const { mobile } = useDisplay()
+
+const scheduleViewModes = reactive({})
+const selectedTimelineDays = reactive({})
+const getViewMode = (gradeId) => scheduleViewModes[gradeId] || (mobile.value ? 'timeline' : 'grid')
+const setViewMode = (gradeId, mode) => { scheduleViewModes[gradeId] = mode }
+const getTimelineDay = (gradeId) => selectedTimelineDays[gradeId] || 1
+const setTimelineDay = (gradeId, day) => { selectedTimelineDays[gradeId] = day }
 
 const savedSchedules = ref([])
 const electivesModalRef = ref(null)
@@ -28,6 +37,10 @@ const loadSavedSchedules = () => {
 }
 
 onMounted(() => {
+  loadSavedSchedules()
+})
+
+watch(() => curriculumService.selectedCourseRef.value, () => {
   loadSavedSchedules()
 })
 
@@ -1016,10 +1029,78 @@ const exportToPDF = (gradeObj) => {
           </div>
         </v-card-title>
 
+        <!-- Alternador de Modo de Visualização (Grade / Dia a Dia) -->
+        <div v-show="!collapsedSchedules[grade.id]" class="px-5 pt-3 pb-1 d-flex align-center justify-space-between flex-wrap gap-2 border-bottom">
+          <div class="text-caption text-medium-emphasis">
+            <span v-if="getViewMode(grade.id) === 'timeline'">Visualizando em formato Dia a Dia (otimizado para celular/lista)</span>
+            <span v-else>Visualizando tabela horária completa (deslize horizontalmente se necessário)</span>
+          </div>
+          <v-btn-group variant="outlined" density="compact" color="primary" class="rounded-lg">
+            <v-btn
+              :variant="getViewMode(grade.id) === 'grid' ? 'flat' : 'outlined'"
+              prepend-icon="mdi-grid"
+              class="text-none font-weight-bold text-caption"
+              @click="setViewMode(grade.id, 'grid')"
+            >
+              Grade 2D
+            </v-btn>
+            <v-btn
+              :variant="getViewMode(grade.id) === 'timeline' ? 'flat' : 'outlined'"
+              prepend-icon="mdi-view-day-outline"
+              class="text-none font-weight-bold text-caption"
+              @click="setViewMode(grade.id, 'timeline')"
+            >
+              Dia a Dia
+            </v-btn>
+          </v-btn-group>
+        </div>
+
         <!-- Grade Visual Semanal -->
         <v-expand-transition>
           <v-card-text v-show="!collapsedSchedules[grade.id]" class="pa-5">
-            <div class="calendar-wrapper rounded-xl border-thin bg-surface">
+            <!-- Modo Dia a Dia (Timeline / Mobile) -->
+            <div v-if="getViewMode(grade.id) === 'timeline'">
+              <v-tabs :model-value="getTimelineDay(grade.id)" @update:model-value="setTimelineDay(grade.id, $event)" color="primary" density="compact" show-arrows class="mb-4 border-b">
+                <v-tab v-for="dia in daysArray" :key="dia.index" :value="dia.index" class="font-weight-bold text-none">
+                  {{ dia.name }}
+                  <v-chip size="x-small" :color="grade.groupedByDay && grade.groupedByDay[dia.index]?.length ? 'primary' : 'medium-emphasis'" class="ml-1 font-weight-bold">
+                    {{ (grade.groupedByDay && grade.groupedByDay[dia.index]?.length) || 0 }}
+                  </v-chip>
+                </v-tab>
+              </v-tabs>
+
+              <div v-if="grade.groupedByDay && grade.groupedByDay[getTimelineDay(grade.id)] && grade.groupedByDay[getTimelineDay(grade.id)].length > 0" class="d-flex flex-column gap-3">
+                <v-card
+                  v-for="item in grade.groupedByDay[getTimelineDay(grade.id)]"
+                  :key="item.id || item.course_code + '-' + item.start_time"
+                  variant="outlined"
+                  color="primary"
+                  class="pa-4 rounded-xl d-flex flex-column gap-2"
+                >
+                  <div class="d-flex justify-space-between align-center flex-wrap gap-2">
+                    <span class="font-weight-bold text-subtitle-1 text-primary">{{ item.course_code }} - {{ item.course_name }}</span>
+                    <v-chip size="small" color="primary" variant="flat" class="font-weight-bold">
+                      {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
+                    </v-chip>
+                  </div>
+
+                  <div class="d-flex align-center gap-4 text-body-2 flex-wrap">
+                    <span class="d-flex align-center"><strong>Turma:</strong>&nbsp;{{ item.section_code }}</span>
+                    <span v-if="item.professor_name" class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-account</v-icon> {{ item.professor_name }}</span>
+                    <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-map-marker</v-icon> Campus: {{ item.campus || extractCampus(item.room) }}</span>
+                    <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-door</v-icon> Sala: {{ formatRoom(item.room) }}</span>
+                  </div>
+                </v-card>
+              </div>
+              <div v-else class="text-center pa-8 border rounded-xl bg-surface-light text-medium-emphasis">
+                <v-icon icon="mdi-calendar-check-outline" size="40" class="mb-2"></v-icon>
+                <div class="font-weight-bold text-body-1">Nenhuma aula programada para este dia!</div>
+                <div class="text-caption">Seu dia está livre nesta grade salva.</div>
+              </div>
+            </div>
+
+            <!-- Modo Grade 2D (Tabela / Desktop) -->
+            <div v-else class="calendar-wrapper rounded-xl border-thin bg-surface">
               <div class="calendar-container">
                 <!-- Cabeçalho dos Dias -->
                 <div class="calendar-header border-bottom">

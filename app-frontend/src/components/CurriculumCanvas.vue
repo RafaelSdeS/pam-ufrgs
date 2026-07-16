@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, watch, reactive } from 'vue'
-import { useTheme } from 'vuetify'
+import { useTheme, useDisplay } from 'vuetify'
 import { dataService } from '../services/dataService'
 import { pdfParserService } from '../services/pdfParserService'
 import { curriculumService } from '../services/curriculumService'
@@ -17,6 +17,14 @@ const props = defineProps({
 })
 
 const emit = defineEmits(['change-page'])
+const { mobile } = useDisplay()
+
+const canvasViewMode = ref(mobile.value ? 'list' : 'canvas')
+const selectedSemesterTab = ref('1')
+
+watch(() => mobile.value, (val) => {
+  canvasViewMode.value = val ? 'list' : 'canvas'
+})
 
 // Reactive States
 const rawSubjects = ref([])
@@ -249,6 +257,21 @@ const setupLayout = () => {
 const canvasWidth = computed(() => maxSemester.value * columnStride + marginX + 100)
 const canvasHeight = computed(() => maxRowsCount.value * cardStride + marginY + 50)
 
+const subjectsBySemester = computed(() => {
+  const map = {}
+  subjectsWithCoords.value.forEach(s => {
+    const sem = s.semester || 1
+    if (!map[sem]) map[sem] = []
+    map[sem].push(s)
+  })
+  return map
+})
+
+const getSubjectStatus = (item) => {
+  if (tempCompletedSubjectIds.value.includes(item.code)) return 'completed'
+  return item.status || 'blocked'
+}
+
 // 4. SVG Prerequisite Connections
 const connections = computed(() => {
   const list = []
@@ -423,26 +446,48 @@ const onMouseUp = () => {
   }
 }
 
+let initialPinchDistance = 0
+let initialPinchZoom = 0.7
+
 const onTouchStart = (e) => {
-  if (e.touches.length !== 1) return
-  isDragging.value = true
-  const touch = e.touches[0]
-  dragStart.value = { x: touch.clientX - panX.value, y: touch.clientY - panY.value }
+  if (e.touches.length === 1) {
+    isDragging.value = true
+    const touch = e.touches[0]
+    dragStart.value = { x: touch.clientX - panX.value, y: touch.clientY - panY.value }
+  } else if (e.touches.length === 2) {
+    isDragging.value = false
+    const [t1, t2] = [e.touches[0], e.touches[1]]
+    initialPinchDistance = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY)
+    initialPinchZoom = zoom.value
+  }
 }
 
 const onTouchMove = (e) => {
-  if (!isDragging.value || e.touches.length !== 1) return
-  if (rafId) return
-  const touch = e.touches[0]
-  rafId = requestAnimationFrame(() => {
-    panX.value = touch.clientX - dragStart.value.x
-    panY.value = touch.clientY - dragStart.value.y
-    rafId = null
-  })
+  if (e.touches.length === 1 && isDragging.value) {
+    if (rafId) return
+    const touch = e.touches[0]
+    rafId = requestAnimationFrame(() => {
+      panX.value = touch.clientX - dragStart.value.x
+      panY.value = touch.clientY - dragStart.value.y
+      rafId = null
+    })
+  } else if (e.touches.length === 2 && initialPinchDistance > 0) {
+    if (rafId) return
+    const [t1, t2] = [e.touches[0], e.touches[1]]
+    const currentDistance = Math.hypot(t1.clientX - t2.clientX, t1.clientY - t2.clientY)
+    rafId = requestAnimationFrame(() => {
+      const scale = currentDistance / initialPinchDistance
+      zoom.value = Math.min(Math.max(initialPinchZoom * scale, 0.3), 2.0)
+      rafId = null
+    })
+  }
 }
 
-const onTouchEnd = () => {
-  isDragging.value = false
+const onTouchEnd = (e) => {
+  if (e.touches.length === 0) {
+    isDragging.value = false
+    initialPinchDistance = 0
+  }
 }
 
 const onWheel = (e) => {
@@ -517,6 +562,11 @@ watch(() => props.studentId, () => {
 })
 
 watch(() => selectedCourse.value, () => {
+  isEditMode.value = false
+  tempCompletedSubjectIds.value = []
+  searchQuery.value = ''
+  selectedSubjectId.value = null
+  selectedSemester.value = null
   loadData()
 })
 
@@ -571,11 +621,31 @@ const miniViewportRect = computed(() => {
 
         <!-- Controles extras -->
         <v-col cols="12" md="6" class="d-flex justify-md-end justify-start align-center gap-2 flex-wrap">
-          <v-btn-group variant="outlined" density="compact" class="rounded-lg mr-2">
+          <v-btn-group variant="outlined" density="compact" color="primary" class="rounded-lg mr-2">
+            <v-btn
+              :variant="canvasViewMode === 'canvas' ? 'flat' : 'outlined'"
+              prepend-icon="mdi-image-filter-center-focus"
+              class="text-none font-weight-bold text-caption"
+              @click="canvasViewMode = 'canvas'"
+            >
+              Grade 2D
+            </v-btn>
+            <v-btn
+              :variant="canvasViewMode === 'list' ? 'flat' : 'outlined'"
+              prepend-icon="mdi-view-list"
+              class="text-none font-weight-bold text-caption"
+              @click="canvasViewMode = 'list'"
+            >
+              Lista por Semestre
+            </v-btn>
+          </v-btn-group>
+
+          <v-btn-group v-if="canvasViewMode === 'canvas'" variant="outlined" density="compact" class="rounded-lg mr-2">
             <v-btn icon="mdi-plus" @click="handleZoomIn" title="Aumentar Zoom"></v-btn>
             <v-btn icon="mdi-minus" @click="handleZoomOut" title="Diminuir Zoom"></v-btn>
           </v-btn-group>
           <v-btn
+            v-if="canvasViewMode === 'canvas'"
             color="secondary"
             variant="outlined"
             prepend-icon="mdi-image-filter-center-focus"
@@ -599,10 +669,11 @@ const miniViewportRect = computed(() => {
             variant="flat"
             prepend-icon="mdi-file-pdf-box"
             class="rounded-lg font-weight-medium text-none mr-2"
+            :size="mobile ? 'small' : 'default'"
             @click="triggerPdfUpload"
             :loading="uploadingPdf"
           >
-            Carregar Histórico (PDF)
+            {{ mobile ? 'Carregar PDF' : 'Carregar Histórico (PDF)' }}
           </v-btn>
           <v-btn
             v-if="!isEditMode"
@@ -610,6 +681,7 @@ const miniViewportRect = computed(() => {
             variant="flat"
             prepend-icon="mdi-pencil"
             class="rounded-lg font-weight-medium text-none"
+            :size="mobile ? 'small' : 'default'"
             @click="startEditing"
           >
             Editar
@@ -620,9 +692,10 @@ const miniViewportRect = computed(() => {
             variant="tonal"
             prepend-icon="mdi-calendar-check"
             class="rounded-lg font-weight-medium text-none ml-2"
+            :size="mobile ? 'small' : 'default'"
             @click="emit('change-page', 'generate_schedules')"
           >
-            Selecionar disciplinas para o próximo semestre
+            {{ mobile ? 'Gerar Grade' : 'Selecionar disciplinas para o próximo semestre' }}
           </v-btn>
           <template v-else>
             <v-btn
@@ -630,6 +703,7 @@ const miniViewportRect = computed(() => {
               variant="flat"
               prepend-icon="mdi-check"
               class="rounded-lg font-weight-medium mr-1"
+              :size="mobile ? 'small' : 'default'"
               @click="saveCompletions"
             >
               Salvar
@@ -639,6 +713,7 @@ const miniViewportRect = computed(() => {
               variant="outlined"
               prepend-icon="mdi-close"
               class="rounded-lg font-weight-medium"
+              :size="mobile ? 'small' : 'default'"
               @click="cancelEditing"
             >
               Cancelar
@@ -661,7 +736,94 @@ const miniViewportRect = computed(() => {
       </v-overlay>
 
       <v-col cols="12" class="fill-height">
-        <v-card class="canvas-viewport fill-height rounded-xl overflow-hidden d-flex" elevation="2">
+        <!-- Modo Lista por Semestre (Otimizado para Mobile e Acessibilidade) -->
+        <v-card v-if="canvasViewMode === 'list'" class="fill-height rounded-xl overflow-y-auto pa-4 pa-md-6 d-flex flex-column" elevation="2">
+          <!-- Banner se estiver em modo edição -->
+          <v-alert
+            v-if="isEditMode"
+            type="warning"
+            variant="tonal"
+            border="start"
+            class="mb-4 font-weight-medium"
+          >
+            <strong>Modo Edição Ativo:</strong> Clique em qualquer disciplina abaixo para marcar ou desmarcar como concluída. Depois clique em <strong>Salvar</strong> no topo!
+          </v-alert>
+          <v-alert
+            v-else
+            type="info"
+            variant="tonal"
+            border="start"
+            class="mb-4 text-caption"
+          >
+            Navegue pelos semestres abaixo. Clique em uma disciplina para ver seus pré-requisitos e detalhes. Clique em <strong>Editar</strong> no topo para marcar disciplinas como concluídas.
+          </v-alert>
+
+          <v-tabs v-model="selectedSemesterTab" color="primary" density="compact" show-arrows class="mb-4 border-b">
+            <v-tab v-for="s in maxSemester" :key="String(s)" :value="String(s)" class="font-weight-bold text-none">
+              {{ s }}º Semestre
+              <v-chip size="x-small" color="primary" class="ml-1 font-weight-bold">
+                {{ subjectsBySemester[s]?.length || 0 }}
+              </v-chip>
+            </v-tab>
+          </v-tabs>
+
+          <div v-if="subjectsBySemester[Number(selectedSemesterTab)] && subjectsBySemester[Number(selectedSemesterTab)].length > 0" class="d-flex flex-column gap-3">
+            <v-card
+              v-for="item in subjectsBySemester[Number(selectedSemesterTab)]"
+              :key="item.id || item.code"
+              variant="outlined"
+              class="pa-4 rounded-xl d-flex flex-column gap-2 transition-swing cursor-pointer"
+              :class="[
+                isEditMode && tempCompletedSubjectIds.includes(item.code) ? 'border-success bg-emerald' : '',
+                !isEditMode && selectedSubjectId === item.code ? 'border-primary bg-surface-light' : ''
+              ]"
+              @click="isEditMode ? toggleSubjectCompletion(item) : selectSubject(item.id)"
+            >
+              <div class="d-flex justify-space-between align-center flex-wrap gap-2">
+                <div class="d-flex align-center gap-2">
+                  <v-chip size="small" :color="getStatusConfig(getSubjectStatus(item)).color" variant="flat" class="font-weight-bold">
+                    <v-icon :icon="getStatusConfig(getSubjectStatus(item)).icon" start size="14"></v-icon>
+                    {{ getStatusConfig(getSubjectStatus(item)).badge }}
+                  </v-chip>
+                  <span class="font-weight-bold text-subtitle-1 text-primary">{{ item.code }}</span>
+                </div>
+                <v-chip size="small" variant="tonal" color="secondary" class="font-weight-bold">
+                  {{ item.credits }} créditos
+                </v-chip>
+              </div>
+
+              <div class="font-weight-bold text-h6">{{ item.name }}</div>
+
+              <div v-if="item.prerequisites && item.prerequisites.length > 0" class="text-caption text-medium-emphasis d-flex align-center flex-wrap gap-1 mt-1">
+                <v-icon size="14" class="mr-1">mdi-link</v-icon>
+                <strong>Pré-requisitos:</strong>
+                <v-chip v-for="req in item.prerequisites" :key="req" size="x-small" variant="outlined" class="font-weight-medium">
+                  {{ req }}
+                </v-chip>
+              </div>
+
+              <!-- Indicador visual de clique no Modo Edição -->
+              <div v-if="isEditMode" class="d-flex align-center justify-end mt-2">
+                <v-btn
+                  size="small"
+                  :color="tempCompletedSubjectIds.includes(item.code) ? 'error' : 'success'"
+                  variant="tonal"
+                  class="font-weight-bold text-none"
+                  :prepend-icon="tempCompletedSubjectIds.includes(item.code) ? 'mdi-close' : 'mdi-check'"
+                >
+                  {{ tempCompletedSubjectIds.includes(item.code) ? 'Desmarcar Conclusão' : 'Marcar como Concluída' }}
+                </v-btn>
+              </div>
+            </v-card>
+          </div>
+          <div v-else class="text-center pa-8 border rounded-xl bg-surface-light text-medium-emphasis">
+            <v-icon icon="mdi-school-outline" size="40" class="mb-2"></v-icon>
+            <div class="font-weight-bold text-body-1">Nenhuma disciplina cadastrada para o {{ selectedSemesterTab }}º semestre.</div>
+          </div>
+        </v-card>
+
+        <!-- Viewport 2D (Grade Canvas Original) -->
+        <v-card v-else class="canvas-viewport fill-height rounded-xl overflow-hidden d-flex" elevation="2">
           
           <!-- Viewport (Área visível) -->
           <div 

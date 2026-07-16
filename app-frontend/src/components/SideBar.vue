@@ -10,10 +10,14 @@ const props = defineProps({
   currentPage: {
     type: String,
     default: 'curriculum'
+  },
+  currentCourseName: {
+    type: String,
+    default: 'CIC'
   }
 })
 
-const emit = defineEmits(['change-page', 'update:modelValue', 'open-turmas-modal'])
+const emit = defineEmits(['change-page', 'update:modelValue', 'open-turmas-modal', 'open-course-modal', 'clear-browser-data'])
 
 const isCompact = ref(false)
 
@@ -92,9 +96,23 @@ const selectPage = (pageName) => {
       <v-divider></v-divider>
       <v-list density="compact" nav>
         <v-list-item
+          v-if="mobile"
+          prepend-icon="mdi-school-outline"
+          :title="`Curso: ${currentCourseName}`"
+          @click="emit('open-course-modal')"
+        ></v-list-item>
+
+        <v-list-item
           prepend-icon="mdi-database-clock-outline"
           title="Atualizar Turmas"
           @click="emit('open-turmas-modal')"
+        ></v-list-item>
+
+        <v-list-item
+          v-if="mobile"
+          prepend-icon="mdi-delete-sweep-outline"
+          title="Limpar Dados"
+          @click="emit('clear-browser-data')"
         ></v-list-item>
 
         <!-- Theme Switcher -->
