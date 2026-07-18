@@ -1214,17 +1214,17 @@
       "capacity_by_curriculum": {
         "CIC": 1
       },
-      "professor_name": "Professor não definido.",
+      "professor_name": "ESTÊVÃO PASSUELLO RUFFONI",
       "ministrantes": [
-        "Professor não definido."
+        "ESTÊVÃO PASSUELLO RUFFONI"
       ],
-      "responsavel_conceito": "Professor não definido.",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
           "start_time": "18:30:00",
           "end_time": "21:50:00",
-          "room": "Sala de aula 062 - Campus: Centro"
+          "room": "Sala de aula 062 - Campus: CentroObservação: PRÉDIO BRANCO"
         }
       ],
       "curriculums": [
@@ -1288,7 +1288,7 @@
       "course_code": "ECP99002",
       "section_code": "U",
       "semester": "2026/2",
-      "capacity": 35,
+      "capacity": 0,
       "capacity_by_curriculum": {
         "ECP": 0
       },
@@ -1608,13 +1608,13 @@
           "day_of_week": "Terça-feira",
           "start_time": "10:30:00",
           "end_time": "12:10:00",
-          "room": ""
+          "room": "sala de aula 056 - Campus: Centro"
         },
         {
           "day_of_week": "Quinta-feira",
           "start_time": "10:30:00",
           "end_time": "12:10:00",
-          "room": ""
+          "room": "sala de aula 056 - Campus: Centro"
         }
       ],
       "curriculums": [
@@ -2100,7 +2100,7 @@
       "course_code": "FIS01181",
       "section_code": "C1",
       "semester": "2026/2",
-      "capacity": 18,
+      "capacity": 1,
       "capacity_by_curriculum": {
         "ECP": 1
       },
@@ -2176,7 +2176,7 @@
       "course_code": "FIS01181",
       "section_code": "F3",
       "semester": "2026/2",
-      "capacity": 18,
+      "capacity": 0,
       "capacity_by_curriculum": {
         "ECP": 0
       },
@@ -4246,7 +4246,7 @@
       "course_code": "INF01087",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 40,
+      "capacity": 13,
       "capacity_by_curriculum": {
         "CIC": 13
       },
@@ -4278,7 +4278,7 @@
       "course_code": "INF01087",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 40,
+      "capacity": 13,
       "capacity_by_curriculum": {
         "CIC": 13
       },
@@ -5122,7 +5122,7 @@
       "course_code": "INF01202",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 8,
       "capacity_by_curriculum": {
         "CIC": 8
       },
@@ -5160,7 +5160,7 @@
       "course_code": "INF01202",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 5,
       "capacity_by_curriculum": {
         "CIC": 5
       },
@@ -5198,7 +5198,7 @@
       "course_code": "INF01202",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 5,
       "capacity_by_curriculum": {
         "CIC": 5
       },
@@ -5236,7 +5236,7 @@
       "course_code": "INF01202",
       "section_code": "D",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 8,
       "capacity_by_curriculum": {
         "CIC": 8
       },
@@ -5274,7 +5274,7 @@
       "course_code": "INF01202",
       "section_code": "E",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 0,
       "capacity_by_curriculum": {
         "ECP": 0
       },
@@ -5313,7 +5313,7 @@
       "course_code": "INF01202",
       "section_code": "F",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 5,
       "capacity_by_curriculum": {
         "ECP": 5
       },
@@ -5725,7 +5725,7 @@
       "course_code": "INF05008",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 28,
+      "capacity": 1,
       "capacity_by_curriculum": {
         "CIC": 1
       },
@@ -5757,7 +5757,7 @@
       "course_code": "INF05008",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 28,
+      "capacity": 1,
       "capacity_by_curriculum": {
         "CIC": 1
       },
@@ -6331,7 +6331,7 @@
       "course_code": "INF05508",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 29,
+      "capacity": 2,
       "capacity_by_curriculum": {
         "CIC": 2,
         "ECP": 0
@@ -6365,7 +6365,7 @@
       "course_code": "INF05508",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 25,
+      "capacity": 14,
       "capacity_by_curriculum": {
         "CIC": 14,
         "ECP": 0
@@ -6399,7 +6399,7 @@
       "course_code": "INF05508",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 39,
+      "capacity": 12,
       "capacity_by_curriculum": {
         "CIC": 12
       },
@@ -7119,7 +7119,7 @@
       "course_code": "MAT01353",
       "section_code": "A1",
       "semester": "2026/2",
-      "capacity": 23,
+      "capacity": 0,
       "capacity_by_curriculum": {
         "CIC": 0
       },
@@ -7157,7 +7157,7 @@
       "course_code": "MAT01353",
       "section_code": "A2",
       "semester": "2026/2",
-      "capacity": 23,
+      "capacity": 5,
       "capacity_by_curriculum": {
         "CIC": 0,
         "ECP": 5
@@ -7197,7 +7197,7 @@
       "course_code": "MAT01353",
       "section_code": "B1",
       "semester": "2026/2",
-      "capacity": 20,
+      "capacity": 3,
       "capacity_by_curriculum": {
         "CIC": 0,
         "ECP": 3
@@ -7237,7 +7237,7 @@
       "course_code": "MAT01353",
       "section_code": "B2",
       "semester": "2026/2",
-      "capacity": 19,
+      "capacity": 4,
       "capacity_by_curriculum": {
         "CIC": 4
       },
@@ -8126,9 +8126,9 @@
       "course_name": "PROBABILIDADE E ESTATÍSTICA"
     }
   ],
-  "last_updated": "16/07/26 - 12:46",
+  "last_updated": "18/07/26 - 06:52",
   "last_updated_by_curriculum": {
-    "CIC": "16/07/26 - 12:46",
-    "ECP": "16/07/26 - 12:45"
+    "CIC": "18/07/26 - 06:52",
+    "ECP": "18/07/26 - 06:52"
   }
 }
