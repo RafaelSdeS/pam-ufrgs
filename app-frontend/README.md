@@ -1,12 +1,12 @@
-# Frontend — Matrícula UFRGS
+# Frontend — PAM - UFRGS (Página Auxiliar à Matrícula)
 
-Esta pasta contém a interface web (Vue 3 + Vite + Vuetify) do planejador de grades e horários da UFRGS.
+Esta pasta contém a interface web (Vue 3 + Vite + Vuetify) da Página Auxiliar à Matrícula na UFRGS.
 
-Todos os dados acadêmicos e currículos ficam armazenados na pasta `src/data/` (`academic_data.json` e `ufrgs_data.json`) e são carregados diretamente pelo navegador do usuário.
+Todos os dados acadêmicos e currículos ficam armazenados na pasta `src/data/` (`academic_data.json` e `ufrgs_data.json`) e são processados diretamente pelo navegador do usuário em formato estático e local.
 
 ---
 
-## 🛠️ Comandos Básicos
+## Comandos Básicos
 
 ```bash
 # Instalar as dependências do projeto
@@ -22,4 +22,4 @@ npm run build
 npm run preview
 ```
 
-Consulte o [README principal](../README.md) na raiz do repositório para instruções completas sobre como atualizar as turmas usando os scripts Python.
+Consulte o [README principal](../README.md) na raiz do repositório para instruções completas sobre como atualizar as turmas usando os scripts de importação.
