@@ -375,9 +375,13 @@ export const dataService = {
   },
 
   // --- Eligible Courses Calculation ---
-  getEligibleCourses(curriculumKey = 'cc') {
+  getEligibleCourses(courseCode = null) {
+    const selectedCourseCode = courseCode || curriculumService.getSelectedCourse() || 'CIC'
     const completedSet = new Set(this.getCompletedCourses())
     const allCourses = this.getAllCourses()
+
+    const currSubjects = curriculumService.getCurriculumSubjects(selectedCourseCode)
+    const currSubjectCodes = new Set(currSubjects.map(s => (s.code || s.id || '').toUpperCase()))
 
     // Calculate total completed credits
     let totalCompletedCredits = 0
@@ -395,7 +399,14 @@ export const dataService = {
 
       // Check prerequisites
       const prereqs = course.prerequisites || []
-      const allPrereqsMet = prereqs.every(p => completedSet.has(p.toUpperCase()))
+      const allPrereqsMet = prereqs.every(p => {
+        const upper = (p || '').toUpperCase()
+        if (completedSet.has(upper)) return true
+        // Se o pré-requisito não faz parte da grade curricular obrigatória do curso atual
+        // (por ex., MAT02219 para alunos de ECP), não deve bloquear a elegibilidade da disciplina eletiva
+        if (!currSubjectCodes.has(upper)) return true
+        return false
+      })
       return allPrereqsMet
     })
   },

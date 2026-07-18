@@ -152,17 +152,36 @@ const handlePdfUpload = async (event) => {
   uploadingPdf.value = true
   loading.value = true
   try {
-    const result = await pdfParserService.parsePdfTranscript(file)
+    const result = await pdfParserService.parseTranscript(file)
+    if (result.error === 'empty_pdf') {
+      snackbar.text = 'O arquivo PDF não possui texto selecionável (é uma imagem ou escaneado). Por favor, salve o Histórico como HTML (Ctrl+S) ou gere um PDF com texto.'
+      snackbar.color = 'warning'
+      snackbar.show = true
+      return
+    }
+    if (result.error === 'session_expired') {
+      snackbar.text = 'O arquivo HTML indica que sua sessão expirou no Portal antes do salvamento ("Sua sessão expirou"). Faça login e salve a página novamente.'
+      snackbar.color = 'warning'
+      snackbar.show = true
+      return
+    }
+    if (result.totalFound === 0) {
+      snackbar.text = 'Nenhuma disciplina aprovada foi encontrada no arquivo. Verifique se carregou o Histórico do Curso correto.'
+      snackbar.color = 'warning'
+      snackbar.show = true
+      return
+    }
+
     const newCodes = result.courses.map(c => c.code)
     completedSubjectIds.value = dataService.saveCompletedCourses(newCodes)
 
     updateGridStatuses(completedSubjectIds.value)
-    snackbar.text = `Histórico processado com sucesso! Foram identificadas ${result.totalFound} disciplinas aprovadas no seu PDF.`
+    snackbar.text = `Histórico processado com sucesso! Foram identificadas ${result.totalFound} disciplinas aprovadas no seu arquivo.`
     snackbar.color = 'success'
     snackbar.show = true
   } catch (error) {
-    console.error('Erro ao processar o PDF:', error)
-    snackbar.text = 'Erro ao processar o arquivo PDF. Verifique se o arquivo é válido.'
+    console.error('Erro ao processar o arquivo:', error)
+    snackbar.text = 'Erro ao processar o arquivo. Verifique se é um PDF ou HTML válido.'
     snackbar.color = 'error'
     snackbar.show = true
   } finally {
@@ -602,9 +621,9 @@ const miniViewportRect = computed(() => {
   <v-container fluid class="pa-0 fill-height d-flex flex-column">
     <!-- Toolbar -->
     <v-card class="mx-4 mt-2 mb-4 pa-4 rounded-xl shadow-premium" elevation="2">
-      <v-row align="center" no-gutters>
+      <v-row align="center" class="mb-2" no-gutters>
         <!-- Legenda -->
-        <v-col cols="12" md="6" class="d-flex flex-wrap align-center justify-start gap-4 mb-3 mb-md-0">
+        <v-col cols="12" md="5" class="d-flex flex-wrap align-center justify-start gap-4 mb-2 mb-md-0">
           <div class="d-flex align-center mr-4">
             <span class="legend-color legend-completed mr-2"></span>
             <span class="text-caption font-weight-medium">Concluída</span>
@@ -619,8 +638,78 @@ const miniViewportRect = computed(() => {
           </div>
         </v-col>
 
-        <!-- Controles extras -->
-        <v-col cols="12" md="6" class="d-flex justify-md-end justify-start align-center gap-2 flex-wrap">
+        <!-- Ações do Aluno e Edição -->
+        <v-col cols="12" md="7" class="d-flex justify-md-end justify-start align-center gap-2 flex-wrap">
+          <input
+            type="file"
+            ref="pdfInputRef"
+            accept=".pdf,.html,.htm"
+            class="d-none"
+            @change="handlePdfUpload"
+          />
+          <v-btn
+            v-if="!isEditMode"
+            color="red-darken-2"
+            variant="flat"
+            prepend-icon="mdi-file-document-outline"
+            class="rounded-lg font-weight-medium text-none"
+            :size="mobile ? 'small' : 'default'"
+            @click="triggerPdfUpload"
+            :loading="uploadingPdf"
+          >
+            {{ mobile ? 'Carregar Histórico' : 'Carregar Histórico (PDF / HTML)' }}
+          </v-btn>
+          <v-btn
+            v-if="!isEditMode"
+            color="primary"
+            variant="flat"
+            prepend-icon="mdi-pencil"
+            class="rounded-lg font-weight-medium text-none"
+            :size="mobile ? 'small' : 'default'"
+            @click="startEditing"
+          >
+            Editar
+          </v-btn>
+          <v-btn
+            v-if="!isEditMode"
+            color="primary"
+            variant="tonal"
+            prepend-icon="mdi-calendar-check"
+            class="rounded-lg font-weight-medium text-none"
+            :size="mobile ? 'small' : 'default'"
+            @click="emit('change-page', 'generate_schedules')"
+          >
+            {{ mobile ? 'Gerar Grade' : 'Selecionar disciplinas para o próximo semestre' }}
+          </v-btn>
+          <template v-else>
+            <v-btn
+              color="success"
+              variant="flat"
+              prepend-icon="mdi-check"
+              class="rounded-lg font-weight-medium mr-1"
+              :size="mobile ? 'small' : 'default'"
+              @click="saveCompletions"
+            >
+              Salvar
+            </v-btn>
+            <v-btn
+              color="grey"
+              variant="outlined"
+              prepend-icon="mdi-close"
+              class="rounded-lg font-weight-medium"
+              :size="mobile ? 'small' : 'default'"
+              @click="cancelEditing"
+            >
+              Cancelar
+            </v-btn>
+          </template>
+        </v-col>
+      </v-row>
+
+      <!-- Linha Inferior: Controles de Visualização (a mais próxima do gráfico) -->
+      <v-divider class="my-2"></v-divider>
+      <v-row align="center" no-gutters>
+        <v-col cols="12" class="d-flex justify-end align-center gap-2 flex-wrap">
           <v-btn-group variant="outlined" density="compact" color="primary" class="rounded-lg mr-2">
             <v-btn
               :variant="canvasViewMode === 'canvas' ? 'flat' : 'outlined'"
@@ -649,76 +738,11 @@ const miniViewportRect = computed(() => {
             color="secondary"
             variant="outlined"
             prepend-icon="mdi-image-filter-center-focus"
-            class="rounded-lg font-weight-medium mr-2"
+            class="rounded-lg font-weight-medium"
             @click="handleFitView"
           >
             Ajustar
           </v-btn>
-
-          <!-- Edit Mode Buttons -->
-          <input
-            type="file"
-            ref="pdfInputRef"
-            accept=".pdf"
-            class="d-none"
-            @change="handlePdfUpload"
-          />
-          <v-btn
-            v-if="!isEditMode"
-            color="red-darken-2"
-            variant="flat"
-            prepend-icon="mdi-file-pdf-box"
-            class="rounded-lg font-weight-medium text-none mr-2"
-            :size="mobile ? 'small' : 'default'"
-            @click="triggerPdfUpload"
-            :loading="uploadingPdf"
-          >
-            {{ mobile ? 'Carregar PDF' : 'Carregar Histórico (PDF)' }}
-          </v-btn>
-          <v-btn
-            v-if="!isEditMode"
-            color="primary"
-            variant="flat"
-            prepend-icon="mdi-pencil"
-            class="rounded-lg font-weight-medium text-none"
-            :size="mobile ? 'small' : 'default'"
-            @click="startEditing"
-          >
-            Editar
-          </v-btn>
-          <v-btn
-            v-if="!isEditMode"
-            color="primary"
-            variant="tonal"
-            prepend-icon="mdi-calendar-check"
-            class="rounded-lg font-weight-medium text-none ml-2"
-            :size="mobile ? 'small' : 'default'"
-            @click="emit('change-page', 'generate_schedules')"
-          >
-            {{ mobile ? 'Gerar Grade' : 'Selecionar disciplinas para o próximo semestre' }}
-          </v-btn>
-          <template v-else>
-            <v-btn
-              color="success"
-              variant="flat"
-              prepend-icon="mdi-check"
-              class="rounded-lg font-weight-medium mr-1"
-              :size="mobile ? 'small' : 'default'"
-              @click="saveCompletions"
-            >
-              Salvar
-            </v-btn>
-            <v-btn
-              color="grey"
-              variant="outlined"
-              prepend-icon="mdi-close"
-              class="rounded-lg font-weight-medium"
-              :size="mobile ? 'small' : 'default'"
-              @click="cancelEditing"
-            >
-              Cancelar
-            </v-btn>
-          </template>
         </v-col>
       </v-row>
     </v-card>
@@ -1083,17 +1107,17 @@ const miniViewportRect = computed(() => {
         </v-card>
       </v-col>
     </v-row>
-    <!-- Modal de Instruções para Importação do PDF -->
-    <v-dialog v-model="showPdfModal" max-width="580">
+    <!-- Modal de Instruções para Importação do PDF / HTML -->
+    <v-dialog v-model="showPdfModal" max-width="620">
       <v-card class="rounded-xl pa-6" elevation="10">
         <div class="d-flex align-center justify-space-between mb-4">
           <div class="d-flex align-center gap-3">
             <v-avatar color="red-darken-2" size="44">
-              <v-icon color="white">mdi-file-pdf-box</v-icon>
+              <v-icon color="white">mdi-file-document-outline</v-icon>
             </v-avatar>
             <div>
               <h3 class="text-h6 font-weight-bold mb-0">Importar Histórico do Curso</h3>
-              <p class="text-caption text-medium-emphasis mb-0">Leitura automática das suas disciplinas concluídas</p>
+              <p class="text-caption text-medium-emphasis mb-0">Leitura automática de arquivo PDF ou HTML do Portal</p>
             </div>
           </div>
           <v-btn icon="mdi-close" variant="text" size="small" @click="showPdfModal = false" />
@@ -1102,19 +1126,21 @@ const miniViewportRect = computed(() => {
         <v-card variant="tonal" color="primary" class="pa-4 rounded-xl mb-4">
           <div class="text-caption font-weight-bold mb-1">QUAL ARQUIVO VOCÊ DEVE CARREGAR:</div>
           <p class="text-body-2 mb-2">
-            No Portal do Aluno da UFRGS, busque o documento que se chama <strong>"Histórico do Curso"</strong>.
+            Acesse o Portal de Serviços da UFRGS e vá na opção <strong>"Histórico do Curso"</strong>:
           </p>
-          <div class="text-caption bg-surface pa-2 rounded mb-2 border font-weight-medium">
+          <div class="text-caption bg-surface pa-2 rounded mb-3 border font-weight-medium">
             <v-icon size="small" color="primary" class="mr-1">mdi-navigation</v-icon>
-            Caminho nos menus: <strong>Informações do aluno → Histórico do Curso → Imprimir</strong>
+            Informações do aluno → Histórico do Curso → Imprimir
           </div>
-          <p class="text-caption text-medium-emphasis mb-0">
-            Salve esse documento em PDF e selecione-o no botão abaixo.
-          </p>
+          <div class="text-caption font-weight-bold mb-1">Você pode escolher qualquer uma de 2 opções:</div>
+          <ul class="text-caption pl-4 mb-1">
+            <li class="mb-1"><strong>Opção 1 (HTML - Recomendado):</strong> Na página aberta do Histórico do Curso, pressione <kbd>Ctrl + S</kbd> (ou <kbd>Cmd + S</kbd> no Mac) no seu navegador e salve no formato <em>"Página da Web, apenas HTML"</em> (ou <em>"Página da Web simples"</em>).</li>
+            <li><strong>Opção 2 (PDF):</strong> Clique em Imprimir e salve como PDF. <em>Atenção: certifique-se de que o PDF gerado possui texto selecionável (PDFs salvos como imagem/digitalizados não funcionam)</em>.</li>
+          </ul>
         </v-card>
 
         <v-alert type="info" variant="tonal" icon="mdi-shield-check-outline" class="mb-6 rounded-xl text-caption">
-          <strong>Regras de Validação:</strong> O sistema considerará como feitas <strong>apenas</strong> as disciplinas com situação <em>"Aprovado"</em> ou <em>"Liberação com crédito"</em>. Disciplinas matriculadas, trancadas ou reprovadas serão ignoradas.
+          <strong>Regras de Validação:</strong> O sistema considerará como concluídas as disciplinas com situação <em>"Aprovado"</em>, <em>"Liberação com crédito"</em> ou <em>"Liberação sem crédito"</em>. Disciplinas matriculadas, trancadas ou reprovadas serão ignoradas.
         </v-alert>
 
         <v-btn
@@ -1126,7 +1152,7 @@ const miniViewportRect = computed(() => {
           block
           @click="pdfInputRef.click(); showPdfModal = false"
         >
-          Selecionar Arquivo PDF ("Histórico do Curso")
+          Selecionar Arquivo (.html ou .pdf)
         </v-btn>
       </v-card>
     </v-dialog>

@@ -261,9 +261,22 @@ def main():
 
                 if int(t['capacity']) > novas_turmas_por_chave[chave]['capacity']:
                     novas_turmas_por_chave[chave]['capacity'] = int(t['capacity'])
-                if len(t['schedules']) > len(novas_turmas_por_chave[chave]['schedules']):
+                if len(t['schedules']) > len(novas_turmas_por_chave[chave]['schedules']) or (
+                    novas_turmas_por_chave[chave]['professor_name'] == 'Professor não definido' and t['professor_name'] != 'Professor não definido'
+                ):
                     novas_turmas_por_chave[chave]['schedules'] = t['schedules']
                     novas_turmas_por_chave[chave]['professor_name'] = t['professor_name']
+                    novas_turmas_por_chave[chave]['ministrantes'] = t['ministrantes']
+                    novas_turmas_por_chave[chave]['responsavel_conceito'] = t['responsavel_conceito']
+                elif t['ministrantes'] and set(t['ministrantes']) != set(novas_turmas_por_chave[chave]['ministrantes']):
+                    comb = []
+                    for m in novas_turmas_por_chave[chave]['ministrantes'] + t['ministrantes']:
+                        if m not in comb:
+                            comb.append(m)
+                    novas_turmas_por_chave[chave]['ministrantes'] = comb
+                    novas_turmas_por_chave[chave]['professor_name'] = ' e '.join(comb)
+                if not novas_turmas_por_chave[chave]['responsavel_conceito'] and t['responsavel_conceito']:
+                    novas_turmas_por_chave[chave]['responsavel_conceito'] = t['responsavel_conceito']
 
         turmas_anteriores_do_semestre = {
             (t['course_code'], t['section_code']): t

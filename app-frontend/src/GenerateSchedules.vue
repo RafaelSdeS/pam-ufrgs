@@ -578,7 +578,7 @@ onMounted(() =>{
 
 const loadCourses = async () => {
   allCoursesList.value = dataService.getAllCourses()
-  eligibleCoursesList.value = dataService.getEligibleCourses()
+  eligibleCoursesList.value = dataService.getEligibleCourses(curriculumService.selectedCourseRef.value)
 }
 
 const loadSemesters = async () => {

@@ -26,39 +26,55 @@ def parse_professors(raw_text):
             'ministrantes': [],
             'responsavel_conceito': ''
         }
-    chunks = re.split(r'(\d{2}/\d{2}/\d{4}(?:\s*-\s*Respons[a-z\s]*conceito)?)', raw_text)
+    pattern = re.compile(
+        r"([A-Za-zÀ-ÖØ-öø-ÿ\s.\-\x27]+?)\s*-\s*(Ministrante|Regente|Respons[a-zÀ-ÖØ-öø-ÿ]*)"
+        r"(?:\s+de\s+\d{2}/\d{2}/\d{4}\s+a\s+\d{2}/\d{2}/\d{4})?"
+        r"(?:\s*-\s*Respons[a-zÀ-ÖØ-öø-ÿ]*(?:\s+pelo)?(?:\s+conceito)?)?",
+        re.IGNORECASE
+    )
     ministrantes = []
-    responsavel = ''
-    for i in range(0, len(chunks)-1, 2):
-        name_and_role = chunks[i].strip()
-        extra = chunks[i+1].strip()
-        if not name_and_role:
-            continue
-        m = re.search(r'^(.*?)\s*-\s*(Regente|Ministrante|Respons[a-z]*)', name_and_role, re.IGNORECASE)
-        if m:
-            prof_name = m.group(1).strip()
-            role_word = m.group(2).strip().lower()
-            if 'ministrante' in role_word:
-                if prof_name not in ministrantes:
-                    ministrantes.append(prof_name)
-            elif 'regente' in role_word or 'respons' in role_word:
-                if not responsavel:
-                    responsavel = prof_name
-            if 'respons' in extra.lower() and not responsavel:
-                responsavel = prof_name
-    if not ministrantes and responsavel:
-        ministrantes = [responsavel]
-    elif not ministrantes and not responsavel:
-        clean = re.split(r'\s+-\s+(?:Ministrante|Regente|Respons)', raw_text)[0].strip()
-        if clean:
-            ministrantes = [clean]
-            responsavel = clean
+    regentes = []
+    responsavel = ""
+    pos = 0
+    while pos < len(raw_text):
+        m = pattern.search(raw_text, pos)
+        if not m:
+            if not ministrantes and not regentes and not responsavel:
+                clean = re.split(r"\s+-\s+(?:Ministrante|Regente|Respons)", raw_text, flags=re.IGNORECASE)[0].strip()
+                if clean:
+                    ministrantes = [clean]
+                    responsavel = clean
+            break
+        name = m.group(1).strip()
+        name = re.sub(r"^(?:-\s*|Respons[a-zÀ-ÖØ-öø-ÿ]*(?:\s+pelo)?(?:\s+conceito)?\s*)+", "", name, flags=re.IGNORECASE).strip()
+        name = re.sub(r"^[-\s]+|[-\s]+$", "", name).strip()
+        role = m.group(2).strip().lower()
+        matched_text = m.group(0)
+        is_resp_block = "respons" in role or re.search(r"-\s*respons", matched_text, re.IGNORECASE)
+        if is_resp_block and not responsavel and name:
+            responsavel = name
+        if "ministrante" in role:
+            if name and name not in ministrantes:
+                ministrantes.append(name)
+        elif "regente" in role:
+            if name and name not in regentes:
+                regentes.append(name)
+        elif "respons" in role:
+            if not responsavel and name:
+                responsavel = name
+        pos = m.end()
+    if not ministrantes:
+        if regentes:
+            ministrantes = regentes
+        elif responsavel:
+            ministrantes = [responsavel]
     prof_display = ' e '.join(ministrantes) if ministrantes else (responsavel or 'Professor não definido')
     return {
         'professor_name': prof_display,
         'ministrantes': ministrantes,
         'responsavel_conceito': responsavel
     }
+
 
 def formatar_horarios(text):
     if not text:

@@ -1244,7 +1244,7 @@
       "ministrantes": [
         "Luisa Alem Ribeiro"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Luisa Alem Ribeiro",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -1270,7 +1270,7 @@
       "ministrantes": [
         "MARCELO SOARES LUBASZEWSKI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCELO SOARES LUBASZEWSKI",
       "schedules": [
         {
           "day_of_week": "Quinta-feira",
@@ -1288,7 +1288,7 @@
       "course_code": "ECP99002",
       "section_code": "U",
       "semester": "2026/2",
-      "capacity": 0,
+      "capacity": 35,
       "capacity_by_curriculum": {
         "ECP": 0
       },
@@ -1296,7 +1296,7 @@
       "ministrantes": [
         "RENATO VENTURA BAYAN HENRIQUES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RENATO VENTURA BAYAN HENRIQUES",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -1350,9 +1350,9 @@
       "capacity_by_curriculum": {
         "ECP": 10
       },
-      "professor_name": "GILSON INACIO WIRTH",
+      "professor_name": "HAMILTON DUARTE KLIMACH",
       "ministrantes": [
-        "GILSON INACIO WIRTH"
+        "HAMILTON DUARTE KLIMACH"
       ],
       "responsavel_conceito": "GILSON INACIO WIRTH",
       "schedules": [
@@ -1388,9 +1388,9 @@
       "capacity_by_curriculum": {
         "ECP": 2
       },
-      "professor_name": "GILSON INACIO WIRTH",
+      "professor_name": "HAMILTON DUARTE KLIMACH",
       "ministrantes": [
-        "GILSON INACIO WIRTH"
+        "HAMILTON DUARTE KLIMACH"
       ],
       "responsavel_conceito": "GILSON INACIO WIRTH",
       "schedules": [
@@ -1426,9 +1426,9 @@
       "capacity_by_curriculum": {
         "ECP": 2
       },
-      "professor_name": "GILSON INACIO WIRTH",
+      "professor_name": "RAPHAEL MARTINS BRUM",
       "ministrantes": [
-        "GILSON INACIO WIRTH"
+        "RAPHAEL MARTINS BRUM"
       ],
       "responsavel_conceito": "GILSON INACIO WIRTH",
       "schedules": [
@@ -1570,7 +1570,7 @@
       "ministrantes": [
         "ADALBERTO SCHUCK JUNIOR"
       ],
-      "responsavel_conceito": "ADALBERTO SCHUCK JUNIOR",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -1634,7 +1634,7 @@
       "ministrantes": [
         "CARLOS EDUARDO PEREIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "CARLOS EDUARDO PEREIRA",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -1666,7 +1666,7 @@
       "ministrantes": [
         "SERGIO LUIS HAFFNER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "SERGIO LUIS HAFFNER",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -1698,7 +1698,7 @@
       "ministrantes": [
         "BIBIANA MAITÊ PETRY FERRAZ"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "BIBIANA MAITÊ PETRY FERRAZ",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -1730,7 +1730,7 @@
       "ministrantes": [
         "ALCEU HEINKE FRIGERI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ALCEU HEINKE FRIGERI",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -1762,7 +1762,7 @@
       "ministrantes": [
         "TRISTAO JULIO GARCIA DOS SANTOS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "TRISTAO JULIO GARCIA DOS SANTOS",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -1788,7 +1788,7 @@
       "ministrantes": [
         "TRISTAO JULIO GARCIA DOS SANTOS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "TRISTAO JULIO GARCIA DOS SANTOS",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -1814,7 +1814,7 @@
       "ministrantes": [
         "TRISTAO JULIO GARCIA DOS SANTOS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "TRISTAO JULIO GARCIA DOS SANTOS",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -1840,7 +1840,7 @@
       "ministrantes": [
         "TRISTAO JULIO GARCIA DOS SANTOS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "TRISTAO JULIO GARCIA DOS SANTOS",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -1866,7 +1866,7 @@
       "ministrantes": [
         "JOAO MANOEL GOMES DA SILVA JUNIOR"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOAO MANOEL GOMES DA SILVA JUNIOR",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -1898,7 +1898,7 @@
       "ministrantes": [
         "LUCIOLA CAMPESTRINI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCIOLA CAMPESTRINI",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -1936,7 +1936,7 @@
       "ministrantes": [
         "AURÉLIO TERGOLINA SALTON"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "AURÉLIO TERGOLINA SALTON",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -1974,7 +1974,7 @@
       "ministrantes": [
         "AURÉLIO TERGOLINA SALTON"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "AURÉLIO TERGOLINA SALTON",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2012,7 +2012,7 @@
       "ministrantes": [
         "ALEXANDRE SANFELICI BAZANELLA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ALEXANDRE SANFELICI BAZANELLA",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2044,7 +2044,7 @@
       "ministrantes": [
         "WALTER FETTER LAGES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "WALTER FETTER LAGES",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -2076,7 +2076,7 @@
       "ministrantes": [
         "WALTER FETTER LAGES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "WALTER FETTER LAGES",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -2100,7 +2100,7 @@
       "course_code": "FIS01181",
       "section_code": "C1",
       "semester": "2026/2",
-      "capacity": 1,
+      "capacity": 18,
       "capacity_by_curriculum": {
         "ECP": 1
       },
@@ -2108,7 +2108,7 @@
       "ministrantes": [
         "LEANDRO LANGIE ARAUJO"
       ],
-      "responsavel_conceito": "LEANDRO LANGIE ARAUJO",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2146,7 +2146,7 @@
       "ministrantes": [
         "LEANDRO LANGIE ARAUJO"
       ],
-      "responsavel_conceito": "LEANDRO LANGIE ARAUJO",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2176,7 +2176,7 @@
       "course_code": "FIS01181",
       "section_code": "F3",
       "semester": "2026/2",
-      "capacity": 0,
+      "capacity": 18,
       "capacity_by_curriculum": {
         "ECP": 0
       },
@@ -2184,7 +2184,7 @@
       "ministrantes": [
         "LEANDRO LANGIE ARAUJO"
       ],
-      "responsavel_conceito": "LEANDRO LANGIE ARAUJO",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2222,7 +2222,7 @@
       "ministrantes": [
         "LEANDRO LANGIE ARAUJO"
       ],
-      "responsavel_conceito": "LEANDRO LANGIE ARAUJO",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2260,7 +2260,7 @@
       "ministrantes": [
         "LEANDRO LANGIE ARAUJO"
       ],
-      "responsavel_conceito": "LEANDRO LANGIE ARAUJO",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2298,7 +2298,7 @@
       "ministrantes": [
         "LEANDRO LANGIE ARAUJO"
       ],
-      "responsavel_conceito": "LEANDRO LANGIE ARAUJO",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2336,7 +2336,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2374,7 +2374,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2412,7 +2412,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2450,7 +2450,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2488,7 +2488,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2526,7 +2526,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2564,7 +2564,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2602,7 +2602,7 @@
       "ministrantes": [
         "Marcus Vinicius Castegnaro"
       ],
-      "responsavel_conceito": "Marcus Vinicius Castegnaro",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2640,7 +2640,7 @@
       "ministrantes": [
         "MARCO AURELIO PIRES IDIART"
       ],
-      "responsavel_conceito": "MARCO AURELIO PIRES IDIART",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2678,7 +2678,7 @@
       "ministrantes": [
         "MARCO AURELIO PIRES IDIART"
       ],
-      "responsavel_conceito": "MARCO AURELIO PIRES IDIART",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2716,7 +2716,7 @@
       "ministrantes": [
         "MARCO AURELIO PIRES IDIART"
       ],
-      "responsavel_conceito": "MARCO AURELIO PIRES IDIART",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2754,7 +2754,7 @@
       "ministrantes": [
         "MARCO AURELIO PIRES IDIART"
       ],
-      "responsavel_conceito": "MARCO AURELIO PIRES IDIART",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2792,7 +2792,7 @@
       "ministrantes": [
         "MARCO AURELIO PIRES IDIART"
       ],
-      "responsavel_conceito": "MARCO AURELIO PIRES IDIART",
+      "responsavel_conceito": "",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2865,7 +2865,7 @@
       "ministrantes": [
         "GABRIEL LUCA NAZAR"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "GABRIEL LUCA NAZAR",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -2898,7 +2898,7 @@
       "ministrantes": [
         "RENATA DE MATOS GALANTE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RENATA DE MATOS GALANTE",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -2925,7 +2925,7 @@
       "ministrantes": [
         "Arthur Francisco Lorenzon"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Arthur Francisco Lorenzon",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -2959,7 +2959,7 @@
       "ministrantes": [
         "Jeferson Campos Nobre"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Jeferson Campos Nobre",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -2992,7 +2992,7 @@
       "ministrantes": [
         "MARIANA RECAMONDE MENDOZA GUERREIRO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARIANA RECAMONDE MENDOZA GUERREIRO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -3025,7 +3025,7 @@
       "ministrantes": [
         "CLAUDIO ROSITO JUNG"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "CLAUDIO ROSITO JUNG",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3058,7 +3058,7 @@
       "ministrantes": [
         "ANDERSON MACIEL"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ANDERSON MACIEL",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3090,7 +3090,7 @@
       "ministrantes": [
         "CARLA MARIA DAL SASSO FREITAS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "CARLA MARIA DAL SASSO FREITAS",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -3122,7 +3122,7 @@
       "ministrantes": [
         "CARLA MARIA DAL SASSO FREITAS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "CARLA MARIA DAL SASSO FREITAS",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -3154,7 +3154,7 @@
       "ministrantes": [
         "ANDERSON MACIEL"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ANDERSON MACIEL",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3186,7 +3186,7 @@
       "ministrantes": [
         "JEAN FELIPE PATIKOWSKI CHEIRAN"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JEAN FELIPE PATIKOWSKI CHEIRAN",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -3219,7 +3219,7 @@
       "ministrantes": [
         "Jeferson Campos Nobre"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Jeferson Campos Nobre",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3253,7 +3253,7 @@
       "ministrantes": [
         "MANUEL MENEZES DE OLIVEIRA NETO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MANUEL MENEZES DE OLIVEIRA NETO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3287,7 +3287,7 @@
       "ministrantes": [
         "JACOB SCHARCANSKI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JACOB SCHARCANSKI",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3321,7 +3321,7 @@
       "ministrantes": [
         "EDUARDO SIMÕES LOPES GASTAL"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "EDUARDO SIMÕES LOPES GASTAL",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3355,7 +3355,7 @@
       "ministrantes": [
         "LUCAS RAFAEL COSTELLA PESSUTTO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS RAFAEL COSTELLA PESSUTTO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3389,7 +3389,7 @@
       "ministrantes": [
         "Joel Luis Carbonera"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Joel Luis Carbonera",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3423,7 +3423,7 @@
       "ministrantes": [
         "LUIGI CARRO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUIGI CARRO",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -3555,7 +3555,7 @@
       "ministrantes": [
         "LUIGI CARRO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUIGI CARRO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3589,7 +3589,7 @@
       "ministrantes": [
         "SERGIO LUIS CECHIN"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "SERGIO LUIS CECHIN",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3623,7 +3623,7 @@
       "ministrantes": [
         "Claudio Machado Diniz"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Claudio Machado Diniz",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3657,7 +3657,7 @@
       "ministrantes": [
         "FERNANDA GUSMAO DE LIMA KASTENSMIDT"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "FERNANDA GUSMAO DE LIMA KASTENSMIDT",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -3819,7 +3819,7 @@
       "ministrantes": [
         "ANDERSON ROCHA TAVARES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ANDERSON ROCHA TAVARES",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -3853,7 +3853,7 @@
       "ministrantes": [
         "MANUEL MENEZES DE OLIVEIRA NETO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MANUEL MENEZES DE OLIVEIRA NETO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -3887,7 +3887,7 @@
       "ministrantes": [
         "VALTER ROESLER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "VALTER ROESLER",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -3915,7 +3915,7 @@
       "ministrantes": [
         "VALTER ROESLER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "VALTER ROESLER",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -3943,7 +3943,7 @@
       "ministrantes": [
         "VALTER ROESLER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "VALTER ROESLER",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -3971,7 +3971,7 @@
       "ministrantes": [
         "VALTER ROESLER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "VALTER ROESLER",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -3999,7 +3999,7 @@
       "ministrantes": [
         "NICOLAS BRUNO MAILLARD"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "NICOLAS BRUNO MAILLARD",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4033,7 +4033,7 @@
       "ministrantes": [
         "ALBERTO EGON SCHAEFFER FILHO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ALBERTO EGON SCHAEFFER FILHO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4067,7 +4067,7 @@
       "ministrantes": [
         "ALEXANDRE DA SILVA CARISSIMI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ALEXANDRE DA SILVA CARISSIMI",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4101,7 +4101,7 @@
       "ministrantes": [
         "WEVERTON LUIS DA COSTA CORDEIRO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "WEVERTON LUIS DA COSTA CORDEIRO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4135,7 +4135,7 @@
       "ministrantes": [
         "Mateus Grellert da Silva"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Mateus Grellert da Silva",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4175,7 +4175,7 @@
       "ministrantes": [
         "RENATO PEREZ RIBAS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RENATO PEREZ RIBAS",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4215,7 +4215,7 @@
       "ministrantes": [
         "ANDRE INACIO REIS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ANDRE INACIO REIS",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4246,7 +4246,7 @@
       "course_code": "INF01087",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 13,
+      "capacity": 40,
       "capacity_by_curriculum": {
         "CIC": 13
       },
@@ -4254,7 +4254,7 @@
       "ministrantes": [
         "ANDERSON ROCHA TAVARES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ANDERSON ROCHA TAVARES",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4278,7 +4278,7 @@
       "course_code": "INF01087",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 13,
+      "capacity": 40,
       "capacity_by_curriculum": {
         "CIC": 13
       },
@@ -4319,7 +4319,7 @@
         "ERIKA FERNANDES COTA",
         "LUCIO MAURO DUARTE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCIO MAURO DUARTE",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4346,7 +4346,7 @@
         "Karina Kohl Silveira",
         "LUCIO MAURO DUARTE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCIO MAURO DUARTE",
       "schedules": [
         {
           "day_of_week": "Quinta-feira",
@@ -4372,7 +4372,7 @@
       "ministrantes": [
         "JACOB SCHARCANSKI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JACOB SCHARCANSKI",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4404,7 +4404,7 @@
       "ministrantes": [
         "Joel Luis Carbonera"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Joel Luis Carbonera",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4436,7 +4436,7 @@
       "ministrantes": [
         "VIVIANE PEREIRA MOREIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "VIVIANE PEREIRA MOREIRA",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4468,7 +4468,7 @@
       "ministrantes": [
         "Eder John Scheid"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Eder John Scheid",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4500,7 +4500,7 @@
       "ministrantes": [
         "DENNIS GIOVANI BALREIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "DENNIS GIOVANI BALREIRA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4533,7 +4533,7 @@
       "ministrantes": [
         "LUIGI CARRO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUIGI CARRO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4567,7 +4567,7 @@
       "ministrantes": [
         "LUIGI CARRO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUIGI CARRO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4601,7 +4601,7 @@
       "ministrantes": [
         "Karina Kohl Silveira"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Karina Kohl Silveira",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4635,7 +4635,7 @@
       "ministrantes": [
         "MARCELO SOARES PIMENTA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCELO SOARES PIMENTA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4669,7 +4669,7 @@
       "ministrantes": [
         "JEAN FELIPE PATIKOWSKI CHEIRAN"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JEAN FELIPE PATIKOWSKI CHEIRAN",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4702,7 +4702,7 @@
       "ministrantes": [
         "LETICIA DOS SANTOS MACHADO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LETICIA DOS SANTOS MACHADO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4734,7 +4734,7 @@
       "ministrantes": [
         "LETICIA DOS SANTOS MACHADO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LETICIA DOS SANTOS MACHADO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4766,7 +4766,7 @@
       "ministrantes": [
         "LUCINÉIA HELOISA THOM"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCINÉIA HELOISA THOM",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4798,7 +4798,7 @@
       "ministrantes": [
         "DANTE AUGUSTO COUTO BARONE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "DANTE AUGUSTO COUTO BARONE",
       "schedules": [
         {
           "day_of_week": "Quarta-feira",
@@ -4825,7 +4825,7 @@
       "ministrantes": [
         "LUCAS MELLO SCHNORR"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS MELLO SCHNORR",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4859,7 +4859,7 @@
       "ministrantes": [
         "MARCELO DE OLIVEIRA JOHANN"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCELO DE OLIVEIRA JOHANN",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -4893,7 +4893,7 @@
       "ministrantes": [
         "KARIN BECKER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "KARIN BECKER",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4927,7 +4927,7 @@
       "ministrantes": [
         "RENATA DE MATOS GALANTE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RENATA DE MATOS GALANTE",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4961,7 +4961,7 @@
       "ministrantes": [
         "LUCAS MELLO SCHNORR"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS MELLO SCHNORR",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -4995,7 +4995,7 @@
       "ministrantes": [
         "FERNANDA GUSMAO DE LIMA KASTENSMIDT"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "FERNANDA GUSMAO DE LIMA KASTENSMIDT",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5029,7 +5029,7 @@
       "ministrantes": [
         "SERGIO BAMPI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "SERGIO BAMPI",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5063,7 +5063,7 @@
       "ministrantes": [
         "ANTONIO CARLOS SCHNEIDER BECK FILHO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ANTONIO CARLOS SCHNEIDER BECK FILHO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5097,7 +5097,7 @@
       "ministrantes": [
         "Claudio Machado Diniz"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Claudio Machado Diniz",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5122,7 +5122,7 @@
       "course_code": "INF01202",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 8,
+      "capacity": 20,
       "capacity_by_curriculum": {
         "CIC": 8
       },
@@ -5130,7 +5130,7 @@
       "ministrantes": [
         "SERGIO LUIS CECHIN"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "SERGIO LUIS CECHIN",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5160,7 +5160,7 @@
       "course_code": "INF01202",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 5,
+      "capacity": 20,
       "capacity_by_curriculum": {
         "CIC": 5
       },
@@ -5168,7 +5168,7 @@
       "ministrantes": [
         "SERGIO LUIS CECHIN"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "SERGIO LUIS CECHIN",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5198,7 +5198,7 @@
       "course_code": "INF01202",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 5,
+      "capacity": 20,
       "capacity_by_curriculum": {
         "CIC": 5
       },
@@ -5206,7 +5206,7 @@
       "ministrantes": [
         "Eder John Scheid"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Eder John Scheid",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5236,7 +5236,7 @@
       "course_code": "INF01202",
       "section_code": "D",
       "semester": "2026/2",
-      "capacity": 8,
+      "capacity": 20,
       "capacity_by_curriculum": {
         "CIC": 8
       },
@@ -5244,7 +5244,7 @@
       "ministrantes": [
         "Eder John Scheid"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Eder John Scheid",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5274,15 +5274,16 @@
       "course_code": "INF01202",
       "section_code": "E",
       "semester": "2026/2",
-      "capacity": 0,
+      "capacity": 20,
       "capacity_by_curriculum": {
         "ECP": 0
       },
-      "professor_name": "LUCAS RAFAEL COSTELLA PESSUTTO",
+      "professor_name": "LUCAS RAFAEL COSTELLA PESSUTTO e LUCIANA REGINA BENCKE",
       "ministrantes": [
-        "LUCAS RAFAEL COSTELLA PESSUTTO"
+        "LUCAS RAFAEL COSTELLA PESSUTTO",
+        "LUCIANA REGINA BENCKE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS RAFAEL COSTELLA PESSUTTO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5312,15 +5313,16 @@
       "course_code": "INF01202",
       "section_code": "F",
       "semester": "2026/2",
-      "capacity": 5,
+      "capacity": 20,
       "capacity_by_curriculum": {
         "ECP": 5
       },
-      "professor_name": "LUCAS RAFAEL COSTELLA PESSUTTO",
+      "professor_name": "LUCAS RAFAEL COSTELLA PESSUTTO e LUCIANA REGINA BENCKE",
       "ministrantes": [
-        "LUCAS RAFAEL COSTELLA PESSUTTO"
+        "LUCAS RAFAEL COSTELLA PESSUTTO",
+        "LUCIANA REGINA BENCKE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS RAFAEL COSTELLA PESSUTTO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5359,7 +5361,7 @@
       "ministrantes": [
         "MARCELO WALTER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCELO WALTER",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5395,11 +5397,12 @@
         "CIC": 10,
         "ECP": 5
       },
-      "professor_name": "WEVERTON LUIS DA COSTA CORDEIRO",
+      "professor_name": "WEVERTON LUIS DA COSTA CORDEIRO e RENAN DE QUEIROZ MAFFEI",
       "ministrantes": [
-        "WEVERTON LUIS DA COSTA CORDEIRO"
+        "WEVERTON LUIS DA COSTA CORDEIRO",
+        "RENAN DE QUEIROZ MAFFEI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "WEVERTON LUIS DA COSTA CORDEIRO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5439,7 +5442,7 @@
       "ministrantes": [
         "RENATA DE MATOS GALANTE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RENATA DE MATOS GALANTE",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5473,7 +5476,7 @@
       "ministrantes": [
         "JOAO LUIZ DIHL COMBA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOAO LUIZ DIHL COMBA",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5507,7 +5510,7 @@
       "ministrantes": [
         "DENNIS GIOVANI BALREIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "DENNIS GIOVANI BALREIRA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5541,7 +5544,7 @@
       "ministrantes": [
         "ANDRE INACIO REIS"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ANDRE INACIO REIS",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5575,7 +5578,7 @@
       "ministrantes": [
         "LUCINÉIA HELOISA THOM"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCINÉIA HELOISA THOM",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5608,7 +5611,7 @@
       "ministrantes": [
         "Karina Kohl Silveira"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Karina Kohl Silveira",
       "schedules": [
         {
           "day_of_week": "Quarta-feira",
@@ -5634,7 +5637,7 @@
       "ministrantes": [
         "FREDERICO MESSA SCHWARTZHAUPT"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "FREDERICO MESSA SCHWARTZHAUPT",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5666,7 +5669,7 @@
       "ministrantes": [
         "MARIANA LUDERITZ KOLBERG FERNANDES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARIANA LUDERITZ KOLBERG FERNANDES",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5698,7 +5701,7 @@
       "ministrantes": [
         "LEILA RIBEIRO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LEILA RIBEIRO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5722,7 +5725,7 @@
       "course_code": "INF05008",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 1,
+      "capacity": 28,
       "capacity_by_curriculum": {
         "CIC": 1
       },
@@ -5730,7 +5733,7 @@
       "ministrantes": [
         "LUCIO MAURO DUARTE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCIO MAURO DUARTE",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5754,7 +5757,7 @@
       "course_code": "INF05008",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 1,
+      "capacity": 28,
       "capacity_by_curriculum": {
         "CIC": 1
       },
@@ -5762,7 +5765,7 @@
       "ministrantes": [
         "LUCAS NUNES ALEGRE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS NUNES ALEGRE",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5826,7 +5829,7 @@
       "ministrantes": [
         "MARCUS ROLF PETER RITT"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCUS ROLF PETER RITT",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -5858,7 +5861,7 @@
       "ministrantes": [
         "MARCIO DORN"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCIO DORN",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5925,7 +5928,7 @@
       "ministrantes": [
         "LUCAS NUNES ALEGRE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS NUNES ALEGRE",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5959,7 +5962,7 @@
       "ministrantes": [
         "Henrique Becker"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Henrique Becker",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -5993,7 +5996,7 @@
       "ministrantes": [
         "André Grahl Pereira"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "André Grahl Pereira",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -6027,7 +6030,7 @@
       "ministrantes": [
         "ÁLVARO FREITAS MOREIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ÁLVARO FREITAS MOREIRA",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6061,7 +6064,7 @@
       "ministrantes": [
         "BRUNO IOCHINS GRISCI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "BRUNO IOCHINS GRISCI",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6095,7 +6098,7 @@
       "ministrantes": [
         "MARCUS ROLF PETER RITT"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCUS ROLF PETER RITT",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6129,7 +6132,7 @@
       "ministrantes": [
         "André Grahl Pereira"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "André Grahl Pereira",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6157,7 +6160,7 @@
       "ministrantes": [
         "FREDERICO MESSA SCHWARTZHAUPT"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "FREDERICO MESSA SCHWARTZHAUPT",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6240,7 +6243,7 @@
       "ministrantes": [
         "RODRIGO MACHADO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RODRIGO MACHADO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -6272,7 +6275,7 @@
       "ministrantes": [
         "RODRIGO MACHADO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RODRIGO MACHADO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6304,7 +6307,7 @@
       "ministrantes": [
         "BRUNO IOCHINS GRISCI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "BRUNO IOCHINS GRISCI",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6328,7 +6331,7 @@
       "course_code": "INF05508",
       "section_code": "A",
       "semester": "2026/2",
-      "capacity": 2,
+      "capacity": 29,
       "capacity_by_curriculum": {
         "CIC": 2,
         "ECP": 0
@@ -6337,7 +6340,7 @@
       "ministrantes": [
         "LUCIO MAURO DUARTE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCIO MAURO DUARTE",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -6362,7 +6365,7 @@
       "course_code": "INF05508",
       "section_code": "B",
       "semester": "2026/2",
-      "capacity": 14,
+      "capacity": 25,
       "capacity_by_curriculum": {
         "CIC": 14,
         "ECP": 0
@@ -6371,7 +6374,7 @@
       "ministrantes": [
         "ROSA MARIA VICARI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ROSA MARIA VICARI",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -6396,7 +6399,7 @@
       "course_code": "INF05508",
       "section_code": "C",
       "semester": "2026/2",
-      "capacity": 12,
+      "capacity": 39,
       "capacity_by_curriculum": {
         "CIC": 12
       },
@@ -6470,7 +6473,7 @@
       "ministrantes": [
         "ERIKA FERNANDES COTA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ERIKA FERNANDES COTA",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6496,7 +6499,7 @@
       "ministrantes": [
         "André Grahl Pereira"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "André Grahl Pereira",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6522,7 +6525,7 @@
       "ministrantes": [
         "FREDERICO MESSA SCHWARTZHAUPT"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "FREDERICO MESSA SCHWARTZHAUPT",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6548,7 +6551,7 @@
       "ministrantes": [
         "JOAO CESAR NETTO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOAO CESAR NETTO",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6574,7 +6577,7 @@
       "ministrantes": [
         "MARCELO SOARES PIMENTA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MARCELO SOARES PIMENTA",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6600,7 +6603,7 @@
       "ministrantes": [
         "RENAN DE QUEIROZ MAFFEI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "RENAN DE QUEIROZ MAFFEI",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6626,7 +6629,7 @@
       "ministrantes": [
         "LUCIANA PORCHER NEDEL"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCIANA PORCHER NEDEL",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6652,7 +6655,7 @@
       "ministrantes": [
         "EDSON PRESTES E SILVA JUNIOR"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "EDSON PRESTES E SILVA JUNIOR",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -6674,12 +6677,13 @@
       "capacity_by_curriculum": {
         "CIC": 6
       },
-      "professor_name": "ALEXANDRE DA SILVA CARISSIMI e CRISTIANO KRUG",
+      "professor_name": "ALEXANDRE DA SILVA CARISSIMI e CRISTIANO KRUG e MICHELE OBERSON DE SOUZA",
       "ministrantes": [
         "ALEXANDRE DA SILVA CARISSIMI",
-        "CRISTIANO KRUG"
+        "CRISTIANO KRUG",
+        "MICHELE OBERSON DE SOUZA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "CRISTIANO KRUG",
       "schedules": [
         {
           "day_of_week": "Quinta-feira",
@@ -6706,7 +6710,7 @@
         "ÂNGELA DE MOURA FERREIRA DANILEVICZ",
         "EMILENE MENDES BECKER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "EMILENE MENDES BECKER",
       "schedules": [
         {
           "day_of_week": "Quinta-feira",
@@ -6733,7 +6737,7 @@
         "DEBORA JUNG LUVIZETTO FACCIN",
         "HENRI STEPHAN SCHREKKER"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "HENRI STEPHAN SCHREKKER",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -6755,11 +6759,12 @@
       "capacity_by_curriculum": {
         "CIC": 2
       },
-      "professor_name": "MAXIMILIANO SEGALA",
+      "professor_name": "MAXIMILIANO SEGALA e PAULO EDUARDO MAYORGA BORGES",
       "ministrantes": [
-        "MAXIMILIANO SEGALA"
+        "MAXIMILIANO SEGALA",
+        "PAULO EDUARDO MAYORGA BORGES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "MAXIMILIANO SEGALA",
       "schedules": [
         {
           "day_of_week": "Quinta-feira",
@@ -6785,7 +6790,7 @@
       "ministrantes": [
         "PAULO RICARDO DE AVILA ZINGANO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "PAULO RICARDO DE AVILA ZINGANO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -6817,7 +6822,7 @@
       "ministrantes": [
         "SUSANA FROMETA FERNANDEZ"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "SUSANA FROMETA FERNANDEZ",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6855,7 +6860,7 @@
       "ministrantes": [
         "LUIS GUSTAVO DONINELLI MENDES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUIS GUSTAVO DONINELLI MENDES",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6893,7 +6898,7 @@
       "ministrantes": [
         "JOAO BATISTA DA PAZ CARVALHO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOAO BATISTA DA PAZ CARVALHO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6931,7 +6936,7 @@
       "ministrantes": [
         "Wanderley Nunes Do Nascimento"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Wanderley Nunes Do Nascimento",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -6969,7 +6974,7 @@
       "ministrantes": [
         "LEONARDO FERNANDES GUIDI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LEONARDO FERNANDES GUIDI",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7003,11 +7008,12 @@
       "capacity_by_curriculum": {
         "ECP": 3
       },
-      "professor_name": "FABIO SOUTO DE AZEVEDO",
+      "professor_name": "FABIO SOUTO DE AZEVEDO e LEONARDO FERNANDES GUIDI",
       "ministrantes": [
-        "FABIO SOUTO DE AZEVEDO"
+        "FABIO SOUTO DE AZEVEDO",
+        "LEONARDO FERNANDES GUIDI"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "FABIO SOUTO DE AZEVEDO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7045,7 +7051,7 @@
       "ministrantes": [
         "FABIO SOUTO DE AZEVEDO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "FABIO SOUTO DE AZEVEDO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7083,7 +7089,7 @@
       "ministrantes": [
         "ROBERT HENRIQUE RODRIGUES GUTERRES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ROBERT HENRIQUE RODRIGUES GUTERRES",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7113,7 +7119,7 @@
       "course_code": "MAT01353",
       "section_code": "A1",
       "semester": "2026/2",
-      "capacity": 0,
+      "capacity": 23,
       "capacity_by_curriculum": {
         "CIC": 0
       },
@@ -7121,7 +7127,7 @@
       "ministrantes": [
         "JOSE AFONSO BARRIONUEVO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOSE AFONSO BARRIONUEVO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7151,7 +7157,7 @@
       "course_code": "MAT01353",
       "section_code": "A2",
       "semester": "2026/2",
-      "capacity": 5,
+      "capacity": 23,
       "capacity_by_curriculum": {
         "CIC": 0,
         "ECP": 5
@@ -7160,7 +7166,7 @@
       "ministrantes": [
         "JULIANE GOLUBINSKI CAPAVERDE"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JULIANE GOLUBINSKI CAPAVERDE",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7191,7 +7197,7 @@
       "course_code": "MAT01353",
       "section_code": "B1",
       "semester": "2026/2",
-      "capacity": 3,
+      "capacity": 20,
       "capacity_by_curriculum": {
         "CIC": 0,
         "ECP": 3
@@ -7200,7 +7206,7 @@
       "ministrantes": [
         "JACQUES AVELINE LOUREIRO DA SILVA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JACQUES AVELINE LOUREIRO DA SILVA",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7231,7 +7237,7 @@
       "course_code": "MAT01353",
       "section_code": "B2",
       "semester": "2026/2",
-      "capacity": 4,
+      "capacity": 19,
       "capacity_by_curriculum": {
         "CIC": 4
       },
@@ -7239,7 +7245,7 @@
       "ministrantes": [
         "JOSE AFONSO BARRIONUEVO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOSE AFONSO BARRIONUEVO",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7278,7 +7284,7 @@
       "ministrantes": [
         "Cibele Aparecida Ladeia"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "Cibele Aparecida Ladeia",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7317,7 +7323,7 @@
       "ministrantes": [
         "JOSUÉ KNORST"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOSUÉ KNORST",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7355,7 +7361,7 @@
       "ministrantes": [
         "JACQUES AVELINE LOUREIRO DA SILVA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JACQUES AVELINE LOUREIRO DA SILVA",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7393,7 +7399,7 @@
       "ministrantes": [
         "JOANA MOHR"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOANA MOHR",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7433,7 +7439,7 @@
         "LEONARDO PRANGE BONORINO",
         "LINEIA SCHUTZ"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LINEIA SCHUTZ",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7468,11 +7474,12 @@
       "capacity_by_curriculum": {
         "CIC": 2
       },
-      "professor_name": "JOSUÉ KNORST",
+      "professor_name": "JOSUÉ KNORST e Wanderley Nunes Do Nascimento",
       "ministrantes": [
-        "JOSUÉ KNORST"
+        "JOSUÉ KNORST",
+        "Wanderley Nunes Do Nascimento"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JOSUÉ KNORST",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7511,7 +7518,7 @@
       "ministrantes": [
         "VIRGINIA MARIA RODRIGUES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "VIRGINIA MARIA RODRIGUES",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7551,7 +7558,7 @@
         "ARTHUR MIRANDA DO ESPIRITO SANTO",
         "JULIO CESAR LOMBALDO FERNANDES"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JULIO CESAR LOMBALDO FERNANDES",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -7589,7 +7596,7 @@
       "ministrantes": [
         "LUCAS DA SILVA OLIVEIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUCAS DA SILVA OLIVEIRA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7621,7 +7628,7 @@
       "ministrantes": [
         "JANAINA PIRES ZINGANO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JANAINA PIRES ZINGANO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7653,7 +7660,7 @@
       "ministrantes": [
         "ELISMAR DA ROSA OLIVEIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ELISMAR DA ROSA OLIVEIRA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7685,7 +7692,7 @@
       "ministrantes": [
         "JANAINA PIRES ZINGANO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "JANAINA PIRES ZINGANO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7717,7 +7724,7 @@
       "ministrantes": [
         "LILIANE BASSO BARICHELLO"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LILIANE BASSO BARICHELLO",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7750,7 +7757,7 @@
       "ministrantes": [
         "LEANDRO FARINA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LEANDRO FARINA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7784,7 +7791,7 @@
       "ministrantes": [
         "ELISMAR DA ROSA OLIVEIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ELISMAR DA ROSA OLIVEIRA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7818,7 +7825,7 @@
       "ministrantes": [
         "ADRIANA NEUMANN DE OLIVEIRA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "ADRIANA NEUMANN DE OLIVEIRA",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7852,7 +7859,7 @@
       "ministrantes": [
         "LUISA RODRIGUEZ DOERING"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUISA RODRIGUEZ DOERING",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7886,7 +7893,7 @@
       "ministrantes": [
         "LUISA RODRIGUEZ DOERING"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "LUISA RODRIGUEZ DOERING",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -7919,7 +7926,7 @@
       "ministrantes": [
         "MÁRCIA HELENA BARBIAN"
       ],
-      "responsavel_conceito": "EDUARDO DE OLIVEIRA HORTA",
+      "responsavel_conceito": "MÁRCIA HELENA BARBIAN",
       "schedules": [
         {
           "day_of_week": "Sábado",
@@ -7945,7 +7952,7 @@
       "ministrantes": [
         "EDUARDO DE OLIVEIRA HORTA"
       ],
-      "responsavel_conceito": "",
+      "responsavel_conceito": "EDUARDO DE OLIVEIRA HORTA",
       "schedules": [
         {
           "day_of_week": "Sábado",
@@ -7971,7 +7978,7 @@
       "ministrantes": [
         "MÁRCIA HELENA BARBIAN"
       ],
-      "responsavel_conceito": "EDUARDO DE OLIVEIRA HORTA",
+      "responsavel_conceito": "MÁRCIA HELENA BARBIAN",
       "schedules": [
         {
           "day_of_week": "Sexta-feira",
@@ -7998,7 +8005,7 @@
       "ministrantes": [
         "MARCO ANTONIO GIACOMELLI"
       ],
-      "responsavel_conceito": "EDUARDO DE OLIVEIRA HORTA",
+      "responsavel_conceito": "MARCO ANTONIO GIACOMELLI",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -8032,7 +8039,7 @@
         "GABRIELA BETTELLA CYBIS",
         "Taiane Schaedler Prass"
       ],
-      "responsavel_conceito": "EDUARDO DE OLIVEIRA HORTA",
+      "responsavel_conceito": "Taiane Schaedler Prass",
       "schedules": [
         {
           "day_of_week": "Segunda-feira",
@@ -8065,7 +8072,7 @@
       "ministrantes": [
         "MARCO ANTONIO GIACOMELLI"
       ],
-      "responsavel_conceito": "EDUARDO DE OLIVEIRA HORTA",
+      "responsavel_conceito": "MARCO ANTONIO GIACOMELLI",
       "schedules": [
         {
           "day_of_week": "Terça-feira",
@@ -8098,7 +8105,7 @@
       "ministrantes": [
         "HUGO HENRIQUE KEGLER DOS SANTOS"
       ],
-      "responsavel_conceito": "EDUARDO DE OLIVEIRA HORTA",
+      "responsavel_conceito": "HUGO HENRIQUE KEGLER DOS SANTOS",
       "schedules": [
         {
           "day_of_week": "Terça-feira",

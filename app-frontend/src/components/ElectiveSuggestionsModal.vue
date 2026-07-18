@@ -25,7 +25,7 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
 
   // 1. Get current mandatory course codes to exclude them
   const currSubjects = curriculumService.getCurriculumSubjects(curriculumService.selectedCourseRef.value)
-  const mandatoryCodes = new Set(currSubjects.map(s => s.code))
+  const mandatoryCodes = new Set(currSubjects.map(s => (s.code || s.id || '').toUpperCase()))
 
   // 2. Get completed course codes
   const completedCodes = new Set(dataService.getCompletedCourses().map(c => c.toUpperCase()))
@@ -65,7 +65,12 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
       return
     }
     const prereqs = courseInfo.prerequisites || []
-    if (prereqs.length > 0 && !prereqs.every(p => completedCodes.has((p || '').toUpperCase()))) {
+    if (prereqs.length > 0 && !prereqs.every(p => {
+      const upper = (p || '').toUpperCase()
+      if (completedCodes.has(upper)) return true
+      if (!mandatoryCodes.has(upper)) return true
+      return false
+    })) {
       return
     }
 
