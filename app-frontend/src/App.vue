@@ -108,7 +108,7 @@ const clearAllBrowserData = () => {
       ></v-app-bar-nav-icon>
 
       <v-toolbar-title class="font-weight-bold d-flex align-center gap-2 mr-2 mr-md-4" :class="mobile ? 'text-subtitle-1' : 'text-h6'" style="flex: 0 1 auto;">
-        <span>Matrícula UFRGS</span>
+        <span>PAM - UFRGS</span>
       </v-toolbar-title>
 
       <!-- Botão para Trocar Curso no Topo (Desktop) -->

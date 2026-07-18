@@ -174,22 +174,6 @@ const togglePinSection = (courseCode, sectionCode) => {
   }
 }
 
-const getDistinctSectionsOfOption = (gradeObj) => {
-  if (!gradeObj || !gradeObj.items) return []
-  const map = {}
-  gradeObj.items.forEach(it => {
-    if (!map[it.course_code]) {
-      map[it.course_code] = {
-        course_code: it.course_code,
-        course_name: it.course_name,
-        section_code: it.section_code,
-        professor_name: it.professor_name
-      }
-    }
-  })
-  return Object.values(map)
-}
-
 // Calendar scale configurations (Google Calendar style)
 const SCALE_Y = 1.2 // 1.2px per minute
 const HOUR_HEIGHT = 60 * SCALE_Y // 72px per hour

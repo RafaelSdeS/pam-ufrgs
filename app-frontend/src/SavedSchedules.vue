@@ -3,7 +3,6 @@ import { ref, onMounted, reactive, watch } from 'vue'
 import { useDisplay } from 'vuetify'
 import { dataService } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
-import { scheduleGeneratorService } from './services/scheduleGeneratorService'
 import ElectiveSuggestionsModal from './components/ElectiveSuggestionsModal.vue'
 
 const emit = defineEmits(['change-page'])
@@ -161,25 +160,6 @@ const getCardStyle = (item, startHour) => {
     right: '4px',
     zIndex: 10
   }
-}
-
-const getPaletteColor = (courseCode) => {
-  const palettes = [
-    { bg: 'rgba(59, 130, 246, 0.15)', border: '#3b82f6', text: '#1d4ed8' },
-    { bg: 'rgba(16, 185, 129, 0.15)', border: '#10b981', text: '#047857' },
-    { bg: 'rgba(245, 158, 11, 0.15)', border: '#f59e0b', text: '#b45309' },
-    { bg: 'rgba(139, 92, 246, 0.15)', border: '#8b5cf6', text: '#6d28d9' },
-    { bg: 'rgba(236, 72, 153, 0.15)', border: '#be185d', text: '#be185d' },
-    { bg: 'rgba(14, 165, 233, 0.15)', border: '#0ea5e9', text: '#0369a1' },
-    { bg: 'rgba(249, 115, 22, 0.15)', border: '#f97316', text: '#c2410c' }
-  ]
-  let hash = 0
-  const str = String(courseCode || 'default')
-  for (let i = 0; i < str.length; i++) {
-    hash = str.charCodeAt(i) + ((hash << 5) - hash)
-  }
-  const idx = Math.abs(hash) % palettes.length
-  return palettes[idx]
 }
 
 const deleteSavedSchedule = (id) => {
@@ -398,7 +378,6 @@ const exportToPDF = (gradeObj) => {
     `
   })
 
-  // Collect unique start and end times where things begin/end
   const uniqueEventTimes = new Set()
   if (gradeObj.groupedByDay) {
     Object.values(gradeObj.groupedByDay).forEach(dayItems => {

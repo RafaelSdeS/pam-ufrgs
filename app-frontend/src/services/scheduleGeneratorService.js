@@ -55,8 +55,6 @@ export const scheduleGeneratorService = {
 
   generateRankedSchedules({ selectedCourses = [], restrictions = [], turmas = [], limit = 20 }) {
     if (!selectedCourses.length) return []
-
-    // Normalize courses (handle both { course: { code } } and { code } and deduplicate)
     const normalizedCoursesMap = {}
     selectedCourses.forEach(item => {
       const c = item.course || item
@@ -72,11 +70,9 @@ export const scheduleGeneratorService = {
     const distinctCourses = Object.values(normalizedCoursesMap)
     if (!distinctCourses.length) return []
 
-    // 1. Separate restrictions
     const hardBlocks = restrictions.filter(r => r.restriction_type === 'hard_block')
     const preferredWindows = restrictions.filter(r => r.restriction_type === 'preferred_window')
 
-    // Map priority and preferred professors
     const priorityMap = {}
     const professorMap = {}
     distinctCourses.forEach(c => {
@@ -85,8 +81,6 @@ export const scheduleGeneratorService = {
         professorMap[c.code] = c.preferredProfessor.trim().toLowerCase()
       }
     })
-
-    // 2. Group available sections by course code and precompute fast schedule slots
     const sectionsByCourse = {}
     distinctCourses.forEach(c => {
       sectionsByCourse[c.code] = []
@@ -107,13 +101,11 @@ export const scheduleGeneratorService = {
       }
     })
 
-    // Ensure ALL selected courses have at least 1 section after applying hard blocks
     const validCourses = distinctCourses.filter(c => (sectionsByCourse[c.code] || []).length > 0)
     if (validCourses.length < distinctCourses.length) {
       return []
     }
 
-    // MRV (Minimum Remaining Values) heuristic: sort courses ascending by candidates count to prune branches early
     validCourses.sort((a, b) => (sectionsByCourse[a.code]?.length || 0) - (sectionsByCourse[b.code]?.length || 0))
 
     const fastSectionsConflict = (secA, secB) => {
@@ -130,8 +122,6 @@ export const scheduleGeneratorService = {
       }
       return false
     }
-
-    // 3. Backtracking generator for cartesian product with conflict pruning and bounds
     const validCombinations = []
     const startTime = performance.now()
     let evalCount = 0
@@ -167,8 +157,6 @@ export const scheduleGeneratorService = {
     }
 
     backtrack(0, [])
-
-    // 4. Score and Rank combinations
     const scoredOptions = validCombinations.map(combo => {
       let score = 0
       let matchedPrefCount = 0
@@ -300,8 +288,6 @@ export const scheduleGeneratorService = {
     const isSupersetOfKnownUnschedulable = (codesSet) => {
       return unschedulableSubsets.some(known => known.every(k => codesSet.has(k)))
     }
-
-    // 1. Check courses with 0 total available sections
     selectedCourses.forEach(c => {
       const code = c.code || c.id
       const secs = sectionsByCourse[code] || []
@@ -339,8 +325,6 @@ export const scheduleGeneratorService = {
         unschedulableSubsets.push([code])
       }
     })
-
-    // 2. Check pairwise direct conflicts (Combinations of size 2)
     for (let i = 0; i < selectedCourses.length; i++) {
       for (let j = i + 1; j < selectedCourses.length; j++) {
         if (performance.now() - startTime > 1200) break
@@ -398,8 +382,6 @@ export const scheduleGeneratorService = {
         }
       }
     }
-
-    // 3. Check indirect / chain conflicts (Combinations of size k >= 3)
     const testSubsetsOfSize = (size, startIdx, currentSubset) => {
       if (reasons.length >= 10 || performance.now() - startTime > 1500) return
       if (currentSubset.length === size) {

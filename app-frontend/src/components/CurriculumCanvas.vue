@@ -5,8 +5,6 @@ import { dataService } from '../services/dataService'
 import { pdfParserService } from '../services/pdfParserService'
 import { curriculumService } from '../services/curriculumService'
 
-// Importing local curriculum data (UFRGS) as backup and enrichment
-import ufrgsData from '../data/ufrgs_data.json'
 import { calculateSubjectStatuses } from '../composables/useCurriculumStatus'
 
 const props = defineProps({
@@ -598,11 +596,6 @@ const getWorkload = (s) => {
   return s.carga_horaria ? `${s.carga_horaria}h` : `${(s.credits || 4) * 15}h`
 }
 
-// MiniMap coordinates for the visible viewport rectangle
-const miniMapScale = computed(() => {
-  return Math.min(180 / canvasWidth.value, 110 / canvasHeight.value)
-})
-
 const miniViewportRect = computed(() => {
   if (!viewportRef.value) return { x: 0, y: 0, w: 0, h: 0 }
   const vWidth = viewportRef.value.clientWidth
@@ -1130,7 +1123,7 @@ const miniViewportRect = computed(() => {
           </p>
           <div class="text-caption bg-surface pa-2 rounded mb-3 border font-weight-medium">
             <v-icon size="small" color="primary" class="mr-1">mdi-navigation</v-icon>
-            Informações do aluno → Histórico do Curso → Imprimir
+            Informações do aluno → Histórico do Curso
           </div>
           <div class="text-caption font-weight-bold mb-1">Você pode escolher qualquer uma de 2 opções:</div>
           <ul class="text-caption pl-4 mb-1">

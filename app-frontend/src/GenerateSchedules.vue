@@ -161,6 +161,8 @@
                 variant="flat"
                 closable
                 class="font-weight-medium cursor-pointer"
+                v-tooltip="'Clique para editar prioridade e professores'"
+                @click="openEditDialog(item)"
                 @click:close="removeFromList(index)"
               >
                 {{ item.course?.code }} - {{ item.course?.name }}
@@ -597,16 +599,6 @@ const loadDaysOfWeek = async () => {
   daysOfWeekList.value = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado']
 }
 
-const showStartTimeMenu = ref(false)
-const showEndTimeMenu = ref(false)
-
-const currentForm = reactive({
-  course: null,
-  importanceLevel: 'medium',
-  preferredProfessor: '',
-  preferenceOrder: 1
-})
-
 const weeklyCalendarDays = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado']
 
 const weeklyTimeSlots = [
@@ -638,21 +630,6 @@ const timeRestrictionsOnly = computed(() => {
   })
 })
 
-const availableFormProfessors = computed(() => {
-  if (!currentForm.course) return []
-  const targetCode = currentForm.course.code || currentForm.course.id
-  const courseSections = sectionsList.value.filter(s => {
-    const sCode = s.course_code || s.course_id
-    const semMatch = !selectedSemester.value || s.semester === selectedSemester.value
-    const currMatch = curriculumService.matchesSelectedCurriculum(s.curriculums, curriculumService.selectedCourseRef.value)
-    return sCode === targetCode && semMatch && currMatch
-  })
-  const profs = courseSections
-    .map(s => s.professor_name)
-    .filter(Boolean)
-    .map(name => name.trim())
-  return [...new Set(profs)].sort()
-})
 
 const offeredCourseCodes = computed(() => {
   if (sectionsList.value.length === 0) return new Set()
@@ -734,7 +711,6 @@ const loadSectionsForSemester = async () => {
 watch(selectedSemester, (val) => {
   if (val) localStorage.setItem('ufrgs_selected_semester', val)
   loadSectionsForSemester()
-  currentForm.course = null
 })
 
 watch(() => curriculumService.selectedCourseRef.value, () => {
@@ -742,19 +718,9 @@ watch(() => curriculumService.selectedCourseRef.value, () => {
   loadDesiredCourses()
   loadRestrictions()
   loadSectionsForSemester()
-  currentForm.course = null
-  currentForm.importanceLevel = 'medium'
-  currentForm.preferredProfessor = ''
-  currentForm.preferenceOrder = 1
   customRestrictionForm.days = []
   customRestrictionForm.startTime = ''
   customRestrictionForm.endTime = ''
-})
-
-watch(() => currentForm.course, () => {
-  currentForm.importanceLevel = 'medium'
-  currentForm.preferredProfessor = ''
-  currentForm.preferenceOrder = 1
 })
 
 const isCustomFormValid = computed(() => {
@@ -800,54 +766,6 @@ const toggleSlotBlock = async (day, slot) => {
   }
 }
 
-const addCourse = async () => {
-  if (!currentForm.course) return
-
-  const courseToAdd = currentForm.course
-  const importanceLevel = currentForm.importanceLevel
-  const preferredProfessor = currentForm.preferredProfessor
-  const preferenceOrder = currentForm.preferenceOrder
-
-  const jaExiste = interestList.value.some(item => item.course?.id === courseToAdd.id)
-  
-  if (jaExiste) {
-    showSnackbar('Esta disciplina já foi adicionada na sua lista de interesse. Use o botão "Editar" na tabela abaixo para fazer alterações ou gerenciar os professores preferidos.', 'warning')
-    currentForm.course = null
-    return
-  }
-
-  interestList.value.push({ course: courseToAdd })
-  currentForm.course = null
-  
-  await saveDesiredCourses()
-
-  const newId = Date.now()
-  restrictionsList.value.push({
-    id: newId,
-    restriction_type: 'course_importance',
-    course_id: courseToAdd.id,
-    importance_level: importanceLevel,
-    dia: '',
-    horario_inicio: '',
-    horario_fim: ''
-  })
-
-  if (preferredProfessor) {
-    restrictionsList.value.push({
-      id: newId + 1,
-      restriction_type: 'professor_preference',
-      course_id: courseToAdd.id,
-      preferred_professor: preferredProfessor,
-      preference_order: preferenceOrder,
-      dia: '',
-      horario_inicio: '',
-      horario_fim: ''
-    })
-  }
-
-  dataService.saveRestrictions(restrictionsList.value)
-  await loadRestrictions()
-}
 
 const removeFromList = async (index) => {
   const item = interestList.value[index]
@@ -897,9 +815,6 @@ const toggleCourseSelection = async (course) => {
   }
 }
 
-const sendFinalList = () => {
-  showSnackbar('Lista de interesse salva com sucesso!', 'success')
-}
 
 const formatTimeToHHMMSS = (timeStr) => {
   if (!timeStr) return null
@@ -975,62 +890,6 @@ const loadRestrictions = async () => {
   })
 }
 
-const translateDay = (day) => {
-  const mapping = {
-    Monday: 'Segunda-feira',
-    Tuesday: 'Terça-feira',
-    Wednesday: 'Quarta-feira',
-    Thursday: 'Quinta-feira',
-    Friday: 'Sexta-feira',
-    Saturday: 'Sábado',
-    Sunday: 'Domingo'
-  }
-  return mapping[day] || day
-}
-
-const getRestrictionTypeName = (type) => {
-  const mapping = {
-    hard_block: 'Bloqueio de Horário',
-    preferred_window: 'Janela Preferida',
-    professor_preference: 'Preferência de Professor',
-    course_importance: 'Prioridade da Disciplina',
-  }
-  return mapping[type] || type
-}
-
-const getRestrictionDetails = (r) => {
-  if (r.restriction_type === 'hard_block' || r.restriction_type === 'preferred_window') {
-    return `${translateDay(r.dia)}: ${r.horario_inicio} - ${r.horario_fim}`
-  }
-  
-  const course = coursesList.value.find(c => c.id === r.course_id)
-  const courseName = course ? `${course.code} - ${course.name}` : `ID: ${r.course_id}`
-  
-  if (r.restriction_type === 'professor_preference') {
-    return `${courseName} | Prof: ${r.preferred_professor} (Pref #${r.preference_order})`
-  }
-  if (r.restriction_type === 'course_importance') {
-    const priorityLabels = { low: 'Baixa', medium: 'Média', high: 'Alta' }
-    return `${courseName} | Prioridade: ${priorityLabels[r.importance_level] || r.importance_level}`
-  }
-  return ''
-}
-
-const getCoursePriorityLabel = (courseId) => {
-  const r = restrictionsList.value.find(x => x.course_id === courseId && x.restriction_type === 'course_importance')
-  if (!r) return 'Média'
-  const priorityLabels = { low: 'Baixa', medium: 'Média', high: 'Alta' }
-  return priorityLabels[r.importance_level] || r.importance_level
-}
-
-const getCourseProfessorLabel = (courseId) => {
-  const prefs = restrictionsList.value.filter(x => x.course_id === courseId && x.restriction_type === 'professor_preference')
-  if (prefs.length === 0) return 'Nenhum'
-  const sortedPrefs = [...prefs].sort((a, b) => a.preference_order - b.preference_order)
-  return sortedPrefs.map(r => `${r.preferred_professor} (#${r.preference_order})`).join(', ')
-}
-
-// Course preference editing logic
 const editDialog = reactive({
   show: false,
   course: null,

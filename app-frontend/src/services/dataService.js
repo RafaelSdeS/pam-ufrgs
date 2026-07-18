@@ -40,8 +40,6 @@ export const dataService = {
     const scopedKey = this._getScopedKey(baseKey, courseCode)
     localStorage.removeItem(scopedKey)
   },
-
-  // --- Academic Data Getters ---
   getCoursesMap() {
     return academicData.courses || {}
   },
@@ -110,8 +108,6 @@ export const dataService = {
   getServerLastUpdated() {
     return academicData.last_updated || '2026-01-15'
   },
-
-  // --- Turmas Management ---
   getTurmas() {
     let list = academicData.turmas || []
     const customStr = this._getItemScoped(STORAGE_KEYS.CUSTOM_TURMAS)
@@ -170,7 +166,7 @@ export const dataService = {
       isCustom: false,
       date: rawDate,
       courseCode: selectedCode,
-      label: `Turmas oficiais UFRGS (${selectedCode} - ${rawDate})`
+      label: `Turmas aferidas pelo host da página (${selectedCode} - ${rawDate})`
     }
   },
 
@@ -337,8 +333,6 @@ export const dataService = {
 
     return turmas
   },
-
-  // --- User Completed Courses (Histórico) ---
   getCompletedCourses() {
     const raw = this._getItemScoped(STORAGE_KEYS.COMPLETED_COURSES)
     if (!raw) return []
@@ -364,8 +358,6 @@ export const dataService = {
     this.saveCompletedCourses(updated)
     return updated
   },
-
-  // --- Curriculum Selection ---
   getSelectedCurriculum() {
     return this._getItemScoped(STORAGE_KEYS.SELECTED_CURRICULUM) || (curriculumService.getSelectedCourse() === 'ECP' ? 'ecp' : 'cc')
   },
@@ -373,8 +365,6 @@ export const dataService = {
   setSelectedCurriculum(key) {
     this._setItemScoped(STORAGE_KEYS.SELECTED_CURRICULUM, key)
   },
-
-  // --- Eligible Courses Calculation ---
   getEligibleCourses(courseCode = null) {
     const selectedCourseCode = courseCode || curriculumService.getSelectedCourse() || 'CIC'
     const completedSet = new Set(this.getCompletedCourses())
@@ -383,7 +373,6 @@ export const dataService = {
     const currSubjects = curriculumService.getCurriculumSubjects(selectedCourseCode)
     const currSubjectCodes = new Set(currSubjects.map(s => (s.code || s.id || '').toUpperCase()))
 
-    // Calculate total completed credits
     let totalCompletedCredits = 0
     completedSet.forEach(code => {
       const c = this.getCourseByCode(code)
@@ -391,13 +380,9 @@ export const dataService = {
     })
 
     return allCourses.filter(course => {
-      // Already completed -> not eligible
       if (completedSet.has(course.code)) return false
-
-      // Check min credits required
       if ((course.min_credits_required || 0) > totalCompletedCredits) return false
 
-      // Check prerequisites
       const prereqs = course.prerequisites || []
       const allPrereqsMet = prereqs.every(p => {
         const upper = (p || '').toUpperCase()
@@ -410,8 +395,6 @@ export const dataService = {
       return allPrereqsMet
     })
   },
-
-  // --- Desired Courses (Cadeiras que o aluno quer fazer) ---
   getDesiredCourses() {
     const raw = this._getItemScoped(STORAGE_KEYS.DESIRED_COURSES)
     if (!raw) return []
@@ -426,8 +409,6 @@ export const dataService = {
   saveDesiredCourses(list) {
     this._setItemScoped(STORAGE_KEYS.DESIRED_COURSES, JSON.stringify(list))
   },
-
-  // --- Time & Preference Restrictions ---
   getRestrictions() {
     const raw = this._getItemScoped(STORAGE_KEYS.RESTRICTIONS)
     if (!raw) return []
@@ -459,8 +440,6 @@ export const dataService = {
       : []
     this._setItemScoped(STORAGE_KEYS.RESTRICTIONS, JSON.stringify(validList))
   },
-
-  // --- Saved Schedules ---
   getSavedSchedules() {
     const raw = this._getItemScoped(STORAGE_KEYS.SAVED_SCHEDULES)
     if (!raw) return []
