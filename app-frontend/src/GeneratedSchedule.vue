@@ -618,6 +618,8 @@ const exportToPDF = (gradeObj, scheduleIndex) => {
       return `${s.day_of_week} das ${s.start_time?.substring(0, 5)} às ${s.end_time?.substring(0, 5)}${cleanRoom ? ` (${cleanRoom})` : ''}`
     }).join('<br>')
 
+    const obsText = item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id) || ''
+
     tableRows += `
       <tr>
         <td><strong>${item.course_name || item.course_code}</strong></td>
@@ -625,6 +627,7 @@ const exportToPDF = (gradeObj, scheduleIndex) => {
         <td>${item.section_code}</td>
         <td>${item.professor_name || '—'}</td>
         <td>${timesList}</td>
+        <td>${obsText ? obsText.replace(/\n/g, '<br>') : '—'}</td>
       </tr>
     `
   })
@@ -1141,6 +1144,7 @@ const exportToPDF = (gradeObj, scheduleIndex) => {
               <th>Turma</th>
               <th>Professor</th>
               <th>Horários e Salas</th>
+              <th>Observações</th>
             </tr>
           </thead>
           <tbody>
@@ -1414,7 +1418,23 @@ onMounted(() => {
                       <div class="d-flex justify-space-between align-center flex-wrap gap-2">
                         <div class="d-flex align-center gap-2">
                           <span v-if="hasCampusWarning(gradeObj.items, item)" title="Campus não informado em aula próxima a outra">⚠️</span>
-                          <span class="font-weight-bold text-subtitle-1 text-primary">{{ item.course_code }} - {{ item.course_name }}</span>
+                          <span class="font-weight-bold text-subtitle-1 text-primary">
+                            {{ item.course_code }} - {{ item.course_name }}
+                            <v-icon
+                              v-if="item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id)"
+                              size="16"
+                              color="warning"
+                              class="ml-1"
+                              @click.stop
+                            >
+                              mdi-information-outline
+                              <v-tooltip activator="parent" location="top" max-width="450">
+                                <div class="text-caption font-weight-regular" style="white-space: pre-line;">
+                                  <strong>Observações:</strong><br>{{ item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id) }}
+                                </div>
+                              </v-tooltip>
+                            </v-icon>
+                          </span>
                         </div>
                         <v-chip size="small" :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))" variant="flat" class="font-weight-bold">
                           {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
@@ -1429,6 +1449,10 @@ onMounted(() => {
                         <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-account</v-icon> {{ item.professor_name || 'A definir' }}</span>
                         <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-map-marker</v-icon> Campus: {{ item.campus || extractCampus(item.room) }}</span>
                         <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-door</v-icon> Sala: {{ formatRoom(item.room) }}</span>
+                        <span v-if="item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id)" class="d-flex align-center text-warning font-weight-medium w-100" style="white-space: pre-line;">
+                          <v-icon size="16" color="warning" class="mr-1 mt-1">mdi-information-outline</v-icon>
+                          <span><strong>Observações:</strong><br>{{ item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id) }}</span>
+                        </span>
                       </div>
 
                       <v-alert v-if="getCellConflict(gradeObj.items, item)" type="error" variant="tonal" density="compact" class="mt-1 text-caption">
@@ -1523,7 +1547,17 @@ onMounted(() => {
                               <div class="text-caption font-weight-bold card-title-clamp d-flex align-center justify-space-between gap-1">
                                 <div class="d-flex align-center gap-1">
                                   <span v-if="hasCampusWarning(gradeObj.items, item)" title="Campus não informado em aula próxima a outra">⚠️</span>
-                                  <span>{{ item.course_name }}</span>
+                                  <span>
+                                    {{ item.course_name }}
+                                    <v-icon
+                                      v-if="item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id)"
+                                      size="12"
+                                      color="warning"
+                                      class="ml-1"
+                                    >
+                                      mdi-information-outline
+                                    </v-icon>
+                                  </span>
                                 </div>
                                 <v-icon
                                   v-if="fixedSections[item.course_code] === item.section_code"
@@ -1573,6 +1607,10 @@ onMounted(() => {
                                   </div>
                                   <div v-if="item.professor_name" class="text-caption mb-1">
                                     <strong>Professor:</strong> {{ item.professor_name }}
+                                  </div>
+
+                                  <div v-if="item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id)" class="text-caption mt-2 pt-1 border-top-thin text-warning font-weight-medium" style="white-space: pre-line;">
+                                    <strong>Observações:</strong><br>{{ item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id) }}
                                   </div>
 
                                   <div v-if="hasCampusWarning(gradeObj.items, item)" class="pa-2 mt-2 rounded bg-warning-subtle border text-caption">

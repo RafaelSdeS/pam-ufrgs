@@ -802,7 +802,23 @@ const miniViewportRect = computed(() => {
                     <v-icon :icon="getStatusConfig(getSubjectStatus(item)).icon" start size="14"></v-icon>
                     {{ getStatusConfig(getSubjectStatus(item)).badge }}
                   </v-chip>
-                  <span class="font-weight-bold text-subtitle-1 text-primary">{{ item.code }}</span>
+                  <span class="font-weight-bold text-subtitle-1 text-primary">
+                    {{ item.code }}
+                    <v-icon
+                      v-if="dataService.getCourseObservation(item.code || item.id)"
+                      size="16"
+                      color="warning"
+                      class="ml-1"
+                      @click.stop
+                    >
+                      mdi-information-outline
+                      <v-tooltip activator="parent" location="top" max-width="450">
+                        <div class="text-caption font-weight-regular" style="white-space: pre-line;">
+                          <strong>Observações:</strong><br>{{ dataService.getCourseObservation(item.code || item.id) }}
+                        </div>
+                      </v-tooltip>
+                    </v-icon>
+                  </span>
                 </div>
                 <v-chip size="small" variant="tonal" color="secondary" class="font-weight-bold">
                   {{ item.credits }} créditos
@@ -810,6 +826,11 @@ const miniViewportRect = computed(() => {
               </div>
 
               <div class="font-weight-bold text-h6">{{ item.name }}</div>
+
+              <div v-if="dataService.getCourseObservation(item.code || item.id)" class="text-caption text-warning d-flex align-start gap-1 mt-1 font-weight-medium" style="white-space: pre-line;">
+                <v-icon size="16" color="warning" class="mr-1 mt-1">mdi-information-outline</v-icon>
+                <span><strong>Observações:</strong><br>{{ dataService.getCourseObservation(item.code || item.id) }}</span>
+              </div>
 
               <div v-if="item.prerequisites && item.prerequisites.length > 0" class="text-caption text-medium-emphasis d-flex align-center flex-wrap gap-1 mt-1">
                 <v-icon size="14" class="mr-1">mdi-link</v-icon>
@@ -976,7 +997,18 @@ const miniViewportRect = computed(() => {
                   elevation="0"
                 >
                   <div class="px-3 pt-2 d-flex justify-space-between align-center">
-                    <span class="text-caption font-weight-bold text-mono subject-code">{{ s.code }}</span>
+                    <span class="text-caption font-weight-bold text-mono subject-code">
+                      {{ s.code }}
+                      <v-icon
+                        v-if="dataService.getCourseObservation(s.code || s.id)"
+                        size="14"
+                        color="warning"
+                        class="ml-1"
+                        @click.stop
+                      >
+                        mdi-information-outline
+                      </v-icon>
+                    </span>
                     <v-chip
                       size="x-small"
                       variant="flat"
@@ -1035,6 +1067,10 @@ const miniViewportRect = computed(() => {
                     <div class="text-caption">
                       <strong>Situação:</strong> 
                       <span :class="`text-${getStatusConfig(s.status).color} font-weight-bold`">&nbsp;{{ getStatusConfig(s.status).badge }}</span>
+                    </div>
+
+                    <div v-if="dataService.getCourseObservation(s.code || s.id)" class="text-caption mt-2 pt-1 border-top-thin text-warning font-weight-medium" style="white-space: pre-line;">
+                      <strong>Observações:</strong><br>{{ dataService.getCourseObservation(s.code || s.id) }}
                     </div>
 
                     <div v-if="s.prerequisites && s.prerequisites.length" class="mt-2 pt-1 border-top-thin">

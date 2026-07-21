@@ -188,6 +188,13 @@ def parse_html_portal(caminho_html, semestre_padrao="2026/2", curriculum=None):
             vagas = 10
 
         horario_raw = cols[8]
+        observacao = ""
+        m_obs = re.search(r'Observa[çc][ãa]o(?:es)?:\s*(.*)', horario_raw, re.IGNORECASE | re.DOTALL)
+        if m_obs:
+            observacao = m_obs.group(1).strip()
+            observacao = re.sub(r';$', '', observacao).strip()
+            horario_raw = horario_raw[:m_obs.start()].strip()
+
         horarios = formatar_horarios(horario_raw)
         prof_info = parse_professors(cols[9])
 
@@ -200,6 +207,7 @@ def parse_html_portal(caminho_html, semestre_padrao="2026/2", curriculum=None):
             'professor_name': prof_info['professor_name'],
             'ministrantes': prof_info['ministrantes'],
             'responsavel_conceito': prof_info['responsavel_conceito'],
+            'observacao': observacao,
             'schedules': horarios
         })
 

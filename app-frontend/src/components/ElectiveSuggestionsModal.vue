@@ -220,7 +220,21 @@ defineExpose({
             <v-card-item class="pa-4 pb-2">
               <template v-slot:title>
                 <div class="d-flex align-center justify-space-between flex-wrap gap-2">
-                  <span class="text-subtitle-1 font-weight-bold">{{ course.code }} - {{ course.name }}</span>
+                  <span class="text-subtitle-1 font-weight-bold d-inline-flex align-center">
+                    {{ course.code }} - {{ course.name }}
+                    <v-icon
+                      v-if="dataService.getCourseObservation(course.code)"
+                      size="small"
+                      color="warning"
+                      class="ml-1"
+                      @click.stop
+                    >
+                      mdi-information-outline
+                      <v-tooltip activator="parent" location="top" max-width="450">
+                        <div class="text-caption font-weight-regular" style="white-space: pre-line;">{{ dataService.getCourseObservation(course.code) }}</div>
+                      </v-tooltip>
+                    </v-icon>
+                  </span>
                   <v-chip size="small" color="warning" variant="flat" class="font-weight-bold">
                     {{ course.credits }} créditos
                   </v-chip>
@@ -241,6 +255,18 @@ defineExpose({
                   <div>
                     <div class="font-weight-bold text-body-2 d-flex align-center flex-wrap gap-1">
                       <span>Turma {{ section.section_code || section.section_id }}</span>
+                      <v-icon
+                        v-if="section.observacao || dataService.getSectionObservation(course.code, section.section_code)"
+                        size="small"
+                        color="warning"
+                        class="ml-1"
+                        @click.stop
+                      >
+                        mdi-information-outline
+                        <v-tooltip activator="parent" location="top" max-width="450">
+                          <div class="text-caption font-weight-regular" style="white-space: pre-line;">{{ section.observacao || dataService.getSectionObservation(course.code, section.section_code) }}</div>
+                        </v-tooltip>
+                      </v-icon>
                       <span v-if="dataService.getSectionCapacity(section, curriculumService.getSelectedCourse()) !== null" class="text-caption opacity-90 d-inline-flex align-center ml-1" :title="`Vagas oferecidas para veteranos: ${dataService.getSectionCapacity(section, curriculumService.getSelectedCourse())}`">
                         <v-icon icon="mdi-account-group" size="x-small" class="mr-1"></v-icon>{{ dataService.getSectionCapacity(section, curriculumService.getSelectedCourse()) }}
                       </span>
@@ -251,6 +277,10 @@ defineExpose({
                     <div class="text-caption text-primary font-weight-medium d-flex align-center gap-1 mt-1">
                       <v-icon icon="mdi-clock-outline" size="small"></v-icon>
                       {{ formatSectionTimes(section) }}
+                    </div>
+                    <div v-if="section.observacao || dataService.getSectionObservation(course.code, section.section_code)" class="text-caption text-warning font-weight-medium d-flex align-start gap-1 mt-1" style="white-space: pre-line;">
+                      <v-icon icon="mdi-information-outline" size="small" class="mr-1 mt-1"></v-icon>
+                      <span><strong>Observações:</strong><br>{{ section.observacao || dataService.getSectionObservation(course.code, section.section_code) }}</span>
                     </div>
                   </div>
 

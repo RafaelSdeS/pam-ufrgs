@@ -104,6 +104,9 @@ def converter_horario_para_lista(horario_str):
             end_t = m.group(3)
             room = m.group(4).strip()
             room = re.sub(r'^[-\s(]+|[)\s]+$', '', room)
+            m_obs_room = re.search(r'Observa[çc][ãa]o(?:es)?:\s*(.*)', room, re.IGNORECASE | re.DOTALL)
+            if m_obs_room:
+                room = room[:m_obs_room.start()].strip()
             if room in ['2', '4'] or room.isdigit():
                 room = ''
 
@@ -244,6 +247,7 @@ def main():
                         'professor_name': t['professor_name'],
                         'ministrantes': t['ministrantes'],
                         'responsavel_conceito': t['responsavel_conceito'],
+                        'observacao': t.get('observacao', ''),
                         'schedules': t['schedules'],
                         'curriculums_set': set()
                     }
@@ -268,6 +272,8 @@ def main():
                     novas_turmas_por_chave[chave]['professor_name'] = t['professor_name']
                     novas_turmas_por_chave[chave]['ministrantes'] = t['ministrantes']
                     novas_turmas_por_chave[chave]['responsavel_conceito'] = t['responsavel_conceito']
+                    if t.get('observacao'):
+                        novas_turmas_por_chave[chave]['observacao'] = t.get('observacao')
                 elif t['ministrantes'] and set(t['ministrantes']) != set(novas_turmas_por_chave[chave]['ministrantes']):
                     comb = []
                     for m in novas_turmas_por_chave[chave]['ministrantes'] + t['ministrantes']:
@@ -277,6 +283,8 @@ def main():
                     novas_turmas_por_chave[chave]['professor_name'] = ' e '.join(comb)
                 if not novas_turmas_por_chave[chave]['responsavel_conceito'] and t['responsavel_conceito']:
                     novas_turmas_por_chave[chave]['responsavel_conceito'] = t['responsavel_conceito']
+                if not novas_turmas_por_chave[chave]['observacao'] and t.get('observacao'):
+                    novas_turmas_por_chave[chave]['observacao'] = t.get('observacao')
 
         turmas_anteriores_do_semestre = {
             (t['course_code'], t['section_code']): t
@@ -334,6 +342,12 @@ def main():
                 sched_novo_str = format_sched_list_for_diff(sched_novo_list)
                 if sched_ant_str != sched_novo_str:
                     diffs.append(('schedules', f"Horários/Salas:\n      Anterior: {sched_ant_str}\n      Novo:     {sched_novo_str}"))
+
+                # 5. Observação
+                obs_ant = ant_t.get('observacao', '').strip()
+                obs_novo = nova_t.get('observacao', '').strip()
+                if obs_ant != obs_novo:
+                    diffs.append(('observacao', f"Observação: '{obs_ant}' -> '{obs_novo}'"))
 
                 if diffs:
                     alteradas.append((chave, ant_t, nova_t, diffs))
@@ -396,6 +410,7 @@ def main():
                 'professor_name': t.get('professor_name', 'Professor não definido'),
                 'ministrantes': t.get('ministrantes', []),
                 'responsavel_conceito': t.get('responsavel_conceito', ''),
+                'observacao': t.get('observacao', ''),
                 'schedules': schedules_list,
                 'curriculums': t['curriculums'],
                 'course_name': course_name

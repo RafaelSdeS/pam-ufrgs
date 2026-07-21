@@ -320,6 +320,8 @@ const exportToPDF = (gradeObj) => {
       return `${s.day_of_week} das ${s.start_time?.substring(0, 5)} às ${s.end_time?.substring(0, 5)}${cleanRoom ? ` (${cleanRoom})` : ''}`
     }).join('<br>')
 
+    const obsText = item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id) || ''
+
     tableRows += `
       <tr>
         <td><strong>${item.course_name || item.course_code}</strong></td>
@@ -327,6 +329,7 @@ const exportToPDF = (gradeObj) => {
         <td>${item.section_code}</td>
         <td>${item.professor_name || '—'}</td>
         <td>${timesList}</td>
+        <td>${obsText ? obsText.replace(/\n/g, '<br>') : '—'}</td>
       </tr>
     `
   })
@@ -837,6 +840,7 @@ const exportToPDF = (gradeObj) => {
               <th>Turma</th>
               <th>Professor</th>
               <th>Horários e Salas</th>
+              <th>Observações</th>
             </tr>
           </thead>
           <tbody>

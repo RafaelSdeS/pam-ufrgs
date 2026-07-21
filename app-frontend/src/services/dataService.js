@@ -170,6 +170,38 @@ export const dataService = {
     }
   },
 
+  getCourseObservation(courseCode, semester = null) {
+    if (!courseCode) return null
+    const targetSemester = semester || curriculumService.selectedSemesterRef?.value || '2026/2'
+    const turmas = this.getTurmas().filter(t => (t.course_code === courseCode || t.course_id === courseCode) && (!semester || t.semester === targetSemester))
+    const obsMap = new Map()
+    turmas.forEach(t => {
+      if (t.observacao && typeof t.observacao === 'string' && t.observacao.trim()) {
+        obsMap.set(t.section_code, t.observacao.trim())
+      }
+    })
+    if (obsMap.size === 0) return null
+    const uniqueObs = Array.from(new Set(obsMap.values()))
+    if (uniqueObs.length === 1) {
+      return uniqueObs[0]
+    }
+    const lines = []
+    obsMap.forEach((obs, section) => {
+      lines.push(`Turma ${section}: ${obs}`)
+    })
+    return lines.join('\n')
+  },
+
+  getSectionObservation(courseCode, sectionCode, semester = null) {
+    if (!courseCode || !sectionCode) return null
+    const targetSemester = semester || curriculumService.selectedSemesterRef?.value || '2026/2'
+    const turma = this.getTurmas().find(t => (t.course_code === courseCode || t.course_id === courseCode) && t.section_code === sectionCode && (!semester || t.semester === targetSemester))
+    if (turma && turma.observacao && typeof turma.observacao === 'string' && turma.observacao.trim()) {
+      return turma.observacao.trim()
+    }
+    return null
+  },
+
   getSectionCapacity(section, selectedCourseCode = null) {
     if (!section) return null
     if (!selectedCourseCode) {
@@ -291,8 +323,15 @@ export const dataService = {
       if (!sectionCode) return
 
       const capacity = parseInt(cells[3], 10) || 10
-      const scheduleRaw = cells[8] || ''
+      let scheduleRaw = cells[8] || ''
       const profRaw = cells[9] || ''
+
+      let observacao = ''
+      const obsMatch = scheduleRaw.match(/Observa[çc][ãa]o(?:es)?:\s*([\s\S]*)/i)
+      if (obsMatch) {
+        observacao = obsMatch[1].replace(/;$/, '').trim()
+        scheduleRaw = scheduleRaw.slice(0, obsMatch.index).trim()
+      }
 
       const schedules = []
       const chunks = scheduleRaw.split(';').map(c => c.trim()).filter(Boolean)
@@ -305,6 +344,10 @@ export const dataService = {
           const end = m[3].length === 5 ? `${m[3]}:00` : `0${m[3]}:00`
           let room = chunk.slice(m[0].length).trim()
           room = room.replace(/^[-\s(]+|[)\s]+$/g, '')
+          const obsRoomMatch = room.match(/Observa[çc][ãa]o(?:es)?:\s*([\s\S]*)/i)
+          if (obsRoomMatch) {
+            room = room.slice(0, obsRoomMatch.index).trim()
+          }
           const dayMap = {
             segunda: 'Segunda-feira', terça: 'Terça-feira', terca: 'Terça-feira', tera: 'Terça-feira',
             quarta: 'Quarta-feira', quinta: 'Quinta-feira', sexta: 'Sexta-feira',
@@ -326,6 +369,7 @@ export const dataService = {
         section_code: sectionCode,
         semester: '2026/2',
         capacity: capacity,
+        observacao: observacao,
         professor_name: profRaw.replace(/\n+/g, ' ').trim(),
         schedules: schedules
       })

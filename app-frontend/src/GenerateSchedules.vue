@@ -102,6 +102,21 @@
                         @click="toggleCourseSelection(course)"
                       >
                         {{ course.name }}
+                        <v-icon
+                          v-if="dataService.getCourseObservation(course.code || course.id)"
+                          size="small"
+                          color="warning"
+                          class="ml-1"
+                          @click.stop
+                        >
+                          mdi-information-outline
+                          <v-tooltip activator="parent" location="top" max-width="450">
+                            <div class="text-caption font-weight-regular" style="white-space: pre-line;">{{ dataService.getCourseObservation(course.code || course.id) }}</div>
+                          </v-tooltip>
+                        </v-icon>
+                        <v-tooltip v-if="dataService.getCourseObservation(course.code || course.id)" activator="parent" location="top" max-width="450">
+                          <div class="text-caption font-weight-regular" style="white-space: pre-line;">{{ dataService.getCourseObservation(course.code || course.id) }}</div>
+                        </v-tooltip>
                       </v-chip>
                     </div>
                   </div>
@@ -137,6 +152,21 @@
                     @click="toggleCourseSelection(course)"
                   >
                     {{ course.name }}
+                    <v-icon
+                      v-if="dataService.getCourseObservation(course.code || course.id)"
+                      size="small"
+                      color="warning"
+                      class="ml-1"
+                      @click.stop
+                    >
+                      mdi-information-outline
+                      <v-tooltip activator="parent" location="top" max-width="450">
+                        <div class="text-caption font-weight-regular" style="white-space: pre-line;">{{ dataService.getCourseObservation(course.code || course.id) }}</div>
+                      </v-tooltip>
+                    </v-icon>
+                    <v-tooltip v-if="dataService.getCourseObservation(course.code || course.id)" activator="parent" location="top" max-width="450">
+                      <div class="text-caption font-weight-regular" style="white-space: pre-line;">{{ dataService.getCourseObservation(course.code || course.id) }}</div>
+                    </v-tooltip>
                   </v-chip>
                 </div>
               </v-expansion-panel-text>
@@ -161,11 +191,30 @@
                 variant="flat"
                 closable
                 class="font-weight-medium cursor-pointer"
-                v-tooltip="'Clique para editar prioridade e professores'"
                 @click="openEditDialog(item)"
                 @click:close="removeFromList(index)"
               >
                 {{ item.course?.code }} - {{ item.course?.name }}
+                <v-icon
+                  v-if="dataService.getCourseObservation(item.course?.code || item.course?.id)"
+                  size="small"
+                  color="warning"
+                  class="ml-1"
+                  @click.stop
+                >
+                  mdi-information-outline
+                  <v-tooltip activator="parent" location="top" max-width="450">
+                    <div class="text-caption font-weight-regular" style="white-space: pre-line;">{{ dataService.getCourseObservation(item.course?.code || item.course?.id) }}</div>
+                  </v-tooltip>
+                </v-icon>
+                <v-tooltip activator="parent" location="top" max-width="450">
+                  <div class="text-caption font-weight-regular" style="white-space: pre-line;">
+                    Clique para editar prioridade e professores
+                    <template v-if="dataService.getCourseObservation(item.course?.code || item.course?.id)">
+                      <br><br><strong>Observações:</strong><br>{{ dataService.getCourseObservation(item.course?.code || item.course?.id) }}
+                    </template>
+                  </div>
+                </v-tooltip>
               </v-chip>
             </div>
           </v-card>
@@ -415,6 +464,19 @@
         </v-card-title>
         
         <v-card-text class="pt-4">
+          <v-alert
+            v-if="dataService.getCourseObservation(editDialog.course?.code || editDialog.course?.id)"
+            type="warning"
+            variant="tonal"
+            density="compact"
+            icon="mdi-information-outline"
+            class="mb-4 text-caption font-weight-medium"
+            style="white-space: pre-line;"
+          >
+            <strong>Observações da Disciplina:</strong><br>
+            {{ dataService.getCourseObservation(editDialog.course?.code || editDialog.course?.id) }}
+          </v-alert>
+
           <!-- Edit Priority -->
           <h4 class="text-subtitle-1 font-weight-bold mb-2">Prioridade da Disciplina</h4>
           <v-select
