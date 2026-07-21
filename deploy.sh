@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync ./app-frontend/dist/* inf-site:~/public_html/pam/
+rsync -avzh --delete ./app-frontend/dist/ inf-site:~/public_html/pam/
