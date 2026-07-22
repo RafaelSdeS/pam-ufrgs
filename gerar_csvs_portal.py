@@ -123,25 +123,39 @@ def parse_html_portal(caminho_html, semestre_padrao="2026/2", curriculum=None):
     turmas = []
     disciplinas = {}
 
-    if not curriculum:
-        fname = os.path.basename(caminho_html).lower()
-        if 'cic' in fname or 'cc' in fname:
-            curriculum = 'CIC'
-        elif 'ecp' in fname or 'eng' in fname:
-            curriculum = 'ECP'
-    else:
-        if curriculum in ('cc', 'cic', 'CIC'):
-            curriculum = 'CIC'
-        elif curriculum in ('eng_comp', 'ecp', 'ec', 'ECP'):
-            curriculum = 'ECP'
-
     conteudo_html = ler_arquivo_com_fallback(caminho_html)
     soup = BeautifulSoup(conteudo_html, 'html.parser')
+
+    if not curriculum:
+        match_grupo = re.search(r'Grupo de Matr[íi]cula:\s*(?:<[^>]+>)*\s*([^<&]+)', conteudo_html, re.IGNORECASE)
+        if match_grupo:
+            g_str = match_grupo.group(1).strip().upper()
+            if 'CIÊNCIA' in g_str or 'CIENCIA' in g_str or 'COMPUTAÇÃO - CIC' in g_str or 'CIC' in g_str or 'CC' in g_str:
+                curriculum = 'cic'
+            elif 'ENGENHARIA' in g_str or 'ECP' in g_str or 'ENG' in g_str:
+                curriculum = 'ecp'
+            else:
+                curriculum = re.sub(r'[^a-z0-9_]', '_', g_str.lower()).strip('_')
+        else:
+            fname = os.path.basename(caminho_html).lower()
+            if 'cic' in fname or 'cc' in fname:
+                curriculum = 'cic'
+            elif 'ecp' in fname or 'eng' in fname:
+                curriculum = 'ecp'
+            else:
+                curriculum = 'geral'
+    else:
+        if curriculum.lower() in ('cc', 'cic'):
+            curriculum = 'cic'
+        elif curriculum.lower() in ('eng_comp', 'ecp', 'ec'):
+            curriculum = 'ecp'
+        else:
+            curriculum = curriculum.lower()
 
     table = soup.find('table', class_='modelo1')
     if not table:
         print(f"[AVISO] Tabela com classe 'modelo1' não encontrada em {caminho_html}.")
-        return turmas, disciplinas
+        return turmas, disciplinas, curriculum
 
     codigo_atual = None
     nome_atual = None
@@ -211,7 +225,7 @@ def parse_html_portal(caminho_html, semestre_padrao="2026/2", curriculum=None):
             'schedules': horarios
         })
 
-    return turmas, disciplinas
+    return turmas, disciplinas, curriculum
 
 def main():
     parser = argparse.ArgumentParser(description="Parser HTML do Portal do Aluno UFRGS")
@@ -228,7 +242,7 @@ def main():
             print(f"[AVISO] Arquivo HTML {html_path} não encontrado, ignorando...")
             continue
         print(f"Processando {html_path}...")
-        t, d = parse_html_portal(html_path, semestre_padrao=args.semestre)
+        t, d, curr = parse_html_portal(html_path, semestre_padrao=args.semestre)
         print(f"  -> Extraídas {len(t)} turmas e {len(d)} disciplinas.")
         todas_turmas.extend(t)
         todas_disciplinas.update(d)

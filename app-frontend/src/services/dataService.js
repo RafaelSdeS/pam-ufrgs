@@ -40,26 +40,36 @@ export const dataService = {
     const scopedKey = this._getScopedKey(baseKey, courseCode)
     localStorage.removeItem(scopedKey)
   },
-  getCoursesMap() {
+  getCoursesMap(courseCode = null) {
+    const selected = (courseCode || curriculumService.getSelectedCourse() || 'CIC').toLowerCase()
+    if (!academicData.courses) return {}
+    if (academicData.courses[selected]) {
+      return academicData.courses[selected]
+    }
+    if (academicData.courses[selected.toUpperCase()]) {
+      return academicData.courses[selected.toUpperCase()]
+    }
     return academicData.courses || {}
   },
 
-  getAllCourses() {
-    return Object.values(academicData.courses || {}).sort((a, b) => a.name.localeCompare(b.name))
+  getAllCourses(courseCode = null) {
+    const map = this.getCoursesMap(courseCode)
+    return Object.values(map).sort((a, b) => (a.name || '').localeCompare(b.name || ''))
   },
 
-  getCourseByCode(code) {
+  getCourseByCode(code, courseCode = null) {
     if (!code) return null
-    const map = this.getCoursesMap()
+    const map = this.getCoursesMap(courseCode)
     return map[code.toUpperCase()] || null
   },
 
-  getCourseCredits(code) {
+  getCourseCredits(code, courseCode = null) {
     if (!code) return 0
     const upper = String(code).toUpperCase().trim()
-    const course = this.getCourseByCode(upper)
+    const selectedCourse = courseCode || curriculumService.getSelectedCourse()
+    const course = this.getCourseByCode(upper, selectedCourse)
     if (course && course.credits !== undefined) return Number(course.credits)
-    const subjects = curriculumService.getCurriculumSubjects(curriculumService.getSelectedCourse())
+    const subjects = curriculumService.getCurriculumSubjects(selectedCourse)
     const subj = subjects.find(s => s.code === upper || s.id === upper)
     if (subj && subj.credits !== undefined) return Number(subj.credits)
     return 4
@@ -108,9 +118,15 @@ export const dataService = {
   getServerLastUpdated() {
     return academicData.last_updated || '2026-01-15'
   },
-  getTurmas() {
-    let list = academicData.turmas || []
-    const customStr = this._getItemScoped(STORAGE_KEYS.CUSTOM_TURMAS)
+  getTurmas(courseCode = null) {
+    const selected = (courseCode || curriculumService.getSelectedCourse() || 'CIC').toLowerCase()
+    let list = []
+    if (academicData.turmas && !Array.isArray(academicData.turmas)) {
+      list = academicData.turmas[selected] || academicData.turmas[selected.toUpperCase()] || []
+    } else {
+      list = academicData.turmas || []
+    }
+    const customStr = this._getItemScoped(STORAGE_KEYS.CUSTOM_TURMAS, courseCode)
     if (customStr) {
       try {
         const parsed = JSON.parse(customStr)

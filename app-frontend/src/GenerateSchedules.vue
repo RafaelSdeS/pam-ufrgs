@@ -52,6 +52,7 @@
                 :items="filteredCourses"
                 item-title="name"
                 return-object
+                :custom-filter="customCourseFilter"
                 :label="courseSelectionTab === 'eligible' ? 'Busque e clique para adicionar/remover elegível...' : 'Busque e clique para adicionar/remover disciplina...'"
                 variant="outlined"
                 placeholder="Digite para buscar..."
@@ -541,6 +542,7 @@
                 <v-combobox
                   v-model="editDialog.newProf"
                   :items="editDialogAvailableProfs"
+                  :custom-filter="customProfFilter"
                   label="Selecione o Professor"
                   variant="outlined"
                   density="compact"
@@ -598,6 +600,7 @@ import { onMounted, reactive, ref, computed, watch } from 'vue'
 import { useDisplay } from 'vuetify'
 import { dataService } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
+import { matchCourse, fuzzyMatchName, normalizeText } from './utils/searchUtils'
 
 const props = defineProps({
   studentId: {
@@ -984,6 +987,18 @@ const editDialogAvailableProfs = computed(() => {
   return [...new Set(profs)].sort()
 })
 
+const customCourseFilter = (value, query, item) => {
+  if (!query) return true
+  const course = item?.raw || item || {}
+  return matchCourse(course, query)
+}
+
+const customProfFilter = (value, query, item) => {
+  if (!query) return true
+  const profName = typeof item?.raw === 'string' ? item.raw : (item?.raw?.title || item?.title || typeof value === 'string' ? value : '')
+  return fuzzyMatchName(profName, query)
+}
+
 const openEditDialog = (item) => {
   const course = item.course
   editDialog.course = course
@@ -1038,7 +1053,7 @@ const addProfessorPreferenceInDialog = async () => {
   const profName = editDialog.newProf.trim()
 
   const alreadyExists = editDialogProfessors.value.some(
-    p => p.preferred_professor.trim().toLowerCase() === profName.toLowerCase()
+    p => normalizeText(p.preferred_professor) === normalizeText(profName)
   )
 
   if (alreadyExists) {

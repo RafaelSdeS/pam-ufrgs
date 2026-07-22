@@ -22,6 +22,7 @@ import json
 import shutil
 import argparse
 from datetime import datetime
+import copy
 
 # Importa o parser oficial do projeto
 try:
@@ -169,7 +170,16 @@ def main():
     with open(args.json_path, 'r', encoding='utf-8') as f:
         data_json = json.load(f)
 
-    turmas_atuais_map = {(t['course_code'], t['section_code']): t for t in data_json.get('turmas', [])}
+    turmas_raw = data_json.get('turmas', [])
+    all_turmas_flat = []
+    if isinstance(turmas_raw, dict):
+        for v in turmas_raw.values():
+            if isinstance(v, list):
+                all_turmas_flat.extend(v)
+    elif isinstance(turmas_raw, list):
+        all_turmas_flat = turmas_raw
+
+    turmas_atuais_map = {(t['course_code'], t['section_code']): t for t in all_turmas_flat if isinstance(t, dict) and 'course_code' in t and 'section_code' in t}
 
     semestre_dirs = [
         d for d in os.listdir(args.turmas_data_dir)
@@ -213,8 +223,8 @@ def main():
         print(f"=====================================================================")
         print(f"Arquivos HTML ('{'reimportando de imported/' if is_reimporting else 'raiz'}'): {', '.join(os.path.basename(f) for f in html_files)}\n")
 
-        novas_turmas_por_chave = {}
-        novas_disciplinas_map = {}
+        novas_turmas_por_curso = {}
+        novas_disciplinas_por_curso = {}
         situacao_por_curriculo = data_json.get('last_updated_by_curriculum', {})
         if not isinstance(situacao_por_curriculo, dict):
             situacao_por_curriculo = {}
@@ -232,202 +242,214 @@ def main():
                     situacao_por_curriculo['GERAL'] = situacao_str
                 print(f"     [TIMESTAMP] Situação em: {situacao_str}")
 
-            t_list, d_map = parse_html_portal(h_file, semestre_padrao=semestre_str)
-            novas_disciplinas_map.update(d_map)
+            t_list, d_map, curr_code = parse_html_portal(h_file, semestre_padrao=semestre_str)
+            if curr_code not in novas_disciplinas_por_curso:
+                novas_disciplinas_por_curso[curr_code] = {}
+            if curr_code not in novas_turmas_por_curso:
+                novas_turmas_por_curso[curr_code] = {}
+
+            novas_disciplinas_por_curso[curr_code].update(d_map)
 
             for t in t_list:
                 chave = (t['course_code'], t['section_code'])
-                if chave not in novas_turmas_por_chave:
-                    novas_turmas_por_chave[chave] = {
+                if chave not in novas_turmas_por_curso[curr_code]:
+                    novas_turmas_por_curso[curr_code][chave] = {
                         'course_code': t['course_code'],
                         'section_code': t['section_code'],
                         'semester': t['semester'],
                         'capacity': int(t['capacity']),
-                        'capacity_by_curriculum': {},
+                        'capacity_by_curriculum': {curr_code.upper(): int(t['capacity'])},
                         'professor_name': t['professor_name'],
                         'ministrantes': t['ministrantes'],
                         'responsavel_conceito': t['responsavel_conceito'],
                         'observacao': t.get('observacao', ''),
                         'schedules': t['schedules'],
-                        'curriculums_set': set()
+                        'curriculums': [curr_code.upper()]
                     }
-
-                curr = t.get('curriculum')
-                if curr:
-                    novas_turmas_por_chave[chave]['curriculums_set'].add(curr)
-                    novas_turmas_por_chave[chave]['capacity_by_curriculum'][curr] = int(t['capacity'])
                 else:
-                    # Fallback para HTML sem identificação clara de curso no nome
-                    currs_fb = determinar_curriculos_para_disciplina(t['course_code'], data_json)
-                    novas_turmas_por_chave[chave]['curriculums_set'].update(currs_fb)
-                    for c_fb in currs_fb:
-                        novas_turmas_por_chave[chave]['capacity_by_curriculum'][c_fb] = int(t['capacity'])
+                    item = novas_turmas_por_curso[curr_code][chave]
+                    if int(t['capacity']) > item['capacity']:
+                        item['capacity'] = int(t['capacity'])
+                        item['capacity_by_curriculum'][curr_code.upper()] = int(t['capacity'])
+                    if len(t['schedules']) > len(item['schedules']) or (
+                        item['professor_name'] == 'Professor não definido' and t['professor_name'] != 'Professor não definido'
+                    ):
+                        item['schedules'] = t['schedules']
+                        item['professor_name'] = t['professor_name']
+                        item['ministrantes'] = t['ministrantes']
+                        item['responsavel_conceito'] = t['responsavel_conceito']
+                        if t.get('observacao'):
+                            item['observacao'] = t.get('observacao')
+                    elif t['ministrantes'] and set(t['ministrantes']) != set(item['ministrantes']):
+                        comb = []
+                        for m in item['ministrantes'] + t['ministrantes']:
+                            if m not in comb:
+                                comb.append(m)
+                        item['ministrantes'] = comb
+                        item['professor_name'] = ' e '.join(comb)
+                    if not item['responsavel_conceito'] and t['responsavel_conceito']:
+                        item['responsavel_conceito'] = t['responsavel_conceito']
+                    if not item['observacao'] and t.get('observacao'):
+                        item['observacao'] = t.get('observacao')
 
-                if int(t['capacity']) > novas_turmas_por_chave[chave]['capacity']:
-                    novas_turmas_por_chave[chave]['capacity'] = int(t['capacity'])
-                if len(t['schedules']) > len(novas_turmas_por_chave[chave]['schedules']) or (
-                    novas_turmas_por_chave[chave]['professor_name'] == 'Professor não definido' and t['professor_name'] != 'Professor não definido'
-                ):
-                    novas_turmas_por_chave[chave]['schedules'] = t['schedules']
-                    novas_turmas_por_chave[chave]['professor_name'] = t['professor_name']
-                    novas_turmas_por_chave[chave]['ministrantes'] = t['ministrantes']
-                    novas_turmas_por_chave[chave]['responsavel_conceito'] = t['responsavel_conceito']
-                    if t.get('observacao'):
-                        novas_turmas_por_chave[chave]['observacao'] = t.get('observacao')
-                elif t['ministrantes'] and set(t['ministrantes']) != set(novas_turmas_por_chave[chave]['ministrantes']):
-                    comb = []
-                    for m in novas_turmas_por_chave[chave]['ministrantes'] + t['ministrantes']:
-                        if m not in comb:
-                            comb.append(m)
-                    novas_turmas_por_chave[chave]['ministrantes'] = comb
-                    novas_turmas_por_chave[chave]['professor_name'] = ' e '.join(comb)
-                if not novas_turmas_por_chave[chave]['responsavel_conceito'] and t['responsavel_conceito']:
-                    novas_turmas_por_chave[chave]['responsavel_conceito'] = t['responsavel_conceito']
-                if not novas_turmas_por_chave[chave]['observacao'] and t.get('observacao'):
-                    novas_turmas_por_chave[chave]['observacao'] = t.get('observacao')
-
-        turmas_anteriores_do_semestre = {
-            (t['course_code'], t['section_code']): t
-            for t in data_json.get('turmas', [])
-            if t.get('semester') == semestre_str
-        }
-
-        adicionadas = []
-        removidas = []
-        alteradas = []
-        inalteradas = 0
-
-        for chave, nova_t in sorted(novas_turmas_por_chave.items()):
-            cc, sc = chave
-            curr_list_sorted = sorted(list(nova_t['curriculums_set'])) if nova_t['curriculums_set'] else ['CIC', 'ECP']
-            nova_t['curriculums'] = [
-                'CIC' if c in ('cc', 'cic', 'CIC') else ('ECP' if c in ('eng_comp', 'ecp', 'ec', 'ECP') else c.upper())
-                for c in curr_list_sorted
-            ]
-            nova_t['curriculums'] = sorted(list(set(nova_t['curriculums'])))
-
-            norm_cap_map = {}
-            for k, v in nova_t['capacity_by_curriculum'].items():
-                norm_k = 'CIC' if k in ('cc', 'cic', 'CIC') else ('ECP' if k in ('eng_comp', 'ecp', 'ec', 'ECP') else k.upper())
-                norm_cap_map[norm_k] = v
-            nova_t['capacity_by_curriculum'] = norm_cap_map
-
-            if chave not in turmas_anteriores_do_semestre:
-                adicionadas.append((chave, nova_t))
+        for curr_code, turmas_do_curso in sorted(novas_turmas_por_curso.items()):
+            if isinstance(data_json.get('turmas'), dict):
+                ant_list = data_json['turmas'].get(curr_code, [])
             else:
-                ant_t = turmas_anteriores_do_semestre[chave]
-                diffs = []
-                
-                # 1. Cursos/Curriculums atendidos
-                ant_currs = sorted(ant_t.get('curriculums', []))
-                if ant_currs != curr_list_sorted:
-                    diffs.append(('curriculums', f"Cursos atendidos: {ant_currs} -> {curr_list_sorted}"))
+                ant_list = [x for x in data_json.get('turmas', []) if curr_code.upper() in x.get('curriculums', []) or not x.get('curriculums')]
 
-                # 2. Vagas por currículo
-                ant_cap_map = ant_t.get('capacity_by_curriculum', {})
-                if ant_cap_map != nova_t['capacity_by_curriculum']:
-                    diffs.append(('capacity_by_curriculum', f"Vagas específicas (Veteranos): {ant_cap_map} -> {nova_t['capacity_by_curriculum']}"))
-                elif int(ant_t.get('capacity', 0)) != nova_t['capacity']:
-                    diffs.append(('capacity', f"Vagas máximas: {ant_t.get('capacity')} -> {nova_t['capacity']}"))
+            turmas_anteriores_do_semestre = {
+                (t['course_code'], t['section_code']): t
+                for t in ant_list if t.get('semester') == semestre_str
+            }
 
-                # 3. Professor
-                prof_ant = ant_t.get('professor_name', '').strip()
-                prof_novo = nova_t.get('professor_name', '').strip()
-                if prof_ant != prof_novo:
-                    diffs.append(('professor_name', f"Professor: '{prof_ant}' -> '{prof_novo}'"))
+            adicionadas = []
+            removidas = []
+            alteradas = []
+            inalteradas = 0
 
-                # 4. Horários/Salas
-                sched_ant_str = format_sched_list_for_diff(ant_t.get('schedules', []))
-                sched_novo_list = converter_horario_para_lista(nova_t.get('schedules', ''))
-                sched_novo_str = format_sched_list_for_diff(sched_novo_list)
-                if sched_ant_str != sched_novo_str:
-                    diffs.append(('schedules', f"Horários/Salas:\n      Anterior: {sched_ant_str}\n      Novo:     {sched_novo_str}"))
-
-                # 5. Observação
-                obs_ant = ant_t.get('observacao', '').strip()
-                obs_novo = nova_t.get('observacao', '').strip()
-                if obs_ant != obs_novo:
-                    diffs.append(('observacao', f"Observação: '{obs_ant}' -> '{obs_novo}'"))
-
-                if diffs:
-                    alteradas.append((chave, ant_t, nova_t, diffs))
+            for chave, nova_t in sorted(turmas_do_curso.items()):
+                if chave not in turmas_anteriores_do_semestre:
+                    adicionadas.append((chave, nova_t))
                 else:
-                    inalteradas += 1
+                    ant_t = turmas_anteriores_do_semestre[chave]
+                    diffs = []
+                    
+                    if int(ant_t.get('capacity', 0)) != nova_t['capacity']:
+                        diffs.append(('capacity', f"Vagas: {ant_t.get('capacity')} -> {nova_t['capacity']}"))
 
-        for chave, ant_t in sorted(turmas_anteriores_do_semestre.items()):
-            if chave not in novas_turmas_por_chave:
-                removidas.append((chave, ant_t))
+                    prof_ant = ant_t.get('professor_name', '').strip()
+                    prof_novo = nova_t.get('professor_name', '').strip()
+                    if prof_ant != prof_novo:
+                        diffs.append(('professor_name', f"Professor: '{prof_ant}' -> '{prof_novo}'"))
 
-        print(f"\n--- RELATÓRIO DE DIFERENÇAS ({semestre_str}) ---")
-        if not adicionadas and not removidas and not alteradas:
-            print("  [✓] Nenhuma diferença encontrada em relação à importação anterior. Dados estão atualizados e idênticos.")
-        else:
-            if adicionadas:
-                print(f"\n[+] TURMAS ADICIONADAS ({len(adicionadas)}):")
-                for (cc, sc), t in adicionadas:
-                    prof = t.get('professor_name', 'Não definido')
-                    sched_str = format_sched_list_for_diff(converter_horario_para_lista(t.get('schedules', '')))
-                    print(f"  + {cc} Turma {sc} (Cursos: {t['curriculums']}, Vagas: {t['capacity_by_curriculum']}, Prof: {prof})")
-                    print(f"    Horários: {sched_str}")
+                    sched_ant_str = format_sched_list_for_diff(ant_t.get('schedules', []))
+                    sched_novo_list = converter_horario_para_lista(nova_t.get('schedules', ''))
+                    sched_novo_str = format_sched_list_for_diff(sched_novo_list)
+                    if sched_ant_str != sched_novo_str:
+                        diffs.append(('schedules', f"Horários/Salas:\n      Anterior: {sched_ant_str}\n      Novo:     {sched_novo_str}"))
 
-            if alteradas:
-                print(f"\n[*] TURMAS ALTERADAS ({len(alteradas)}):")
-                for (cc, sc), ant_t, nova_t, diffs in alteradas:
-                    nome_disc = ant_t.get('course_name') or novas_disciplinas_map.get(cc, {}).get('name', cc)
-                    print(f"  * {cc} ({nome_disc}) - Turma {sc}:")
-                    for _, msg in diffs:
-                        print(f"    - {msg}")
+                    obs_ant = ant_t.get('observacao', '').strip()
+                    obs_novo = nova_t.get('observacao', '').strip()
+                    if obs_ant != obs_novo:
+                        diffs.append(('observacao', f"Observação: '{obs_ant}' -> '{obs_novo}'"))
 
-            if removidas:
-                print(f"\n[-] TURMAS REMOVIDAS ({len(removidas)}):")
-                for (cc, sc), t in removidas:
-                    nome_disc = t.get('course_name', cc)
-                    print(f"  - {cc} ({nome_disc}) - Turma {sc}")
+                    if diffs:
+                        alteradas.append((chave, ant_t, nova_t, diffs))
+                    else:
+                        inalteradas += 1
 
-            teve_alteracoes_global = True
+            for chave, ant_t in sorted(turmas_anteriores_do_semestre.items()):
+                if chave not in turmas_do_curso:
+                    removidas.append((chave, ant_t))
 
-        print(f"\nResumo {semestre_str}: {len(adicionadas)} adicionadas | {len(alteradas)} alteradas | {len(removidas)} removidas | {inalteradas} sem mudanças")
+            print(f"\n--- RELATÓRIO DE DIFERENÇAS ({curr_code.upper()} - {semestre_str}) ---")
+            if not adicionadas and not removidas and not alteradas:
+                print("  [✓] Nenhuma diferença encontrada em relação à importação anterior. Dados estão atualizados e idênticos.")
+            else:
+                if adicionadas:
+                    print(f"\n[+] TURMAS ADICIONADAS ({len(adicionadas)}):")
+                    for (cc, sc), t in adicionadas:
+                        prof = t.get('professor_name', 'Não definido')
+                        sched_str = format_sched_list_for_diff(converter_horario_para_lista(t.get('schedules', '')))
+                        print(f"  + {cc} Turma {sc} (Vagas: {t['capacity']}, Prof: {prof})")
+                        print(f"    Horários: {sched_str}")
+
+                if alteradas:
+                    print(f"\n[*] TURMAS ALTERADAS ({len(alteradas)}):")
+                    for (cc, sc), ant_t, nova_t, diffs in alteradas:
+                        nome_disc = ant_t.get('course_name') or novas_disciplinas_por_curso[curr_code].get(cc, {}).get('name', cc)
+                        print(f"  * {cc} ({nome_disc}) - Turma {sc}:")
+                        for _, msg in diffs:
+                            print(f"    - {msg}")
+
+                if removidas:
+                    print(f"\n[-] TURMAS REMOVIDAS ({len(removidas)}):")
+                    for (cc, sc), t in removidas:
+                        nome_disc = t.get('course_name', cc)
+                        print(f"  - {cc} ({nome_disc}) - Turma {sc}")
+
+                teve_alteracoes_global = True
+
+            print(f"\nResumo {curr_code.upper()} {semestre_str}: {len(adicionadas)} adicionadas | {len(alteradas)} alteradas | {len(removidas)} removidas | {inalteradas} sem mudanças")
 
         # Atualização do academic_data.json
-        print("\nAtualizando estrutura do academic_data.json...")
-        outras_turmas = [
-            t for t in data_json.get('turmas', [])
-            if t.get('semester') != semestre_str
-        ]
-
-        novas_turmas_json_list = []
-        for (cc, sc), t in sorted(novas_turmas_por_chave.items()):
-            ant_t = turmas_atuais_map.get((cc, sc), {})
-            course_name = ant_t.get('course_name') or novas_disciplinas_map.get(cc, {}).get('name') or data_json.get('courses', {}).get(cc, {}).get('name', cc)
-            schedules_list = converter_horario_para_lista(t['schedules'])
-
-            turma_dict = {
-                'course_code': cc,
-                'section_code': sc,
-                'semester': semestre_str,
-                'capacity': t['capacity'],
-                'capacity_by_curriculum': t['capacity_by_curriculum'],
-                'professor_name': t.get('professor_name', 'Professor não definido'),
-                'ministrantes': t.get('ministrantes', []),
-                'responsavel_conceito': t.get('responsavel_conceito', ''),
-                'observacao': t.get('observacao', ''),
-                'schedules': schedules_list,
-                'curriculums': t['curriculums'],
-                'course_name': course_name
+        print("\nAtualizando estrutura do academic_data.json com separação por curso (cic/ecp)...")
+        # 1. Migrar/atualizar 'courses'
+        if not isinstance(data_json.get('courses'), dict) or ('cic' not in data_json.get('courses', {}) and 'ecp' not in data_json.get('courses', {})):
+            old_flat_courses = data_json.get('courses', {}) if isinstance(data_json.get('courses'), dict) else {}
+            data_json['courses'] = {
+                'cic': copy.deepcopy(old_flat_courses),
+                'ecp': copy.deepcopy(old_flat_courses)
             }
-            novas_turmas_json_list.append(turma_dict)
+        else:
+            if 'cic' not in data_json['courses']: data_json['courses']['cic'] = {}
+            if 'ecp' not in data_json['courses']: data_json['courses']['ecp'] = {}
 
-        data_json['turmas'] = sorted(outras_turmas + novas_turmas_json_list, key=lambda x: (x['course_code'], x['section_code']))
+        for curr_code, disc_map in novas_disciplinas_por_curso.items():
+            if curr_code not in data_json['courses']:
+                data_json['courses'][curr_code] = {}
+            for cc, disc_info in disc_map.items():
+                if cc in data_json['courses'][curr_code]:
+                    data_json['courses'][curr_code][cc]['name'] = disc_info['name']
+                    data_json['courses'][curr_code][cc]['credits'] = disc_info['credits']
+                else:
+                    data_json['courses'][curr_code][cc] = {
+                        'code': cc,
+                        'name': disc_info['name'],
+                        'credits': disc_info['credits'],
+                        'min_credits_required': 0,
+                        'prerequisites': []
+                    }
 
-        if 'courses' not in data_json:
-            data_json['courses'] = {}
-        for cc, disc_info in novas_disciplinas_map.items():
-            if cc not in data_json['courses']:
-                data_json['courses'][cc] = {
-                    'code': cc,
-                    'name': disc_info['name'],
-                    'credits': disc_info['credits']
+        # 2. Migrar/atualizar 'turmas'
+        if not isinstance(data_json.get('turmas'), dict) or ('cic' not in data_json.get('turmas', {}) and 'ecp' not in data_json.get('turmas', {})):
+            old_turmas_list = data_json.get('turmas', []) if isinstance(data_json.get('turmas'), list) else []
+            data_json['turmas'] = { 'cic': [], 'ecp': [] }
+            for old_t in old_turmas_list:
+                currs = old_t.get('curriculums', [])
+                if 'CIC' in currs or not currs:
+                    data_json['turmas']['cic'].append(copy.deepcopy(old_t))
+                if 'ECP' in currs or not currs:
+                    data_json['turmas']['ecp'].append(copy.deepcopy(old_t))
+        else:
+            if 'cic' not in data_json['turmas']: data_json['turmas']['cic'] = []
+            if 'ecp' not in data_json['turmas']: data_json['turmas']['ecp'] = []
+
+        for curr_code, turmas_do_curso in sorted(novas_turmas_por_curso.items()):
+            outras_turmas = [
+                t for t in data_json['turmas'].get(curr_code, [])
+                if t.get('semester') != semestre_str
+            ]
+            novas_turmas_list = []
+            for (cc, sc), t in sorted(turmas_do_curso.items()):
+                course_name = novas_disciplinas_por_curso[curr_code].get(cc, {}).get('name') or data_json['courses'].get(curr_code, {}).get(cc, {}).get('name', cc)
+                schedules_list = converter_horario_para_lista(t['schedules'])
+                turma_dict = {
+                    'course_code': cc,
+                    'section_code': sc,
+                    'semester': semestre_str,
+                    'capacity': t['capacity'],
+                    'capacity_by_curriculum': t['capacity_by_curriculum'],
+                    'professor_name': t.get('professor_name', 'Professor não definido'),
+                    'ministrantes': t.get('ministrantes', []),
+                    'responsavel_conceito': t.get('responsavel_conceito', ''),
+                    'observacao': t.get('observacao', ''),
+                    'schedules': schedules_list,
+                    'curriculums': t['curriculums'],
+                    'course_name': course_name
                 }
+                novas_turmas_list.append(turma_dict)
+            data_json['turmas'][curr_code] = sorted(outras_turmas + novas_turmas_list, key=lambda x: (x['course_code'], x['section_code']))
+
+        # 3. Sincronizar curriculums para suportar chaves cic/ecp bem como cc/ec
+        if isinstance(data_json.get('curriculums'), dict):
+            if 'cc' in data_json['curriculums'] and 'cic' not in data_json['curriculums']:
+                data_json['curriculums']['cic'] = data_json['curriculums']['cc']
+            if 'ec' in data_json['curriculums'] and 'ecp' not in data_json['curriculums']:
+                data_json['curriculums']['ecp'] = data_json['curriculums']['ec']
+            if 'cic' in data_json['curriculums']: data_json['curriculums']['cc'] = data_json['curriculums']['cic']
+            if 'ecp' in data_json['curriculums']: data_json['curriculums']['ec'] = data_json['curriculums']['ecp']
 
         if situacao_por_curriculo:
             data_json['last_updated_by_curriculum'] = situacao_por_curriculo

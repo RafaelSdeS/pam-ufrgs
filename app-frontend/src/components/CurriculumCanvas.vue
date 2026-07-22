@@ -6,6 +6,7 @@ import { pdfParserService } from '../services/pdfParserService'
 import { curriculumService } from '../services/curriculumService'
 
 import { calculateSubjectStatuses } from '../composables/useCurriculumStatus'
+import { matchCourse } from '../utils/searchUtils'
 
 const props = defineProps({
   studentId: {
@@ -384,7 +385,7 @@ const activeConnectionPaths = computed(() => {
 })
 
 const updateHighlights = () => {
-  const search = searchQuery.value.trim().toLowerCase()
+  const search = searchQuery.value.trim()
   const selectedId = selectedSubjectId.value
 
   const newActive = new Set()
@@ -409,7 +410,7 @@ const updateHighlights = () => {
   }
 
   subjectsWithCoords.value.forEach(s => {
-    const matchesSearch = !search || s.code.toLowerCase().includes(search) || s.name.toLowerCase().includes(search)
+    const matchesSearch = !search || matchCourse(s, search)
     let newHighlighted = false
     let newDimmed = false
 

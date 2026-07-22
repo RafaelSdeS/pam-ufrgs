@@ -1,3 +1,5 @@
+import { fuzzyMatchName } from '../utils/searchUtils'
+
 export const scheduleGeneratorService = {
   normalizeDay(dayStr) {
     if (!dayStr) return ''
@@ -78,7 +80,7 @@ export const scheduleGeneratorService = {
     distinctCourses.forEach(c => {
       priorityMap[c.code] = c.importanceLevel || 'medium'
       if (c.preferredProfessor) {
-        professorMap[c.code] = c.preferredProfessor.trim().toLowerCase()
+        professorMap[c.code] = c.preferredProfessor.trim()
       }
     })
     const sectionsByCourse = {}
@@ -173,10 +175,9 @@ export const scheduleGeneratorService = {
 
         const prefProf = professorMap[section.course_code]
         if (prefProf) {
-          const prefLower = prefProf.toLowerCase()
           const ministrantesMatch = Array.isArray(section.ministrantes) && section.ministrantes.length > 0
-            ? section.ministrantes.some(m => (m || '').toLowerCase().includes(prefLower))
-            : (section.professor_name || '').toLowerCase().includes(prefLower)
+            ? section.ministrantes.some(m => fuzzyMatchName(m || '', prefProf))
+            : fuzzyMatchName(section.professor_name || '', prefProf)
           if (ministrantesMatch) {
             score += 3
             matchedPrefCount++

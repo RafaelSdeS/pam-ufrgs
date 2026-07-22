@@ -1,5 +1,5 @@
 import * as pdfjsLib from 'pdfjs-dist'
-import academicData from '../data/academic_data.json'
+import { dataService } from './dataService'
 
 // Set local/bundled worker or CDN fallback
 pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`
@@ -160,7 +160,7 @@ export const pdfParserService = {
     }
 
     // Build database maps
-    const coursesMap = academicData.courses || {}
+    const coursesMap = dataService.getCoursesMap()
     const dbByCode = {}
     const dbByName = {}
     Object.values(coursesMap).forEach(course => {

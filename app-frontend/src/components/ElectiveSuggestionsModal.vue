@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import { dataService } from '../services/dataService'
 import { curriculumService } from '../services/curriculumService'
 import { scheduleGeneratorService } from '../services/scheduleGeneratorService'
+import { matchCourse } from '../utils/searchUtils'
 
 const emit = defineEmits(['add-section'])
 
@@ -120,10 +121,7 @@ const filteredCourses = computed(() => {
       if (c.credits !== cr) return false
     }
     if (searchQuery.value.trim()) {
-      const q = searchQuery.value.trim().toLowerCase()
-      const matchName = c.name.toLowerCase().includes(q)
-      const matchCode = c.code.toLowerCase().includes(q)
-      if (!matchName && !matchCode) return false
+      if (!matchCourse(c, searchQuery.value)) return false
     }
     return true
   })
