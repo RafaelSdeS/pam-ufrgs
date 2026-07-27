@@ -6241,7 +6241,7 @@
             "day_of_week": "Quinta-feira",
             "start_time": "18:30:00",
             "end_time": "21:50:00",
-            "room": ""
+            "room": "Sala 501 - Campus: Saúde"
           }
         ],
         "curriculums": [
@@ -8013,11 +8013,13 @@
         "capacity_by_curriculum": {
           "ECP": 0
         },
-        "professor_name": "LEANDRO LANGIE ARAUJO",
+        "professor_name": "FELIPE BOFF RUSSMAN e FERNANDO LUCAS METZ e RENATO PAKTER",
         "ministrantes": [
-          "LEANDRO LANGIE ARAUJO"
+          "FELIPE BOFF RUSSMAN",
+          "FERNANDO LUCAS METZ",
+          "RENATO PAKTER"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "FELIPE BOFF RUSSMAN",
         "observacao": "",
         "schedules": [
           {
@@ -8052,11 +8054,11 @@
         "capacity_by_curriculum": {
           "ECP": 7
         },
-        "professor_name": "LEANDRO LANGIE ARAUJO",
+        "professor_name": "THOMAS BRAUN",
         "ministrantes": [
-          "LEANDRO LANGIE ARAUJO"
+          "THOMAS BRAUN"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "THOMAS BRAUN",
         "observacao": "",
         "schedules": [
           {
@@ -8091,11 +8093,12 @@
         "capacity_by_curriculum": {
           "ECP": 7
         },
-        "professor_name": "LEANDRO LANGIE ARAUJO",
+        "professor_name": "ANTONIO ENDLER e GISELE RAMIRES MACHADO",
         "ministrantes": [
-          "LEANDRO LANGIE ARAUJO"
+          "ANTONIO ENDLER",
+          "GISELE RAMIRES MACHADO"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "ANTONIO ENDLER",
         "observacao": "",
         "schedules": [
           {
@@ -8130,11 +8133,12 @@
         "capacity_by_curriculum": {
           "ECP": 1
         },
-        "professor_name": "LEANDRO LANGIE ARAUJO",
+        "professor_name": "EDUARDO OSÓRIO RIZZATTI e GISELE RAMIRES MACHADO",
         "ministrantes": [
-          "LEANDRO LANGIE ARAUJO"
+          "EDUARDO OSÓRIO RIZZATTI",
+          "GISELE RAMIRES MACHADO"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "GISELE RAMIRES MACHADO",
         "observacao": "",
         "schedules": [
           {
@@ -8487,11 +8491,12 @@
         "capacity_by_curriculum": {
           "ECP": 10
         },
-        "professor_name": "MARCO AURELIO PIRES IDIART",
+        "professor_name": "CAROLINA BRITO CARVALHO DOS SANTOS e MARCO AURELIO PIRES IDIART",
         "ministrantes": [
+          "CAROLINA BRITO CARVALHO DOS SANTOS",
           "MARCO AURELIO PIRES IDIART"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "MARCO AURELIO PIRES IDIART",
         "observacao": "",
         "schedules": [
           {
@@ -8526,11 +8531,12 @@
         "capacity_by_curriculum": {
           "ECP": 18
         },
-        "professor_name": "MARCO AURELIO PIRES IDIART",
+        "professor_name": "CAROLINA BRITO CARVALHO DOS SANTOS e MARCO AURELIO PIRES IDIART",
         "ministrantes": [
+          "CAROLINA BRITO CARVALHO DOS SANTOS",
           "MARCO AURELIO PIRES IDIART"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "MARCO AURELIO PIRES IDIART",
         "observacao": "",
         "schedules": [
           {
@@ -8565,11 +8571,12 @@
         "capacity_by_curriculum": {
           "ECP": 4
         },
-        "professor_name": "MARCO AURELIO PIRES IDIART",
+        "professor_name": "MARCOS ANTONIO ZEN VASCONCELLOS e YAN LEVIN",
         "ministrantes": [
-          "MARCO AURELIO PIRES IDIART"
+          "MARCOS ANTONIO ZEN VASCONCELLOS",
+          "YAN LEVIN"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "MARCOS ANTONIO ZEN VASCONCELLOS",
         "observacao": "",
         "schedules": [
           {
@@ -8604,11 +8611,12 @@
         "capacity_by_curriculum": {
           "ECP": 4
         },
-        "professor_name": "MARCO AURELIO PIRES IDIART",
+        "professor_name": "JOSE HENRIQUE RODRIGUES DOS SANTOS e YAN LEVIN",
         "ministrantes": [
-          "MARCO AURELIO PIRES IDIART"
+          "JOSE HENRIQUE RODRIGUES DOS SANTOS",
+          "YAN LEVIN"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "YAN LEVIN",
         "observacao": "",
         "schedules": [
           {
@@ -8643,11 +8651,12 @@
         "capacity_by_curriculum": {
           "ECP": 2
         },
-        "professor_name": "MARCO AURELIO PIRES IDIART",
+        "professor_name": "JOSE HENRIQUE RODRIGUES DOS SANTOS e MARCOS ANTONIO ZEN VASCONCELLOS",
         "ministrantes": [
-          "MARCO AURELIO PIRES IDIART"
+          "JOSE HENRIQUE RODRIGUES DOS SANTOS",
+          "MARCOS ANTONIO ZEN VASCONCELLOS"
         ],
-        "responsavel_conceito": "",
+        "responsavel_conceito": "JOSE HENRIQUE RODRIGUES DOS SANTOS",
         "observacao": "",
         "schedules": [
           {
@@ -12015,9 +12024,9 @@
       }
     ]
   },
-  "last_updated": "22/07/26 - 12:52",
+  "last_updated": "27/07/26 - 06:52",
   "last_updated_by_curriculum": {
-    "CIC": "22/07/26 - 12:52",
-    "ECP": "22/07/26 - 12:52"
+    "CIC": "27/07/26 - 06:52",
+    "ECP": "27/07/26 - 06:52"
   }
 }
