@@ -67,7 +67,7 @@ const { mobile } = useDisplay()
       </div>
 
       <p class="text-body-1 text-medium-emphasis mb-4">
-        A <strong>PAM - UFRGS</strong> nasceu para anestesiar a dor que o indivíduo que vos escreve sentia (e projetava em seus colegas) ao tentar montar uma grade de horários razoável numa virada de semestre. A opção de geração oferecida pelo portal de serviços oficial tem uma usabilidade tenebrosa, isso forçava alguém interessado a montar <em>manualmente</em> suas grades, tendo que alternar constantemente entre a página de turmas oferecidas e o seu editor de planilhas de preferência. Deplorável.
+        A <strong>PAM - UFRGS</strong> nasceu para anestesiar a dor que o indivíduo que vos escreve sentia (e projetava em seus colegas) ao tentar montar uma grade de horários razoável numa virada de semestre. A opção de geração oferecida pelo portal de serviços oficial deixava a desejar em usabilidade, o que forçava alguém interessado a montar <em>manualmente</em> suas grades, tendo que alternar constantemente entre a página de turmas oferecidas e o seu editor de planilhas de preferência.
       </p>
 
       <p class="text-body-1 text-medium-emphasis mb-4">
@@ -104,6 +104,32 @@ const { mobile } = useDisplay()
           Acessar Repositório
         </v-btn>
       </div>
+    </v-card>
+
+    <!-- Card de Projetos Relacionados -->
+    <v-card class="pa-4 pa-md-6 glass-card border rounded-lg" elevation="2">
+      <div class="d-flex align-center gap-3 mb-4">
+        <v-avatar color="secondary" variant="tonal" size="44">
+          <v-icon color="secondary" size="24">mdi-link-variant</v-icon>
+        </v-avatar>
+        <div>
+          <h3 class="text-h6 font-weight-bold mb-0">Projetos Relacionados</h3>
+          <p class="text-caption text-medium-emphasis mb-0">Outras alternativas de auxílio à matrícula</p>
+        </div>
+      </div>
+
+      <p class="text-body-1 text-medium-emphasis mb-4">
+        Existem outros projetos similares focados em auxiliar a matrícula na UFRGS que merecem destaque, embora nenhum deles pareça ser <em>open-source</em>:
+      </p>
+
+      <ul class="text-body-1 text-medium-emphasis mb-4 ml-6">
+        <li class="mb-2">
+          <strong><a href="https://schedule.arthurpadilha.com/" target="_blank" rel="noopener noreferrer" class="text-primary font-weight-medium text-decoration-none">UFRGS Schedule</a></strong>: Precedeu o nosso projeto no tempo (embora não a ideia em si) e oferece uma solução para o mesmo problema.
+        </li>
+        <li>
+          <strong><a href="https://mindles.lucina.dev/" target="_blank" rel="noopener noreferrer" class="text-primary font-weight-medium text-decoration-none">Mindles</a></strong>: Surgiu depois, mas apresenta uma execução superior em muitas partes e oferece suporte a todos os cursos da UFRGS.
+        </li>
+      </ul>
     </v-card>
   </div>
 </template>

@@ -2,9 +2,18 @@
 
 Este é um portal auxiliar ao processo de matrícula de estudantes de graduação da UFRGS, no momento, restrito aos cursos de Ciência da Computação e Engenharia de Computação. Acessas agora uma página estática, tudo o que é feito é processado localmente no seu dispositivo. Não há coleta ou tratamento de dados de usuário.
 
-A **PAM - UFRGS** nasceu para anestesiar a dor que o indivíduo que vos escreve sentia (e projetava em seus colegas) ao tentar montar uma grade de horários razoável numa virada de semestre. A opção de geração oferecida pelo portal de serviços oficial tem uma usabilidade tenebrosa, isso forçava alguém interessado a montar *manualmente* suas grades, tendo que alternar constantemente entre a página de turmas oferecidas e o seu editor de planilhas de preferência. Deplorável.
+A **PAM - UFRGS** nasceu para anestesiar a dor que o indivíduo que vos escreve sentia (e projetava em seus colegas) ao tentar montar uma grade de horários razoável numa virada de semestre. A opção de geração oferecida pelo portal de serviços oficial deixava a desejar em usabilidade, o que forçava alguém interessado a montar *manualmente* suas grades, tendo que alternar constantemente entre a página de turmas oferecidas e o seu editor de planilhas de preferência.
 
 Essa dor era tamanha que eu fui capaz de convencer dois grupos de pessoas distintos a orientarem trabalhos de disciplina em torno dela. No entanto, em ambos os casos, o cerne teve de ser degenerado para atender às especificações dos trabalhos. Na disciplina que então era chamada de Técnicas de Construção de Programas, em razão da tecnologia utilizada e dificuldade de distribuição. E depois, em Engenharia de Software, em razão da complexidade mínima, que era excessiva. O primeiro destes trabalhos ([acessível aqui](https://github.com/SW-Engineering-Courses-Karina-Kohl/tcp-20252-final-grupo_07)) é um predecessor espiritual. E o segundo ([acessível aqui](https://github.com/MagnusLazuta/PMA-portal-de-matricula-auxiliar)), teve seu código usado como base para este projeto. A adaptação do trabalho de disciplina para este projeto foi feita com auxílio de LLMs.
+
+---
+
+## Projetos Relacionados
+
+Aqui estão alguns outros projetos similares que merecem destaque, embora nenhum deles pareça ter o código aberto:
+
+- **[UFRGS Schedule](https://schedule.arthurpadilha.com/)**: Precedeu o nosso projeto (embora não a ideia em si) e oferece uma solução para o mesmo problema.
+- **[Mindles](https://mindles.lucina.dev/)**: Surgiu depois, mas apresenta uma execução superior em muitas partes e oferece suporte a todos os cursos da UFRGS.
 
 ---
 
