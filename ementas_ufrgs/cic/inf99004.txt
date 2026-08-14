@@ -1,0 +1,183 @@
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Instituto de Informática
+Comissão de Graduação de Ciência da Computação
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: RENAN DE QUEIROZ MAFFEI
+Disciplina: PROJETO INTEGRADOR EM COMPUTAÇÃO
+Sigla: INF99004
+
+Créditos: 8
+
+Carga Horária
+CH Teórica: 30h
+
+CH Prática: 90h
+
+Total: 120h
+
+CH Coletiva: 50h
+
+CH Autônoma: 70h
+
+CH Individual: 0h
+
+Carga Horária de prática Extensionista (CHE) 0h
+Súmula
+Projeto, desenvolvimento e avaliação de um sistema computacional para um problema de pequeno porte, que envolva várias áreas
+da computação. Formatação e desenvolvimento de projetos empreendedores e negócios inovadores Análise crítica. Ética.
+Privacidade de dados. Proteção de propriedade intelectual. Tecnologia e negócios de impacto socioambiental. Preparação de
+apresentações técnicas. Preparação de documentos e relatórios técnicos.
+Currículos
+Currículos
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
+
+Etapa Aconselhada
+
+Natureza
+
+8
+
+Obrigatória
+
+Objetivos
+A disciplina visa desenvolver as seguintes habilidades específicas:
+- Projetar, desenvolver e avaliar protótipo (MVP - Minimum Viable Product) de uma solução computacional para um problema de
+pequeno porte, cuja solução dependa da aplicação, via uma perspectiva integrada, de habilidades e conhecimentos proporcionados
+por algumas áreas já desenvolvidas pelos discentes.
+- Dominar a utilização de metodologias para a criação de soluções inovadoras e para a avaliação de seu potencial como negócio
+inovador.
+- Desenvolver capacidade de análise crítica do impacto de soluções computacionais em diferentes dimensões (ética, ambiental,
+social, cultural, legal, proteção de dados pessoais e conduta profissional).
+- Exercitar e fortalecer habilidades relacionadas à autonomia, proatividade, liderança e trabalho em equipe.
+- Reconhecer mecanismos de proteção de propriedade intelectual.
+- Preparar e realizar apresentações parciais e finais, em formatos como pitches e apresentações técnicas mais extensas.
+- Preparar documentação e relatórios técnicos.
+Conteúdo Programático
+Semana: 1 a 3
+Título: Introdução e Fundamentos
+Conteúdo: Definições iniciais, áreas integradas da computação e metodologias para criação de soluções inovadoras (agile, lean startup).
+Semana: 4 a 6
+Título: Ideação dos projetos e Ética
+Conteúdo: Pitches iniciais dos projetos;
+Ética na Computação (ética no desenvolvimento de soluções computacionais, regulações, ética na conduta profissional).
+
+Semana: 7 a 8
+Título: Análise Crítica e Modelagem de Negócio
+Conteúdo: Sensibilização e desenvolvimento de ferramental para análise crítica dos problemas (incluindo dimensões econômica, ambiental,
+social, ética e legal);
+Fundamentos de modelagem de negócio e introdução ao empreendedorismo.
+
+Semana: 9 a 10
+
+Página 1
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Título: Acompanhamento e Iterações Intermediárias
+Conteúdo: Acompanhamento dos grupos; pitches intermediários (incluindo análise crítica e modelagem de negócio); revisões técnicas; ajustes e
+replanejamento.
+
+Semana: 11 a 13
+Título: Documentação e Desenvolvimento Autônomo
+Conteúdo: Orientações para o relatório técnico; Preparação da apresentação final; Desenvolvimento final autônomo dos projetos.
+Semana: 14 a 15
+Título: Entrega Final e Apresentações
+Conteúdo: Apresentações finais na disciplina e apresentação ampliada para a comunidade INF.
+Metodologia
+A abordagem metodológica adotada na disciplina privilegia a aprendizagem ativa e o desenvolvimento de um projeto integrador, que
+constitui o eixo central do componente curricular. O trabalho em equipe, com definição de papéis e uso de práticas profissionais de
+gestão e desenvolvimento, é enfatizado como parte do processo formativo. A disciplina será conduzida por meio de aulas
+teórico-práticas e atividades baseadas no projeto, articuladas por professores especialistas de diferentes áreas da computação. Os
+encontros presenciais combinam exposições dialogadas, análise de estudos de caso, sessões de orientação e atividades de
+feedback, sempre estruturadas para apoiar diretamente o avanço dos projetos desenvolvidos pelos grupos.
+A carga horária total de 120 horas contempla 50 horas de atividades coletivas (3000 minutos), distribuídas em encontros semanais
+de 4 períodos de 50 minutos ao longo de 15 semanas, conforme previsto no calendário acadêmico. As demais 70 horas
+correspondem a atividades autônomas (4200 minutos), realizadas sem contato direto com os docentes e dedicadas ao
+planejamento, gestão, execução, documentação e testes dos projetos. Essa divisão atende às orientações da Resolução nº 11/2013
+do CEPE/UFRGS, Artigos 36 a 38, e reforça o protagonismo discente na organização, planejamento e desenvolvimento do trabalho.
+Os professores poderão se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas).
+Experiências de Aprendizagem
+O processo de desenvolvimento dos projetos será conduzido de forma iterativa e incremental, com entregas parciais distribuídas ao
+longo do semestre. A cada marco técnico, os grupos deverão apresentar artefatos intermediários, tais como versões atualizadas do
+protótipo, resultados de testes e evidências de decisões de projeto. Essas entregas têm como objetivo monitorar o progresso,
+orientar ajustes e fomentar a reflexão sobre a evolução da solução proposta.
+Durante os encontros coletivos, serão promovidos exercícios de planejamento dos times, discussões técnicas e sessões de feedback
+entre grupos. Esses momentos buscarão ampliar a compreensão dos desafios enfrentados, fortalecer a colaboração e aprimorar a
+tomada de decisões técnicas. Atividades extraclasse deverão ser realizadas de forma autônoma e entregues eletronicamente por
+meio de plataformas de versionamento de código e/ou ambientes virtuais de aprendizagem, garantindo rastreabilidade e
+documentação contínua do projeto. Ao longo do semestre, os estudantes participarão de ciclos de diagnóstico, planejamento,
+checkpoints intermediários, demonstrações parciais e revisões estruturadas.
+Ao final da disciplina, cada grupo deverá apresentar um Mínimo Produto Viável (MVP) que represente a solução integrada
+desenvolvida, acompanhado de um relatório técnico e uma apresentação presencial. Esse conjunto de entregas sintetiza a
+aprendizagem construída no semestre e demonstra a capacidade dos estudantes de aplicar, de forma integrada, conhecimentos e
+habilidades adquiridos ao longo do curso.
+Critérios de avaliação
+O conceito final será obtido através da avaliação do desenvolvimento do projeto em múltiplas etapas, utilizando-se a seguinte
+ponderação:
+PP: Proposta do Projeto e Pitch Inicial (10%)
+CT: Checkpoint Técnico e Pitch Intermediário (30%)
+PF: Protótipo Final da solução proposta (30%)
+
+Página 2
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+AF: Apresentação e Relatório Final (30%).
+A avaliação terá foco no progresso técnico, na qualidade das entregas e na participação dos estudantes ao longo do semestre.
+Avaliações parciais serão feitas com base em critérios previamente definidos e compartilhados com os alunos. Os trabalhos podem
+ser feitos em duplas ou em grupo e as apresentações de cada etapa devem contar com todos os membros do grupo.
+A média final (MF) será computada da seguinte forma:
+MF = 0.1*PP + 0.3*CT +0.3*PF + 0.3*AF
+Será considerado aprovado o aluno que alcançar uma média final total igual ou superior a 6,0 (seis). O aluno que obtiver nota final
+abaixo de 6,0 deverá fazer uma atividade de recuperação que versará sobre todo o conteúdo.
+Os conceitos serão distribuídos da seguinte forma:
+Conceito A: Se MF for maior ou igual a 9,0
+Conceito B: Se MF for maior ou igual a 7,5 e for menor que 9,0
+Conceito C: Se MF for maior ou igual a 6,0 e for menor que 7,5
+Conceito D: Se MF for menor que 6,0
+Conceito FF: Se o aluno não alcançar a frequência mínima (75%), independentemente da MF
+Atividades de Recuperação Previstas
+Os alunos cujas médias gerais forem inferiores a 6,0 (seis) poderão prestar atividade de recuperação, que será uma nova
+apresentação do projeto e entrega de relatório revisado.
+Serão considerados aprovados na recuperação os alunos que obtiverem um aproveitamento de no mínimo 60%. A estes será
+atribuído o conceito C. Aos demais, o conceito D.
+Bibliografia
+Básica Essencial
+Sem bibliografias acrescentadas.
+
+Básica
+Dornelas, José Carlos Assis. Empreendedorismo : transformando ideias em negócios. Rio de Janeiro: Campus/Elsevier, 2008. ISBN 9788521624974.
+Hisrich, Robert D.; Peters, Michael P.; Shepherd, Dean A.. Empreendedorismo. Porto Alegre: Bookman, 2009. ISBN 9788577803460.
+
+Complementar
+IEEE. Ethically Aligned Design - A Vision for Prioritizing Human Well-being with Autonomous and Intelligent Systems. USA: IEEE, 2019. Disponível
+em: https://ieeexplore.ieee.org/document/8058187
+LGPD. Lei Geral de Proteção de Dados Pessoais, Lei n° 13.709/2018.. Brasil: Presidencia da República, 2018. Disponível em:
+https://www.gov.br/esporte/pt-br/acesso-a-informacao/lgpd
+ONU. Declaração Universal dos Direitos Humanos. Nações Unidas: ., 1948. Disponível em:
+https://brasil.un.org/pt-br/91601-declaração-universal-dos-direitos-humanos
+
+Outras Referências
+
+Título
+Slides dos professores
+
+Texto
+Slides dos professores (disponíveis no Moodle)
+
+Observações
+O uso de ferramentas de Inteligência Artificial generativa não é proibido na disciplina, desde que realizado de forma ética,
+transparente e responsável. Qualquer apoio obtido por meio de IA (incluindo revisão de texto, geração de imagens, código ou
+organização de ideias) deve ser explicitamente declarado no relatório, indicando como foi utilizado. A responsabilidade pela
+qualidade, precisão e originalidade do conteúdo permanece integralmente com os autores, e o uso indevido ou a falta de
+transparência poderá resultar em penalização.
+
+Página 3
+
+

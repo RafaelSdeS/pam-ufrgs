@@ -1,0 +1,212 @@
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Instituto de Informática
+Departamento de Informática Aplicada
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: VIVIANE PEREIRA MOREIRA
+Disciplina: PROCESSAMENTO DE LINGUAGEM NATURAL
+Sigla: INF01100
+
+Créditos: 4
+
+Carga Horária
+CH Teórica: 45h
+
+CH Prática: 15h
+
+Total: 60h
+
+CH Coletiva: 50h
+
+CH Autônoma: 10h
+
+CH Individual: 0h
+
+Carga Horária de prática Extensionista (CHE) 0h
+Súmula
+Introdução ao processamento de linguagem natural. Tipos de dados textuais e terminologia. Modelos probabilísticos de linguagem.
+Manipulação e comparação de textos. Representação de textos. Redes neurais para textos. Modelos de linguagem de larga escala.
+Aplicações: agentes conversacionais, recuperação de informação, tradução, sumarização, modelagem de tópicos, extração de
+informação. Ética em processamento de linguagem natural. Tópicos emergentes.
+Currículos
+Currículos
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
+
+Etapa Aconselhada
+
+Natureza
+
+7
+
+Obrigatória
+
+Objetivos
+Esta disciplina tem por objetivo introduzir os conceitos, métodos e ferramentas fundamentais do Processamento de Linguagem
+Natural (PLN), abordando desde a representação e análise de dados textuais até o uso de modelos neurais e de linguagem em larga
+escala para compreensão e geração automática de textos. O aluno que cursar esta disciplina deve ser capaz de compreender o
+funcionamento das principais técnicas de PLN, aplicar algoritmos adequados para diferentes tarefas linguísticas e desenvolver
+soluções computacionais baseadas em linguagem natural. A disciplina visa desenvolver as seguintes habilidades específicas:
+- IA-H-026 - Compreender as formas de representação de dados em linguagem natural, avaliando sua capacidade de representação,
+eficiência e eficácia
+- IA-H-027 - Identificar o algoritmo mais apropriado para as diferentes tarefas de PLN, considerando os dados e recursos
+computacionais disponíveis
+- IA-H-028 - Prototipar uma solução para uma tarefa de PLN, de forma a estruturar a preparação dos dados, o uso do algoritmo e a
+aferição de métricas de desempenho
+- IA-H-029 - Desenvolver aplicações que tratem da compreensão e geração de linguagem
+Conteúdo Programático
+Semana: 1
+Título: Introdução ao PLN e fundamentos.
+Conteúdo: Conceitos fundamentais do processamento de linguagem natural. Modelos baseados em regras. Tipos de dados textuais, terminologia
+básica e níveis de conhecimento linguístico.
+
+Semana: 2
+Título: Pré-processamento de textos.
+Conteúdo: Manipulação e comparação de textos: expressões regulares, pré-processamento de texto, distância mínima de edição.
+Semana: 3
+Título: Representação de textos com técnicas tradicionais.
+Conteúdo: Técnicas de representação de texto tradicionais: bag-of-words, term frequency-inverse document frequency (TF-IDF). Similaridade
+entre vetores.
+
+Semana: 4
+Título: Aprendizado supervisionado para textos.
+
+Página 1
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Conteúdo: Conceitos básicos, classificação de texto com algoritmos clássicos, avaliação de modelos.
+Semana: 5
+Título: Representação de textos com word embeddings fixas.
+Conteúdo: Hipótese distribucional, semântica vetorial, one-hot vector, word embeddings fixas, word2vec, propriedades, limitações.
+Semana: 6
+Título: Redes neurais para textos.
+Conteúdo: Recurrent Neural Networks (RNN), Long Short-Term Memory (LSTM), Bi-LSTM. Arquitetura Encoder-Decoder, Mecanismo de
+Atenção, Transformers.
+
+Semana: 7 a 8
+Título: Representação de textos com embeddings contextuais e modelos de linguagem neurais de larga escala.
+Conteúdo: Modelos de linguagem neurais de larga escala. Modelos de compreensão (BERT, etc.) e de geração (GPT, T5, etc.). Pré-treino,
+fine-tuning, transfer learning.
+
+Semana: 9
+Título: Avaliação
+Conteúdo: Revisão e aplicação da primeira prova.
+Semana: 10 a 11
+Título: Agentes conversacionais.
+Conteúdo: Fundamentos. Agentes conversacionais. Prompting. Perguntas e respostas.
+Semana: 11
+Título: Recuperação de informação.
+Conteúdo: Fundamentos. Modelos clássicos. Avaliação. Melhoria de qualidade.
+Semana: 12
+Título: Tarefas de rotulação de sequências
+Conteúdo: Fundamentos. Part-of-speech tagging. Reconhecimento de Entidades Nomeadas.
+Semana: 13
+Título: Tradução, sumarização, modelagem de tópicos. Ética em processamento de linguagem natural.
+Conteúdo: Fundamentos. Métricas de avaliação baseadas em similaridade textual. Visualização e interpretação de tópicos. Vieses em dados e
+modelos, privacidade, uso responsável, transparência e implicações sociais de LLMs
+
+Semana: 14
+Título: Tópicos emergentes.
+Conteúdo: Avanços recentes e tendências em processamento de linguagem natural.
+Semana: 15
+Título: Avaliação.
+Conteúdo: Aplicação da segunda prova. Entrega e apresentação do trabalho final.
+Metodologia
+A disciplina é apresentada em aulas de cunho teórico-expositivo intercaladas com discussões sobre os exercícios e os trabalhos
+extraclasse, além de aulas em laboratório, quando couber. As 60 horas previstas para atividades teóricas e práticas indicadas neste
+Plano de Ensino incluem 30 encontros de 100 minutos de duração (2 períodos de 50 minutos por encontro, 2 encontros por semana,
+durante 15 semanas), num total de 3.000 minutos, e mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato
+direto com o professor, correspondentes a exercícios e trabalhos extraclasse. As atividades previstas incluem a realização de
+trabalhos a serem entregues, apresentados e avaliados. O professor poderá se valer de aulas presenciais e de atividades a distância
+(desde que nos limites previstos pela UFRGS para disciplinas presenciais e empregando ferramentas para atividades remotas),
+assim como do apoio de Professores Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas. A disciplina utilizará de
+sistema Moodle/UFRGS para distribuição de material, entrega de laboratórios e trabalhos e acompanhamento geral da disciplina.
+Experiências de Aprendizagem
+Os estudantes participarão ativamente do processo de aprendizagem por meio de aulas teórico-práticas e laboratoriais, avaliações,
+exercícios práticos, trabalhos de implementação e atividades autônomas.
+As experiências de aprendizagem previstas incluem participar de aulas expositivas, realizar exercícios práticos em laboratório,
+
+Página 2
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+resolver listas de exercícios extraclasse, desenvolver um trabalho final de implementação, realizar eventuais leituras e consultas ao
+material disponibilizado no Moodle/UFRGS, responder eventuais questionários e atividades de autoavaliação para acompanhamento
+do progresso individual.
+Uso de Inteligência Artificial (IA):
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor responsável.
+Critérios de avaliação
+A avaliação da aprendizagem será composta por atividades teóricas e práticas realizadas ao longo do semestre. Serão atribuídas
+quatro notas principais, correspondentes às seguintes atividades:
+P1 ? Primeira Prova (25%): avaliação teórico-prática sobre os conteúdos da primeira parte da disciplina.
+P2 ? Segunda Prova (25%): avaliação teórico-prática abrangendo os conteúdos da disciplina.
+TF ? Trabalho Final (35%): desenvolvimento e apresentação de um projeto final envolvendo os principais tópicos estudados.
+E ? Exercícios (15%): exercícios em classe e extraclasse.
+A Média Final (MF) será calculada pela seguinte fórmula:
+MF = 0,25 × P1 + 0,25 × P2 + 0,35 × TF + 0,15 × E
+As atividades autônomas incluem listas de exercícios e o trabalho final, realizadas fora do horário regular de aula, contribuindo para
+o desenvolvimento das competências práticas e teóricas da disciplina.
+A conversão da Média Final (MF) em conceito final será realizada conforme a escala institucional:
+Conceito A: MF maior ou igual a 9,0
+Conceito B: MF maior ou igual a 7,5 e menor que 9,0
+Conceito C: MF maior ou igual a 6,0 e menor que 7,5
+Conceito D: MF menor que 6,0
+Conceito FF: Frequência inferior a 75%, independentemente da nota
+Atividades de Recuperação Previstas
+Se o aluno não atingir nota 6,0 na Média Final, poderá realizar uma prova de recuperação sobre toda a matéria. Se a média entre a
+prova de recuperação e a nota final da disciplina for maior ou igual a 6,0, o aluno será aprovado com C.
+(Media Final * 0.4 + Prova de Recuperação*0.6 ) >= 6,0 => Conceito C
+Bibliografia
+Básica Essencial
+Caseli, H.M.; Nunes, M.G.V. (org.). Processamento de Linguagem Natural: Conceitos, Técnicas e Aplicações em Português.. SL: BPLN, 2024.
+Disponível em: https://brasileiraspln.com/livro-pln/3a-edicao/
+Dan Jurafsky; James E. Martin... Speech and Language Processing. SL: Prentice Hall, 2025. Disponível em: https://web.stanford.edu/~jurafsky/slp3
+
+Básica
+Christopher D. Manning; Prabhakar Raghavan; Hinrich Schütze.. Introduction to Information Retrieva. Cambridge: Cambridge University Press, 2008.
+Disponível em: https://nlp.stanford.edu/IR-book/
+Denis Rothman. Transformers for Natural Language Processing: Build innovative deep neural network architectures for NLP with Python, PyTorch,
+TensorFlow, BERT, RoBERTa, and more. Birmingham: Pact, 2021. ISBN 9781800565791.
+
+Complementar
+Sem bibliografias acrescentadas
+
+Página 3
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Outras Referências
+
+Título
+Material disponível no Moodle da UFRGS.
+
+Texto
+A disciplina utiliza a ferramenta do Moodle da UFRGS
+onde são colocados materiais para consulta e estudo,
+especificação das atividades práticas desenvolvidas em
+aula e extraclasse, cronograma atualizado e cópia do
+plano de ensino.
+
+Observações
+Informações sobre Plágio e IA:
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+Informações sobre Direitos Autorais e de Imagem:
+Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para qualquer outra
+finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a
+autoria, sob pena de plágio. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica,
+sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o material de sua
+autoria.
+
+Página 4
+
+

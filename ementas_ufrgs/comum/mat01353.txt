@@ -1,0 +1,303 @@
+353
+UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+INSTITUTO DE MATEMÁTICA
+DEPARTAMENTO DE MATEMÁTICA PURA E APLICADA
+
+PLANO DE ENSINO
+Código MAT
+
+Nome
+
+01353 Cálculo e Geometria Analítica I – A
+Créditos/horas-aula Súmula
+
+06 / 90
+Semestre
+
+Estudo da reta e de curvas planas. Cálculo diferencial de uma variável real.
+Cálculo integral das funções de uma variável real.
+
+2008-2
+Cursos
+Ciência da Computação
+Ciências Atuariais – Noturno
+Design
+Engenharia Ambiental
+Engenharia Cartográfica – Noturno
+Engenharia Civil
+Engenharia de Alimentos
+Engenharia de Computação
+Engenharia de Controle e Automação
+Engenharia de Materiais
+Engenharia de Minas
+Engenharia de Produção
+Engenharia Elétrica
+Engenharia Mecânica
+Engenharia Metalúrgica
+Engenharia Química
+Bacharelado em Estatística
+Bacharelado em Física
+Licenciatura em Física
+Bacharelado em Matemática
+Licenciatura em Matemática - diurna
+Licenciatura em Matemática - noturna
+Licenciatura em Química
+Bacharelado em Química
+Química Industrial
+Professora Responsável
+
+Etapa
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+1ª
+3ª
+3ª
+1ª
+1ª
+1ª
+
+Pré-Requisitos
+
+Nenhum
+
+Liana Beatriz Costi Nácul
+Professores Ministrantes
+
+André Meneghetti (Turmas E1 e F1)
+Greice da Silva Lorenzzetti (Turmas B3, C1 e D1)
+Gustavo Vinícius Viegas (Turmas C2 e D2)
+Liana Beatriz Costi Nácul (Turmas A2 e B2)
+Manuela Longoni de Castro (Turma A3)
+Maria Cecília Pereira Santarosa (Turmas A1 e B1)
+Vagner Augusto Betti (Turma E2)
+
+Objetivos:
+Estudar os conceitos e resultados básicos dos conteúdos da súmula, fornecendo ao
+estudante conhecimentos e técnicas que lhe sejam úteis posteriormente. Capacitar o aluno a
+uma apreciação da disciplina não só como expressão da criatividade intelectual, mas como
+instrumento para o domínio da ciência e da técnica dos dias de hoje. Desenvolver e consolidar
+atitudes de participação, comprometimento, organização, flexibilidade, crítica e autocrítica no
+desenrolar do processo de ensino-aprendizagem.
+
+Metodologia e Experiências de Aprendizagem:
+Os conteúdos programáticos serão abordados através de aulas expositivo-dialogadas,
+estudos em pequenos grupos e estudos individualizados. A resolução de exercícios será
+enfatizada, também como atividade extraclasse e, para tanto, os alunos contarão com a
+assistência de professores e monitores em uma escala de horários a ser divulgada no início do
+semestre.
+
+Conteúdo Programático:
+Unidade 1:
+1. Funções: domínio, imagem e gráficos; modelagem.
+2. Famílias de Funções; Funções Trigonométricas: domínio, imagem e gráficos.
+3. Funções Inversas: condições para garantir a existência; domínio, imagem e gráficos.
+4. Funções Exponenciais e Logarítmicas: domínio, imagem, gráficos e propriedades.
+5. Limites: abordagem intuitiva e cálculo de limites; limites infinitos e limites no infinito.
+6. Continuidade: Continuidade das funções racionais, das funções trigonométricas, das
+funções inversas, das funções exponenciais e das logarítmicas.
+7. Derivadas: reta tangente, velocidade e taxa de variação.
+8. Regras de derivação; derivadas de funções racionais.
+9. Derivadas de ordem superior.
+10. Derivadas das funções trigonométricas.
+11. Taxas relacionadas (funções algébricas e trigonométricas).
+12. Derivação implícita.
+13. Derivadas das funções exponenciais e logarítmicas.
+14. Funções trigonométricas inversas: domínio, imagem e gráficos; limites e continuidade;
+derivadas e aplicações.
+15. Regras de L’Hôpital. Formas indeterminadas.
+16. Aplicações da derivada: funções crescentes e decrescentes; concavidade de gráficos de
+funções. Máximos e mínimos relativos; pontos de inflexão. Aplicação na construção de
+gráficos de funções.
+17. Máximos e mínimos absolutos. Problemas de aplicação de máximos e mínimos absolutos.
+Unidade 2:
+1. Teorema do Valor Médio e aplicações.
+2. Integral indefinida; primitivação por substituição.
+3. Métodos de integração: integração por partes; integração por substituições
+trigonométricas; integração usando frações parciais.
+4. Integral definida: propriedades e aplicações ao cálculo de áreas.
+5. Teorema Fundamental do Cálculo. Funções definidas por integrais.
+2
+
+6. Cálculo de integrais definidas por substituição direta.
+7. Aplicações da integral definida: áreas entre duas curvas; volumes; valor médio de uma
+função.
+8. Integrais impróprias.
+9. Geometria Analítica: elipses, parábolas e hipérboles
+
+Cronograma de Atividades:
+Observação: Cada aula corresponde a um período de duas horas-aula.
+Aula 01: Funções: domínio, imagem e gráficos; modelagem.
+Aula 02: Famílias de Funções; Funções Trigonométricas: domínio, imagem e gráficos.
+Aula 03: Composição de Funções; Funções Inversas: condições para garantir a existência;
+domínio, imagem e gráficos.
+Aula 04: Funções Exponenciais e Logarítmicas: domínio, imagem, gráficos e
+propriedades.
+Aula 05: Limites: abordagem intuitiva.
+Aula 06: Exercícos e Teste1
+Aula 07: Cálculo de limites; limites infinitos e limites no infinito.
+Aulas 08 e 09: Continuidade: Continuidade das funções racionais, das funções
+trigonométricas e das funções inversas; continuidade das funções exponenciais
+e logarítmicas.
+Aula 10: Derivadas: reta tangente, velocidade e taxa de variação. Função derivada.
+Aula 11: Regras de derivação; derivadas de funções racionais; derivadas das funções
+trigonométricas.
+Aula 12: Exercícios e Teste2
+Aula 13: Regras do Produto e do Quociente. Derivadas de funções trigonométricas.
+Aula 14: Regra da Cadeia e Taxas Relacionadas.
+Aula 15: Derivação Implícita
+Aula 16: Derivadas das funções exponenciais e logarítmicas
+Aula 17: Exercícios e Teste3
+Aula 18: Funções trigonométricas inversas: domínio, imagem e gráficos; limites e
+continuidade; derivadas e aplicações.
+Aula 19: Regras de L’Hôpital. Formas indeterminadas.
+Aulas 20, 21 e 22: Aplicações da derivada: funções crescentes e decrescentes;
+concavidade de gráficos de funções. Máximos e mínimos relativos; pontos de
+inflexão. Gráficos de funções.
+Aula 23: Exercícios e Teste 4
+Aulas 24 e 25: Máximos e mínimos absolutos. Problemas de aplicação de máximos e
+mínimos absolutos.
+Aula 26: Exercícios de revisão
+Aula 27: Prova envolvendo os conteúdos da Unidade 1
+Aula 28: Teorema do valor Médio e aplicações. Integral indefinida.
+Aula 29: Integral indefinida; primitivação por substituição.
+Aulas 30, 31, 32 e 33: Integrais de funções trigonométricas. Métodos de integração:
+integração por partes; integração por substituições trigonométricas; integração
+usando frações parciais.
+Aula 34: Exercícios e Teste 5
+Aulas 35 e 36: Integral definida: propriedades e aplicações ao cálculo de áreas. Teorema
+Fundamental do Cálculo.
+3
+
+Aula 37: Funções definidas por integrais. Cálculo de integrais definidas por substituição
+direta.
+Aulas 38 e 39: Aplicações da integral definida: áreas entre duas curvas; volumes e valor
+médio de uma função.
+Aula 40: Integrais impróprias.
+Aula 41: Exercícios
+Aula 42: Exercícios e Teste 6
+Aulas 43, 44 e 45: Elipses, parábolas e hipérboles.
+Aula 46: Exercícios de revisão.
+Aula 47: Prova envolvendo os conteúdos da Unidade 2.
+Aula 48: Entrega dos resultados.
+Aula 49: Prova de Recuperação
+Previsão de datas das provas, dos testes e da recuperação:
+I-
+
+Mês
+Agosto
+
+Setembro
+
+Datas dos Testes
+Sexta 15/08
+Sexta 29/08
+Sexta 12/09
+Sexta 26/09
+
+Outubro
+Novembro
+
+Datas das Provas
+
+Data da Recuperação
+
+Quarta 08/10
+Sexta 24/10
+Sexta 14/11
+Quarta 26/11
+
+Dezembro
+
+Segunda 08/12
+
+Critérios de Avaliação:
+Em cada área especificada no Conteúdo Programático será realizada uma prova,
+totalizando duas provas. Serão realizados também seis Testes, nas datas acima relacionadas,
+com conteúdo sequencial e não cumulativo.
+O aluno estará aprovado na disciplina se:
+
+
+
+cumprir a exigência de um mínimo de 75% de presenças nas aulas ministradas, cf. Artigo
+134 do RGU;
+obtiver notas n1 , n2 e n t superiores ou iguais a 3,0 (três) e média aritmética
+M = (n 1 + n2 + nt) / 3
+das três notas superior ou igual a 6,0 (seis), sendo n 1:= nota da prova 1; n2:= nota da prova
+2 e nt:= soma das cinco melhores notas dos testes.
+
+A atribuição dos conceitos aos alunos aprovados ocorrerá em correspondência com a
+nota final M acima calculada:
+1. conceito A corresponde a M superior ou igual a 9,0 (nove),
+2. conceito B corresponde a M superior ou igual a 7,5 (sete vírgula cinco) e
+inferior a 9,0 (nove) e
+3. conceito C corresponde a M superior ou igual a 6 (seis) e inferior a 7,5 (sete
+vírgula cinco).
+
+4
+
+Será facultado ao aluno aprovado com conceito C ou B realizar uma das recuperações
+descritas abaixo para melhorar o conceito, valendo a atribuição de conceitos correspondente.
+
+Atividades de Recuperação:
+O aluno que não lograr aprovação pelo critério acima, mas que tiver cumprido a
+exigência do Artigo 134 do RGU e que tiver obtido média aritmética M superior ou igual a
+3,0 (três), poderá realizar uma prova de recuperação, cujo conteúdo dependerá do
+desempenho do aluno durante o semestre, conforme descrito abaixo:
+a) a prova de recuperação versará sobre o conteúdo da prova onde o aluno obteve a
+menor nota, caso a soma das cinco melhores notas dos testes seja igual ou
+superior a 5,0 (nt > 5,0) e pelo menos uma das duas notas de prova seja superior a
+6,0 (n1 > 6,0 ou n2 > 6,0);
+b) a prova de recuperação versará sobre todo o conteúdo desenvolvido na
+disciplina, caso ocorra pelo menos uma das seguintes situações:
+1. a soma das cinco melhores notas dos testes é inferior a 5,0 (nt <5,0);
+2. as notas das duas provas são inferiores a 6,0 (n1<6,0 e n2 <6,0).
+No caso a), a nota da recuperação substituirá a nota da prova em questão e o aluno
+estará aprovado na disciplina se a média aritmética M for superior ou igual a 6,0 (seis),
+valendo a atribuição de conceitos descrita acima.
+No caso b), o aluno será aprovado se obtiver nota na recuperação superior ou igual a
+6,0 (seis), sendo atribuído o conceito C, se a nota da recuperação for inferior a 9,0 (nove) e B,
+se a nota da recuperação for superior ou igual a 9,0 (nove).
+Ao aluno reprovado pelos critérios acima e que tiver cumprido a exigência do Artigo
+134 do RGU será atribuído o conceito D e ao aluno que não tiver cumprido a exigência do
+Artigo 134 do RGU será atribuído o conceito FF.
+
+Bibliografia Básica:
+1. Anton, Howard , Bivens, Irl, Davis, Stephen– Cálculo– vol 1 – Bookman – 2007
+2. Doering, Luisa R., Menezes, Maria Fernanda R., Nácul, Liana C., Nery, Janice –
+Geometria Analítica – Cônicas, Apostila – Julho/2005.
+
+Bibliografia Complementar:
+1. Ávila, Geraldo S. – Cálculo 1 – Livros Técnicos e Científicos – 1992
+2. Edwards, B., Hostetler, R.& Larson, R.– Cálculo com Geometria Analítica, vol. 1 – LTC –
+1994
+3. Edwards, C. H., Penney, D. E., Cálculo com Geometria Analítica, vol 1 – Prentice Hall do
+Brasil – 1997
+4. Hugues-Hallett , Deborah et alii – Calculus – John Wiley & sons – 1994
+5. Leithold , Louis – O cálculo com Geometria Analítica , volume 1 – Harbra – 1976
+6. Munem , Mustafa A e Foulis , David J. – Cálculo , volume 1 – Guanabara – 1982
+7. Shenk , Al – Cálculo e Geometria Analítica – volume 1 – Campus – 1984
+8. Simmons, George F. – Calculo com Geometria Analítica – vol 1 – McGraw-Hill – 1987
+9. Stewart, James – Cálculo,vol.1 – Pioneira – 2001
+10. Strang , Gilbert – Calculus – Wellesley - Cambridge Press – 1991
+11. Swokowski , Earl W. – Cálculo com Geometria Analítica, vol.1 – McGraw-Hill –1983
+12. Thomas, George B. et alii – Cálculo – vol 1 – Addison Wesley – 2002
+5
+
+

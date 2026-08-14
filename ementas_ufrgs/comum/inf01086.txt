@@ -1,0 +1,158 @@
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Instituto de Informática
+Departamento de Informática Aplicada
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: José Rodrigo Furlanetto de Azambuja
+Disciplina: PROJETO DE CIRCUITOS DIGITAIS
+Sigla: INF01086
+
+Créditos: 6
+
+Carga Horária
+CH Teórica: 60h
+
+CH Prática: 30h
+
+Total: 90h
+
+CH Coletiva: 75h
+
+CH Autônoma: 15h
+
+CH Individual: 0h
+
+Carga Horária de prática Extensionista (CHE) 0h
+Súmula
+Representações de funções lógicas para uso em projeto de circuitos digitais. Portas lógicas CMOS. Síntese lógica de dois níveis,
+mapa de Karnaugh e algoritmo de Quine-McCluskey. Componentes de lógica programável. Blocos lógicos funcionais,
+multiplexadores, decodificadores. Circuitos aritméticos binários. Circuitos sequenciais e registradores. Máquinas de estados finitos.
+Linguagens de descrição de hardware: blocos lógicos funcionais, multiplexadores, decodificadores, circuitos aritméticos binários,
+circuitos sequenciais, máquinas de estados finitos e testbench. Projeto em nível de transferência de registradores.
+Currículos
+Currículos
+
+Etapa Aconselhada
+
+Natureza
+
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
+
+3
+
+Obrigatória
+
+ENGENHARIA DE COMPUTAÇÃO
+
+3
+
+Obrigatória
+
+Objetivos
+Ao final da disciplina, o aluno deverá estar apto a analisar, projetar e implementar circuitos digitais combinacionais e sequenciais
+através de máquinas de estado. O aprendizado dos princípios básicos de microeletrônica, álgebra Booleana e de operadores lógicos
+e aritméticos é integrante da disciplina.
+A disciplina visa desenvolver as seguinte habilidades específicas:
+- Analisar o funcionamento e utilizar os componentes básicos para composição de arquiteturas computacionais.
+- Aplicar técnicas de desenvolvimento e otimização de circuitos digitais.
+- Avaliar o funcionamento de arquiteturas de von Neumann e seus principais componentes.
+Conteúdo Programático
+Semana: 1 a 2
+Título: Introdução
+Conteúdo: Representação de funções booleanas, redes lógicas, chaves lógicas e atraso CMOS.
+Semana: 3 a 5
+Título: Circuitos combinacionais
+Conteúdo: Portas lógicas, tabela verdade, atraso de portas lógicas, blocos combinacionais multiplexador e decodificador, unidade lógica e
+aritmética.
+
+Semana: 6 a 8
+Título: Síntese lógica
+Conteúdo: Síntese lógica combinacional (formas canônicas, simplificação algébrica e Karnaugh).
+Semana: 9 a 12
+Título: Circuitos sequenciais
+Conteúdo: Custo-benefício do uso de latch, flip-flop, memória, blocos sequenciais (registrador, contador síncrono e assíncrono), máquina de
+estado tipo Mealy e Moore.
+
+Semana: 13 a 15
+
+Página 1
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Título: Assuntos avançados
+Conteúdo: Temporização, consumo e custo-benefício de implementação de circuitos digitais em processador, FPGA e ASIC.
+Metodologia
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
+discussão e acompanhamento geral da disciplina.
+A disciplina será desenvolvida através de aulas expositivas, com explicação dos conteúdos e discussão de exercícios, intercaladas
+com aulas práticas de programação em linguagens de descrição de hardware (HDL).
+As 90 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 45 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 3 encontros por semana, durante 15 semanas), num total de 4.500 minutos, e mais
+15 horas (900 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse a serem avaliados.
+Experiências de Aprendizagem
+Participar de aulas expositivas dialogadas, realizar trabalhos de programação em laboratório, resolver listas de exercícios
+extraclasse, desenvolver um trabalho final de implementação, realizar leitura de material disponibilizado, assistir vídeos ou vídeo
+aulas, responder questionários. Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de
+ferramentas de Inteligência Artificial (IA). As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades
+práticas ou teóricas que compõem as experiências de aprendizagem e os critérios de avaliação da disciplina.
+Critérios de avaliação
+A média final (MF) será obtida através da média harmônica das provas escritas (P1 e P2), da média aritmética dos trabalhos práticos
+(T) e de um projeto final (PJ), utilizando-se a seguinte ponderação:
+MF = 4 / (1/P1 + 1/P2 + 1/T + 1/PJ)
+A conversão da média final MF para conceito é feita através do atendimento aos seguintes critérios:
+9,0 <= MF <= 10,0: conceito A (aprovado)
+7,5 <= MF < 9,0: conceito B (aprovado)
+6,0 <= MF < 7,5: conceito C (aprovado)
+MF < 6,0: conceito D (reprovado)
+Faltas > 25%: conceito FF (reprovado)
+Atividades de Recuperação Previstas
+As notas das provas escritas (P1 ou P2) poderão ser substitui&#769;das através da realização de nova prova que substituirá as
+notas das provas.
+Bibliografia
+Básica Essencial
+Ercegovac, Milos D.; Lang, Tomas; Moreno, Jaime H.; Laschuk, Anatolio.. Introdução aos Sistemas Digitais. Porto Alegre, RS: Bookman, 2000. ISBN
+8573076984.
+Wagner, Flavio Rech; Ribas, Renato Perez; Reis, Andre Inacio.. Fundamentos de circuitos digitais. Porto Alegre, RS: Sagra Luzzatto, 2006. ISBN
+8524107030.
+
+Básica
+Floyd, Thomas L. Sistemas digitais: fundamentos e aplicações. Porto Alegre, RS: Bookman, 2007. ISBN 9788560031931.
+Gajski, Daniel D.. Principles of digital design. Porto Alegre, RS: Upper Saddle River: Prentice Hall, 1997. ISBN 0133011445.
+M Morris Mano, Michael Ciletti.. Digital Design: With an Introduction to the Verilog Hdl, Vhdl, and Systemverilog. Porto Alegre, RS: Peason, 2017.
+ISBN 9780134549897.
+Wakerly, John F.. Digital design: principles and practices. Porto Alegre, RS: Upper Saddle River: Prentice Hall, 2006. ISBN 0131863894.
+
+Complementar
+
+Página 2
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Sem bibliografias acrescentadas
+
+Outras Referências
+Não existem outras referências para este plano de ensino.
+
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+Página 3
+
+
