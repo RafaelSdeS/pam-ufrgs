@@ -11,6 +11,7 @@ import GeneratedSchedule from './GeneratedSchedule.vue'
 import CurriculumCanvas from './components/CurriculumCanvas.vue'
 import TurmasModal from './components/TurmasModal.vue'
 import ElectivesModal from './components/ElectivesModal.vue'
+import AiAssistantModal from './components/AiAssistantModal.vue'
 import SavedSchedules from './SavedSchedules.vue'
 import GraduationPlan from './GraduationPlan.vue'
 
@@ -26,6 +27,7 @@ watch(() => mobile.value, (isMobile) => {
 const currentPage = ref('home')
 const showTurmasModal = ref(false)
 const showElectivesModal = ref(false)
+const showAiModal = ref(false)
 const graduationPlanKey = ref(0)
 const showCourseModal = ref(false)
 const isChangingCourse = ref(false)
@@ -101,6 +103,7 @@ const clearAllBrowserData = () => {
       @change-page="navigateTo"
       @open-turmas-modal="showTurmasModal = true"
       @open-electives-modal="showElectivesModal = true"
+      @open-ai-modal="showAiModal = true"
       @open-course-modal="openCourseModal"
       @clear-browser-data="clearAllBrowserData"
     />
@@ -290,6 +293,9 @@ const clearAllBrowserData = () => {
       v-model="showElectivesModal"
       @updated="graduationPlanKey++"
     />
+
+    <!-- Modal do Assistente de IA -->
+    <AiAssistantModal v-model="showAiModal" />
   </v-app>
 </template>
 

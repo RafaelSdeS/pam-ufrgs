@@ -17,7 +17,7 @@ const props = defineProps({
   }
 })
 
-const emit = defineEmits(['change-page', 'update:modelValue', 'open-turmas-modal', 'open-electives-modal', 'open-course-modal', 'clear-browser-data'])
+const emit = defineEmits(['change-page', 'update:modelValue', 'open-turmas-modal', 'open-electives-modal', 'open-ai-modal', 'open-course-modal', 'clear-browser-data'])
 
 const isCompact = ref(false)
 
@@ -120,6 +120,12 @@ const selectPage = (pageName) => {
           prepend-icon="mdi-star-check-outline"
           title="Minhas Eletivas"
           @click="emit('open-electives-modal')"
+        ></v-list-item>
+
+        <v-list-item
+          prepend-icon="mdi-robot-outline"
+          title="Assistente IA"
+          @click="emit('open-ai-modal')"
         ></v-list-item>
 
         <v-list-item
