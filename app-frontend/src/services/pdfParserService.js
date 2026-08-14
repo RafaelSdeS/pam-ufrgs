@@ -1,8 +1,8 @@
 import * as pdfjsLib from 'pdfjs-dist'
+import pdfWorkerUrl from 'pdfjs-dist/build/pdf.worker.min.mjs?url'
 import { dataService } from './dataService'
 
-// Set local/bundled worker or CDN fallback
-pdfjsLib.GlobalWorkerOptions.workerSrc = `https://cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjsLib.version}/pdf.worker.min.mjs`
+pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorkerUrl
 
 const ALIASES = {
   'tecnicasdeconstrucaodeprogramas': 'INF01120',
