@@ -399,14 +399,10 @@ const updateHighlights = () => {
     return
   }
 
-  const prereqCodes = new Set()
+  const relatedIds = new Set()
   if (selectedId) {
-    const selectedSubject = subjectsWithCoords.value.find(s => s.id === selectedId)
-    if (selectedSubject && selectedSubject.prerequisites) {
-      selectedSubject.prerequisites.forEach(code => {
-        prereqCodes.add(code.toLowerCase())
-      })
-    }
+    relatedIds.add(selectedId)
+    getPredecessors(selectedId).forEach(id => relatedIds.add(id))
   }
 
   subjectsWithCoords.value.forEach(s => {
@@ -415,9 +411,7 @@ const updateHighlights = () => {
     let newDimmed = false
 
     if (selectedId) {
-      const isPrereq = prereqCodes.has(s.code.toLowerCase()) || prereqCodes.has(s.id.toLowerCase())
-      const isSelected = s.id === selectedId
-      const isRelated = isSelected || isPrereq
+      const isRelated = relatedIds.has(s.id)
       newHighlighted = isRelated && matchesSearch
       newDimmed = !isRelated || !matchesSearch
     } else {
@@ -431,7 +425,7 @@ const updateHighlights = () => {
 
   if (selectedId) {
     connections.value.forEach(conn => {
-      if (conn.targetId === selectedId) {
+      if (relatedIds.has(conn.sourceId) && relatedIds.has(conn.targetId)) {
         newActive.add(conn.id)
       }
     })
@@ -938,6 +932,19 @@ const miniViewportRect = computed(() => {
                   </marker>
                 </defs>
 
+                <!-- Linhas base de pré-requisitos (sempre visíveis) -->
+                <path
+                  v-for="conn in connections"
+                  :key="`bg-${conn.id}`"
+                  :d="conn.path"
+                  fill="none"
+                  stroke="#9E9E9E"
+                  stroke-width="1.5"
+                  :opacity="selectedSubjectId || searchQuery.trim() ? 0.12 : 0.45"
+                  marker-end="url(#arrow-default)"
+                  class="base-path"
+                />
+
                 <!-- Linhas ativas (Destaques ao selecionar) -->
                 <path
                   v-for="conn in activeConnectionPaths"
@@ -1330,6 +1337,10 @@ const miniViewportRect = computed(() => {
 
 .is-highlighted .subject-inner-card {
   box-shadow: 0 4px 15px rgba(var(--v-theme-primary), 0.1) !important;
+}
+
+.base-path {
+  transition: opacity 0.3s ease;
 }
 
 /* Active Arrow with Dashed Animation */

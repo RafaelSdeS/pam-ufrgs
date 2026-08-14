@@ -218,22 +218,38 @@ function moveCourse(fromIndex, subjectIndex, direction) {
 
 <template>
   <div>
-    <div class="d-flex align-center flex-wrap gap-3 mb-4">
-      <h2 class="text-h5 font-weight-bold mr-2">Previsão de Formatura</h2>
-      <v-text-field
-        v-model.number="creditLimit"
-        type="number"
-        min="1"
-        label="Limite de créditos por semestre"
-        density="compact"
-        style="max-width: 240px"
-        hide-details
-      ></v-text-field>
-      <v-btn color="primary" variant="elevated" @click="recalculate">Recalcular Previsão</v-btn>
-      <v-btn variant="text" prepend-icon="mdi-sitemap" @click="emit('change-page', 'curriculum')">
-        Atualizar disciplinas cursadas
-      </v-btn>
-    </div>
+    <v-card class="mb-6 rounded-xl border-thin shadow-premium bg-surface" elevation="1">
+      <v-card-text class="pa-6 d-flex justify-space-between align-center flex-wrap gap-4">
+        <div>
+          <div class="d-flex align-center gap-3 mb-1">
+            <v-icon icon="mdi-calendar-check-outline" color="primary" size="x-large"></v-icon>
+            <span class="text-h4 font-weight-bold">Previsão de Formatura</span>
+          </div>
+          <div class="text-body-1 text-medium-emphasis">
+            Planejamento semestre a semestre das disciplinas pendentes, respeitando pré-requisitos e limite de créditos.
+          </div>
+        </div>
+
+        <div class="d-flex gap-3 align-center flex-wrap">
+          <v-text-field
+            v-model.number="creditLimit"
+            type="number"
+            min="1"
+            label="Limite de créditos por semestre"
+            density="compact"
+            variant="outlined"
+            style="max-width: 240px"
+            hide-details
+          ></v-text-field>
+          <v-btn color="primary" variant="flat" class="rounded-lg font-weight-bold" prepend-icon="mdi-refresh" @click="recalculate">
+            Recalcular Previsão
+          </v-btn>
+          <v-btn variant="text" class="rounded-lg font-weight-bold" prepend-icon="mdi-sitemap" @click="emit('change-page', 'curriculum')">
+            Atualizar disciplinas cursadas
+          </v-btn>
+        </div>
+      </v-card-text>
+    </v-card>
 
     <v-alert v-if="staleNotice" type="info" variant="tonal" class="mb-4" closable>
       Suas disciplinas cursadas mudaram desde a última previsão. Clique em "Recalcular Previsão" para atualizar.
@@ -243,71 +259,84 @@ function moveCourse(fromIndex, subjectIndex, direction) {
       Não foi possível posicionar: {{ unscheduled.map(s => s.name).join(', ') }}. Verifique os pré-requisitos dessas disciplinas na Matriz Curricular.
     </v-alert>
 
-    <div v-if="semesterCards.length === 0" class="text-body-1 text-medium-emphasis">
-      Nenhuma disciplina obrigatória ou eletiva pendente — parabéns, sua grade está completa!
-    </div>
+    <v-card v-if="semesterCards.length === 0" class="rounded-xl pa-10 text-center border-thin bg-surface mb-6">
+      <v-icon icon="mdi-party-popper" size="64" color="success" class="mb-4"></v-icon>
+      <div class="text-h5 font-weight-bold mb-2">Grade completa!</div>
+      <div class="text-body-1 text-medium-emphasis">
+        Nenhuma disciplina obrigatória ou eletiva pendente — parabéns, sua grade está completa!
+      </div>
+    </v-card>
 
     <div v-else class="semester-row">
-      <v-card v-for="sem in semesterCards" :key="sem.index" class="semester-card" variant="outlined">
-        <v-card-title class="text-subtitle-1 font-weight-bold d-flex flex-column align-start" style="white-space: normal; line-height: 1.4;">
-          <span>{{ sem.index + 1 }}º Semestre</span>
-          <span class="text-caption font-weight-regular" :class="sem.totalCredits > creditLimit ? 'text-error' : 'text-medium-emphasis'">
+      <v-card v-for="sem in semesterCards" :key="sem.index" class="semester-card rounded-xl border-thin shadow-premium bg-surface">
+        <v-card-title class="pa-4 border-bottom bg-surface-light d-flex flex-column align-start" style="white-space: normal; line-height: 1.4;">
+          <span class="text-subtitle-1 font-weight-bold">{{ sem.index + 1 }}º Semestre</span>
+          <v-chip
+            size="x-small"
+            variant="tonal"
+            class="font-weight-bold mt-1"
+            :color="sem.totalCredits > creditLimit ? 'error' : 'primary'"
+          >
             {{ sem.totalCredits }}/{{ creditLimit }} créditos
-          </span>
+          </v-chip>
         </v-card-title>
-        <v-card-text>
-          <div v-for="(subj, idx) in sem.subjects" :key="idx" class="d-flex align-center subject-row mb-2">
-            <v-btn icon size="x-small" variant="text" :disabled="sem.index === 0" @click="moveCourse(sem.index, idx, -1)">
-              <v-icon size="small">mdi-chevron-left</v-icon>
-            </v-btn>
-            <div class="flex-grow-1 px-1">
-              <div class="text-body-2 font-weight-bold d-flex align-center gap-1">
-                <span v-if="subj.isPlaceholder" class="text-medium-emphasis font-italic">Eletiva</span>
-                <span v-else>{{ subj.code }}</span>
-                <v-icon
-                  v-if="violationSet.has(`${sem.index}:${subj.code}`)"
-                  icon="mdi-alert-circle"
-                  color="error"
-                  size="16"
-                  title="Pré-requisito não atendido neste semestre - mova a disciplina ou seus pré-requisitos, ou recalcule."
-                ></v-icon>
-              </div>
-              <div class="text-caption d-flex align-center gap-1">
-                <span>{{ subj.name }} ({{ subj.credits }}cr)</span>
-                <v-chip
-                  v-if="!subj.isPlaceholder"
-                  size="x-small"
-                  :color="getDifficultyColor(getCourseDifficulty(subj.code))"
-                  variant="tonal"
-                  class="font-weight-bold"
-                >
-                  {{ getDifficultyLabel(getCourseDifficulty(subj.code)) }}
-                </v-chip>
-              </div>
-              <v-btn
-                v-if="subj.isPlaceholder"
-                size="x-small"
-                variant="text"
-                color="primary"
-                class="px-0 text-none"
-                @click="openPicker(sem.index, idx)"
-              >
-                Escolher eletiva
+        <v-card-text class="pa-4">
+          <template v-for="(subj, idx) in sem.subjects" :key="idx">
+            <div class="d-flex align-center subject-row py-1">
+              <v-btn icon size="x-small" variant="text" :disabled="sem.index === 0" @click="moveCourse(sem.index, idx, -1)">
+                <v-icon size="small">mdi-chevron-left</v-icon>
               </v-btn>
-              <v-btn
-                v-else-if="subj.isElective"
-                size="x-small"
-                variant="text"
-                class="px-0 text-none"
-                @click="clearElectiveChoice(sem.index, idx)"
-              >
-                Trocar
+              <div class="flex-grow-1 px-1">
+                <div class="text-body-2 font-weight-bold d-flex align-center gap-1">
+                  <span v-if="subj.isPlaceholder" class="text-medium-emphasis font-italic">Eletiva</span>
+                  <span v-else>{{ subj.code }}</span>
+                  <v-icon
+                    v-if="violationSet.has(`${sem.index}:${subj.code}`)"
+                    icon="mdi-alert-circle"
+                    color="error"
+                    size="16"
+                    title="Pré-requisito não atendido neste semestre - mova a disciplina ou seus pré-requisitos, ou recalcule."
+                  ></v-icon>
+                </div>
+                <div class="text-caption text-medium-emphasis mb-1">{{ subj.name }}</div>
+                <div class="d-flex align-center flex-wrap gap-1 mb-1">
+                  <v-chip size="x-small" color="secondary" variant="tonal" class="font-weight-bold">{{ subj.credits }}cr</v-chip>
+                  <v-chip
+                    v-if="!subj.isPlaceholder"
+                    size="x-small"
+                    :color="getDifficultyColor(getCourseDifficulty(subj.code))"
+                    variant="tonal"
+                    class="font-weight-bold"
+                  >
+                    {{ getDifficultyLabel(getCourseDifficulty(subj.code)) }}
+                  </v-chip>
+                </div>
+                <v-btn
+                  v-if="subj.isPlaceholder"
+                  size="x-small"
+                  variant="text"
+                  color="primary"
+                  class="px-0 text-none"
+                  @click="openPicker(sem.index, idx)"
+                >
+                  Escolher eletiva
+                </v-btn>
+                <v-btn
+                  v-else-if="subj.isElective"
+                  size="x-small"
+                  variant="text"
+                  class="px-0 text-none"
+                  @click="clearElectiveChoice(sem.index, idx)"
+                >
+                  Trocar
+                </v-btn>
+              </div>
+              <v-btn icon size="x-small" variant="text" @click="moveCourse(sem.index, idx, 1)">
+                <v-icon size="small">mdi-chevron-right</v-icon>
               </v-btn>
             </div>
-            <v-btn icon size="x-small" variant="text" @click="moveCourse(sem.index, idx, 1)">
-              <v-icon size="small">mdi-chevron-right</v-icon>
-            </v-btn>
-          </div>
+            <v-divider v-if="idx < sem.subjects.length - 1" class="my-1"></v-divider>
+          </template>
         </v-card-text>
       </v-card>
     </div>
@@ -378,7 +407,16 @@ function moveCourse(fromIndex, subjectIndex, direction) {
   padding-bottom: 8px;
 }
 .semester-card {
-  min-width: 260px;
-  flex: 0 0 260px;
+  min-width: 280px;
+  flex: 0 0 280px;
+}
+.shadow-premium {
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+.border-bottom {
+  border-bottom: 1px solid rgba(var(--v-border-color), 0.08) !important;
+}
+.border-thin {
+  border: 1px solid rgba(var(--v-border-color), 0.08) !important;
 }
 </style>
