@@ -1,6 +1,6 @@
 <script setup>
 import { ref, computed, onMounted, watch } from 'vue'
-import { dataService } from './services/dataService'
+import { dataService, escapeHtml } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
 import { predictionService } from './services/predictionService'
 import { calculateSubjectStatuses } from './composables/useCurriculumStatus'
@@ -202,6 +202,127 @@ const violationSet = computed(() => {
   return violations
 })
 
+function exportToPDF() {
+  const courseLabel = selectedCourse.value === 'ecp' ? 'Engenharia de Computação' : 'Ciência da Computação'
+
+  const semestersHtml = semesterCards.value.map(sem => `
+    <div class="semester-block">
+      <div class="semester-title">${sem.index + 1}º Semestre <span class="credits-badge">${sem.totalCredits}/${creditLimit.value} créditos</span></div>
+      <table class="summary-table">
+        <thead>
+          <tr><th>Código</th><th>Disciplina</th><th>Créditos</th><th>Dificuldade</th></tr>
+        </thead>
+        <tbody>
+          ${sem.subjects.map(s => `
+            <tr>
+              <td>${s.isPlaceholder ? '—' : escapeHtml(s.code)}</td>
+              <td>${escapeHtml(s.name)}</td>
+              <td>${s.credits}cr</td>
+              <td>${s.isPlaceholder ? '—' : escapeHtml(getDifficultyLabel(getCourseDifficulty(s.code)))}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+    </div>
+  `).join('')
+
+  const htmlContent = `
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <title>Previsão de Formatura - ${courseLabel}</title>
+      <style>
+        @page { size: A4 portrait; margin: 12mm; }
+        body {
+          font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+          color: #333;
+          margin: 0;
+          background-color: #fff;
+          -webkit-print-color-adjust: exact;
+          print-color-adjust: exact;
+        }
+        .header-bar {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 14px;
+          border-bottom: 2px solid #1976d2;
+          padding-bottom: 8px;
+        }
+        .header-bar h1 { font-size: 20px; color: #1976d2; margin: 0; }
+        .header-bar .subtitle { font-size: 12px; color: #666; margin-top: 2px; }
+        .print-btn {
+          padding: 8px 16px;
+          background-color: #1976d2;
+          color: #fff;
+          border: none;
+          border-radius: 4px;
+          font-weight: bold;
+          cursor: pointer;
+        }
+        .semester-block { break-inside: avoid; margin-bottom: 16px; }
+        .semester-title {
+          font-size: 13px;
+          font-weight: bold;
+          color: #1976d2;
+          margin-bottom: 4px;
+          display: flex;
+          align-items: center;
+          gap: 8px;
+        }
+        .credits-badge {
+          font-size: 10px;
+          font-weight: bold;
+          background-color: #e3f2fd !important;
+          color: #0d47a1 !important;
+          border-radius: 10px;
+          padding: 2px 8px;
+        }
+        .summary-table { width: 100%; border-collapse: collapse; }
+        .summary-table th, .summary-table td {
+          border: 1px solid #e0e0e0;
+          padding: 5px 8px;
+          text-align: left;
+          font-size: 11px;
+        }
+        .summary-table th { background-color: #f5f5f5 !important; font-weight: bold; }
+        .footer-note { margin-top: 8px; font-size: 11px; color: #444; }
+        @media print {
+          body { padding: 0; }
+          .no-print { display: none; }
+        }
+      </style>
+    </head>
+    <body>
+      <div class="header-bar">
+        <div>
+          <h1>Previsão de Formatura</h1>
+          <div class="subtitle">${courseLabel}</div>
+        </div>
+        <button class="print-btn no-print" onclick="window.print()">Imprimir PDF</button>
+      </div>
+
+      ${semestersHtml}
+
+      <div class="footer-note">
+        <strong>Resumo:</strong> ${semesterCards.value.length} semestre(s) restante(s), ${totalMandatoryRemaining.value} crédito(s) obrigatório(s) + ${totalElectiveRemaining.value} crédito(s) eletivo(s) no total.
+        Além disso, o currículo exige ${graduationRequirements.value.complementary} créditos de atividades complementares, que não ocupam horário de aula e por isso não aparecem nos semestres acima.
+      </div>
+    </body>
+    </html>
+  `
+
+  const printWindow = window.open('', '_blank')
+  printWindow.document.write(htmlContent.normalize('NFC'))
+  printWindow.document.close()
+
+  setTimeout(() => {
+    printWindow.focus()
+    printWindow.print()
+  }, 250)
+}
+
 function moveCourse(fromIndex, subjectIndex, direction) {
   const code = semesters.value[fromIndex][subjectIndex]
   const targetIndex = fromIndex + direction
@@ -243,6 +364,15 @@ function moveCourse(fromIndex, subjectIndex, direction) {
           ></v-text-field>
           <v-btn color="primary" variant="flat" class="rounded-lg font-weight-bold" prepend-icon="mdi-refresh" @click="recalculate">
             Recalcular Previsão
+          </v-btn>
+          <v-btn
+            variant="tonal"
+            class="rounded-lg font-weight-bold"
+            prepend-icon="mdi-file-pdf-box"
+            :disabled="!semesterCards.length"
+            @click="exportToPDF"
+          >
+            Exportar PDF
           </v-btn>
           <v-btn variant="text" class="rounded-lg font-weight-bold" prepend-icon="mdi-sitemap" @click="emit('change-page', 'curriculum')">
             Atualizar disciplinas cursadas
