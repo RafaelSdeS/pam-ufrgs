@@ -1174,8 +1174,11 @@ onMounted(() => {
 <template>
   <v-container>
     <v-card class="mx-auto rounded-xl shadow-premium" elevation="2">
-      <v-card-title class="text-h5 font-weight-bold pa-6 d-flex align-center justify-space-between border-bottom">
-        Grades de Horários Geradas
+      <v-card-title class="text-h4 font-weight-bold pa-6 d-flex align-center justify-space-between border-bottom">
+        <div class="d-flex align-center ga-3">
+          <v-icon icon="mdi-calendar-multiple-check" color="primary" size="x-large"></v-icon>
+          Grades de Horários Geradas
+        </div>
         <v-btn color="primary" variant="outlined" class="rounded-lg" @click="emit('back')">
           Voltar
         </v-btn>
@@ -1222,8 +1225,8 @@ onMounted(() => {
           <!-- PAINEL FIXAR TURMAS (PÓS-FILTRO) -->
           <v-card variant="outlined" class="mb-6 rounded-xl border-thin bg-surface-light">
             <v-card-text class="pa-4">
-              <div class="d-flex align-center justify-space-between flex-wrap gap-3 mb-3">
-                <div class="d-flex align-center gap-2 flex-wrap">
+              <div class="d-flex align-center justify-space-between flex-wrap ga-3 mb-3">
+                <div class="d-flex align-center ga-2 flex-wrap">
                   <v-icon color="primary" icon="mdi-pin-outline"></v-icon>
                   <span class="text-subtitle-1 font-weight-bold">Fixar Turmas para Filtrar Grades</span>
                   <v-chip size="small" color="primary" variant="tonal" class="ml-2 font-weight-bold">
@@ -1246,7 +1249,7 @@ onMounted(() => {
                 </v-btn>
               </div>
 
-              <div class="d-flex flex-wrap gap-2">
+              <div class="d-flex flex-wrap ga-2">
                 <v-menu v-for="course in availableCoursesInSchedules" :key="course.code">
                   <template v-slot:activator="{ props }">
                     <v-btn
@@ -1296,7 +1299,7 @@ onMounted(() => {
               </div>
 
               <!-- Switch e Legenda de Campi -->
-              <div class="d-flex flex-wrap align-center justify-space-between gap-3 mt-4 pt-3 border-top-thin">
+              <div class="d-flex flex-wrap align-center justify-space-between ga-3 mt-4 pt-3 border-top-thin">
                 <v-switch
                   v-model="filterInterCampus"
                   color="primary"
@@ -1306,7 +1309,7 @@ onMounted(() => {
                   class="font-weight-medium"
                 ></v-switch>
 
-                <div class="d-flex align-center flex-wrap gap-2">
+                <div class="d-flex align-center flex-wrap ga-2">
                   <span class="text-caption font-weight-bold">Legenda de Campi:</span>
                   <v-chip size="small" color="primary" variant="flat" prepend-icon="mdi-domain">Centro</v-chip>
                   <v-chip size="small" color="success" variant="flat" prepend-icon="mdi-pine-tree">Vale</v-chip>
@@ -1324,8 +1327,8 @@ onMounted(() => {
             cols="12"
           >
             <v-card variant="outlined" class="mb-6 rounded-xl border-thin">
-              <v-card-title class="text-subtitle-1 font-weight-bold pa-4 d-flex justify-space-between align-center flex-wrap border-bottom gap-2">
-                <div class="d-flex align-center gap-2 flex-wrap">
+              <v-card-title class="text-subtitle-1 font-weight-bold pa-4 d-flex justify-space-between align-center flex-wrap border-bottom ga-2">
+                <div class="d-flex align-center ga-2 flex-wrap">
                   <span class="text-h6 font-weight-bold">Opção {{ scheduleIndex + 1 }}</span>
                   <v-chip size="small" color="primary" variant="tonal" class="font-weight-bold">
                     {{ gradeObj.selected_course_count || (gradeObj.items ? new Set(gradeObj.items.map(i => i.course_code || i.course_id)).size : 0) }} disciplina(s)
@@ -1334,7 +1337,7 @@ onMounted(() => {
                     {{ dataService.getScheduleTotalCredits(gradeObj.items) }} créditos
                   </v-chip>
                 </div>
-                <div class="d-flex align-center gap-2 flex-wrap">
+                <div class="d-flex align-center ga-2 flex-wrap">
                   <v-btn
                     color="success"
                     variant="flat"
@@ -1369,7 +1372,7 @@ onMounted(() => {
               </v-card-title>
 
               <!-- Alternador de Modo de Visualização (Grade / Dia a Dia) -->
-              <div class="px-4 pt-3 pb-1 d-flex align-center justify-space-between flex-wrap gap-2">
+              <div class="px-4 pt-3 pb-1 d-flex align-center justify-space-between flex-wrap ga-2">
                 <div class="text-caption text-medium-emphasis">
                   <span v-if="scheduleViewMode === 'timeline'">Visualizando grade em formato Dia a Dia (otimizado para celular/lista)</span>
                   <span v-else>Visualizando tabela horária completa (deslize horizontalmente se necessário)</span>
@@ -1406,17 +1409,17 @@ onMounted(() => {
                     </v-tab>
                   </v-tabs>
 
-                  <div v-if="gradeObj.groupedByDay[selectedTimelineDay] && gradeObj.groupedByDay[selectedTimelineDay].length > 0" class="d-flex flex-column gap-3">
+                  <div v-if="gradeObj.groupedByDay[selectedTimelineDay] && gradeObj.groupedByDay[selectedTimelineDay].length > 0" class="d-flex flex-column ga-3">
                     <v-card
                       v-for="item in gradeObj.groupedByDay[selectedTimelineDay]"
                       :key="item.id || item.course_code + '-' + item.start_time"
                       variant="outlined"
                       :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))"
-                      class="pa-4 rounded-xl d-flex flex-column gap-2"
+                      class="pa-4 rounded-xl d-flex flex-column ga-2"
                       :class="{ 'bg-error-suttle': getCellConflict(gradeObj.items, item) }"
                     >
-                      <div class="d-flex justify-space-between align-center flex-wrap gap-2">
-                        <div class="d-flex align-center gap-2">
+                      <div class="d-flex justify-space-between align-center flex-wrap ga-2">
+                        <div class="d-flex align-center ga-2">
                           <span v-if="hasCampusWarning(gradeObj.items, item)" title="Campus não informado em aula próxima a outra">⚠️</span>
                           <span class="font-weight-bold text-subtitle-1 text-primary">
                             {{ item.course_code }} - {{ item.course_name }}
@@ -1441,7 +1444,7 @@ onMounted(() => {
                         </v-chip>
                       </div>
 
-                      <div class="d-flex align-center gap-4 text-body-2 flex-wrap">
+                      <div class="d-flex align-center ga-4 text-body-2 flex-wrap">
                         <span class="d-flex align-center"><strong>Turma:</strong>&nbsp;{{ item.section_code }}</span>
                         <span v-if="dataService.getSectionCapacity(item, curriculumService.getSelectedCourse()) !== null" class="d-inline-flex align-center text-caption opacity-90">
                           <v-icon icon="mdi-account-group" size="x-small" class="mr-1"></v-icon>{{ dataService.getSectionCapacity(item, curriculumService.getSelectedCourse()) }} vagas
@@ -1544,8 +1547,8 @@ onMounted(() => {
                               :class="{ 'conflict-border': getCellConflict(gradeObj.items, item) }"
                               :style="getCardStyle(item, gradeObj.startHour)"
                             >
-                              <div class="text-caption font-weight-bold card-title-clamp d-flex align-center justify-space-between gap-1">
-                                <div class="d-flex align-center gap-1">
+                              <div class="text-caption font-weight-bold card-title-clamp d-flex align-center justify-space-between ga-1">
+                                <div class="d-flex align-center ga-1">
                                   <span v-if="hasCampusWarning(gradeObj.items, item)" title="Campus não informado em aula próxima a outra">⚠️</span>
                                   <span>
                                     {{ item.course_name }}

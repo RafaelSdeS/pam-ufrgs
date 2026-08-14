@@ -154,8 +154,8 @@ defineExpose({
 <template>
   <v-dialog v-model="isOpen" max-width="850" scrollable>
     <v-card class="rounded-xl border-thin">
-      <v-card-title class="pa-5 bg-surface-light border-bottom d-flex align-center justify-space-between flex-wrap gap-2">
-        <div class="d-flex align-center gap-3">
+      <v-card-title class="pa-5 bg-surface-light border-bottom d-flex align-center justify-space-between flex-wrap ga-2">
+        <div class="d-flex align-center ga-3">
           <v-icon icon="mdi-star-plus-outline" color="warning" size="large"></v-icon>
           <div>
             <div class="text-h6 font-weight-bold">Sugestões de Eletivas Compatíveis</div>
@@ -169,7 +169,7 @@ defineExpose({
 
       <v-card-text class="pa-5">
         <!-- Filtros e Busca -->
-        <div class="d-flex flex-column flex-md-row gap-3 mb-5 align-center justify-space-between">
+        <div class="d-flex flex-column flex-md-row ga-3 mb-5 align-center justify-space-between">
           <v-text-field
             v-model="searchQuery"
             placeholder="Buscar eletiva pelo nome ou código..."
@@ -208,7 +208,7 @@ defineExpose({
           </div>
         </div>
 
-        <div v-else class="d-flex flex-column gap-4">
+        <div v-else class="d-flex flex-column ga-4">
           <v-card
             v-for="course in filteredCourses"
             :key="course.code"
@@ -217,7 +217,7 @@ defineExpose({
           >
             <v-card-item class="pa-4 pb-2">
               <template v-slot:title>
-                <div class="d-flex align-center justify-space-between flex-wrap gap-2">
+                <div class="d-flex align-center justify-space-between flex-wrap ga-2">
                   <span class="text-subtitle-1 font-weight-bold d-inline-flex align-center">
                     {{ course.code }} - {{ course.name }}
                     <v-icon
@@ -244,14 +244,14 @@ defineExpose({
               <div class="text-caption text-medium-emphasis mb-2 font-weight-medium">
                 Turmas disponíveis compatíveis com a grade:
               </div>
-              <div class="d-flex flex-column gap-2">
+              <div class="d-flex flex-column ga-2">
                 <div
                   v-for="section in course.sections"
                   :key="section.id"
-                  class="d-flex align-center justify-space-between flex-wrap gap-3 pa-3 rounded-lg border bg-surface-light"
+                  class="d-flex align-center justify-space-between flex-wrap ga-3 pa-3 rounded-lg border bg-surface-light"
                 >
                   <div>
-                    <div class="font-weight-bold text-body-2 d-flex align-center flex-wrap gap-1">
+                    <div class="font-weight-bold text-body-2 d-flex align-center flex-wrap ga-1">
                       <span>Turma {{ section.section_code || section.section_id }}</span>
                       <v-icon
                         v-if="section.observacao || dataService.getSectionObservation(course.code, section.section_code)"
@@ -272,11 +272,11 @@ defineExpose({
                         (Prof. {{ section.professor_name || 'A definir' }})
                       </span>
                     </div>
-                    <div class="text-caption text-primary font-weight-medium d-flex align-center gap-1 mt-1">
+                    <div class="text-caption text-primary font-weight-medium d-flex align-center ga-1 mt-1">
                       <v-icon icon="mdi-clock-outline" size="small"></v-icon>
                       {{ formatSectionTimes(section) }}
                     </div>
-                    <div v-if="section.observacao || dataService.getSectionObservation(course.code, section.section_code)" class="text-caption text-warning font-weight-medium d-flex align-start gap-1 mt-1" style="white-space: pre-line;">
+                    <div v-if="section.observacao || dataService.getSectionObservation(course.code, section.section_code)" class="text-caption text-warning font-weight-medium d-flex align-start ga-1 mt-1" style="white-space: pre-line;">
                       <v-icon icon="mdi-information-outline" size="small" class="mr-1 mt-1"></v-icon>
                       <span><strong>Observações:</strong><br>{{ section.observacao || dataService.getSectionObservation(course.code, section.section_code) }}</span>
                     </div>

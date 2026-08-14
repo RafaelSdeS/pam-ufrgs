@@ -26,7 +26,7 @@ const { mobile } = useDisplay()
             Acesse a <strong>Matriz Curricular</strong> para visualizar seu progresso e fazer upload do histórico, e depois utilize a seção <strong>Gerar Grade</strong> para montar sua grade letiva sem conflito de horários.
           </v-alert>
 
-          <div class="d-flex flex-column flex-sm-row flex-wrap gap-3 w-100">
+          <div class="d-flex flex-column flex-sm-row flex-wrap ga-3 w-100">
             <v-btn
               color="primary"
               :size="mobile ? 'medium' : 'large'"
@@ -56,7 +56,7 @@ const { mobile } = useDisplay()
 
     <!-- Card de Origem e Repositório -->
     <v-card class="pa-4 pa-md-6 glass-card border rounded-lg" elevation="2">
-      <div class="d-flex align-center gap-3 mb-4">
+      <div class="d-flex align-center ga-3 mb-4">
         <v-avatar color="primary" variant="tonal" size="44">
           <v-icon color="primary" size="24">mdi-information-outline</v-icon>
         </v-avatar>
@@ -76,8 +76,8 @@ const { mobile } = useDisplay()
 
       <v-divider class="my-4"></v-divider>
 
-      <div class="d-flex flex-column flex-sm-row align-start align-sm-center justify-space-between gap-3 flex-wrap">
-        <div class="d-flex align-center gap-2 flex-wrap">
+      <div class="d-flex flex-column flex-sm-row align-start align-sm-center justify-space-between ga-3 flex-wrap">
+        <div class="d-flex align-center ga-2 flex-wrap">
           <v-icon color="text-medium-emphasis">mdi-github</v-icon>
           <span class="text-body-2 font-weight-medium">Repositório deste projeto no GitHub:</span>
           <a
@@ -108,7 +108,7 @@ const { mobile } = useDisplay()
 
     <!-- Card de Projetos Relacionados -->
     <v-card class="pa-4 pa-md-6 glass-card border rounded-lg" elevation="2">
-      <div class="d-flex align-center gap-3 mb-4">
+      <div class="d-flex align-center ga-3 mb-4">
         <v-avatar color="secondary" variant="tonal" size="44">
           <v-icon color="secondary" size="24">mdi-link-variant</v-icon>
         </v-avatar>
@@ -133,9 +133,3 @@ const { mobile } = useDisplay()
     </v-card>
   </div>
 </template>
-
-<style scoped>
-.gap-3 {
-  gap: 12px;
-}
-</style>

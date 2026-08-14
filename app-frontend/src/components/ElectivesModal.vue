@@ -78,8 +78,8 @@ function assignSemester(course, semIndex) {
 <template>
   <v-dialog v-model="isOpen" max-width="850" scrollable>
     <v-card class="rounded-xl border-thin">
-      <v-card-title class="pa-5 bg-surface-light border-bottom d-flex align-center justify-space-between flex-wrap gap-2">
-        <div class="d-flex align-center gap-3">
+      <v-card-title class="pa-5 bg-surface-light border-bottom d-flex align-center justify-space-between flex-wrap ga-2">
+        <div class="d-flex align-center ga-3">
           <v-icon icon="mdi-star-check-outline" color="primary" size="large"></v-icon>
           <div>
             <div class="text-h6 font-weight-bold">Minhas Eletivas</div>
@@ -92,7 +92,7 @@ function assignSemester(course, semIndex) {
       </v-card-title>
 
       <v-card-text class="pa-5">
-        <div class="d-flex flex-column flex-md-row gap-3 mb-5 align-center justify-space-between">
+        <div class="d-flex flex-column flex-md-row ga-3 mb-5 align-center justify-space-between">
           <v-text-field
             v-model="searchQuery"
             placeholder="Buscar eletiva pelo nome ou código..."
@@ -125,7 +125,7 @@ function assignSemester(course, semIndex) {
             :key="c.code"
             class="rounded-lg mb-2 border-thin"
           >
-            <div class="d-flex align-center flex-wrap gap-3 py-1">
+            <div class="d-flex align-center flex-wrap ga-3 py-1">
               <v-checkbox
                 :model-value="isCompleted(c.code)"
                 @update:model-value="toggleCompleted(c.code)"
@@ -136,7 +136,7 @@ function assignSemester(course, semIndex) {
 
               <div class="flex-grow-1" style="min-width: 220px;">
                 <div class="font-weight-bold text-body-2">{{ c.code }} - {{ c.name }}</div>
-                <div class="d-flex align-center gap-1 mt-1">
+                <div class="d-flex align-center ga-1 mt-1">
                   <v-chip size="x-small" color="secondary" variant="tonal" class="font-weight-bold">{{ c.credits }}cr</v-chip>
                   <v-chip size="x-small" :color="getDifficultyColor(getCourseDifficulty(c.code))" variant="tonal" class="font-weight-bold">
                     {{ getDifficultyLabel(getCourseDifficulty(c.code)) }}

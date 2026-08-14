@@ -1,10 +1,11 @@
 <template>
   <v-container>
-    <v-card class="mx-auto rounded-xl" elevation="4">
-      <v-card-title class="text-h5 font-weight-bold mt-4">
+    <v-card class="mx-auto rounded-xl border-thin shadow-premium" elevation="1">
+      <v-card-title class="text-h4 font-weight-bold pa-6 d-flex align-center ga-3">
+        <v-icon icon="mdi-format-list-checks" color="primary" size="x-large"></v-icon>
         Escolha suas disciplinas
       </v-card-title>
-      
+
       <v-card-text>
         <!-- Semester selector on top -->
         <v-row class="mb-4">
@@ -22,7 +23,7 @@
 
         <v-divider class="mb-6"></v-divider>
 
-        <div v-if="selectedSemester" class="d-flex flex-column gap-4">
+        <div v-if="selectedSemester" class="d-flex flex-column ga-4">
           <!-- Abas para Escolha de Disciplinas -->
           <v-tabs
             v-model="courseSelectionTab"
@@ -67,7 +68,7 @@
             <!-- 1. Disciplinas Obrigatórias da Matriz -->
             <v-expansion-panel value="0" class="border rounded-lg mb-3 overflow-hidden">
               <v-expansion-panel-title class="py-3">
-                <div class="d-flex align-center gap-2">
+                <div class="d-flex align-center ga-2">
                   <v-icon color="primary" icon="mdi-book-open-page-variant"></v-icon>
                   <span class="text-subtitle-1 font-weight-bold">Disciplinas Obrigatórias da Matriz Curricular</span>
                   <v-chip size="small" color="primary" variant="tonal">{{ filteredCurriculumCourses.length }}</v-chip>
@@ -78,28 +79,28 @@
                   Clique para selecionar ou remover disciplinas obrigatórias do seu curso. As disciplinas estão organizadas e agrupadas por semestre da matriz curricular:
                 </div>
 
-                <div v-if="groupedCurriculumCourses.length > 0" class="d-flex flex-column gap-4">
+                <div v-if="groupedCurriculumCourses.length > 0" class="d-flex flex-column ga-4">
                   <div
                     v-for="group in groupedCurriculumCourses"
                     :key="group.semester"
                     class="mb-2"
                   >
                     <!-- Headerzinho do Semestre -->
-                    <div class="d-flex align-center gap-2 mb-3">
+                    <div class="d-flex align-center ga-2 mb-3">
                       <v-icon icon="mdi-bookmark-outline" size="small" color="primary"></v-icon>
                       <span class="font-weight-bold text-subtitle-2 text-primary text-no-wrap flex-shrink-0" style="white-space: nowrap !important;">{{ group.title }}</span>
                       <v-divider class="ml-2 flex-grow-1 border-thin"></v-divider>
                     </div>
 
                     <!-- Chips das disciplinas daquele semestre -->
-                    <div class="d-flex flex-wrap gap-2 pl-1">
+                    <div class="d-flex flex-wrap ga-2 pl-1">
                       <v-chip
                         v-for="course in group.courses"
                         :key="course.id || course.code"
                         :color="isCourseSelected(course) ? 'success' : 'primary'"
                         :variant="isCourseSelected(course) ? 'elevated' : 'outlined'"
                         :prepend-icon="isCourseSelected(course) ? 'mdi-check-circle' : 'mdi-plus-circle-outline'"
-                        class="font-weight-medium px-3 py-4 cursor-pointer transition-swing"
+                        class="font-weight-medium px-3 py-4 cursor-pointer"
                         @click="toggleCourseSelection(course)"
                       >
                         {{ course.name }}
@@ -132,7 +133,7 @@
             <!-- 2. Disciplinas Eletivas e Complementares -->
             <v-expansion-panel v-if="filteredElectiveCourses.length > 0" value="1" class="border rounded-lg overflow-hidden">
               <v-expansion-panel-title class="py-3">
-                <div class="d-flex align-center gap-2">
+                <div class="d-flex align-center ga-2">
                   <v-icon color="warning" icon="mdi-star-outline"></v-icon>
                   <span class="text-subtitle-1 font-weight-bold">Disciplinas Eletivas e Complementares Oferecidas</span>
                   <v-chip size="small" color="warning" variant="tonal">{{ filteredElectiveCourses.length }}</v-chip>
@@ -142,7 +143,7 @@
                 <div class="text-caption text-medium-emphasis mb-3">
                   Disciplinas extras ou eletivas oferecidas no semestre 2026/2 que estão fora da matriz obrigatória:
                 </div>
-                <div class="d-flex flex-wrap gap-2">
+                <div class="d-flex flex-wrap ga-2">
                   <v-chip
                     v-for="course in filteredElectiveCourses"
                     :key="course.id || course.code"
@@ -178,8 +179,8 @@
         <v-divider class="my-6"></v-divider>
 
         <div v-if="interestList.length > 0" class="mt-4">
-          <v-card variant="tonal" color="success" class="pa-4 rounded-xl d-flex align-center justify-space-between flex-wrap gap-3">
-            <div class="d-flex align-center gap-2 flex-wrap">
+          <v-card variant="tonal" color="success" class="pa-4 rounded-xl d-flex align-center justify-space-between flex-wrap ga-3">
+            <div class="d-flex align-center ga-2 flex-wrap">
               <span class="font-weight-bold text-subtitle-2 d-flex align-center">
                 <v-icon icon="mdi-check-circle" class="mr-1"></v-icon>
                 {{ interestList.length }} disciplina(s) selecionada(s) ({{ dataService.getScheduleTotalCredits(interestList.map(item => item.course?.code)) }} créditos):
@@ -235,8 +236,8 @@
     <v-expansion-panels class="mt-6 border rounded-xl overflow-hidden">
       <v-expansion-panel value="time_blocks">
         <v-expansion-panel-title class="py-4">
-          <div class="d-flex align-center justify-space-between w-100 pr-3 flex-wrap gap-2">
-            <div class="d-flex align-center gap-2">
+          <div class="d-flex align-center justify-space-between w-100 pr-3 flex-wrap ga-2">
+            <div class="d-flex align-center ga-2">
               <v-icon icon="mdi-calendar-remove" color="error" size="large"></v-icon>
               <span class="text-h6 font-weight-bold">Bloqueios de Horário (Calendário Semanal)</span>
             </div>
@@ -260,13 +261,13 @@
               </v-chip>
             </v-chip-group>
 
-            <div class="d-flex flex-column gap-2">
+            <div class="d-flex flex-column ga-2">
               <v-card
                 v-for="slot in weeklyTimeSlots"
                 :key="slot.start"
                 variant="outlined"
                 :color="isSlotBlocked(mobileBlockDay, slot) ? 'error' : 'default'"
-                class="pa-3 rounded-lg d-flex align-center justify-space-between cursor-pointer transition-swing"
+                class="pa-3 rounded-lg d-flex align-center justify-space-between cursor-pointer"
                 :class="{ 'bg-error-suttle': isSlotBlocked(mobileBlockDay, slot) }"
                 @click="toggleSlotBlock(mobileBlockDay, slot)"
               >
@@ -304,7 +305,7 @@
                   <td
                     v-for="day in weeklyCalendarDays"
                     :key="day + slot.start"
-                    class="time-cell cursor-pointer transition-swing"
+                    class="time-cell cursor-pointer"
                     :class="{ 'blocked-cell': isSlotBlocked(day, slot) }"
                     @click="toggleSlotBlock(day, slot)"
                   >
@@ -321,7 +322,7 @@
           </div>
 
           <!-- Ações rápidas da grade -->
-          <div class="d-flex justify-space-between align-center flex-wrap gap-2 mb-6">
+          <div class="d-flex justify-space-between align-center flex-wrap ga-2 mb-6">
             <div class="text-caption text-medium-emphasis">
               Dica: Você também pode adicionar faixas de horário exatas ou regras personalizadas abaixo.
             </div>
@@ -395,7 +396,7 @@
 
           <!-- Lista e Gestão de todos os bloqueios ativos -->
           <div v-if="timeRestrictionsOnly.length > 0" class="mt-4">
-            <div class="d-flex align-center justify-space-between mb-3 flex-wrap gap-2">
+            <div class="d-flex align-center justify-space-between mb-3 flex-wrap ga-2">
               <span class="font-weight-bold text-subtitle-2 d-flex align-center">
                 <v-icon icon="mdi-shield-lock-outline" class="mr-2" color="error"></v-icon>
                 {{ timeRestrictionsOnly.length }} bloqueio(s) de horário ativo(s):
@@ -411,7 +412,7 @@
               </v-btn>
             </div>
 
-            <div class="d-flex flex-wrap gap-2">
+            <div class="d-flex flex-wrap ga-2">
               <v-chip
                 v-for="r in timeRestrictionsOnly"
                 :key="r.id"
@@ -431,9 +432,9 @@
     </v-expansion-panels>
 
     <!-- Botão Principal de Gerar Grades abaixo de ambos -->
-    <v-card class="mt-6 pa-6 rounded-xl border-thin shadow-premium bg-surface d-flex justify-space-between align-center flex-wrap gap-4">
+    <v-card class="mt-6 pa-6 rounded-xl border-thin shadow-premium bg-surface d-flex justify-space-between align-center flex-wrap ga-4">
       <div>
-        <div class="text-h6 font-weight-bold d-flex align-center gap-2">
+        <div class="text-h6 font-weight-bold d-flex align-center ga-2">
           <v-icon icon="mdi-auto-fix" color="primary"></v-icon>
           Pronto para montar sua grade de horários?
         </div>
@@ -537,7 +538,7 @@
           <!-- Form to add new professor preference -->
           <v-card variant="outlined" class="pa-3 rounded-lg border-thin">
             <h5 class="text-subtitle-2 font-weight-bold mb-2">Adicionar Preferência de Professor</h5>
-            <v-row no-gutters class="gap-2">
+            <v-row no-gutters class="ga-2">
               <v-col cols="12" sm="7" class="pr-sm-2 mb-2 mb-sm-0">
                 <v-combobox
                   v-model="editDialog.newProf"
@@ -1088,3 +1089,12 @@ const updateProfessorPreferenceOrder = async (pref) => {
   await loadRestrictions()
 }
 </script>
+
+<style scoped>
+.time-cell {
+  transition: background-color 0.15s ease;
+}
+.time-cell:hover {
+  background-color: rgba(var(--v-theme-on-surface), 0.05);
+}
+</style>

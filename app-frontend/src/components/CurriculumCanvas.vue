@@ -610,9 +610,15 @@ const miniViewportRect = computed(() => {
   <v-container fluid class="pa-0 fill-height d-flex flex-column">
     <!-- Toolbar -->
     <v-card class="mx-4 mt-2 mb-4 pa-4 rounded-xl shadow-premium" elevation="2">
+      <div class="d-flex align-center ga-3 mb-3">
+        <v-icon icon="mdi-sitemap" color="primary" size="x-large"></v-icon>
+        <span class="text-h4 font-weight-bold">Matriz Curricular</span>
+      </div>
+      <v-divider class="mb-4"></v-divider>
+
       <v-row align="center" class="mb-2" no-gutters>
         <!-- Legenda -->
-        <v-col cols="12" md="5" class="d-flex flex-wrap align-center justify-start gap-4 mb-2 mb-md-0">
+        <v-col cols="12" md="5" class="d-flex flex-wrap align-center justify-start ga-4 mb-2 mb-md-0">
           <div class="d-flex align-center mr-4">
             <span class="legend-color legend-completed mr-2"></span>
             <span class="text-caption font-weight-medium">Concluída</span>
@@ -628,7 +634,7 @@ const miniViewportRect = computed(() => {
         </v-col>
 
         <!-- Ações do Aluno e Edição -->
-        <v-col cols="12" md="7" class="d-flex justify-md-end justify-start align-center gap-2 flex-wrap">
+        <v-col cols="12" md="7" class="d-flex justify-md-end justify-start align-center ga-2 flex-wrap">
           <input
             type="file"
             ref="pdfInputRef"
@@ -698,7 +704,7 @@ const miniViewportRect = computed(() => {
       <!-- Linha Inferior: Controles de Visualização (a mais próxima do gráfico) -->
       <v-divider class="my-2"></v-divider>
       <v-row align="center" no-gutters>
-        <v-col cols="12" class="d-flex justify-end align-center gap-2 flex-wrap">
+        <v-col cols="12" class="d-flex justify-end align-center ga-2 flex-wrap">
           <v-btn-group variant="outlined" density="compact" color="primary" class="rounded-lg mr-2">
             <v-btn
               :variant="canvasViewMode === 'canvas' ? 'flat' : 'outlined'"
@@ -780,20 +786,20 @@ const miniViewportRect = computed(() => {
             </v-tab>
           </v-tabs>
 
-          <div v-if="subjectsBySemester[Number(selectedSemesterTab)] && subjectsBySemester[Number(selectedSemesterTab)].length > 0" class="d-flex flex-column gap-3">
+          <div v-if="subjectsBySemester[Number(selectedSemesterTab)] && subjectsBySemester[Number(selectedSemesterTab)].length > 0" class="d-flex flex-column ga-3">
             <v-card
               v-for="item in subjectsBySemester[Number(selectedSemesterTab)]"
               :key="item.id || item.code"
               variant="outlined"
-              class="pa-4 rounded-xl d-flex flex-column gap-2 transition-swing cursor-pointer"
+              class="pa-4 rounded-xl d-flex flex-column ga-2 transition-swing cursor-pointer"
               :class="[
                 isEditMode && tempCompletedSubjectIds.includes(item.code) ? 'border-success bg-emerald' : '',
                 !isEditMode && selectedSubjectId === item.code ? 'border-primary bg-surface-light' : ''
               ]"
               @click="isEditMode ? toggleSubjectCompletion(item) : selectSubject(item.id)"
             >
-              <div class="d-flex justify-space-between align-center flex-wrap gap-2">
-                <div class="d-flex align-center gap-2">
+              <div class="d-flex justify-space-between align-center flex-wrap ga-2">
+                <div class="d-flex align-center ga-2">
                   <v-chip size="small" :color="getStatusConfig(getSubjectStatus(item)).color" variant="flat" class="font-weight-bold">
                     <v-icon :icon="getStatusConfig(getSubjectStatus(item)).icon" start size="14"></v-icon>
                     {{ getStatusConfig(getSubjectStatus(item)).badge }}
@@ -823,12 +829,12 @@ const miniViewportRect = computed(() => {
 
               <div class="font-weight-bold text-h6">{{ item.name }}</div>
 
-              <div v-if="dataService.getCourseObservation(item.code || item.id)" class="text-caption text-warning d-flex align-start gap-1 mt-1 font-weight-medium" style="white-space: pre-line;">
+              <div v-if="dataService.getCourseObservation(item.code || item.id)" class="text-caption text-warning d-flex align-start ga-1 mt-1 font-weight-medium" style="white-space: pre-line;">
                 <v-icon size="16" color="warning" class="mr-1 mt-1">mdi-information-outline</v-icon>
                 <span><strong>Observações:</strong><br>{{ dataService.getCourseObservation(item.code || item.id) }}</span>
               </div>
 
-              <div v-if="item.prerequisites && item.prerequisites.length > 0" class="text-caption text-medium-emphasis d-flex align-center flex-wrap gap-1 mt-1">
+              <div v-if="item.prerequisites && item.prerequisites.length > 0" class="text-caption text-medium-emphasis d-flex align-center flex-wrap ga-1 mt-1">
                 <v-icon size="14" class="mr-1">mdi-link</v-icon>
                 <strong>Pré-requisitos:</strong>
                 <v-chip v-for="req in item.prerequisites" :key="req" size="x-small" variant="outlined" class="font-weight-medium">
@@ -1152,7 +1158,7 @@ const miniViewportRect = computed(() => {
     <v-dialog v-model="showPdfModal" max-width="620">
       <v-card class="rounded-xl pa-6" elevation="10">
         <div class="d-flex align-center justify-space-between mb-4">
-          <div class="d-flex align-center gap-3">
+          <div class="d-flex align-center ga-3">
             <v-avatar color="red-darken-2" size="44">
               <v-icon color="white">mdi-file-document-outline</v-icon>
             </v-avatar>
@@ -1230,10 +1236,6 @@ const miniViewportRect = computed(() => {
 
 .shadow-premium {
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
-}
-
-.gap-4 {
-  gap: 16px;
 }
 
 /* Viewport and Canvas Styles */
@@ -1330,10 +1332,6 @@ const miniViewportRect = computed(() => {
 .bg-amber {
   background: linear-gradient(135deg, rgba(251, 192, 45, 0.05) 0%, rgba(251, 192, 45, 0.02) 100%) !important;
 }
-.bg-error-suttle {
-  background: linear-gradient(135deg, rgba(244, 67, 54, 0.05) 0%, rgba(244, 67, 54, 0.02) 100%) !important;
-}
-
 /* Glow effect for active elements */
 .active-border {
   box-shadow: 0 0 12px rgba(var(--v-theme-primary), 0.4) !important;

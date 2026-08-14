@@ -865,9 +865,9 @@ const exportToPDF = (gradeObj) => {
   <v-container fluid class="pa-0">
     <!-- Cabeçalho -->
     <v-card class="mb-6 rounded-xl border-thin shadow-premium bg-surface" elevation="1">
-      <v-card-text class="pa-6 d-flex justify-space-between align-center flex-wrap gap-4">
+      <v-card-text class="pa-6 d-flex justify-space-between align-center flex-wrap ga-4">
         <div>
-          <div class="d-flex align-center gap-3 mb-1">
+          <div class="d-flex align-center ga-3 mb-1">
             <v-icon icon="mdi-bookmark-check" color="primary" size="x-large"></v-icon>
             <span class="text-h4 font-weight-bold">Grades Salvas</span>
             <v-chip color="primary" variant="tonal" class="font-weight-bold ml-2">
@@ -879,7 +879,7 @@ const exportToPDF = (gradeObj) => {
           </div>
         </div>
 
-        <div class="d-flex gap-3 align-center">
+        <div class="d-flex ga-3 align-center">
           <v-btn
             v-if="savedSchedules.length > 0"
             color="error"
@@ -923,7 +923,7 @@ const exportToPDF = (gradeObj) => {
     </v-card>
 
     <!-- Lista de Grades Salvas -->
-    <div v-else class="d-flex flex-column gap-6">
+    <div v-else class="d-flex flex-column ga-6">
       <v-card
         v-for="(grade, idx) in savedSchedules"
         :key="grade.id"
@@ -931,15 +931,15 @@ const exportToPDF = (gradeObj) => {
         class="rounded-xl border-thin shadow-premium bg-surface"
       >
         <!-- Cabeçalho do Cartão da Grade Salva -->
-        <v-card-title class="pa-5 bg-surface-light border-bottom d-flex justify-space-between align-center flex-wrap gap-3">
-          <div class="d-flex align-center gap-3">
+        <v-card-title class="pa-5 bg-surface-light border-bottom d-flex justify-space-between align-center flex-wrap ga-3">
+          <div class="d-flex align-center ga-3">
             <v-avatar color="primary" variant="tonal" size="42" class="font-weight-bold">
               #{{ idx + 1 }}
             </v-avatar>
 
             <div>
               <!-- Se estiver renomeando este item -->
-              <div v-if="renamingSchedule?.id === grade.id" class="d-flex align-center gap-2">
+              <div v-if="renamingSchedule?.id === grade.id" class="d-flex align-center ga-2">
                 <v-text-field
                   v-model="newScheduleName"
                   density="compact"
@@ -955,12 +955,12 @@ const exportToPDF = (gradeObj) => {
               </div>
 
               <!-- Exibição Normal do Nome -->
-              <div v-else class="d-flex align-center gap-2">
+              <div v-else class="d-flex align-center ga-2">
                 <span class="text-h6 font-weight-bold">{{ grade.name }}</span>
                 <v-btn icon="mdi-pencil-outline" size="x-small" variant="text" title="Renomear grade" @click="startRenaming(grade)"></v-btn>
               </div>
 
-              <div class="text-caption text-medium-emphasis d-flex align-center gap-3 mt-1">
+              <div class="text-caption text-medium-emphasis d-flex align-center ga-3 mt-1">
                 <span>Salva em: {{ new Date(grade.createdAt).toLocaleDateString('pt-BR', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' }) }}</span>
                 <span>•</span>
                 <span class="font-weight-bold text-primary">{{ grade.selected_course_count || (grade.items ? new Set(grade.items.map(i => i.course_code || i.course_id)).size : 0) }} disciplina(s)</span>
@@ -971,7 +971,7 @@ const exportToPDF = (gradeObj) => {
           </div>
 
           <!-- Ações da Grade Salva -->
-          <div class="d-flex align-center gap-2 flex-wrap">
+          <div class="d-flex align-center ga-2 flex-wrap">
             <v-btn
               color="warning"
               variant="flat"
@@ -1013,7 +1013,7 @@ const exportToPDF = (gradeObj) => {
         </v-card-title>
 
         <!-- Alternador de Modo de Visualização (Grade / Dia a Dia) -->
-        <div v-show="!collapsedSchedules[grade.id]" class="px-5 pt-3 pb-1 d-flex align-center justify-space-between flex-wrap gap-2 border-bottom">
+        <div v-show="!collapsedSchedules[grade.id]" class="px-5 pt-3 pb-1 d-flex align-center justify-space-between flex-wrap ga-2 border-bottom">
           <div class="text-caption text-medium-emphasis">
             <span v-if="getViewMode(grade.id) === 'timeline'">Visualizando em formato Dia a Dia (otimizado para celular/lista)</span>
             <span v-else>Visualizando tabela horária completa (deslize horizontalmente se necessário)</span>
@@ -1052,22 +1052,22 @@ const exportToPDF = (gradeObj) => {
                 </v-tab>
               </v-tabs>
 
-              <div v-if="grade.groupedByDay && grade.groupedByDay[getTimelineDay(grade.id)] && grade.groupedByDay[getTimelineDay(grade.id)].length > 0" class="d-flex flex-column gap-3">
+              <div v-if="grade.groupedByDay && grade.groupedByDay[getTimelineDay(grade.id)] && grade.groupedByDay[getTimelineDay(grade.id)].length > 0" class="d-flex flex-column ga-3">
                 <v-card
                   v-for="item in grade.groupedByDay[getTimelineDay(grade.id)]"
                   :key="item.id || item.course_code + '-' + item.start_time"
                   variant="outlined"
                   color="primary"
-                  class="pa-4 rounded-xl d-flex flex-column gap-2"
+                  class="pa-4 rounded-xl d-flex flex-column ga-2"
                 >
-                  <div class="d-flex justify-space-between align-center flex-wrap gap-2">
+                  <div class="d-flex justify-space-between align-center flex-wrap ga-2">
                     <span class="font-weight-bold text-subtitle-1 text-primary">{{ item.course_code }} - {{ item.course_name }}</span>
                     <v-chip size="small" color="primary" variant="flat" class="font-weight-bold">
                       {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
                     </v-chip>
                   </div>
 
-                  <div class="d-flex align-center gap-4 text-body-2 flex-wrap">
+                  <div class="d-flex align-center ga-4 text-body-2 flex-wrap">
                     <span class="d-flex align-center"><strong>Turma:</strong>&nbsp;{{ item.section_code }}</span>
                     <span v-if="item.professor_name" class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-account</v-icon> {{ item.professor_name }}</span>
                     <span class="d-flex align-center"><v-icon size="16" class="mr-1">mdi-map-marker</v-icon> Campus: {{ item.campus || extractCampus(item.room) }}</span>

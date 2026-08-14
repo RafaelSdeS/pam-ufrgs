@@ -69,6 +69,11 @@ h1, h2, h3, h4, .text-h4, .text-h5, .text-h6 {
   font-weight: 600;
 }
 
+/* Shared status backgrounds (used across GenerateSchedules, GeneratedSchedule, CurriculumCanvas) */
+.bg-error-suttle {
+  background: linear-gradient(135deg, rgba(244, 67, 54, 0.05) 0%, rgba(244, 67, 54, 0.02) 100%) !important;
+}
+
 /* Custom Scrollbars */
 ::-webkit-scrollbar {
   width: 8px;

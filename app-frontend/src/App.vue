@@ -115,7 +115,7 @@ const clearAllBrowserData = () => {
         @click="drawer = !drawer"
       ></v-app-bar-nav-icon>
 
-      <v-toolbar-title class="font-weight-bold d-flex align-center gap-2 mr-2 mr-md-4" :class="mobile ? 'text-subtitle-1' : 'text-h6'" style="flex: 0 1 auto;">
+      <v-toolbar-title class="font-weight-bold d-flex align-center ga-2 mr-2 mr-md-4" :class="mobile ? 'text-subtitle-1' : 'text-h6'" style="flex: 0 1 auto;">
         <span>PAM - UFRGS</span>
       </v-toolbar-title>
 
@@ -150,7 +150,7 @@ const clearAllBrowserData = () => {
 
       <v-spacer></v-spacer>
 
-      <div class="d-flex align-center gap-1 gap-md-2">
+      <div class="d-flex align-center ga-1 ga-md-2">
         <v-btn
           v-if="!mobile"
           variant="tonal"
@@ -245,7 +245,7 @@ const clearAllBrowserData = () => {
     <!-- Modal de Seleção de Curso -->
     <v-dialog v-model="showCourseModal" persistent max-width="480">
       <v-card class="rounded-xl p-4">
-        <v-card-title class="text-h6 font-weight-bold d-flex align-center gap-2 pt-4 px-6">
+        <v-card-title class="text-h6 font-weight-bold d-flex align-center ga-2 pt-4 px-6">
           <v-icon color="primary">mdi-school</v-icon>
           Selecione o seu Curso
         </v-card-title>
@@ -303,8 +303,5 @@ const clearAllBrowserData = () => {
 .app-background {
   background: var(--v-theme-background) !important;
   min-height: 100vh;
-}
-.gap-2 {
-  gap: 8px;
 }
 </style>

@@ -85,7 +85,7 @@ const resetToOfficial = () => {
   >
     <v-card class="glass-card rounded-xl pa-6" elevation="10">
       <div class="d-flex align-center justify-space-between mb-4">
-        <div class="d-flex align-center gap-3">
+        <div class="d-flex align-center ga-3">
           <v-avatar color="primary" size="44">
             <v-icon color="white">mdi-database-clock-outline</v-icon>
           </v-avatar>
@@ -144,7 +144,7 @@ const resetToOfficial = () => {
         {{ uploadError }}
       </v-alert>
 
-      <div class="d-flex flex-column gap-2">
+      <div class="d-flex flex-column ga-2">
         <v-btn
           color="primary"
           variant="flat"
