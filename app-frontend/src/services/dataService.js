@@ -539,5 +539,29 @@ export const dataService = {
 
   saveGraduationPlan(semesters) {
     this._setItemScoped(STORAGE_KEYS.GRADUATION_PLAN, JSON.stringify(semesters))
+  },
+
+  getElectiveCatalog(courseCode = null) {
+    const code = courseCode || curriculumService.getSelectedCourse()
+    const mandatorySet = new Set(curriculumService.getCurriculumSubjects(code).map(s => s.code.toUpperCase()))
+    return this.getAllCourses(code).filter(c => c.code && !mandatorySet.has(c.code.toUpperCase()))
+  },
+
+  setElectiveSemester(code, credits, semIndex = null) {
+    const semesters = (this.getGraduationPlan() || []).map(sem => [...sem])
+    for (const sem of semesters) {
+      const i = sem.findIndex(c => c.toUpperCase() === code.toUpperCase())
+      if (i !== -1) sem.splice(i, 1)
+    }
+    if (semIndex !== null && semIndex !== undefined) {
+      while (semesters.length <= semIndex) semesters.push([])
+      const sem = semesters[semIndex]
+      const placeholderIdx = sem.findIndex(c => c === `ELETIVA-${credits}`)
+      if (placeholderIdx !== -1) sem[placeholderIdx] = code
+      else sem.push(code)
+    }
+    const trimmed = semesters.filter(sem => sem.length > 0)
+    this.saveGraduationPlan(trimmed)
+    return trimmed
   }
 }

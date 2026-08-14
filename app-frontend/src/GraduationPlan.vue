@@ -41,10 +41,7 @@ const electiveCreditsRemaining = computed(() => {
   return Math.max(0, graduationRequirements.value.elective - completedElectiveCredits)
 })
 
-const electiveCatalog = computed(() => {
-  const mandatorySet = new Set(Object.keys(subjectsMap.value).map(c => c.toUpperCase()))
-  return dataService.getAllCourses(selectedCourse.value).filter(c => c.code && !mandatorySet.has(c.code.toUpperCase()))
-})
+const electiveCatalog = computed(() => dataService.getElectiveCatalog(selectedCourse.value))
 
 const usedElectiveCodes = computed(() => {
   const mandatorySet = new Set(Object.keys(subjectsMap.value).map(c => c.toUpperCase()))

@@ -10,6 +10,7 @@ import GenerateSchedules from './GenerateSchedules.vue'
 import GeneratedSchedule from './GeneratedSchedule.vue'
 import CurriculumCanvas from './components/CurriculumCanvas.vue'
 import TurmasModal from './components/TurmasModal.vue'
+import ElectivesModal from './components/ElectivesModal.vue'
 import SavedSchedules from './SavedSchedules.vue'
 import GraduationPlan from './GraduationPlan.vue'
 
@@ -24,6 +25,8 @@ watch(() => mobile.value, (isMobile) => {
 
 const currentPage = ref('home')
 const showTurmasModal = ref(false)
+const showElectivesModal = ref(false)
+const graduationPlanKey = ref(0)
 const showCourseModal = ref(false)
 const isChangingCourse = ref(false)
 const turmasUpdateTrigger = ref(0)
@@ -97,6 +100,7 @@ const clearAllBrowserData = () => {
       :current-course-name="currentCourseName"
       @change-page="navigateTo"
       @open-turmas-modal="showTurmasModal = true"
+      @open-electives-modal="showElectivesModal = true"
       @open-course-modal="openCourseModal"
       @clear-browser-data="clearAllBrowserData"
     />
@@ -229,6 +233,7 @@ const clearAllBrowserData = () => {
 
         <GraduationPlan
           v-else-if="currentPage === 'graduation_plan'"
+          :key="graduationPlanKey"
           @change-page="navigateTo"
         />
       </v-container>
@@ -278,6 +283,12 @@ const clearAllBrowserData = () => {
     <TurmasModal
       v-model="showTurmasModal"
       @turmas-updated="refreshTurmasInfo"
+    />
+
+    <!-- Modal de Gerenciamento de Eletivas -->
+    <ElectivesModal
+      v-model="showElectivesModal"
+      @updated="graduationPlanKey++"
     />
   </v-app>
 </template>
