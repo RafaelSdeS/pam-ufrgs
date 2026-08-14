@@ -14,16 +14,16 @@ export function calculateSubjectStatuses(subjects, completedIds = []) {
     }
   })
 
+  let completedCredits = 0
+  subjects.forEach(subject => {
+    if (statuses[subject.id] === 'completed') completedCredits += subject.credits || 0
+  })
+
   subjects.forEach(subject => {
     if (statuses[subject.id] === 'completed') return
 
     const prereqs = subject.prerequisites || []
-    if (prereqs.length === 0) {
-      statuses[subject.id] = 'available'
-      return
-    }
-
-    const allMet = prereqs.every(prereqId => {
+    const prereqsMet = prereqs.length === 0 || prereqs.every(prereqId => {
       const pId = String(prereqId).trim().toLowerCase()
       const matchingSubject = subjectMap.get(pId)
       if (!matchingSubject) return true
@@ -33,7 +33,9 @@ export function calculateSubjectStatuses(subjects, completedIds = []) {
       return false
     })
 
-    statuses[subject.id] = allMet ? 'available' : 'blocked'
+    const creditsMet = completedCredits >= (subject.min_credits_required || 0)
+
+    statuses[subject.id] = (prereqsMet && creditsMet) ? 'available' : 'blocked'
   })
 
   return statuses

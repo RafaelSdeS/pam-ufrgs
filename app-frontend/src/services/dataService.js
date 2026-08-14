@@ -8,7 +8,9 @@ const STORAGE_KEYS = {
   SELECTED_CURRICULUM: 'ufrgs_pma_selected_curriculum',
   CUSTOM_TURMAS: 'ufrgs_pma_custom_turmas',
   CUSTOM_TURMAS_DATE: 'ufrgs_pma_custom_turmas_date',
-  SAVED_SCHEDULES: 'ufrgs_pma_saved_schedules'
+  SAVED_SCHEDULES: 'ufrgs_pma_saved_schedules',
+  CREDIT_LIMIT: 'ufrgs_pma_credit_limit',
+  GRADUATION_PLAN: 'ufrgs_pma_graduation_plan'
 }
 
 export const dataService = {
@@ -513,5 +515,29 @@ export const dataService = {
 
   saveSavedSchedules(list) {
     this._setItemScoped(STORAGE_KEYS.SAVED_SCHEDULES, JSON.stringify(list))
+  },
+  getCreditLimit() {
+    const raw = this._getItemScoped(STORAGE_KEYS.CREDIT_LIMIT)
+    const n = parseInt(raw, 10)
+    return Number.isFinite(n) && n > 0 ? n : 24
+  },
+
+  saveCreditLimit(limit) {
+    this._setItemScoped(STORAGE_KEYS.CREDIT_LIMIT, String(limit))
+  },
+
+  getGraduationPlan() {
+    const raw = this._getItemScoped(STORAGE_KEYS.GRADUATION_PLAN)
+    if (!raw) return null
+    try {
+      const parsed = JSON.parse(raw)
+      return Array.isArray(parsed) ? parsed : null
+    } catch (e) {
+      return null
+    }
+  },
+
+  saveGraduationPlan(semesters) {
+    this._setItemScoped(STORAGE_KEYS.GRADUATION_PLAN, JSON.stringify(semesters))
   }
 }

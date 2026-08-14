@@ -3,6 +3,16 @@ import ufrgsData from '../data/ufrgs_data.json'
 
 const currentCourseRef = ref(localStorage.getItem('ufrgs_selected_course') || 'CIC')
 
+// Fonte: https://www.ufrgs.br/site/ensino/graduacao/{ciencia-da-computacao,engenharia-de-computacao}/
+// (aba "Grade Curricular" -> "Dados Currículo")
+const graduationRequirements = {
+  CIC: { mandatory: 166, elective: 16, complementary: 6 },
+  ECP: { mandatory: 148, elective: 46, complementary: 6 }
+}
+
+// Fonte: plone.php?r=relatorio&curso=318&habilitacao=72&curriculo=207 (expõe pré-requisitos e
+// carga horária completos, ao contrário da view r=grade usada antes). 36 disciplinas, 148 créditos -
+// bate exato com o oficial.
 const ecpSubjects = [
   { code: 'INF01202', name: 'ALGORÍTMOS E PROGRAMAÇÃO - CIC', semester: 1, credits: 6, prerequisites: [] },
   { code: 'MAT01353', name: 'CÁLCULO E GEOMETRIA ANALÍTICA I - A', semester: 1, credits: 6, prerequisites: [] },
@@ -43,8 +53,16 @@ const ecpSubjects = [
   { code: 'INF01194', name: 'CONCEPÇÃO DE CIRCUITOS INTEGRADOS II', semester: 7, credits: 4, prerequisites: ['INF01175', 'INF01185'] },
   { code: 'INF01085', name: 'SISTEMAS DISTRIBUÍDOS E TOLERANTES A FALHAS', semester: 7, credits: 4, prerequisites: ['INF01142'] },
 
-  { code: 'ECP99001', name: 'PROJETO DE FINAL DE CURSO DE ENGENHARIA DE COMPUTAÇÃO', semester: 9, credits: 2, prerequisites: [] },
-  { code: 'TG-I-ECP', name: 'TRABALHO DE GRADUAÇÃO I - ECP', semester: 9, credits: 0, prerequisites: [] },
+  { code: 'MAT02219', name: 'PROBABILIDADE E ESTATÍSTICA', semester: 4, credits: 4, prerequisites: ['MAT01353'] },
+
+  // ECP99001 e TG-I-ECP exigem oficialmente "Créditos Eletivos - 30 e Créditos Obrigatórios - 150"
+  // (confirmado no HTML de plone.php?r=relatorio, não é rótulo de carga horária). Como o total
+  // obrigatório da grade inteira é 148 (menor que 150), o limiar oficial é matematicamente
+  // inatingível aqui - usamos 146 (148 menos os próprios 2cr do ECP99001, que não podem contar
+  // como pré-requisito de si mesmo) como teto real, equivalente a "só depois de todas as outras
+  // obrigatórias", em vez do número literal.
+  { code: 'ECP99001', name: 'PROJETO DE FINAL DE CURSO DE ENGENHARIA DE COMPUTAÇÃO', semester: 9, credits: 2, prerequisites: [], min_credits_required: 146, min_elective_credits_required: 30 },
+  { code: 'TG-I-ECP', name: 'TRABALHO DE GRADUAÇÃO I - ECP', semester: 9, credits: 0, prerequisites: [], min_credits_required: 146, min_elective_credits_required: 30 },
   { code: 'TG-II-ECP', name: 'TRABALHO DE GRADUAÇÃO II - ECP', semester: 10, credits: 0, prerequisites: ['ECP99001', 'TG-I-ECP'] }
 ]
 
@@ -76,7 +94,9 @@ export const curriculumService = {
         semester: item.semester,
         carga_horaria: item.credits * 15,
         credits: item.credits,
-        prerequisites: item.prerequisites
+        prerequisites: item.prerequisites,
+        min_credits_required: item.min_credits_required || 0,
+        min_elective_credits_required: item.min_elective_credits_required || 0
       }))
     }
 
@@ -85,6 +105,8 @@ export const curriculumService = {
     if (ufrgsData && ufrgsData.curriculum) {
       ufrgsData.curriculum.forEach(item => {
         const semesterNum = parseInt(item.etapa.replace(/\D/g, '')) || 1
+        const creditReq = (item.pre_requisitos || []).find(pre => pre.startsWith('Créditos'))
+        const minCreditsRequired = creditReq ? (parseInt(creditReq.split(' - ')[1]) || 0) : 0
         const prereqCodes = (item.pre_requisitos || [])
           .filter(pre => !pre.startsWith('Créditos'))
           .map(pre => pre.split(' - ')[0].trim())
@@ -97,11 +119,17 @@ export const curriculumService = {
           semester: semesterNum,
           carga_horaria: parseInt(item.carga_horaria) || (parseInt(item.creditos) * 15),
           credits: parseInt(item.creditos),
-          prerequisites: prereqCodes
+          prerequisites: prereqCodes,
+          min_credits_required: minCreditsRequired
         })
       })
     }
     return list
+  },
+
+  getGraduationRequirements(courseCode) {
+    const key = this.normalizeCurriculumCode(courseCode) || 'CIC'
+    return graduationRequirements[key] || graduationRequirements.CIC
   },
 
   normalizeCurriculumCode(code) {

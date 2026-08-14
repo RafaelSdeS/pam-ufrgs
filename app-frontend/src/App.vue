@@ -11,6 +11,7 @@ import GeneratedSchedule from './GeneratedSchedule.vue'
 import CurriculumCanvas from './components/CurriculumCanvas.vue'
 import TurmasModal from './components/TurmasModal.vue'
 import SavedSchedules from './SavedSchedules.vue'
+import GraduationPlan from './GraduationPlan.vue'
 
 const { mobile } = useDisplay()
 const showMobileWarning = ref(true)
@@ -223,6 +224,11 @@ const clearAllBrowserData = () => {
 
         <SavedSchedules
           v-else-if="currentPage === 'saved_schedules'"
+          @change-page="navigateTo"
+        />
+
+        <GraduationPlan
+          v-else-if="currentPage === 'graduation_plan'"
           @change-page="navigateTo"
         />
       </v-container>

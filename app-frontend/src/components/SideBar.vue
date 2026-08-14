@@ -90,6 +90,14 @@ const selectPage = (pageName) => {
         :active="currentPage === 'saved_schedules'"
         @click="selectPage('saved_schedules')"
       ></v-list-item>
+
+      <v-list-item
+        prepend-icon="mdi-flag-checkered"
+        title="Previsão de Formatura"
+        value="graduation_plan"
+        :active="currentPage === 'graduation_plan'"
+        @click="selectPage('graduation_plan')"
+      ></v-list-item>
     </v-list>
 
     <template v-slot:append>
