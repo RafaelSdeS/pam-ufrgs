@@ -1,0 +1,199 @@
+                                                      PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 14/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: ÁLVARO FREITAS MOREIRA
+Disciplina: LINGUAGENS DE PROGRAMAÇÃO I
+Sigla: INF05029               Créditos: 4
+
+Carga Horária
+CH Teórica: 60h         CH Prática: 0h   Total: 60h
+CH Coletiva: 50h        CH Autônoma: 10h       CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Estrutura geral de compiladores e interpretadores. Análise léxica e sintática (scanner e parser). Avaliador abstrato (semântica
+operacional). Análise semântica (sistemas de tipos). Propriedades de linguagens de programação.
+
+Currículos
+                                         Currículos                                                Etapa Aconselhada           Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                           6               Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                                       7                   Eletiva
+
+Objetivos
+A disciplina por objetivo desenvolver habilidades específicas para
+
+
+- Implementar analisadores léxicos e sintáticos a partir de ERs, autômatos e gramáticas
+- Definir de forma indutiva a semântica estática (sistema de tipos) e semântica dinâmica (comportamento operacional) de uma
+linguagem
+- Provar propriedades de linguagens de programação (núcleo) a partir da especificação da semântica estática e dinâmica
+- Reconhecer sistemas de tipos de LPs como elementos disciplinadores da programação e organizadores de LPs do ponto de vista
+de Engenharia de Software
+- Implementar analisadores semânticos a partir de especificação de semântica estática
+ - Projetar processadores de linguagens (LPs, ou de descrição de dados) identificando suas principais etapas e as diferentes
+representações pelas quais passa um programa. Tipicamente, no caso de LPs, etapas de front-end (análise léxica, sintática e
+semântica) e etapas back end (avaliação, no caso de interpretadores e geração de código, no caso de compiladores)
+- Usar ferramentas e recursos do ecossistema de Linguagens para geração de parsers, geração de documentação, para testes
+unitários, "builders", e ferramentas para controle de versões
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução da disciplina e a projeto e processadores de linguagens
+Conteúdo: Apresentação da disciplina. Conceitos fundamentais. Estrutura geral de Interpretadores e Compiladores
+  Semana: 2 a 3
+    Título: Análise Léxica
+Conteúdo: Especificação de analisadores léxicos (ERs, AFDs), implementação de analisadores léxicos; geradores automáticos de analisadores
+              léxicos
+  Semana: 4 a 7
+    Título: Análise Sintática
+Conteúdo: - Sintaxe concreta x sintaxe abstrata; gramáticas abstratas; árvores de sintaxe abstrata; transformações de gramáticas
+              - Algoritmos de parser: Análise Sintática Ascendente LR(0), SLR(1), LR(1), LALR(1), conflitos
+              - Algoritmos de parser: Análise Sintática Descendente LL(1), Construção da Tabela LL(1), Erros
+
+
+
+
+                                                                         Página 1
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 14/08/2026
+
+
+
+  Semana: 8 a 10
+    Título: Avaliador Abstrato - semântica operacional
+Conteúdo: - Núcleo de linguagens de programação; Semântica operacional small step; estratégias de avaliação (call by value, by name, lazy
+              evaluation);
+              - Semântica operacional big step; ambientes de execução; closures de funções ; escopo
+              - Implementação de avaliadores baseados em semântica operacional small e big step
+  Semana: 11 a 13
+    Título: Analisador Semântico - sistemas de tipos
+Conteúdo: - Tipos em LPs; Tipagem estática x dinâmica; Tipagem explícita x implícita;
+              - Segurança, tipos básicos construtores de tipos
+              - Polimorfismo ad hoc; Polimorfismo Paramétrico/tipos genéricos;
+              - Tipos união disjunta/soma, tipos indutivos, subtipos, herança, tipos abstratos de dados
+              - Implementação de análise semântica (inferência e verificação de tipos; ambiente de tipos/tabela de símbolos; tratamento de erros
+  Semana: 14
+    Título: Propriedades
+Conteúdo: Determinismo; Segurança do sistema de tipos; terminação; segurança e completeza da inferência de tipos; prova por indução
+              estrutural
+  Semana: 15
+    Título: Avaliações e consideracões finais
+Conteúdo: Avaliações e considerações finais
+
+Metodologia
+A disciplina será conduzida em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com o
+desenvolvimento de eventuais exercícios e discussões. Algumas das aulas serão realizadas em laboratórios, para a implementação
+dos conceitos vistos em aula.
+
+
+O sistema Moodle/UFRGS será utilizado para distribuição de material, entrega de trabalhos, organização de grupos de discussão, e
+acompanhamento geral da disciplina.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas avaliadas, realizadas sem contato direto com o professor.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Ao discente serão oferecidas as seguintes experiências de aprendizagem:
+
+
+- Participar de aulas expositivas dialogadas
+- Realizar trabalhos de programação em laboratório
+- Resolver listas de exercícios extra-classe
+- Desenvolver um trabalho final de implementação
+- Realizar leitura de material disponibilizado
+- Assistir vídeos ou vídeo-aulas
+- Responder questionários
+
+
+Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
+As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina."
+
+
+
+                                                                         Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 14/08/2026
+
+
+
+Critérios de avaliação
+A avaliação consiste de:
+- duas provas escritas, P1 e P2, a serem realizadas de forma individual, e
+- um trabalho T como atividade autônoma realizado em grupo
+
+
+Para aprovação na disciplina é necessário obter nota final NF >= 6,0 e frequência maior ou igual a 75%.
+
+
+A nota final NF será calculada apenas para alunos com frequência maior ou igual a 75% da seguinte forma:
+
+
+NF = (P1 * 0,35) + (P2 * 0,35) + (T * 0,30)
+
+
+O conceito final da disciplina será dado da seguinte forma:
+
+
+frequência < 75\% : FF
+0 <= NF < 6.0 : D
+6.0 <= NF < 7.5 : C
+7.5 <= NF < 9.0 : B
+9.0 <= NF : A
+
+Atividades de Recuperação Previstas
+Se NF < 6 o aluno poderá, desde que tenha a frequência mínima, realizar uma prova de recuperação REC sobre o todo o conteúdo
+da disciplina.
+
+
+Se (NF * 0,4) + (REC * 0,6) >= 6, o aluno estará aprovado com conceito C.
+
+Bibliografia
+Básica Essencial
+                                                        Sem bibliografias acrescentadas.
+
+Básica
+Alfred Aho, Jeffrey Ullman, Ravi Sethi, Monica Lam. Compilers: Principles, Techniques, and Tools. EUA: Addison Wesley, 2006. ISBN
+978-0321486813.
+Benjamin Pierce. Types and Programming Languages. EUA: MIT Press, 2002. ISBN ISBN 0-262-16209-1. Disponível em:
+https://www.cis.upenn.edu/~bcpierce/tapl/
+Robert Nystron. Crafting interpreters. n.a.: Genever Benning, 2021. ISBN 978-0990582939. Disponível em:
+https://craftinginterpreters.com/contents.html
+
+Complementar
+                                                        Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                            Não existem outras referências para este plano de ensino.
+
+Observações
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que sejam utilizados
+devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as atividades
+síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido disponibilizar, por
+quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização específica para a
+finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica, sendo
+vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o material de sua
+autoria.
+
+
+
+
+                                                                        Página 3
+

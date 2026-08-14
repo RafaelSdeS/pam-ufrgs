@@ -1,0 +1,128 @@
+                             Universidade Federal do Rio Grande do Sul
+                                       Instituto de Informática
+                          Cursos: Pós-Graduação em Ciência da Computação
+
+Disciplina:    INF01008 - Programação distribuída e paralela.          Semestre: 2009-1
+
+Objetivos:
+
+      O primeiro objetivo da disciplina é a apresentação dos diferentes mecanismos para PDP encontrados
+em linguagens e bibliotecas (ambientes) de programação distribuída e paralela (PDP), de modo que o aluno
+possa avaliar as vantagens e desvantagens de cada um com relação ao desenvolvimento de programas (tipos
+de). Algoritmos básicos de sistemas distribuídos são apresentados, seja para exemplificar o uso dos modelos
+como pela sua utilidade na PDP. Conceitos básicos de programação paralela são apresentados, seguidos de
+exemplos clássicos de algoritmos paralelos acompanhados de uma introdução à sua complexidade. Alguns
+dos ambientes de PDP mais usados, em especial as linguagens e as bibliotecas independentes, são
+apresentados com ênfase sobre o modelo de objetos distribuídos.
+
+Conteúdo Programático:
+
+         1. Revisão de:
+             - Sistemas distribuídos e paralelos: conceituação, tipos;
+             - Introdução às aplicações distribuídas;
+             - Expressão da concorrência;
+             - Comunicação e sincronização.
+         2. Algoritmos e modelos de programação distribuída:
+             - cliente-servidor, rede de filtros, pares, mestre-escravo;
+             - difusão e coleta de dados, manutenção da consistência de objetos replicados, ...
+             - relógio lógico, semáforo distribuído, token, terminação, ...
+         3. Programação paralela:
+             - modelos de máquinas paralelas: PRAM, ...;
+             - conceitos básicos de complexidade paralela: speedup, eficiência, ...;
+             - classes e exemplos de algoritmos paralelos: operações sobre matrizes, sort, ...
+         4. Ambientes de programação distribuída e paralela
+            - classes de ambientes: bibliotecas, extensões de linguagens, novas linguagens;
+         paradigma de base (funcional, lógico, objetos, …); explícito/implícito;
+            - exemplos de ambientes
+         5. Programação com Objetos Distribuídos
+                 - tipos de abordagens; exemplos: Java, J2EE, C#, J2ME, CORBA, ...
+
+Bibliografia Principal:
+
+         - Andrews, G.R. “Foundations of Multithreaded, Parallel, and Distributed Programming”.
+             The Addison-Wesley, 2000.
+         - Andrews, G.R. “Paradigms for Process Interaction in Distributed Programs”. ACM
+             Comp.Surveys Vol.23, No1, mar/1991, pp.49-90.
+         - Jaja, J. “An Introduction to Parallel Algorithms”. Addison-Wesley, 1992.
+         - Pacheco, P. Parallel programming with mpi. San Francisco : Morgan Kaufmann, c1997.
+         - Tutoriais na Web sobre Ambientes de Programação: Java Distribuído, J2EE, MPI, C#
+             Remote, Iphone, Googl G1, …
+
+Bibliografia Adicional:
+
+         - Bal. H.E. and Tanenbaum, A.S. “Distributed programming with shared data”. Computer
+            Languages, Vol. 16, No2, 1991, pp. 129-146.
+         - Barbosa, V. C. “An Introduction to Distributed Algorithms”. MIT Press, 1996.
+         - Carriero, N. and Gelernter, D. “How to Write Parallel Programs: A Guide to the
+            Perplexed”. ACM Comp.Surveys, Vol.21, No3, sep/1989, pp.323-357.
+           - Kumar, V. et alii. “Introduction to Parallel Computing: Design and Analisys of Parallel
+               Algorithms”.
+           - Lea, P. “Concurrent Programming in JAVA - Design Principles and Patterns”. Addison-
+               Wesley, 1997.
+           - Lynch, N. “Distributed Algorithms”. Ed. Morgan Kaufmann, 1996.
+           - Raynal, M. “Distributed algorithms and protocols”. Wiley, Chichester, 1992.
+           - Olsson, R. and Andrews, G.R. "Concurrent Programming in SR".                       The
+               Benjamin/Cummings, Redwood City, 1992.
+           - Oaks, S. and Wong, H. “Java Threads”. O’Reilly, 1997.
+           - Bond, Martin. Aprenda J2EE em 21 dias : com EJB, JSP, Servlets, JNDI, JDBC e XML.
+               São Paulo : Pearson, Education do Brasil, 2003.
+            - Bodoff, Stephanie. Tutorial J2EE. Rio de Janeiro : Ciência Moderna, 2005.
+           - Orfali, R. and Harkey, D. Client/Server Programming with JAVA and CORBA. John
+               Wiley, 1997 (1a edição), 1998 (2a edição).
+           - Tel, G. “Introduction to Distributed Algorithms”. Cambridge University Press, New York,
+               NY, USA, 2001.
+
+Carga-horária:           4 h/s.                                Créditos: 4.
+
+Sistema de avaliação:
+
+       Prova 1 (P1):                                   23/04/09
+       Prova 2 (P2):                                   11/06/09
+       Trabalho Final (TF) – prazo final:                     16/06/09
+
+      Exercícios diversos: ES (exercícios em sala de aula); EP (exercícios em laboratório); exercícios após
+     P2: peso duplo
+      Recuperação de uma prova: 25/06/09              Exame: 02/07/09
+      Conceito final: normal: (3 * P1 + 3 * P2 + 3 * TF + 1 * ES + 1 * EP) / 11
+      Condições mínimas para conceito C: a) nota >= 3 em P1, P2, TF; b) presença mínima de 70%.
+      Entrega dos Resultados: até 10 dias após a realização das provas e entrega dos trabalhos
+
+Páginas:
+
+     - disciplina: página atual: http://saloon.inf.ufrgs.br/twiki/view/Disciplinas/INF01008/WebHome
+
+     - programa 2009-1 (observar a avaliação, em especial tipos/temas/datas/requisitos para os trabalhos,
+         ...)
+
+           -   http://saloon.inf.ufrgs.br/twiki/view/Disciplinas/INF01008/PDP2009 (provisório)
+
+     - Sugestões de trabalhos (provisório):
+         http://saloon.inf.ufrgs.br/twiki/view/Disciplinas/INF01008/TemasParaTrabalhos2009
+
+     - Lista de emails: portal UFRGS
+
+Emails:
+
+     - Monitor: xxx : email:
+        - Geyer: geyer@inf.ufrgs.br
+ Previsão de Cronograma: possibilidade de 2 semanas de afastamento para missões e eventos
+
+
+Tópico                                                                                       Dias
+Introdução à disciplina; Revisão de sistemas e aplicações distribuídos e paralelos; revisão de03 e 05/03
+concorrência, comunicação e sincronização
+Ambientes de PD: tipos; objetos distribuídos: Java e C#: threads, rede                       10, 12, 17/03
+Aula Prática 1 - experiência com ambientes de PD                                             19/03
+Algoritmos distribuídos : introdução, difusão e coleta                                       24 e 26 /03
+Ambientes de PD : Java e C# x chamada remota de método e WebServices                         31/03, 02, 07 e 09/04
+Aula Prática 2 – experiência com ambientes de PD                                             14/04
+Algoritmos Distribuídos: exclusão mútua, detecção de término                                 16 e 28/04
+Programação paralela: conceitos e algoritmos paralelos                                       30/04, 5 e 7/05
+Programação Paralela: exemplos de ambiente (MPI, OpenMP)                                     12, 14 e 19/05
+Aula Prática 3 – experiência com ambientes de PP                                             21/05
+Semana Acadêmica: sem aula                                                                   26 e 28/05
+Ambientes de PD: computação móvel, ubíqua, redes de sensores (PDAs, Smartphones, 02 e 04/06
+localização, ...)
+Aula Prática 4 – experiência com ambientes de PD                                             09/06
+Ambientes de PD: multicamadas (J2EE, ...)                                                    16 e 18/06
+

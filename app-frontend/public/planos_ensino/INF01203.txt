@@ -1,0 +1,630 @@
+                                 UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                                          INSTITUTO DE INFORMÁTICA
+                                   DEPARTAMENTO DE INFORMÁTICA APLICADA
+
+
+
+DISCIPLINA:                                ESTRUTURAS DE DADOS
+CÓDIGO:                                    INF01203
+CURSOS/PRE-REQUISITO:
+       o   Engenharia da Computação
+               o INF01203 – Algoritmos e Programação
+       o   Ciência da Computação
+               o INF01203 – Algoritmos e Programação
+               o INF05008 – Fundamentos de Algoritmos
+
+CARGA HORÁRIA:                             4
+CRÉDITOS:                                  4
+Professor Regente:                         Renata de Matos Galante
+
+
+
+
+                                    Informações Importantes!
+
+                                      INF 01203 – TURMA A
+
+
+Renata Galante
+Prédio 43.424 - Sala 221 – Ramal 7746
+E-mail: galante@inf.ufrgs.br
+URL: www.inf.ufrgs.br/~galante
+
+Página da Disciplina: http://moodle.inf.ufrgs.br/
+  Æ Departamento de Informática Aplicada
+     Æ INF01203 Estruturas de Dados
+Senha: INF01203
+
+
+
+SÚMULA:
+   Abstração de Dados. Representação Física de Relações Lógicas: contigüidade física e
+encadeamento. Apontadores em linguagens de alto nível. Representação e Manipulação de Estruturas
+de Dados: listas lineares, árvores e grafos.
+
+
+OBJETIVOS:
+   Capacitar o aluno para a especificação de tipos de dados primitivos e estruturados e a implementação
+de listas, árvores e grafos.
+CONTEÚDO PROGRAMÁTICO
+1 Introdução
+  1.1 Conceitos básicos
+  1.2 Estrutura lógica
+  1.3 Estrutura física
+  1.4 Representação física de estruturas lógicas
+      1.4.1 Contiguidade física
+      1.4.2 Encadeamento
+  1.5 Redundância
+  1.6 Gerência de memória
+2 Estruturas Lineares
+  2.1 Conceitos
+  2.2 Aplicações
+  2.3 Operações básicas
+  2.4 Representação física
+      2.4.1 Contiguidade física
+      2.4.2 Encadeamento
+      2.4.3 Utilização de descritores
+  2.5 Pilhas
+  2.6 Filas
+  2.7 Listas duplamente encadeadas
+  2.8 Listas circulares
+3 Árvores
+  3.1 Conceitos
+  3.2 Aplicações
+  3.3 Operações básicas
+  3.4 Representação física
+       3.4.1 Contiguidade
+       3.4.2 Encadeamento
+  3.5 Árvore Binária
+       3.5.1 Caminhamentos em árvores binárias
+       3.5.2 Algoritmos de caminhamento com e sem recursividade
+       3.5.3 Transformação de árvore qualquer em binária
+       3.5.4 Árvores Binárias de Pesquisa
+  3.6 Árvores balanceadas
+4 Grafos
+  4.1 Conceitos
+       4.1.1 Grafos orientados
+       4.1.2 Grafos não orientados
+       4.1.3 Adjacência e incidência
+       4.1.4 Conectividade
+  4.2 Aplicações
+  4.3 Operações básicas
+  4.4 Representação física
+      4.4.1 Matriz de adjacência
+      4.4.2 Matriz de incidência
+      4.4.3 Lista de adjacências
+      4.4.4 Lista de incidências
+  4.5 Algoritmos
+      4.5.1 Determinação da árvore geradora de um grafo
+      4.5.2 Exame sistemático dos vértices
+      4.5.3 Planaridade
+      4.5.4 Caminho crítico
+      4.5.5 Cliques
+      4.5.6 Colorido ótimo
+CRONOGRAMA DE ATIVIDADES:
+Aula       Data    Atividade
+           03/03   Não haverá aula.
+Aula 01    05/03   Apresentação, tipos e estruturas de dados
+Aula 02    10/03   Tipos Abstratos de Dados - TAD
+Aula 03    12/03   Lista Lineares: contigüidade física
+Aula 04    17/03   Lista Lineares: contigüidade física circulares
+Aula 05    19/03   Laboratório – Ponteiros
+Aula 06    24/03   Listas Lineares: encadeadas
+Aula 07    26/03   Laboratório – listas encadeadas
+Aula 08    31/03   Listas Lineares: duplamente encadeadas
+Aula 09    02/04   Pilhas
+Aula 10    07/04   Filas e deques
+Aula 11    09/04   Laboratório
+Aula 12    14/04   PRIMEIRA AVALIAÇÃO
+    --     16/04   Não haverá aula
+    --     21/04   Não haverá aula
+Aula 13    23/04   Árvores: terminologia, aplicações, implementação e percurso
+Aula 14    28/04   Árvores Binárias: conversão, percurso, algoritmos
+Aula 15    30/04   Árvores Binárias de Pesquisa - ABP
+Aula 16    05/05   Laboratório
+Aula 17    07/05   Árvores AVL
+Aula 18    12/05   Árvores Rubro-Negras
+Aula 19    14/05   Laboratório
+Aula 20    19/05   Árvores Splay Tree
+Aula 21    21/05   SEGUNDA AVALIAÇÃO
+    --     26/05   Semana Acadêmica
+    --     28/05   Semana Acadêmica
+Aula 22    02/06   Grafos Terminologia e representação física
+Aula 23    04/06   Grafos caminhamentos, ciclos e árvore geradora
+Aula 24    09/11   Laboratório
+    --     11/11   Não haverá aula
+Aula 25    16/06   Grafos: Caminho máximo e mínimo
+Aula 26    18/06   Grafos: número cromático
+Aula 27    23/06   Laboratório
+Aula 28    25/06   Grafos: Planaridade
+Aula 29    30/06   TERCEIRA AVALIAÇÃO
+Aula 30    02/07   Apresentação do trabalho final
+           07/07   RECUPERAÇÃO
+                                   Término período letivo 10/07/2009
+
+TÉCNICAS DE ENSINO (EXPERIÊNCIAS DE APRENDIZAGEM)
+
+       As aulas são de natureza teórico-prática, utilizando-se o recurso de slides nas aulas téoricas, e
+práticas em laboratório, incluindo o desenvolvimento de pequenos programas e funções na linguagem C.
+Um projeto extra-classe reforça os conteúdos desenvolvidos. Todo o material utilizado é disponibilizado
+no site da disciplina (moodle).
+
+CRITÉRIOS DE AVALIAÇÃO
+
+    O aluno será avaliado com base no desempenho nas provas, no trabalho de implementação,
+exercícios em laboratório, bem como por sua participação em aula (variando entre 0.0 e 10.0). Conforme
+regulamento da Universidade, a freqüência às aulas é obrigatória.
+     Ao longo do semestre, serão realizados:
+• três provas, P1, P2 (correspondendo 25% da nota final para cada avaliação); e P3 (correspondendo 20% da
+  nota final);
+• um trabalho final de implementação será realizado, correspondendo a 15% da nota final;
+• exercícios de aula serão realizados, correspondendo a 5% da nota;
+• exercícios de implementação e aulas práticas serão realizados ao longo do semestre, correspondendo
+  a 10% da nota final.
+
+    A média geral (MG) será obtida por meio da seguinte fórmula:
+
+              MG = 0.20*P1 + 0.20*P2 + 0.20*P3+ 0.20*TF+ 0.05*Exercícios+ 0.15*Implementações
+
+
+   A conversão da MG para conceitos é feita por meio da seguinte tabela:
+
+                                 9,0 <= MG <= 10,0    )     conceito A (aprovado)
+                                 7,5 <= MG < 9,0      )     conceito B (aprovado)
+                                 6,0 <= MG < 7,5      )     conceito C (aprovado)
+                                 MG < 6,0             )     Recuperação
+Observações:
+1. Somente serão calculadas as médias gerais daqueles alunos que tiverem obtido um índice de
+   freqüência às aulas igual ou superior a 75% das aulas previstas. Aos que não satisfizerem este
+   requisito, será atribuído o conceito FF (Falta de Freqüência).
+2. Para poder realizar a prova de recuperação, o aluno deve ter realizado ao menos duas das provas e
+   ter entregue o trabalho de implementação. Os que não se enquadrarem nesta situação receberão
+   conceito D.
+Recuperação: Os alunos cujas médias gerais forem inferiores a 6,0 (seis) e que satisfizerem as
+condições acima poderão prestar prova de recuperação, a qual versará sobre TODA a matéria da
+disciplina. A nota da prova de recuperação substituirá a pior nota dentre P1, P2 e P3.
+
+
+
+BIBLIOGRAFIA BÁSICA
+
+1. Estruturas de Dados. Nina Edelweiss, Renata Galante, Editora Bookman – Série de Livros Didáticos Informática
+UFRGS, 2009, Primeira Edição. (Livro texto da disciplina para a parte de listas e árvores. Boa cobertura, tanto em
+abrangência quanto em profundidade).
+2. Estruturas de Dados e seus Algoritmos. Jayme Luiz Szwarcfiter, Lilian Markenzon, Editora LTC - Livros
+Técnicos e Científicos, 1994, Segunda Edição Revista.(Cobre a parte de listas e árvores, incluindo a parte de análise
+de complexidade dos algoritmos. Boa cobertura, tanto em abrangência quanto em profundidade).
+3. Grafos: Teoria, Modelos, Algoritmos. Paulo Oswaldo Boaventura Netto, Editora LTC - Livros Técnicos e
+Científicos, 1994, Segunda Segunda edição revisada e ampliada. (Livro texto da disciplina para a parte de grafos)
+4. Algoritmos: Teoria e Prática. Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, Editora
+Campus, 2002. (Cobre a parte de listas e árvores - Parte III, páginas 159-249. Cobre a parte de grafos - Parte VI,
+páginas 417-538. Boa cobertura para análise de complexidade dos algoritmos).
+5. Estruturas de Dados e Algoritmos em Java. Michael T. Goodrich, Roberto Tamassia, Editora Bookman, 2002 ,
+segunda edição. (Exemplos de implementações de listas, árvores e grafos).
+6. Introdução a Estruturas de Dados: com técnicas de programação em C. Waldemar Celes, Renato Cerqueira,
+José Lucas Rangel. Editora Campus, 2004.(Cobre a parte de tipos abstratos de dados, listas e árvores. Exemplos de
+implementações na linguagem C).
+8. Introduction to Graph Theory. Douglas B. West, Prentice Hall, 2001. (Boa cobertura, tanto em abrangência
+quanto em profundidade)
+9. Teoria dos Grafos - Algoritmos. A. L. Furtado, LTC, Rio de Janeiro, 1983. (Boa cobertura para os algoritmos
+para grafos).
+10. Grafos e Algoritmos Computacionais. Jayme Luiz Szwarcfiter. Editora Campus, 1984.
+(Boa cobertura para os algoritmos para grafos).
+                                 UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                                          INSTITUTO DE INFORMÁTICA
+                                   DEPARTAMENTO DE INFORMÁTICA APLICADA
+
+
+
+
+DISCIPLINA:                                ESTRUTURAS DE DADOS
+CÓDIGO:                                    INF01203
+CURSOS/PRE-REQUISITO:
+       o   Engenharia da Computação
+               o INF01203 – Algoritmos e Programação
+       o   Ciência da Computação
+               o INF01203 – Algoritmos e Programação
+               o INF05008 – Fundamentos de Algoritmos
+
+CARGA HORÁRIA:                             4
+CRÉDITOS:                                  4
+Professor Regente:                         Renata Galante
+
+
+                                    Informações Importantes!
+
+                                      INF 01203 – TURMA B
+
+
+Renata Galante
+Prédio 43.424 - Sala 221 – Ramal 7746
+E-mail: galante@inf.ufrgs.br
+URL: www.inf.ufrgs.br/~galante
+
+Página da Disciplina: http://moodle.inf.ufrgs.br/
+  Æ Departamento de Informática Aplicada
+     Æ INF01203 Estruturas de Dados
+Senha: INF01203
+
+
+
+
+SÚMULA:
+   Abstração de Dados. Representação Física de Relações Lógicas: contigüidade física e
+encadeamento. Apontadores em linguagens de alto nível. Representação e Manipulação de Estruturas
+de Dados: listas lineares, árvores e grafos.
+
+
+OBJETIVOS:
+   Capacitar o aluno para a especificação de tipos de dados primitivos e estruturados e a implementação
+de listas, árvores e grafos.
+CONTEÚDO PROGRAMÁTICO
+1 Introdução
+  1.1 Conceitos básicos
+  1.2 Estrutura lógica
+  1.3 Estrutura física
+  1.4 Representação física de estruturas lógicas
+      1.4.1 Contiguidade física
+      1.4.2 Encadeamento
+  1.5 Redundância
+  1.6 Gerência de memória
+2 Estruturas Lineares
+  2.1 Conceitos
+  2.2 Aplicações
+  2.3 Operações básicas
+  2.4 Representação física
+      2.4.1 Contiguidade física
+      2.4.2 Encadeamento
+      2.4.3 Utilização de descritores
+  2.5 Pilhas
+  2.6 Filas
+  2.7 Listas duplamente encadeadas
+  2.8 Listas circulares
+3 Árvores
+  3.1 Conceitos
+  3.2 Aplicações
+  3.3 Operações básicas
+  3.4 Representação física
+       3.4.1 Contiguidade
+       3.4.2 Encadeamento
+  3.5 Árvore Binária
+       3.5.1 Caminhamentos em árvores binárias
+       3.5.2 Algoritmos de caminhamento com e sem recursividade
+       3.5.3 Transformação de árvore qualquer em binária
+       3.5.4 Árvores Binárias de Pesquisa
+  3.6 Árvores balanceadas
+4 Grafos
+  4.1 Conceitos
+       4.1.1 Grafos orientados
+       4.1.2 Grafos não orientados
+       4.1.3 Adjacência e incidência
+       4.1.4 Conectividade
+  4.2 Aplicações
+  4.3 Operações básicas
+  4.4 Representação física
+      4.4.1 Matriz de adjacência
+      4.4.2 Matriz de incidência
+      4.4.3 Lista de adjacências
+      4.4.4 Lista de incidências
+  4.5 Algoritmos
+      4.5.1 Determinação da árvore geradora de um grafo
+      4.5.2 Exame sistemático dos vértices
+      4.5.3 Planaridade
+      4.5.4 Caminho crítico
+      4.5.5 Cliques
+      4.5.6 Colorido ótimo
+CRONOGRAMA DE ATIVIDADES:
+Aula       Data    Atividade
+Aula 01    02/03   Apresentação, tipos e estruturas de dados
+    --     04/03   Não haverá aula
+Aula 02    09/03   Tipos Abstratos de Dados - TAD
+Aula 03    11/03   Lista Lineares: contigüidade física
+Aula 04    16/03   Lista Lineares: contigüidade física circulares
+Aula 05    18/03   Laboratório – Ponteiros
+Aula 06    23/03   Listas Lineares: encadeadas
+Aula 07    25/03   Laboratório – listas encadeadas
+Aula 08    30/03   Listas Lineares: duplamente encadeadas
+Aula 09    01/04   Pilhas
+Aula 10    06/04   Filas e deques
+Aula 11    08/04   Laboratório
+Aula 12    13/04   PRIMEIRA AVALIAÇÃO
+    --     15/04   Não haverá aula
+    --     20/04   Não haverá aula
+Aula 13    22/04   Árvores: terminologia, aplicações, implementação e percurso
+Aula 14    27/04   Árvores Binárias: conversão, percurso, algoritmos
+Aula 15    29/04   Árvores Binárias de Pesquisa - ABP
+Aula 16    04/05   Laboratório
+Aula 17    06/05   Árvores AVL
+Aula 18    11/05   Árvores Rubro-Negras
+Aula 19    13/05   Laboratório
+Aula 20    18/05   Árvores Splay Tree
+Aula 21    20/05   SEGUNDA AVALIAÇÃO
+    --     25/05   Semana Acadêmica
+    --     27/05   Semana Acadêmica
+Aula 22    01/06   Grafos Terminologia e representação física
+Aula 23    03/06   Grafos caminhamentos, ciclos e árvore geradora
+Aula 24    08/06   Laboratório
+    --     10/06   Não haverá aula
+Aula 25    15/06   Grafos: Caminho máximo e mínimo
+Aula 26    17/06   Grafos: número cromático
+Aula 27    22/06   Laboratório
+Aula 28    24/06   Grafos: Planaridade
+Aula 29    29/06   TERCEIRA AVALIAÇÃO
+Aula 30    01/07   Apresentação do trabalho final
+           06/07   Prova de Recuperação
+                                   Término período letivo 10/07/2009
+
+
+
+TÉCNICAS DE ENSINO (EXPERIÊNCIAS DE APRENDIZAGEM)
+
+       As aulas são de natureza teórico-prática, utilizando-se o recurso de slides nas aulas téoricas, e
+práticas em laboratório, incluindo o desenvolvimento de pequenos programas e funções na linguagem C.
+Um projeto extra-classe reforça os conteúdos desenvolvidos. Todo o material utilizado é disponibilizado
+no site da disciplina (moodle).
+
+CRITÉRIOS DE AVALIAÇÃO
+
+    O aluno será avaliado com base no desempenho nas provas, no trabalho de implementação,
+exercícios em laboratório, bem como por sua participação em aula (variando entre 0.0 e 10.0). Conforme
+regulamento da Universidade, a freqüência às aulas é obrigatória.
+     Ao longo do semestre, serão realizados:
+• três provas, P1, P2 (correspondendo 25% da nota final para cada avaliação); e P3 (correspondendo 20% da
+  nota final);
+• um trabalho final de implementação será realizado, correspondendo a 15% da nota final;
+• exercícios de aula serão realizados, correspondendo a 5% da nota;
+• exercícios de implementação e aulas práticas serão realizados ao longo do semestre, correspondendo
+  a 10% da nota final.
+
+    A média geral (MG) será obtida por meio da seguinte fórmula:
+
+              MG = 0.20*P1 + 0.20*P2 + 0.20*P3+ 0.20*TF+ 0.05*Exercícios+ 0.15*Implementações
+
+
+   A conversão da MG para conceitos é feita por meio da seguinte tabela:
+
+                                 9,0 <= MG <= 10,0    )     conceito A (aprovado)
+                                 7,5 <= MG < 9,0      )     conceito B (aprovado)
+                                 6,0 <= MG < 7,5      )     conceito C (aprovado)
+                                 MG < 6,0             )     Recuperação
+Observações:
+1. Somente serão calculadas as médias gerais daqueles alunos que tiverem obtido um índice de
+   freqüência às aulas igual ou superior a 75% das aulas previstas. Aos que não satisfizerem este
+   requisito, será atribuído o conceito FF (Falta de Freqüência).
+2. Para poder realizar a prova de recuperação, o aluno deve ter realizado ao menos duas das provas e
+   ter entregue o trabalho de implementação. Os que não se enquadrarem nesta situação receberão
+   conceito D.
+Recuperação: Os alunos cujas médias gerais forem inferiores a 6,0 (seis) e que satisfizerem as
+condições acima poderão prestar prova de recuperação, a qual versará sobre TODA a matéria da
+disciplina. A nota da prova de recuperação substituirá a pior nota dentre P1, P2 e P3.
+
+BIBLIOGRAFIA BÁSICA
+1. Estruturas de Dados. Nina Edelweiss, Renata Galante, Editora Bookman – Série de Livros Didáticos Informática
+UFRGS, 2009, Primeira Edição. (Livro texto da disciplina para a parte de listas e árvores. Boa cobertura, tanto em
+abrangência quanto em profundidade).
+2. Estruturas de Dados e seus Algoritmos. Jayme Luiz Szwarcfiter, Lilian Markenzon, Editora LTC - Livros
+Técnicos e Científicos, 1994, Segunda Edição Revista.(Cobre a parte de listas e árvores, incluindo a parte de análise
+de complexidade dos algoritmos. Boa cobertura, tanto em abrangência quanto em profundidade).
+3. Grafos: Teoria, Modelos, Algoritmos. Paulo Oswaldo Boaventura Netto, Editora LTC - Livros Técnicos e
+Científicos, 1994, Segunda Segunda edição revisada e ampliada. (Livro texto da disciplina para a parte de grafos)
+4. Algoritmos: Teoria e Prática. Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, Editora
+Campus, 2002. (Cobre a parte de listas e árvores - Parte III, páginas 159-249. Cobre a parte de grafos - Parte VI,
+páginas 417-538. Boa cobertura para análise de complexidade dos algoritmos).
+5. Estruturas de Dados e Algoritmos em Java. Michael T. Goodrich, Roberto Tamassia, Editora Bookman, 2002 ,
+segunda edição. (Exemplos de implementações de listas, árvores e grafos).
+6. Introdução a Estruturas de Dados: com técnicas de programação em C. Waldemar Celes, Renato Cerqueira,
+José Lucas Rangel. Editora Campus, 2004.(Cobre a parte de tipos abstratos de dados, listas e árvores. Exemplos de
+implementações na linguagem C).
+8. Introduction to Graph Theory. Douglas B. West, Prentice Hall, 2001. (Boa cobertura, tanto em abrangência
+quanto em profundidade)
+9. Teoria dos Grafos - Algoritmos. A. L. Furtado, LTC, Rio de Janeiro, 1983. (Boa cobertura para os algoritmos
+para grafos).
+10. Grafos e Algoritmos Computacionais. Jayme Luiz Szwarcfiter. Editora Campus, 1984.
+(Boa cobertura para os algoritmos para grafos).
+                                 UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                                          INSTITUTO DE INFORMÁTICA
+                                   DEPARTAMENTO DE INFORMÁTICA APLICADA
+
+
+
+DISCIPLINA:                                ESTRUTURAS DE DADOS
+CÓDIGO:                                    INF01203
+CURSOS/PRE-REQUISITO:
+        o   Engenharia da Computação
+                o INF01203 – Algoritmos e Programação
+        o   Ciência da Computação
+                o INF01203 – Algoritmos e Programação
+                o INF05008 – Fundamentos de Algoritmos
+
+CARGA HORÁRIA:                             4
+CRÉDITOS:                                  4
+Professor Regente:                         Renata de Matos Galante
+
+
+
+
+                                    Informações Importantes!
+
+                                      INF 01203 – TURMA C
+
+
+Renata Galante
+Prédio 43.424 - Sala 221 – Ramal 7746
+E-mail: galante@inf.ufrgs.br
+URL: www.inf.ufrgs.br/~galante
+
+Página da Disciplina: http://moodle.inf.ufrgs.br/
+   Departamento de Informática Aplicada
+      INF01203 Estruturas de Dados
+Senha: INF01203_2009
+
+
+
+SÚMULA:
+   Abstração de Dados. Representação Física de Relações Lógicas: contigüidade física e
+encadeamento. Apontadores em linguagens de alto nível. Representação e Manipulação de Estruturas
+de Dados: listas lineares, árvores e grafos.
+
+
+OBJETIVOS:
+   Capacitar o aluno para a especificação de tipos de dados primitivos e estruturados e a implementação
+de listas, árvores e grafos.
+CONTEÚDO PROGRAMÁTICO
+1 Introdução
+  1.1 Conceitos básicos
+  1.2 Estrutura lógica
+  1.3 Estrutura física
+  1.4 Representação física de estruturas lógicas
+      1.4.1 Contiguidade física
+      1.4.2 Encadeamento
+  1.5 Redundância
+  1.6 Gerência de memória
+2 Estruturas Lineares
+  2.1 Conceitos
+  2.2 Aplicações
+  2.3 Operações básicas
+  2.4 Representação física
+      2.4.1 Contiguidade física
+      2.4.2 Encadeamento
+      2.4.3 Utilização de descritores
+  2.5 Pilhas
+  2.6 Filas
+  2.7 Listas duplamente encadeadas
+  2.8 Listas circulares
+3 Árvores
+  3.1 Conceitos
+  3.2 Aplicações
+  3.3 Operações básicas
+  3.4 Representação física
+       3.4.1 Contiguidade
+       3.4.2 Encadeamento
+  3.5 Árvore Binária
+       3.5.1 Caminhamentos em árvores binárias
+       3.5.2 Algoritmos de caminhamento com e sem recursividade
+       3.5.3 Transformação de árvore qualquer em binária
+       3.5.4 Árvores Binárias de Pesquisa
+  3.6 Árvores balanceadas
+4 Grafos
+  4.1 Conceitos
+       4.1.1 Grafos orientados
+       4.1.2 Grafos não orientados
+       4.1.3 Adjacência e incidência
+       4.1.4 Conectividade
+  4.2 Aplicações
+  4.3 Operações básicas
+  4.4 Representação física
+      4.4.1 Matriz de adjacência
+      4.4.2 Matriz de incidência
+      4.4.3 Lista de adjacências
+      4.4.4 Lista de incidências
+  4.5 Algoritmos
+      4.5.1 Determinação da árvore geradora de um grafo
+      4.5.2 Exame sistemático dos vértices
+      4.5.3 Planaridade
+      4.5.4 Caminho crítico
+      4.5.5 Cliques
+      4.5.6 Colorido ótimo
+CRONOGRAMA DE ATIVIDADES (Previsto):
+Aula       Data    Atividade
+Aula 01    18/08   Apresentação, tipos e estruturas de dados
+Aula 02    20/08   Tipos Abstratos de Dados – TAD
+Aula 03    25/08   Lista Lineares: contigüidade física
+Aula 04    27/08   Lista Lineares: contigüidade física circulares
+Aula 05    01/09   Laboratório – Ponteiros
+Aula 06    03/09   Listas Lineares: encadeadas
+           08/09   Não haverá aula – feriado turmas A e B
+Aula 07    10/09   Laboratório – Listas Encadedas
+Aula 08    15/09   Listas Lineares: duplamente encadeadas
+Aula 09    17/09   Pilhas
+Aula 10    22/09   Filas e Deques
+Aula 11    24/09   Laboratório – pilhas e filas
+Aula 12    29/09   Primeira Avaliação
+Aula 13    01/10   Árvores: terminologia, aplicações, implementação e percurso
+Aula 14    06/10   Árvores Binárias: conversão, percurso, algoritmos
+Aula 15    08/10   Árvores Binárias de Pesquisa – ABP
+           13/10   Não haverá aula – feriado turmas A e B
+Aula 16    15/10   Laboratório – ABP
+Aula 17    20/10   Árvores AVL
+Aula 18    22/10   Árvores Rubro-Negras
+           27/10   Não haverá aula – feriado turmas A e B
+Aula 19    29/10   Árvores Splay-Trees
+           03/11   Não haverá aula – feriado turmas A e B
+Aula 20    05/11   Laboratório – AVL
+Aula 21    10/11   Segunda Avaliação
+Aula 22    12/11   Grafos Terminologia e representação física
+Aula 23    17/11   Grafos caminhamentos, ciclos e árvore geradora
+Aula 24    19/11   Laboratório
+Aula 25    24/11   Grafos: Caminho máximo e mínimo
+Aula 26    26/11   Grafos: número cromático
+Aula 27    01/12   Laboratório
+Aula 28    03/12   Planaridade
+Aula 29    08/12   Terceira Avaliação
+Aula 30    10/12   Apresentação Trabalho Final
+           15/12   Prova Recuperação
+
+TÉCNICAS DE ENSINO (EXPERIÊNCIAS DE APRENDIZAGEM)
+
+       As aulas são de natureza teórico-prática, utilizando-se o recurso de slides nas aulas téoricas, e
+práticas em laboratório, incluindo o desenvolvimento de pequenos programas e funções na linguagem C.
+Um projeto extra-classe reforça os conteúdos desenvolvidos. Todo o material utilizado é disponibilizado
+no site da disciplina (moodle).
+
+CRITÉRIOS DE AVALIAÇÃO
+
+    O aluno será avaliado com base no desempenho nas provas, no trabalho de implementação,
+exercícios em laboratório, bem como por sua participação em aula (variando entre 0.0 e 10.0). Conforme
+regulamento da Universidade, a freqüência às aulas é obrigatória.
+     Ao longo do semestre, serão realizados:
+• três provas, P1, P2 e P3 (correspondendo 25% da nota final para cada avaliação);
+• um trabalho final de implementação será realizado, correspondendo a 15% da nota final;
+• exercícios de aula e de implementação e aulas práticas serão realizados ao longo do semestre,
+  correspondendo a 10% da nota final.
+
+    A média geral (MG) será obtida por meio da seguinte fórmula:
+                          MG = 0.25*P1 + 0.25*P2 + 0.25*P3+ 0.15*TF+ 0.10*Exercícios
+
+
+   A conversão da MG para conceitos é feita por meio da seguinte tabela:
+
+                                 9,0 <= MG <= 10,0         conceito A (aprovado)
+                                 7,5 <= MG < 9,0           conceito B (aprovado)
+                                 6,0 <= MG < 7,5           conceito C (aprovado)
+                                 MG < 6,0                  Recuperação
+Observações:
+1. Somente serão calculadas as médias gerais daqueles alunos que tiverem obtido um índice de
+   freqüência às aulas igual ou superior a 75% das aulas previstas. Aos que não satisfizerem este
+   requisito, será atribuído o conceito FF (Falta de Freqüência).
+2. Para poder realizar a prova de recuperação, o aluno deve ter realizado ao menos duas das provas e
+   ter entregue o trabalho de implementação. Os que não se enquadrarem nesta situação receberão
+   conceito D.
+Recuperação: Os alunos cujas médias gerais forem inferiores a 6,0 (seis) e que satisfizerem as
+condições acima poderão prestar prova de recuperação, a qual versará sobre TODA a matéria da
+disciplina. A nota da prova de recuperação substituirá a pior nota dentre P1, P2 e P3.
+
+
+
+BIBLIOGRAFIA BÁSICA
+
+1. Estruturas de Dados. Nina Edelweiss, Renata Galante, Editora Bookman – Série de Livros Didáticos Informática
+UFRGS, 2009, Primeira Edição. (Livro texto da disciplina para a parte de listas e árvores. Boa cobertura, tanto em
+abrangência quanto em profundidade).
+2. Estruturas de Dados e seus Algoritmos. Jayme Luiz Szwarcfiter, Lilian Markenzon, Editora LTC - Livros
+Técnicos e Científicos, 1994, Segunda Edição Revista.(Cobre a parte de listas e árvores, incluindo a parte de análise
+de complexidade dos algoritmos. Boa cobertura, tanto em abrangência quanto em profundidade).
+3. Grafos: Teoria, Modelos, Algoritmos. Paulo Oswaldo Boaventura Netto, Editora LTC - Livros Técnicos e
+Científicos, 1994, Segunda Segunda edição revisada e ampliada. (Livro texto da disciplina para a parte de grafos)
+4. Algoritmos: Teoria e Prática. Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein, Editora
+Campus, 2002. (Cobre a parte de listas e árvores - Parte III, páginas 159-249. Cobre a parte de grafos - Parte VI,
+páginas 417-538. Boa cobertura para análise de complexidade dos algoritmos).
+5. Estruturas de Dados e Algoritmos em Java. Michael T. Goodrich, Roberto Tamassia, Editora Bookman, 2002 ,
+segunda edição. (Exemplos de implementações de listas, árvores e grafos).
+6. Introdução a Estruturas de Dados: com técnicas de programação em C. Waldemar Celes, Renato Cerqueira,
+José Lucas Rangel. Editora Campus, 2004.(Cobre a parte de tipos abstratos de dados, listas e árvores. Exemplos de
+implementações na linguagem C).
+8. Introduction to Graph Theory. Douglas B. West, Prentice Hall, 2001. (Boa cobertura, tanto em abrangência
+quanto em profundidade)
+9. Teoria dos Grafos - Algoritmos. A. L. Furtado, LTC, Rio de Janeiro, 1983. (Boa cobertura para os algoritmos
+para grafos).
+10. Grafos e Algoritmos Computacionais. Jayme Luiz Szwarcfiter. Editora Campus, 1984.
+(Boa cobertura para os algoritmos para grafos).
+

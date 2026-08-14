@@ -16,7 +16,8 @@ const STORAGE_KEYS = {
   CUSTOM_TURMAS_DATE: 'ufrgs_pma_custom_turmas_date',
   SAVED_SCHEDULES: 'ufrgs_pma_saved_schedules',
   CREDIT_LIMIT: 'ufrgs_pma_credit_limit',
-  GRADUATION_PLAN: 'ufrgs_pma_graduation_plan'
+  GRADUATION_PLAN: 'ufrgs_pma_graduation_plan',
+  SEMESTER_CREDIT_LIMITS: 'ufrgs_pma_semester_credit_limits'
 }
 
 export const dataService = {
@@ -545,6 +546,22 @@ export const dataService = {
 
   saveGraduationPlan(semesters) {
     this._setItemScoped(STORAGE_KEYS.GRADUATION_PLAN, JSON.stringify(semesters))
+  },
+
+  // Mapa esparso { semIndex: limite } - só guarda os semestres com limite diferente do padrão global.
+  getSemesterCreditLimits() {
+    const raw = this._getItemScoped(STORAGE_KEYS.SEMESTER_CREDIT_LIMITS)
+    if (!raw) return {}
+    try {
+      const parsed = JSON.parse(raw)
+      return (parsed && typeof parsed === 'object') ? parsed : {}
+    } catch (e) {
+      return {}
+    }
+  },
+
+  saveSemesterCreditLimits(map) {
+    this._setItemScoped(STORAGE_KEYS.SEMESTER_CREDIT_LIMITS, JSON.stringify(map))
   },
 
   getElectiveCatalog(courseCode = null) {

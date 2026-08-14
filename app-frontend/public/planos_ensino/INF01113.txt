@@ -1,0 +1,109 @@
+                          UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                                   INSTITUTO DE INFORMÁTICA
+                            DEPARTAMENTO DE INFORMÁTICA APLICADA
+                                            2 / 2009
+
+Disciplina:    Organização de Computadores
+Código:        INF01 113
+Pré-requisito: INF01 112 – Arquitetura e Organização de Computadores II
+Carga Horária: 4 horas aula/semana
+Créditos:      4
+Professores:   Luigi Carro, Philipe Navaux
+
+Objetivos da disciplina
+
+        O objetivo da disciplina é capacitar o aluno a compreender as diferentes alternativas de organização
+de um processador, dada uma certa arquitetura, reconhecendo o impacto de cada alternativa sobre fatores
+como desempenho e custo. A disciplina enfatiza o estudo de organizações de bloco operacional e de seu
+impacto na implementação do bloco de controle. A disciplina também enfatiza o estudo de organização de
+máquinas RISC com pipeline e introduz conceitos centrais para o estudo do desempenho do processador,
+como super-escalaridade. É estudada a organização hierárquica de memória, com ênfase na organização e
+uso de caches e na utilização de memória virtual com suporte na MMU do processador.
+
+Súmula
+• revisão de conceitos básicos de organização • máquinas RISC e CISC • organização de processadores:
+bloco operacional e bloco de controle • organização de pipelines • máquinas super-escalares • organização
+de memória • barramentos • microcontroladores • introdução a máquinas paralelas • tendências futuras
+
+Critérios de avaliação
+
+O conceito final será obtido através de duas provas escritas (P1 e P2) e a média obtida pelos alunos em
+trabalhos práticos (T), utilizando-se a seguinte ponderação:
+
+        média final total = 0.4 P1 + 0.4 P2 + 0.2 T
+
+O aluno que obtiver nota P1 ou P2 abaixo de 5,0 (cinco) deverá fazer uma recuperação escrita da parte
+correspondente da matéria. Será considerado aprovado o aluno que obtiver:
+a) uma média final entre as notas P1 e P2 igual ou superior a 6,0 (seis); e
+b) uma média final total igual ou superior a 6,0 (seis).
+
+Bibliografia
+
+Bibliografia básica obrigatória
+
+• D.PATTERSON e J.HENNESSY. Organização e Projeto de Computadores: a Interface Hardware/Software.
+                                              a
+      Editora Campus, Rio de Janeiro, 2005. (3 edição)
+
+Bibliografia adicional
+
+• Notas de Aula
+• J.HENNESSY e D.PATTERSON. Arquitetura de Computadores: Uma Abordagem Quantitativa. Editora
+                                       a
+       Campus, Rio de Janeiro, 2003. (3 edição).
+• L.H.POLLARD. Computer Design and Architecture. Prentice-Hall, Englewood Cliffs, 1990.
+• M.J.FLYNN. Computer Architecture – Pipelined and Parallel Processor Design. Jones and Bartlett
+       Publishers, Sudbury, 1995.
+• M.JOHNSON. Superscalar Microprocessor Design. Prentice-Hall, Englewood Cliffs, 1991.
+• B.WILKINSON. Computer Architecture – Design and Performance. Prentice-Hall, Hemel Hempstead, 1996.
+         a
+       (2 edição).
+
+Procedimentos didáticos
+
+• Aulas expositivas
+• Trabalhos práticos
+• Listas de exercícios
+                                                                                              2
+
+
+Conteúdo programático e cronograma de aulas
+Aula   Dia     TÓPICO
+
+01     18/08   Apresentação da disciplina I
+02     20/08   Apresentação da disciplina II + Processadores RISC
+03     25/08   Apresentação do processador MIPS
+04     27/08   Bloco operacional: versão mono-ciclo
+05     01/09   Bloco de controle: versão mono-ciclo
+06     03/09   Bloco operacional: versão multi-ciclo
+07     08/09   Bloco de controle multi-ciclo: versão microprogramada
+08     10/09   Bloco de controle multi-ciclo: versão FSM Distribuição lista de exercícios 1
+09     15/09   Avaliação de desempenho
+10     17/09   Pipelines
+11     22/09   Pipelines
+12     24/09   Pipeline no MIPS Distribuição Primeiro trabalho Prático
+13     29/09   Processadores superescalares I
+14     01/10   Processadores superescalares II
+15     06/10   Processadores Pentium
+16     08/10   Memória cache
+17     13/10   Revisão
+18     15/10   VERIFICAÇÃO 1
+       20/10   SEMANA ACADÊMICA
+       22/10   SEMANA ACADÊMICA
+19     27/10   Memória cache
+20     29/10   Memória cache        Entrega primeiro trabalho prático
+21     03/11   Memória virtual   Disponibilização trabalho prático 2 + lista exercícios 2
+22     05/11   Memória virtual
+23     10/11   Memória virtual
+24     12/11   Barramentos
+25     17/11   Arquiteturas VLIW Entrega resultados primeira verificação
+26     19/11   Microcontroladores
+27     24/11   Processadores DSP Entrega segundo trabalho prático
+28     26/11   Máquinas paralelas
+29     01/12   Tendências futuras
+30     03/12   Revisão
+31     08/12   VERIFICAÇÃO 2
+32     10/12   Entrega notas segunda prova e trabalhos
+33     15/12   RECUPERAÇÃO
+34     17/12   Divulgação dos conceitos
+

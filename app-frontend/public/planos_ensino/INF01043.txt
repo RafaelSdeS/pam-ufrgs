@@ -1,0 +1,157 @@
+                                                                  Departamento de Informática Aplicada
+                                                                         Tel.: 3308 3333 / Fax: 3308 7308
+                                                                               Email: dep.ina@inf.ufrgs.br
+                                                                         WEB: http://www.inf.ufrgs.br/ina
+
+
+                                     PLANO DE ENSINO
+DISCIPLINA:                    INTERAÇÃO HOMEM-COMPUTADOR
+CÓDIGO:                        INF01043
+CARGA HORÁRIA:                 4
+CRÉDITOS:                      4
+CURSO:                         Ciência da Computação e Engenharia da Computação
+PRÉ-REQUISITOS:                INF01120 - Técnicas de Construção de Programas
+ETAPA DO CURSO:                6
+PROFESSORA:                    Carla Maria Dal Sasso Freitas
+
+
+Súmula
+Conceitos básicos de Interação Homem-Computador: Interfaces, Sistemas Interativos, Usuários,
+Usabilidade, Componentes de Software e Hardware. Fundamentos teóricos: Aspectos Cognitivos e
+Ergonômicos. Projeto e Prototipação de Interfaces: Modelos, Métodos, Técnicas e Ferramentas, Projeto
+Baseado em Tarefas, Projeto Centrado no Usuário e Projeto Participativo, Integração com Engenharia
+de Software. Avaliação de Interfaces: tipos e técnicas de avaliação. Interfaces Web, Interfaces para
+Sistemas Cooperativos e Novas Tendências. Estudos de Caso em Projeto e Avaliação de Interfaces.
+
+Objetivos
+Apresentar os conceitos fundamentais do projeto de interação homem-computador. Compreender a
+inserção do projeto de interfaces no contexto do desenvolvimento de aplicações. Capacitar o aluno a
+prototipar e avaliar interfaces, assim como a identificar alternativas de re-projeto das interfaces.
+
+Conteúdo Programático
+Conceitos básicos de Interação Homem-Computador
+    o Interfaces, Sistemas Interativos
+    o Usuários, Usabilidade
+    o Componentes de Software e Hardware
+Fundamentos teóricos: Aspectos Cognitivos e Ergonômicos
+Projeto e Prototipação de Interfaces
+    o Modelos, Métodos, Técnicas e Ferramentas
+    o Projeto Baseado em Tarefas
+    o Projeto Centrado no Usuário
+    o Projeto Participativo
+    o Integração com Engenharia de Software
+Avaliação de Interfaces: tipos e técnicas de avaliação
+Interfaces Web, Interfaces Não-convencionais, Realidade Virtual e Novas Tendências
+Estudos de Caso em Projeto e Avaliação de Interfaces
+
+Procedimentos Didáticos
+O conteúdo da disciplina é abordado tanto em aulas expositivas como em trabalhos práticos. Os
+assuntos são complementados e reforçados através da realização de exercícios extra-classe e de
+estudos de caso.
+
+Critérios de Avaliação
+O aluno será avaliado com base na participação positiva em aula e no desempenho na prova, exercícios
+e trabalhos extra-classe. A prova e os trabalhos e exercícios serão avaliados com nota entre 0.0 e 10.0.
+Conforme regulamento da Universidade, a frequência às aulas é obrigatória levando-se em
+consideração para aprovação os limites estabelecidos pela Universidade.
+
+Será realizada uma prova (P), abrangendo todo o conteúdo coberto no período antecedendo a prova.
+Caso o aluno tenha nota menor que 5.0 (cinco) na prova, estará automaticamente em recuperação.
+Exercícios em sala de aula poderão ser realizados sem aviso prévio e serão considerados como parte da
+nota final. Será realizado um projeto prático dividido em três partes: projeto, implementação e
+avaliação. Os pesos de cada parte serão determinados por ocasião de sua proposição. A média geral da
+disciplina será calculada da seguinte forma:
+
+Média = 0.4 * P + 0.1 * Exercicios + 0.5 * Projeto
+                                                                Departamento de Informática Aplicada
+                                                                       Tel.: 3308 3333 / Fax: 3308 7308
+                                                                             Email: dep.ina@inf.ufrgs.br
+                                                                       WEB: http://www.inf.ufrgs.br/ina
+
+
+                                    PLANO DE ENSINO
+A nota será calculada com duas (2) casas decimais, e posteriormente arredondada para uma casa
+decimal. Será considerado aprovado o aluno que obtiver frequência >= 75% e média >= 6.0,
+conjuntamente. Neste caso, o conceito final será dado da seguinte forma:
+
+A : Média >= 9.0
+B : 7.5 >= Média < 9.0
+C : 6.0 >= Média < 7.5
+
+Será considerado reprovado o aluno que tiver frequência < 75%, ou média < 6.0. Neste caso, o
+conceito será:
+
+D: Freq >= 75%
+FF: Freq < 75%
+
+Caso a média final anterior seja menor que 6.0 (seis), ou a nota da prova for menor que 5.0 (cinco), o
+aluno poderá prestar recuperação. Neste caso, a nota final será a média entre a nota da recuperação e
+a nota final anterior do semestre.
+
+
+Cronograma de Atividades Proposto (alterações serão registradas na página da disciplina no
+Moodle)
+
+Aula     Data     Contéudo
+1        18/08    Apresentação da disciplina.
+         20/08    Aula suspensa.
+2        25/08    Fundamentos de IHC.
+3        27/08    Aspectos de percepção.
+4        01/09    Concepção ergonômica de interfaces.
+5        03/09    Concepção ergonômica de interfaces.
+6        08/09    Prototipação (estudo dirigido) (não haverá aula presencial)
+         10/09    Não haverá aula (viagem)
+         15/09    Não haverá aula (viagem)
+7        17/09    Exercício sobre prototipação.
+8        22/09    Introdução à realidade virtual.
+9        24/09    Normas de projeto ergonômico. Introdução à avaliação de interfaces.
+10       29/09    Técnicas de interação 2D.
+11       01/10    Técnicas de interação 3D.
+12       06/10    Técnicas de interação 3D.
+13       08/10    Discussão sobre projeto final.
+14       13/10    Análise de tarefas.
+15       15/10    Modelagem de tarefas.
+         20/10    Semana acadêmica (não haverá aula)
+         22/10    Semana acadêmica (não haverá aula)
+16       27/10    Prova.
+17       29/10    Elaboração Projeto final (não haverá aula presencial)
+18       03/11    Métodos de avaliação de interação.
+19       05/11    Métodos de avaliação de interação.
+20       10/11    Interação em jogos.
+21       12/11    Interação multimodal.
+22       17/11    Interação multimodal. Divulgação das notas da Prova.
+23       19/11    Apresentação intermediária de trabalhos finais.
+24       24/11    Interação em aplicações de visualização.
+25       26/11    Interfaces Web. Usabilidade de interfaces web.
+26       01/12    Estudo de caso com interfaces web.
+27       03/12    Acessibilidade.
+28       08/12    Reserva para recuperação de conteúdo.
+29       10/12    Apresentação trabalhos finais. Divulgação das notas (12/12)
+30       15/12    Recuperação.
+                                                                Departamento de Informática Aplicada
+                                                                       Tel.: 3308 3333 / Fax: 3308 7308
+                                                                             Email: dep.ina@inf.ufrgs.br
+                                                                       WEB: http://www.inf.ufrgs.br/ina
+
+
+                                    PLANO DE ENSINO
+
+*
+  A divulgação das notas da prova e do trabalho final da disciplina será feita através da página da
+disciplina no sistema moodle.
+
+Bibliografia
+
+Livros-texto
+Preece, Jennifer; Rogers, Yvonne; Sharp, Helen (2005). Design de Interação. Bookman (edição em
+   português de Interaction Design: Beyond Human-Computer Interaction, John Wiley & Sons, 2002)
+Shneiderman, Ben (2004) Designing the user interface : strategies for effective human-computer
+   interaction Imprenta Boston : Addison-Wesley. (4a. edição)
+Bowman, Doug A.; Kruijff, Ernst; LaViola, Joseph J.; Poupyrev, Ivan. (2004) 3D User Interfaces: Theory
+   and Practice, Addison-Wesley/Pearson Education.
+
+Bibliografia de referência (complementar)
+Dix, A.; Finlay, J.; Abowd, G.; Beale, R. (2003) Human-Computer Interaction. Prentice-Hall (3a.
+edição).
+Norman, D. (2002). The Design of Everyday Things. Basic Books Perseus, New York, USA.
+

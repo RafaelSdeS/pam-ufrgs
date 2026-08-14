@@ -1,0 +1,405 @@
+      UFRGS - Instituto de Informática - Departamento de Informática Aplicada
+                Disciplina : INF01202 - Algoritmos e Programação
+                        Turmas: A e B           Sem: 2009/2
+                Professora: Cora Pinto Ribeiro (cora@inf.ufrgs.br)
+
+Disciplina: Algoritmos e Programação
+Código:INF01202
+Pré-Requisito: -
+Carga Horária: 6 h/s
+Natureza das Aulas: teórico-práticas (sala 108) e práticas (LAB. 101)
+Créditos: 6
+Cursos aos quais é oferecida: CIC
+Página da disciplina: http://moodle.inf.ufrgs.br - TurmasAeB-2008
+
+SÚMULA
+
+          A disciplina abrange os seguintes tópicos: noção de algoritmo, dado, variável, instrução e
+programa; construções básicas: atribuição, leitura e escrita; estruturas de controle: seqüência, seleção e
+iteração; tipos de dados escalares: inteiros, reais, caracteres, strings; tipos estruturados básicos: vetores,
+matrizes, registros e strings; subprogramas: funções com e sem retorno; recursão; arquivos.
+
+
+
+OBJETIVOS
+
+          Esta disciplina tem por objetivo introduzir conhecimento e técnicas necessários para projeto e
+desenvolvimento de soluções de problemas, através da construção de algoritmos e programas que utilizam
+os princípios da programação estruturada. O aluno que cursou esta disciplina deve ser capaz de analisar
+problemas e elaborar programas que os solucionem, utilizando para isto a linguagem de programação C.
+Deve dominar os comando básicos, estruturar os dados em tipos simples e estruturados, utilizar conceitos
+de subprogramação e recursão, além de manipular arquivos.
+
+
+
+CONTEÚDOS PROGRAMÁTICOS
+         1.    Noção de algoritmo
+         2.    Estrutura de um programa C
+         3.    Comando de atribuição
+         4.    Entrada e saída de dados
+         5.    Estruturas e comandos de seleção simples, dupla e múltipla
+         6.    Estruturas e comandos de repetição
+         7.    Formatação de entrada e de saída
+         8.    Arranjos de uma dimensão (vetores) e de mais dimensões (matrizes)
+         9.    Estruturas.
+         10.   Subprogramação: funções com e sem retorno
+         11.   Ponteiros
+         12.   Arquivos
+         13.   Recursividade
+
+
+PROCEDIMENTOS DIDÁTICOS
+
+         As 6 horas de aula por semana são divididas em 4 horas/semana em sala de aula (aulas teórico-
+práticas) e 2 horas/semana em laboratório (aula prática). Os procedimentos didáticos a serem adotados
+nestas aulas são, respectivamente:
+         a)    aulas teórico-práticas:
+                - exposições teóricas dos conteúdos;
+                - exercícios realizados pelos alunos individualmente ou em pequenos grupos;
+         b)    aulas práticas:
+                - exercícios realizados pelos alunos diretamente nos computadores, avaliados a cada aula.
+
+
+
+
+                                   INF01202 – Turmas A e B – 2009/2
+CRONOGRAMA
+  AULA       DATA       CONTEÚDO
+                        Apresentação do curso e da disciplina.
+   1.        03-ago
+                        Introdução: paradigmas de programação, programa, algoritmo.
+                        Algoritmo: atribuição, entrada e saída.
+   2.        05- ago
+                        Estrutura de programa C: atribuição, scanf, printf.
+   P1.       06-ago     Prática: noções básicas.
+                        Estrutura de programa C. Programas sequenciais.
+   3.        10-ago
+                        Tipos de Dados. Declaração de variáveis, tipos de variáveis.
+    4.      12-ago      Operadores e expressão aritmética e lógica. Comando condicional if e ?.
+   P2.      13-ago      Prática: algoritmos e programas seqüenciais
+    5.      17-ago      Comando condicional if-else.
+    6.      19-ago      Aninhamento de comandos. Exercícios.
+   P3.      20-ago      Prática: comandos de seleção if e if- else.
+    7.      24-ago      Estrutura de seleção múltipla - comando switch
+    8.      26-ago      Comando iterativo for.
+   P4.      27-ago      Prática: comandos de seleção switch e iterativo – for
+    9.      31-ago      Comandos iterativos while e do-while.
+   10.      02-set      Exercícios.
+   P5.      03-set      Prática: comandos iterativos – while e do-while
+   11.      09-set      Tipos estruturados básicos – arranjos de 1 dimensão.
+   P6.      10-set      Prática: arranjos de uma dimensão e classificação de vetores.
+   12.      14-set      Strings: arranjos de caracteres.
+   13.      16-set      Manipulação de strings. Arranjos com mais de uma dimensão.
+   P7.      17-set      Prática: strings.
+          21 a 25/set   Não haverá aulas!
+   14.      28-set      Arranjos com mais de uma dimensão.
+   15.      30-set      Revisão Geral para Prova.
+   P8       01-out      Prática: arranjos com mais de uma dimensão.
+   16.      05-out      1ª Prova.
+   17.      07-out      Noção de subprogramação - variáveis locais e globais – parâmetros.
+   18.      14-out      Função sem retorno (void). Ponteiros.
+   P8       15-out      Prática: funções void.
+   19.      19-out      Ponteiros. Funções com retorno.
+          19 à 23/out   Semana Acadêmica (aula apenas na segunda-feira, dia 19)
+  20.       28-out      Função com retorno.
+  P9.       29-out      Prática: funções, ponteiros.
+  21.       04-nov      Estruturas.
+  P10.      05-nov      Prática: estruturas.
+  22.       15-out      Estruturas e parâmetros.
+  23.       09-nov      Stream. Arquivos Binários.
+  24.       11-nov      Arquivos binários: acesso sequencial e randômico.
+  P11.      12-out      Prática: arquivos binários
+  25.       16-nov      Arquivos texto.
+  26.       18-nov      Arquivo texto.
+  P12.      19-nov      Prática: arquivos txt.
+  27.       23-nov      Recursividade.
+  28.       25-nov      Revisão Final.
+  P13.      26-nov      Prática: arquivos, recursividade.
+  29.       30-nov      2ª Prova.
+  30.       02-dez      Apresentação de Trabalhos.
+  P14.      03-dez      Apresentação de Trabalhos.
+   31.      07-dez      RECUPERAÇÃO.
+         Feriados – todos na segunda-feira: 7/set, 12/out, 26/out, 2/nov.
+
+
+                           INF01202 – Turmas A e B – 2009/2
+SISTEMA DE AVALIAÇÃO
+         O conceito final será obtido da seguinte forma :
+               Se a nota final ficar entre:   9,0 e 10,0                  --->          A
+               Se a nota final ficar entre:   7,5 e 8,9                   --->          B
+               Se a nota final ficar entre:   6,0 e 7,4                   --->          C
+               Se a nota final ficar entre:   0,0 e 5,9                   --->          D
+               Se o aluno não alcançar a frequência mínima (75%)          --->          FF
+         A avaliação será feita a partir de duas notas de provas escritas (P1 e P2), da média para
+exercícios e trabalho de conclusão (E) e do desempenho em aula e esforço demonstrado pelo aluno (D
+ponto). A prova P1 será realizada na metade do semestre e a prova P2 no final, considerando todo o
+conteúdo desenvolvido até a data das provas. Será oferecida a oportunidade de recuperar uma das notas
+de prova escrita, a qual será substituída pela nota obtida na recuperação, àqueles alunos que concluíram
+todas as tarefas solicitadas. Na média de exercícios, serão considerados os resultados obtidos nas aulas
+práticas, exercícios realizados em aulas teórico-práticas e exercícios extra-classe. Trabalhos copiados
+não serão considerados! Neste caso, os alunos envolvidos deverão apresentar um novo trabalho e
+obterão, no máximo, conceito final C na disciplina! Além disso, trabalhos atrasados terão desconto
+na nota atribuída.
+
+         A média final será obtida considerando a seguinte ponderação:
+
+                             Média Final = 0,3 * P1 + 0,4 * P2 + 0,2 * E+ 0,1 * D
+Obs: a apresentação do trabalho de conclusão completo é pré-requisito para a obtenção de conceito A
+na disciplina.
+
+
+BIBLIOGRAFIA
+•    Notas de aula disponíveis em meio eletrônico.
+•    Apostilas :
+     o   Linguagem C – UFRJ - http://equipe.nce.ufrj.br/adriano/c/apostila/indice.htm
+     o   Introdução à Linguagem C – UNICAMP –
+         http://www.ccuec.unicamp.br/treinamento_int2004/lingc/index.htm
+•    Site para baixar o Dev C++:
+     http://www.bloodshed.net/devcpp.html
+     http://baixaki.ig.com.br/download/Dev-C-.htm
+
+
+
+
+                                   INF01202 – Turmas A e B – 2009/2
+INF01202 – Algoritmos e Programação
+            Turmas C e D
+            Semestre 2009/2
+     a
+ Prof . Maria Aparecida Castro Livi
+
+Quadro de Avisos:
+
+As aulas práticas são no prédio 43413, sala 101 .
+
+As aulas teóricas iniciam às 13:30h.
+Sejam Pontuais!
+Boas vindas!
+
+
+Dados Gerais da disciplina
+
+Os dados gerais da disciplina podem ser buscados no site da UFRGS:
+http://1.ufrgs.br/graduacao/xinformacoesAcademicas/atividadesdeensino.php
+
+CRONOGRAMA (PROVISÓRIO)
+
+ AULA    DATA          CONTEÚDO
+                       Apresentação da disciplina.
+ 1       17/08
+                       Atividade com os calouros.
+                       Previsto:
+                       Introdução: algoritmo, programa, paradigmas de programação.
+                       Algoritmo: atribuição, entrada e saída.
+ 2       19/08         Estrutura de programa C: scanf, printf.
+                       Realizado:
+                       Introdução: algoritmo, programa, paradigmas de programação.
+                       Algoritmo: atribuição, entrada e saída.
+         C e D:
+ 3                     Prática: Noções básicas.
+         21/08
+                       Programas sequenciais.
+ 4       24/08
+                       Tipos de dados. Declaração de variáveis, tipos de variáveis.
+ 5       26/08         Expressões aritméticas e lógicas. Comando condicional if e ?.
+
+         C e D:
+ 6                     Prática: algoritmos e programas sequenciais.
+         28/08
+                       Comando condicional: if-else.
+ 7       31/08
+                       Aninhamento de comandos. Exercícios.
+         C e D:
+ 9                     Prática: comandos de seleção if e if-else.
+         04/09
+
+         07/09         Feriado: Independência do Brasil.
+
+ 10      09/09         Estrutura de seleção múltipla – comando switch.
+         C e D:
+ 11                    Prática: comando de seleção switch.
+         11/09
+ 12      14/09         Comando iterativo for.
+
+ 13      16/09         Exercícios.
+         C e D:
+                       Prática: liberados.
+         18/09
+14   21/09       Comandos iterativos while e do-while.
+
+15   23/09       Exercícios.
+     C e D:
+16               Prática: comandos iterativos – for, while, do...while
+     25/09
+17   28/09       Tipos Estruturados básicos: arranjos de uma dimensão.
+
+18   30/09       Vetor de caracteres. Exercícios.
+     C e D:      Prática: exercícios com arranjos de uma dimensão e vetor de
+19
+     Até 05/10   caracteres.
+20   05/10       Arranjos com mais de uma dimensão.
+
+21   07/10       Exercícios.
+
+     09/10       Prática: liberados.
+
+     12/10       Feriado: Nossa Senhora Aparecida.
+
+22   14/10       Exercícios.
+     C e D:
+23               Prática exercícios com arranjos de mais de uma dimensão.
+     16/10
+     19/10
+                 Aulas suspensas para participação nas atividades das
+     a
+                 Semanas Acadêmicas da UFRGS e do Instituto de Informática.
+     23/10
+     26/10       Feriado: Dia do Servidor Público.
+
+24   28/10       1ª Prova (matéria até Arranjos com mais de uma dimensão).
+     C e D:
+                 Prática: liberados.
+     30/10
+     02/11       Feriado: Finados.
+                 Noção de subprogramação – variáveis locais e globais.
+25   04/11
+                 Funções sem retorno (void) e sem parâmetros.
+     C e D:
+26               Prática: exercícios com funções void.
+     Até 09/11
+                 Funções com retorno e com perâmetros passados por valor.
+27   09/11
+                 Protótipos de funções.
+28   11/11       Ponteiros.
+
+     13/11       Prática: liberados.
+
+29   16/11       Funções com parâmetros passados por endereço.
+30   18/11       Estruturas.
+     C e D:
+31               Prática: exercícios com ponteiros e funções com retorno.
+     20/11
+32   23/11       Exercícios.
+                 Entrada e saída: stream.
+33   25/11       Noções de arquivo.
+                 Arquivos binários: acesso sequencial.
+     C e D:
+34               Prática: exercícios com estruturas.
+     27/11
+35   30/11       Arquivos binários: acesso randômico.
+ 36       02/12         Exercícios com arquivos binário (acesso sequencial e randômico).
+          C e D:
+ 37       Até           Prática: exercícios com arquivos binários.
+          07/12
+ 38       07/12         Arquivos do tipo texto.
+
+ 39       09/12         Exercícios.
+          C e D:
+ 40                     Prática: exercícios com arquivo tipo texto.
+          11/12
+ 41       14/12         Recursividade.
+                        Prática: exercícios com recursividade.
+          C e D:
+ 42                     Até esta data: entrega e apresentaçaõ do trabalho opcional
+          18/12
+                        Com arquivos
+ 43       21/12         2ª Prova (Toda matéria)
+
+ 44       04/01         Revisão.
+
+ 45       06/01         Recuperação.
+
+
+
+CRITÉRIO DE AVALIAÇÃO
+O conceito final será resultante do conceito de duas provas escritas (P1 e P2) e de um conceito obtido nas
+aulas práticas e em exercícios (E), através da seguinte ponderação:
+0,30 P1 + 0,45 P2 + 0,25 E P1 corresponde à primeira prova e P2 à segunda prova. Um dos conceitos das
+provas escritas (P1 e P2) poderá ser substituído pelo conceito obtido em uma prova de recuperação a ser
+oferecida no final do semestre.
+
+Nas aulas práticas serão efetuadas avaliações, sendo o conceito final (E) obtido como resultado dos
+conceitos obtidos nessas aulas, além dos conceitos obtidas em exercícios realizados em sala de aula e
+extra-classe.
+
+Como não serão recuperadas aulas práticas, dois dos conceitos obtidos nessas aulas serão descartados,
+bem como será solicitado um trabalho opcional, que poderá substituir o conceito de até duas aulas
+práticas.
+Entrega dos resultados das avaliações:
+
+       ● de cada aula prática: até a data da aula prática seguinte;
+       ● da primeira prova: até o dia 30 de novembro;
+       ● da segunda prova: até o dia 03 de janeiro;
+       ● da recuperação: até a data limite de fechamento dos conceitos do semestre 2009/2.
+
+Informações Importantes
+Aulas Teóricas:
+             Segundas e quartas: sala 108 prédio 43425.
+             Turmas C e D: das 13:30 às 15:10.
+              Eventualmente, em dias de aula teórica, parte da aula poderá ser realizada em laboratório.
+Aulas práticas:
+            Sextas: sala 101, prédio 43413.
+            Turma C: das 13:30 às 15:20.
+            Turma D: das 15:30 às 17:20.
+O(a) aluno(a) deverá comparecer na aula prática do horário correspondente à sua turma.
+Excepcionalmente, se previamente acertado(a) com a professora, o(a) aluno(a) poderá realizar a prática em
+horário diverso do seu.
+Envio de mensagens via E-MAIL
+E-mail da professora: cidalivi@inf.ufrgs.br
+
+Iniciar sempre o campo assunto (subject) dos e-mails com 202
+   Ex.: 202 – Exercicio X da lista Y.
+
+Colocar logo no início da mensagem: nome e número de matrícula do(a) aluno(a).
+O retorno de trabalhos enviados via e-mail deverá ocorrer prioritariamente via e-mail.
+
+Entrega de Trabalhos
+Colocar obrigatoriamente o nome do(a) aluno(a) como comentário no programa.
+Qualquer comentário ou solicitação mais especifica sobre programas, colocar igualmente como comentário
+inicial nos mesmos.
+
+Material disponibilizado a(o) aluno(a):
+ ● cronograma;
+ ● cópia dos slides das apresentações feitas em aula;
+ ● listas de exercícios;
+ ● exemplos de programas.
+
+São entregues em aula o cronograma e as listagens dos programas exemplo.
+O(a) aluno(a) que não recebeu algum material entregue em aula deverá buscar sua cópia com a professora.
+No xerox embaixo do Bar, em pasta com nome da disciplina e da professora, vão sendo colocados ao longo
+do semestre: cronograma; cópia dos slides das apresentações feitas em aula; listas de exercícios.
+Na página da disciplina são progressivamente disponibilizados todo o material: o entregue em aula e o
+colocado na pasta do xerox.
+
+Material de Apoio e notas de aula
+  Notas de aula diretamente disponíveis no xerox ou via esta página, clicando nos números das aulas no
+Cronograma.
+
+Referências
+  As referências são de obras que, na sua quase totalidade, podem ser encontradas na biblioteca do
+Instituto de Informática ou serem acessadas Via Internet:
+
+Conceitos Básicos e Algoritmos
+ASCENCIO, Ana F. G e CAMPOS, Edilene A. V. Fundamentos da programação de Computadores –
+Algoritmos, Pascal e C/C++. São Paulo: Prentice-Hall, 2002.
+MEYER, Marilyn; BABER, Roberta; PFAFFENBERGER, Bryan. Nosso futuro e o computador. Porto
+Alegre: Bookman, 2000.
+ORTH, Afonso Inácio. Algoritmos e Programação com resumo das linguagens PASCAL e C. Porto
+Alegre: AIO, 2001.
+TREMBLAY, Jean-Paul & BUNT, Richard B. Ciências dos Computadores: uma abordagem algorítmica.
+São Paulo: McGraw-Hill do Brasil, C1983.
+
+Linguagem C
+DAMAS, Luís. Linguagem C. Rio de Janeiro: LTC, 2007.
+KERNIGHAN, B. & RITCHIE, D. C. A linguagem de programação padrão ANSI. Editora Campus, 1990.
+                                                                        nd
+KERNIGHAN, B. W. & RITCHIE, D. M. The C Programming Language. 2 . Ed. Englewood Cliffs: Prentice
+Hall, c1998.
+SENNE, Edson Luiz França. Primeiro curso de programação em C. 2.ed. Florianópolis: Visual Books,
+2006.
+UFMG. Curso e Linguagem C do CPDEE/UFMG. 1999. Disponível em:
+http://www.ead.cpdee.ufmg.br/cursos/C/index.html. Acesso em: jul. 2008.
+SCHILDT, Herbert. C completo e total. São Paulo: Makron Books, 1997.
+SUMMIT, Steve. C programming. 1999. Disponível em:
+http://www.eskimo.com/~scs/cclass.html. Acesso em: mar. 2009.
+

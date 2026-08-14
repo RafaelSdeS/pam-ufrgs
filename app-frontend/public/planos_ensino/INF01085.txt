@@ -1,0 +1,228 @@
+                                                      PLANO DE ENSINO
+                                                                                                                         Data de Emissão: 14/08/2026
+
+
+
+                                                           Instituto de Informática
+                                                 Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: WEVERTON LUIS DA COSTA CORDEIRO
+Disciplina: SISTEMAS DISTRIBUÍDOS E TOLERANTES A FALHAS
+Sigla: INF01085              Créditos: 4
+
+Carga Horária
+CH Teórica: 40h      CH Prática: 20h       Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Princípios e práticas de sistemas distribuídos. Comunicação por memória compartilhada e por troca de mensagens. Sincronização
+de relógios. Algoritmos distribuídos, consenso distribuído. Computação em nuvem, névoa e borda. Fundamentos de tolerância a
+falhas: técnicas, medidas e arquiteturas. Segurança de funcionamento. Confiabilidade e disponibilidade. Sistemas críticos e
+segurança funcional.
+
+Currículos
+                                          Currículos                                                  Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                              7                  Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                                          7                  Obrigatória
+
+Objetivos
+A disciplina visa desenvolver as seguinte habilidades específicas:
+* Compreender os princípios fundamentais de sistemas distribuídos, incluindo seus modelos, objetivos, desafios de projeto e
+mecanismos básicos de comunicação e sincronização.
+* Analisar e aplicar algoritmos distribuídos essenciais, tais como ordenação de eventos, algoritmos de eleição, protocolos de
+consenso (Paxos, PBFT, Raft) e mecanismos de exclusão mútua e transações distribuídas.
+* Identificar, classificar e avaliar falhas em sistemas distribuídos, compreendendo técnicas, medidas e arquiteturas de tolerância a
+falhas, bem como princípios de confiabilidade, disponibilidade e segurança de funcionamento.
+* Avaliar soluções distribuídas utilizando diferentes arquiteturas e paradigmas de computação, incluindo sistemas de arquivos
+distribuídos, computação em nuvem, névoa (fog) e borda (edge), e discutir sua relação com aplicações críticas e IoT.
+* Integrar conceitos de tolerância a falhas e segurança funcional ao desenvolvimento de sistemas distribuídos, aplicando práticas e
+serviços de alta disponibilidade, replicação e mecanismos robustos de comunicação confiável entre processos.
+
+Conteúdo Programático
+  Semana: 1 a 3
+    Título: Introdução
+Conteúdo: Sistemas Distribuídos: Objetivos, conceitos de software e questões de projeto. Tolerância a Falhas: Conceitos e terminologia de
+              segurança de funcionamento. Atributos de dependabilidade. Mecanismos de controle de falhas. Técnicas de controle de respostas sob
+              falha. Tolerância a falhas em software Falhas e defeitos em sistemas distribuídos. Modelos de sistemas distribuídos, blocos básicos e
+              serviços tolerantes a falhas. Medidas de confiabilidade e disponibilidade. Arquiteturas para tolerância a falhas.
+  Semana: 4 a 6
+    Título: Comunicação Interprocessos
+Conteúdo: Sistemas Distribuídos: Comunicação entre Processos, Comunicação Confiável entre Processos, Chamada Remota de Procedimentos
+              (ex. gRPC), Comunicação Indireta.
+  Semana: 7 a 9
+    Título: Ordenação de Eventos e Consenso
+Conteúdo: Sistemas distribuídos: Sincronização temporal (relógios físicos), Ordem de eventos e relógios lógicos, Consenso: Algoritmos de
+
+
+
+
+                                                                          Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 14/08/2026
+
+
+
+              Eleição (Valentão e Anel), Outros algoritmos de consenso: Paxos, PBFT, Raft. Comunicação em grupo.
+  Semana: 10 a 12
+    Título: Exclusão Mútua, Transações e Replicação
+Conteúdo: Sistemas Distribuídos: Exclusão Mútua (Distribuída), Impasse Distribuído (Deadlock) e Travas, Transações e Transações Distribuídas,
+              Replicação.
+  Semana: 13 a 15
+    Título: Sistemas de Arquivos Distribuídos e Computação Distribuída
+Conteúdo: Sistemas de arquivos distribuídos: conceitos básicos, tipos e interfaces. Fundamentos, modelos de serviço (IaaS, PaaS, etc), modelos
+              de deployment (privado, público, híbrido).
+
+Metodologia
+A disciplina utilizará uma plataforma de Ambiente Virtual de Aprendizado (AVA) para distribuição de material, entrega de trabalhos,
+organização de grupos de discussão e acompanhamento geral da disciplina. A disciplina é apresentada em aulas teórico-práticas,
+em que se combina a apresentação dos conceitos e técnicas com o desenvolvimento de eventuais exercícios e discussões. Algumas
+das aulas serão realizadas em laboratórios, para a implementação/visualização dos conceitos vistos em aula.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas) de atividades teóricas e práticas,
+num total de 3.000 minutos, e mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor,
+correspondentes a exercícios e trabalhos extraclasse a serem avaliados.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+As experiências de aprendizagem previstas para a disciplina consistem, basicamente, na participação dos discentes nas aulas
+expositivas de forma dialogada (atividade coletiva), na realização de projetos de programação extraclasse (atividade autônoma) e na
+realização de atividades de verificação de aprendizagem dos conteúdos vistos até a data das mesmas (atividade coletiva). É prevista
+ainda a indicação de material adicional, suplementar, para apoio ao aprendizado, como sugestões de leitura de material, vídeos e/ou
+videoaulas disponibilizados na plataforma AVA utilizada na disciplina.
+
+
+Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
+As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+A avaliação será dividida em duas partes: uma teórica e outra prática.
+
+
+Parte Teórica: composta por duas provas escritas (P1 e P2), podendo conter questões descritivas, analíticas, objetivas de simples e
+múltipla escolha com justificativa e questões sobre trabalhos extraclasse propostos. Avaliações individuais em aula (participação)
+ajudarão na atribuição do conceito final do(a) estudante.
+
+
+Parte Prática: será feita mediante um conjunto de trabalhos práticos podendo ser composta por uma combinação qualquer de
+exercícios feitos em aula, exercícios extraclasse e atividades de programação. Os trabalhos práticos terão pesos diferentes em
+função da sua complexidade os quais serão definidos junto com sua especificação. A média aritmética ponderada pelos pesos irá
+compor a nota da parte prática (MPP). A demonstração prática e arguição de trabalhos poderão fazer parte da avaliação de cada
+trabalho.
+
+
+Será considerado aprovado o(a) estudante que obtiver no mínimo SEIS (6.0) na média final, tendo obrigatoriamente no mínimo nota
+TRÊS (3.0) em cada uma das provas teóricas e nota CINCO (5.0) na parte prática. A média final (MF), para efeito dos conceitos de
+
+
+
+
+                                                                      Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                     Data de Emissão: 14/08/2026
+
+
+
+aprovação (A, B e C), é calculada da seguinte forma:
+
+
+MF = (P1 + P2 + MPP) / 3
+
+
+Conceitos:
+
+
+A: MF &#8805; 9.0B: 7.5 &#8804; MF < 9.0C: 6.0 &#8804; MF < 7.5D: MF < 6.0
+
+
+Conforme regulamento da Universidade, é obrigatório uma frequência mínima de 75% de presença nas aulas. A não observância a
+esse requisito implicará na atribuição do conceito FF ao(a) estudante.
+
+Atividades de Recuperação Previstas
+O(a) estudante que obtiver conceito final D ficará em recuperação, que pode ser teórica ou prática, ou ambas, conforme descrito a
+seguir:
+
+
+* Recuperação Teórica: Caso o(a) estudante fique em recuperação teórica, o(a) estudante poderá recuperá-lo realizando uma prova
+de recuperação teórica que versará sobre todo o conteúdo do programa. A prova de recuperação substituirá a pior nota entre as
+duas provas teóricas. A média final será recalculada usando a nota da melhor prova teórica, a nota da prova de recuperação e a nota
+da parte prática conforme descrito em critérios de avaliação.
+
+
+* Recuperação prática: Caso o(a) estudante fique em recuperação prática, o(a) estudante poderá re-enviar como atividade de
+recuperação as atividades que ficaram com avaliação insuficiente, com as devidas correções conforme os apontamentos feitos
+pelo(a) professor(a) durante a avaliação da atividade. Caso o(a) estudante tenha deixado de entregar alguma atividade prática e por
+esse motivo tenha ficado em recuperação, o(a) estudante poderá fazer a entrega da mesma atividade durante o período de
+recuperação.
+
+
+No caso de falta justificada a uma das 2 provas teóricas, o(a) estudante poderá recuperá-la em data, horário e local a serem
+marcados pelo professor. Por falta justificada entende-se os casos previstos em legislação (saúde, parto, serviço militar, convocação
+judicial, etc) devidamente comprovados segundo as normas da UFRGS.
+
+Bibliografia
+Básica Essencial
+Couloris, G.; Dollimore, J.; Kindberg, T. and Blair, G.. Distributed Systems: Concepts and Design. Boston, Massachusetts: ? Addison Wesley
+Longman, 2011. ISBN 978-0132143011.
+Israel Koren, C. Mani Krishna.. Fault-Tolerant Systems. San Francisco, California: Morgan Kaufmann, 2007. ISBN 978-0120885251.
+
+Básica
+Abraham Silberschatz, Peter B. Galvin, Greg Gagne. Operating Systems Concepts. New Jersey, USA: ? JOHN WILEY, 2012. ISBN
+?978-1118063330.
+Birman, K. P.. Guide to Reliable Distributed Systems: Building High-Assurance Applications and Cloud-Hosted Services. London, UK: Springer
+London, 2012. ISBN 978-1447158424.
+Deitel, Deitel e Choffnes. Sistemas Operacionais. London, UK: Pearson Education, 2005. ISBN 978-8576050117.
+Pradham, D. K.. Fault-Tolerant Systems Design. New Jersey, USA: Prentice Hall, 1996. ISBN 978-0130578877.
+Tanenbaum, A. Boss, H.. Modern Operating Systems. London, UK: Pearson, 2014. ISBN 978-0133591620.
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                         Título                                                                      Texto
+Ambiente Virtual de Aprendizagem (AVA)                                    O ambiente virtual de aprendizagem (AVA) recomendado é
+                                                                          o Moodle institucional da UFRGS que pode ser acessado
+
+
+
+                                                                         Página 3
+                                                PLANO DE ENSINO
+                                                                                                           Data de Emissão: 14/08/2026
+
+
+
+                                                                    através da URL http://moodle.ufrgs.br com o usuário e a
+                                                                    senha do portal do aluno.
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                   Página 4
+

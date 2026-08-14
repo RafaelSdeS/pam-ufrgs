@@ -1,0 +1,279 @@
+INF01145 – Fundamentos de Banco de Dados
+             Plano de ensino
+                             Carlos A. Heuser
+                              Cirano Iochpe
+                                   2009/2
+
+
+1 Identificação
+Nome do departamento: Informática Aplicada
+Nome da atividade de ensino: INF01145 - Fundamentos de Banco de Dados
+Curso de oferecimento: CIC – Ciência da Computação
+Pré-requisito: Classificação e Pesquisa de Dados
+Etapa aconselhada no curso: 4 a
+Corpo docente: Cirano Iochpe (Turma A) e Carlos A. Heuser (Turma A)
+Créditos/carga horária: 4/4
+
+
+
+2 Objetivos
+Apresentar sistemas de gerência de banco de dados do ponto de vista de seu uso.
+Discutir as técnicas para modelar dados e projetar banco de dados.
+
+
+3 Conteúdo Programático
+1) Sistemas de gerência de banco de dados: A) conceitos básicos, tipos de abor-
+dagens de BD; B) abordagem relacional: modelo de dados e restrições de integri-
+dade, álgebra e cálculo relacional; SQL, normalização e dependências funcionais.
+C) outros aspectos: concorrência, transações, reconstrução. 2) Modelagem e pro-
+jeto de banco de dados: A) modelagem entidade-relacionamento; B) transforma-
+ções entre modelos de BD; C) normalização.
+
+
+
+                                       1
+4 Metodologia Adotada
+A disciplina é organizada na forma de aulas teórico-práticos, combinando exposi-
+ção pelo professor com exercícios em aula ou laboratório.
+
+
+5 Cronograma de Atividades
+  1. Situação do tema banco de dados dentro da computação.
+     Introdução à disciplina.
+
+  2. Introdução a SGBD: histórico (dados centralizados, redundância de dados,
+     independência ,de dados, SGBD), modelos de dados (conceitual, lógico,
+     interno, externo), linguagens usadas (DDL, DML), pessoas envolvidas (ad-
+     ministrador de dados, DBA)
+
+  3. Três abordagens de SGBD: relacional, rede, hierárquica (estruturas de da-
+     dos, operações, anomalias de atualização)
+
+  4. (continuação)
+
+  5. Abordagem relacional – esquema de BD SQL: histórico, instruções da DDL
+
+  6. Linguagens relacionais teóricas: álgebra relacional básica (projeção, sele-
+     ção, operadores de conjuntos)
+
+  7. (continuação)
+
+  8. SQL: instrução SELECT (parte equivalente à álgebra relacional básica)
+
+  9. (continuação)
+
+ 10. Linguagens relacionais teóricas: álgebra relacional – parte II (operadores
+     avançados: junção e divisão)
+
+ 11. (continuação)
+
+ 12. 1a avaliação
+
+ 13. Linguagens relacionais teóricas: cálculo relacional (idéia básica, operado-
+     res, exercícios)
+
+ 14. SQL: instrução SELECT (parte equivalente ao cálculo relacional)
+
+ 15. (continuação)
+
+
+                                       2
+ 16. SQL: instrução SELECT (funções de agregação, agrupamento)
+
+ 17. SQL: instrução SELECT (funções de agregação, agrupamento), instruções
+     de alteração
+
+ 18. SQL: (continuação)
+
+ 19. Otimização de consultas
+
+ 20. Tópicos especiais: restrições de integridade, reconstrução, transação e con-
+     corrência
+
+ 21. (continuação)
+
+ 22. 2a avaliação
+
+ 23. Modelagem de dados: abordagem ER, conceitos básicos, extensões da abor-
+     dagem, variantes de notação e de semântica início do trabalho
+
+ 24. (continuação)
+
+ 25. Projeto lógico: transformação de ER em relacional
+
+ 26. Engenharia reversa de BD relacional: transformação de relacional em ER
+
+ 27. (continuação)
+
+ 28. Engenharia reversa de modelos de dados: a normalização como técnica de
+     engenharia reversa, formas normais, o processo de normalização, proble-
+     mas, estudo de caso
+
+ 29. (continuação)
+
+ 30. 3a avaliação
+
+
+6 Critérios de Avaliação
+O conceito dos aluno será obtido a partir da média aritmética das três provas da
+disciplina.
+    Esta média será transformada em conceito da seguinte maneira:
+   • A – 9 ≤ média ≤ 10
+
+   • B – 7, 5 ≤ média < 9
+
+   • C – 6 ≤ média < 7, 5
+
+                                       3
+   • D – média < 6
+    O resultado dos trabalhos e a participação do aluno poderão ser levados em
+contas para pequenos arredondamentos de nota (algumas casas decimais). Isto
+significa, por exemplo, que alguém que tem média 5,7 nas provas, fez todas etapas
+do trabalho e tem 75% de freqüência recebe conceito "C".
+    O prazo para recursos é de uma semana após a divulgação das notas.
+
+6.1 Atividades de Recuperação
+Caso o aluno tenha desempenho insuficiente em uma prova (nota abaixo de 6,0),
+o mesmo poderá realizar uma prova de recuperação ao final do semestre, com as
+condicionantes abaixo.
+   • A nota na prova a ser recuperada deve ser de no mínimo 3,0.
+
+   • O aluno deve ter a frequência regimental às aulas.
+
+   • O aluno pode recuperar no máximo uma prova ao longo do semestre.
+   Esta prova de recuperação envolverá toda matéria da disciplina e sua nota
+substituirá a daquela prova em que o aluno tiver alcançado a menor nota.
+
+6.2 Banco de provas
+Colecionei algumas provas de semestres passados no arquivos abaixo. Algumas
+delas estão corrigidas, outras não. Observem que em 2001/2 e em 2005/1 houve
+alterações na seqüência de apresentação dos tópicos da disciplina. Cabe salientar
+que, não necessariamente, as próximas provas terão o mesmo formato que as do
+passado. Estas somente são disponibilizadas como um guia para estudos.
+   • Semestre 2001/1 - Prova referente a parte de álgebra e cálculo, corrigida
+
+   • Semestre 2000/2 - Prova referente a parte de álgebra e cálculo, corrigida
+
+   • Semestre 2001/2 - Primeira prova (matéria semelhante a da primeira prova
+     deste semestre)
+
+   • Semestre 2001/2 - Prova referente a parte de SQL
+
+   • Semestre 2001/2 - Prova referente a parte de modelagem
+
+   • Semestre 2002/1 - Prova 2 - SQL
+
+   • Semestre 2002/1 - Prova 3 - modelagem e projeto
+
+                                       4
+• Semestre 2002/2 - Prova 1 - álgebra e cálculo
+
+• Semestre 2002/2 - Prova 2 - SQL
+
+• Semestre 2002/2 - Prova 3 - modelagem e projeto
+
+• Semestre 2003/1 - Prova 1 - álgebra e cálculo
+
+• Semestre 2003/1 - Prova 2 - SQL
+
+• Semestre 2003/1 - Prova 3 - Modelagem e projeto
+
+• Semestre 2003/2 - Prova 1 - álgebra e cálculo
+
+• Semestre 2003/2 - Prova 2 - SQL
+
+• Semestre 2003/2 - Prova 3 - Modelagem e projeto
+
+• Semestre 2004/1 - Prova 1 - álgebra e cálculo
+
+• Semestre 2004/1 - Prova 2 - SQL
+
+• Semestre 2004/1 - Prova 3 - modelagem e projeto
+
+• Semestre 2004/2 - Prova 1 - álgebra e cálculo
+
+• Semestre 2004/2 - Prova 2 - SQL
+
+• Semestre 2004/2 - Prova 3 - modelagem e projeto
+
+• Semestre 2005/1 - Prova 1 - álgebra e SQL
+
+• Semestre 2005/1 - Prova 2 - cálculo e SQL
+
+• Semestre 2005/1 - Prova 3 - modelagem e projeto
+
+• Semestre 2005/2 - Prova 1 - álgebra e SQL
+
+• Semestre 2005/2 - Prova 2 - cálculo e SQL
+
+• Semestre 2005/2 - Prova 3 - modelagem e projeto
+
+• Semestre 2006/1 - Prova 1 - álgebra e SQL
+
+• Semestre 2006/1 - Prova 2 - cálculo e SQL
+
+• Semestre 2006/1 - Prova 3 - modelagem e projeto
+
+• Semestre 2006/2 - Prova 1 - álgebra e SQL
+
+                                    5
+  • Semestre 2006/2 - Prova 2 - cálculo e SQL
+  • Semestre 2006/2 - Prova 3 - modelagem e projeto
+  • Semestre 2006/1 - Prova 3 - modelagem e projeto
+  • Semestre 2007/1 - Prova 1 - álgebra e SQL
+  • Semestre 2007/1 - Prova 2 - cálculo e SQL
+  • Semestre 2007/1 - Prova 3 - modelagem e projeto
+  • Semestre 2007/2 - Prova 1 - álgebra e SQL
+  • Semestre 2007/2 - Prova 2 - cálculo e SQL
+  • Semestre 2007/2 - Prova 3 - modelagem e projeto
+  • Semestre 2008/1 - Prova 1 - álgebra e SQL
+  • Semestre 2008/1 - Prova 2 - cálculo e SQL
+  • Semestre 2008/1 - Prova 3 - modelagem e projeto
+  • Semestre 2008/2 - Prova 1 - álgebra e SQL
+  • Semestre 2008/2 - Prova 2 - cálculo e SQL
+  • Semestre 2008/2 - Prova 3 - modelagem e projeto
+  • Semestre 2009/1 - Prova 1 - álgebra e SQL
+  • Semestre 2009/1 - Prova 2 - cálculo e SQL
+  • Semestre 2009/1 - Prova 3 - modelagem e projeto
+
+
+7 Bibliografia básica
+7.1 Livros texto
+  • Silberschatz, Korth e Sudarshan, Sistemas de Bancos de Dados, 5a edição,
+    Campus, 2006 (cobre toda matéria da disciplina e mais os detalhes internos
+    de funcionamento de um SGBD)
+  • Heuser. C.A. Projeto de Banco de Dados. 6a edição. Ed. Bookman, Porto
+    Alegre, 2009
+    (parte de projeto de banco de dados)
+
+                                     6
+7.2 Transparências
+Para a parte da disciplina que não é coberta pelo livro de projeto de BD, existe um
+conjunto de transparências que será disponibilizado pelo professor.
+
+7.3 Literatura recomendada
+   • Elmasri e Navathe, Sistemas de Bancos de Dados - Fundamentos e Aplica-
+     ções, 3a edição, LTC, 2002
+     (concorrente do Silberschatz)
+
+   • Ullman, J.D.; Widom, J. A first course in database systems. Prentice Hall,
+     1997
+     (versão de Stanford de BD – usa Datalog em vez de cálculo relacional)
+
+   • Ramakrishnan, R. Database Management Systems, (second edition). Mc-
+     Graw-Hill, 2000
+     (outro livro-texto completo, bastante adotado nos EUA)
+
+   • Batini, Ceri e Navathe. Conceptual Database Design. Benjamin-Cummings,
+     1992
+     (trata de forma aprofundada da parte de modelagem e projeto)
+
+   • Groff, J.R.; Weinberg, P.N. SQL: the complete reference McGraw-Hill,
+     2000
+     (manual de SQL, cobrindo padrão e vários produtos)
+
+
+
+
+                                        7
+

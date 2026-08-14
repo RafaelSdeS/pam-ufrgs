@@ -1,0 +1,179 @@
+Dados de identificação
+ Disciplina                      LINGUAGENS FORMAIS E AUTÔMATOS N
+ Oferecida para                  BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO (obrigatória)
+                                 BIOTECNOLOGIA MOLECULAR (eletiva)
+                                 BIOINFORMÁTICA (eletiva)
+ Período Letivo                  2020/2
+ Professor Responsável           LUCIO MAURO DUARTE
+ Sigla                           INF05005
+ Carga horária (horas)           60
+  CH Autônoma (horas)            10
+  CH Coletiva (horas)            50
+  CH Individual (horas)          0
+
+Súmula                           Alfabetos e Linguagens. Linguagens, gramáticas e expressões regulares, autômatos finitos. Linguagens e
+                                 gramáticas livres de contexto e autômatos de pilha. Linguagens sensíveis ao contexto.
+
+
+Objetivos                        Após fazer esta disciplina, o aluno deve ser capaz de entender os conceitos e modelos básicos associados à
+                                 linguagens formais e autômatos. Isto trará uma maior compreensão dos fundamentos que regem o
+                                 desenvolvimento de muitas das áreas da Ciência da Computação, entre elas o Processamento de Linguagem
+                                 Natural, Processamento de Fala, Hipertextos e Hipermídia e Bioinformática, entre outras.
+
+
+Conteúdo Programático
+
+              Título                                                       Conteúdo                                              Semana
+                               Apresentação do programa da disciplina, critério de avaliação, bibliografia. Definição de datas
+Introdução e Conceitos Básicos                                                                                                       1
+                               de provas e trabalhos. Notas Históricas.
+Introdução e Conceitos Básicos Conceitos Básicos: Alfabetos, Palavras, Linguagens, Gramáticas                                       2
+Linguagens Regulares           Autômatos Finitos. Linguagens Regulares. Lista de exercícios.                                       3a5
+Propriedades de Linguagens     Identificação, propriedades, algoritmos. Máquinas de Mealy e Moore.
+Regulares e Autômato Finito                                                                                                        6a7
+com Saída
+Linguagens Livres de Contexto Linguagens Livres de Contexto. Gramáticas Livres de Contexto. Autômatos com Pilha                    8a9
+Propriedades e                 Propriedades de Linguagens Livres de Contexto. Algoritmos de Reconhecimento.
+Reconhecimento de Linguagens                                                                                                     10 a 11
+Livres de Contexto
+Linguagens Recursivamente      Linguagens Recursivamente Enumeráveis e Sensíveis ao Contexto. Máquinas de Turing.
+Enumeráveis e Sensíveis ao     Gramáticas Sensíveis ao Contexto. Gramáticas Irrestritas.                                         12 a 13
+Contexto
+Hierarquia de Classes de       Hierarquia de Chomsky. Classes de Linguagens.
+                                                                                                                                    14
+Linguagens
+Apresentação dos Trabalhos     Apresentação dos trabalhos teórico-práticos em aula.
+                                                                                                                                    15
+Teórico-Práticos
+Prova de Recuperação           Prova de recuperação sobre todo conteúdo da disciplina                                               16
+
+Metodologia
+ Estratégias didáticas em        Os conteúdos serão trabalhados sendo disponibilizados no Moodle da disciplina textos relacionados e/ou
+ atividades remotas              vídeos com aulas gravadas pelo professor ou com apresentação síncrona, com conteúdo gravado e
+                                 posteriormente disponibilizado aos alunos. Com base em cada aula, será fornecida uma tarefa (questionário ou
+                                 lista de exercícios) via Moodle a ser realizada de forma assíncrona pelos alunos, com atendimento também
+                                 assíncrono do professor. Os alunos terão um prazo para realizar e submeter a tarefa via Moodle. Haverá a
+                                 análise das tarefas pelo professor com os alunos, podendo ser em um encontro síncrono (com gravação da
+                                 apresentação das soluções e em horário previamente combinado) ou com a disponibilização via Moodle das
+                                 resoluções em vídeo gravado ou arquivo texto (dependendo do tipo de tarefa).
+
+                                 Além das tarefas de cada conteúdo, serão propostos pequenos trabalhos individuais, na forma de tarefas
+                                 disponibilizadas no Moodle da disciplina. Esses trabalhos serão avaliados e retornados aos alunos. Também
+                                 será definido um trabalho teórico-prático a ser realizado em grupo na forma de um programa a ser
+                                 desenvolvido e um relatório sobre a sua implementação e embasamento teórico. Este trabalho deverá ser
+                                 entregue via Moodle até uma data prevista. Ele deverá ser apresentado de forma remota síncrona para o
+                                 professor, em horário e ambiente a serem combinados, com posterior período para questionamentos aos
+                                 integrantes do grupo. Opcionalmente, em combinação com o professor, a apresentação poderá ser
+                                 previamente gravada e submetida via Moodle, com posterior encontro síncrono com o professor para
+                                 questionamentos aos integrantes do grupo.
+
+                                 Haverá discussões sobre tópicos da disciplina e sobre as atividades avaliativas através de fóruns no Moodle.
+                                 Em caso de dúvidas específicas, os alunos poderão contar com atendimento individualizado do professor, em
+                                 horário a ser combinado, realizado de forma remota síncrona por plataforma a ser definida em comum acordo.
+                                 O contato para agendamento com o professor se dará por e-mail ou via mensagem no Moodle da disciplina.
+ Estratégias didáticas em     Não há previsão de atividades presenciais para 2020/1.
+ atividades presenciais
+
+ Recursos disponibilizados    As atividades previstas, assim como as instruções para sua realização, serão disponibilizadas no Moodle da
+                              disciplina (Moodle UFRGS). Eventuais componentes externos ao Moodle e necessários para a realização das
+                              atividades estarão indicados no próprio Moodle.
+
+                              Também poderão ser disponibilizados no Moodle links para livros, artigos e ferramentas online e gratuitos,
+                              indicados para leitura e estudo, visando a auxiliar na realização das atividades propostas.
+
+ Recursos computacionais      Para acompanhar as atividades assíncronas previstas, o aluno precisará ter um computador e acesso regular à
+                              Internet. Para as atividades síncronas, além do computador e do acesso à Internet, poderão ser necessários
+                              também microfone e câmera de transmissão de vídeo, sendo que poderá haver iteração apenas por
+                              mensagens de texto.
+
+                              Como apoio, indica-se a ferramenta gratuita JFlap, disponível em www.jflap.org. Além disso, o trabalho teórico-
+                              prático requer alguma ferramenta de programação e um editor de texto.
+
+ Informações sobre Direitos   Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para
+ Autorais e de Imagem:        qualquer outra finalidade, sob as penas legais.
+                              Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a autoria, sob
+                              pena de plágio.
+                              A liberdade de escolha de exposição da imagem e da voz não isenta o aluno de realizar as atividades
+                              originalmente propostas ou alternativas.
+                              Todas as gravações de atividades síncronas devem ser previamente informadas por parte dos professores.
+                              Somente poderão ser gravadas pelos alunos as atividades síncronas propostas mediante concordância prévia
+                              dos professores e colegas, sob as penas legais.
+                              É proibido disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do
+                              professor, sem autorização específica para a finalidade pretendida.
+                              Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica, sendo
+                              vedada a distribuição do material cuja a licença não permita ou sem a autorização prévia dos professores para
+                              o material de sua autoria.
+
+
+
+Carga Horária
+ Teórica                      50
+ Prática                      10
+
+Experiências de               O conteúdo programático previsto para cada semana será apresentado na forma de leituras, vídeos e/ou
+Aprendizagem                  apresentações síncronas. Adicionalmente, poderão ser realizadas atividades síncronas coletivas para
+                              indicação dos principais aspectos e esclarecimento de dúvidas.
+
+                              A cada semana serão propostas atividades relacionadas com os conteúdos estudados, a serem realizadas de
+                              forma assíncrona pelos discentes. Essas atividades serão avaliadas e retornadas aos estudantes, com as
+                              recomendações de estudos a serem reforçados. Além das atividades semanais, estão previstos encontros
+                              síncronos para apresentação do trabalho teórico-práticos pelos alunos. Essas atividades serão gravadas e
+                              disponibilizadas para referência posterior dos alunos. Em caso de atraso justificado na entrega de algum
+                              trabalho, o mesmo poderá ser substituído por outro trabalho sobre o mesmo conteúdo, dentro de prazo
+                              combinado com o professor, valendo 100% da nota do trabalho original. Para atrasos não justificados, o
+                              trabalho valerá 80% da nota do trabalho original.
+
+                              Também estão previstas duas provas de forma remota assíncrona, cada uma cobrindo uma metade dos
+                              conteúdos da disciplina. Para as provas não haverá tolerância de entrega.
+Critérios de Avaliação      A média final (M) dos alunos será calculada com base na média dos resultados dos trabalhos individuais (TI),
+                            na nota do trabalho teórico-prático (TF) e nas notas das provas P1 (conteúdo das semanas 1 a 7) e P2
+                            (conteúdo das semanas 8 a 14), seguindo a fórmula:
+
+                            M = 0,2*TI + 0,3*TF + 0,2*P1 + 0,3*P2
+
+                            O conceito do aluno na disciplina será dado pela seguinte tabela:
+                            M >= 9,0       : Conceito A
+                            9,0 > M >= 7,5 : Conceito B
+                            7,5 > M >= 6,0 : Conceito C
+                            M < 6,0        : ver Atividades de Recuperação
+
+                            De acordo com a Resolução do CEPE sobre o ERE, durante o período em que perdurar o ERE, fica inaplicável
+                            a atribuição de conceito FF, prevista no Parágrafo 2º, do Artigo 44, da Resolução nº 11/2013 do CEPE.
+                            Para os estudantes matriculados até o final do período e que deixaram de participar da Atividade de Ensino,
+                            deverá ser atribuído o registro NI (Não Informado) no campo de conceito do sistema acadêmico.
+                            Para os casos previstos no Parágrafo 1º, a justificativa do registro NI deverá conter a referência ao período de
+                            excepcionalidade.
+                            Os casos de não informação de conceito durante o ERE, deverão ser resolvidos até o fim do segundo período
+                            letivo, após o fim da situação emergencial de saúde.
+
+
+
+Atividades de Recuperação   Aos discentes cujo desempenho nas atividades regulares for insuficiente (i.e., média final inferior a 6,0) será
+Previstas                   dada a possibilidade de realização de uma prova de recuperação. Esta avaliação versará sobre todo o
+                            conteúdo da disciplina e será realizada de forma remota assíncrona via Moodle, com uma janela de tempo para
+                            submissão das soluções. Os alunos que atingirem aproveitamento maior ou igual a 60% na prova de
+                            recuperação serão aprovados com o conceito C; os demais serão reprovados com conceito D.
+
+
+Bibliografia                Com alterações
+                            Básica Essencial
+                            Menezes, Paulo Fernando Blauth. Linguagens formais e autômatos. Porto Alegre: Instituto de Informática da
+                            UFRGS, 2005. ISBN 9788577802661. (versão eletrônica acessível via Sabi+)
+
+                            Básica
+                            Hopcroft, John E.; Ullman, Jeffrey D.; Motwani, Rajeev. Introdução à teoria de autômatos, linguagens e
+                            computação. Rio de Janeiro: Campus, c2002. ISBN 8535210725; 9788535210729.
+
+                            Rozenberg, Grzegorz; Salomaa, Arto. Handbook of formal languages. Berlin: Springer-Verlag, c1997. ISBN
+                            3540604200; 3540606483; 3540606491.
+
+                            Sipser, Michael. Introdução à Teoria da Computação. São Paulo: Cengage Learning, 2015. ISBN 978-85-221-
+                            0499-4. (versão eletrônica acessível via Sabi+)
+
+                            Complementar
+                            Copestake, Ann. Implementing Typed Feature Structure Grammars. Stanford: CSLI Publications, 2002. ISBN
+                            1575862603.
+
+                            Lewis, Harry R.; Papadimitriou, Christos H.. Elementos de teoria da computacao. Porto Alegre: Bookman, 2000.
+                            ISBN 8573075341; 9788573075342.
+

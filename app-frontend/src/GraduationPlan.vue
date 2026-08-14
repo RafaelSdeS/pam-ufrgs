@@ -15,8 +15,14 @@ const ELECTIVE_CODE_RE = /^ELETIVA-(\d+)$/
 const selectedCourse = curriculumService.selectedCourseRef
 const creditLimit = ref(24)
 const semesters = ref([]) // array of arrays of course codes (or "ELETIVA-<credits>" placeholders)
+const semesterCreditLimits = ref({}) // mapa esparso { semIndex: limite } para semestres com limite customizado
 const unscheduled = ref([])
 const staleNotice = ref(false)
+
+function effectiveLimit(semIndex) {
+  const override = semesterCreditLimits.value[semIndex]
+  return override !== undefined ? override : creditLimit.value
+}
 
 const subjectsMap = computed(() => {
   const map = {}
@@ -133,6 +139,7 @@ function resolveSubject(code) {
 function persist() {
   dataService.saveGraduationPlan(semesters.value)
   dataService.saveCreditLimit(creditLimit.value)
+  dataService.saveSemesterCreditLimits(semesterCreditLimits.value)
 }
 
 function checkStale() {
@@ -150,13 +157,60 @@ function recalculate() {
     electiveCreditsRemaining: electiveCreditsRemaining.value
   })
   semesters.value = result.semesters.map(sem => sem.subjects.map(s => s.code))
+  semesterCreditLimits.value = {}
   unscheduled.value = result.unscheduled
   persist()
   staleNotice.value = false
 }
 
+// Recalcula só a partir de semIndex (inclusive) com um novo limite de créditos para esse
+// semestre; os semestres anteriores ficam como estão, os seguintes usam o limite padrão.
+function recalculateFrom(semIndex, newLimit) {
+  const prefix = semesters.value.slice(0, semIndex)
+  const prefixCodes = []
+  let prefixElectiveCredits = 0
+  prefix.flat().forEach(code => {
+    const m = ELECTIVE_CODE_RE.exec(code)
+    if (m) {
+      prefixElectiveCredits += parseInt(m[1])
+      return
+    }
+    prefixCodes.push(code)
+    if (!subjectsMap.value[code]) {
+      prefixElectiveCredits += dataService.getCourseCredits(code, selectedCourse.value)
+    }
+  })
+
+  const subjects = Object.values(subjectsMap.value)
+  const completed = [...dataService.getCompletedCourses(), ...prefixCodes]
+  const remainingElectiveCredits = Math.max(0, electiveCreditsRemaining.value - prefixElectiveCredits)
+
+  const result = predictionService.generateGraduationPlan({
+    subjects,
+    completedCodes: completed,
+    creditLimit: creditLimit.value,
+    electiveCreditsRemaining: remainingElectiveCredits,
+    firstSemesterCreditLimit: newLimit
+  })
+
+  const tail = result.semesters.map(sem => sem.subjects.map(s => s.code))
+  semesters.value = [...prefix, ...tail]
+
+  const nextLimits = {}
+  Object.entries(semesterCreditLimits.value).forEach(([idx, val]) => {
+    if (Number(idx) < semIndex) nextLimits[idx] = val
+  })
+  nextLimits[semIndex] = newLimit
+  semesterCreditLimits.value = nextLimits
+
+  unscheduled.value = result.unscheduled
+  persist()
+  checkStale()
+}
+
 function loadOrGenerate() {
   creditLimit.value = dataService.getCreditLimit()
+  semesterCreditLimits.value = dataService.getSemesterCreditLimits()
   const saved = dataService.getGraduationPlan()
   if (saved && saved.length) {
     semesters.value = saved
@@ -208,7 +262,7 @@ function exportToPDF() {
 
   const semestersHtml = semesterCards.value.map(sem => `
     <div class="semester-block">
-      <div class="semester-title">${sem.index + 1}º Semestre <span class="credits-badge">${sem.totalCredits}/${creditLimit.value} créditos</span></div>
+      <div class="semester-title">${sem.index + 1}º Semestre <span class="credits-badge">${sem.totalCredits}/${effectiveLimit(sem.index)} créditos</span></div>
       <table class="summary-table">
         <thead>
           <tr><th>Código</th><th>Disciplina</th><th>Créditos</th><th>Dificuldade</th></tr>
@@ -332,9 +386,65 @@ function moveCourse(fromIndex, subjectIndex, direction) {
   next[fromIndex].splice(subjectIndex, 1)
   if (targetIndex >= next.length) next.push([])
   next[targetIndex].push(code)
+
+  // Semestres vazios são removidos abaixo, o que desloca os índices dos seguintes -
+  // remapeia os limites customizados para acompanhar seus semestres.
+  const keptIndices = []
+  next.forEach((sem, i) => { if (sem.length > 0) keptIndices.push(i) })
+  const remappedLimits = {}
+  keptIndices.forEach((oldIdx, newIdx) => {
+    if (semesterCreditLimits.value[oldIdx] !== undefined) {
+      remappedLimits[newIdx] = semesterCreditLimits.value[oldIdx]
+    }
+  })
+  semesterCreditLimits.value = remappedLimits
+
   semesters.value = next.filter(sem => sem.length > 0)
   persist()
   checkStale()
+}
+
+const limitDialogOpen = ref(false)
+const limitDialogSemIndex = ref(null)
+const limitDialogValue = ref(24)
+
+function openLimitDialog(semIndex) {
+  limitDialogSemIndex.value = semIndex
+  limitDialogValue.value = effectiveLimit(semIndex)
+  limitDialogOpen.value = true
+}
+
+function applyLimitDialog() {
+  if (limitDialogSemIndex.value === null || !limitDialogValue.value || limitDialogValue.value < 1) return
+  recalculateFrom(limitDialogSemIndex.value, limitDialogValue.value)
+  limitDialogOpen.value = false
+}
+
+const planoDialogOpen = ref(false)
+const planoSubject = ref(null)
+const planoText = ref('')
+const planoLoading = ref(false)
+const planoError = ref(false)
+
+async function openPlano(subj) {
+  if (!subj || subj.isPlaceholder) return
+  planoSubject.value = subj
+  planoDialogOpen.value = true
+  planoText.value = ''
+  planoError.value = false
+  planoLoading.value = true
+  try {
+    const res = await fetch(`${import.meta.env.BASE_URL}planos_ensino/${encodeURIComponent(subj.code.toUpperCase())}.txt`)
+    // Servidores com fallback de SPA (ex.: dev server do Vite) respondem 200 com o
+    // próprio index.html para rotas inexistentes - checar o content-type evita exibir isso.
+    const contentType = res.headers.get('content-type') || ''
+    if (!res.ok || !contentType.includes('text/plain')) throw new Error('plano indisponível')
+    planoText.value = await res.text()
+  } catch (e) {
+    planoError.value = true
+  } finally {
+    planoLoading.value = false
+  }
 }
 </script>
 
@@ -410,10 +520,13 @@ function moveCourse(fromIndex, subjectIndex, direction) {
             <v-chip
               size="x-small"
               variant="tonal"
-              class="font-weight-bold mt-1"
-              :color="sem.totalCredits > creditLimit ? 'error' : 'primary'"
+              class="font-weight-bold mt-1 cursor-pointer"
+              :color="sem.totalCredits > effectiveLimit(sem.index) ? 'error' : 'primary'"
+              append-icon="mdi-pencil-outline"
+              title="Ajustar limite de créditos deste semestre"
+              @click="openLimitDialog(sem.index)"
             >
-              {{ sem.totalCredits }}/{{ creditLimit }} créditos
+              {{ sem.totalCredits }}/{{ effectiveLimit(sem.index) }} créditos
             </v-chip>
           </div>
         </v-card-title>
@@ -422,7 +535,12 @@ function moveCourse(fromIndex, subjectIndex, direction) {
             <v-btn icon size="x-small" variant="text" :disabled="sem.index === 0" @click="moveCourse(sem.index, idx, -1)">
               <v-icon size="small">mdi-chevron-left</v-icon>
             </v-btn>
-            <div class="flex-grow-1 px-1">
+            <div
+              class="flex-grow-1 px-1"
+              :class="{ 'cursor-pointer': !subj.isPlaceholder }"
+              :title="subj.isPlaceholder ? '' : 'Ver plano de ensino'"
+              @click="openPlano(subj)"
+            >
               <div class="text-body-2 font-weight-bold d-flex align-center ga-1">
                 <span v-if="subj.isPlaceholder" class="text-medium-emphasis font-italic">Eletiva</span>
                 <span v-else>{{ subj.code }}</span>
@@ -464,7 +582,7 @@ function moveCourse(fromIndex, subjectIndex, direction) {
                 variant="text"
                 color="primary"
                 class="px-0 text-none"
-                @click="openPicker(sem.index, idx)"
+                @click.stop="openPicker(sem.index, idx)"
               >
                 Escolher eletiva
               </v-btn>
@@ -473,7 +591,7 @@ function moveCourse(fromIndex, subjectIndex, direction) {
                 size="x-small"
                 variant="text"
                 class="px-0 text-none"
-                @click="clearElectiveChoice(sem.index, idx)"
+                @click.stop="clearElectiveChoice(sem.index, idx)"
               >
                 Trocar
               </v-btn>
@@ -535,6 +653,58 @@ function moveCourse(fromIndex, subjectIndex, direction) {
       </v-card>
     </v-dialog>
 
+    <v-dialog v-model="limitDialogOpen" max-width="420">
+      <v-card class="rounded-xl">
+        <v-card-title class="d-flex align-center justify-space-between pa-4">
+          <span class="text-h6 font-weight-bold">Ajustar limite do {{ (limitDialogSemIndex ?? 0) + 1 }}º Semestre</span>
+          <v-btn icon="mdi-close" variant="text" @click="limitDialogOpen = false"></v-btn>
+        </v-card-title>
+        <v-card-text class="pa-4 pt-0">
+          <v-text-field
+            v-model.number="limitDialogValue"
+            type="number"
+            min="1"
+            label="Limite de créditos para este semestre"
+            variant="outlined"
+            density="comfortable"
+            hide-details
+            autofocus
+            @keyup.enter="applyLimitDialog"
+          ></v-text-field>
+          <div class="text-caption text-medium-emphasis mt-2">
+            Os semestres anteriores permanecem como estão; a partir deste semestre, a previsão é recalculada com o novo limite.
+          </div>
+        </v-card-text>
+        <v-card-actions class="pa-4 pt-0">
+          <v-spacer></v-spacer>
+          <v-btn variant="text" @click="limitDialogOpen = false">Cancelar</v-btn>
+          <v-btn color="primary" variant="flat" class="font-weight-bold rounded-lg" @click="applyLimitDialog">Recalcular</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
+    <v-dialog v-model="planoDialogOpen" max-width="700" scrollable>
+      <v-card class="rounded-xl">
+        <v-card-title class="d-flex align-center justify-space-between pa-4 border-bottom">
+          <div>
+            <div class="text-h6 font-weight-bold">{{ planoSubject?.code }}</div>
+            <div class="text-caption text-medium-emphasis">{{ planoSubject?.name }}</div>
+          </div>
+          <v-btn icon="mdi-close" variant="text" @click="planoDialogOpen = false"></v-btn>
+        </v-card-title>
+        <v-card-text class="pa-4">
+          <div v-if="planoLoading" class="d-flex justify-center py-8">
+            <v-progress-circular indeterminate color="primary"></v-progress-circular>
+          </div>
+          <div v-else-if="planoError" class="text-center text-medium-emphasis py-8">
+            <v-icon icon="mdi-file-document-remove-outline" size="48" class="mb-2"></v-icon>
+            <div>Plano de ensino ainda não disponível para esta disciplina.</div>
+          </div>
+          <pre v-else class="plano-text">{{ planoText }}</pre>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
+
     <div v-if="semesterCards.length" class="mt-4 text-body-1">
       <strong>Resumo:</strong> {{ semesterCards.length }} semestre(s) restante(s), {{ totalMandatoryRemaining }} crédito(s) obrigatório(s) + {{ totalElectiveRemaining }} crédito(s) eletivo(s) no total.
       <div class="text-caption text-medium-emphasis mt-1">
@@ -580,5 +750,12 @@ function moveCourse(fromIndex, subjectIndex, direction) {
 }
 .border-thin {
   border: 1px solid rgba(var(--v-border-color), 0.08) !important;
+}
+.plano-text {
+  white-space: pre-wrap;
+  font-family: inherit;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  margin: 0;
 }
 </style>

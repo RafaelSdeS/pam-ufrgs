@@ -1,0 +1,107 @@
+                          UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                                   INSTITUTO DE INFORMÁTICA
+                           DEPARTAMENTO DE INFORMÁTICA APLICADA
+                                     PLANO DE ENSINO 2009/2
+
+
+
+DISCIPLINA:                   ENGENHARIA DE SOFTWARE N (Turmas U)
+CÓDIGO                        INF01127
+CURSOS/PRÉ-REQUISITOS:        INF01120 Técnica de Construção de Programas
+CARGA HORÁRIA:                4
+CRÉDITOS:                     4
+Professor Regente:            Sérgio Felipe Zirbes zirbes@inf.ufrgs.br
+                                                   szirbes@globo.com
+                                                   szirbes@hcpa.ufrgs.br
+SÚMULA:
+A engenharia de software. A crise do software. A produção de software. O ciclo de vida do software. A
+especificação de requisitos. O projeto de software. A implementação, o teste e a documentação do software.
+
+
+OBJETIVOS:
+A disciplina visa apresentar os conceitos fundamentais da Engenharia de Software, abordando com mais
+ênfase os seguintes aspectos:
+ 1. Abrangência da Engenharia de Software
+ 2. Conceitos Básicos: ciclo de vida de desenvolvimento de sistemas
+ 3. O Paradigma Orientado a Objeto
+ 4. A Linguagem de Unificada de Modelagem (UML)
+ 5. Outros paradigmas de desenvolvimento de sistemas
+ 6. Conceitos de Gerência de Projetos
+
+
+CONTEÚDO PROGRAMÁTICO
+1. A Engenharia de Software
+    1.1. Apresentação: Engenharia de software em uma grande empresa
+    1.2. Problemas típicos do desenvolvimento de sistemas
+2. O Paradigma Orientado a Objeto (POO)
+    2.1. Conceitos Básicos
+    2.2. Ciclo de vida no POO: especificação, projeto e construção
+    2.3. A metodologia de Análise e Projeto Orientados a Objeto (APOO)
+3. A Linguagem Unificada de Modelagem (UML)
+    3.1. Importância da unificação dos modelos
+    3.2. Apresentação dos diversos modelos da UML
+    3.3. Exercícios de Modelagem com UML
+4. Outras Metodologias de Desenvolvimento
+    4.1. Paradigma Estruturado
+    4.2. Métodos Ágeis
+5. Comparativo entre ciclos de vida
+6. Noções de Projeto, Testes e Manutenção
+7. Métricas de Gerenciamento de Projetos
+    7.1. Método dos Pontos por Função
+    7.2. Método dos Casos de Uso
+CRONOGRAMA DE ATIVIDADES
+
+   Nº de Aulas                 Conteúdos
+       1       Introdução - Apresentação da disciplina e do trabalho em grupo
+       1       Discussão de caso: a situação do HCPA
+       2       Engenharia de software: dificuldades no desenvolvimento e conceitos básicos
+       2       Orientação a Objetos: conceitos básicos
+       8       Especificando sistemas utilizando a UML. Exercícios e trabalho da disciplina
+       1       Prova 1
+       2       Metodologias e ciclos de vida de sistemas
+       3       Outras técnicas de modelagem de sistemas
+       2       Projeto de sistemas (noções básicas)
+       1       Metodologias de teste e manutenção
+       2       Métricas básicas na gerência de projetos
+       1       Prova 2
+       4       Encontros em aula para discussão do trabalho da disciplina
+
+METODOLOGIA DE ENSINO (EXPERÍÊNCIAS DE APRENDIZAGEM)
+A disciplina tem caráter teórico-prático, com aulas ministradas pelo professor, exercícios desenvolvidos em aula
+e trabalho prático em grupo de alunos.
+
+CRITÉRIOS DE AVALIAÇÃO
+Provas Escritas
+Serão realizadas duas provas escritas, sem consulta, com peso 2 cada.
+Trabalhos Práticos
+Grupos de alunos desenvolverão uma especificação de sistema com usuários reais, utilizando a UML.
+O trabalho será desenvolvido com a utilização do horário de algumas aulas, mas essencialmente deverá ser
+realizado em horário extraclasse. Terá peso 5, englobando a apresentação e a monografia.
+Avaliação da participação individual nas aulas
+Ao professor caberá ainda a avaliação da participação do aluno, que terá peso 1 na composição da nota final.
+Formação do Conceito Final
+A média ponderada das provas, trabalhos e avaliação do professor será convertida em conceito, mediante a
+tabela abaixo:
+Nota                Conceito
+>= 9,0 = A     >= 7,5 e < 9,0 = B    >= 6,0 e < 7,5 = C      < 6,0 = D
+
+ATIVIDADES DE RECUPERAÇÃO
+No caso de falta justificada a uma das duas provas, o aluno poderá recuperá-la em data, local, horário e forma
+a serem definidas pelo professor.
+
+BIBLIOGRAFIA BÁSICA
+
+Conteúdo programático no site http://www.inf.ufrgs.br/~zirbes/EngSw_N_INF01_127/
+
+Larman, C. Utilizando UML e Padrões - Uma Introdução à Análise e ao Projeto Orientados a Objetos,
+Bookman, 2007. (em Português)
+Livro texto da disciplina. Descreve passo a passo o processo de Análise e Projeto Orientados a Objetos
+utilizando a notação UML.
+(PRE 05)         Pressman, R. S.: Engenharia de Software. Makron Books do Brasil: Mcgraw-Hill, c2005. SP.
+(PAULA 2003) Paula Filho, W. P. – Engenharia de Software: Fundamentos, Métodos e Padrões– LTC, 2003
+(SOM 2003) Sommerville, Ian – Engenharia de Software – Pearson Education, 2003
+(PAG 2003) Page_Jones, M. - Fundamentos de Desenho Orientado a Objetos com UML, 2003
+(VAR 02) Vargas, R., V. – Gerenciamento de Projetos, Brasport 2002
+Fowler, M. ; Scott, K. UML Essencial, Bookman, 2000.
+(FUR 98) Furlan, J. D. Modelagem de Objetos através da UML, Sao Paulo : Makron Books
+

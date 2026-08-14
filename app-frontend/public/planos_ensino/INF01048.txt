@@ -1,0 +1,110 @@
+                                                                Departamento de Informática Aplicada
+                                                                       Tel.: 3308 3333 / Fax: 3308 7308
+                                                                             Email: dep.ina@inf.ufrgs.br
+                                                                       WEB: http://www.inf.ufrgs.br/ina
+
+                                    PLANO DE ENSINO
+Disciplina:                   INTELIGÊNCIA ARTIFICIAL
+Código:                       INF01048
+Carga horária:                60
+Créditos:                     04
+Pré-requisitos:               INF05508 e INF01121
+Natureza das aulas:           Teórico-práticas
+Cursos aos quais é oferecida: 120.05
+Programa desenvolvido:        a partir de 2001/1
+
+SÚMULA:
+Métodos de resolução de problemas em IA.
+Representação de conhecimento.
+
+OBJETIVOS:
+Introduzir as técnicas de resolução de problemas desenvolvidas em IA e aplicáveis em diversas áreas
+da computação.
+
+CONTEÚDO PROGRAMÁTICO:
+1. Introdução, áreas da IA, diferenças entre IA e computação convencional
+2. Métodos de Resolução de Problemas
+   2.1 Busca em espaço de estados
+   2.2 Redução de problemas
+3 Jogos
+4. Representação de conhecimento e métodos de inferência
+   4.1 Regras de Produção
+   4.2 Redes Semânticas
+   4.3 Frames
+   4.4 Lógica de Primeira Ordem e Lógica Nebulosa
+   4.5 Métodos de inferência
+   4.6 Sistemas Especialistas
+5 Abordagens Alternativas de Processamento de Conhecimento
+   5.1 Raciocínio Baseado em Casos
+   5.2 IA Distribuída
+   5.3 Algoritmos Genéticos
+   5.4 Redes Neurais
+   5.5 Descoberta de conhecimento em bases de dados
+
+PROCEDIMENTOS DIDÁTICOS:
+     - aulas expositivas e de exercícios
+     - projetos extra-classe
+
+SISTEMA DE AVALIAÇÃO:
+     - 2 provas
+     - 1 trabalho (necessário para aprovação)
+     - presença e participação nas aulas
+
+BIBLIOGRAFIA:
+BAR, A. e FEIGENBAUM, E. (Editors) The Handbook of Artificial Intelligence. Vol. 1. William
+       Kaufmann Inc. , Los Alamos, California, 1981.
+BITTENCOURT, G. Inteligência Artificial - Ferramentas e Teorias. 10ª escola de Computação,
+       Campinas, 8-13 julho de 1996.
+LUGER, G. Inteligência Artificial: estruturas e estratégias para a solução de problemas complexos.
+       Bookman. Porto Alegre, 2004.
+RICH, E. KNIGHT, K. Inteligência Artificial. Makron Books do Brasil. 1994
+RUSSELL, S. e NORVIG, P. Inteligência Artificial. Editora Campus, 2004.
+                                                             Departamento de Informática Aplicada
+                                                                    Tel.: 3308 3333 / Fax: 3308 7308
+                                                                          Email: dep.ina@inf.ufrgs.br
+                                                                    WEB: http://www.inf.ufrgs.br/ina
+
+                                  PLANO DE ENSINO
+WINSTON, P. H. Artificial Intelligence (3rd Ed). Reading, Mass., Addison-Wesley, 1993.
+
+
+
+CRONOGRAMA 2009/2:          PROF. LUIS OTAVIO ALVARES
+
+  Aula 1      18/08    Apresentação da disciplina, histórico da IA, áreas de atuação
+  Aula 2      20/08    Apresentação de fita de vídeo com entrevista de M. Minsky
+  Aula 3      25/08    Métodos de resolução de problemas: busca em espaço de estados e redução de
+                       problemas
+ Aula 4       27/08    Jogos: algoritmo Minimax
+ Aula 5       01/09    Jogos: exemplos; definição do trabalho extra-classe
+ Aula 6       03/09    Representação de conhecimento: regras de produção e lógica tradicional
+ Aula 7       08/09    Representação de conhecimento: redes semânticas, frames , lógica fuzzy
+ Aula 8       10/09    Sistemas especialistas: exemplos, conceitos básicos
+ Aula 9       15/09    Sistemas especialistas: características do domínio, Geradores de S.E.
+ Aula 10      17/09    Sistemas especialistas: aquisição de conhecimento
+ Aula 11      22/09    Mecanismo de inferência; Tratamento de incerteza
+ Aula 12      24/09    Metodologia KADS
+ Aula 13      29/09    Primeira Prova
+ Aula 14      01/10    Raciocínio baseado em casos
+ Aula 15      06/10    Redes neurais
+ Aula 16      08/10    Redes neurais
+ Aula 17      13/10    Algoritmos genéticos
+ Aula 18      15/10    Algoritmos genéticos – entrega das notas da primeira prova
+              20/10    Semana acadêmica
+              22/10    Semana acadêmica
+ Aula 19      27/10    Campeonato entre os programas de jogos: primeiro turno
+ Aula 20      29/10    Aprendizagem
+ Aula 21      03/11    Descoberta de conhecimento em banco de dados
+ Aula 22      05/11    Algoritmos de Mineração de Dados
+ Aula 23      10/11    IA distribuída
+ Aula 24      12/11    IA distribuída
+ Aula 25      17/11    Discussão sobre IA: aspectos filosóficos
+ Aula 26      19/11    aula para esclarecimento de dúvidas
+ Aula 27      24/11    Segunda Prova
+ Aula 28      26/11    Campeonato entre os programas de jogos: segundo turno
+ Aula 29      01/12    Apresentação oral do trabalho do jogo e entrega do relatório (todos)
+                       – entrega das notas da segunda prova
+ Aula 30      03/12    Apresentação oral do trabalho do jogo (continuação)
+              04/12    Divulgação dos conceitos
+              10/12    Prova de recuperação de conceito D
+

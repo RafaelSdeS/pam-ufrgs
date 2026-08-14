@@ -1,0 +1,152 @@
+UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+INSTITUTO DE MATEMÁTICA
+DEPARTAMENTO DE ESTATÍSTICA
+1. Dados de Identificação
+Código: MAT02219
+Denominação da disciplina: Probabilidade e Estatística
+Número de créditos: 4
+Semestre: 2008/1
+Pré-requisitos: MAT01353 ou MAT01166 ou MAT01102 ou MAT01109
+Curso a que se destina: 011.01; 011.02; 032.00; 033.00; 094.00; 095.00; 101.00; 102.00;
+103.00; 104.00; 105.00; 106.00; 107.00; 108.00; 114.00; 120.05; 161.01; 161.02; 212.01;
+212.03; 222.00
+2. Objetivos
+• Ensinar que Probabilidade é a parte da Matemática utilizada no estudo dos fenômenos
+considerados aleatórios, suas noções básicas e algumas aplicações elementares.
+• Ensinar que a Estatística é um conjunto de técnicas e também uma linguagem, onde e
+como deve ser utilizada, suas noções fundamentais e algumas aplicações clássicas.
+3. Súmula
+Probabilidade: Conceitos e Teoremas Fundamentais. Variáveis Aleatórias. Distribuições de
+Probabilidade. Estatística Descritiva. Noções de Amostragem. Inferência Estatística:
+Teoria da Estimação e Testes de Hipóteses. Regressão Linear Simples. Correlação.
+4. Conteúdo Programático
+1. População e amostra. Censos e amostragens. Parâmetros e estatísticas. Técnicas de
+amostragens, enfatizando a amostragem aleatória simples.
+2. Estatística Descritiva: freqüências absolutas e relativas, freqüências simples e
+acumuladas, medidas de tendência central e medidas de variabilidade.
+3. Representação gráfica: gráfico de setores, gráficos de colunas, histograma, diagrama de
+Pareto.
+4. Probabilidade: conceitos básicos, propriedades, probabilidades condicionais e eventos
+independentes. Teorema de Bayes.
+5. Variáveis aleatórias discretas e contínuas: função de probabilidade, função densidade,
+função de distribuição acumulada, esperança, variância e outras medidas.
+6. Modelos probabilísticos: Binomial, Hipergeométrico, Poisson, Exponencial, Uniforme e
+Normal, χ2, t, F. Ajustamento de modelos a dados reais.
+7. Estimação por Ponto e por Intervalo: proporções, percentagens, médias, diferenças de
+médias e variâncias.
+8. Testes de Hipóteses: tipos de erro, níveis de significância e níveis descritivos amostrais.
+Testes sobre proporções, percentagens, médias, diferenças de médias e variâncias.
+9. Correlação. Regressão Linear Simples.
+5. Procedimentos Didáticos
+O programa será desenvolvido em aulas expositivas teórico-práticas, complementadas por
+leituras e pela realização de exercícios sobre os conteúdos abordados.
+
+6. Sistema de Avaliação
+• Serão realizadas 3 provas escritas. O escore da 1ª e da 2ª terão peso 2. O escore da 3ª
+terá peso 3. O total y = 2 x1 + 2 x 2 + 3 x3 produzirá o conceito final de cada estudante da
+seguinte forma: A (60 < y ≤ 70), B (50 < y ≤ 60) ou C (40 < y ≤ 50).
+• Somente os alunos com y ≤ 40 terão direito a uma prova parcial de recuperação do seu
+menor escore, após aula de revisão. Em caso de empate entre 2 ou 3 escores, compete ao
+professor a escolha daquele que será recuperado.
+• Se a freqüência for inferior a 75%, o aluno receberá conceito FF.
+7. Cronograma
+aula 1
+aula 2
+aula 3
+aula 4
+aula 5
+aula 6
+aula 7
+aula 8
+aula 9
+aula 10
+aula 11
+aula 12
+aula 13
+aula 14
+aula 15
+aula 16
+aula 17
+aula 18
+aula 19
+aula 20
+aula 21
+aula 22
+aula 23
+aula 24
+aula 25
+aula 26
+aula 27
+aula 28
+aula 29
+aula 30
+aula 31
+aula 32
+aula 33
+aula 34
+
+População e amostra. Censos e amostragens. Parâmetros e estatísticas.
+Técnicas de amostragens, enfatizando a amostragem aleatória simples.
+Estatística Descritiva: freqüências absolutas e relativas, freqüências simples
+e acumuladas.
+Estatística Descritiva: medidas de tendência central e medidas de
+variabilidade.
+Representação gráfica: gráfico de setores, gráficos de colunas, histograma,
+diagrama de Pareto.
+Probabilidade: conceitos básicos, propriedades, probabilidades condicionais
+e eventos independentes. Teorema de Bayes.
+Probabilidade: Teorema de Bayes.
+Variáveis aleatórias discretas e contínuas.
+Função de probabilidade, função densidade, função de distribuição
+acumulada, esperança, variância e outras medidas.
+prova 1
+Modelos probabilísticos: Binomial, Hipergeométrico, Poisson
+Modelos probabilísticos: Binomial, Hipergeométrico, Poisson.
+Modelos probabilísticos: Exponencial, Uniforme.
+Modelos probabilísticos: Normal, χ2, t, F.
+Modelos probabilísticos: Normal, χ2, t, F.
+Modelos probabilísticos: Ajustamento de modelos a dados reais.
+Estimação por ponto: proporções, percentagens, médias, diferenças de
+médias e variâncias.
+Estimação por Intervalo: médias e variâncias.
+Estimação por Intervalo: diferenças de médias.
+Estimação por Intervalo: proporções, percentagens.
+prova 2
+Testes de Hipóteses: tipos de erro, níveis de significância e níveis descritivos
+amostrais.
+Testes de Hipóteses: Testes sobre uma média.
+Testes de Hipóteses: Testes sobre duas médias independentes.
+Testes de Hipóteses: Testes sobre duas médias dependentes.
+Testes de Hipóteses: Testes sobre diferenças de médias.
+Testes de Hipóteses: Testes sobre variâncias.
+Testes de Hipóteses: Testes sobre proporções, percentagens.
+Correlação
+Regressão linear simples.
+Regressão linear simples.
+prova 3
+revisão
+RECUPERAÇÃO
+
+8. Bibliografia Básica
+1. Barbetta, P.A.; Bornia, A.C. e Reis, M.M. Estatística para Cursos de Engenharia e
+Informática, Ed. Atlas, 2004.
+2. Costa Neto, P. L. Estatística, Ed. Edgar Blücher.
+3. Montgomery, D. Estatística Aplicada e Probabilidade para Engenheiros. 4.ed. Rio de
+Janeiro: LTC, 2006.
+4. Morettin, P. A. e Bussab, W. O. Estatística Básica, Ed. Atual.
+5. Meyer, P. Probabilidade. Aplicações à Estatística, Ed. Livros Técnicos e Científicos.
+6. Notas de aula escritas pelos professores.
+9. Bibliografia Complementar
+1.
+2.
+3.
+4.
+5.
+
+Fonseca, J. S. e Martins, G. A. Curso de Estatística, Ed. Atlas.
+Guerra, M. J. e Donaire, D. Estatística Indutiva, Ed. Livraria Ciência e Tecnologia.
+Mendelhall, W. Probabilidade e Estatística (Vol. I), Ed. Campus.
+Soares, J. F. e outros. Instrodução à Estatística, Ed. Livros Técnicos e Científicos.
+Spiegel, M. R. Probabilidade e Estatística, Ed. McGraw-Hill.
+
+

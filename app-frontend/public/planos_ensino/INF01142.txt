@@ -1,0 +1,169 @@
+                     UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                              INSTITUTO DE INFORMÁTICA
+                       DEPARTAMENTO DE INFORMÁTICA APLICADA
+
+
+DISCIPLINA:                           Sistemas Operacionais I N
+CÓDIGO:                               INF01142
+CURSOS/PRE-REQUISITO:
+          ARQUITETURA E ORGANIZAÇÃO DE COMPUTADORES II
+          ESTRUTURAS DE DADOS
+
+CARGA HORÁRIA:                        4
+CRÉDITOS:                             4
+Professor Regente:                    Alexandre Caríssimi
+Professor Turma:                      Marinho Pilla Barcellos (Turma A)
+
+SÚMULA
+ Montador. Processamento de macros. Carregadores. Ligadores. Conceitos básicos de sistemas
+ operacionais: processos, organizações de sistemas operacionais, chamadas de sistema. Gerência
+ do processador: estados de processo, escalonamento. Entrada e saída: dispositivos e
+ controladores, software de E/S, interrupções, dependência e independência. Gerência de memória:
+ partições fixas e variáveis, segmentação, memória virtual. Gerência de arquivos.
+
+OBJETIVOS
+ A disciplina aborda fundamentos de sistemas operacionais, com ênfase nos algoritmos clássicos,
+ nas políticas e nos mecanismos que dirigem o funcionamento interno de um núcleo operativo. Ao
+ final do curso, o estudante deve ser capaz de:
+  1. Identificar e correlacionar o funcionamento básico de montadores, processadores de macros,
+     ligadores e carregadores, dentro de uma arquitetura computacional.
+  2. Entender como programas são transformados ao longo destas etapas até serem executados.
+  3. Aplicar os conceitos básicos de sistemas operacionais, como escalonamento, programação
+     concorrente, deadlocks, etc. em sistemas operacionais e outras artefatos de software.
+  4. Descrever os componentes básicos de um sistema operacional convencional: gerência de
+     processador, gerência de entrada e saída, gerência de memória e gerência de arquivos.
+
+CONTEÚDO PROGRAMÁTICO
+1. Apresentação da disciplina. Introdução a sistemas operacionais. Chamadas de sistema.
+   Programas de sistema. Conceitos básicos. Tipos de sistemas operacionais.
+2. Noções básicas de programação C/C++.
+3. Conceito de multiprogramação: processo, ciclo CPU e E/S, estados. Suporte de hardware:
+   interrupções, modos do processador. Implementação de processos: representação de processos,
+   bloco descritor do processo, filas. Modelo de processo. Relacionamentos entre processos.
+4. Suporte de hardware para multiprogramação: proteção de memória, proteção de periféricos,
+   proteção de CPU.
+5. Programação concorrente: conceito, seção crítica. Exclusão mútua: propriedades, mecanismos.
+   Primitivas: mutex e semáforos. Deadlock.
+6. Gerência do processador: escalonamento, eventos, chaveamento de contexto, níveis de
+   escalonamento. Tipos de escalonador: preemptivo versus não preemptivo. Não preemptivos: FIFO
+   e SJF. Preemptivo: round-robin, por prioridades, múltiplas filas com realimentação.
+7. Threads: conceitos, implementação, modelo N:1, modelo 1:1 e modelo M:N.
+8. Gerência de memória: memória lógica e física. Endereço lógico e físico. Função de mapeamento.
+   MMU. Montadores, compiladores, carregadores e ligadores. Amarração estática e dinâmica.
+9. Alocação de memória: particionada simples, particionada estática, particionada dinâmica.
+   Algoritmos de gerência. Algoritmo buddy, overlay e swapping.
+
+
+                                               1/3
+10. Paginação: endereçamento lógico e físico. Tabela de páginas. Problemas com paginação.
+    Paginação multinível.
+11. Tabela de páginas invertida. Implementação da tabela de páginas. TLB. Hit ratio e miss ratio.
+12. Segmentação e segmentação com paginação: segmento, endereço lógico versus físico.
+    Implementação da tabela de segmentos: via memória, via registradores. Aspectos de proteção e
+    compartilhamento.
+13. Memória virtual: conceito, vantagens e desvantagens. Paginação por demanda: princípio da
+    localidade, implementação, falta de páginas, desempenho, procedimento de swapping. Alocação
+    de memória: Alocação igualitária e proporcional. Alocação global e local. Política de substituição
+    de páginas. Algoritmos locais: FIFO, LRU, Segunda chance. Algoritmos de alocação global:
+    working set e FFP. Thrashing. Pré-paginação.
+14. Gerência de E/S: conceitos básicos. Organização lógica do software: device driver, subsistema de
+    E/S, independência do dispositivo, E/S em nível de usuário. Bufferização. Chamadas bloqueantes,
+    não bloqueantes e assíncronas.
+15. Disco magnético: organização e formatação. Acesso a dados. Desempenho do disco: tempo de
+    seek, latência rotacional, tempo de transferência. Escalonamento do disco: FCFS, SSTF,
+    SCAN,C-SCAN e C-LOOK.
+16. Sistema de arquivos: requisitos básicos. Estrutura hierárquica. Arquivos: conceito, nomes, tipos,
+    organização lógica, operações. Diretório: conceito, linear, dois níveis, árvore, grafo. Aliases.
+    Implementação de arquivos.
+17. Implementação de diretórios.
+18. Implementação de arquivos. Organização do espaço em disco: alocação contígua e não contígua.
+    Método encadeado, indexado e combinado. Gerenciamento de espaço livre: Mapa de bits. Lista
+    de blocos livres.
+19. Aspectos de confiabilidade e desempenho em sistemas de arquivos: cache de disco, área de
+    swap, extents, arquivos esparsos, jornalização.
+20. Sistemas de arquivos distribuídos: objetivos, conceitos básicos, implementação, semântica de
+    compartilhamento. Aspectos de proteção: listas de controle de acesso e capacidades. básicos
+    sobre arquitetura e organização de computadores
+
+TÉCNICAS DE ENSINO (EXPERIÊNCIAS DE APRENDIZAGEM)
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos
+conceitos sobre sistemas operacionais com aspectos de implementação de sistemas operacionais
+existentes.
+
+CRITÉRIOS DE AVALIAÇÃO
+A avaliação da disciplina será realizada mediante trabalhos práticos extra-classe e duas provas
+escritas. A data de entrega dos trabalhos práticos será divulgada junto com a especificação dos
+mesmos, no decorrer do semestre. Fará parte da avaliação do trabalho uma demonstração prática de
+seu funcionamento.
+
+Será considerado aprovado o aluno que obtiver no mínimo SEIS (6.0) na parte prática (MTP) e
+também no mínimo SEIS (6.0) na média das provas teóricas. Média inferior a 6 em um dos quesitos
+reprova o aluno. A média final, MF, para efeito dos conceitos de aprovação (A, B e C), é calculada da
+seguinte forma:
+
+                                      MF = (P1 + P2 + MTP)/3
+
+onde P1, P2 e MTP são a prova 1, a prova 2 e a média dos trabalhos práticos no semestre,
+respectivamente.
+
+Provas Escritas
+Serão realizadas duas provas em datas previamente informadas (conforme abaixo), envolvendo todo
+o conteúdo das aulas anteriores à prova. Provas podem conter questões descritivas, analíticas,
+objetivas de simples e múltipla escolha com justificativa ou questões sobre os trabalhos realizados
+(propostos).
+
+                                                 2/3
+Trabalhos Práticos
+Os trabalhos práticos serão de natureza implementacional, e realizados em horário extra-classe. A
+entrega dos trabalhos deverá ser feita através de upload na página da disciplina no moodle. Não
+serão aceitos trabalhos entregues pessoalmente ou por email, a não ser em circunstâncias especiais
+(como indisponibilidade do servidor).
+
+Formação do Conceito Final
+A MF será convertida em conceito através da tabela abaixo, levando-se também em conta nesse
+conceito a participação em aula, interesse, assiduidade e outros critérios subjetivos.
+
+A      : Média final ≥ 9,0
+B      : 7,5 ≤ Média final < 9,0
+C      : 6,0 ≤ Média final < 7,5
+D      : (0,5×P1 + 0,5×P2) OU      MTP < 6,0
+FF     : Falta de freqüência
+
+
+ATIVIDADES DE RECUPERAÇÃO
+Recuperação por falta justificada
+No caso de falta justificada a uma das 2 provas, o aluno poderá recuperá-la em data, horário e local a
+serem marcados pelo professor.
+
+Recuperação do Conceito D
+O aluno que obtiver conceito final D poderá recuperá-lo, realizando uma prova de recuperação
+versando sobre todo o conteúdo do programa. Esta nota substituirá a menor nota dentre as provas
+escritas (P1 e P2) realizadas pelo aluno.
+
+
+BIBLIOGRAFIA BÁSICA
+[1] Silberschatz, A.; Galvin, “Operating system concepts”. Addison-Wesley, 1994 (4th ed e suas
+     edições mais recentes, que inclui o livro “Applied Operating System Concepts” 1st ed.) http://
+     portal.acm.org/citation.cfm?id=562353
+[2] Oliveira, R.; Carissimi, A.; Toscani, S.; “Sistemas Operacionais”. Instituto de Informática da
+     UFRGS. Editora Sagra Luzzato. Série de livros didáticos, número 11. 3a edição. 2004.
+[3] Tanenbaum, A.S. “Modern Operating Sysytems”. Prentice-Hall, 1992.
+
+
+
+CRONOGRAMA DE ATIVIDADES
+                     Data                                          Avaliação
+                  21/05/2009                                        Prova 1
+                  04/06/2009                                  Entrega da Prova 1
+                  18/06/2009                               Entrega trabalhos (estrito)
+                  25/06/2009                                        Prova 2
+                  30/06/2009                           Exercício para avaliação trabalhos
+                  02/07/2009                       Entrega da Prova 2 e divulgação notas
+                  09/07/2009                                     Recuperação
+
+Cronograma completo na página web da disciplina no moodle.
+
+
+
+                                                 3/3
+

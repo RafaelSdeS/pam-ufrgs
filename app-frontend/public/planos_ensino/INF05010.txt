@@ -1,0 +1,226 @@
+Dados de identificação
+ Disciplina                   Otimização combinatória
+ Oferecida para               BIOINFORMÁTICA, BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO, BIOTECNOLOGIA MOLECULAR, BACHARELADO
+                              EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL
+ Período Letivo               2020/2
+ Professor Responsável        Marcus Rolf Peter Ritt
+ Sigla                        INF05010
+ Carga horária (horas)                                                                                                  60
+  CH Autônoma (horas)                                                                                                   10
+  CH Coletiva (horas)                                                                                                   50
+  CH Individual (horas)                                                                                                  0
+
+Súmula                        Modelagem matemática, programação linear e não-linear. Programação inteira e solução via métodos exatos. Algoritmos de
+                              aproximação e heurísticas.
+
+
+
+Objetivos                     A disciplina tem por objetivo fornecer fundamentos teóricos e aplicados da área de Otimização Combinatória. O foco será em
+                              modelagem matemática e resolução de problemas de programação linear e programação inteira via métodos exatos, métodos
+                              de aproximação e heurísticas. Ao final da disciplina espera-se que o aluno
+
+                              - saiba modelar problemas de programação linear e inteira,
+                              - conheça o método Simplex e saiba resolver problemas de programação linear através do uso deste algoritmo,
+                              - conheça e seja capaz de aplicar os métodos de solução para problemas de otimização e programação inteira,
+                              - conheça as principais técnicas para projetar algoritmos de aproximação,
+                              - conheça e saiba aplicar os métodos heurísticos clássicos.
+
+
+
+
+Conteúdo Programático
+
+Título                        Conteúdo                                                                                        Semana
+Programação linear (A)        Otimização combinatória: área de abrangência, importância e caracterização. Modelagem           1
+                              Matemática de problemas de otimização combinatória, parte 1.
+Programação linear (B)        Modelagem Matemática de problemas de otimização combinatória, parte 2.                          2a6
+
+                              Programação Linear:
+                              Formulações equivalentes e formas normais. Resolução gráfica e formulação geométrica. O
+                              método Simplex. Dualidade. Análise de sensibilidade.
+Prova 1                       Prova sobre os fundamentos da programação linear.                                               4
+Programação inteira           Formulação de programas inteiros. Caracterização de sistemas com soluções simples.              7 a 12
+                              Desigualdades válidas. Branch and bound. Métodos de planos de corte.
+Prova 2                       Prova sobre dualidade e analise de sensibilidade na programação linear e modelagem de           9
+                              programas inteiros.
+Buscas locais e heurísticas   Gradiente descendente, multi-start, GRASP. Variable neighborhood search. Metropolis e           13 a 14
+                              simulated annealing. Busca Tabu e algoritmos genéticos.
+                              Técnicas de projeto de algoritmos de aproximação. Limites de aproximação.                       14
+Prova 3                       Prova sobre técnicas de resolver programas inteiros.                                            14
+Apresentação de trabalhos     Apresentação e discussão dos trabalhos finais em aula.                                          15
+Prova de recuperação          Prova de recuperação sobre toda materia.                                                        16
+
+
+
+Metodologia
+ Estratégias didáticas em     Aulas teóricos-expositivas, exercícios individuais e em classe, prática de laboratório remota, e trabalhos
+ atividades remotas           individuais e em grupo com apresentação dos resultados. (Aqui e no resto do documento texto em azul é do plano de ensino
+                              regular, sem alterações.)
+
+                              O conteúdo das aulas teóricos-expositivas será apresentado em aulas à distância. Na turma A as aulas ocorrem de forma
+                              síncrona no horário regular da disciplina de acordo com o cronograma disponibilizado no AVA da disciplina. Elas são
+                              gravadas e podem ser assistidas também de forma assíncrona. Na turma B as aulas teóricas serão gravadas de forma
+                              assíncrona, e serão disponibilizadas aos alunos. Aulas síncronas, com exercícios e com espaço para tirar dúvidas sobre o
+                              conteúdo assíncrono teórico serão disponibilizadas. Além do material de apoio regular (apostila, formulários, dicas no AVA da
+                              disciplina) material extra elaborado durante aula (lâminas com anotações, perguntas e respostas nos chats) será
+                              disponibilizado.
+
+                              Os exercícios individuais e as soluções dos exercícios serão distribuídas online pelo AVA da disciplina. Os alunos podem
+                              entregar respostas digitalmente.
+
+                              As práticas em laboratório (duas aulas síncronas em datas divulgadas no cronograma da disciplina) consistem de um parte
+                              breve teórica e com demonstrações, disponibilizado da mesma forma que as aulas teóricas-expositivas e uma parte prática
+                              que pode ser realizada em qualquer computador pessoal.
+
+                              Os trabalhos serão distribuídos e organizados pelo AVA da disciplina. O projeto, implementação, e elaboração do relatório é
+                              individual e a distância. A apresentação será ou em sessões síncronas de acordo com o cronograma, ou podem ser gravadas
+                              de forma assíncrona pelos estudantes e entregues digitalmente.
+
+                              Os estudantes podem contar com atendimento individual do professor individual para esclarecer dúvidas de forma remota em
+                              horários a serem combinados.
+
+
+ Estratégias didáticas em     Não há.
+ atividades presenciais
+ Recursos disponibilizados    Tem dois pontos principais para acesso a informação: o AVA da disciplina e emails pela SAV. Será usado um dos AVAs institucionais.
+                              Também é possível disponibilizar material extra em outros ambientes, e.g. em páginas Web nos servidores do Instituto, acessível
+                              diretamente ou via o AVA.
+
+                              As atividades síncronas serão realizados por uma ferramenta de tele-conferência (e.g. Mconf, Microsoft Teams, Zoom). Elas são
+                              gravadas e disponibilizadas online de forma assíncrona.
+
+                              A listas de exercícios serão distribuídas no formato PDF via AVA. A entrega pode ser feita por texto, imagem, ou PDF. O mesmo vale
+                              para provas teóricas.
+
+                              A parte teórica dos laboratórios será realizada igual às aulas teóricos-expositivas; a parte prática pode ser realizada offline ou online num
+                              servidor.
+
+                              O apoio individual para responder dúvidas é oferecido via diferentes canais de comunicação (email institucional pela SAV, sessões
+                              individuais por tele-conferência, ou de forma assíncrona numa ferramenta de trabalho colaborativo).
+
+                              Para elaboração do trabalho tem exemplos de semestres anteriores, templates para o relatório, instâncias de teste e explicações online.
+
+ Recursos computacionais      Para acompanhar as atividades previstas é necessário ter acesso regular à Internet.
+
+                              Para acompanhar as atividades síncronas é necessário um computador com acesso à Internet ou telefone com microfone e
+                              opcionalmente câmera. Para acompanhar de forma assíncrona, um navegador Internet com a capacidade de visualizar vídeos é
+                              suficiente.
+
+                              Para as listas de exercícios precisa um visualizador PDF. Para uma entrega por texto, imagem, ou PDF precisa, editor, câmera, ou
+                              gerador PDF, respectivamente, e acesso a email ou o AVA da disciplina via navegador. O mesmo vale para provas teóricas.
+
+                              Para acompanhar os laboratórios precisa um computador pessoal com direito de instalar a linguagem de programação Julia (disponível
+                              para Linux, Mac, Windows) o pacote GLPK e um navegador. Em caso de falta de recursos adequados é possível oferecer acesso a um
+                              servidor que precisa somente um navegador.
+
+                              Para apoio individual precisa acesso a um canal de comunicação (email institucional pela SAV, sessões indivíduos por tele-conferência,
+                              ou de forma assíncrona numa ferramenta colaborativa para grupos, e.g. slack ou discord).
+
+                              Para elaboração do trabalho os estudantes precisam um computador pessoal com um ambiente de programação, e software para escrita
+                              de texto e produção PDF, igual a disciplina presencial. Para a apresentação opcionalmente precisa um software para gravação (e.g. OBS
+                              Studio) ou a gravação é feita numa ferramenta de tele-conferência.
+
+ Informações sobre Direitos   Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para qualquer outra finalidade,
+ Autorais e de Imagem:        sob as penas legais.
+                              Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a autoria, sob pena de plágio.
+                              A liberdade de escolha de exposição da imagem e da voz não isenta o aluno de realizar as atividades originalmente propostas ou
+                              alternativas;
+                              Todas as gravações de atividades síncronas devem ser previamente informadas por parte dos professores.
+                              Somente poderão ser gravadas pelos alunos as atividades síncronas propostas mediante concordância prévia dos professores e colegas,
+                              sob as penas legais.
+                              É proibido disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+                              específica para a finalidade pretendida.
+                              Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica, sendo vedada a distribuição do
+                              material cuja a licença não permita ou sem a autorização prévia dos professores para o material de sua autoria.
+
+
+Carga Horária
+ Teórica                                                                                                                                                                 50
+ Prática                                                                                                                                                                 10
+
+Experiências de               Aulas teóricos-expositivas, exercícios individuais e coletivos, prática de laboratório remoto, e trabalhos
+Aprendizagem                  individuais e em grupo com apresentação dos resultados.
+
+                              Estão previstas Atividades Autônomas do Aluno com uma carga horária de 10 (dez) horas a serem desenvolvidas ao longo do
+                              semestre. As atividades previstas podem incluir: realização de temas e trabalhos, leitura de texto (capítulos de livros ou
+                              artigos), resolução de listas de exercícios entre outras.
+
+                              Aulas teóricos-expositivas que podem ser acompanhadas de forma síncrona online, ou de forma assíncrona, em forma de
+                              vídeos, chats, slides anotados, demonstrações, e quizzes.
+
+                              Listas de exercícios com soluções online (texto e código), e esclarecimento individual de dúvidas.
+
+                              Laboratórios práticos com breve introdução das ferramentas e solução de programas lineares e inteiros por resolvedores.
+
+                              Provas teóricas com questões sobre a matéria e correção individual.
+
+                              Um trabalho prático em grupos de implementação e avaliação experimental, com apoio individual, elaboração de um relatório
+                              e uma apresentação, com avaliação e feedback individual.
+
+Critérios de Avaliação        A disciplina será ministrada em três unidades. A primeira e segunda unidade serão avaliadas através de três provas (n_1,n_2,n_3). A
+                              terceira unidade será avaliada através de um trabalho prático (n_4). A média final é m=(n_1+n_2+n_3+n_4)/4. O resultado de cada
+                              avaliação será disponibilizado 15 dias úteis após do prazo de entrega.
+
+                              O conceito final corresponde com a nota final como seguinte:
+
+                              Conceito final=
+                              A caso 9<=m<=10
+                              B caso 7.5<=m<9
+                              C caso 6<=m<7.5
+                              Caso m<6: ver “Atividades de Recuperação Previstas”
+
+                              Para ser aprovado é necessário obter um conceito final de A,B ou C.
+
+                              As provas serão realizadas de forma remota, distribuídas em formato digital no horário regular da disciplina, com uma janela de tempo de
+                              horas para resolução e entrega dos resultados digitalizados por email. Em caso de problemas técnicos os alunos podem informar o
+                              professor até um prazo de 72h; neste caso o aluno pode fazer uma nova prova num horário a ser combinado com o professor. As
+                              apresentações dos trabalhos práticos acontecem em dois seminários síncronos online com participação de todos alunos.
+                              Alternativamente as apresentações dos trabalhos podem ser gravadas e entregues de forma digital. As demais definições do plano de
+                              ensino continuam valendo (as três provas e o trabalho tem o mesmo peso na nota final).
+                            ATENÇÃO: a detecção de plágio em qualquer atividade implicará penalidades (nota zero) a todos os envolvidos.
+
+                            De acordo com a Resolução do CEPE sobre o ERE, durante o período em que perdurar o ERE, fica inaplicável a atribuição de conceito
+                            FF, prevista no Parágrafo 2º, do Artigo 44, da Resolução nº 11/2013 do CEPE.
+                            Para os estudantes matriculados até o final do período e que deixaram de participar da Atividade de Ensino, deverá ser atribuído o
+                            registro NI (Não Informado) no campo de conceito do sistema acadêmico.
+                            Para os casos previstos no Parágrafo 1º, a justificativa do registro NI deverá conter a referência ao período de excepcionalidade.
+                            Os casos de não informação de conceito durante o ERE, deverão ser resolvidos até o fim do segundo período letivo, após o fim da
+                            situação emergencial de saúde.
+
+
+Atividades de Recuperação   Alunos com nota final m<6 podem realizar uma única prova de recuperação sobre toda matéria. Caso a nota na prova de recuperação é
+Previstas                   pelo menos min{10,12-m} o conceito final será C, caso contrário o aluno fica com D.
+
+                            Pré-requisito para realização da prova de recuperação é a participação nas provas 1, 2 e 3 e ter entregue o trabalho prático.
+
+                            A realização da prova de recuperação ocorrerá no mesmo formato que a realização de provas teóricas.
+
+Bibliografia                Sem alterações
+                            Básica Essencial
+                            Maculan, Nelson; Fampa, Marcia H. Costa. Otimização linear. Brasília: Unb, 2006. ISBN 8523009272. Não disponível online.
+                            Papadimitriou, Christos H.. Combinatorial Optimization :algorithms and complexity.. Usa: Dover Publications, 1998. ISBN 978048602581.
+                            Não disponível online.
+                            Vanderbei, Robert J.. Linear Programming:foundations and extensions. New York: Springer, c2007. ISBN 9780387743875. Disponível no
+                            SABI+.
+
+                            Básica
+                            Bazaraa, Mokhtar S.; Sherali, Hanif D.; Shetty, C. M.. Nonlinear programming :theory and algorithms. Hoboken, N.J.: Wiley-Interscience,
+                            c2006. ISBN 0471486000; 9780471486008. Disponível no SABI+.
+                            Goldbarg, Marco Cesar; Luna, Henrique Pacca Loureiro. Otimização combinatória e programação linear :modelos e algoritmos. Rio de
+                            Janeiro: Elsevier, c2005. ISBN 8535215204. Não disponível online.
+                            Korte, Bernhard H.; Vygen, Jens. Combinatorial optimization:theory and algorithms. Berlin: Springer-Verlag, 2002. ISBN 3540431543.
+                            Disponível no SABI+.
+                            Luenberger, David G.; Ye, Yinyu. Linear and nonlinear programming. New York: Springer, 2008. ISBN 9780387745022. Disponível no
+                            SABI+.
+                            Nemhauser, George L.; Wolsey, Laurence A.. Integer and combinatorial optimization. New York: John Wiley, c1999. ISBN
+                            9780471359432. Não disponível online.
+
+                            Complementar
+                            Ausiello, Giorgio. Complexity and approximation: combinatorial optimization problems and their approximability properties. Berlin:
+                            Springer-Verlag, c1999. ISBN 3540654313. Não disponível online.
+                            Hromkovic, Juraj. Algorithmics for hard problems :introduction to combinatorial optimization, randomization, approximation, and heuristics.
+                            Berlin: Springer-Verlag, c2001. ISBN 3540668608. Não disponível online.
+                            Laurence A. Wolsey. Integer programming. Wiley, 1998. ISBN 0471283665. Não disponível online.
+                            Laurence A. Wolsey, George L. Nemhauser. Integer and combinatorial optimization. Wiley, 1999. ISBN 0471359432. Não disponível
+                            online.
+

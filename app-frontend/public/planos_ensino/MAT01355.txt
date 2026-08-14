@@ -1,0 +1,224 @@
+355
+UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+INSTITUTO DE MATEMÁTICA
+DEPARTAMENTO DE MATEMÁTICA PURA E APLICADA
+
+PLANO DE ENSINO
+Código MAT
+
+Nome
+
+01355 Álgebra Linear I – A
+Créditos/horas-aula
+
+04 / 60
+Semestre
+
+Súmula
+Sistema de equações lineares. Matrizes. Fatoração L.U. Vetores. Espaços
+vetoriais. Ortogonalidade. Valores próprios. Aplicações.
+
+2008-2
+Cursos
+Ciência da Computação
+Ciências Atuariais – Noturno
+Ciências Econômicas
+Engenharia Ambiental
+Engenharia Cartográfica – Noturno
+Engenharia Civil
+Engenharia de Alimentos
+Engenharia de Computação
+Engenharia de Controle e Automação
+Engenharia de Materiais
+Engenharia de Minas
+Engenharia de Produção
+Engenharia Elétrica
+Engenharia Mecânica
+Engenharia Metalúrgica
+Engenharia Química
+Bacharelado em Estatística
+Bacharelado em Física
+Licenciatura em Física – Diurno
+Licenciatura em Física – Noturno
+Bacharelado em Matemática
+Licenciatura em Matemática - Diurno
+Licenciatura em Matemática – Noturno
+Licenciatura em Química – Noturno
+Bacharelado em Química
+Química Industrial
+Professor Responsável
+
+Etapa
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+2ª
+3ª
+3ª
+2ª
+2ª
+2ª
+
+Pré-Requisitos
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01024 Cálculo Diferencial e Integral I
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01035 Geometria Analítica B
+MAT01035 Geometria Analítica B
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+MAT01353 Cálculo e Geometria Analítica I – A
+
+Wagner de Oliveira Cortes
+Professores Ministrantes
+
+Aron Taitelbaum (Turmas A3 e E2)
+Janice Nery (Turmas A1, B1 e E3)
+Juliana Sartori Ziebell (Turma A2, B2 e C2)
+Rodrigo Sychocki da Silva (Turma C1)
+Janaina Pires Zingano (Turmas D1 e E1)
+Maria Paula Gonçalves Fachin (Turmas B3 e D2)
+Wagner de Oliveira Cortes (Turmas A4 e B4)
+
+Objetivos:
+Proporcionar ao estudante uma visão integrada dos conceitos de Álgebra Linear e suas
+aplicações, tornando o estudante capaz de reconhecer e resolver problemas na área,
+associados a futuras disciplinas e/ou outros projetos a que se engajarem.
+
+Metodologia e Experiências de Aprendizagem:
+Aulas expositivas e dialogadas; Resolução de exercícios como atividade de aula e
+extraclasse; Atendimento extraclasse integrado pelos professores da disciplina;
+Eventualmente, dependendo de disponibilidade, experiências em laboratório computacional, a
+critério de cada professor.
+
+Conteúdo Programático:
+1. Sistemas de Equações Lineares: formas escalonadas, sistemas equivalentes, operações
+elementares, sistemas em forma triangular, algoritmo de escalonamento, interpretação
+geométrica de vetores do IR2 e do IR3, combinações lineares de vetores, sistemas
+homogêneos e não homogêneos, independência linear, introdução a transformadas
+lineares, a matriz de uma transformação linear.
+2. Matrizes: Operações com matrizes, inversa de uma matriz, caracterização das matrizes
+inversíveis, fatoração LU.
+3. Espaços vetoriais: Espaços vetoriais e subespaços. Subespaço gerado por um conjunto.
+Espaço coluna, espaço linha, espaço nulo e transformadas lineares, conjuntos linearmente
+independentes, bases, sistemas de coordenadas, dimensão, posto e mudança de base.
+4. Autovalores e autovetores: Determinantes, equação característica, diagonalização,
+aplicação.
+5. Ortogonalidade: Produto interno, comprimento e ortogonalidade, conjuntos ortogonais,
+projeções ortogonais, processo de Gram-Schmidt, fatoração QR, mínimos quadrados,
+ajuste de curvas, diagonalização de matrizes simétricas, formas bilineares, matriz de uma
+forma bilinear, formas bilineares simétricas, formas quadráticas e aplicação.
+
+Cronograma de Atividades:
+O cronograma seguinte descreve a quantidade de encontros, de duas horas-aula cada,
+para cada um dos tópicos descritos no Conteúdo Programático:
+Tópico 1 – 4 encontros;
+Tópico 2 – 5 encontros;
+Tópico 3 – 6 encontros;
+Verificação 1 – 1 encontro;
+Tópico 4 – 4 encontros;
+Tópico 5 – 10 encontros;
+Verificação 2 – 1 encontro;
+Atendimentos – 4 encontros;
+Recuperações – 1 encontro.
+
+2
+
+Critérios de Avaliação:
+Serão feitos duas provas no semestre. A primeira versando sobre os três primeiros tópicos
+descritos nos conteúdos programáticos, e a segunda, sobre os dois últimos tópicos. Serão
+aprovados diretamente os alunos com
+i)
+75% de presenças nas aulas;
+ii)
+Média aritmética das duas notas maior ou igual a 6,0;
+iii)
+Nenhuma das notas inferior a 5,0.
+A atribuição do conceito final ao aluno aprovado diretamente será feita em
+correspondência com a média final M do mesmo, usando-se a seguinte referência:
+M ≥ 9,0 corresponde a conceito final A;
+7,5 ≤ M < 9,0 corresponde a conceito final B;
+6,0 ≤ M < 7,5 corresponde a conceito final C.
+
+Atividades de Recuperação:
+Aos alunos com média maior ou igual a 2,0, satisfazendo a condição i) acima mas não a
+condição ii) ou a iii), serão oferecidas, no final do semestre, provas de recuperações em uma
+única data, de caráter substitutivo, com a seguinte regra:
+
+
+
+
+O aluno com as duas notas abaixo de 5,0 fará uma prova de toda a matéria do
+semestre.
+O aluno com apenas uma das notas abaixo de 5,0 fará a respectiva substituição.
+O aluno com nenhuma nota abaixo de 5,0 poderá escolher entre recuperar uma das
+áreas ou fazer uma prova de toda a matéria do semestre.
+
+Para os alunos que se submeteram a uma prova de recuperação, aplica-se novamente as
+condições de aprovação i) a iii), tomando a nota da recuperação e a outra obtida no semestre
+para compor a média final. Para os alunos que se submeteram à prova de toda a matéria do
+semestre, a nota obtida neste prova torna-se a média final M e a aprovação se dará se M ≥ 6,0.
+Para o aluno que recuperar apenas uma nota, aplicar-se-á a mesma regra de atribuição de
+conceitos descrita anteriormente. Para o aluno que necessitar recuperar ambas as notas será
+atribuído conceito em correspondência com a média final M do mesmo, obtida após prova de
+toda a matéria, usando-se a seguinte referência:
+7,5 ≤ M ≤ 10,0 corresponde a conceito final B;
+6,0 ≤ M < 7,5 corresponde a conceito final C.
+Os alunos não aprovados mas que cumpriram a exigência de freqüência mínima
+receberão conceito final D e os demais receberão conceito final FF.
+
+Bibliografia Básica:
+1. Lay, David C., “Álgebra Linear com Aplicações”, LTC Editora, 2ª Ｅｄｉçãｏ, Rio de
+Janeiro, RJ, 1999.
+
+3
+
+Bibliografia Complementar:
+1. Anton, H e Rorres, C., “Álgebra Linear com Aplicações”, Bookman, 8ª Edição, Porto
+Alegre, RS, 2001.
+2. Callioli, Carlos, A., Domingues, Higyno H. e Costa, Roberto, C.F., “Álgebra Linear e
+Suas Aplicações”, Atual Editora, 6ª Edição, São Paulo, 1995.
+3. Lischutz, Seymor, “Álgebra Linear”, Ed. McGraw-Hill do Brasil Ltda, 3ª Edição, São
+Paulo, SP, 1997.
+4. Boldrini, José L.et all, “Álgebra Linear”, Ed. Harbra, 3ª Edição, São Paulo, SP, 1984.
+5. Lima, Elon L., “Álgebra Linear”, Coleção Matemática Universitária, IMPA, Rio de
+Janeiro, RJ, 1996.
+
+4
+
+

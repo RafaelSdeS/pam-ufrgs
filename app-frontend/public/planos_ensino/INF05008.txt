@@ -1,0 +1,207 @@
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Instituto de Informática
+Departamento de Informática Teórica
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LEILA RIBEIRO
+Disciplina: PENSAMENTO COMPUTACIONAL N
+Sigla: INF05008
+
+Créditos: 4
+
+Carga Horária
+CH Teórica: 42h
+
+CH Prática: 18h
+
+Total: 60h
+
+CH Coletiva: 50h
+
+CH Autônoma: 10h
+
+CH Individual: 0h
+
+Carga Horária de prática Extensionista (CHE) 0h
+Súmula
+Definição de problemas, algoritmos e pensamento computacional. Projeto e implementação de soluções algorítmicas para problemas
+usando o paradigma funcional. Principais técnicas de resolução de problemas: generalização, decomposição e transformação.
+Resolução de problemas usando recursão e meta-programação. Introdução às principais formas de organizar a informação:
+registros, listas, árvores, grafos. Fundamentos da sistematização da construção de soluções computacionais: documentação, boas
+práticas, projeto e análise (testes e correção).
+Currículos
+Currículos
+
+Etapa Aconselhada
+
+Natureza
+
+1
+
+Obrigatória
+
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL
+
+Eletiva
+
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL
+
+Eletiva
+
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL
+
+Eletiva
+
+BIOINFORMÁTICA
+
+5
+
+Obrigatória
+
+BIOTECNOLOGIA MOLECULAR
+
+Eletiva
+
+Objetivos
+A disciplina visa desenvolver as seguintes habilidades:
+- Analisar problemas e elaborar algoritmos que os solucionem, utilizando uma linguagem de programação funcional para descrever
+esses algoritmos;
+- Conhecer as principais estruturas de dados e escolher as estruturas adequadas para modelar diferentes situações, justificando
+suas escolhas;
+- Construir soluções computacionais utilizando conceitos de recursão e metaprogramação;
+- Resolver problemas usando o pensamento computacional, aplicando as principais técnicas de construção de soluções
+computacionais e analisando criticamente as soluções.
+Conteúdo Programático
+Semana: 1 a 3
+Título: A Computação e o pensamento computacional
+Conteúdo: Introdução à disciplina, definição de problemas, algoritmos e pensamento computacional. Introdução a algoritmos: conceitos básicos,
+generalização e decomposição
+
+Semana: 4 a 6
+Título: Dados estruturados e técnicas para resolver problemas:tabelas, listas e recursão
+Conteúdo: Tabelas, listas e recursão
+Semana: 7 a 10
+Título: Dados estruturados e técnicas para resolver problemas: registros e alta-ordem
+Conteúdo: Dados estruturados, tipos mistos, listas de estruturas, alta-ordem
+Semana: 11 a 15
+
+Página 1
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+Título: Dados estruturados e técnicas para resolver problemas: árvores, grafos, recursão e alta-ordem
+Conteúdo: Estruturas de dados árvores e grafos. Transformação e reuso. Análise de algoritmos.
+Metodologia
+Os conteúdos serão desenvolvidos de várias formas usando diferentes metodologias de ensino-aprendizagem. Serão realizadas
+aulas teo&#769;ricas expositivas, aulas práticas em laboratório, bem como utilizadas técnicas de sala de aula invertida, na qual os
+alunos estudam previamente os conteúdos através de videoaulas, leituras e pesquisas de forma assíncrona e, posteriormente,
+discutem em sala de aula.
+Serão propostas várias atividades, a serem realizadas pelos alunos, de forma autônoma. Essas atividades deverão ser realizadas e
+entregues até as datas previstas. Todas as atividades serão registradas, entregues e avaliadas através do Moodle da disciplina, que
+conterá as instruções a serem seguidas para a realização de cada atividade.
+Recursos disponibilizados: As atividades previstas assim como as instruções para sua realização serão disponibilizadas no Moodle
+da UFRGS. Eventuais componentes externos ao Moodle e necessários para a realização das atividades estarão indicados no próprio
+Moodle. Também serão disponibilizados no Moodle links para os livros e artigos online e gratuitos, indicados para leitura e estudo,
+visando auxiliar na realização das atividades propostas.
+Recursos computacionais: Para a realização das atividades de programação propostas será necessário ter acesso a computador ou
+máquina virtual onde esteja instalada a ferramenta VSCode com a extensão Pyret (os laboratórios do Instituto de Informática têm
+essa ferramenta instalada). Algumas atividades podem ser realizadas em dispositivo computacional com acesso à internet através
+da utilização da ferramenta disponível em https://code.pyret.org/. Para a submissão de atividades é necessário dispositivo
+computacional com acesso à internet e acesso ao Moodle da disciplina.
+A disciplina utilizará o sistema Moodle/UFRGS ou similares para distribuição de material, entrega de trabalhos, organização de
+grupos de discussão, acompanhamento geral da disciplina e atividades didáticas, como informado pelo professor ministrante no
+início do semestre.
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse a serem avaliados.
+O professor ministrante poderá se valer de aulas presenciais ou à distância (essa última para as atividades de sala de aula invertida,
+conforme previsto no cronograma que será divulgado para os alunos no início do semestre), assim como do apoio de Professores
+Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas.
+Experiências de Aprendizagem
+Participar de aulas expositivas dialogadas;
+Realizar trabalhos de programação ou questionários em laboratório;
+Resolver listas de exercícios extraclasse ou implementação de trabalho ou responder questionários;
+Realizar leitura de material disponibilizado ou assistir a vídeos ou vídeoaulas;
+Realizar provas presenciais.
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor ministrante.
+Critérios de avaliação
+Sera&#771;o realizadas três provas, P1, P2 e P3. A me&#769;dia final (M ) sera&#769; calculada da seguinte forma:
+M = P1 &#8727; 0.2 + P2 &#8727; 0.3 + P3 &#8727; 0.3 + 0.2 * AA
+onde AA corresponde a&#768; avaliac&#807;a&#771;o das atividades autônomas a serem realizadas pelos alunos. Cada atividade
+
+Página 2
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+e&#769; avaliada individualmente e o valor AA representa a me&#769;dia de aproveitamento do aluno na realizac&#807;a&#771;o
+destas tarefas.
+
+A conversa&#771;o da me&#769;dia final M para conceitos sera&#769; realizada como descrito a seguir:
+Faltas > 25% : FF (reprovado)
+0 <= M < 6.0 : sem conceito (recuperac&#807;a&#771;o) ou D - ver Ativ. de recuperac&#807;a&#771;o previstas
+6.0<= M < 7.5 : C (aprovado)
+7.5 <= M < 9.0 : B (aprovado)
+9.0 <= M : A (aprovado)
+Obs: Somente sera&#771;o calculadas as me&#769;dias gerais daqueles alunos que tiverem obtido, ao longo do semestre, um
+i&#769;ndice de frequência a&#768;s aulas igual ou superior a 75% das aulas previstas. Aos que na&#771;o satisfizerem este
+requisito, sera&#769; atribui&#769;do o conceito FF (Falta de Frequ&#776;e&#770;ncia). O desempenho do aluno somente pode ser
+aferido em atividades avaliativas entregues por ele. Às atividades avaliativas não entregues pelos alunos será atribuída a nota zero
+(exceto nos casos previstos nas atividades de recuperação).
+Atividades de Recuperação Previstas
+O discente que apresentar desempenho insatisfatório (M < 6) poderá realizar a atividade de recuperação, que será uma prova. Serão
+considerados aprovados na recuperação os alunos que obtiverem um aproveitamento de, no mínimo, 60% nesta atividade. A estes
+será atribuído o conceito C. Aos demais, será atribuído o conceito D.
+Não há recuperação das provas P1, P2 e P3 e nem dos trabalhos por não comparecimento/entrega, exceto nos casos previstos na
+legislação (saúde, parto, serviço militar, convocação judicial, luto, etc.), sendo necessária a devida comprovação.
+Bibliografia
+Básica Essencial
+Kathi Fisler, Shriram Krishnamurthi, Benjamin S. Lerner, Joe Gibbs Politz.. A Data-Centric Introduction to Computing. EUA: dcic-world.org, 2025.
+Disponível em: https://dcic-world.org/
+Matthias Felleisen,Robert Bruce Findler, Matthew Flatt, Shriram Krishnamurthi. How to Design Programs. The MIT Press., 2001. Disponível em:
+www.htdp.org
+
+Básica
+Matthias Felleisen,Robert Bruce Findler, Matthew Flatt, Shriram Krishnamurthi. How to Design Programs. Estados Unidos: MIT Press, 2014.
+Disponível em: https://htdp.org/
+
+Complementar
+Cormen et alli. Introduction to Algorithms. The MIT Press, 2001. ISBN 0262032937.
+David Harel. Algorithmics - The Spirit of Computing. Addison-Wesley, 1998. ISBN 0201504014.
+David Harel. Computers LTD. What they really can't do. Oxford University Press, 2002. ISBN 0198505558.
+THOMAS H. CORMEN. Algorithms Unlocked. Estados Unidos: MIT Press, 2013. ISBN 9780262518802. Disponível em:
+http://search.ebscohost.com/login.aspx?direct=true
+
+Outras Referências
+Não existem outras referências para este plano de ensino.
+
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito à sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+
+Página 3
+
+PLANO DE ENSINO
+Data de Emissão: 14/08/2026
+
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+Página 4
+
+

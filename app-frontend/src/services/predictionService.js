@@ -16,7 +16,7 @@ function makeElectivePlaceholder(credits) {
 }
 
 export const predictionService = {
-  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0 }) {
+  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0, firstSemesterCreditLimit = null }) {
     const completedSet = new Set(completedCodes.map(c => String(c).toUpperCase()))
     let remaining = subjects.filter(s => !completedSet.has(String(s.code).toUpperCase()))
     const simulatedCompleted = [...completedCodes]
@@ -29,6 +29,9 @@ export const predictionService = {
       // limiar de "créditos eletivos" de algumas disciplinas (ex.: Trabalho de Graduação no ECP).
       // Não conta as eletivas do próprio semestre sendo montado agora.
       const electivesPlacedSoFar = initialElectiveCredits - electivesLeft
+      // Só o primeiro semestre gerado nesta chamada usa o limite customizado - os demais
+      // seguem o limite padrão, mesmo quando essa chamada está regerando só uma "cauda" do plano.
+      const semesterLimit = (semesters.length === 0 && firstSemesterCreditLimit != null) ? firstSemesterCreditLimit : creditLimit
 
       // Status calculado sobre TODAS as disciplinas (não só as pendentes), para que
       // a soma de créditos concluídos usada nos pré-requisitos por crédito seja correta.
@@ -43,7 +46,7 @@ export const predictionService = {
 
       for (const s of available) {
         const credits = s.credits || 0
-        if (chosen.length === 0 || totalCredits + credits <= creditLimit) {
+        if (chosen.length === 0 || totalCredits + credits <= semesterLimit) {
           chosen.push(s)
           totalCredits += credits
         }
@@ -56,9 +59,9 @@ export const predictionService = {
       }
 
       // Preenche a folga restante do semestre com blocos de eletiva até fechar a cota.
-      while (electivesLeft > 0 && (chosen.length === 0 || totalCredits < creditLimit)) {
+      while (electivesLeft > 0 && (chosen.length === 0 || totalCredits < semesterLimit)) {
         const blockCredits = Math.min(ELECTIVE_BLOCK_CREDITS, electivesLeft)
-        if (chosen.length > 0 && totalCredits + blockCredits > creditLimit) break
+        if (chosen.length > 0 && totalCredits + blockCredits > semesterLimit) break
         chosen.push(makeElectivePlaceholder(blockCredits))
         totalCredits += blockCredits
         electivesLeft -= blockCredits
