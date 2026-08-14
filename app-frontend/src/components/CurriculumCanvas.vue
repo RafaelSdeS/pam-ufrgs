@@ -822,7 +822,7 @@ const miniViewportRect = computed(() => {
                   </span>
                 </div>
                 <v-chip size="small" variant="tonal" color="secondary" class="font-weight-bold">
-                  {{ item.credits }} créditos
+                  {{ item.credits || 4 }} créditos{{ item.credits ? '' : ' (estimado)' }}
                 </v-chip>
               </div>
 
@@ -1060,7 +1060,7 @@ const miniViewportRect = computed(() => {
                       <strong>Semestre Recomendado:</strong> {{ s.semester }}º
                     </div>
                     <div class="text-caption mb-1">
-                      <strong>Créditos:</strong> {{ s.credits || 4 }}
+                      <strong>Créditos:</strong> {{ s.credits || 4 }}{{ s.credits ? '' : ' (estimado)' }}
                     </div>
                     <div class="text-caption mb-1">
                       <strong>Carga Horária:</strong> {{ getWorkload(s) }}
