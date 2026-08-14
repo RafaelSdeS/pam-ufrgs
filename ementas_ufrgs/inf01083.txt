@@ -1,0 +1,284 @@
+                                                   PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 14/08/2026
+
+
+
+                                                        Instituto de Informática
+                                               Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LUCAS MELLO SCHNORR
+Disciplina: LINGUAGENS DE PROGRAMAÇÃO II
+Sigla: INF01083              Créditos: 4
+
+Carga Horária
+CH Teórica: 40h      CH Prática: 20h       Total: 60h
+CH Coletiva: 40h       CH Autônoma: 20h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Análise estática. Geração de código intermediário. Otimização de código. Geração de código. Sistemas de execução. Tópicos
+avançados.
+
+Currículos
+                                        Currículos                                              Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                        7                  Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                                    8                    Eletiva
+
+Objetivos
+O objetivo da disciplina é que os alunos entendam como funciona o backend de um compilador do ponto de vista da tradução dirigida
+pela sintaxe, tanto em nível teórico (algoritmos e estruturas de dados envolvidos) como em nível prático (empregando geradores de
+compilador). Devem saber projetar e implementar o backend de um pequeno compilador para uma linguagem de programação
+simples, tipicamente um subconjunto de uma linguagem imperativa como aquela da linguagem C, empregando uma linguagem de
+representação intermediária adequada, sua conversão para linguagem assembly e empregando técnicas de otimização neste
+processo. A disciplina também se propõe a apresentar algoritmos associados ao tempo de execução, como algoritmos explícitos e
+implícitos associados à alocação de memória dinâmica.
+
+
+A disciplina visa desenvolver as seguintes habilidades específicas:
+
+
+Projetar e implementar o backend de um compilador; Identificar características e propriedades de linguagens intermediárias;
+Mecanismos de tradução das principais estruturas de linguagens de usuário; Principais mecanismos de otimização de código em
+nível de compilação.
+
+
+Projetar processadores de linguagens (de programação ou de descrição de dados) identificando suas principais etapas e as
+diferentes representações pelas quais passa um programa.
+
+
+Identificar características e propriedades de linguagens de programação existentes e escolher a mais adequada para a solução de
+um dado problema.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Apresentação da disciplina e dos conceitos básicos necessários ao seu acompanhamento. Compiladores e interpretadores.
+Conteúdo: Revisão de Análise Léxica, Sintática e Semântica. Etapas de processadores de linguagens (compilador, interpretador, transpilador),
+              front-end, back-end.
+  Semana: 2
+    Título: Tradução dirigida pela sintaxe
+Conteúdo: O conceito de tradução dirigida pela sintaxe como guia do processo de tradução. Framework de gramática de atributos. Regras de
+
+
+
+
+                                                                      Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                       Data de Emissão: 14/08/2026
+
+
+
+              tradução arbitrárias na forma de ações semânticas.
+  Semana: 3
+     Título: Implementações de Funções e Escopo
+Conteúdo: Chamadas de procedimento. Espaço de nomes. Mecanismos de passagem de parâmetros.
+  Semana: 4 a 7
+     Título: Introdução a Representações Intermediárias. Geração de código intermediário.
+Conteúdo: Taxonomia. Tipos de representações intermediárias. Mapeamento de valores para nomes. Tabelas de símbolos.
+
+
+              Endereçamento de variáveis. Atribuição considerando escopo. Expressões aritméticas. Expressões lógicas via avaliação numérica e
+              por controle de fluxo (curto-circuito). Controle de fluxo. Endereçamento de arranjos multidimensionais. Estruturas e Ponteiros.
+  Semana: 8
+     Título: Revisão e Prova 1
+Conteúdo: Revisão da primeira metade da disciplina e aplicação da Prova 1.
+  Semana: 9 a 12
+     Título: Introdução Otimização de Código. Otimização: Análise de Fluxo de Dados. Otimizações Escalares.
+Conteúdo: Visão geral de otimização de código na perspectiva de compiladores. Tipos de otimização de código. Otimização Local, Regional,
+              Global, Interprocedural.
+              Tipos de Análise Estática. Exemplo de Análise Estática. Análise Iterativa de Fluxo de Dados. Forma de Atribuição Única Estática.
+              Análise Interprocedural.
+              Eliminação de Código inatingível. Movimentação de Código. Eliminação de redundâncias.
+  Semana: 13 a 14
+     Título: Alocação de Registradores. Sistemas de execução de código.
+Conteúdo: Alocação e Atribuição de Registradores. Classes de Registradores. Algoritmos locais e globais de alocação.
+              Gerenciamento de memória; just-in-time compilation; algoritmos de coleta de lixo. Tópicos avançados, como o gerenciamento
+              explícito do heap e a desalocação de memória implícita.
+  Semana: 15
+     Título: Revisão e Prova 2
+Conteúdo: Revisão da primeira metade da disciplina e aplicação da Prova 2.
+
+Metodologia
+O material didático da disciplina, incluindo links para sistemas e material de apoio, listas de exercícios, assim como a
+disponibilização dos enunciados das atividades de avaliação e seu recebimento, acontece no AVA escolhido pelo professor (site
+institucional). O principal meio de comunicação é informado à turma no início do semestre.
+
+
+Os assuntos teóricos são apresentados principalmente por meio de aulas expositivas, com o uso pontual de métodos alternativos de
+ensino, como aulas invertidas e exercícios realizados em grupo em aula, etc. As aulas seguem o cronograma divulgado no início do
+semestre.
+
+
+Em cada encontro, os alunos podem fazer perguntas, interagir e consultar o material disponibilizado on-line pelo professor
+previamente, além de consultar as referências bibliográficas disponíveis na biblioteca. A realização de um projeto de backend do
+compilador, juntamente com as provas, são aplicados para verificar o entendimento dos conceitos e métodos vistos durante a
+disciplina.
+
+
+Componentes da Carga Horária
+
+
+As 60 horas previstas para atividades indicadas neste Plano de Ensino incluem: a) 40 horas de atividades coletivas, consistindo em
+24 encontros de 100 minutos de duração cada (2 períodos de 50 minutos por encontro sendo 2 encontros por semana distribuídos
+ao longo do semestre); b) 20 horas de atividades autônomas, correspondentes a execução do trabalho prático do projeto de backend
+do compilador ao longo do semestre. A carga horária de 60 horas está dividida em 40 horas de carga teórica, referentes aos
+encontros em sala de aula teórica e laboratórios, e 20 horas de carga prática, referentes ao desenvolvimento do projeto do backend
+
+
+
+
+                                                                          Página 2
+                                                 PLANO DE ENSINO
+                                                                                                             Data de Emissão: 14/08/2026
+
+
+
+do compilador e às atividades autônomas. Não há carga horária individual (professor com cada aluno).
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+O conteúdo programático previsto para cada semana será apresentado na forma de 1/ aulas expositivas, com exercícios que podem
+ser realizados tanto em aula - na forma de exemplos dirigidos estimulados - quanto extraclasse; 2/ aulas em laboratório na forma de
+atividades práticas dirigidas e acompanhamento do projeto de backend do compilador; 3/ realização do projeto que envolve o
+backend do compilador (atividades autônomas). As aulas em laboratório ocorrem conforme a disponibilidade dos laboratórios.
+
+
+O conteúdo será avaliado por meio de provas presenciais, conforme o cronograma estabelecido no início do semestre pelo professor
+da turma. Uma parte fundamental da disciplina é o projeto e a construção do backend do compilador, com base nos conhecimentos
+das aulas teóricas. Neste sentido, os alunos terão a oportunidade de:
+
+
+(0) entender na prática o mecanismo de tradução dirigida pela sintaxe;
+
+
+(1) implementar ações semânticas para gerar código intermediário;
+
+
+(2) implementar um gerador de código abstrato no formato assembly;
+
+
+(3) implementar técnicas de otimização de código.
+
+
+As atividades referentes ao projeto do backend do compilador são realizadas em etapas incrementais, com data-limite para
+conclusão ao longo do semestre. Estão previstos encontros presenciais em laboratório entre o professor e os grupos, com o objetivo
+de acompanhar e discutir a execução do projeto de backend do compilador e esclarecer dúvidas.
+
+
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor responsável.
+
+Critérios de avaliação
+São empregadas provas e avaliações das etapas do projeto para verificar a absorção dos conceitos e dos métodos práticos vistos
+durante a disciplina.
+
+
+Provas Escritas: São realizadas duas provas teóricas (P1 e P2), cada uma cobrindo metade dos assuntos abordados no semestre.
+As duas provas são realizadas de maneira presencial e incluem questões que permitem ao professor ter uma percepção do
+aprendizado dos alunos.
+
+
+Etapas do Projeto: O projeto é realizado em grupo de alunos, com etapas ao longo do semestre. Ele deve ser realizado de maneira
+assíncrona (atividades autônomas), sendo que cada etapa é entregue por meio de um link específico no AVA institucional nas datas
+estabelecidas pelo professor. A quantidade de etapas, com pesos idênticos, é definida no início do semestre pelo professor. As
+etapas devem abordar os assuntos listados em "Experiências de Aprendizagem". Para cada etapa, o professor retorna uma
+avaliação detalhando seu julgamento sobre o andamento da atividade, com dicas e sugestões para melhorar a execução do projeto
+(testes objetivos). Esse retorno pode ser tanto de maneira assíncrona através do AVA Institucional quanto de maneira presencial nos
+encontros em laboratório, por intermédio de entrevista com os grupos.
+
+
+Formação do Conceito Final: As provas têm peso 1 sobre o total da nota da disciplina, formando a nota P. O projeto de compilador
+com suas etapas tem peso 1 sobre o total da nota da disciplina, formando a nota T. A média final (MF) das provas (P) e trabalhos (T)
+formam a "nota da disciplina" (P+T)/2, que será convertida em conceito através da tabela abaixo levando-se também em conta nesse
+conceito a participação e interesse em aula, a critério do professor.
+
+
+
+                                                                    Página 3
+                                                     PLANO DE ENSINO
+                                                                                                                       Data de Emissão: 14/08/2026
+
+
+
+
+Nota Conceito
+>= 9,0 A
+>= 7,5 e < 9,0 B
+>= 6,0 e < 7,5 C
+< 6,0 D
+
+Atividades de Recuperação Previstas
+Cada nota parcial compondo a nota T poderá ser recuperada até o valor máximo de 80% do valor original pela entrega de uma nova
+versão do trabalho corrigindo os eventuais defeitos, em um prazo estipulado pelo professor.
+
+
+No caso de falta justificada à alguma prova teórica por motivo de saúde registrada na Junta Médica da UFRGS, o aluno poderá
+recuperar a prova em data, horário e local a serem marcados pelo professor de comum acordo com o aluno.
+
+
+Ao final do semestre, os alunos que não tiverem atingido desempenho suficiente para a aprovação (MF >= 6.0) poderão realizar uma
+atividade avaliativa geral de recuperação, que versará sobre todo o conteúdo da disciplina. Para ser aprovado na disciplina, o
+discente deverá atingir uma nota mínima na atividade avaliativa de recuperação (Nota Mínima de Recuperação - NMR) determinada
+pela seguinte expressão:
+
+
+NMR = 12 - MF
+
+
+com NMR limitado ao valor máximo de 10 (dez) e MF sendo a Média Final obtida pelo discente e descrita na seção "Critérios de
+Avaliação". O discente em recuperação que atingir a nota mínima de recuperação (NMR >= 6.0), será aprovado com conceito "C",
+caso contrário, será reprovado (conceito "D").
+
+Bibliografia
+Básica Essencial
+Aho, Alfred V.; Sethi, Ravi; Ullman, Jeffrey D... Compiladores :princípios, técnicas e ferramentas.. Rio de Janeiro: LTC, 1995. ISBN 8521610572.
+
+Básica
+Keith D. Cooper e Linda Torczon. Engineering a Compiler. USA: Elsevier, 2012. ISBN 978-0-12-088478-0.
+
+Complementar
+Kernighan, Brian W.; Ritchie, Dennis M.. C Programming Language: ANSI C Version. USA: Prentice Hall, 1988. ISBN 0131103628.
+
+
+
+Outras Referências
+                                 Título                                                              Texto
+BISON manual                                                               https://www.gnu.org/software/bison/manual/
+FLEX manual                                                                https://www.gnu.org/software/flex/manual/
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+
+
+
+
+                                                                          Página 4
+                                                PLANO DE ENSINO
+                                                                                                          Data de Emissão: 14/08/2026
+
+
+
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                  Página 5
+

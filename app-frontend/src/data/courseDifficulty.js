@@ -14,6 +14,9 @@ export const COURSE_DIFFICULTY = {
   INF01216: 'facil',
   INF99003: 'facil',
   INF01217: 'facil',
+  INF01043: 'facil', // Interação Humano-Computador: conceitual/projeto de interfaces, sem prova pesada de matemática
+  ENG10003: 'facil', // Laboratório de Circuitos Elétricos: prática guiada, verificação da teoria já vista em Circuitos Elétricos I
+  INF01082: 'facil', // Laboratório de Redes de Computadores: prática guiada complementar à disciplina teórica
 
   // Difíceis - reservado para filtros clássicos, citados de forma quase unânime
   MAT01353: 'dificil',
@@ -51,6 +54,9 @@ export const COURSE_DIFFICULTY = {
   INF01175: 'dificil', // Sistemas Digitais para Computadores A: projeto RTL, ASM, VHDL/síntese para FPGA
   INF01185: 'dificil', // Concepção de Circuitos Integrados I: CMOS, leiaute, dimensionamento, timing/potência
   INF01194: 'dificil', // Concepção de Circuitos Integrados II: fluxo ASIC standard-cell, ferramentas EDA
+  // Confirmadas por plano de ensino oficial 2026/2 (ementas.inf.ufrgs.br, baixadas em ~/Downloads):
+  INF05029: 'dificil', // Linguagens de Programação I: análise léxica/sintática (LR/LALR), semântica formal, prova de propriedades de LPs
+  INF01083: 'dificil', // Linguagens de Programação II: backend de compilador - geração de código intermediário, otimização, geração de código
 
   // Médios (o restante segue o fallback, mas os principais estão listados aqui por clareza)
   INF01202: 'medio',
@@ -58,8 +64,6 @@ export const COURSE_DIFFICULTY = {
   INF05035: 'medio',
   INF05005: 'medio', // Teoria da Computação I: autômatos e linguagens formais, mais mecânico que TC II
   INF01075: 'medio', // Arquitetura de Computadores: versão introdutória, antecede Organização de Computadores na grade
-  INF05029: 'medio',
-  INF01083: 'medio',
   INF01205: 'medio',
   INF01048: 'medio',
   INF01017: 'medio',
@@ -74,7 +78,6 @@ export const COURSE_DIFFICULTY = {
   INF01097: 'medio',
   ENG10055: 'medio',
   INF01084: 'medio',
-  INF01082: 'medio',
   INF01005: 'medio',
   INF01015: 'medio',
   INF01045: 'medio',
@@ -84,13 +87,11 @@ export const COURSE_DIFFICULTY = {
   INF05018: 'medio',
   INF01088: 'medio',
   INF01127: 'medio',
-  INF01043: 'medio',
   INF01120: 'medio',
   INF01086: 'medio',
   MAT01375: 'medio',
   MAT02050: 'medio',
   MAT02219: 'medio',
-  ENG10003: 'medio',
   INF99004: 'medio',
   'TCC-CIC': 'medio',
   'TG-I-ECP': 'medio',

@@ -1,0 +1,185 @@
+                                                      PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 14/08/2026
+
+
+
+                                                           Instituto de Informática
+                                                  Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: Henrique Becker
+Disciplina: PROJETO E ANÁLISE DE ALGORITMOS II
+Sigla: INF05028               Créditos: 4
+
+Carga Horária
+CH Teórica: 40h      CH Prática: 20h        Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h           CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Análise e corretude de algoritmos. Projeto e implementação de algoritmos: Divisão e Conquista, Programação Dinâmica, e técnicas
+avançadas de projeto. Estruturas de dados avançadas.
+
+Currículos
+                                          Currículos                                             Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                         4                  Obrigatória
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                                                 Eletiva
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                                                 Eletiva
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                                                 Eletiva
+BIOINFORMÁTICA                                                                                                                    Eletiva
+BIOTECNOLOGIA MOLECULAR                                                                                                           Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                          Eletiva
+
+Objetivos
+Esta disciplina tem como objetivo capacitar o aluno a analisar, projetar e implementar algoritmos, com ênfase prática e teórica nas
+estratégias de Divisão e Conquista e Programação Dinâmica. O estudante aprenderá a avaliar a viabilidade dessas técnicas e a
+selecionar as estruturas de dados mais adequadas, desenvolvendo a habilidade de modelar, projetar e adaptar algoritmos para a
+elaboração de programas em linguagens de programação utilizando essas técnicas para solucionar problemas. Além disso, a
+disciplina visa habilitar o aluno a analisar e justificar formalmente a corretude e a eficiência das soluções, bem como reconhecer
+situações onde as técnicas não são capazes de oferecer soluções eficientes para para um problema.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução à Disciplina
+Conteúdo: Apresentação da disciplina, revisão de análise assintótica e corretude, revisão dos algoritmos estudados em Projeto e Análise de
+              Algoritmos I.
+  Semana: 1 a 3
+    Título: Análise de Recorrências de Divisão e Conquista
+Conteúdo: Introdução à análise de recorrências de divisão e conquista, análise da árvore de recorrência, método da substituição, introdução e
+              prova do Método Mestre.
+  Semana: 3 a 6
+    Título: Projeto e Análise de Algoritmos de Divisão e Conquista
+Conteúdo: Multiplicação de números inteiros, multiplicação de matrizes, problema do par de pontos mais próximos, transformada rápida de
+              Fourier, limitante inferior para ordenação e outros tópicos.
+  Semana: 7 a 13
+    Título: Projeto e Análise de Algoritmos de Programação Dinâmica
+Conteúdo: Problema da mochila, alinhamento de sequências, Bellman-Ford, Floyd-Warshall, problemas fortemente NP-difíceis e algoritmos
+
+
+
+
+                                                                             Página 1
+                                                      PLANO DE ENSINO
+                                                                                                             Data de Emissão: 14/08/2026
+
+
+
+               pseudopolinomiais, e outros tópicos.
+  Semana: 14 a 15
+    Título: Tópicos Avançados
+Conteúdo: Análise amortizada, tabelas dinâmicas e outros tópicos.
+  Semana: 16
+    Título: Recuperação
+Conteúdo: Exame de recuperação.
+
+Metodologia
+A disciplina poderá utilizar o sistema Moodle/UFRGS ou similares para distribuição de material, entrega de trabalhos, organização de
+grupos de discussão e acompanhamento geral da disciplina, como informado pelo professor ministrante ao início do semestre.
+
+
+A disciplina poderá usar ferramentas como o Moodle/UFRGS, sistemas de submissão de problemas de programação online (como
+online judges) ou similares para avaliações e atividades didáticas.
+
+
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com o
+desenvolvimento de eventuais exercícios e discussões. Algumas das aulas poderão ser realizadas em laboratórios, para a
+implementação/visualização dos conceitos vistos em aula.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), em um total de 3.000 minutos, e
+mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios
+e trabalhos extraclasse a serem avaliados.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+As experiências de aprendizagem compreendem a participação em aulas expositivas e a realização de trabalhos. O processo pode
+ser complementado por atividades extraclasse que incluem a resolução de listas de exercícios, implementações e questionários,
+bem como o estudo de materiais de leitura e vídeos de apoio.
+
+
+O uso de ferramentas de Inteligência Artificial para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor ministrante.
+
+Critérios de avaliação
+A avaliação é feita através de duas Provas, uma ou mais Avaliações Práticas, e de uma ou mais Atividades Autônomas, respeitando
+os seguintes pesos, Prova 1, com valor 30% da nota final; Prova 2, com valor de 40% da nota final; Avaliações Práticas, com valor
+de 20% da nota final; Atividades Autônomas realizadas ao longo da disciplina, com valor de 10% da nota final. A nota final (NF)
+sera&#769; calculada da seguinte forma:
+NF = (3.0P1 + 4.0P2 + 2.0AP + 1.0AA)/10
+Com base na nota final, será atribuído ao aluno um dos seguintes conceitos:
+A - 9,0 <= NF
+B - 7,5 <= NF < 9,0
+C - 6,0 <= NF < 7,5
+D - NF < 6,0
+FF - Falta de Freqüência (menos que 75% de presença).
+O aluno estará aprovado na disciplina se obtiver conceito A, B ou C e possuir ao menos 75% de presença em aula.
+
+Atividades de Recuperação Previstas
+Um aluno com conceito final D pode realizar uma única prova de recuperação sobre toda a matéria. Alunos com nota igual ou maior
+
+
+
+                                                                      Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 14/08/2026
+
+
+
+que NNR recebem conceito C. NNR (Nota Necessária para Recuperação) é calculada individualmente para cada aluno como max(9,
+12 - NF), onde NF é a Nota Final obtida pelo aluno antes da recuperação. Isto é, para cada décimo a menos do que 6.0 na nota final,
+é necessário um décimo a mais na prova de recuperação, saturando em 9.0.
+
+Bibliografia
+Básica Essencial
+Jon Kleinberg and Eva Tardos. Algorithm Design. 75 Arlington Street, Suite 300, Boston, MA 02116: Pearson, 2005. ISBN 0-321-29535-8. Disponível
+em: https://www.pearson.com/en-us/subject-catalog/p/algorithm-design/P200000003259/9780137546350
+
+Básica
+Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest, Clifford Stein. Algoritmos: teoria e prática (Tradução da 3ª edição americana). Rio de
+Janeiro: Elsevier Campus, 2012. ISBN 9788535236996. Disponível em: https://isbnsearch.org/isbn/9788535236996
+Tim Roughgarden. Algorithms Illuminated (Part 4): Algorithms for NP-Hard Problems. New York: Soundlikeyourself Publishing, 2020. ISBN
+978-0999282960. Disponível em: https://isbnsearch.org/isbn/9780999282960
+Tim Roughgarden. Algorithms Illuminated, Part 1: The Basics. New York: Soundlikeyourself Publishing, 2017. ISBN 978-0-9992829-0-8. Disponível
+em: https://isbnsearch.org/isbn/9780999282908
+Tim Roughgarden. Algorithms Illuminated, Part 2: Graph Algorithms and Data Structures. New York: Soundlikeyourself Publishing, 2018. ISBN
+978-0-9992829-2-2. Disponível em: https://isbnsearch.org/isbn/9780999282922
+Tim Roughgarden. Algorithms Illuminated, Part 3: Greedy Algorithms and Dynamic Programming. New York: Soundlikeyourself Publishing, 2019.
+ISBN 978-0999282946.
+
+Complementar
+A. R. Meyer, E. Lehman, F. T. Leighton. Mathematics for Computer Science. 3651 Peachtree Parkway Suite E-275 Suwanee, GA 30024: 12th Media
+Services, 2017. ISBN 978-1680921229.
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                         Página 3
+

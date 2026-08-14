@@ -1,0 +1,234 @@
+                                                    PLANO DE ENSINO
+                                                                                                              Data de Emissão: 14/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: BRUNO IOCHINS GRISCI
+Disciplina: PROJETO E ANÁLISE DE ALGORITMOS I
+Sigla: INF05027             Créditos: 4
+
+Carga Horária
+CH Teórica: 50h     CH Prática: 10h       Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h           CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Análise e corretude de algoritmos. Notação assintótica. Teoria dos Grafos. Projeto e implementação de algoritmos: Grafos e
+Algoritmos Gulosos. Estruturas de dados para algoritmos gulosos.
+
+Currículos
+                                         Currículos                                              Etapa Aconselhada        Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                     3                Obrigatória
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                                           Eletiva
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                                           Eletiva
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                                           Eletiva
+BIOINFORMÁTICA                                                                                           6                Obrigatória
+BIOTECNOLOGIA MOLECULAR                                                                                                     Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                 3                Obrigatória
+
+Objetivos
+Capacitar o estudante a compreender e aplicar os princípios de análise, projeto e corretude de algoritmos, incluindo a avaliação
+formal de eficiência por meio de notação assintótica e análise de complexidade (melhor, pior e caso médio). Desenvolver habilidades
+para modelar problemas computacionais utilizando grafos, selecionar e justificar o uso de estruturas de dados e algoritmos
+adequados, especialmente algoritmos gulosos e estruturas associadas, e implementar soluções corretas e eficientes em linguagem
+de programação. Habilitar o aluno a analisar criticamente problemas, escolher estratégias de solução, projetar algoritmos,
+demonstrar sua validade, e aplicar técnicas computacionais para organização e busca de dados, incluindo situações que envolvam
+dados multidimensionais e/ou conectividade estrutural. Apresentar os principais teoremas, problemas e algoritmos associados a
+grafos. Ao final, espera-se que o estudante seja capaz de resolver problemas computacionais reais, utilizando conceitos de Teoria
+dos Grafos, algoritmos clássicos e padrões de projeto para criar programas corretos, eficientes e bem fundamentados.
+
+Conteúdo Programático
+  Semana: 1 a 3
+    Título: Introdução à Análise de Algoritmos.
+Conteúdo: Correção de algoritmos.
+             Notação assintótica.
+             Custo assintótico de algoritmos.
+  Semana: 4 a 6
+    Título: Introdução à Teoria dos Grafos
+Conteúdo: Definição de grafo.
+             Representações de grafos.
+             Conceitos fundamentais: grau, conectividade, operações sobre grafos, isomorfismo.
+             Tipos especiais de grafos: árvores, grafos bipartidos.
+  Semana: 7 a 8
+
+
+
+
+                                                                      Página 1
+                                                   PLANO DE ENSINO
+                                                                                                         Data de Emissão: 14/08/2026
+
+
+
+    Título: Projeto e Análise de Algoritmos Básicos sobre Grafos
+Conteúdo: Busca em profundidade.
+              Busca em largura.
+              Distância entre nodos.
+              Componentes conexos.
+              Ordenação topológica.
+  Semana: 8
+    Título: Prova 1
+Conteúdo: Prova 1 versando sobre o conteúdo das semanas 1 a 8
+  Semana: 9
+    Título: Algoritmos Gulosos
+Conteúdo: Estratégia gulosa para projeto de algoritmos.
+              Exemplos iniciais.
+  Semana: 10 a 11
+    Título: Projeto e Análise de Algoritmos Gulosos sobre Grafos
+Conteúdo: Cálculo de distância em grafos com pesos.
+              Cálculo de árvores geradoras de custo mínimo.
+              Estruturas de dados para algoritmos gulosos.
+              Enumeração de árvores.
+  Semana: 12 a 14
+    Título: Exemplos avançados: algoritmos gulosos, teoria dos grafos, algoritmos sobre grafos.
+Conteúdo: Código de Huffman.
+              Grafos eulerianos e hamiltonianos.
+              Planaridade e coloração de grafos. Emparelhamento.
+              Análise de redes.
+  Semana: 15
+    Título: Prova 2
+Conteúdo: Prova 2 versando sobre o conteúdo das semanas 9 a 14.
+  Semana: 16
+    Título: Recuperação
+Conteúdo: Exame de Recuperação.
+
+Metodologia
+A disciplina poderá utilizar o sistema Moodle/UFRGS ou similares para distribuição de material, entrega de trabalhos, organização de
+grupos de discussão e acompanhamento geral da disciplina, como informado pelo professor ministrante ao início do semestre.
+
+
+A disciplina poderá usar ferramentas como o Moodle/UFRGS, sistemas de submissão de problemas de programação online (como
+online judges) ou similares para avaliações e atividades didáticas.
+
+
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com o
+desenvolvimento de eventuais exercícios e discussões. Algumas das aulas serão realizadas em laboratórios, para a
+implementação/visualização dos conceitos vistos em aula.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), em um total de 3.000 minutos, e
+mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios
+e trabalhos extraclasse a serem avaliados.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+
+
+
+
+                                                                      Página 2
+                                                  PLANO DE ENSINO
+                                                                                                                Data de Emissão: 14/08/2026
+
+
+
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Participar de aulas expositivas dialogadas.
+Realizar trabalhos de programação ou questionários em laboratório.
+Resolver listas de exercícios extra-classe ou implementação de trabalho ou responder questionários.
+Realizar leitura de material disponibilizado ou assistir a vídeos ou vídeoaulas.
+Realizar provas presenciais.
+
+
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor ministrante.
+
+Critérios de avaliação
+Estão previstas as seguintes avaliações:
+
+
+- Prova 1 (P1)
+- Prova 2 (P2)
+- Atividades autônomas a serem realizadas durante o semestre (Trab)
+- Avaliações síncronas em laboratório (Lab)
+
+
+A nota final do aluno (NF) é composta pela soma ponderada:
+NF = 0,35*P1 + 0,35*P2 + 0,1*Trab + 0,2*Lab.
+
+
+Com base na nota final, será atribuído ao aluno um dos seguintes conceitos:
+* A - Conceito Ótimo: 9,0 <= NF
+* B - Conceito Bom: 7,5 <= NF < 9,0
+* C - Conceito Regular: 6,0 <= NF < 7,5
+* D - Conceito Insatisfatório: NF < 6,0
+* FF - Falta de Frequência (menos que 75% de presença).
+
+
+O aluno estará aprovado na disciplina se obtiver conceito A, B ou C e possuir ao menos 75% de presença em aula.
+
+Atividades de Recuperação Previstas
+Está previsto um Exame de Recuperação (EXAME) a ser realizado após o fechamento da NF, versando sobre todo o conteúdo da
+disciplina. Após a realização do Exame,
+a nota do aluno será recalculada (NE) como segue:
+
+
+NE = 0,2*NF + 0,8*EXAME
+sendo o novo conceito atribuído sobre NE conforme acima.
+
+Bibliografia
+Básica Essencial
+KLEINBERG, Jon; TARDOS, Eva. Algorithm Design. USA: Addison-Wesley Longman Publishing Co., Inc., 2005. ISBN 978-0-321-29535-4.
+
+Básica
+CORMEN, Thomas H.; LEISERSON, Charles E.; RIVEST, Ronald L.; STEIN, Clifford. Algoritmos: Teoria e Prática. Rio de Janeiro: GEN LTC, 2012.
+ISBN 9788535236996.
+ROUGHGARDEN, Tim. Algorithms Illuminated, Part 1: The Basics. New York, NY: Soundlikeyourself Publishing, LLC, 2017. ISBN
+978-0-9992829-0-8.
+ROUGHGARDEN, Tim. Algorithms Illuminated, Part 2: Graph Algorithms and Data Structures. New York, NY: Soundlikeyourself Publishing, LLC,
+2018. ISBN 978-0-9992829-2-2.
+ROUGHGARDEN, Tim. Algorithms Illuminated, Part 3: Greedy Algorithms and Dynamic Programming. New York, NY: Soundlikeyourself Publishing,
+LLC, 2019. ISBN 978-0-9992829-4-6.
+
+
+
+
+                                                                      Página 3
+                                                  PLANO DE ENSINO
+                                                                                                            Data de Emissão: 14/08/2026
+
+
+
+WEST, Douglas. Introduction to Graph Theory. USA: Pearson, 2017. ISBN 978-0-13-143737-1.
+
+Complementar
+MEYER, A. R.; LEHMAN, E.; LEIGHTON, F. T.. Mathematics for Computer Science. USA: Samurai Media Limited, 2017. ISBN 978-9888407064.
+
+
+
+Outras Referências
+                          Título                                                                Texto
+Edson Prestes. 2016. Introdução à Teoria dos Grafos.                  Edson Prestes. 2016. Introdução à Teoria dos Grafos.
+                                                                      Universidade Federal do Rio Grande do Sul, Instituto de
+                                                                      Informática, Departamento de Informática Teórica.
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito à sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                     Página 4
+
