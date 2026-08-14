@@ -1,0 +1,121 @@
+                                                        Departamento de Informática Aplicada
+                                                               Tel.: 3308 3333 / Fax: 3308 7308
+                                                                     Email: dep.ina@inf.ufrgs.br
+                                                               WEB: http://www.inf.ufrgs.br/ina
+
+                                 PLANO DE ENSINO
+INF01017
+REDES NEURAIS E SISTEMAS FUZZY
+Semestre: 2009/2
+Carga horária: 04 h
+Créditos: 04
+Professor(es): Paulo Martins Engel
+
+Súmula:
+   1.   Fundamentos de redes neurais.
+   2.   RN com aprendizado supervisionado.
+   3.   RN com aprendizado não supervisionado.
+   4.   Fundamentos de sistema fuzzy.
+   5.   Conjuntos fuzzy.
+   6.   Métodos de inferência fuzzy.
+
+Conteúdo Programático:
+  1.  Introdução à Inteligência Computacional
+         1.1 Paradigmas da Inteligência Computacional
+         1.2 Tipos de problemas abordados
+  2. Conceitos básicos dos conjuntos fuzzy
+         2.1 Definições e representações de conjuntos fuzzy
+         2.2 Operações fuzzy- E, OU e Negação
+         2.3 Relações fuzzy
+  3. Conceitos básicos da lógica fuzzy
+         3.1 Variáveis lingüísticas
+         3.2 Fundamentos do raciocínio fuzzy
+         3.3 Arquitetura de um sistema fuzzy
+  4. Fundamentos de redes neurais
+         4.1 Conceitos básicos e inspiração biológica
+         4.2 Modelos de neurônios artificiais
+  5. Redes Neurais com aprendizado supervisionado
+         5.1 O perceptron elementar
+         5.2 O ADALINE
+         5.3 O perceptron multicamadas
+  6. Redes Neurais com aprendizado associativo
+         6.1 Memórias Associativas (Associador Linear)
+         6.2 Redes recorrentes (Memória de Hopfield)
+  7. Redes Neurais com aprendizado não-supervisionado
+         7.1 Conceitos básicos de sistemas auto-organizáveis
+         7.2 Redes competitivas
+         7.3 Mapas de características auto-organizáveis (SOM)
+  8. Redes Neurais para processamento de informação temporal
+  9. Aulas em laboratório
+  10. Verificações, apresentações de trabalhos e discussões
+                                                            Departamento de Informática Aplicada
+                                                                   Tel.: 3308 3333 / Fax: 3308 7308
+                                                                         Email: dep.ina@inf.ufrgs.br
+                                                                   WEB: http://www.inf.ufrgs.br/ina
+
+                                  PLANO DE ENSINO
+Procedimento Didático:
+
+Aulas expositivas teóricas complementadas por atividades em laboratório e dois trabalhos
+práticos a serem desenvolvidos em grupos de 2 alunos como atividade extra-classe.
+Os trabalhos práticos consistem na implementação de dois controladores para um jogador de
+futebol de robô (simulado), um deles baseado num Sistema de Inferência Fuzzy (SIF) e o outro
+numa Rede Neural. Será realizado um campeonato entre os grupos para verificar o desempenho
+dos controladores desenvolvidos.
+
+Método de Avaliação:
+A avaliação se dará através de duas verificações (uma sobre SIF e outra sobre RN) e dos
+trabalhos práticos. O aluno que não obtiver desempenho mínimo (6,0) nos trabalhos práticos ou
+na média das verificações não será aprovado na disciplina.
+
+Bibliografia Básica:
+1. Freeman, J.A., Skapura, D.M., "Neural Networks, Algorithms, Applications, and
+   Programming Techniques". Addison-Wesley 1991.
+2. Terano T., Asai K., Sugeno M., “Fuzzy Systems Theory and Applications”. AP 1992
+
+Bibliografia Complementar:
+
+1. Haykin, Simon, ”Redes Neurais, Princípios e prática”. Bookman 2001.
+2. Driankov D., et allii, "An Introduction to Fuzzy Control". Springer 1993.
+                                                         Departamento de Informática Aplicada
+                                                                Tel.: 3308 3333 / Fax: 3308 7308
+                                                                      Email: dep.ina@inf.ufrgs.br
+                                                                WEB: http://www.inf.ufrgs.br/ina
+
+                                PLANO DE ENSINO
+Cronograma por aula:
+
+aula    Dia                                      Conteúdo
+ 1     18/08 Apresentação da disciplina.
+ 2     20/08 Conceitos básicos dos conjuntos fuzzy.
+ 3     25/08 Operações com conjuntos fuzzy.
+ 4     27/08 Relações fuzzy.
+ 5     08/09 Conceitos básicos da Lógica Fuzzy.
+ 6     10/09 Raciocínio com instâncias.
+ 7     15/09 Defuzzificação. Arquitetura de um SF.
+ 8     17/09 Laboratório de Sistemas Fuzzy. Uso do ambiente FIS do MATLAB.
+ 9     22/09 1ª VERIFICAÇÃO
+ 10    24/09 Conceitos básicos de redes neurais.
+ 11    29/09 Modelos de neurônios.
+ 12    01/10 O perceptron elementar.
+ 13    06/10 Classificação de padrões com o perceptron.
+ 14    08/10 O algoritmo de treinamento do Perceptron.
+ 15    13/10 O ADALINE. Minimização do EMQ: equação de Wiener-Hopf.
+ 16    15/10 O algoritmo da descida mais íngreme.
+       20/10 SALÃO DE INICIAÇÃO CIENTÍFICA – SEMANA ACADÊMICA
+       22/10 SALÃO DE INICIAÇÃO CIENTÍFICA – SEMANA ACADÊMICA
+ 17    27/10 Campeonato de futebol de robôs. (SIF)
+ 18    29/10 O perceptron de múltiplas camadas (MLP).
+ 19    03/11 Algoritmo Backpropagation (BP).
+ 20    05/11 Avaliação de modelos de classificação.
+ 21    10/11 Laboratório de Redes Neurais: Uso do Toolbox NNET do MATLAB
+ 22    12/11 Memórias Associativas (MA).
+ 23    17/11 Redes Neurais Recorrentes. Modelo de Hopfield.
+ 24    19/11 A função de energia da Rede de Hopfield. Solução de problemas de otimização.
+ 25    24/11 Redes neurais com aprendizado não-supervisionado. Redes competitivas.
+ 26    26/11 O Mapa Auto-Organizável. O processamento do SOM e o seu treinamento.
+ 27    01/12 Aspectos temporais
+ 28    03/12 2ª VERIFICAÇÃO
+ 29    08/12 Campeonato de futebol de robôs. (RN)
+ 30    10/12 Apresentação de trabalhos. Encerramento da disciplina.
+

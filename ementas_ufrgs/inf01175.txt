@@ -1,0 +1,114 @@
+                     UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                             INSTITUTO DE INFORMÁTICA
+
+Disciplina: Sistemas Digitais para Computação
+Página: www.inf.ufrgs.br/~fglima/sistemas.htm
+Professor: Fernanda Gusmão de Lima Kastensmidt (fglima@inf.ufrgs.br)
+Código: INF01175 Pré-requisito: Técnicas Digitais para Computação
+Carga Horária: 4 horas aula/semana
+
+1. Súmula
+• Computador visto como um sistema digital • Unidades operacional e de controle • Estruturas de
+controle: harwired, microprogramada, com PLA, etc • Sistemas síncronos e assíncronos • Comunicação
+entre sistemas • Estudo de casos (controle): "carry-lookahead", interrupção em multiprocessamento
+entrada/saída, etc.
+
+2. Objetivos da disciplina
+O objetivo da disciplina é capacitar o aluno a compreender diferentes métodos de síntese de sistemas
+digitais complexos. Para tanto serão enfatizados métodos e ferramentas de síntese para circuitos
+combinacionais (para circuitos regulares e para circuitos irregulares) e seqüenciais (tipicamente
+máquinas de estado utilizadas para seqüenciamento e controle). A linguagem de descrição de hardware
+VHDL será utilizada para descrição de sistemas digitais complexos, bem como para simulação e síntese
+destes sistemas. A abordagem apresentada considera a divisão de um sistema digital entre parte operativa
+e parte de controle. Métodos e ferramentas de síntese específicos são apresentados para a parte operativa
+e para a parte de controle. Ao final da disciplina o aluno devera estar apto a compreender um computador
+como um sistema digital complexo, bem como ter uma visão geral das técnicas e ferramentas de projeto
+para tais sistemas.
+
+3. Metodologia
+As aulas serão apresentadas com auxílio de recursos áudio-visuais e uso de computadores e placas de
+prototipação. Os projetos da disciplina permitirão a aplicação do conteúdo visto de uma forma prática.
+
+4. Critérios de avaliação
+O conceito final será obtido através de duas provas escritas (P1 e P2) e de dois trabalhos T1 e T2,
+utilizando-se a seguinte ponderação:
+Média = (P1 + P2 + T1 + T2) / 4 ou Média = (2xExame + T1 + T2) / 4
+Será considerado aprovado o aluno que obtiver uma média final igual ou superior a 6.0 (seis), sem ter
+zerado nenhuma das notas. Só poderá fazer exame quem tiver (P1 + P2)/2 < 6. Todas as verificações
+escritas são SEM consulta.
+
+5. Bibliografia
+
+             •   Stephen Brown & Zvonko Vranesic. Fundamentals of Digital Design with VHDL
+                 Design. McGraw-Hill.
+             •   Milos Ercegovac, Tomas Lang & Jaime Moreno. Introdução a Sistemas Digitais.
+                 Bookman.
+             •   CARRO: L.Carro. Projeto e prototipação de Sistemas Digitais. Editora da UFRGS.
+             •   HAMBLEN: J.O.Hamblen, M.D.Furman. Rapid Prototyping of Digital Circuits.
+                 Kluwer.
+             •   HARRIS: D.Harris. Skew-Tolerant Circuit Design. Morgan Kaufmann.
+             •   KATZ: Randy H. Katz. Contemporary Logic Design. Benjamin/Cummings Publishing
+                 Company, Inc. Redwood City, 1994.
+             •   ASHENDEN: P.J. Ashenden. The designers guide to VHDL. Morgan Kaufmann.
+             •   MALVINO: A.Malvino. Microcomputadores e Microprocessadores. McGraw-Hill.
+             •   TAUB: Herbert Taub. Circuitos Digitais e Microprocessadores. Mc-Graw-Hill.
+             •   M. Morris Mano & Charles R. Kime. Logic and Computer Design Fundamentals.
+                 Prentice Hall.
+             •   Notas de Aula
+         5. Software Utilizado
+         Xilinx ISE (WEB edition). Licenças gratuitas disponíveis na página da Xilinx (www.xilinx.com).
+         Tutorial1, Altera QuartusII WEB edition. Licenças gratuitas disponíveis na página da Altera
+         (www.altera.com). Simulador ModelSim (Mentor Graphics), versão estudante (www.modelsim.com),
+         Actel Libero (WEB Edition). Licenças gratuítas na página da Actel (www.actel.com), Placas Digilent da
+         Xilinx (www.digilent.com)
+
+         6. Conteúdo Programático e Cronograma de Aulas
+
+Aula   Data    sala   TÓPICOs
+ 1     18/8    113    Apresentação da disciplina. Noções de temporização: circuitos síncronos e freqüência de relógio.
+                      Revisão diagrama de estados e máquinas de estados. Tecnologia de implementação: circuitos
+                      programáveis (FPGAs), células de base, roteamento interno.
+ 2     20/8    105    Implementações de máquinas de estado e analise de área, desempenho e potencia. Codificação das
+                      maquinas de estado. Uso de ferramentas de síntese para FPGA, analise de posicionamento,
+                      roteamento, área, desempenho, potência e simulação.
+ 3     25/8    113    Fluxograma ASM (Algorithm State Machine). Exemplos de fluxogramas ASM: multiplicadores,
+                      extratores de raízes quadrada e cálculo de mínimo múltiplo comum.
+ 4     27/8    105    Projeto RTL: parte operativa (PO) e parte de controle (PC). Otimizações para os fluxogramas ASM
+                      vistos anteriormente.
+ 5     01/9    113    Noções de VHDL: atribuições concorrentes. Declaração e instanciação de componentes.
+ 6     03/9    105    Implementações em VHDL com simulação funcional
+ 7     08/9    113    Noções de VHDL: atribuições seqüenciais.
+ 8     10/9    105    Implementações em VHDL com simulação funcional
+ 9     15/9    113    Circuitos aritméticos: noções básicas. Testbench.
+10     17/9    105    Implementação e comparação de circuitos aritméticos em VHDL. Construção de Testbenchs.
+11     22/9    113    Descrição de máquinas de estados em VHDL. Síntese de maquinas de estado em VHDL: codificação
+                      de estados, minimização de estados e escolha dos FFs.
+12     24/9    105    Implementação de máquinas de estados em VHDL
+13     29/9    113    Bancos de registradores, Memórias, Tipos de memórias e Uso de componentes BRAM.
+14     1/10    105    Implementações de memórias em VHDL
+15     6/10    113    Projeto Parte Operativa (PO) e Parte de Controle (PC) de algoritmos e suas descrições em VHDL
+                      RTL, Paralelo x Serial, Área x desempenho. Projeto de PO-PC em linguagem de descrição de
+                      hardware. Descrição comportamental x estruturada.
+16     8/10    105    Descrição RTL e análise das partes de controle em VHDL dos fluxogramas ASM visto
+                      anteriormente. Exemplo raiz.zip (PC-PO) e raiz_h.rar (algoritmo)
+                      Implementação de algoritmos e suas descricoes em VHDL RTL, Paralelo x Serial, Area x
+                      desempenho.
+17     13/10   113    Verificação 1
+18     15/10   105    VHDL com implementação no kit de prototipação da Xilinx: interfaces de utilização: leds, display 7-
+                      segmentos, chaves, portas ps/2 e outros.
+19     20/10   113     Apresentação Trabalho 1
+20     22/10   105    VHDL com implementação no kit de prototipação da Xilinx: interfaces de utilização: leds, display 7-
+                      segmentos, chaves, portas ps/2 e outros. (continuação)
+21     27/10   113    Conceito de Pipeline
+22     29/10   105    Circuitos de alto desempenho: inserção de pipeline na parte operativa. Exemplos.
+23     3/11    113    Meta-estabilidade e clk skew (meta-estabilidade.pdf)
+24     5/11    105    Sintese em ASIC usando biblioteca de células. Estimativa de desempenho e potência.
+25     10/11   113    Introdução a comunicação assíncrona, protocolo de hand-shake (2 e 4 fases, single and dual rail)
+26     12/11   105    Implementações de comunicação assincrona
+27     17/11   113    Conversores Analogico/Digital e Digital/Analogico
+28     19/11   105    Uso de estruturas analógicas em FPGAs e em ASICs
+29     24/11   113    Verificação 2
+30     26/11   105    Apresentação do trabalho 2 com sessão interativa de questionamento
+31     10/12   113    Recuperação – Exame
+       15/12          Divulgação dos resultados
+

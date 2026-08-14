@@ -1,0 +1,145 @@
+Dados de identificação
+ Disciplina                        INF01194 - CONCEPÇÃO DE CIRCUITOS INTEGRADOS II
+ Oferecida para                    Engenharia Elétrica e Engenharia de Computação
+ Período Letivo                    2020/2
+ Professor Responsável             Ricardo Augusto da Luz Reis
+ Sigla                             INF01194
+ Carga horária (horas)                                                                                                                                                   60
+  CH Autônoma (horas)                                                                                                                                                    10
+  CH Coletiva (horas)                                                                                                                                                    50
+  CH Individual (horas)                                                                                                                                                   0
+
+
+Súmula                             Organização de circuitos integrados: partes de controle e operativa; características particulares de organização em CIs: comparação
+                                   entre soluções diversas. Projeto de CIs: ferramentas de validação, implementação, verificação e teste.
+
+
+Objetivos                          O objetivo da disciplina é apresentar as metodologias de projeto descendentes e as ferramentas de EDA associadas. Especial atenção é
+                                   dada ao fluxo de projeto 'standard cell' e aos projetos de estruturas regulares como operadores aritméticos e memórias. O fluxo de
+                                   ASICs digitais é discutido e exercitado em ambientes profissionais de projeto de sistemas integrados.
+
+
+Conteúdo Programático
+Título                             Conteúdo                                                                                                 Semana
+1. Introdução. Fluxo de Projeto    Apresentação da disciplina e revisão dos conceitos básicos relacionados aos fundamentos de circuitos     1
+                                   integrados digitais (portas lógicas, SPICE, leiaute,...).
+                                   Fluxo de Projeto ASIC digital. Especificação, codificação, síntese física. Etapas do projeto físico.
+2. Metodologias de Projeto         Apresentação e discussão sobre metodologias de projeto de sistemas integrados, desde o uso de            2
+                                   FPGAs/CPLDs, passando por gate-arrays mascaráveis, standard cells e full custom. Noções de
+                                   comparação entre as metodologias (tempo de projeto, custos, desempenho, etc...).
+3. Biblioteca de Células           Apresentação e discussão sobre o desenvolvimento de bibliotecas de células, sua composição, modelos 3
+                                   de comportamento, formatos de dados.
+4. Estratégias de Implementação Estratégias de Implementação – etapas do projeto físico em standard-cells : roteamento, extração,      4
+                                   integridade, STA, verificação de leiaute.
+5. Fluxo de Projeto Standard Cells Apresentação e exercício sobre as etapas de fluxo de projeto standard cells, desde o mapeamento     5a6
+                                   tecnológico até a obtenção do leiaute final de um circuito.
+6. Projeto Físico:                 Projeto Físico: Leiaute de células digitais                                                         7
+7. Projeto Físico:                 Projeto Físico: Leiaute de células digitais – projeto library-free                                       8a9
+8. Síntese lógica com restrições   Síntese lógica com restrições de timing. Especificação e tratamento de restrições                        10 a 11
+de timing.
+9. Posicionamento e Roteamento     Posicionamento de Células                                                                                12 a 13
+de Células                         Roteamento: Fundamentos básicos
+                                   Roteamento: Estudo de caso
+10. Estruturas Regulares:          Projetos de operadores aritméticos (somadores e multiplicadores), blocos básicos, desafios de projeto,   14 a 15
+Somadores e Multiplicadores        análise de desempenho, técnicas de construção do leiaute.
+
+11. Recuperação                    Atividades de recuperação                                                                                16
+
+
+Metodologia
+ Estratégias didáticas em          As aulas serão teórico-práticas, com discussões e apresentações dos tópicos abordados, e exercícios utilizando ambientes profissionais
+ atividades remotas                de projeto. A disciplina é baseada no projeto pratico de um pequeno microprocessador usando a suite de ferramentas de EDA da
+                                   Cadence, que temos licença que permite os alunos utilizarem as ferramentas remotamente.
+                                   Atividades síncronas: aulas por videoconferência e discussão a distância, com a participação do docente, monitor e alunos por meio de
+                                   chat (Moodle) e videoconferência, sobre tema específico. Estas atividades serão gravadas e disponibilizadas para os alunos através do
+                                   Moodle da disciplina.
+                                   Atividades assíncronas: orientação a distância, pelo docente, em horários a combinar com o docente, sempre que o aluno necessitar
+                                   tirar alguma dúvida. Haverá um grupo de whatsapp para facilitar a interação com os alunos.
+                                   O projeto do microprocessador será decomposto em uma série de etapas, com apresentações parciais do andamento do projeto, pelos
+                                   alunos, com acompanhamento do professor.
+
+                                   Informações sobre Direitos Autorais e de Imagem:
+                                   Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para qualquer outra
+                                   finalidade, sob as penas legais.
+                                   Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a autoria, sob pena de plágio.
+                                   A liberdade de escolha de exposição da imagem e da voz não isenta o aluno de realizar as atividades originalmente propostas ou
+                                   alternativas;
+                                   Todas as gravações de atividades síncronas devem ser previamente informadas por parte dos professores.
+                                   Somente poderão ser gravadas pelos alunos as atividades síncronas propostas mediante concordância prévia dos professores e
+                                   colegas, sob as penas legais.
+                                   É proibido disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem
+                                   autorização específica para a finalidade pretendida.
+                                   Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica, sendo vedada a distribuição do
+                                   material cuja a licença não permita ou sem a autorização prévia dos professores para o material de sua autoria.
+
+
+ Estratégias didáticas em          Não serão realizadas atividades presenciais.
+ atividades presenciais
+
+
+ Recursos disponibilizados         Serão disponibilizados aos alunos os seguintes recursos, necessários para desenvolverem suas atividades na disciplina:
+                                   1) Material de estudo disponibilizado em AVA institucional (Moodle do INF) e na Sala de Aula Virtual
+                                   2) Programas para desenvolvimento das atividades didáticas: CADENCE.
+                                   3) Acesso à Bibliografia Básica, através do Sabi+ (https://www.ufrgs.br/bibliotecas/)
+                                   4) Material de estudo produzido pelos professores, incluindo cópia dos slides utilizados em aula.
+                                   5) Manual de utilização das ferramentas de EDA.
+                                   6) Montagem de um grupo WhatsApp com os alunos.
+ Recursos computacionais    Para a realização das atividades previstas, será necessário:
+                            1) Acesso regular à Internet;
+                            2) Dispositivo desktop, notebook (ou assemelhado), smartphone ou tablet, que permita o acesso a ferramentas de videoconferência, de
+                            forma que o discente possa acompanhar, por imagem e áudio, as atividades realizadas. Além disso, o dispositivo deve possibilitar o uso
+                            de ferramentas de texto ("chat"), sendo opcional o uso de câmera ou microfone.
+                            3) Dispositivo desktop ou notebook (ou assemelhado), capaz de rodar os programas necessários ao estudo e realização dos trabalhos
+                            práticos.
+                            4) câmera e microfone (opcional)
+
+
+Carga Horária
+ Teórica                                                                                                                                                               30
+ Prática                                                                                                                                                               30
+
+
+Experiências de             Está previsto que os discentes realizem as seguintes Experiências de Aprendizagem:
+Aprendizagem                1) Aulas ministradas em tempo real. Todo o material e os exercícios estarão disponíveis no AVA da disciplina.
+                            2) Trabalhos práticos de implementação, projeto de um pequeno microprocessador usando uma biblioteca de células
+
+
+Critérios de Avaliação      A avaliação será através da realização de um trabalho prático e de um artigo descrevendo os resultados obtidos no trabalho prático.
+                            O conceito final será atribuído de acordo com o valor da nota no trabalho prático (NT):
+                            A se NT >= 9,0
+                            B se 7,5 =< NT < 9,0
+                            C se 6,0 =< NT< 7,5
+                            Se NT < 6,0, ver atividades de recuperação.
+
+                            De acordo com a Resolução do CEPE sobre o ERE, durante o período em que perdurar o ERE, fica inaplicável a atribuição de conceito
+                            FF, prevista no §2º, do Art. 44, da Resolução nº 11/2013 do CEPE.
+                            Para os estudantes matriculados até o final do período e que deixaram de participar da Atividade de Ensino, deverá ser atribuído o
+                            registro NI (Não Informado) no campo de conceito do sistema acadêmico.
+                            Para os casos previstos no §1º, a justificativa do registro NI deverá conter a referência ao período de excepcionalidade.
+                            Os casos de não informação de conceito durante o ERE, deverão ser resolvidos até o fim do segundo período letivo, após o fim da
+                            situação emergencial de saúde.
+
+
+Atividades de Recuperação   A atividade de recuperação consistirá em refazer o trabalho prático. Se o aluno refizer e obtiver nota >= 6,0 receberá conceito final C.
+Previstas                   Caso contrário, ficará com conceito final D.
+
+
+Bibliografia                Com alterações
+                            Biblliografia
+                            Manuais de uso do conjunto de ferramentas da Cadence que serão fornecidas aos alunos.
+                            Indicação de textos disponíveis na Internet, como na Wikipédia, para revisarem alguns conceitos básicos.
+                            Williams, John Michael, VLSI Design with Verilog : A Textbook from Silicon Valley Polytechnic Institute [recurso eletrônico], Cham :
+                            Springer International Publishing, 2014. ISBN 9783319047898, DOI 10.1007/978-3-319-04789-8, Acesso restrito à comunidade da
+                            UFRGS, pelo SABI.
+                            Kamat, Rajanish K., LinkHarnessing VLSI System Design with EDA Tools, Springer Netherlands, 2012. ISBN 9789400718647, DOI
+                            10.1007/978-94-007-1864-7. Acesso restrito à comunidade da UFRGS, pelo SABI.
+                            Básica:
+                            Rabaey, Jan M.; Chandrakasan, Anantha; Nikolic, Borivoje. Digital integrated circuits :a design perspective. Upper Saddle River:
+                            Prentice
+                            Hall, c2003. ISBN 0130909963.
+                            Reis, Ricardo Augusto da Luz. Concepção de Circuitos Integrados. Porto Alegre: Bookman, 2009. ISBN 9788577803477. Disponível no
+                            Sabi+.
+                            N. Weste e D. Harris. CMOS VLSI Design, A Circuits and Systems Pesrpective. Pearson/Addison-Wesley, 2011. ISBN 9780321547743.
+                            Complementar
+                            Sutherland, Ivan Edward; Sproull, Robert F.; Harris, David F.. Logical Effort :designing fast CMOS circuits. San Francisco: Morgan
+

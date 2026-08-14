@@ -1,0 +1,156 @@
+Dados de identificação
+ Disciplina                       LÓGICA PARA COMPUTAÇÃO
+ Oferecida para                   CIC, ECP e BTC
+ Período Letivo                   2020/2
+ Professor Responsável            André Grahl Pereira
+ Sigla                            INF05508
+ Carga horária (horas)            60h
+  CH Autônoma (horas)             10h
+  CH Coletiva (horas)             50h
+  CH Individual (horas)           0h
+
+Súmula                            Lógica sentencial e de 1a. ordem. Sistemas dedutivos naturais e axiomáticos. Completeza, consistência e coerência.
+                                  Formalização de problemas. Formalização de programas e sistemas de computação simples.
+
+
+Objetivos                         Apresentar a lógica matemática clássica através de seus sistemas de prova e de suas semânticas e estudar as técnicas
+                                  empregadas no tratamento matemático da lógica.
+
+
+Conteúdo Programático
+
+Título                             Conteúdo                                                                                        Semana
+Unidade 1: Histórico e Evolução da 1.1 Lógica Clássica                                                                             1
+Lógica                             1.1 Lógicas Não-Clássicas
+                                  1.2 Lógicas em Computação
+
+Unidade 2: Lógica Proposicional 2.1 Motivação: Introduzindo a lógica clássica proposicional                                        2a7
+                                2.2 Sentenças declarativas
+                                2.3 Linguagem Formal da lógica proposicional
+                                2.4 Computação de tabelas-verdade
+                                2.5 Noções de verdade e validade
+                                2.5.1Equivalências
+                                2.5.2 Argumentos e relações de conseqüência
+                                2.6 Sistemas de Prova
+                                2.6.1 Sistema Axiomático (de Hilbert)
+                                2.6.2 Sistema de Dedução Natural
+                                2.6.3 Outros sistemas de prova (tableaux, resolução)
+                                2.7 Semântica
+                                2.7.1 Significado dos conetivos lógicos
+                                2.7.2 Correção da lógica proposicional
+                                2.7.3 Completude da lógica proposicional
+                                2.8 Formas Normais
+Unidade 3: Lógica de Predicados 3.1 Motivação e Introdução                                                                         8 a 14
+                                3.2 Lógica de Predicados como uma linguagem formal
+                                3.3 Teoria de Prova para lógica de predicados
+                                3.3.1 Sistema de Dedução Natural
+                                3.3.2 Outros sistemas de prova
+                                3.4 Semântica da Lógica de Predicados
+                                3.4.1 Modelos
+                                3.4.2 Conseqüência lógica (entailment)
+                                3.4.3 Semântica da igualdade
+                                3.4.4 Correção e Completude da Lógica de Predicados
+                                3.5 Decidibilidade
+Unidade 4: Formalização de      4.1 Lógicas não clássicas em computação: motivação e histórico                                     15
+Programas e                     4.2 Aplicações de lógicas não-clássicas em computação: semântica,
+Sistemas de Computação Simples representação do conhecimento e especificação de sistemas
+
+
+
+Metodologia
+ Estratégias didáticas em         O docente utilizará aulas teóricas, pois trata-se de disciplina de conteúdo lógico-matemático-computacional. Atividades
+ atividades remotas               teórico-práticas são realizadas pelo discente ao longo da disciplina.
+
+                                  As atividades ocorrerão majoritariamente de forma assíncrona. Atividades síncronas poderão ser utilizadas para
+                                  esclarecimento de dúvidas; resolução de exercícios; e apresentação de listas, trabalhos e provas; entre outras.
+
+                                  As atividades síncronas ocorrerão nos horários regulares da disciplina, em datas especificadas no cronograma. Essas
+                                  atividades serão gravadas e disponibilizadas no Moodle da disciplina.
+
+                                  Todas as atividades serão propostas, entregues e avaliadas no Moodle da disciplina, onde constarão as instruções a
+                                  serem seguidas para sua realização.
+
+ Estratégias didáticas em         Não serão realizadas atividades presenciais.
+ atividades presenciais
+
+ Recursos disponibilizados        As atividades previstas assim como as instruções para sua realização serão disponibilizadas no Moodle do INF. Eventuais
+                                  componentes externos ao Moodle e necessários para a realização das atividades estarão indicados no próprio Moodle.
+
+ Recursos computacionais          Para acompanhar as atividades previstas é necessário ter acesso regular à Internet. As atividades síncronas podem ser
+                                  acompanhadas através de smartphone ou computador.
+ Informações sobre Direitos   Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para qualquer
+ Autorais e de Imagem:        outra finalidade, sob as penas legais.
+                              Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a autoria, sob pena de
+                              plágio.
+                              A liberdade de escolha de exposição da imagem e da voz não isenta o aluno de realizar as atividades originalmente
+                              propostas ou alternativas;
+                              Todas as gravações de atividades síncronas devem ser previamente informadas por parte dos professores.
+                              Somente poderão ser gravadas pelos alunos as atividades síncronas propostas mediante concordância prévia dos
+                              professores e colegas, sob as penas legais.
+                              É proibido disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor,
+                              sem autorização específica para a finalidade pretendida.
+                              Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica, sendo vedada a
+                              distribuição do material cuja a licença não permita ou sem a autorização prévia dos professores para o material de sua
+                              autoria.
+Carga Horária
+ Teórica                      60h
+ Prática                      0h
+
+Experiências de               Os alunos devem realizar duas Provas e uma ou mais Atividades Autônomas para que o professor possa acompanhar o
+Aprendizagem                  desenvolvimento do aluno ao longo da disciplina. Estas Provas e Atividades Autônomas são avaliadas conforme descrito
+                              no item Critérios de Avaliação. As atividades autônomas podem incluir: a realização de trabalhos, a leitura de texto, a
+                              resolução de listas de exercícios, entre outras. A disciplina poderá contar com o apoio de Alunos de Pós-Graduação em
+                              Atividades Didática
+
+                              O conteúdo programático previsto para cada semana será apresentado na forma de leituras e vídeos.
+                              Para ser aprovado é necessário obter média final igual ou superior a 6.0. A avaliação é feita através de duas Provas e de
+Critérios de Avaliação
+                              uma ou mais Atividades Autônomas, respeitando os seguintes pesos: Prova 1, com valor 30% da nota final; Prova 2, com
+                              valor de 50% da nota final; Atividades Autônomas realizadas ao longo da disciplina, com valor de 20% da nota final. Os
+                              alunos com nota final menor do que 6.0 podem realizar uma única Prova de Recuperação que substitui somente a menor
+                              nota obtida nas Provas (Prova 1 ou Prova 2), respeitando-se os pesos destas Provas.
+
+                              As Provas serão realizadas de forma remota, distribuídas em formato digital, com uma janela de tempo de 72 horas para
+                              resolução e 3 horas para entrega depois de iniciadas. Em caso de problemas técnicos os alunos podem informar o
+                              professor até um prazo de 72 horas após a realização da Prova; neste caso o aluno pode repetir a prova num horário a
+                              ser combinado.
+
+                              A correspondência entre notas e conceitos, onde NOTA é a nota final, é a seguinte:
+                              - NOTA < 6.0: Conceito final D (insuficiente).
+                              - NOTA no intervalo [6.0; 7.5): Conceito final C.
+                              - NOTA no intervalo [7.5; 9.0): Conceito final B.
+                              - NOTA no intervalo [9.0; 10.0]: Conceito final A.
+
+                              ATENÇÃO: a detecção de plágio em qualquer atividade implicará penalidades (nota zero) a todos os envolvidos.
+
+                              De acordo com a Resolução do CEPE sobre o ERE, durante o período em que perdurar o ERE, fica inaplicável a
+                              atribuição de conceito FF, prevista no Parágrafo 2º, do Artigo 44, da Resolução nº 11/2013 do CEPE.
+                              Para os estudantes matriculados até o final do período e que deixaram de participar da Atividade de Ensino, deverá ser
+                              atribuído o registro NI (Não Informado) no campo de conceito do sistema acadêmico.
+                              Para os casos previstos no Parágrafo 1º, a justificativa do registro NI deverá conter a referência ao período de
+                              excepcionalidade.
+                              Os casos de não informação de conceito durante o ERE, deverão ser resolvidos até o fim do segundo período letivo, após
+                              o fim da situação emergencial de saúde.
+
+
+Atividades de Recuperação     Os alunos que obtiveram nota final menor do que 6.0 (após a realização da Prova 1, Prova 2 e as Atividades Autônomas),
+Previstas                     podem realizar uma única Prova de Recuperação. A Prova de Recuperação avalia o conteúdo de todas as unidades da
+                              disciplina e será feita nos moldes da Prova 1 e Prova 2. A correspondência entre notas e conceitos, onde NOTA é a nota
+                              obtida na atividade de recuperação, é a seguinte:
+                              - NOTA < 6.0: Conceito final D (insuficiente).
+                              - NOTA no intervalo [6.0; 10.0): Conceito final C.
+
+Bibliografia                  Sem alterações
+                              Michael R. A. Huth. Logic in Computer Science. Cambridge, UK: Cambridge University Press, 2004. ISBN 052154310X.
+                              Abramsky, Samson; Gabbay, Dov M.; Maibaum, T.S.E.. Handbook of logic in computer science. Oxford: Clarendon Press,
+                              1992 - 1995. ISBN 0198537352; 0198537808 (v.4).
+                              Dov Gabbay. Elementary Logics: A procedural perspective.. Europe: Prentice-Hall, 1998. ISBN 0132583445.
+                              Goubault-Larrecq, Jean; Mackie, Ian. Proof Theory and Automated Deduction.. Dordrecht: Kluwer, c1997. ISBN
+                              1402003684.
+                              H. B. Enderton. A Mathematical Introduction to Logic. California: Academic Press, 2001. ISBN 0122384520.
+                              Melvin Fitting. First-Order Logic and Automated Theorem-Proving. New York: Springer, 1996. ISBN 0387945938.
+                              Priest, Graham. An introduction to non-classical logic :from if to is. Cambridge: Cambridge University Press, c2008. ISBN
+                              9780521854337.
+                              Ryan, Mark. Lógica em Ciência da Computação. Rio de Janeiro: LTC, 2008. ISBN 9788521616108.
+                              Krysia Broda, S. Eisenbach, H. Koshnevisan, Steve Vickers. Reasoned Programming. Edinburgh: Prentice Hall, 1994.
+

@@ -1,0 +1,124 @@
+                              SERVIÇO PÚBLICO FEDERAL
+                  UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                           INSTITUTO DE INFORMÁTICA
+                    DEPARTAMENTO DE INFORMÁTICA APLICADA
+
+DISCIPLINA:                   Conceitos de Processamento de Imagens
+CÓDIGO:                       INF01046
+CARGA HORÁRIA:                04 h/sem.
+CRÉDITOS:                     04
+PRÉ-REQUISITOS:               MAT01354 e MAT02219
+NATUREZA DAS AULAS:           TEÓRICAS e PRÁTICAS (4 h/sem.)
+CURSOS AOS QUAIS É OFERECIDA: 094.00 e 120.05
+PROGRAMA DESENVOLVIDO:        2009/1
+
+
+SÚMULA
+
+Introdução, transformações, realce, segmentação, representação e descrição de imagens,
+princípios de processamento de vídeo, compressão de imagens e vídeos.
+
+
+OBJETIVOS
+
+
+Esta disciplina tem como objetivos introduzir os conceitos fundamentais e técnicas de
+processamento, codificação e compressão de imagens e vídeos (monocromáticos e multi-
+espectrais), e treinar o aluno a abordar eficientemente problemas desta área. No decorrer
+das aulas, os alunos terão a oportunidade de implementar e testar os conceitos teóricos
+apresentados, e aplicá-los a problemas práticos.
+
+
+FORMA DE CONDUÇÃO DA DISCIPLINA
+O conteúdo da disciplina é abordado tanto em aulas expositivas como em trabalhos práticos.
+Os assuntos são complementados e reforçados através da realização de exercícios em aula
+ou extra-classe e do desenvolvimento de programas.
+
+
+Horário das aulas:
+   •   3a :10:30h às 12:10h, lab. 101 (Novo), e 5ª : 10:30h às 12:10h, lab. 101 (Novo)
+CONTEÚDO PROGRAMÁTICO PARA AS AULAS TEÓRICAS - PROPOSTO1
+
+      1. FUNDAMENTOS:      Percepção Visual e Formação da Imagem, Amostragem e
+           Quantização,Relações entre Elementos da Imagem, Operações Aritméticas e Lógicas
+           Básicas, Exemplos e Problemas
+      2. CONCEITOS DE TRANSFORMAÇÕES DE IMAGENS: Introdução à Transformada de Fourier
+           e suas Propriedades, Outras Transformações (ex: Wavelets, ...), Exemplos e
+           Problemas
+      3. PRINCÍPIOS DE REALCE DE IMAGENS: Domínios Espaço e Freqüência, Operações
+           Pontuais, Transformações do Histograma, Operações Aritméticas com Imagens,
+           Filtragem no Domínio Espaço (Supressão de Ruído, Realce de Detalhes), Filtragem
+           no Domínio Frequência (Filtros Passa-Baixas, Filtros Passa-Altas), Exemplos e
+           Problemas
+      4. PRINCÍPIOS DE ANÁLISE DE IMAGENS: Segmentação de Imagens, Representação de
+           Formas, Representação de Regiões, Texturas Monocromáticas e à Cores, Conceitos
+           de Morfologia Matemática, Exemplos e Problemas
+      5. RECONHECIMENTO           INTERPRETAÇÃO DE IMAGENS: Padrões e Classes,
+                                      E
+           Reconhecimento de Padrões em Imagens, Interpretação de Imagens, Visão de
+           Máquina, Exemplos e Problemas
+      6. PROCESSAMENTO DE VÍDEOS: Elementos de Análise de Vídeos
+      7. CODIFICAÇÃO E COMPRESSÃO DE IMAGENS E VÍDEOS: Sistemas de Codificação e
+           Compressão, Padrões para Codificação e Compressão de Imagens e Vídeos
+      8. TÓPICOS ESPECIAIS EM PROCESSAMENTO DE IMAGENS E VÍDEOS
+
+
+
+
+SISTEMA DE AVALIAÇÃO
+O aluno será avaliado com base na participação positiva em aula e no desempenho nas
+provas, trabalhos práticos e exercícios. A participação em aula, provas e trabalhos práticos
+serão avaliados com nota entre 0.0 e 10.0. Conforme regulamento da Universidade, a
+freqüência às aulas é obrigatória.
+Serão realizadas duas provas teóricas (P1 e P2). Os alunos que obtiverem nota menor do
+que 6.0 em qualquer prova automaticamente deverão realizar recuperação naquela área. A
+nota da prova de recuperação substitui a nota da prova recuperada.
+Também serão realizados dois trabalhos práticos (T1 e T2). Trabalhos e exercícios em sala
+de aula poderão ser realizados sem aviso prévio, e serão avaliados para compor parte da
+nota final. A realização dos trabalhos é obrigatória, mesmo que o aluno obtenha bons
+resultados nas provas.
+
+
+
+
+1
+    Podem haver alterações neste programa, que serão discutidas com os alunos.
+A média geral da disciplina será calculada da seguinte forma:
+                                              ⎛ P1 + P 2 + T 1 + T 2 ⎞
+                                   MG = 0.9 × ⎜                      ⎟ + 0.1 × PA
+                                              ⎝          4           ⎠
+Onde P1 e P2 são as notas das duas provas, T1 e T2 são as notas dos dois trabalhos
+práticos, e PA é a nota atribuída à participação em aula. Podem haver trabalhos práticos e
+exercícios extra, que se realizados poderão compor até 1 ponto na média MG. A nota será
+calculada com duas (2) casas decimais, e posteriormente arredondada para uma casa
+decimal.
+Será considerado aprovado o aluno que obtiver frequência ≥ 75% e MG ≥ 6.0. O conceito
+final será dado da seguinte forma :
+             A : MG ≥ 9.0
+             B : 7.5 ≥ MG < 9.0
+             C : 6.0 ≥ MG < 7.5
+
+
+Será considerado reprovado o aluno que tiver frequência < 75% ou MG < 6.0. Neste caso, o
+conceito será :
+             D : Freq ≥ 75%
+             FF : Freq. < 75%
+
+
+
+BIBLIOGRAFIA
+
+Livros texto:
+     Gonzalez, R. & Woods, R. Processamento Digital de Imagens. Edgar Blücher Ltda,
+            2000.
+     A.K.Jain, Fundamentals of Digital Image Processing. Prentice-Hall, 1989.
+
+Bibliografia de referência (complementar) :
+     Pittas, I. Digital Image Processing Algorithms. Prentice-Hall, 1993.
+
+     Sonka, M., Hlavac, V. & Boyle, R. Image Processing, Analysis and Machine Vision.
+            PWS Publishing, 1999. 2nd ed.
+     Wang, Y.; Ostermann, J.; Zhang, Y. Video Processing and Communications. Prentice
+            Hall, 2002.
+     Artigos recomendados e notas técnicas de fabricantes de equipamentos.
+

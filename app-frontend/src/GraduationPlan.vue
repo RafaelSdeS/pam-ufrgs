@@ -5,6 +5,7 @@ import { curriculumService } from './services/curriculumService'
 import { predictionService } from './services/predictionService'
 import { calculateSubjectStatuses } from './composables/useCurriculumStatus'
 import { matchCourse } from './utils/searchUtils'
+import { getCourseDifficulty, getDifficultyLabel, getDifficultyColor } from './data/courseDifficulty'
 
 const emit = defineEmits(['change-page'])
 
@@ -274,7 +275,18 @@ function moveCourse(fromIndex, subjectIndex, direction) {
                   title="Pré-requisito não atendido neste semestre - mova a disciplina ou seus pré-requisitos, ou recalcule."
                 ></v-icon>
               </div>
-              <div class="text-caption">{{ subj.name }} ({{ subj.credits }}cr)</div>
+              <div class="text-caption d-flex align-center gap-1">
+                <span>{{ subj.name }} ({{ subj.credits }}cr)</span>
+                <v-chip
+                  v-if="!subj.isPlaceholder"
+                  size="x-small"
+                  :color="getDifficultyColor(getCourseDifficulty(subj.code))"
+                  variant="tonal"
+                  class="font-weight-bold"
+                >
+                  {{ getDifficultyLabel(getCourseDifficulty(subj.code)) }}
+                </v-chip>
+              </div>
               <v-btn
                 v-if="subj.isPlaceholder"
                 size="x-small"
@@ -339,7 +351,12 @@ function moveCourse(fromIndex, subjectIndex, direction) {
             >
               <v-list-item-title class="font-weight-bold">{{ c.code }} - {{ c.name }}</v-list-item-title>
               <template v-slot:append>
-                <v-chip size="small" color="secondary" variant="tonal" class="font-weight-bold">{{ c.credits }}cr</v-chip>
+                <div class="d-flex gap-1">
+                  <v-chip size="small" :color="getDifficultyColor(getCourseDifficulty(c.code))" variant="tonal" class="font-weight-bold">
+                    {{ getDifficultyLabel(getCourseDifficulty(c.code)) }}
+                  </v-chip>
+                  <v-chip size="small" color="secondary" variant="tonal" class="font-weight-bold">{{ c.credits }}cr</v-chip>
+                </div>
               </template>
             </v-list-item>
           </v-list>

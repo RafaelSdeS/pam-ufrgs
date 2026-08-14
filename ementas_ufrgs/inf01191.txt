@@ -1,0 +1,92 @@
+                       Universidade Federal do Rio Grande do Sul
+                                Instituto de Informática
+                                                 2009/1
+
+
+Plano de Ensino:
+INF1191 - Arquiteturas Avançadas de Computadores - Turma U
+Prof. Philippe Olivier Alexandre Navaux
+
+
+Descrição do Curso
+         Estudo de arquiteturas e técnicas avançadas existentes atualmente em
+microprocessadores e máquinas com alto grau de paralelismo, com ênfase em multiprocessadores,
+multicomputadores de memória distribuída, agregados de máquinas, arquiteturas superescalares,
+arquiteturas multithread, processadores multicore, interconexões de processadores, arquiteturas
+vetoriais e organizações de memória cache.
+
+Procedimentos Didáticos
+       Aulas expositivas; trabalhos práticos e listas de exercícios.
+
+Material de Apoio e Bibliografia
+Bibliografia Básica :
+• De Rose, C. A. F. e Navaux, Philippe O. A. Arquiteturas Paralelas. Editora Sagra Luzzatto, 2003
+       1ª edição).
+
+Bibliografia Complementar :
+• Hwang, K. e Xu, Zhiwei. Scalable Parallel Computing : Technology, Architecture, Programming.
+         McGraw-Hill, Boston, 1998.
+• Hwang, K. Advanced Computer Architecture. Parallelism, Scalability, Programmability. McGraw
+         Hill, Boston, 1993.
+• D. Patterson e J. Hennessy. Computer Architecture: A quantitative approach. Morgan Kaufmann
+         Publishers, San Mateo, 1996 (2a. edição).
+
+Métodos de avaliação
+        O conceito final será obtido através da avaliação do aluno no desenvolvimento e
+apresentação oral do estudo de uma arquitetura, com produção de monografia associada; de um
+exercício prático de programação de máquina e de uma verificação escrita com consulta.
+Média Final = ( 0,4 * Trabalho) + ( 0,2 * Exercício ) + ( 0,4 * Prova )
+Será considerado aprovado o aluno que obtiver uma média final igual ou superior a 6.0 (seis). A
+recuperação substituirá a menor nota das duas acima (Trabalho ou Prova).
+
+Objetivos
+        O objetivo da disciplina é apresentar ao aluno as arquiteturas e técnicas mais avançadas
+existentes atualmente em microprocessadores e máquinas com alto grau de paralelismo. As
+diferentes arquiteturas paralelas de computadores são estudadas, com ênfase em
+multiprocessadores, multicomputadores de memória distribuída, agregados de máquinas,
+arquiteturas superescalares, arquiteturas multithread e arquiteturas multicore.
+
+Professor
+       Philippe Olivier Alexandre Navaux gab. 210; r. 9495; navaux@inf.ufrgs.br
+                         Arquiteturas Avançadas de Computadores
+                                 Prof. Philippe O. A. Navaux
+2009/1   Aula                   INF-1191 - Turma U - Cronograma e conteúdos
+03/03    01       01 – Apresentação da disciplina - Introdução
+05/03    02       02 – Arquiteturas Pipeline
+10/03    03       03 – Arquiteturas Superescalar
+12/03    04       04 – Dependências, Conflitos e Algoritmos de Escalonamento
+17/03    05       05 – Previsão de Desvios
+19/03    06       06 – Superpipeline, Execução Especulativa, Multipath
+24/03    07       07 – Processadores VLIW
+26/03    08       08 – Processadores Multithreading (IMT, BMT e SMT) – Parte 1
+31/03    09       09 – Processadores Multithreading (IMT, BMT e SMT) – Parte 2
+02/04    10       10 – Chip Multi-Processor (CMP) – Parte 1
+07/04    11       11 – Chip Multi-Processor (CMP) – Parte 2
+09/04    12       12 – Introdução ao Paralelismo e Ambientes Concorrentes
+14/04    13       EXERCÍCIO - Programação paralela – Parte 1 – Conceitos em OMP
+16/04    14       EXERCÍCIO - Programação paralela – Parte 2 – Trabalho Prático
+21/04     -       FERIADO TIRADENTES
+23/04    15       APRESENTACAO DE TRABALHOS
+28/04    16       APRESENTACAO DE TRABALHOS
+30/04    17       APRESENTACAO DE TRABALHOS
+05/05    18       APRESENTACAO DE TRABALHOS
+07/05    19       13 – Ambientes Concorrentes
+12/05    20       14 – Computação Baseada em Clusters
+14/05    21       15 – Processadores Vetoriais Paralelos (PVP)
+19/05    22       16 – Multiprocessadores Simétricos (SMP)
+21/05    23       17 – Máquinas Maciçamente Paralelas (MPP)
+26/05             SEMANA ACADEMICA
+28/05             SEMANA ACADEMICA
+02/06    24       18 – Máquinas com Memória Compartilhada Distribuída (DSM)
+                  19 – Redes de Estações de Trabalho (NOW), Máquinas Agregadas (COW) e
+04/06    25
+                Comparação Entre os Modelos
+09/06    26       21 – Organização da Memória Principal
+11/06    27       22 – Redes de Interconexão Estáticas
+16/06    28       23 – Redes Dinâmicas e Roteamento de Mensagens
+18/06    29       24 – Memórias Cache e Inconsistências
+23/06    30       25 – Protocolos de Coerência de Dados: Snooper e Baseados em Diretórios
+25/06    31       26 – Introdução as Memórias NUCA
+30/06    32       PROVA
+02/07    33       RESERVA
+

@@ -1,0 +1,166 @@
+                                                             Departamento de Informática Aplicada
+                                                                    Tel.: 3308 3333 / Fax: 3308 7308
+                                                                          Email: dep.ina@inf.ufrgs.br
+                                                                    WEB: http://www.inf.ufrgs.br/ina
+
+
+                                   PLANO DE ENSINO
+
+INF01185
+CONCEPÇÃO DE CIRCUITOS INTEGRADOS I
+Semestre: 2009/2
+Carga horária: 60 h
+Créditos: 04
+Professor: Renato P. Ribas
+
+Súmula:
+      Introdução à integração de sistemas em CIs – tendências; níveis de especificação e
+abstração; transistores e portas lógicas; lógica combinacional em CMOS; classificação de Cis;
+princípios básicos de processos de fabricação; regras geométricas e regras elétricas de projeto;
+"scaling"; estilos full e semi-custom, lógica programável pelo usuário; lógica estática; lógica
+dinâmica; estilos de leiaute; flip-flops e registradores; metodologias de concepção, tipos de
+ferramentas e descrições; estruturas regulares ULA, PLA, ROM; estruturas para teste.
+
+Conteúdo Programático:
+        O objetivo da disciplina é capacitar o aluno quanto aos fundamentos do projeto de
+circuitos integrados digitais. A disciplina introduz as técnicas de projeto de pequenos circuitos
+digitais em tecnologia CMOS, desde os princípios de funcionamento de transistores MOS, redes
+e portas lógicas, células combinacionais e seqüenciais, macroblocos e estruturas regulares como
+RAM, ROM. Princípios de uso de ferramentas de leiaute e de simulação elétrica.
+        O conteúdo programático pode ser dividido nos seguintes itens:
+
+       1. Transistor MOS
+              Comportamento lógico e elétrico
+              Elementos parasitas
+              Efeitos de segunda ordem
+              Parâmetros de processo e modelo SPICE
+       2. Inversor CMOS
+              Comportamento lógico e elétrico
+              Análise DC, margem de ruído
+              Análise transiente, características temporais
+              Consumo de potência
+       3. Redes lógicas
+              Redes diretas e complementares, redes duais
+              Redes “single” e “dual rail”
+              BDD – “binary decision diagram”
+       4. Portas lógicas CMOS estáticas
+              Estrutura CMOS padrão
+              Lógica com transistores de passagem
+              Portas lógicas “single” e “dual rail”
+              Dimensionamento de transistores
+              Características temporais e de consumo de potência
+       5. Leiaute
+              Processo de fabricação
+              Leiaute básico
+                                                            Departamento de Informática Aplicada
+                                                                   Tel.: 3308 3333 / Fax: 3308 7308
+                                                                         Email: dep.ina@inf.ufrgs.br
+                                                                   WEB: http://www.inf.ufrgs.br/ina
+
+              Elementos parasitas
+              Caminho de Euler
+              Leiaute simbólico
+              “Latch-up” e contato de substrato
+       6. Porta lógicas CMOS seqüenciais
+              Latches e flip-flops
+              Características temporais
+       7. Lógica dinâmica
+              Estruturas “single rail”
+              Estruturas “dual rail”
+              Análise temporal, distribuição de carga
+
+Procedimento Didático:
+       O conteúdo será apresentado através de exposições teóricas e exercícios práticos de
+laboratório, ministrados alternadamente. A cada encontro de aula expositiva um novo tópico é
+abordado, e o mesmo é exercitado no encontro seguinte de aula de laboratório. Serão realizadas
+avaliações da parte teórica e solicitados breves relatórios dos exercícios práticos.
+
+Método de Avaliação:
+       O conceito final da disciplina será obtido através de 3 provas teóricas (P1, P2 e P3) e a
+média obtida pelos alunos em trabalhos práticos e exercícios requeridos durante a disciplina
+(TP), utilizando-se média harmônica:
+
+                         Média Final = 4 / (1/P1 + 1/P2 + 1/P3 + 1/TP)
+
+        O conceito final será dado da seguinte forma:
+            ‘A’ - MF >= 9,2
+         ‘B’ - 8,8 <= MF <= 7,7
+         ‘C’ - 7,3 <= MF <= 6,0
+         RECUPERAÇÃO - MF < 6,0
+        * as faixas de 8,9 a 9,1 e 7,4 a 7,6 serão definidas de acordo com a frequência e
+participação em aula e nos trabalhos da disciplina.
+
+      Havendo necessidade para aprovação na disciplina, é possível fazer a RECUPERAÇÃO de
+uma das áreas, ou seja, uma das provas P1, P2 ou P3. Caso a aprovação na disciplina seja através
+da recuperação, o conceito final será ‘C’.
+
+Bibliografia Básica:
+
+   •   Rabaey, Jan, Digital Integrated Circuits, Prentice Hall, 2a. edição, 2000.
+   •   Weste, N. H. E., Harris, D., CMOS VLSI Design, a Circuits and Systems Pesrpective.
+       Addison-Wesley, 3a. edição, 2005.
+   •   Hodges D. A., Jackson H. G., Saleh, R. A. Analysis and Design of Digital Integrated
+       Circuits in Deep Submicron Technology, 3a. edição, 2004.
+
+Bibliografia Complementar:
+
+   •   Sedra e Smith, Microeletronica, Makron Books, 2000 (em portugues)
+                                                            Departamento de Informática Aplicada
+                                                                   Tel.: 3308 3333 / Fax: 3308 7308
+                                                                         Email: dep.ina@inf.ufrgs.br
+                                                                   WEB: http://www.inf.ufrgs.br/ina
+
+   •   R. Reis, Concepção de Circuitos Integrados, Instituto de Informática, Série Didática, Ed.
+       Sagra.
+   •   Uyemura, John P., CMOS Logic Circuit Design. Kluwer Academic Publishers, February
+       1999 ISBN 0-7923-8452-0.
+   •   Sutherland, I.; Sproull, B. and Harris, D. Logical Effort: Designing Fast CMOS Circuits
+       Morgan Kaufmann Publishers , January 1999. ISBN 1-55860-557-6.
+
+Cronograma por aula:
+Aula    Dia                                       Conteúdo
+ 1     18/08 Apresentação da disciplina e introdução ao dispositivo MOS e diodo.
+ 2     20/08 Introdução ao simulador elétrico SPICE e exercício com circuito passivo RC.
+ 3     25/08 Transistor MOS
+ 4     27/08 Simulação elétrica das curvas dos transistores MOS.
+ 5     08/09 Inversor CMOS
+ 6     10/09 Simulação do inversor CMOS: análise DC e transiente.
+ 7     15/09 Processo de fabricação CMOS e introdução à layout.
+ 8     17/09 Introdução ao editor de layout.
+ 9     22/09 Prova 1
+ 10    24/09 Construção do Inversor CMOS
+ 11    29/09 Redes de transistores e portas lógicas CMOS estandares, dimensionamento.
+ 12    01/10 Simulação elétrica de portas lógicas CMOS.
+ 13    06/10 Layout simbólico, caminho de Euler.
+ 14    08/10 Layout de portas lógicas CMOS.
+ 15    13/10 Transistor de passagem, ‘transmission gate’, BDD e estilo de projeto PTL.
+ 16    15/10 Simulação elétrica de transistor de passagem e portas lógicas PTL
+       20/10 Semana Acadêmica
+       22/10 Semana Acadêmica
+  17   27/10 Inversor tri-state, multiplexador e estilo lógico Mux-Based.
+  18   29/10 Simulação elétrica de inversor tri-state e multiplexador.
+  19   03/11 Estilo lógico Pseudo-NMOS e DCVS estático. Rede lógica ‘dual-rail’.
+  20   05/11 Simulação elétrica de porta lógica Pseudo-NMOS.
+  21   10/11 Prova 2
+  22   12/11 Simulação elétrica de porta lógica DCVS estática.
+  23   17/11 Latch D.
+  24   19/11 Simulação elétrica de latch D.
+  25   24/11 Flip-flop D e análise temporal (atrasos, setup, hold,...).
+  26   26/11 Simulação elétrica de latch D.
+  27   01/12 Porta lógica dinâmica.
+  28   03/12 Simulação elétrica de lógica dinâmica.
+  29   08/12 Análise temporal (Elmore) e de consumo de potência.
+  30   10/12 Prova 3
+   -   17/12 RECUPERAÇÃO
+
+Obs. 01 e 03 de setembro não haverá aula.
+
+Divulgação das notas das provas:
+   • Prova 1 – 29/09
+   • Prova 2 – 10/11
+   • Prova 3 – 07/12
+Departamento de Informática Aplicada
+       Tel.: 3308 3333 / Fax: 3308 7308
+             Email: dep.ina@inf.ufrgs.br
+       WEB: http://www.inf.ufrgs.br/ina
+

@@ -1,0 +1,29 @@
+            Programa da disciplina de Especificação Formal – INF01001
+
+Ano 2009. Semestre 2.
+Prof. Daltro Jose Nunes
+
+1) 15 aulas: Método Algébrico (Bibliog. 1 + 5)
+2) Exercício Final (Hotel).
+3) 6 aulas : Calculus of Communicanting Systems-CCS (Bibliog. 3 + 4 )
+4) Exercício Final (Hotel).
+5) 6 aulas: Método VDM (Bibliog. 1)
+6) Exercícios
+7) 2 aulas: Visão geral dos métodos Z, LOTOS e CSP. (Bibliog. 6 + 7 )
+
+Obs: Durante a apresentação dos métodos, serão fornecidos exercícios para serem
+resolvidos em casa e entregues ao Professor.
+
+Avaliação: Exercícios finais, 80% da nota final. Exercícios menores passados em aula
+quando da apresentação dos métodos, 20% da nota final.
+
+Bibliografia:
+1) Notas de aula do Professor sobre Especificação Algébrica. 2008
+2) Cohen B., Harwood W.T. e M.I. Jackson – The specification of Complex system.
+Addison Wesley Publishinhg Company/1996.
+3) Milner Robin - A Calculus of communication Systems. Springer Verlag/1980
+4) Milner Robin – Comunication and Concorrency. Prentice Hall/1989
+5) Watt. D –Programming languages syntax and semantics / Prentice Hall/1991
+6) Hoare. C.A.R. Communicating Sequencial Processes. London, Prentice Hall, 1985.
+7) Moura. V, Arnaldo – Especificações em Z. Editora da Unicamp - 2001
+

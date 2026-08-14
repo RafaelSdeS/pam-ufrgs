@@ -1,0 +1,195 @@
+Dados de identificação
+ Disciplina                      TEORIA DA COMPUTAÇÃO N
+ Oferecida para                  CIÊNCIA DA COMPUTAÇÃO, ENGENHARIA DE COMPUTAÇÃO, BIOTECNOLOGIA MOLECULAR,
+                                 BIOINFORMÁTICA, MATEMÁTICA (ÊNFASE EM MATEMÁTICA APLICADA COMPUTACIONAL)
+
+ Período Letivo                  2020/2
+ Professor Responsável           Rodrigo Machado
+ Sigla                           INF05501
+ Carga horária (horas)           60h
+  CH Autônoma (horas)            10h
+  CH Coletiva (horas)            50h
+  CH Individual (horas)          0h
+
+Súmula                           Noções de programa e máquina. Máquina de registradores e máquina de Turing.
+                                 Noção de computabilidade efetiva. Funções recursivas. Solucionabilidade de problemas.
+
+
+Objetivos                        Capacitar o aluno para o desenvolvimento sistematizado e formalizado das ideias, modelos e formalismos
+                                 associados à computabilidade, formalizando as noções de programa, máquina, computação, equivalência
+                                 de programas e máquinas universais. Capacitar o aluno para a investigação da solucionabilidade de
+                                 problemas, utilizando as propriedades da solucionabilidade e o princípio da redução de problemas.
+
+
+Conteúdo Programático
+
+Título                           Conteúdo                                                                                       Semana
+Programas, máquinas e          Teorema de Cantor e existência de funções não-computáveis.                                          1
+computação
+Programas, máquinas e          Definição de programa. Estruturações monolítica, recursiva e iterativa. Definição de máquina.       2
+computação                     Computação e função computada. Equivalência de programas. Equivalência de máquinas.
+Máquina de Registradores Norma Definição de Máquina de Registradores Norma. Aritmética natural. Estruturas de dados.             3a4
+                               Endereçamento direto e indireto. Número finito de registradores.
+Cálculo Lambda                 Sintaxe formal. Variáveis livres e ligadas. Substituição. Equivalência alfa. Redução beta.        5a8
+                               Valores booleanos e operações lógicas. Números naturais e operações aritméticas.
+                               Estruturas de dados: pares e listas. Definições recursivas.
+                               Comparação entre Cálculo Lambda e Máquina Norma.
+Máquina de Turing                Definição de Máquina de Turing. Reconhecimento de linguagens. Processamento de funções.         9 a 12
+                                 Máquina de Turing Universal. Variações da Máquina de Turing: fita duplamente infinita e
+                                 múltiplas fitas. Máquinas de Turing Não-determinísticas. Comparação entre Máquina de Turing,
+                                 Cálculo Lambda e Máquina Norma. Tese de Church-Turing.
+
+
+Computabilidade                  Problemas decidíveis e indecidíveis. Problema da parada. Problemas computáveis e               13 a 16
+                                 não-computáveis. Redução de problemas. Propriedades de decidibilidade e computabilidade.
+
+Metodologia
+ Estratégias didáticas em        Foram realizadas duas aulas presenciais antes do início do período de isolamento social.
+ atividades remotas
+                                 As atividades a serem realizadas no formato ERE serão descritas a seguir:
+
+                                 Plataforma: Será utilizada a plataforma institucional Moodle/UFRGS, sendo todas as atividades
+                                 propostas, entregues e avaliadas através dela.
+
+                                 Dinâmica das aulas: Cada aula expositiva presencial do plano original será convertida nas seguintes
+                                 atividades assíncronas:
+                                 - uma videoaula;
+                                 - um questionário de fixação de conteúdo;
+                                 - uma thread no fórum da disciplina para postagem/esclarecimento de dúvidas acerca do conteúdo da
+                                 vídeoaula.
+
+                                 Quinzenalmente ocorrerá um encontro síncrono entre alunos e professor, para
+                                 - revisão do conteúdo das últimas quatro videoaulas
+                                 - responder dúvidas sobre o conteúdo e sobre a resolução dos exercícios
+                                 - avaliação do andamento da disciplina
+
+                                 Esse encontro será realizado via plataforma de videoconferência institucional, será gravado e ficará
+                                 disponível para ser assistido posteriormente.
+
+                                 Afora isso, 10 horas são reservadas no semestre para desenvolvimento de atividades autônomas, as
+                                 quais englobam a resolução e entrega das listas de exercícios.
+
+ Estratégias didáticas em        Não serão realizadas atividades presenciais.
+ atividades presenciais
+ Recursos disponibilizados    As atividades previstas assim como as instruções para sua realização serão disponibilizadas na
+                              plataforma institucional Moodle/UFRGS. Eventuais componentes externos ao Moodle e necessários para
+                              a realização das atividades estarão indicados no próprio Moodle.
+
+                              Também serão disponibilizados no Moodle links para os livros e artigos online e gratuitos, indicados para
+                              leitura e estudo, visando auxiliar na realização das atividades propostas.
+
+ Recursos computacionais      Para acompanhar as atividades previstas é necessário ter acesso regular à Internet. As atividades
+                              assíncronas e atividades síncronas podem ser acompanhadas através de computador
+                              ou telefone (smartphone). Para a resolução das listas de exercício, é aconselhável, mas não obrigatório,
+                              que o aluno, caso use um computador, tenha acesso a um teclado ou, caso use um smartphone,
+                              certifique-se de que o smartphone possui câmera digital funcionando.
+
+ Informações sobre Direitos   Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização
+ Autorais e de Imagem:        para qualquer outra finalidade, sob as penas legais.
+                              Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a
+                              autoria, sob pena de plágio.
+                              A liberdade de escolha de exposição da imagem e da voz não isenta o aluno de realizar as atividades
+                              originalmente propostas ou alternativas.
+                              Todas as gravações de atividades síncronas devem ser previamente informadas por parte dos
+                              professores.
+                              Somente poderão ser gravadas pelos alunos as atividades síncronas propostas mediante concordância
+                              prévia dos professores e colegas, sob as penas legais.
+                              É proibido disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e
+                              do professor, sem autorização específica para a finalidade pretendida.
+                              Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica, sendo
+                              vedada a distribuição do material cuja a licença não permita ou sem a autorização prévia dos professores
+                              para o material de sua autoria.
+
+Carga Horária
+ Teórica                      60h
+ Prática                      0h
+
+Experiências de               - Assistir videoaulas expositivas
+Aprendizagem                  - Leitura de capítulos de livro, artigos e demais materiais complementares
+                              - Interação assíncrona com professor e colegas via fórum
+                              - Resolução de listas de exercício
+                              - Programação em simuladores de modelos de computação
+                              - Demonstrações de teoremas
+
+                              O conteúdo programático previsto para cada semana será apresentado na forma de videoaulas e textos, e
+                              será acompanhado de questionários de fixação de conteúdo. Quinzenalmente será realizado um encontro
+                              síncrono para acompanhamento da turma e esclarecimento de dúvidas; o registro e o esclarecimento de
+                              dúvidas também poderão ocorrer assincronamente através de discussões via fórum. A avaliação será
+                              realizada por meio de listas de exercícios a serem entregues pelo aluno.
+
+
+
+Critérios de Avaliação        O modelo de avaliação durante o ERE será diferente do modelo originalmente proposto para a versão
+                              presencial da disciplina.
+
+                              As avaliações durante o ERE serão realizadas através de listas de exercícios, cada uma associada a um
+                              dos quatro principais módulos do conteúdo programático da disciplina:
+
+                              L1: Existência de funções não-computáveis. Programas, máquinas e computação. Máquina de
+                              registradores Norma.
+                              L2: Cálculo Lambda.
+                              L3: Máquinas de Turing e Tese de Church-Turing.
+                              L4: Indecidibilidade de problemas.
+
+                              As avaliações serão disponibilizadas via Moodle, sendo realizadas de forma remota e assíncrona, com
+                              prazo indicado no Moodle. Em caso de dificuldade em realizar a avaliação por questões técnicas, o aluno
+                              deverá contactar o professor para encaminhamento de uma solução (no prazo máximo de 72 horas
+                              contadas a partir do término do prazo para entrega da avaliação).
+
+                              A nota do semestre NS da disciplina será calculada através da seguinte fórmula:
+
+                              NS = (L1 + L2 + L3 + L4) / 4
+
+                              O conceito do aluno será calculado a partir de NS por meio da seguinte tabela:
+
+                              Conceito A : 9,0 <= NS
+                              Conceito B : 7,5 <= NS < 9,0
+                              Conceito C : 6,0 <= NS < 7,5
+                              Conceito D :        NS < 6,0
+                            De acordo com a Resolução do CEPE sobre o ERE, durante o período em que perdurar o ERE, fica
+                            inaplicável a atribuição de conceito FF, prevista no Parágrafo 2º, do Artigo 44, da Resolução nº 11/2013
+                            do CEPE.
+                            Para os estudantes matriculados até o final do período e que deixaram de participar da Atividade de
+                            Ensino, deverá ser atribuído o registro NI (Não Informado) no campo de conceito do sistema acadêmico.
+                            Para os casos previstos no Parágrafo 1º, a justificativa do registro NI deverá conter a referência ao
+                            período de excepcionalidade.
+                            Os casos de não informação de conceito durante o ERE, deverão ser resolvidos até o fim do segundo
+                            período letivo, após o fim da situação emergencial de saúde.
+
+
+
+Atividades de Recuperação   O modelo de recuperação durante o ERE será diferente do modelo originalmente proposto para a versão
+Previstas                   presencial da disciplina.
+
+                            Ao final do semestre, haverá um exame de recuperação ER (também no formato de lista de exercícios).
+                            Este exame versará sobre todo o conteúdo do semestre e estará disponível somente aos alunos que
+                            ficaram com a nota do semestre NS abaixo de 6 (NS < 6, ou seja, conceito D). Após realizar o exame de
+                            recuperação, o aluno terá a nota final NF calculada pela seguinte fórmula:
+
+                            NF = 0,25*NS + 0,75*ER
+
+                            sendo o conceito final do aluno calculado a partir de NF através da mesma tabela usada para gerar o
+                            conceito a partir de NS.
+
+
+Bibliografia                Básica Essencial
+
+                            Diverio, Tiaraju A.; Menezes, Paulo F. Blauth. Teoria da Computação: Máquinas Universais e
+                            Computabilidade. Porto Alegre: Bookman, 2011. ISBN 9788577802678.
+                            (pode ser acessado via a plataforma Sabi+/UFRGS em http://sabi.ufrgs.br)
+
+                            Básica
+
+                            Bird, Richard. Programs and Machines - an introduction to the theory of computation. London: John-Wiley,
+                            1976.
+
+                            Hopcroft, John E.; Ullman, Jeffrey D.; Motwani, Rajeev. Introdução à teoria de autômatos, linguagens e
+                            computação. Rio de Janeiro: Campus, c2002. ISBN 8535210725; 9788535210729.
+
+                            Lewis, Harry R.; Papadimitriou, Christos H.. Elementos de teoria da computacao. Porto Alegre: Bookman,
+                            2000. ISBN 8573075341; 9788573075342.
+
+                            Sipser, Michael. Introdução à Teoria da Computação. São Paulo: Cengage Learning, 2007. ISBN
+                            9788522104994.
+                            (pode ser acessado via a plataforma Sabi+/UFRGS em http://sabi.ufrgs.br)
+
