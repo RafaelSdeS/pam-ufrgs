@@ -7,6 +7,7 @@ import { curriculumService } from '../services/curriculumService'
 
 import { calculateSubjectStatuses } from '../composables/useCurriculumStatus'
 import { matchCourse } from '../utils/searchUtils'
+import { getCourseCampus } from '../data/courseCampus'
 
 const props = defineProps({
   studentId: {
@@ -1072,8 +1073,11 @@ const miniViewportRect = computed(() => {
                     <div class="text-caption mb-1">
                       <strong>Carga Horária:</strong> {{ getWorkload(s) }}
                     </div>
+                    <div v-if="getCourseCampus(s.code)" class="text-caption mb-1">
+                      <strong>Câmpus:</strong> {{ getCourseCampus(s.code) }}
+                    </div>
                     <div class="text-caption">
-                      <strong>Situação:</strong> 
+                      <strong>Situação:</strong>
                       <span :class="`text-${getStatusConfig(s.status).color} font-weight-bold`">&nbsp;{{ getStatusConfig(s.status).badge }}</span>
                     </div>
 
