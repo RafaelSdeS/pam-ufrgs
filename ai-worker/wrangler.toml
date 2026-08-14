@@ -1,3 +1,9 @@
 name = "pam-ai-worker"
 main = "index.js"
 compatibility_date = "2026-08-14"
+
+[[unsafe.bindings]]
+name = "RATE_LIMITER"
+type = "ratelimit"
+namespace_id = "1001"
+simple = { limit = 10, period = 60 }

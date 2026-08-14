@@ -1,7 +1,7 @@
 <script setup>
 import { ref, onMounted, reactive, watch } from 'vue'
 import { useDisplay } from 'vuetify'
-import { dataService } from './services/dataService'
+import { dataService, escapeHtml } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
 import ElectiveSuggestionsModal from './components/ElectiveSuggestionsModal.vue'
 
@@ -316,20 +316,20 @@ const exportToPDF = (gradeObj) => {
   let tableRows = ''
   uniqueSectionsMap.forEach(item => {
     const timesList = (item.schedulesList || []).map(s => {
-      const cleanRoom = formatPrintRoom(s.room)
-      return `${s.day_of_week} das ${s.start_time?.substring(0, 5)} às ${s.end_time?.substring(0, 5)}${cleanRoom ? ` (${cleanRoom})` : ''}`
+      const cleanRoom = escapeHtml(formatPrintRoom(s.room))
+      return `${escapeHtml(s.day_of_week)} das ${s.start_time?.substring(0, 5)} às ${s.end_time?.substring(0, 5)}${cleanRoom ? ` (${cleanRoom})` : ''}`
     }).join('<br>')
 
     const obsText = item.observacao || dataService.getSectionObservation(item.course_code || item.course_id, item.section_code) || dataService.getCourseObservation(item.course_code || item.course_id) || ''
 
     tableRows += `
       <tr>
-        <td><strong>${item.course_name || item.course_code}</strong></td>
-        <td>${item.course_code}</td>
-        <td>${item.section_code}</td>
-        <td>${item.professor_name || '—'}</td>
+        <td><strong>${escapeHtml(item.course_name || item.course_code)}</strong></td>
+        <td>${escapeHtml(item.course_code)}</td>
+        <td>${escapeHtml(item.section_code)}</td>
+        <td>${item.professor_name ? escapeHtml(item.professor_name) : '—'}</td>
         <td>${timesList}</td>
-        <td>${obsText ? obsText.replace(/\n/g, '<br>') : '—'}</td>
+        <td>${obsText ? escapeHtml(obsText).replace(/\n/g, '<br>') : '—'}</td>
       </tr>
     `
   })
@@ -361,15 +361,15 @@ const exportToPDF = (gradeObj) => {
       const isElective = isElectiveItem(item)
       const palette = getPrintPalette(item.campus)
       const isShort = duration < 75
-      const cleanRoom = formatPrintRoom(item.room)
+      const cleanRoom = escapeHtml(formatPrintRoom(item.room))
           const cap = dataService.getSectionCapacity(item, curriculumService.getSelectedCourse())
           const capHtml = cap !== null ? ` <span style="font-size: 0.9em; opacity: 0.9;">(👥 ${cap} vagas)</span>` : ''
           dayCards += `
         <div class="class-card ${isShort ? 'short-card' : ''} ${isElective ? 'elective-hatched' : ''}" style="top: ${top}px; height: ${height}px; background-color: ${palette.bg} !important; border-left: 4px solid ${palette.border} !important; color: ${palette.text} !important;">
-          <div class="class-card-title" style="color: ${palette.text} !important;">${item.course_name || item.course_code}</div>
-          <div class="class-card-details turma-details" style="color: ${palette.text} !important; opacity: 0.95;"><strong>Turma:</strong> ${item.section_code}${capHtml}</div>
+          <div class="class-card-title" style="color: ${palette.text} !important;">${escapeHtml(item.course_name || item.course_code)}</div>
+          <div class="class-card-details turma-details" style="color: ${palette.text} !important; opacity: 0.95;"><strong>Turma:</strong> ${escapeHtml(item.section_code)}${capHtml}</div>
           ${cleanRoom ? `<div class="class-card-details location-details" style="color: ${palette.text} !important; opacity: 0.9;">📍 ${cleanRoom}</div>` : ''}
-          ${item.professor_name ? `<div class="class-card-details professor-details" style="color: ${palette.text} !important; opacity: 0.85;"><strong>Prof:</strong> ${item.professor_name}</div>` : ''}
+          ${item.professor_name ? `<div class="class-card-details professor-details" style="color: ${palette.text} !important; opacity: 0.85;"><strong>Prof:</strong> ${escapeHtml(item.professor_name)}</div>` : ''}
         </div>
       `
     })

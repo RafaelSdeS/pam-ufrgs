@@ -1,6 +1,12 @@
 import academicData from '../data/academic_data.json'
 import { curriculumService } from './curriculumService'
 
+export function escapeHtml(str) {
+  return String(str ?? '').replace(/[&<>"']/g, c => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]))
+}
+
 const STORAGE_KEYS = {
   COMPLETED_COURSES: 'ufrgs_pma_completed_courses',
   DESIRED_COURSES: 'ufrgs_pma_desired_courses',

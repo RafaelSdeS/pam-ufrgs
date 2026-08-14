@@ -56,6 +56,14 @@ export default {
       return jsonResponse({ error: 'Pergunta vazia' }, 400, corsHeaders)
     }
 
+    // ponytail: rate limit fixo por IP (RATE_LIMITER binding), sem coordenação entre PoPs -
+    // suficiente pro volume de um site pessoal, trocar se abuso real for detectado
+    const ip = request.headers.get('CF-Connecting-IP') || 'unknown'
+    const { success } = await env.RATE_LIMITER.limit({ key: ip })
+    if (!success) {
+      return jsonResponse({ error: 'Muitas perguntas em pouco tempo, aguarde um instante.' }, 429, corsHeaders)
+    }
+
     let lastError = null
     for (const model of MODELS) {
       const groqResponse = await fetch('https://api.groq.com/openai/v1/chat/completions', {
