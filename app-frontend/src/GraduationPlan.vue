@@ -1,5 +1,5 @@
 <script setup>
-import { ref, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch, reactive } from 'vue'
 import { dataService, escapeHtml } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
 import { predictionService } from './services/predictionService'
@@ -264,6 +264,35 @@ const violationSet = computed(() => {
   return violations
 })
 
+const snackbar = reactive({
+  show: false,
+  text: '',
+  color: 'success',
+  timeout: 4000
+})
+
+const showSnackbar = (text, color = 'success') => {
+  snackbar.text = text
+  snackbar.color = color
+  snackbar.show = true
+}
+
+function saveCurrentPlan() {
+  const saved = dataService.getSavedGraduationPlans()
+  const name = `Previsão (${semesterCards.value.length} semestres) - ${new Date().toLocaleDateString('pt-BR')}`
+  saved.push({
+    id: Date.now() + Math.random(),
+    name,
+    createdAt: new Date().toISOString(),
+    courseCode: selectedCourse.value,
+    semesters: JSON.parse(JSON.stringify(semesters.value)),
+    creditLimit: creditLimit.value,
+    semesterCreditLimits: JSON.parse(JSON.stringify(semesterCreditLimits.value))
+  })
+  dataService.saveSavedGraduationPlans(saved)
+  showSnackbar(`Previsão "${name}" salva com sucesso em 'Previsões Salvas'!`, 'success')
+}
+
 function exportToPDF() {
   const courseLabel = selectedCourse.value === 'ecp' ? 'Engenharia de Computação' : 'Ciência da Computação'
 
@@ -513,6 +542,16 @@ async function openPlano(subj) {
             Recalcular Previsão
           </v-btn>
           <v-btn
+            color="success"
+            variant="flat"
+            class="rounded-lg font-weight-bold"
+            prepend-icon="mdi-bookmark-plus-outline"
+            :disabled="!semesterCards.length"
+            @click="saveCurrentPlan"
+          >
+            Salvar Previsão
+          </v-btn>
+          <v-btn
             variant="tonal"
             class="rounded-lg font-weight-bold"
             prepend-icon="mdi-file-pdf-box"
@@ -520,6 +559,9 @@ async function openPlano(subj) {
             @click="exportToPDF"
           >
             Exportar PDF
+          </v-btn>
+          <v-btn variant="text" class="rounded-lg font-weight-bold" prepend-icon="mdi-bookmark-multiple-outline" @click="emit('change-page', 'saved_graduation_plans')">
+            Previsões Salvas
           </v-btn>
           <v-spacer></v-spacer>
           <v-btn variant="text" class="rounded-lg font-weight-bold" prepend-icon="mdi-sitemap" @click="emit('change-page', 'curriculum')">
@@ -803,6 +845,22 @@ async function openPlano(subj) {
         Além disso, o currículo exige {{ graduationRequirements.complementary }} créditos de atividades complementares, que não ocupam horário de aula e por isso não aparecem nos semestres acima.
       </div>
     </div>
+
+    <v-snackbar
+      v-model="snackbar.show"
+      :color="snackbar.color"
+      :timeout="snackbar.timeout"
+      location="bottom right"
+      class="rounded-lg"
+    >
+      <div class="d-flex align-center font-weight-medium">
+        <v-icon :icon="snackbar.color === 'success' ? 'mdi-check-circle' : 'mdi-alert'" class="mr-2" size="large"></v-icon>
+        {{ snackbar.text }}
+      </div>
+      <template v-slot:actions>
+        <v-btn variant="text" size="small" class="font-weight-bold" @click="snackbar.show = false">Fechar</v-btn>
+      </template>
+    </v-snackbar>
   </v-container>
 </template>
 

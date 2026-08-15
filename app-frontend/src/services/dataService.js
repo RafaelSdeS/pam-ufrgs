@@ -17,7 +17,8 @@ const STORAGE_KEYS = {
   SAVED_SCHEDULES: 'ufrgs_pma_saved_schedules',
   CREDIT_LIMIT: 'ufrgs_pma_credit_limit',
   GRADUATION_PLAN: 'ufrgs_pma_graduation_plan',
-  SEMESTER_CREDIT_LIMITS: 'ufrgs_pma_semester_credit_limits'
+  SEMESTER_CREDIT_LIMITS: 'ufrgs_pma_semester_credit_limits',
+  SAVED_GRADUATION_PLANS: 'ufrgs_pma_saved_graduation_plans'
 }
 
 export const dataService = {
@@ -562,6 +563,21 @@ export const dataService = {
 
   saveSemesterCreditLimits(map) {
     this._setItemScoped(STORAGE_KEYS.SEMESTER_CREDIT_LIMITS, JSON.stringify(map))
+  },
+
+  getSavedGraduationPlans() {
+    const raw = this._getItemScoped(STORAGE_KEYS.SAVED_GRADUATION_PLANS)
+    if (!raw) return []
+    try {
+      const parsed = JSON.parse(raw)
+      return Array.isArray(parsed) ? parsed : []
+    } catch (e) {
+      return []
+    }
+  },
+
+  saveSavedGraduationPlans(list) {
+    this._setItemScoped(STORAGE_KEYS.SAVED_GRADUATION_PLANS, JSON.stringify(list))
   },
 
   getElectiveCatalog(courseCode = null) {

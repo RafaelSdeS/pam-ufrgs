@@ -14,6 +14,7 @@ import ElectivesModal from './components/ElectivesModal.vue'
 import AiAssistantModal from './components/AiAssistantModal.vue'
 import SavedSchedules from './SavedSchedules.vue'
 import GraduationPlan from './GraduationPlan.vue'
+import SavedGraduationPlans from './SavedGraduationPlans.vue'
 
 const { mobile } = useDisplay()
 const showMobileWarning = ref(true)
@@ -78,6 +79,7 @@ const confirmCourseSelection = () => {
 }
 
 const navigateTo = (pageName) => {
+  if (pageName === 'graduation_plan') graduationPlanKey.value++
   currentPage.value = pageName
 }
 
@@ -237,6 +239,11 @@ const clearAllBrowserData = () => {
         <GraduationPlan
           v-else-if="currentPage === 'graduation_plan'"
           :key="graduationPlanKey"
+          @change-page="navigateTo"
+        />
+
+        <SavedGraduationPlans
+          v-else-if="currentPage === 'saved_graduation_plans'"
           @change-page="navigateTo"
         />
       </v-container>
