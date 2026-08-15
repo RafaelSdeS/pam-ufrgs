@@ -118,15 +118,19 @@ const ask = async () => {
         {{ errorMsg }}
       </v-alert>
 
-      <v-card
-        v-if="answer"
-        variant="tonal"
-        color="primary"
-        class="pa-4 rounded-xl mt-4"
-        style="white-space: pre-wrap;"
-      >
-        {{ answer }}
-      </v-card>
+      <template v-if="answer">
+        <v-card
+          variant="tonal"
+          color="primary"
+          class="pa-4 rounded-xl mt-4"
+          style="white-space: pre-wrap;"
+        >
+          {{ answer }}
+        </v-card>
+        <p class="text-caption text-medium-emphasis mt-2 mb-0">
+          A IA pode cometer erros. Sempre confira as informações importantes.
+        </p>
+      </template>
     </v-card>
   </v-dialog>
 </template>
