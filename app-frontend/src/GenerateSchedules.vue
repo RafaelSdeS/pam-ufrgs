@@ -7,6 +7,18 @@
       </v-card-title>
 
       <v-card-text>
+        <v-alert
+          v-if="showPreviewBanner"
+          type="info"
+          variant="tonal"
+          closable
+          class="mb-4"
+          @click:close="showPreviewBanner = false"
+        >
+          Você está vendo um preview de horário de um semestre futuro da Previsão de Formatura - sua lista de disciplinas desejadas foi trocada temporariamente.
+          <v-btn size="small" variant="text" color="primary" class="text-none ml-2" @click="restoreDesiredCourses">Restaurar minha lista</v-btn>
+        </v-alert>
+
         <!-- Semester selector on top -->
         <v-row class="mb-4">
           <v-col cols="12" md="6">
@@ -657,6 +669,14 @@ const loadSemesters = async () => {
 const loadDesiredCourses = async () => {
   const desired = dataService.getDesiredCourses()
   interestList.value = desired.map(curso => ({ course: curso }))
+}
+
+const showPreviewBanner = ref(dataService.hasDesiredCoursesBackup())
+
+const restoreDesiredCourses = () => {
+  dataService.restoreDesiredCoursesBackup()
+  showPreviewBanner.value = false
+  loadDesiredCourses()
 }
 
 const daysOfWeekList = ref([])

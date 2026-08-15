@@ -10,6 +10,7 @@ export function escapeHtml(str) {
 const STORAGE_KEYS = {
   COMPLETED_COURSES: 'ufrgs_pma_completed_courses',
   DESIRED_COURSES: 'ufrgs_pma_desired_courses',
+  DESIRED_COURSES_BACKUP: 'ufrgs_pma_desired_courses_backup',
   RESTRICTIONS: 'ufrgs_pma_restrictions',
   SELECTED_CURRICULUM: 'ufrgs_pma_selected_curriculum',
   CUSTOM_TURMAS: 'ufrgs_pma_custom_turmas',
@@ -479,6 +480,34 @@ export const dataService = {
   saveDesiredCourses(list) {
     this._setItemScoped(STORAGE_KEYS.DESIRED_COURSES, JSON.stringify(list))
   },
+
+  // Troca temporariamente a lista de disciplinas desejadas (ex.: preview de horário de um
+  // semestre futuro do plano de formatura), guardando a lista atual para poder restaurá-la depois.
+  // Chamadas repetidas não sobrescrevem o backup - só a primeira, para não perder a lista original.
+  previewDesiredCourses(list) {
+    if (!this._getItemScoped(STORAGE_KEYS.DESIRED_COURSES_BACKUP)) {
+      this._setItemScoped(STORAGE_KEYS.DESIRED_COURSES_BACKUP, JSON.stringify(this.getDesiredCourses()))
+    }
+    this.saveDesiredCourses(list)
+  },
+
+  hasDesiredCoursesBackup() {
+    return Boolean(this._getItemScoped(STORAGE_KEYS.DESIRED_COURSES_BACKUP))
+  },
+
+  restoreDesiredCoursesBackup() {
+    const raw = this._getItemScoped(STORAGE_KEYS.DESIRED_COURSES_BACKUP)
+    if (!raw) return false
+    try {
+      const parsed = JSON.parse(raw)
+      this.saveDesiredCourses(Array.isArray(parsed) ? parsed : [])
+    } catch (e) {
+      this.saveDesiredCourses([])
+    }
+    this._setItemScoped(STORAGE_KEYS.DESIRED_COURSES_BACKUP, '')
+    return true
+  },
+
   getRestrictions() {
     const raw = this._getItemScoped(STORAGE_KEYS.RESTRICTIONS)
     if (!raw) return []

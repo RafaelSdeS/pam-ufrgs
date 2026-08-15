@@ -512,6 +512,20 @@ async function openPlano(subj) {
     planoLoading.value = false
   }
 }
+
+function previewSemesterSchedule(sem) {
+  // getDesiredCourses/saveDesiredCourses guardam objetos de disciplina completos (ver
+  // GenerateSchedules.vue: item.course), não só o código - GeneratedSchedule.vue lê
+  // course.name/course.code direto, daí precisar resolver o objeto aqui também.
+  const courses = sem.subjects
+    .filter(s => !s.isPlaceholder)
+    .map(s => dataService.getCourseByCode(s.code) || { code: s.code, name: s.name, credits: s.credits })
+  if (courses.length === 0) return
+  const confirmed = confirm(`Isso vai substituir temporariamente sua lista de "Disciplinas Desejadas" pelas ${courses.length} disciplina(s) do ${sem.index + 1}º Semestre, para gerar um preview de horário com as turmas do semestre atual. Sua lista atual será salva e pode ser restaurada depois na tela de Gerar Horários. Continuar?`)
+  if (!confirmed) return
+  dataService.previewDesiredCourses(courses)
+  emit('change-page', 'generated_schedule')
+}
 </script>
 
 <template>
@@ -700,6 +714,19 @@ async function openPlano(subj) {
             </v-btn>
           </div>
         </v-card-text>
+        <v-card-actions class="pa-3 pt-0">
+          <v-btn
+            block
+            size="small"
+            variant="tonal"
+            color="primary"
+            prepend-icon="mdi-calendar-clock-outline"
+            class="text-none"
+            @click="previewSemesterSchedule(sem)"
+          >
+            Gerar horário (preview)
+          </v-btn>
+        </v-card-actions>
       </v-card>
     </div>
 
