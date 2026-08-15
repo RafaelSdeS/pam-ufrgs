@@ -1166,6 +1166,94 @@ const exportToPDF = (gradeObj, scheduleIndex) => {
   }, 250)
 }
 
+const icsDialogOpen = ref(false)
+const icsDialogGrade = ref(null)
+const icsStartDate = ref('')
+const icsEndDate = ref('')
+const icsError = ref('')
+
+const openIcsDialog = (gradeObj) => {
+  icsDialogGrade.value = gradeObj
+  icsStartDate.value = ''
+  icsEndDate.value = ''
+  icsError.value = ''
+  icsDialogOpen.value = true
+}
+
+const icsPad2 = n => String(n).padStart(2, '0')
+
+const toIcsLocalDateTime = (date, hhmmss) => {
+  const [h, m] = (hhmmss || '00:00:00').split(':').map(Number)
+  return `${date.getFullYear()}${icsPad2(date.getMonth() + 1)}${icsPad2(date.getDate())}T${icsPad2(h)}${icsPad2(m || 0)}00`
+}
+
+const toIcsUtcStamp = (date) =>
+  `${date.getUTCFullYear()}${icsPad2(date.getUTCMonth() + 1)}${icsPad2(date.getUTCDate())}T${icsPad2(date.getUTCHours())}${icsPad2(date.getUTCMinutes())}${icsPad2(date.getUTCSeconds())}Z`
+
+// RFC 5545 pede escape de vírgula/ponto-e-vírgula/barra invertida em valores de texto.
+const icsEscapeText = (str) => String(str || '').replace(/[\\;,]/g, m => '\\' + m).replace(/\n/g, '\\n')
+
+function confirmExportICS() {
+  const gradeObj = icsDialogGrade.value
+  icsError.value = ''
+  if (!gradeObj || !icsStartDate.value || !icsEndDate.value) {
+    icsError.value = 'Informe as duas datas.'
+    return
+  }
+  const start = new Date(`${icsStartDate.value}T00:00:00`)
+  const end = new Date(`${icsEndDate.value}T23:59:59`)
+  if (end < start) {
+    icsError.value = 'A data de fim precisa ser depois da data de início.'
+    return
+  }
+
+  const untilStr = `${end.getFullYear()}${icsPad2(end.getMonth() + 1)}${icsPad2(end.getDate())}T235959`
+  const dtstamp = toIcsUtcStamp(new Date())
+
+  // ponytail: sem line-folding de RFC 5545 (linhas <=75 octetos) - SUMMARY/LOCATION aqui são
+  // curtos o bastante pra todo client testado aceitar sem folding; revisitar se algum campo
+  // longo (ex: observação de turma) entrar nesses valores no futuro.
+  const events = (gradeObj.items || []).map(item => {
+    const isoWeekday = dayOrder[item.day_of_week]
+    if (!isoWeekday || !item.start_time || !item.end_time) return null
+    // Acha a 1ª ocorrência do dia da semana do item a partir da data de início, não importa
+    // em que dia da semana a data de início caia.
+    const jsWeekday = isoWeekday % 7 // dayOrder: 1=segunda..7=domingo; Date#getDay: 0=domingo..6=sábado
+    const firstOccurrence = new Date(start)
+    firstOccurrence.setDate(firstOccurrence.getDate() + ((jsWeekday - firstOccurrence.getDay() + 7) % 7))
+    if (firstOccurrence > end) return null
+
+    return [
+      'BEGIN:VEVENT',
+      `UID:${item.section_id || item.course_code}-${isoWeekday}-${item.start_time}@pam-ufrgs`,
+      `DTSTAMP:${dtstamp}`,
+      `DTSTART:${toIcsLocalDateTime(firstOccurrence, item.start_time)}`,
+      `DTEND:${toIcsLocalDateTime(firstOccurrence, item.end_time)}`,
+      `RRULE:FREQ=WEEKLY;UNTIL=${untilStr}`,
+      `SUMMARY:${icsEscapeText(`${item.course_name || item.course_code} (${item.course_code})`)}`,
+      ...(formatRoom(item.room) ? [`LOCATION:${icsEscapeText(formatRoom(item.room))}`] : []),
+      'END:VEVENT'
+    ].join('\r\n')
+  }).filter(Boolean)
+
+  if (events.length === 0) {
+    icsError.value = 'Nenhuma aula cai dentro do período informado.'
+    return
+  }
+
+  const ics = ['BEGIN:VCALENDAR', 'VERSION:2.0', 'PRODID:-//PAM UFRGS//Previsão de Horário//PT', ...events, 'END:VCALENDAR'].join('\r\n')
+
+  const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' })
+  const url = URL.createObjectURL(blob)
+  const a = document.createElement('a')
+  a.href = url
+  a.download = 'horario-pam-ufrgs.ics'
+  a.click()
+  URL.revokeObjectURL(url)
+
+  icsDialogOpen.value = false
+}
+
 onMounted(() => {
   loadSchedules()
 })
@@ -1367,6 +1455,16 @@ onMounted(() => {
                     @click="exportToPDF(gradeObj, scheduleIndex)"
                   >
                     Salvar PDF
+                  </v-btn>
+                  <v-btn
+                    color="primary"
+                    variant="tonal"
+                    size="small"
+                    prepend-icon="mdi-calendar-export-outline"
+                    class="rounded-lg font-weight-bold"
+                    @click="openIcsDialog(gradeObj)"
+                  >
+                    Exportar .ics
                   </v-btn>
                 </div>
               </v-card-title>
@@ -1685,6 +1783,43 @@ onMounted(() => {
 
     <!-- Modal de Sugestão de Eletivas -->
     <ElectiveSuggestionsModal ref="electivesModalRef" @add-section="onAddElectiveSection" />
+
+    <v-dialog v-model="icsDialogOpen" max-width="420">
+      <v-card class="rounded-xl">
+        <v-card-title class="d-flex align-center justify-space-between pa-4">
+          <span class="text-h6 font-weight-bold">Exportar .ics</span>
+          <v-btn icon="mdi-close" variant="text" @click="icsDialogOpen = false"></v-btn>
+        </v-card-title>
+        <v-card-text class="pa-4 pt-0">
+          <div class="text-caption text-medium-emphasis mb-3">
+            Informe o período do semestre pra gerar os eventos recorrentes semanais corretamente.
+          </div>
+          <v-text-field
+            v-model="icsStartDate"
+            type="date"
+            label="Data de início do semestre"
+            variant="outlined"
+            density="comfortable"
+            hide-details
+            class="mb-3"
+          ></v-text-field>
+          <v-text-field
+            v-model="icsEndDate"
+            type="date"
+            label="Data de fim do semestre"
+            variant="outlined"
+            density="comfortable"
+            hide-details
+          ></v-text-field>
+          <v-alert v-if="icsError" type="error" variant="tonal" density="compact" class="mt-3">{{ icsError }}</v-alert>
+        </v-card-text>
+        <v-card-actions class="pa-4 pt-0">
+          <v-spacer></v-spacer>
+          <v-btn variant="text" @click="icsDialogOpen = false">Cancelar</v-btn>
+          <v-btn color="primary" variant="flat" class="font-weight-bold rounded-lg" @click="confirmExportICS">Exportar</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
 
     <!-- Notificação Global desta Tela -->
     <v-snackbar
