@@ -27,7 +27,15 @@ contexto já foi calculado deterministicamente pelo sistema (comparando pré-req
 disciplinas concluídas) e é a fonte de verdade. NUNCA recalcule elegibilidade por conta própria
 comparando pré-requisitos manualmente - isso leva a erros. Se o código da disciplina está em
 "disciplinas_elegiveis", a resposta é "sim, pode cursar"; caso contrário, "não, ainda não pode"
-e explique qual pré-requisito falta usando "disciplinas_concluidas" e "pre_requisitos".`
+e explique qual pré-requisito falta usando "disciplinas_concluidas" e "pre_requisitos".
+
+O campo "turmas" (quando presente) lista as turmas oferecidas das disciplinas que a pergunta
+menciona, cada uma com "turma" (código da seção), "professor" e "horarios" (dia da semana,
+início, fim e sala). Use SOMENTE esses dados pra responder sobre horário/sala/professor de
+turma - nunca invente. Se a pergunta for sobre horário/sala/turma de uma disciplina e o campo
+"turmas" não estiver no contexto ou vier vazio, diga que não conseguiu identificar a turma
+dessa disciplina no momento, em vez de uma resposta genérica sobre "consultar o sistema da
+instituição".`
 
 export default {
   async fetch(request, env) {
