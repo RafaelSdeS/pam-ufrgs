@@ -1,0 +1,250 @@
+                                                   PLANO DE ENSINO
+                                                                                                              Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Informática
+                                               Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: ANDERSON ROCHA TAVARES
+Disciplina: APRENDIZADO PROFUNDO
+Sigla: INF01092             Créditos: 4
+
+Carga Horária
+CH Teórica: 40h      CH Prática: 20h       Total: 60h
+CH Coletiva: 45h     CH Autônoma: 15h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Neurônio artificial e sua organização em diversas arquiteturas de redes profundas, para tarefas envolvendo dados não-estruturados.
+
+Currículos
+                                          Currículos                                         Etapa Aconselhada            Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                        Eletiva
+
+Objetivos
+Apresentar conceitos, técnicas e aplicações de aprendizado profundo, assim como as principais ferramentas para prototipagem e
+avaliação de modelos.
+
+
+A disciplina visa desenvolver as seguintes habilidades específicas:
+- Identificar impactos positivos e negativos da implantação de um sistema de IA.
+- Compreender a otimização baseada em gradiente como elemento essencial das técnicas de aprendizado profundo.
+- Propor uma solução adequada em termos de eficácia e eficiência para um problema de aprendizado de máquina de acordo com a
+descrição e requisitos do problema, os dados e recursos computacionais disponíveis.
+- Avaliar de forma correta e robusta diferentes modelos, utilizando métricas de desempenho e estratégias de avaliação apropriadas
+para o tipo de tarefa em questão.
+- Identificar e mitigar under- e overfitting em redes neurais
+- Entender as possibilidades e limitações de cada classe de modelos com relação à tarefa (regressão/classificação/geração), à
+natureza dos dados a serem processados (dados estruturados, imagens, textos, sequências e grafos) e à sua independência (dados
+independentes vs dados sequenciais).
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução
+Conteúdo: Introdução, História, Conceitos Básicos, Aplicações
+  Semana: 2
+    Título: Redes neurais clássicas
+Conteúdo: Perceptron multicamada (MLP), funções de custo. Vetorização. Introdução ao aprendizado de representações.
+  Semana: 3
+    Título: Redes neurais convolucionais
+Conteúdo: Tarefas de visão computacional. Redes convolucionais: convolução, pooling.
+  Semana: 4
+    Título: Overfitting e Regularização
+Conteúdo: Overfitting em redes neurais. Regularização por ajustes na função de custo, Dropout, Layer Norm e Batch Norm
+  Semana: 5
+    Título: Autoencoders e GANs
+
+
+
+
+                                                                     Página 1
+                                                   PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: Autoencoders, autoencoders variacionais (VAE), Redes Generativas Adversariais (GANs)
+  Semana: 6
+    Título: Prova 1
+Conteúdo: Revisão e Prova 1
+  Semana: 7
+    Título: Seminários
+Conteúdo: Apresentação de seminários
+  Semana: 8
+    Título: Introdução ao Processamento de sequências
+Conteúdo: Introdução a sequências e séries temporais.
+              Redes neurais recorrentes. Esquecimento catastrófico. Long Short-Term Memory (LSTM).
+  Semana: 9
+    Título: Transformers
+Conteúdo: Self-attention, embeddings contextuais, encoder, decoder.
+              Grandes modelos de linguagem
+  Semana: 10
+    Título: Aprendizado multimodal
+Conteúdo: Vision transformers (ViT), Vision Language Models, Modelos de difusão
+  Semana: 11
+    Título: Redes neurais de grafos (Graph Neural Networks)
+Conteúdo: Conceitos básicos, embedding de nós, arestas e grafos. Troca de mensagem. Convolução em grafos. Atenção em grafos.
+              Tarefas, aplicações.
+  Semana: 12
+    Título: Explicabilidade
+Conteúdo: Noções básicas de explicabilidade. Técnicas de explicabilidade para tarefas em textos, imagens e grafos.
+  Semana: 13
+    Título: Considerações Éticas
+Conteúdo: Discussões sobre impactos sociais, econômicos e ambientais do uso de modelos de aprendizado profundo.
+  Semana: 14
+    Título: Prova 2
+Conteúdo: Revisão e Prova 2
+  Semana: 15
+    Título: Projetos
+Conteúdo: Apresentação dos Projetos Finais
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com o
+desenvolvimento de exercícios e discussões. Algumas das aulas serão realizadas em laboratórios para a
+implementação/visualização dos conceitos vistos em aula.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de estudantes monitores em
+atividades didáticas.
+
+
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos e
+acompanhamento geral da disciplina. Adicionalmente, outras plataformas também podem ser usadas para facilitar a comunicação, a
+realização e a avaliação de atividades.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 27 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 13 semanas e meia), num total de 2700 minutos,
+
+
+
+
+                                                                      Página 2
+                                                  PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+e mais 15 horas (900 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a
+exercícios e trabalhos extraclasse a serem avaliados.
+
+Experiências de Aprendizagem
+- Participar de aulas expositivas
+- Realizar trabalhos de programação em laboratório
+- Resolver listas de exercícios
+- Realizar as provas teóricas
+- Estudar um assunto ou artigo e apresentá-lo em seminário
+- Desenvolver um projeto final de implementação
+- Consultar o material didático disponibilizado (e.g. leituras e vídeos)
+
+
+
+Os estudantes devem seguir as regras definidas pelo(a) professor(a) responsável sobre o uso de assistentes de Inteligência Artificial
+(IA). As regras sobre o uso de IA podem variar entre as atividades que compõem as experiências de aprendizagem e os critérios de
+avaliação da disciplina.
+
+Critérios de avaliação
+As atividades correspondentes às 15 horas autônomas previstas neste plano de ensino envolver tarefas de programação dos
+algoritmos ensinados e avaliação de modelos em tarefas selecionadas, além de partes do projeto final (PF), descrito a seguir.
+
+
+O desempenho do aluno será avaliado da seguinte forma:
+- Provas Teóricas (P1 e P2): avaliações teóricas dos fundamentos e conceitos da disciplina;
+- Laboratórios e Exercícios (LE): questionários e pequenas atividades (coletivas ou autônomas) realizadas ao longo do semestre,
+contemplando exercícios de fixação, implementações de algoritmos básicos e avaliação de modelos;
+- Seminários (S): apresentação de temas relevantes e participação nos seminários dos colegas.
+- Projeto Final (PF): aplicação e/ou melhoria de sistema de aprendizado profundo para um benchmark ou problema relevante;
+
+
+Composição da nota final (NF):
+
+
+NF = (P1*0,2) + (P2*0,2) + (LE*0,2) + (PF*0,3) + (Seminários*0,1)
+
+
+Será aprovado o aluno que obtiver nota final (NF) acima de 6. Os conceitos serão atribuídos da seguinte forma:
+- Conceito A: NF >= 9,0
+- Conceito B: NF >=7,5 e < 9,0
+- Conceito C: NF >= 6,0 e < 7,5
+- Conceito D: NF < 6,0
+- Conceito FF: caso o aluno não obtenha frequência mínima de 75% (sem direito à recuperação).
+
+Atividades de Recuperação Previstas
+Será oferecida uma oportunidade de recuperação ao aluno que atender à condição de ter a frequência mínima exigida de 75% e cuja
+nota final (NF), calculada de acordo com o item "Critérios de Avaliação", seja inferior a 6,0.
+
+
+A prova de recuperação versará sobre todo o conteúdo da disciplina e será avaliada com um grau de 0 (zero) a 10 (dez), gerando a
+nota de recuperação (NR). A avaliação final, após a recuperação, será a seguinte:
+
+
+Se NR < 6.0: reprovado com conceito D
+Se NR &#8805; 6.0: aprovado com conceito C
+
+Bibliografia
+Básica Essencial
+PRINCE, Simon JD. Understanding deep learning. .: MIT Press, 2023. ISBN 0262048647. Disponível em: http://udlbook.com
+
+
+
+
+                                                                      Página 3
+                                                   PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+
+Básica
+GOODFELLOW, Ian; BENGIO, Yoshua; COURVILLE, Aaron. Deep learning. .: MIT Press, 2016. ISBN 0262035618. Disponível em:
+https://www.deeplearningbook.org/
+NIELSEN, Michael A. Neural Networks and Deep Learning. .: Determination Press, 2025. Disponível em: http://neuralnetworksanddeeplearning.com
+
+Complementar
+RUSSELL, Stuart J.; NORVIG, Peter. Artificial Intelligence: A Modern Approach. EUA: Pearson, 2020. ISBN 0134610997.
+William L. Hamilton. Graph Representation Learning. Montreal: Springer, 2020. ISBN 978-3031004605. Disponível em:
+https://www.cs.mcgill.ca/~wlh/grl_book/
+
+
+
+Outras Referências
+                          Título                                                                    Texto
+Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B., Ward              Goodfellow, I., Pouget-Abadie, J., Mirza, M., Xu, B.,
+                                                                        Warde-Farley, D., Ozair, S., ... & Bengio, Y. (2020).
+                                                                        Generative adversarial networks. Communications of the
+                                                                        ACM, 63(11), 139-144
+Wu, Z., Pan, S., Chen, F., Long, G., Zhang, C., & Philip,               Wu, Z., Pan, S., Chen, F., Long, G., Zhang, C., & Philip, S.
+                                                                        Y. (2020). A comprehensive survey on graph neural
+                                                                        networks. IEEE transactions on neural networks and
+                                                                        learning systems, 32(1), 4-24.
+Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones              Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones,
+                                                                        L., Gomez, A. N., ... & Polosukhin, I. (2017). Attention is all
+                                                                        you need. Advances in Neural Information Processing
+                                                                        Systems, 30.
+Artigos de conferências e periódicos relevantes                         Artigos de conferências e periódicos relevantes
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                       Página 4
+

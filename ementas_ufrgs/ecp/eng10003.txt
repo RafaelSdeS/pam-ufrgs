@@ -1,0 +1,198 @@
+                                                     PLANO DE ENSINO
+                                                                                                           Data de Emissão: 15/08/2026
+
+
+
+                                                           Escola de Engenharia
+                               Departamento de Sistemas Elétricos de Automação e Energia
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: VALNER JOAO BRUSAMARELLO
+Disciplina: LABORATÓRIO DE CIRCUITOS ELÉTRICOS
+Sigla: ENG10003             Créditos: 2
+
+Carga Horária
+CH Teórica: 30h     CH Prática: 0h      Total: 30h
+CH Coletiva: 30h     CH Autônoma: 0h            CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Instrumentos de medida e conceitos fundamentais de medição. Ferramentas Computacionais de análise, e simulação. Aplicação de
+análise de circuitos resistivos. Aplicação de análise de circuitos de 1ª e 2ª ordem. Resposta em frequência de circuitos. Análise
+fasorial. Medição de potência em Circuitos Trifásicos. Transformadores.
+
+Currículos
+                                        Currículos                                         Etapa Aconselhada            Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                              6                 Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                                    5                 Obrigatória
+ENGENHARIA DE ENERGIA                                                                                 5                 Obrigatória
+
+Objetivos
+A disciplina visa complementar a formação do aluno na área de circuitos elétricos através de atividades práticas de laboratório. Ela
+também visa permitir ao aluno uma compreensão melhor dos conceitos teóricos através de montagens e simulações numéricas de
+casos e circuitos típicos. Finalmente, visa a familiarizar os alunos com os principais instrumentos e conceitos de medidas.
+
+Conteúdo Programático
+  Semana: 1 a 7
+    Título: Módulo 1: Medidas Elétricas e Análise de Circuitos Resistivos
+Conteúdo: - Apresentação da disciplina
+             - Conceitos Básicos sobre Medidas Elétricas
+             - Lei de Ohm e Leis de Kirchhoff
+             - Uso de Instrumentos de Medida
+             - Uso de Ferramentas de Simulação
+             - Métodos de análise nodal e de malhas
+             - Teoremas de Thevenin/Norton
+             - Teorema de Superposição
+  Semana: 8 a 11
+    Título: Módulo 2: Análise Transiente de Circuitos Elétricos
+Conteúdo: - Elementos armazenadores
+             - Resposta no tempo de Circuitos RC
+             - Resposta no tempo de Circuitos RL
+             - Resposta no tempo de Circuitos RLC
+             - Resposta a excitações arbitrárias
+  Semana: 12 a 13
+    Título: Módulo 3: Análise em Regime Permanente de Circuitos Elétricos
+Conteúdo: - Módulo e fase de componentes de circuitos
+             - Balanço de potência ativa, reativa e aparente
+
+
+
+
+                                                                      Página 1
+                                                   PLANO DE ENSINO
+                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+                - Resposta em frequência
+  Semana: 14 a 16
+    Título: Módulo 4: Análise de Circuitos Trifásicos
+Conteúdo: - Circuitos Trifásicos Equilibrados e Desequilibrados
+                - Acoplamento Magnético
+                - Transformadores
+                - Simulação em tempo real
+  Semana: 17
+    Título: Atividade Avaliativa
+Conteúdo: - Realização de atividade avaliativa
+  Semana: 18
+    Título: Aula de Fechamento do Semestre
+Conteúdo: - Revisão sobre tópicos abordados.
+  Semana: 19
+    Título: Realização de Exame
+Conteúdo: - Semana dedicada à realização de exame final
+
+Metodologia
+As aulas terão um caráter essencialmente prático, consistindo de montagens práticas em laboratório e realização de simulações
+numéricas em laboratório. Cada aula deverá seguir um roteiro contendo as instruções básicas para a sua realização.
+
+
+As aulas seguirão, na medida do possível, o cronograma previsto neste plano de ensino, podendo ocorrer alterações ao longo do
+semestre.
+
+
+O Moodle Acadêmico será adotado como Ambiente Virtual de Aprendizagem (AVA), onde será disponibilizado o material utilizado em
+aula, além de materiais complementares como, por exemplo, a indicação de leituras e/ou de exercícios para fixação dos temas
+abordados.
+
+
+Pretende-se incluir, na medida do possível, a utilização de programas específicos, em versão gratuita ou disponibilizada pela
+Universidade, para facilitar o aprendizado e aproximar os estudantes dos possíveis problemas relacionados à engenharia.
+
+Experiências de Aprendizagem
+- montagem de circuitos em laboratório
+- medições de grandezas elétricas
+- avaliação dos resultados práticos obtidos
+- implementação e simulação de circuitos
+- levantamento de curvas típicas
+
+Critérios de avaliação
+A avaliação de desempenho será feita a partir de uma NOTA final baseada no conteúdo desenvolvido no decorrer do semestre.
+
+
+A nota do semestre (NS) será obtida a partir de uma (ou duas) prova(s) OU uma (ou duas) provas E Notas dos Relatórios - a critério
+do professor.
+
+
+Considerando notas de provas P1, P2 e nota do relatório NR de 0 a 10:
+Se o professor optar por DUAS provas P1 e P2: NS=(P1+P2)*0,5.
+Se o professor optar por UMA prova e Nota média de relatórios NR: NS=P1*0,3 + NR*0,7.
+Se o professor optar por DUAS provas P1 e P2 e Nota média de relatórios NR: NS=(P1+P2)*0,25 + NR*0,5.
+
+
+
+Conforme a NS, o conceito final e a aprovação na disciplina serão determinados conforme os seguintes critérios:
+
+
+
+
+                                                                  Página 2
+                                                      PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+9,0 &#8804; NS &#8804; 10,0: Conceito A - Aprovado;
+7,5 &#8804; NS < 9,0: Conceito B - Aprovado;
+6,0 &#8804; NS < 7,5: Conceito C - Aprovado;
+NS < 6,0:          Conceito D - Reprovado.
+
+
+Caso a frequência de presença do discente (F) for inferior a 75%, o discente receberá conceito FF independente de suas demais
+avaliações. Deste modo:
+F &#8804; 75%: Conceito FF - Reprovado.
+
+Atividades de Recuperação Previstas
+Caso o discente, tenha a presença mínima (F &#8805; 75%) e não tenha atendido aos critérios de aprovação, poderá realizar uma
+prova de Exame (E), ao final do semestre, a qual versará sobre todo o conteúdo abordado na disciplina.
+
+
+Será considerado aprovado o discente que atender ao seguinte critério:
+E &#8805; 6,
+recebendo, neste caso, conceito C.
+
+
+Caso contrário (E < 6), o discente receberá conceito D.
+
+Bibliografia
+Básica Essencial
+C. K. Alexander, M. N. O. Sadiku. Fundamentos de Circuitos Elétricos. McGraw-Hill, 2008. ISBN 978-85-86804-97-7.
+J. W. Nilsson. Circuitos Elétricos. Rio de Janeiro: Pearson Prentice-Hall, 1999. ISBN 978-85-7605-159-6.
+
+Básica
+J David Irwin. Análise Básica de Circuitos para Engenharia. LTC, 2003. ISBN 85-216-1374-1.
+
+Complementar
+C. A. Desoer, E. S. Kuh. Teoria Básica de Circuitos. Guanabara Dois, 1979.
+J. Bird. Circuitos Elétricos - Teoria e Tencnologia. Campus, 2009. ISBN 978-85-352-2771-0.
+W. H. Hayt Jr., J. E. Kemmerly, S. M. Durbin. Análise de Circuitos em Engenharia. McGraw-Hill, 2008. ISBN 978-85-7726-021-8.
+Yannis Tsividis. A First Lab in Circuits and Electronics. Wiley, 2001. ISBN 978-0-471-38695-7.
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+ATENDIMENTO AOS ALUNOS: o professor estará à disposição dos alunos, para revisão das provas e resolução de dúvidas sobre o
+conteúdo ministrado, em datas e horários previamente combinados com os mesmos.
+
+
+ESTAGIÁRIOS DOCENTES:
+O professor poderá contar com o apoio de professores assistentes, pós-doutorandos ou alunos de pós-Graduação (Mestrado e/ou
+Doutorado em estágio docência) em atividades didáticas, conforme resoluções da UFRGS sobre o tema.
+
+
+OBSERVAÇÕES:
+- Comunicações com os alunos serão realizadas via sala de aula virtual e/ou moodle;
+- É vedado o uso de telefone celular durante a realização das aulas e da prova;
+- O DELAE não autoriza que alunos frequentem disciplinas/turmas para as quais não estejam regularmente matriculados e não
+reconhece as atividades realizadas de tal forma;
+- Fraude em prova acarretará na anulação da atividade de avaliação do aluno;
+- Plágio de trabalhos acarretará na anulação da atividade em avaliação.
+
+
+
+
+                                                                          Página 3
+

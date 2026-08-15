@@ -1,0 +1,245 @@
+                                                    PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 15/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: BRUNO IOCHINS GRISCI
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLII
+Sigla: INF05030             Créditos: 4
+
+Carga Horária
+CH Teórica: 50h      CH Prática: 10h       Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes, aplicações específicas, interessando a um
+grupo restrito ou tendo caráter de temporariedade, aspectos abordados superficialmente em disciplinas regulares.
+
+Currículos
+                                          Currículos                                                Etapa Aconselhada        Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                           Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                       Eletiva
+
+Objetivos
+Desenvolver os seguintes tópicos: Transparência e Explicabilidade em sistemas de IA. Redução de dimensionalidade. Aspectos
+Éticos em IA. Métodos de aprendizado supervisionado. Redes Neurais. Avaliação de modelos. Conceitos de Filosofia em IA.
+
+
+Capacitar o estudante a compreender os fundamentos da interpretabilidade em aprendizado de máquina, incluindo seus aspectos
+conceituais, filosóficos, éticos e práticos, bem como sua relevância para a transparência, a confiabilidade e o uso responsável de
+sistemas de inteligência artificial. Desenvolver habilidades para analisar modelos supervisionados e redes neurais sob a perspectiva
+da interpretabilidade, relacionando desempenho preditivo, avaliação de modelos, redução de dimensionalidade e extração de
+conhecimento. Habilitar o aluno a conhecer, comparar e aplicar métodos de seleção de atributos, modelos naturalmente
+interpretáveis e técnicas de interpretação post-hoc, tanto globais quanto locais, agnósticas ou específicas ao modelo, com ênfase em
+explicações aplicáveis a modelos complexos. Promover a reflexão crítica sobre limitações, riscos e boas práticas no uso de
+ferramentas de explicabilidade, incluindo questões de vieses, justiça, segurança, ataques adversariais e interpretabilidade
+mecanicista. Ao final, espera-se que o estudante seja capaz de selecionar, empregar e avaliar criticamente diferentes abordagens de
+interpretabilidade em problemas reais de aprendizado de máquina, de forma tecnicamente fundamentada, eticamente responsável e
+cientificamente rigorosa.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Introdução à Interpretabilidade.
+Conteúdo: Introdução à disciplina.
+             Seleção de atributos e análise de dados.
+             Interpretabilidade e explicabilidade (shortcut learning, Clever Hans effect, Rashomon effect).
+  Semana: 3 a 4
+    Título: Métodos interpretáveis
+Conteúdo: Regressão Linear.
+             Regressão Logística.
+             Modelos baseados em árvores, decision rules.
+  Semana: 5 a 7
+    Título: Interpretabilidade post-hoc
+
+
+
+
+                                                                         Página 1
+                                                   PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: Modelos agnósticos locais (por exemplo CP, ICE, LIME, counterfactual explanations, Shapley Values, SHAP).
+              Modelos agnósticos globais (por exemplo PDP, ALE, feature interaction, Permutation Feature Importance, LOFO, surrogate models,
+              prototypes and criticisms).
+  Semana: 8 a 10
+    Título: Interpretando redes neurais
+Conteúdo: Learned Features.
+              Saliency Maps.
+              Detecting Concepts.
+              Ataques Adversariais.
+              Influential Instances.
+  Semana: 11 a 12
+    Título: Interpretabilidade mecanicista
+Conteúdo: Features, circuits, universality.
+              Sparse Autoencoder (SAE).
+  Semana: 13 a 14
+    Título: AI Fairness e AI Safety
+Conteúdo: AI Fairness.
+              AI Safety.
+              Vieses em aprendizado de máquina.
+              Ética em IA.
+  Semana: 15
+    Título: Apresentações dos projetos
+Conteúdo: Apresentação dos projetos avaliados desenvolvidos pelos alunos.
+
+Metodologia
+A disciplina poderá utilizar o sistema Moodle/UFRGS ou similares para distribuição de material, entrega de trabalhos, organização de
+grupos de discussão e acompanhamento geral da disciplina, como informado pelo professor ministrante ao início do semestre.
+
+
+A disciplina poderá usar ferramentas como o Moodle/UFRGS, sistemas de submissão de problemas de programação online (como
+online judges) ou similares para avaliações e atividades didáticas.
+
+
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com o
+desenvolvimento de eventuais exercícios e discussões. Algumas das aulas podem ser realizadas em laboratórios, para a
+implementação e visualização dos conceitos vistos em aula. Em algumas das aulas, poderão ser feitas demonstrações de
+ferramentas e códigos ou exibição de vídeos ou filmes pertinentes ao conteúdo.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), em um total de 3.000 minutos, e
+mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios,
+trabalhos ou projetos extraclasse a serem avaliados.
+
+
+O professor poderá se valer de aulas presenciais e de atividades à distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Participar de aulas expositivas dialogadas.
+Resolver listas de exercícios extra-classe ou implementação de trabalho ou responder questionários.
+Realizar leitura de material disponibilizado ou assistir a vídeos ou vídeoaulas.
+Implementar, apresentar e relatar projetos relacionados aos tópicos vistos em aula.
+
+
+
+
+                                                                      Página 2
+                                                   PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
+As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+Estão previstas as seguintes avaliações:
+
+
+- Questionário teórico (Quest)
+- Atividades autônomas a serem realizadas durante o semestre (Proj)
+- Avaliações em laboratório (Lab)
+
+
+A nota final do aluno (NF) é composta pela soma ponderada:
+
+
+NF = 0,2*Quest + 0,4*Proj + 0,4*Lab
+
+
+Com base na nota final, será atribuído ao aluno um dos seguintes conceitos:
+* A - Conceito Ótimo: 9,0 <= NF
+* B - Conceito Bom: 7,5 <= NF < 9,0
+* C - Conceito Regular: 6,0 <= NF < 7,5
+* D - Conceito Insatisfatório: NF < 6,0
+* FF - Falta de Frequência (menos que 75% de presença).
+
+
+O aluno estará aprovado na disciplina se obtiver conceito A, B ou C e possuir ao menos 75% de presença em aula.
+
+Atividades de Recuperação Previstas
+Está previsto um Exame de Recuperação (EXAME) a ser realizado após o fechamento da NF, versando sobre todo o conteúdo da
+disciplina. Após a realização do Exame, a nota do aluno será recalculada (NE) como segue:
+
+
+NE = 0,2*NF + 0,8*EXAME
+
+
+sendo o novo conceito atribuído sobre NE conforme acima.
+
+Bibliografia
+Básica Essencial
+Christoph Molnar. Interpretable Machine Learning: A Guide for Making Black Box Models Explainable. Munich: Christoph Molnar, 2025. ISBN
+978-3-911578-03-5. Disponível em: https://christophm.github.io/interpretable-ml-book/
+
+Básica
+Simon J.D. Prince. Understanding Deep Learning. Cambridge, MA: The MIT Press, 2023. ISBN 9780262048644. Disponível em: http://udlbook.com
+
+Complementar
+                                                        Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                           Título                                                        Texto
+Analysis and comparison of feature selection methods towar Barbieri, M. C., Grisci, B. I., & Dorn, M. (2024). Analysis
+                                                           and comparison of feature selection methods towards
+                                                           performance and stability. Expert Systems with
+                                                           Applications, 249 (Part B), 123667.
+                                                           [https://doi.org/10.1016/j.eswa.2024.123667]
+Zoom In: An introduction to circuits                       Olah, C., Cammarata, N., et al. (2020). Zoom In: An
+                                                           introduction to circuits. Distill, 5(3), e00024-001.
+
+
+
+                                                                       Página 3
+                                                PLANO DE ENSINO
+                                                                                                           Data de Emissão: 15/08/2026
+
+
+
+Explainable machine learning for scientific insights and d Roscher, R. et al. (2020). "Explainable machine learning for
+                                                           scientific insights and discoveries." IEEE Access, 8,
+                                                           42200?42216.
+Methods for interpreting and understanding deep neural net Montavon, G.; Samek, W.; Müller, K.-R. (2018). "Methods
+                                                           for interpreting and understanding deep neural networks."
+                                                           Digital Signal Processing, 73, 1?15.
+On the Biology of a Large Language Model                   Lindsey, J. et al. (2025). On the Biology of a Large
+                                                           Language Model. Acessado em 11/11/2025. Disponível
+                                                           em:
+                                                           https://transformer-circuits.pub/2025/attribution-graphs/biol
+                                                           ogy.html.
+Assessing feature scorer results on high-dimensional datas Grisci, B. I.; Inostroza-Ponta, M.; Dorn, M. (2025).
+                                                           "Assessing feature scorer results on high-dimensional
+                                                           datasets with t-SNE." Neurocomputing, p. 130561.
+Shortcut learning in deep neural networks                  Geirhos, R. et al. (2020). "Shortcut learning in deep neural
+                                                           networks." Nature Machine Intelligence, 2(11), 665?673.
+Unmasking Clever Hans predictors and assessing what machin Lapuschkin, S. et al. (2019). "Unmasking Clever Hans
+                                                           predictors and assessing what machines really learn."
+                                                           Nature Communications, 10, 1096.
+Why should I trust you?                                    Ribeiro, M. T.; Singh, S.; Guestrin, C. (2016a). "Why
+                                                           should I trust you?" In: Proc. SIGKDD, pp. 1135?1144.
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito à sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                   Página 4
+

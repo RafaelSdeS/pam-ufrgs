@@ -1,0 +1,211 @@
+                                                     PLANO DE ENSINO
+                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: RODRIGO MACHADO
+Disciplina: TEORIA DA COMPUTAÇÃO
+Sigla: INF05035             Créditos: 4
+
+Carga Horária
+CH Teórica: 60h       CH Prática: 0h    Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Linguagens Formais, Autômatos e Hierarquia de Chomsky. Computabilidade. Classes de Complexidade Computacional.
+
+Currículos
+                                        Currículos                                     Etapa Aconselhada           Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                         4                Obrigatória
+
+Objetivos
+A disciplina visa desenvolver nos alunos as seguinte habilidades:
+- Utilização de autômatos finitos e expressões regulares para modelar sistemas computacionais e gramáticas para descrever
+linguagens formais.
+- Compreensão da relação entre formalismos geradores e reconhecedores de linguagens.
+- Comparação do poder computacional de modelos de computação através de transformações que preservam a sua semântica.
+- Compreensão do significado e importância da Tese de Church-Turing.
+- Reconhecimento da existência de funções e linguagens não computáveis e de problemas indecidíveis.
+- Capacidade de demonstrar que um dado problema de interesse é indecidível através da construção de reduções entre problemas.
+- Reconhecimento das principais classes de complexidade computacional e a habilidade de demonstrar que um dado problema de
+interesse pertence a uma dada classe.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução à disciplina.
+Conteúdo: Conceitos fundamentais. Estrutura da disciplina.
+  Semana: 2 a 5
+    Título: Linguagens Formais e Autômatos
+Conteúdo: Linguagens formais.
+             Autômatos finitos, não-determinísticos, e com pilha.
+             Gramáticas regulares e livres de contexto.
+             Expressões regulares.
+             Principais propriedades de linguagens regulares e livres de contexto.
+  Semana: 5
+    Título: Prova 1
+Conteúdo: Prova 1 - conteúdo das semanas 1 a 5
+  Semana: 6 a 10
+    Título: Máquinas de Turing e Computabilidade
+Conteúdo: Máquinas de Turing.
+             Variações em Máquinas de Turing.
+             Linguagens Recursivas e Enumeráveis Recursivamente.
+
+
+
+
+                                                                        Página 1
+                                                    PLANO DE ENSINO
+                                                                                                             Data de Emissão: 15/08/2026
+
+
+
+              Indecidibilidade de problemas e linguagens.
+  Semana: 10
+    Título: Prova 2
+Conteúdo: Prova 2 - conteúdo das semanas 6 a 10
+  Semana: 11 a 15
+    Título: Complexidade Computacional.
+Conteúdo: Classes de Complexidade P e NP.
+              Principais problemas NP-difíceis e NP-completos.
+              Reduções polinomiais.
+              Principais propriedades de classes de complexidade.
+  Semana: 15
+    Título: Prova 3
+Conteúdo: Prova 3 - conteúdo das semanas 11 a 15
+  Semana: 16
+    Título: Atividades de Recuperação
+Conteúdo: Exame de Recuperação
+
+Metodologia
+A disciplina será apresentada por meio de aulas expositivas e dialogadas, combinando a apresentação dos principais conceitos e
+técnicas com o desenvolvimento de eventuais exercícios e discussões. Serão disponibilizadas também listas de exercícios para
+fixação de conteúdo e trabalhos práticos envolvendo os modelos de computação estudados.
+
+
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
+discussão e acompanhamento geral da turma.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), totalizando 3.000 minutos em
+atividades coletivas, e mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor,
+correspondentes a exercícios e trabalhos extraclasse avaliados, conforme Resolução 11/2013 do CEPE/UFRGS, Artigos 36 a 38.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor responsável.
+
+Experiências de Aprendizagem
+Participação em aulas expositivas e dialogadas
+Resolução de listas de exercícios
+Programação em simuladores de modelos de computação
+Realização de atividades através de Ambiente Virtual de Aprendizagem como fórum de discussão e acesso a material formativo
+complementar
+
+Critérios de avaliação
+A avaliação é realizada através de três provas e de trabalhos teórico-práticos. Os trabalhos deverão ser realizados em período
+extraclasse e contarão como atividades autônomas avaliadas. A quantidade de trabalhos e seus pesos relativos serão definidos
+durante o semestre.
+
+
+O conceito do aluno será determinado pela Média do Semestre (MS) do aluno, que é calculada pela média ponderada abaixo (onde
+P1, P2 e P3 são as notas das provas e MT é a totalização das notas dos trabalhos)
+
+
+
+
+                                                                    Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+
+MS := 0,25*P1 + 0,25*P2 + 0,25*P3 + 0,25*MT
+
+
+A atribuição dos conceitos será:
+Conceito A (aluno aprovado): MS no intervalo [ 9.0 ; 10.0 ];
+Conceito B (aluno aprovado): MS no intervalo [ 7.5; 9.0 );
+Conceito C (aluno aprovado): MS no intervalo [ 6.0; 7.5 );
+Conceito D (aluno reprovado, com possibilidade de recuperação): MS inferior a 6.0.
+Conceito FF (aluno reprovado por falta de frequência)
+
+
+O Percentual de Frequência (PF) mínimo para aprovação é de 75% ou 0,75.
+
+Atividades de Recuperação Previstas
+O aluno que não fizer uma das provas por motivo de doença ou outro previsto no Regimento da Universidade deverá primeiramente
+justificar a ausência. Após, deverá procurar o professor para combinar data e horário para a aplicação de uma prova de recuperação
+substitutiva.
+
+
+É oferecido a todos os alunos, ao final do semestre, a oportunidade de realizar um Exame de Recuperação (ER), sendo este uma
+prova que versa sobre todo o conteúdo do semestre. A realização do Exame de Recuperação é opcional.
+
+
+A partir da Média do Semestre (MS) e da nota obtida no Exame de Recuperação (ER), calcula-se a Média Final de Recuperação
+segundo a fórmula abaixo:
+
+
+MFR := 0,25*MS + 0,75*ER
+
+
+Caso o aluno opte por realizar o Exame de Recuperação, o seu respectivo conceito final será determinado a partir da MFR,
+independentemente do conceito anterior obtido a partir da MS. O critério para determinar o conceito a partir da MFR será o mesmo
+utilizado para determinar o conceito a partir da MS.
+
+Bibliografia
+Básica Essencial
+Michael Sipser. Introdução à Teoria da Computação. São Paulo: Cengage Learning, 2007. ISBN 9788522104994.
+
+Básica
+Hopcroft, John E.; Ullman, Jeffrey D.; Motwani, Rajeev.. Introdução à teoria de autômatos, linguagens e computação.. Rio de Janeiro: Campus, 2002.
+ISBN 9788535210729.
+Tiaraju A. Diverio, Paulo F. Blauth. Teoria da Computação: Máquinas Universais e Computabilidade. Porto Alegre: Bookman, 2011. ISBN
+9788535210729.
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                            Não existem outras referências para este plano de ensino.
+
+Observações
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+
+
+
+
+                                                                        Página 3
+                                               PLANO DE ENSINO
+                                                                                                        Data de Emissão: 15/08/2026
+
+
+
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                 Página 4
+

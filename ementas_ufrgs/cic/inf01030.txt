@@ -1,0 +1,211 @@
+                                                   PLANO DE ENSINO
+                                                                                                              Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Informática
+                                               Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: CLAUDIO ROSITO JUNG
+Disciplina: VISÃO COMPUTACIONAL II
+Sigla: INF01030            Créditos: 4
+
+Carga Horária
+CH Teórica: 50h     CH Prática: 10h        Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Revisão de Modelos de Câmeras e Percepção Visual; Espaços de Cores; Transformada Wavelet; Filtragem Avançada de Imagens
+(Filtros Cientes a Bordas, Filtragem usando Equações Diferenciais Parciais); Técnicas Avançadas de Segmentação de Imagens;
+Representação e Análise de Texturas; Detecção de Curvas e Linhas; Casamento Estéreo e Structure-from-Motion; Detecção e
+Casamento de Pontos-Chave; Detecção e Rastreamento de Objetos; Fluxo Ótico.
+
+Currículos
+                                          Currículos                                             Etapa Aconselhada        Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                        Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                    Eletiva
+
+Objetivos
+A disciplina visa desenvolver as seguintes habilidades específicas:
+- CG-H-008 - Desenvolver, implementar e avaliar aplicações que manipulam a representação digital de dados visuais, como imagens
+e vídeos, utilizando com plena capacidade os princípios matemáticos associados
+- CG-H-009 - Compreender a relação entre representações digitais e os fenômenos visuais que ali estão codificados
+- CG-H-010 - Desenvolver, implementar e avaliar soluções capazes de extrair informações relevantes a partir de dados visuais
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Percepção visual e modelos de câmera
+Conteúdo: 1.1 Apresentação da disciplina e conceitos básicos
+             1.2 Formação de imagens e modelos de câmera
+             1.3 Calibração de câmeras
+             1.4 Percepção visual e espaços de cores
+  Semana: 3 a 4
+    Título: Filtragem e Segmentação de imagens
+Conteúdo: 2.1Técnicas avançadas de filtragem de imagens
+             2.2Técnicas avançadas de segmentação de imagens
+  Semana: 5 a 6
+    Título: Análise de textura e formas
+Conteúdo: 3.1 Descritores de textura
+             3.2 Detecção de linhas - Transformada Hough
+             3.3 Detecção de curvas paramétricas: Hough generalizado, ajuste robusto de curvas
+             3.4 Descritores de forma
+  Semana: 7 a 8
+    Título: Reconstrução 3D
+Conteúdo: 4.1 Revisão de estereoscopia
+
+
+
+
+                                                                     Página 1
+                                                     PLANO DE ENSINO
+                                                                                                             Data de Emissão: 15/08/2026
+
+
+
+              4.2 Algoritmos para casamento estéreo
+              4.3 Structure from Motion
+  Semana: 9 a 12
+    Título: Extração e Casamento de pontos-chave, Detecção e Rastreamento de Objetos
+Conteúdo: 5.1 Técnicas clássicas de extração e casamento de pontos-chave
+              5.2 Técnicas de deeep learning para extração e casamento de pontos-chave
+              5.3 Detecção de objetos
+              5.4 Rastreamento de objetos
+  Semana: 13 a 14
+    Título: Fluxo ótico
+Conteúdo: 6.1 Definição matemática de fluxo ótico
+              6.2 Algoritmos para cálculo do fluxo ótico
+  Semana: 15
+    Título: Avaliações e Apresentação de Trabalhos
+Conteúdo: Avaliações e Apresentação de Trabalhos
+
+Metodologia
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
+discussão e acompanhamento geral da disciplina.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse, conforme Resolução 11/2013 do CEPE/UFRGS, Artigos 36 a 38.O professor poderá se valer de aulas
+presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para disciplinas presenciais e empregando
+ferramentas para atividades remotas), assim como do apoio de Professores Assistentes (Alunos de Pós-Graduação) em Atividades
+Didáticas. O conteúdo da disciplina é abordado tanto em aulas expositivas como em trabalhos práticos. Os assuntos são
+complementados e reforçados através da realização de exercícios em aula ou extra-classe e do desenvolvimento de programas.
+
+Experiências de Aprendizagem
+Ao longo do semestre, serão realizados:
+1) Trabalhos de Implementação (TIs) realizados ao longo do semestre. Nestes trabalhos, os estudantes serão solicitados a
+executar, modificar, complementar, estender e desenvolver códigos visando a fixação dos conhecimentos estudados;
+
+
+2) Um Trabalho Final (TF) realizado ao final da disciplina. O projeto prevê uma implementação, escrita de relatório e apresentação
+dos resultados para a turma;
+
+
+3) Uma prova abrangendo todo conteúdo da disciplina.
+
+
+Sobre o uso de ferramentas de Inteligência Artificial: Os estudantes devem seguir as regras definidas pelo professor responsável
+sobre o uso de ferramentas de Inteligência Artificial (IA). As diretrizes relativas ao uso de IA podem variar entre os diferentes
+trabalhos e atividades práticas ou teóricas que compõem as experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+A avaliação será feita a partir de uma nota de prova (NP), dois trabalhos de implementação (TI1 e TI2), e um trabalho final (TF) a ser
+entregue e apresentado em aula. A nota final (NF) será obtida considerando a seguinte ponderação:
+
+
+NF = 0,25 * NP + 0,2 * TI1 + 0,2 * TI2 + 0,35 * TF
+
+
+O conceito final será obtido através da seguinte conversão:
+9,0 &#8804; NF ---> A
+
+
+
+
+                                                                     Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+7,5 &#8804; NF < 9,0 ---> B
+6,0 &#8804; NF < 7,5---> C
+4,0 &#8804; NF < 6,0---> recuperação (ver abaixo)
+NF < 4,0 ---> D
+
+
+Obs: Independente da nota final NF, o conceito FF será atribuído ao aluno que não alcançar a frequência mínima (75%), de acordo
+com o regimento da UFRGS.
+
+Atividades de Recuperação Previstas
+Alunos que tiverem frequência mínima ao final da disciplina e co, NF < 6,0 terão direito de realizar uma prova de recuperação (PR),
+versando sobre todo conteúdo do semestre. A nota após a recuperação (NR) será dada por
+
+
+NR = 0,6*PR + 0,4*NF
+
+
+Alunos que obtiverem NR igual ou superior a 6,0 receberão conceito "C"; os demais receberão conceito "D".
+
+Bibliografia
+Básica Essencial
+Richard Szeliski. Computer Vision: Algorithms and Applications. Springer-Verlag, 2011. ISBN 978-1-84882-943-3.
+
+Básica
+Chollet, François. Deep Learning with Python. Shelter Island, NY 11964: Manning, 2921. ISBN 978-1617296864.
+David A. Forsyth and Jean Ponce. Computer Vision: A Modern Approach. Prentice Hall, 2003. ISBN 978-0136085928.
+Rafael C. Gonzalez e Richard E. Woods. Processamento de Imagens Digitais. Prentice Hall, 2009. ISBN 978-85-7605-401-6.
+Richard O. Duda, Peter E. Hart e David G. Stork (Author). Pattern Classification. Wiley-Interscience, 2000. ISBN 978-0471056690.
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                            Título                                                     Texto
+Artigos científicos a serem definidos pelo professor       Artigos científicos a serem definidos pelo professor
+Links para web de referências para o conteúdo da disciplin Links para web de referências para o conteúdo da
+                                                           disciplina
+Links e referências de ferramentas importantes para a disc Links e referências de ferramentas importantes para a
+                                                           disciplina
+Slides e notas de aula do professor                        Slides e notas de aula do professor, com indicação de
+                                                           onde estarão disponíveis (e.g., no Moodle)
+Observações
+Informações sobre Plágio e IA
+&#9675;O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de
+tarefa ou atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio,
+constitui uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto
+avaliativo da disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na
+maior gravidade, desligamento da Universidade
+
+
+Informações sobre Direitos Autorais e de Imagem:
+&#9675;Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins
+didáticos, sendo vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que
+venham a ser utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos
+alunos as atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+
+
+
+
+                                                                        Página 3
+                                                PLANO DE ENSINO
+                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja a licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.?
+
+
+
+
+                                                                  Página 4
+

@@ -1,0 +1,127 @@
+                                                      PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Informática
+                                    Comissão de Graduação de Engenharia de Computação
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: MARCELO SOARES LUBASZEWSKI
+Disciplina: PROJETO DE FINAL DE CURSO DE ENGENHARIA DE COMPUTAÇÃO
+Sigla: ECP99001              Créditos: 2
+
+Carga Horária
+CH Teórica: 30h      CH Prática: 0h      Total: 30h
+CH Coletiva: 24h      CH Autônoma: 6h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Atividade coletiva de preparação para o desenvolvimento do Trabalho de Graduação. Orientações sobre temática, tipos de trabalhos
+pertinentes para desenvolvimento de TG, sistematização do TG1 e do TG2, técnicas de redação técnica e de revisão de literatura.
+
+Currículos
+                                         Currículos                                             Etapa Aconselhada             Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                                   9                  Obrigatória
+
+Objetivos
+Preparar o estudante para o desenvolvimento do Trabalho de Graduação. A disciplina visa orientar a utilização do método científico,
+fomenta a crítica científica, induz a consulta de bibliografia especializada, estimula o planejamento e execução da produção teórica e
+experimental e orienta a comunicação escrita, verbal e visual da produção científica.
+Desta disciplina, resulta a preparação do aluno para a redação de um anteprojeto de engenharia e a produção de um vídeo de curta
+duração. Ambos servirão de base para a execução do Trabalho de Graduação II.
+
+Conteúdo Programático
+  Semana: 1 a 18
+    Título: Participação de dinâmicas e mentorias, e desenvolvimento do estudo
+Conteúdo: Participação nas dinâmicas e mentorias organizadas pelo professor responsável pela disciplina, realização dos estudos preliminares
+              necessários, planejamento e execução das etapas do método científico no desenvolvimento do anteprojeto e sua apresentação em
+              um vídeo de curta duração (pitch).
+
+Metodologia
+Aulas expositivas, sobre método e escrita científica. Realização de seminários periódicos, para orientar os alunos acerca dos
+procedimentos do Trabalho de Graduação e acompanhar a interação do aluno com os orientadores. Produção de vídeos curtos para
+explicar e promover o trabalho em desenvolvimento.
+
+
+O professor responsável pela disciplina organizará um cronograma de encontros com os alunos matriculados para abordar os temas
+de metodologia e da comunicação científica, e promover o acompanhamento periódico dos alunos no desenvolvimento do
+anteprojeto sob a ótica da metodologia científica. O acompanhamento do aluno deverá contribuir para a redação de um documento
+na forma de anteprojeto e para a elaboração de um vídeo curto, em linguagem acessível, que possa ser utilizado para a divulgação
+de seu Trabalho de Graduação. No contexto desta disciplina, o vídeo curto (pitch) terá o objetivo de explicar, de forma breve, os
+conceitos básicos da área em que se situa o trabalho, a ideia principal a ser desenvolvida e os resultados esperados. Essa
+apresentação deve ser elaborada de tal forma a despertar a curiosidade do espectador a respeito do tema, convidando-o a
+conhecer, com mais detalhes, o trabalho que será desenvolvido pelo aluno. Anteprojeto e pitch serão entregues ao final disciplina.
+
+Experiências de Aprendizagem
+Cada aluno, a partir da identificação de um problema de engenharia, deve buscar uma possível solução ao problema através do uso
+de método científico, desenvolvendo assim a capacidade de aplicação dos conceitos teóricos e experimentais adquiridos durante o
+curso de forma integrada. Além disso, o aluno deve se preparar para interagir com públicos distintos, desenvolvendo habilidades de
+
+
+
+                                                                      Página 1
+                                                       PLANO DE ENSINO
+                                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+comunicação que potencializem, inclusive para um público leigo, o entendimento e a valorização de seu trabalho técnico, e gere,
+para si e para a organização da qual participe, interações esclarecedoras e úteis com a sociedade e o mercado de trabalho.
+
+Critérios de avaliação
+A execução da disciplina de Trabalho de Graduação I terá pontos intermediários de verificação
+monitorados pelo professor responsável pela disciplina. O professor ficará responsável pela avaliação do aluno do ponto de vista das
+práticas de metodologia científica aplicadas às diversas entregas que comporão o anteprojeto de engenharia e sua apresentação
+através de um pitch (vídeo curto). O critério de frequência e conceito na disciplina deverá satisfazer aqueles estabelecidos no
+Regimento Geral da Universidade.
+Da avaliação do anteprojeto e do pitch, por parte do professor responsável pela disciplina e do orientador do Trabalho de Graduação,
+resultará um conceito conforme abaixo:
+
+
+Da avaliação do anteprojeto e do pitch, por parte do professor responsável pela disciplina, resultará um conceito conforme abaixo:
+APROVADO com
+A - trabalho excelente, endereça e atende plenamente todas as etapas do método científico;
+B - bom trabalho, cobre a maioria das etapas do método científico, com espaço para melhorias;
+C - trabalho satisfatório, cobre minimamente as etapas do método científico;
+REPROVADO com
+D - trabalho insatisfatório, não cumpre as etapas do método científico;
+FF - falta de frequência.
+
+Atividades de Recuperação Previstas
+A recuperação será realizada de forma incremental e processual, durante o desenvolvimento do trabalho, revisão e apresentação
+dos resultados.
+
+Bibliografia
+Básica Essencial
+BIBENG. Manual de Normalização de Trabalhos Acadêmicos. Porto Alegre: UFRGS, 2020. Disponível em:
+https://www.ufrgs.br/bibeng/wp-content/uploads/manual-de-normalização-2020.pdf
+Raul Sidnei Wazlawick. Metodologia de pesquisa para ciência da computação. Rio de Janeiro: Elsevier, 2008. ISBN 978-85-352-3522-7.
+
+Básica
+Barrass, Robert. Scientists Must Write: A Guide to Better Writing for Scientists, Engineers and Students.. Londres: Routledge, 2002. ISBN
+9780415269964.
+Barros, Aidil de Jesus Paes de. Fundamentos de metodologia científica. São Paulo: Pearson Prentice Hall, 2007. ISBN 9788576051565.
+Kirkman, John. Good style: writing for science and technology. Londres: Chapman, 1995. ISBN 0419171908.
+Markel, Michael H. Writing in the technical fields: a step-by-step guide for engineers, scientists, and technicians. Piscataway: Wiley-IEEE Press, 1994.
+ISBN 9788576051565.
+
+Complementar
+Cervo, Amado Luiz. Metodologia científica. São Paulo: Pearson Prentice Hall, 2006. ISBN 9788576050476.
+van Emden, J.. Effective Communication for Science and Technology. Basingstoke: Palgrave Macmillan, 2001. ISBN 9780333775462.
+van Emden, J.. Writing for Engineers. Basingstoke: Palgrave Macmillan, 2005. ISBN 9780230802766.
+
+
+
+Outras Referências
+                                              Não existem outras referências para este plano de ensino.
+
+Observações
+                                                            Nenhuma observação incluída.
+
+
+
+
+                                                                           Página 2
+

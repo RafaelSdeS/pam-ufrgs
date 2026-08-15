@@ -1,0 +1,200 @@
+                                                  PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Informática
+                                              Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: JACOB SCHARCANSKI
+Disciplina: PROCESSAMENTO DE IMAGENS II
+Sigla: INF01089             Créditos: 4
+
+Carga Horária
+CH Teórica: 20h      CH Prática: 40h      Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Introdução e escopo do processamento de imagens, aquisição e exibição de imagens monocromáticas e coloridas, formatos de
+arquivos de imagens, transformações de imagens (espaço, frequência, e outras transformações), realce e restauração de imagens
+degradadas, segmentação (métodos no domínio espaço, frequência, e espectral), atributos de imagens (textura, bordas, outros),
+compressão de imagens e vídeos (abordagens e padrões), detecção de regiões de interesse, representação e descrição de imagens
+2D.
+
+Currículos
+                                        Currículos                                             Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                           Eletiva
+
+Objetivos
+Esta disciplina tem como objetivos apresentar as técnicas de processamento, codificação e compressão de imagens e vídeos
+(monocromáticos e multi-espectrais), e treinar o aluno a abordar eficientemente problemas desta área. No decorrer das aulas, os
+alunos terão a oportunidade de implementar e testar os conceitos teóricos apresentados, e aplicá-los a problemas práticos.
+
+Conteúdo Programático
+  Semana: 1 a 2
+      Título: Introdução
+Conteúdo: Introdução e escopo do processamento de imagens, aquisição e exibição de imagens monocromáticas e coloridas
+  Semana: 3 a 8
+      Título: Armazenamento e Operações sobre Imagens
+Conteúdo: formatos de arquivos de imagens, operações pontuais,
+              operações sobre regiões, realce e restauração de imagens degradadas
+  Semana: 9 a 10
+      Título: Transformações sobre imagens
+Conteúdo: transformações de imagens (espaço, frequência, e outras transformações)
+  Semana: 11 a 12
+      Título: Compressão
+Conteúdo: compressão de imagens e vídeos (abordagens e padrões)
+  Semana: 13 a 15
+      Título: Análise de Imagens
+Conteúdo: atributos de imagens (textura, bordas, outros), detecção de regiões de interesse, representação e descrição de imagens 2D
+
+Metodologia
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse, conforme Resolução 11/2013 do CEPE/UFRGS, Artigos 36 a 38. O Professor poderá se valer de aulas
+
+
+
+
+                                                                      Página 1
+                                                 PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+presenciais ou à distância (utilização de recursos da EAD), assim como do apoio de Professores Assistentes (Alunos de
+Pós-Graduação) em Atividades Didáticas. O conteúdo da disciplina é abordado tanto em aulas expositivas como em trabalhos
+práticos. Os assuntos são complementados e reforçados através da realização de exercícios em aula ou extra-classe e do
+desenvolvimento de programas.
+
+Experiências de Aprendizagem
+Serão propostos exercícios em aula envolvendo programação visando a fixação de conceitos. Serão realizadas duas provas teóricas
+(P1 e P2). Também serão realizados dois trabalhos práticos (T1 e T2). Trabalhos e exercícios em sala de aula poderão ser
+realizados sem aviso prévio, e serão avaliados para compor parte da nota final. A realização dos trabalhos é obrigatória, mesmo que
+o aluno obtenha bons resultados nas provas. Esta prevista uma prova de recuperação, segundo os critérios descritos na forma de
+avaliação.
+
+Critérios de avaliação
+O aluno será avaliado com base na participação positiva em aula e no desempenho nas provas, trabalhos práticos e exercícios. A
+participação em aula, provas e trabalhos práticos serão avaliados com nota entre 0.0 e 10.0. Conforme regulamento da
+Universidade, a freqüência às aulas é obrigatória.
+
+
+Serão realizadas duas provas teóricas (P1 e P2).
+
+
+Também serão realizados dois trabalhos práticos (T1 e T2). Trabalhos e exercícios em sala de aula poderão ser realizados sem
+aviso prévio, e serão avaliados para compor parte da nota final. A realização dos trabalhos é obrigatória, mesmo que o aluno
+obtenha bons resultados nas provas. Esta prevista uma prova de recuperação, segundo os critérios descritos adiante.
+
+
+A média geral da disciplina será calculada da seguinte forma:
+
+
+MG = 0.9*( (pp1*PI + pp2*P2 + pt1*T1 + pt2*T2) ) + 0.1*PA
+
+
+Onde P1 e P2 são as notas das duas provas, pp1 e pp2 são os pesos atribuídos a estas duas provas, T1 e T2 são as notas dos dois
+trabalhos práticos, pt1 e pt2 são os pesos atribuídos a estes dois trabalhos práticos, e PA é a nota atribuída à participação em aula.
+Os valores dos pesos pp1, pp2, pt1 e pt2 serão definidos no início do semestre, e cada peso terá um valor no intervalo [0.1, 0.9]. A
+soma dos pesos atribuídos as provas e aos trabalhos práticos será 1 (ou seja, pp1 + pp2 + pt1 + pt2 = 1). Podem haver trabalhos
+práticos e exercícios extra, que se realizados poderão compor até 1 ponto na média MG. A nota será calculada com duas (2) casas
+decimais, e posteriormente arredondada para uma casa decimal.
+
+
+Será considerado aprovado o aluno que obtiver frequência >= 75% e MG >= 6.0. O conceito final será dado da seguinte forma :
+A : MG >= 9.0
+B : 7.5 >= MG < 9.0
+C : 6.0 >= MG < 7.5
+
+
+Será considerado reprovado o aluno que tiver frequência < 75% ou MG < 6.0. Neste caso, o conceito será :
+D : Freq >= 75%
+FF : Freq. < 75%
+
+
+Observações :
+
+
+1. Somente serão calculadas as médias gerais daqueles alunos que tiverem, ao longo do semestre, obtido um índice de freqüência
+às aulas igual ou superior a 75% das aulas previstas. Aos que não satisfizerem esse requisito, será atribuído o conceito FF (Falta de
+Freqüência).
+
+
+2. Para poder realizar a prova de recuperação, o(a) aluno(a) deve ter um índice de freqüência às aulas igual ou superior a 75% das
+aulas previstas, realizado as duas provas (P1 e P2) e ter entregue os trabalhos (T1 e T2). Os que não se enquadrarem nessa
+
+
+
+                                                                   Página 2
+                                                   PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+situação receberão conceito D se tiverem índice de freqüência às aulas igual ou superior a 75% das aulas previstas.
+
+Atividades de Recuperação Previstas
+O(a) aluno(a) que tiver um índice de freqüência às aulas igual ou superior a 75% das aulas previstas, realizado as duas provas (P1 e
+P2) e ter entregue os trabalhos (T1 e T2) poderá prestar prova de recuperação, a qual versará sobre todo o conteúdo da disciplina.
+
+
+Serão considerados aprovados na recuperação os alunos que obtiver um aproveitamento de no mínimo 60% da prova. A estes será
+atribuído o conceito C. Aos demais, o conceito D.
+
+
+Não há recuperação das provas P1 e P2 por não comparecimento, exceto nos casos previstos na legislação (saúde, parto, serviço
+militar, convocação judicial, luto etc.), se devidamente comprovados junto ao Departamento de Informática Aplicada (INA).
+
+Bibliografia
+Básica Essencial
+Gonzalez, Rafael C.; Woods, Richard E.. Processamento de imagens digitais. São Paulo: Edgard Blücher, 2000. ISBN 8521202644.
+Rafael C. Gonzalez, Richard E. Woods, Steven L. Eddins. Digital Image Processing Using MATLAB. Knoxville, USA: Gatesmark, 2009. ISBN
+0982085400.
+
+Básica
+                                                       Sem bibliografias acrescentadas
+
+Complementar
+                                                       Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                           Não existem outras referências para este plano de ensino.
+
+Observações
+Plano de Ensino válido a partir de 2026/1.
+
+
+Informações sobre Plágio e IA :
+
+
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade
+
+
+Informações sobre Direitos Autorais e de Imagem:
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja a licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.?
+
+
+
+
+                                                                       Página 3
+

@@ -1,0 +1,160 @@
+                                                    PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+                                                         Instituto de Informática
+                                              Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LUCINÉIA HELOISA THOM
+Disciplina: MODELAGEM E GERENCIAMENTO DE PROCESSOS DE NEGÓCIO
+Sigla: INF01216            Créditos: 4
+
+Carga Horária
+CH Teórica: 40h     CH Prática: 20h       Total: 60h
+CH Coletiva: 50h    CH Autônoma: 10h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Fundamentos de Modelagem e Gerenciamento de Processos de Negócio. Tendências em Gerenciamento de Processos de Negócio.
+
+Currículos
+                                         Currículos                                        Etapa Aconselhada             Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                       Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                   Eletiva
+
+Objetivos
+Compreender a importância e os conceitos de Gerenciamento de Processos de Negócio (Business Process Management - BPM)
+para as organizações.
+Compreender as fases do ciclo de vida de BPM.
+Entender a descoberta de processos em profundidade, com ênfase na modelagem, através da Notação e Modelo de Processos de
+Negócio (Business Process Model and Notation - BPMN).
+Apresentar a mineração de processos (técnica automática para descoberta de processos), assim como a automação de processos
+robóticos (Robotic Process Automation - RPA).
+Caracterizar o redesenho de processos de negócio, visando à automação de processos.
+Conhecer tendências em Gerenciamento de Processos de Negócio.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Introdução ao Gerenciamento de Processos de Negócio
+Conteúdo: Introdução à disciplina.
+             Introdução ao Gerenciamento de Processos de Negócio (Business Process Management - BPM).
+             Pensamento orientado a processos.
+             Origem e importância e aplicações de BPM.
+             Conceitos de BPM.
+             Ciclo de Vida de BPM.
+  Semana: 3 a 4
+    Título: Identificação de Processos
+Conteúdo: Técnicas para identificação de processos de negócio em organizações.
+             Priorização de processos de negócio.
+  Semana: 5 a 11
+    Título: Descoberta de Processos
+Conteúdo: Técnicas para descoberta de processos de negócio em organizações.
+             Importância da descoberta (modelo as-is) de processos.
+             Notação e Modelo de Processos de Negócio (Business Process Model and Notation - BPMN) (elementos básicos e avançados).
+             Introdução à Mineração de Processos.
+
+
+
+
+                                                                      Página 1
+                                                     PLANO DE ENSINO
+                                                                                                              Data de Emissão: 15/08/2026
+
+
+
+  Semana: 12 a 13
+    Título: Análise, Redesenho de Processos e Introdução a Automação
+Conteúdo: Análise qualitativa e quantitativa de processos de negócio.
+                 Redesenho de processos de negócio (modelo to-be).
+                 Introdução à automação de processos de negócio.
+                 Introdução a Sistemas de Gerenciamento de Processos de Negócio (Business Process Management Systems - BPMS).
+                 Transformação de modelo de negócio em modelo executável.
+  Semana: 14 a 15
+    Título: Tendências em Gerenciamento de Processos de Negócio
+Conteúdo: Introdução à Automação de Processos Robóticos (Robotic Process Automation - RPA).
+                 Abordagens emergentes e atuais em BPM.
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com sua
+aplicação pelos alunos, além de discussões sobre os exemplos, exercícios e os trabalhos extraclasse. As 60 horas previstas para
+atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de duração (2 períodos de 50
+minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais 10 horas (600 minutos) de
+atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e trabalhos extraclasse. O
+professor poderá se valer de aulas presenciais e de atividades à distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas. Nesses casos, poderão ser utilizados recursos como aulas síncronas ou
+assíncronas, com o apoio de tecnologias adequadas. O Moodle será utilizado como arcabouço de ensino, concentrando os planos
+de aula, o material didático disponibilizado pelo professor, comunicação e tarefas.
+
+Experiências de Aprendizagem
+- Exercícios para fixação de conceitos
+- Desenvolvimento de apresentação de trabalho prático
+- Apresentação de seminários
+
+Critérios de avaliação
+Prova: Será realizada 1 (uma) prova, que ocorre conforme calendário da disciplina em data pré-definida. A prova envolve o conteúdo
+da disciplina ministrado até a prova. Peso 3.
+Seminário: Será realizado um seminário ao longo da disciplina. Peso 2.
+Trabalhos Práticos: Será realizado um trabalho prático. Estão previstas aulas de acompanhamento com o professor para resolver
+dúvidas da elaboração do trabalho. O trabalho prático será realizado em grupo e seus desenvolvimentos (parciais e/ou finais) serão
+enviados via Moodle nas datas indicadas. O trabalho prático tem peso 4 sobre o total. Haverá apresentações (parciais e/ou finais) do
+trabalho.
+Participação: avaliação que tem como base um conjunto de práticas (ex.: listas de exercícios ou tarefas em laboratório). Peso 1
+sobre o total.
+Formação do Conceito Final: O conceito final do aluno será atribuído levando-se em consideração a prova, seminário, trabalhos
+práticos e participação, nos pesos acima definidos. A média ponderada da prova, trabalhos e avaliação do professor será convertida
+em conceito, mediante referencial abaixo:
+
+
+Nota >= 9,0 = A
+Nota >= 7,5 e < 9,0 = B
+Nota >= 6,0 e < 7,5 = C
+Nota < 6,0 = D
+
+
+Observações: Somente será calculada a média geral daqueles alunos que tiverem obtido um índice de frequência às aulas igual ou
+superior a 75% das aulas previstas. Aos que não satisfizerem este requisito, será atribuído o conceito FF (Falta de Frequência).
+
+Atividades de Recuperação Previstas
+
+
+
+                                                                        Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+O aluno que obtiver conceito final D poderá realizar uma prova de recuperação versando sobre todo o conteúdo da disciplina. Se a
+nota obtida nessa prova for igual ou superior a 6,0, o conceito mudará para C.
+
+Bibliografia
+Básica Essencial
+Dumas, Marlon; La Rosa, Marcello; Mendling, Jan; Reijers, Hajo A. Fundamentals of Business Process Management. Heidelberg: Springer-Verlag,
+2013. ISBN 978-3-642-33143-5.
+
+Básica
+Weske, Mathias. Business Process Management: Concepts, Languages, Architectures. Heidelberg: Springer-Verlag, 2007. ISBN 3662695170.
+Disponível em: http://www.springer.com/us/book/9783642286155
+Wil M. P. van der Aalst. Process Mining - Data Science in Action. Heidelberg: Springer-Verlag, 2016. ISBN 3662570416.
+Wil M. P. van der Aalst. Process Mining: A 360 Degree Overview. Suíça: Springer-Verlag, 2022. ISBN 3662570416.
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                            Não existem outras referências para este plano de ensino.
+
+Observações
+                                                          Nenhuma observação incluída.
+
+
+
+
+                                                                        Página 3
+

@@ -1,0 +1,228 @@
+                                                      PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+                                                            Instituto de Informática
+                                                  Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LEILA RIBEIRO
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLV
+Sigla: INF05033              Créditos: 4
+
+Carga Horária
+CH Teórica: 20h       CH Prática: 40h       Total: 60h
+CH Coletiva: 30h      CH Autônoma: 30h           CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes, aplicações específicas, interessando a um
+grupo restrito ou tendo caráter de temporariedade, aspectos abordados superficialmente em disciplinas regulares.
+
+Currículos
+                                          Currículos                                            Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                             Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                         Eletiva
+
+Objetivos
+A disciplina propõe-se a oferecer ao aluno de Computação a prática do método científico e do uso de conceitos, estruturas e
+ferramentas essenciais da computação na resolução de problemas reais. Em especial, propõe-se a:
+* Desenvolver habilidades básicas de pesquisa bibliográfica, identificando, selecionando e catalogando de maneira eficiente fontes
+relevantes de informação acadêmica.
+* Desenvolver habilidades básicas de análise experimental, sendo capaz de projetar e conduzir experimentos, coletando dados e
+interpretando resultados de forma rigorosa e metódica.
+* Desenvolver habilidades básicas de escrita científica, comunicando de maneira clara, concisa e precisa propostas e resultados de
+uma pesquisa, seguindo convenções acadêmicas.
+* Desenvolver habilidades básicas de análise crítica do impacto de soluções computacionais em diferentes dimensões - ética,
+ambiental, social, cultural, legal.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Ciência e Inovação
+Conteúdo: Apresentação da Disciplina. Método Científico (Observação, Análise, Hipóteses, Experimentos, Validação/ Falsificação), Contínuo
+              entre Ciência Básica e Inovação/Tecnologias (Aplicabilidade em longo / médio / curto prazo). Pensamento dedutivo e pensamento
+              indutivo. Papel da Graduação, Mestrado, Doutorado, Pós-doutorado. Iniciação Científica. Transferência de Conhecimento. Unidades
+              de P&D em grandes empresas.
+  Semana: 2 a 3
+    Título: Organização e Pesquisa Bibliográfica
+Conteúdo: Ferramentas de busca bibliográfica e na Web. Análise da literatura. Organização de bibliografia. Definição doDefiniçãodo estado da
+              arte. Lendo artigos científicos e outras referências.
+  Semana: 4 a 5
+    Título: Proposta de Pesquisa
+Conteúdo: Redação de um projeto de pesquisa. Planejamento de experimentos e possíveis soluções a serem investigadas.
+  Semana: 6 a 8
+    Título: Experimentação e Análise de Correção
+Conteúdo: Análise experimental. Controle de experimentos e dados. Documentação. Ciência aberta e reprodutível. Análise de resultado de
+
+
+
+
+                                                                       Página 1
+                                                    PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+              experimentos. Ciência de Dados. Visualização de dados. Análise de correção das soluções propostas.
+  Semana: 8
+    Título: Pesquisa bibliográfica
+Conteúdo: Localizar, organizar e gerenciar fontes de pesquisa online e físicas, conhecendo acervos e utilizando gerenciadores de referências;
+              aula expositiva.
+  Semana: 9
+    Título: Pesquisa bibliográfica na prática
+Conteúdo: Atividades em laboratório.
+  Semana: 9 a 11
+    Título: Escrita Científica
+Conteúdo: Como redigir uma seção técnica. Descrevendo algoritmos de maneira intuitiva e precisa. Ilustrando resultados e apresentando dados
+              com diagramas e gráficos. Apresentação de conclusões sem viés. Análise crítica e análise de impactos (econômicos, sociais).
+              Questões em aberto, trabalhos futuros, próximos passos. Tipos diferentes de publicações científicas (conferências, journals, posteres,
+              short papers, surveys). Processo de publicação de um artigo, DOI. Sociedades científicas (SBC, ACM, IEEE, ?). Ética.
+  Semana: 12
+    Título: Análise crítica
+Conteúdo: Criticando propostas, artigos, e outros de maneira construtiva
+  Semana: 13 a 14
+    Título: Revisão
+Conteúdo: Revisão e entrega do trabalho
+  Semana: 15
+    Título: Apresentação
+Conteúdo: Apresentação do trabalho
+
+Metodologia
+Os conteúdos serão desenvolvidos de várias formas usando diferentes metodologias de ensino-aprendizagem. Serão realizadas
+aulas teóricas expositivas, aulas com dinâmicas diversas, bem como utilizadas técnicas de sala de aula invertida, na qual os alunos
+estudam previamente os conteúdos através de videoaulas, leituras e pesquisas de forma assíncrona e, posteriormente, discutem em
+sala de aula. Em especial, serão utilizadas técnicas de ensino-aprendizagem baseadas em projetos, seguidas de debates e
+discussão de conceitos fundamentais para a resolução do problema em questão, realização de trabalhos individuais, em grupos e
+aplicação prática de conteúdos.
+O conteúdo oferecido na disciplina replica um ambiente real de resolução de problemas complexos usando o método científico onde,
+a partir da observação de uma demanda real, o profissional poderá empoderar-se de múltiplas competências para elaborar, planejar
+e executar um projeto de pesquisa e inovação visando a solução daquela demanda através de uma solução computacional
+satisfatória. A execução do projeto de pesquisa e inovação deverá incluir a implementação, validação e análise crítica em relação a
+soluções similares e ao impacto da solução. Dessa forma, as aulas são baseadas na participação ativa dos estudantes em todo o
+processo, desde a definição da hipótese de pesquisa e do planejamento da pesquisa, passando pela modelagem, implementação e
+avaliação de uma proposta de solução para um problema real complexo, até sua divulgação para diferentes públicos.
+O processo de desenvolvimento será iterativo, com entregas parciais regulares. A cada entrega, um conjunto básico de artefatos
+(cenários, testes, código, etc) devem ser apresentados e serão utilizados como base para a avaliação final. Durante as aulas,
+questões técnicas e de planejamento dos times serão discutidas. Algumas aulas podem ser usadas para implementação no estilo
+hackathon, principalmente para o aprendizado de novas tecnologias. Outras atividades de desenvolvimento devem ser realizadas
+extra-classe e devem ser entregues na forma eletrônica (sistema de versionamento e/ou Moodle) até as datas limite indicadas.
+Ao final do semestre, cada grupo apresentará o resultado de todo o trabalho desenvolvido na forma de um mínimo produto viável
+executável. A apresentação será feita na forma de um artigo científico e de uma apresentação no formato de pitch onde o grupo
+resume o problema e seus desafios, a solução proposta e uma análise comparativa a outras soluções existentes, seu
+desenvolvimento, desafios, aprendizados, impactos e limitações da solução proposta e potencial evolução da mesma.
+Recursos disponibilizados: As atividades previstas assim como as instruções para sua realização serão disponibilizadas no Moodle
+da UFRGS. Eventuais componentes externos ao Moodle e necessários para a realização das atividades estarão indicados no próprio
+Moodle. Também serão disponibilizados no Moodle links para os livros e artigos online e gratuitos, indicados para leitura e estudo,
+
+
+
+
+                                                                         Página 2
+                                                  PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+visando auxiliar na realização das atividades propostas.
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 15 encontros de 60 minutos de
+duração (ao longo de 15 semanas) num total de 900 minutos e mais 15 horas (900 minutos) de atividades autônomas, realizadas
+sem contato direto com o professor, correspondentes à implementação das atividades propostas, conforme Resolução 11/2013 do
+CEPE/UFRGS, Artigos 36 a 38. O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites
+previstos pela UFRGS para disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de
+Professores Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas. Serão realizadas atividades empregando ferramentas
+digitais como apoio às atividades autônomas e práticas de sala de aula invertida, de acordo com o cronograma a ser entregue aos
+alunos no início do semestre.
+O professor ministrante poderá se valer de aulas presenciais ou à distância (essa última para as atividades de sala de aula invertida,
+conforme previsto no cronograma que será divulgado para os alunos no início do semestre), assim como do apoio de Professores
+Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Participar de aulas expositivas dialogadas
+Realizar projetos individualmente e em grupo
+Resolver listas de exercícios extraclasse ou implementação de trabalho ou responder questionários Realizar leitura de material
+disponibilizado ou assistir a vídeos ou vídeoaulas
+Os estudantes devem seguir as regras definidas pelos professores responsáveis sobre o uso de ferramentas de Inteligência Artificial
+(IA). As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+O conceito final será obtido através de um projeto que será dividido em três etapas (T1, T2 e T3), utilizando-se a seguinte
+ponderação:
+T1: análise, discussão e apresentação do problema (20%)
+T2: análise, discussão e implementação da solução computacional (50%)
+T3: análise, discussão e apresentação da solução geral e seus impactos (30%)
+O trabalho pode ser feito em duplas ou em grupo e a apresentação de cada etapa inclui um relatório técnico (no formato de artigo
+científico) e uma apresentação oral com apoio visual em formato de divulgação científica (para leigos). A nota do projeto refere-se às
+entregas parciais e à sua apresentação e defesa, a ser realizada no final do semestre. Os alunos (duplas ou grupos) apresentam a
+evolução do seu projeto a cada 2 semanas através de sessões de acompanhamento.
+A média final será computada da seguinte forma: 0.2*T1 + 0.5*T2 +0.3*T3
+Será considerado aprovado o aluno que alcançar uma média final total superior a 6,0. O aluno que obtiver nota final abaixo de 6,0
+(seis) deverá fazer uma atividade de recuperação que versará sobre todo o conteúdo.
+Os conceitos serão distribuídos da seguinte forma:
+A : Nota maior ou igual a 9,0
+B : Nota menor que 9,0 e maior ou igual a 7,5
+C : Nota menor que 7,5 e maior ou igual a 6,0
+D : Nota menor que 6,0
+FF : Reprovação por frequência
+
+Atividades de Recuperação Previstas
+Nesta disciplina é desenvolvido um projeto, que é avaliado ao longo do semestre através das entregas parciais e conversas com
+professores, portanto, a recuperação da aprendizagem se dá ao longo do semestre. A avaliação é feita com base nas entregas
+parciais feitas quinzenalmente pelos alunos e que, no conjunto, constituem o projeto desenvolvido na disciplina. Caso o aluno/grupo
+deixe de fazer uma entrega, ele poderá realizá-la até a quinzena seguinte, cumulativamente com as atividades previstas para aquela
+quinzena.
+
+Bibliografia
+Básica Essencial
+Abraham Flexner.. The Usefulness of Useless Knowledge. Londres: Princeton University Press, 2017. ISBN 978- 0691174761.
+
+
+
+
+                                                                      Página 3
+                                                         PLANO DE ENSINO
+                                                                                                               Data de Emissão: 15/08/2026
+
+
+
+Thomas S. Mullaney e Christopher Rea. Where research begins. Chicago: University of Chicago Press, 2022. ISBN 022681744X.
+Zobel, J. Writing for computer science. Londres: Springer,, 2014. ISBN 1447166388.
+
+Básica
+Eva Maria Lakatos e Marina Marconi. Fundamentos de Metodologia Científica. São Paulo: Atlas, 2010. ISBN 9788597010121.
+Gil, Antonio Carlos. Como elaborar projetos de pesquisa. São Paulo: Atlas, 2010. ISBN 9788522458233.
+PÁDUA, E. M. M... Metodologia da Pesquisa. Campinas: Editora Papirus, 1990. ISBN 9788544902073.
+Steven S. Skiena.. The Algorithm Design Manual. Berlim: Springer, 2020. ISBN 978-3030542559.
+
+Complementar
+T. E. Gehardt, D. T. Silveira. Métodos de Pesquisa. Porto Alegre: UFRGS, 2009. Disponível em:
+https://lume.ufrgs.br/bitstream/handle/10183/52806/000728684.pdf?sequence=1
+Valtencir Zucolotto. Escrita científica. 2015. Disponível em: https://escritacientifica.com/
+
+
+
+Outras Referências
+                                                Não existem outras referências para este plano de ensino.
+
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito à sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                              Página 4
+

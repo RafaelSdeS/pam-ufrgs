@@ -1,0 +1,212 @@
+                                                 PLANO DE ENSINO
+                                                                                                           Data de Emissão: 15/08/2026
+
+
+
+                                                      Instituto de Informática
+                                  Comissão de Graduação de Engenharia de Computação
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: RENATO VENTURA BAYAN HENRIQUES
+Disciplina: INTRODUÇÃO À ENGENHARIA DE COMPUTAÇÃO
+Sigla: ECP99002            Créditos: 2
+
+Carga Horária
+CH Teórica: 10h     CH Prática: 20h      Total: 30h
+CH Coletiva: 30h     CH Autônoma: 0h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+A Engenharia de Computação na atualidade. O curso de Engenharia de Computação na UFRGS.
+
+Currículos
+                                      Currículos                                             Etapa Aconselhada          Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                              1                Obrigatória
+
+Objetivos
+Apresentar a Universidade e o Curso de Engenharia de Computação aos alunos ingressantes. Analisar a atividade do Engenheiro de
+Computação e sua inserção no meio sócio-econômico atual. Discutir com os alunos, inclusive com a presença de profissionais e
+empresários da área, os aspectos relativos ao exercício da profissão, à competência profissional e à responsabilidade técnica e
+social. Estudar os métodos de aprendizagem e a formação da personalidade dentro do ambiente universitário sob os aspectos
+individual e coletivo. Implementar um projeto utilizando sala de aula invertida e artefatos tecnológicos que permitam ao aluno a
+oportunidade de vivenciar um vislumbre das atividades profissionais do ponto de vista da Teoria Sócio-histórica de Vygostsky.
+
+
+A Teoria Sociointeracionista de Vygotsky fornece a base para entendermos que a aprendizagem se constrói na mediação social e
+cultural, onde o estudante, ao interagir com pares e com o professor, internaliza saberes cada vez mais complexos; já a sala de aula
+invertida potencializa esse processo, ao transferir a aquisição inicial de conceitos para momentos fora do ambiente presencial,
+liberando o tempo em classe para atividades colaborativas, projetos práticos e resolução de problemas sob a orientação do docente.
+Nesse contexto, o desenvolvimento do pensamento computacional ? com ênfase em decomposição, reconhecimento de padrões,
+abstração e criação de algoritmos ? torna-se essencial para ingressantes em Engenharia de Computação, pois fortalece a
+capacidade de enfrentar desafios reais de forma organizada e sistemática. A aplicação desses três pilares no projeto de construção
+e programação de um robô móvel (disponível em [https://github.com/Edubot2020/](https://github.com/Edubot2020/)) não apenas
+engaja os alunos em tarefas concretas de hardware e software, mas também promove a autonomia cognitiva, a colaboração efetiva
+e a transferência de conhecimentos para novas situações, preparando-os para atuar em equipes multidisciplinares e ambientes
+tecnológicos em constante evolução.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Apresentação da Universidade e do Curso e dos Diretores das Unidades EE e Informática
+Conteúdo: Estrutura da Universidade e Curso de Engenharia da Computação
+  Semana: 3
+    Título: História da Engenharia Elétrica e da Computação e apresentação da Resolução 19/2011
+Conteúdo: História da Computação
+             Resolução 19/2011
+  Semana: 4
+    Título: Apresentação de Metodologia de Projetos
+Conteúdo: Introdução da Metodologia 5W2S para projetos.
+
+
+
+
+                                                                    Página 1
+                                                   PLANO DE ENSINO
+                                                                                                               Data de Emissão: 15/08/2026
+
+
+
+  Semana: 5
+    Título: Robótica Educacional
+Conteúdo: Apresentação do Projeto EDUBOT - Robótica Educacional
+  Semana: 6 a 7
+    Título: Robótica Móvel e Sistemas Embarcados
+Conteúdo: Apresentação dos conceitos fundamentais de Robótica Movel e Sistemas Embarcados.
+  Semana: 8 a 9
+    Título: Plataformas Educacionais Embarcadas
+Conteúdo: Apresentação do Arduino, Raspberry e outras plataformas microcontroladas e microprocessadas.
+  Semana: 10 a 11
+    Título: Aula de Sensores e Atuadores - Projeto Semáforo 4 Vias
+Conteúdo: Apresentação dos principais Sensores e Atuadores e seus principios de funcionamento. Neste tópico os alunos são colocados no
+              desafio de programar uma maquete de um cruzamento de 4 vias, com semaforos de carros e de pedestres.
+  Semana: 12
+    Título: Acionamento de Motores
+Conteúdo: Aula de principios de funcionamento de motores e seus acionamentos. Conceitos básicos da utilização da ponte H para o controle da
+              direção derotação de motores, por meio, da utilização de transistores e componentes dedicados.
+  Semana: 13 a 17
+    Título: Projeto Integrador - Robòtica Educacional
+Conteúdo: Programação do robô EDUBOT para sair do Labirinto. O projeto esta disponível no endereço https://github.com/Edubot2020/.
+  Semana: 18
+    Título: Apresentação do Projeto
+Conteúdo: Aula para apresentação do programa desenvolvido para sair do Labirinto.
+  Semana: 19
+    Título: Recuperação
+Conteúdo: Aula para recuperação.
+
+Metodologia
+Estudo da evolução do conhecimento científico e da técnica através de textos didáticos, aulas expositivas, trabalhos de pesquisa em
+livros e em artigos científicos;
+Debates com os alunos sobre os assuntos estudados, levando-os a aprimorar seu espírito crítico e sua consciência social e
+profissional e a formalizar seu pensamento.
+Desenvolvimento de um projeto envolvendo a programação de um robô educacional utilizando sala de aula invertida. O projeto do
+robô será desenvolvido em partes e serão apresentadas as principais caracteristica mecânicas e eletrônicas aos alunos que ao longo
+do semestre desenvolverão tarefas de programação que ao final reunidas terão como objetivo a construção de um programa para
+mover o robô autonomamente para sair de um labirinto.
+
+Experiências de Aprendizagem
+Trabalhos de pesquisa e listas de exercícios a serem desenvolvidos fora do período de aula.
+
+
+Questionários e tarefas a serem respondidos em aula e em atividades extra-classe.
+
+
+Prova prática no final do período.
+
+
+Trabalho programação de um robô móvel a ser desenvolvido em aula e com atividade extra-classe a ser entregue no final do
+semestre.
+
+Critérios de avaliação
+A avaliação será realizada pela média ponderada de três notas: N1, N2 e N3. A nota N1 será formada pelas avaliações dos
+questionários respondidos ou exercícios realizados ao longo do semestre (a nota N1 tem peso 3). A nota N2, com peso 4,
+corresponde à avaliação de um trabalho. O exame fornece a nota N3 (a nota refere-se a participação do aluno durante o semestre) e
+
+
+
+
+                                                                       Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+tem peso 3. Para as três notas será utilizada a escala [0,10]. Será atribuído valor 0 (zero) a uma atividade faltante. Poderá ser
+realizada uma avaliação Nc a titulo de recuperação para substituir uma das notas N1, N2 ou N3).
+Cada questionário será avaliado sobre 10, utilizando-se a média aritmética para obter a nota N1. O professor determinará, ao
+apresentar o questionário, se o mesmo deverá ser respondido durante o período de aula ou fora do período de aula para entrega
+posterior.
+O trabalho constará de um relatório de pesquisa e, eventualmente, de uma atividade prática. Sua avaliação dá origem à nota N2.
+Havendo atividade prática, esta deverá ser mostrada ou demonstrada ao professor. A avaliação da atividade prática entrará na
+composição da nota do trabalho.
+O conceito final será A, B, C ou D, para os intervalos [10, 9], (9, 7.5], (7.5, 6] ou (6, 0], respectivamente, da média ponderada das
+notas acima descritas para quem tiver freqüência regulamentar. O conceito FF será atribuído ao aluno que não tiver a freqüência
+mínima.
+
+Atividades de Recuperação Previstas
+Havendo justificativa, a prova pode ser realizada em período especial.
+
+
+O trabalho final pode ser entregue em outro horário que não o programado, desde que justificado.
+
+
+Os questionários e trabalhos de casa pode, ser recuperados pela nota Nc, que substitui uma das notas N1, N2 ou N3 e vale como
+uma recuperação. A média é feita sobre o número de notas presentes se as faltas foram poucas (até 20%). Outros casos serão
+tratados individualmente.
+
+Bibliografia
+Básica Essencial
+BAZZO, W. A.. Introdução à Engenharia. Florianópolis: Editora UFSC, 2008. ISBN 978.85.328.0356-6.
+Severino, Antonio Joaquim. Metodologia do Trabalho Cientifico. Cortez Morães, ISBN 978-85-249-1311-2.
+
+Básica
+CRESWELL, John W. Projeto de pesquisa: método qualitativo, quantitativo e misto. Editora ARTMED, ISBN 978-85-363-0892-0.
+
+Complementar
+Moraes, Cícero Couto de; Castrucci, Plínio de Lauro. Engenharia de Automação industrial.. Rio de Janeiro, 2001.
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+Enquanto na abordagem tradicional do curso de Engenharia de Computação o ensino se estrutura majoritariamente em exposições
+expositivas, provas formais e exercícios padronizados, centrando-se no professor como detentor do saber e no estudante como
+receptor passivo de informações, a integração da Teoria Sociointeracionista de Vygotsky, da sala de aula invertida e do pensamento
+computacional ? enriquecida pelos princípios construcionistas de Seymour Papert ? promove uma aprendizagem mais ativa,
+colaborativa e criativa.
+
+
+Na educação tradicional, conceitos teóricos (como estruturas de dados, circuitos digitais ou linguagens de programação) são
+apresentados em sala de aula e exercitados em listas de exercícios, muitas vezes sem conexão imediata com contextos práticos; o
+estudante, isolado, resolve problemas previamente definidos, e o feedback ocorre tardiamente, em avaliações formais. Já a
+metodologia sociointeracionista desloca a ?aquisição? inicial de conteúdos para momentos assíncronos ? vídeos, leituras e tutoriais
+? liberando o tempo em sala para interações mediadas pelo professor e pelos colegas. Papert complementa essa dinâmica ao
+defender que o aprendizado se consolida pela ?construção? de artefatos significativos (p. ex., programas ou robôs), numa lógica de
+exploração e experimentação guiada, em que o estudante aprende não apenas sobre códigos e circuitos, mas também sobre como
+pensar de modo algorítmico e iterativo.
+
+
+Ao aplicar esses pilares no projeto de desenvolvimento de um robô móvel (repositório Edubot2020), os ingressantes não só
+
+
+
+
+                                                                         Página 3
+                                               PLANO DE ENSINO
+                                                                                                       Data de Emissão: 15/08/2026
+
+
+
+exercitam habilidades de decomposição de problemas, reconhecimento de padrões e abstração ? componentes centrais do
+pensamento computacional ? mas também vivenciam a Zona de Desenvolvimento Proximal de Vygotsky, contando com o suporte do
+docente e de colegas mais experientes. Simultaneamente, ao projetar, testar e refinar seu próprio robô em ambientes de
+programação e simulação inspirados nas ?micromundos? de Papert, desenvolvem autonomia, capacidade de autoavaliação e
+criatividade, habilidades pouco estimuladas pela pedagogia tradicional, porém fundamentais para a formação de engenheiros
+preparados para inovar e colaborar em equipes multidisciplinares.
+
+
+
+
+                                                                    Página 4
+

@@ -1,0 +1,193 @@
+                                                      PLANO DE ENSINO
+                                                                                                                       Data de Emissão: 15/08/2026
+
+
+
+                                                           Escola de Engenharia
+                                Departamento de Sistemas Elétricos de Automação e Energia
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: ALCEU HEINKE FRIGERI
+Disciplina: CIRCUITOS ELÉTRICOS I - C
+Sigla: ENG10001              Créditos: 4
+
+Carga Horária
+CH Teórica: 60h       CH Prática: 0h     Total: 60h
+CH Coletiva: 60h       CH Autônoma: 0h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Análise de circuitos resistivos. Quadripolos resistivos. Análise de circuitos de primeira e segunda ordem de domínio do tempo.
+
+Currículos
+                                         Currículos                                                  Etapa Aconselhada             Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                                         4                 Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                                               3                 Obrigatória
+ENGENHARIA DE ENERGIA                                                                                            4                 Obrigatória
+
+Objetivos
+Gerais: Instrumentalizar os alunos resolução de circuitos elétricos lineares invariantes no tempo. Apresentar os problemas e as
+soluções típicas relacionadas a circuitos elétricos.
+Específicos: Capacitar o estudante na aplicação de diferentes técnicas de análise em circuitos elétricos. O aluno deverá ser capaz de
+determinar, analisar e interpretar o comportamento de elementos de circuitos em sistemas relacionados a engenharia. Para isso no
+final do curso este estudante deverá ser capaz de aplicar as leis de Kirchhoff, teoremas de Thèvenin e Norton, teoremas de
+superposição de efeitos, técnicas de explosão de fontes, análise de quadripolos (circuitos de duas portas), Teoremas de Millmann,
+Rosen e Elemento Extra, análise de circuitos RLC no domínio tempo. Sistematização na obtenção de equações de sistemas de
+ordem superior. Circuitos RLC excitados com funções singulares, sinusoidais e exponenciais, entre outras.
+
+Conteúdo Programático
+  Semana: 1 a 6
+    Título: Introdução, Conceitos, Leis fundamentais e teoremas de circuitos elétricos
+Conteúdo: 1. Introdução a Análise de Circuitos:
+              1.1 Programa e critérios de avaliação. Bibliografia. Carga elétrica, corrente, tensão, relações VA- parâmetros
+              do circuito,
+              1.2 Conceitos Fundamentais: Tensão, Corrente, Resistência, Potência. Fontes de Energia, potência e energia.
+              1.3 Conceitos Fundamentais: Leis de Kirchhoff
+              1.4 Métodos de Análise de redes resistivas ? método das malhas e nós
+              1.5 Método de inspeção de redes resistivas
+              1.6 Teoremas: Linearidade e superposição de efeitos
+              1.7 Teoremas de Thevenin e Norton.
+              1.8 Regras de Associação (Série/Paralelo) Divisores de tensão/corrente
+              1.9 Fontes controladas. Efeito de Rede de Fontes Controladas. Amplificador Operacional.
+              1.10 Máxima transferência de potência.
+              1.11 Teoremas de Millmann, Rosen, transformação Delta-Y.
+  Semana: 5 a 14
+    Título: Quadripolos Passivos e Ativos
+Conteúdo: 2.1 Teorema da reciprocidade
+
+
+
+
+                                                                          Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+              2.2 Circuitos a quatro terminais. Modelo Genérico. Modelo a Quatro Parâmetros
+              2.3 Sistematização na obtenção/transformação de Parâmetros de quadripolos
+              2.4 Regras de Associação e condições necessárias.
+              2.5 Quadripolos Ativos
+              2.6 Efeito de Fontes Controladas. Conceitos de Realimentação.
+              2.7 Teorema do Elemento Extra
+  Semana: 12 a 18
+    Título: Análise de Circuitos no Domínio do Tempo
+Conteúdo: 3. Resposta no tempo de circuitos elétricos
+              3.1 Funções Temporais - Comportamento do Indutor e do Capacitor.
+              3.2 Transientes e Regime e permanente em sistemas elétricos.
+              3.3 Obtenção da Equação diferencial Base por inspenção
+              3.6 Condições iniciais e finais para fontes constantes
+              3.7 Resposta completa de circuitos de primeira ordem.
+              3.8 Regras de Associação Série/Paralelo de Indutores/Capacitores
+              3.9 Divisor de Tensão/Corrente Indutivo/Capacitivo
+              3.10 Rearranjo de cargas em indutores/Capacitores
+              3.11 Circuitos de ordem superior. Sistematização na obtenção da equação base.
+              3.12 Circuitos de ordem superior. Resposta completa.
+              3.13 funções de excitação notáveis (impulso, salto, rampa, cosenoidal, exponencial complexa, etc). Resposta completa.
+              Sistematização
+  Semana: 19
+    Título: Exame de recuperação - Última Semana
+Conteúdo: Atividade de recuperação realizada na última semana do semestre corrente.
+
+Metodologia
+Aulas teóricas expositivas, buscando o desenvolvimento dos conteúdos a partir de experiências prévias dos estudantes e da
+construção dos conhecimentos pertinentes. As aulas teórico expositivas incluem também a resolução demonstrativa de exercícios e
+proposição de trabalhos e/ou listas de exercícios.
+
+
+As aulas seguirão, na medida do possível, o cronograma previsto neste plano de ensino, podendo ocorrer alterações ao longo do
+semestre em função do acompanhamento dos alunos.
+
+
+O Moodle Acadêmico poderá ser utilizado para disponibilizar o material auxiliar de estudo.
+
+Experiências de Aprendizagem
+As seguintes atividades serão requeridas dos alunos:
+- Leitura prévia e resolução de exercícios em cada tópico estudado na disciplina;
+- Participação nas aulas e nas discussões em grupo;
+- Realização das atividades avaliativas ao longo do semestre;
+- Estimulação da resolução de problemas para identificação das necessidades de aplicação das técnicas apresentadas.
+
+Critérios de avaliação
+Caso a frequência de presença do discente (F) for inferior a 75%, o discente receberá conceito FF independente de suas demais
+avaliações. Deste modo:
+F < 75%: Conceito FF - Reprovado.
+
+
+Nos demais casos, a avaliação de desempenho será feita com base em duas provas teóricas cumulativas (P1 e P2), usando-se a
+expressão:
+N = (P1*0.4+P2*0.6)
+Será considerado aprovado o aluno que obtiver N &#8805; 6.
+
+
+
+
+                                                                        Página 2
+                                                   PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+Sendo atribuído os Conceitos conforme a tabela abaixo
+9,0 &#8804; N &#8804; 10,0: Conceito A - Aprovado;
+7,5 &#8804; N < 9,0: Conceito B - Aprovado;
+6,0 &#8804; N < 7,5: Conceito C - Aprovado;
+
+Atividades de Recuperação Previstas
+Caso o discente, tenha a presença mínima (F &#8805; 75%) mas não tenha atendido aos critérios de aprovação, poderá realizar
+uma prova de Exame (E), ao final do semestre, a qual versará sobre todo o conteúdo abordado na disciplina.
+
+
+Será considerado aprovado o discente que atender ao seguinte critério:
+E &#8805; 6,
+recebendo, neste caso, conceito C.
+
+
+Caso contrário (E < 6), o discente receberá conceito D.
+
+Bibliografia
+Básica Essencial
+ALEXANDER, C. K., SADIKU, N.O.M.. Fundamentos de Circuitos Elétricos. Bookman, ISBN 8536302496.
+NILSSON J. W., RIEDEL S. A.. Circuitos Elétricos Editora. LTC, ISBN 8521613636.
+
+Básica
+IRWIN D. J.. Análise Básica de Circuitos para Engenharia. LTC, ISBN 8534606935.
+SCOTT, R.E.. Elements of Linear Circuits. Addison-Wesley, ISBN 0201068435.
+
+Complementar
+DESOER, Charles A. e KUH, Ernest S.. Teoria Básica de Circuitos. Guanabara Dois, ISBN 0070165750.
+DORF, R.C., SVODOBA, J. A.. Introdução aos Circuitos Elétricos. LTC, ISBN 9788521615828.
+FOERSTER G., TREGNAGO R.. Circuitos Elétricos. Editora da Universidade, ISBN 8570251378.
+
+
+
+Outras Referências
+                                           Não existem outras referências para este plano de ensino.
+
+Observações
+ATENDIMENTO AOS ALUNOS: o professor estará à disposição dos alunos, para acompanhamento e resolução de dúvidas sobre o
+conteúdo ministrado, em datas e horários previamente combinados com os mesmos.
+
+
+DURAÇÃO EFETIVA DE UM SEMESTRE: A disciplina sempre seguirá o Calendário Acadêmico oficial da UFRGS, tipicamente de 18
+a 19 semanas, com a atividade de recuperação (exame) sendo sempre realizada na última semana letiva do semestre.
+
+
+OBSERVAÇÕES
+
+
+- comunicações com os alunos poderão ser realizadas via sala de aula virtual e/ou moodle;
+- material de apoio poderá ser disponibilizado na plataforma moodle;
+- passado o tempo disponível para revisão das avaliações serão confirmadas as notas obtidas, e não haverá mais alteração dos
+graus atribuídos;
+- é vedado o uso de telefone celular durante a realização das aulas e das provas;
+- não é permitida a utilização de calculadora emulada (aplicativo) em dispositivo móvel (telefone celular, smartphone, tablet);
+- o DELAE não autoriza que alunos frequentem disciplinas/turmas para as quais não estejam regularmente matriculados e não
+reconhece as atividades realizadas de tal forma;
+
+
+
+
+                                                                       Página 3
+

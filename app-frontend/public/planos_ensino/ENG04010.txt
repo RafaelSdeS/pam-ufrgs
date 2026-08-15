@@ -1,0 +1,220 @@
+                                                      PLANO DE ENSINO
+                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+                                                           Escola de Engenharia
+                                                 Departamento de Engenharia Elétrica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: RAPHAEL MARTINS BRUM
+Disciplina: TEORIA ELETROMAGNÉTICA E ONDAS
+Sigla: ENG04010                Créditos: 4
+
+Carga Horária
+CH Teórica: 60h      CH Prática: 0h      Total: 60h
+CH Coletiva: 60h     CH Autônoma: 0h            CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Eletromagnetismo, equações de Maxwell, técnicas matemáticas de resolução. Ondas eletromagnéticas.
+
+Currículos
+                                          Currículos                                   Etapa Aconselhada          Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                         5                Obrigatória
+
+Objetivos
+A disciplina visa fundamentar os conceitos básicos associados ao eletromagnetismo, capacitando e suportando o aluno para sua
+subseqüente aplicação na solução de problemas físicos reais.
+
+Conteúdo Programático
+  Semana: 1
+    Título: 1. O eletromagnetismo
+Conteúdo: 1. O eletromagnetismo
+             1.1. Contextualização
+             1.2. Sistema de unidades e constantes universais
+  Semana: 2
+    Título: 2. Análise vetorial
+Conteúdo: 2.1. Álgebra vetorial
+             2.2. Sistemas de coordenadas
+             2.3. Cálculo vetorial
+             2.4. Teoremas
+  Semana: 3 a 5
+    Título: 3. Eletrostática
+Conteúdo: 3.1. Lei de Coulomb
+             3.2. Lei de Gauss
+             3.3. Potencial elétrico
+             3.4. Campo elétrico em meio material
+             3.5. Densidade de fluxo elétrico
+             3.6. Condições de contorno
+             3.7. Capacitância
+             3.8. Energia e força
+  Semana: 6 a 7
+    Título: 4. Problemas de valor de contorno
+Conteúdo: 4.1. Equações de Poisson e Laplace
+             4.2. Unicidade
+             4.3. Problemas em coordenadas retangulares, cilíndricas e esféricas
+
+
+
+
+                                                                       Página 1
+                                                     PLANO DE ENSINO
+                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+  Semana: 8 a 9
+    Título: 5. Correntes elétricas estacionárias
+Conteúdo: 5.1. Densidade de corrente
+              5.2. Força eletromotriz
+              5.3. Equação da continuidade
+              5.4. Dissipação
+              5.5. Condições de contorno
+  Semana: 10 a 13
+    Título: 6. Magnetostática
+Conteúdo: 6.1. A Lei de Biot-Savart
+              6.2. A Lei de Ampère
+              6.3. O potencial vetor
+              6.4. Campo magnético em meio material
+              6.5. Densidade de fluxo magnético
+              6.6. Condições de contorno
+              6.7. Indutância
+              6.8. Energia e força
+  Semana: 14 a 15
+    Título: 7. Eletromagnetodinâmica
+Conteúdo: 7.1. A Lei de Faraday-Lenz
+              7.2. A Lei de Maxwell
+              7.3. As Equações de Maxwell
+  Semana: 16 a 18
+    Título: 8. Ondas eletromagnéticas em meios ilimitados
+Conteúdo: 8.1. A equação da onda e sua solução em meios dielétricos
+              8.2. Velocidade de fase, índice de refração e velocidade de grupo
+              8.3. Impedância de meios dielétricos
+              8.4. A equação da onda e a sua solução em meios condutores
+              8.5. Comprimento de penetração e tempo de relaxação
+              8.6. A impedância de meios condutores
+              8.7. O Teorema de Poynting
+              8.8. O vetor de Poynting em meios arbitrários
+
+Metodologia
+O conteúdo programático será desenvolvido por meio de aulas expositivas, e aulas dedicadas à resolução de exercícios, de acordo
+com o cronograma da disciplina.
+Extraclasse, as aulas expositivas serão complementadas por listas de exercícios, tendo o intuito de orientar o estudo individual dos
+alunos bem como a sua preparação para as avaliações a serem realizadas em sala de aula.
+
+Experiências de Aprendizagem
+Assistir as aulas.
+Realizar as verificações de conhecimento.
+O estudo extraclasse dos alunos será orientado e estimulado mediante a resolução de listas de exercícios com a supervisão do
+professor.
+
+Critérios de avaliação
+Serão realizadas 3 (três) avaliações no decorrer da disciplina A1, A2 e A3.
+
+
+As avaliações serão desenvolvidas de forma individual em sala de aula, sendo o seu resultado expresso por pontos em escala
+numérica de 0,0 a 10,0.
+
+
+
+
+                                                                        Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+Avaliações plagiadas, em inteiro ou parcial teor, receberão grau 0 (zero). Caso o plágio ocorra entre alunos da UFRGS, tanto o
+plagiado, quando o plagiador, receberão grau 0 (zero). Enfatiza-se que os casos de plágio serão submetidos ao órgão competente
+da UFRGS para a devida sanção disciplinar.
+
+
+A Média do Semestre (MS) será calculada pela expressão abaixo sendo a média aritmética das três avaliações, MS =(A1+A2+A3)/3.
+
+
+Será considerado:
+a) APROVADO, o aluno com frequência &#8805; 75%, MS &#8805; 6
+b) REPROVADO, o aluno com frequência <75%
+c) Em EXAME, o aluno com frequência &#8805; 75%, MS<6
+
+
+Caso o aluno seja considerado aprovado a Nota Final (NF) será igual a Média do Semestre (MS)
+NF = MS.
+
+
+No caso de ausência a uma das provas teóricas, justificada pela Junta Médica da UFRGS, é possível recuperar uma das provas, em
+data previamente agendada.
+
+
+Alunos com Média do Semestre MS<6,0 deverão obrigatoriamente realizar o Exame (E) para eventual aprovação. O exame versará
+sobre todo o conteúdo do semestre.
+
+
+Para alunos que realizaram o Exame a nota final NF será computada da seguinte forma:
+NF=(0,4MS+0,6E).
+
+
+Será atribuído o CONCEITO de acordo com a seguinte tabela para a Nota Final (NF):
+9,0 <= A <= 10,0
+7,5 <= B < 9,0
+6,0 <= C < 7,5
+0,0 <= D < 6,0
+FF = falta de frequência < 75%
+
+
+Será reprovado por Falta de Frequência (FF), o aluno que obtiver frequência inferior a 75%, do período de aulas ministradas no
+semestre, de acordo com o Regimento Geral da Universidade (RGU), Art. 134: "É obrigatória a frequência dos alunos às atividades
+didáticas, considerando-se reprovado aquele que, ao término do período letivo, houver deixado de frequentar mais de 25 % (vinte e
+cinco por cento) da carga horária prevista no plano da disciplina."
+
+Atividades de Recuperação Previstas
+Consistirá em um exame versando a respeito de todo o conteúdo abordado durante o semestre
+
+Bibliografia
+Básica Essencial
+CHENG, D. K.. Field and Wave Electromagnetics. Addison-Wesley: Addison-Wesley, 1989. ISBN 0201528207.
+PAUL, C. R. Eletromagnetismo para Engenheiros: com aplicações a sistemas digitais e interferência eletromagnética. Rio de Janeiro: LTC, 2006.
+ISBN 8521614179.
+WENTWORTH, S. M.. Fundamentos de Eletromagnetismo com aplicações em Engenharia. Rio de Janeiro: LTC, 2006. ISBN 85-216-1504-3.
+
+Básica
+JOHNK, C. T. A.. Engineering Electromagnetic Fields and Waves. New Jersey: John Wiley, 1988. ISBN 978-0471098799.
+JORDAN, E. C. e BALMAIN, K. G. Electromagnetic Waves and Radiating Systems. New Jersey: Prentice-Hall, 1968. ISBN 0132499959.
+PLONSEY, R. e COLLIN, R. E.. Principles and Applications of Electromagnetic Fields. New York: McGraw-Hill, 1961. ISBN 978-0070503403.
+STRATTON, J. A. Electromagnetic Theory. Piscataway: IEEE Press, 2007. ISBN 1443730548.
+
+Complementar
+
+
+
+
+                                                                        Página 3
+                                                  PLANO DE ENSINO
+                                                                                                             Data de Emissão: 15/08/2026
+
+
+
+LANGMUIR, R. V.. Electromagnetic Fields and Waves. New York: McGraw-Hill, 1961. ISBN 9781258818760.
+RAMO, S., WHINNERY, J. R. e VAN DUZER, T.. Fields and Waves in Communication Electronics. Rio de Janeiro: Guanabara Dois, 1981. ISBN
+0131497243.
+SADIKU, M. N.. Elementos de Eletromagnetismo. Porto Alegre: Bookman, 2004. ISBN 8536302755.
+VAN BLADEL, J.. Electromagnetic Fields. New York: McGraw-Hill, 1964. ISBN 978-0-471-26388-3.
+
+
+
+Outras Referências
+                                          Não existem outras referências para este plano de ensino.
+
+Observações
+As informações oficiais relacionadas à disciplina serão publicadas no ambiente Moodle da disciplina durante o decorrer do curso.
+Entenda-se por informações oficiais o plano de ensino, o cronograma onde constam as datas de aplicação dos conteúdos e
+avaliações, as listas de exercícios e os avisos postados pelo professor ao longo do semestre letivo. É responsabilidade expressa do
+aluno frequentemente visitar a página da disciplina para a ciência das novas informações associadas ao curso.
+
+
+
+
+                                                                      Página 4
+

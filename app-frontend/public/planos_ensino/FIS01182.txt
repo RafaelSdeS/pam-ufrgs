@@ -1,0 +1,322 @@
+                                                PLANO DE ENSINO
+                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Física
+                                                     Departamento de Física
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: Marcus Vinicius Castegnaro
+Disciplina: FÍSICA GERAL - ELETROMAGNETISMO
+Sigla: FIS01182           Créditos: 6
+
+Carga Horária
+CH Teórica: 60h     CH Prática: 30h     Total: 90h
+CH Coletiva: 90h    CH Autônoma: 0h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Eletrostática. Eletrodinâmica. Magnetismo. Eletromagnetismo.
+
+Currículos
+                                      Currículos                                       Etapa Aconselhada           Natureza
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                5                Obrigatória
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                5                Obrigatória
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                                    Eletiva
+BACHARELADO EM MATEMÁTICA- ÊNFASE MATEMÁTICA PURA                                                5                Obrigatória
+BACHARELADO EM QUÍMICA                                                                           3                Obrigatória
+BIOINFORMÁTICA                                                                                   3                Obrigatória
+BIOTECNOLOGIA MOLECULAR                                                                          3                Obrigatória
+ENGENHARIA AMBIENTAL                                                                             2                Obrigatória
+ENGENHARIA CARTOGRÁFICA E DE AGRIMENSURA - NOTURNO                                               3                Obrigatória
+ENGENHARIA CIVIL                                                                                 3                Obrigatória
+ENGENHARIA DE ALIMENTOS                                                                          5                Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                         2                Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                               2                Obrigatória
+ENGENHARIA DE ENERGIA                                                                            3                Obrigatória
+ENGENHARIA DE MATERIAIS                                                                          3                Obrigatória
+ENGENHARIA DE MINAS                                                                              3                Obrigatória
+ENGENHARIA DE PRODUÇÃO                                                                           4                Obrigatória
+ENGENHARIA ELÉTRICA                                                                              4                Obrigatória
+ENGENHARIA FÍSICA                                                                                3                 Alternativa
+ENGENHARIA HÍDRICA                                                                               2                Obrigatória
+ENGENHARIA MECÂNICA                                                                              2                Obrigatória
+ENGENHARIA METALÚRGICA                                                                           3                Obrigatória
+ENGENHARIA QUÍMICA                                                                               3                Obrigatória
+LICENCIATURA EM QUÍMICA - NOTURNO - V1                                                           3                Obrigatória
+QUÍMICA INDUSTRIAL                                                                               3                Obrigatória
+QUÍMICA INDUSTRIAL - NOTURNO                                                                     3                Obrigatória
+
+Objetivos
+Auxiliar os/as discentes a desenvolver as habilidades de:
+
+
+- Compreender os princípios fundamentais do eletromagnetismo e sua aplicação à descrição de fenômenos físicos.
+
+
+- Aplicar os fundamentos do eletromagnetismo na investigação de fenômenos de relevância científica e tecnológica, explorando suas
+
+
+
+                                                                 Página 1
+                                                      PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+aplicações e sua importância para as engenharias e as ciências exatas e da terra.
+
+
+- Identificar e aplicar as ferramentas matemáticas adequadas para investigar, interpretar e modelar fenômenos físicos.
+
+
+- Planejar e executar experimentos relacionados aos fenômenos eletromagnéticos, selecionando métodos experimentais apropriados
+e integrando teoria e prática.
+
+
+- Adotar boas práticas de coleta, tratamento e comunicação de resultados, assegurando rigor, reprodutibilidade e integridade
+científica.
+
+Conteúdo Programático
+   Semana: 1 a 5
+     Título: Área 1
+Conteúdo: Carga elétrica, quantização e conservação da carga, processos de transferência e indução de carga;
+
+
+              Força Elétrica e Campo Elétrico;
+
+
+              Cálculo do campo elétrico gerado por distribuições discretas e contínuas de cargas;
+
+
+              Ação de campos elétricos sobre cargas puntiformes;
+
+
+              Dipolos elétricos, momento de dipolo elétrico, energia potencial elétrica de um dipolo em um campo externo;
+
+
+              Fluxo elétrico e a Lei de Gauss do campo elétrico;
+
+
+              Aplicações da Lei de Gauss;
+
+
+              Lei de Gauss e o campo gerado por condutores carregados em equilíbrio eletrostático.
+   Semana: 6 a 10
+     Título: Área 2
+Conteúdo: Trabalho realizado pela força elétrica, energia potencial elétrica e potencial elétrico e relações entre essas grandezas;
+
+
+              Relações entre os campos vetorial (campo elétrico) e o campo escalar (potencial elétrico). Superfícies equipotenciais;
+
+
+              Cálculo do potencial associado a distribuições discretas e contínuas de cargas.
+
+
+              Cálculo do potencial a partir do campo elétrico.
+
+
+              Capacitância, capacitores e propriedades dielétricas dos materiais.
+
+
+              Introdução à eletrodinâmica: corrente elétrica, resistividade dos materiais e resistência elétrica.
+
+
+              Circuitos simples de corrente contínua e ferramentas para sua análise.
+
+
+              Introdução ao circuito RC através de sua análise experimental
+   Semana: 11 a 14
+     Título: Área 3
+Conteúdo: Introdução ao Campo Magnético: fontes de campo magnético, padrões de linhas de campo magnético;
+
+
+              Lei de Biot-Savart e o campo magnético produzido por cargas em movimento e por correntes elétricas;
+
+
+
+
+                                                                            Página 2
+                                                      PLANO DE ENSINO
+                                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+
+              Lei de Gauss do Magnetismo;
+
+
+              Lei de Ampère.
+
+
+              Ação de campos magnéticos sobre cargas em movimento e sobre condutores percorridos por correntes;
+
+
+              Força de Lorentz, campos cruzados e o Efeito Hall;
+
+
+              Conceitos básicos sobre as propriedades magnéticas da matéria.
+  Semana: 15 a 18
+    Título: Área 4
+Conteúdo: Indução eletromagnética (força eletromotriz induzida, corrente induzida, campo elétrico induzido, aplicações da indução
+              eletromagnética);
+
+
+              Indutores e Indutância;
+
+
+              Circuitos RL, LC e RLC;
+
+
+              Circuitos de corrente alternada (circuito RLC a.c., circuito resistivo, capacitivo e indutivo, impedância, ressonância, fator de potência,
+              constante de fase, diagrama de fasores);
+
+
+              Equações de Maxwell.
+  Semana: 19
+    Título: Atividades de Recuperação
+Conteúdo: Recuperações e Exame
+
+Metodologia
+Aulas teóricas e práticas, combinando a apresentação e discussão do conteúdo com demonstrações, soluções de exercícios e com
+atividades experimentais.
+
+Experiências de Aprendizagem
+Serão ministradas aulas teóricas, complementadas por aulas de exercícios e aulas práticas.
+
+
+Nas aulas práticas, os discentes realizarão experimentos relacionados aos conceitos discutidos nas aulas teóricas. As atividades
+práticas acontecerão em datas anunciadas durante as primeiras semanas do semestre.
+
+
+Além disso, experimentos demonstrativos poderão ser utilizados em sala de aula para complementar e contextualizar o conteúdo
+teórico.
+
+
+Poderão ser utilizadas metodologias de aprendizagem ativa, com uso de plataformas que permitam a participação dos alunos em
+aula ou extraclasse, incluindo o MOODLE, como ferramenta auxiliar em sala de aula ou como tarefas extraclasse. Os alunos
+poderão fazer atividades individuais ou em grupos como questionários, tarefas, e similares.
+
+
+Serão disponibilizadas aos discentes, no site da disciplina (http://www.ufrgs.br/eletromagnetismo), informações gerais sobre o curso,
+bem como material didático auxiliar.
+
+Critérios de avaliação
+Os(as) discentes serão avaliados(as) com base em seu desempenho nas quatro áreas definidas no conteúdo programático e nas
+atividades experimentais.
+
+
+
+
+                                                                           Página 3
+                                                 PLANO DE ENSINO
+                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+A MÉDIA FINAL (M) de cada discente será calculada a partir da média simples de 5 contribuições (N1, N2, N3, N4 e LAB):
+
+
+M={[N1+N2+N3+N4+LAB]/5}
+
+
+Onde:
+N1, N2, N3 e N4 representam as notas obtidas em cada área do conteúdo programático.
+  - Cada nota varia entre 0 e 10.
+  - A avaliação de cada área será composta por:
+     - Provas escritas: obrigatórias em todas as áreas, com peso mínimo de 80% da nota da área.
+     - Outras atividades avaliativas: opcionais, definidas pelo(a) docente da turma, com peso máximo de 20% da nota da área.
+
+
+LAB (Parte Prática)
+  - Nota referente às atividades práticas da disciplina, variando entre 0 e 10.
+  - Calculada pela média das notas obtidas nas cinco avaliações práticas.
+  - As avaliações práticas serão baseadas em relatórios e questionários, individuais ou em grupo, conforme divulgado antes de cada
+aula prática.
+  - Discentes que não participarem da aula prática receberão nota 0, mesmo que entreguem a atividade correspondente.
+
+
+Para ser aprovado(a), o(a) estudante deve atender simultaneamente aos seguintes critérios:
+Obter Média Final (M) &#8805; 6,0.
+Obter N1, N2, N3 e N4 &#8805; 3,0.
+
+
+Com base nas médias do semestre, será feita a atribuição dos conceitos de acordo com o que é apresentado a seguir:
+A: M &#8805; 9,0
+B: 7,5 &#8804; M < 9,0
+C:6,0 &#8804; M < 7,5
+D: M < 6,0
+
+
+
+Aos(Às) discentes com frequência inferior ao requerido pela universidade será atribuído o conceito final FF.
+
+Atividades de Recuperação Previstas
+O(a) aluno(a) que não obtiver média 6,0 ou que tenha obtido grau inferior a 3 em UMA das quatro áreas (essa obrigatoriedade não
+inclui a nota LAB, para a qual não estão previstas recuperações) poderá escolher entre uma prova de recuperação tratando da área
+em questão ou fazer um exame que versará sobre toda a matéria.
+
+
+Se escolher recuperar uma área, o grau obtido na recuperação substituirá aquele da área recuperada e a MÉDIA FINAL será
+calculada novamente. Para ser aprovado(a), a nova MÉDIA FINAL deverá ser maior ou igual a 6 (seis) e nenhuma área poderá ficar
+com grau inferior a 3 (três).
+
+
+Se o(a) aluno(a) obtiver grau inferior a 3 (três) em MAIS DO QUE UMA área, a recuperação será feita por meio de um exame escrito
+envolvendo todo o conteúdo da disciplina.
+
+
+Neste caso (e no caso anterior onde o(a) aluno(a) mesmo tendo somente uma nota abaixo de 3 (três) optou pelo exame), a nota final
+(NF) será calculada da seguinte forma:
+
+
+NF=M0,4+E0,6.
+
+
+Onde M é a MÉDIA FINAL obtida durante o semestre e E é a nota obtida no EXAME.
+
+
+
+
+                                                                    Página 4
+                                                      PLANO DE ENSINO
+                                                                                                                        Data de Emissão: 15/08/2026
+
+
+
+O conceito final será determinado de acordo com a tabela anterior.
+
+Bibliografia
+Básica Essencial
+Halliday, David; Resnick, Robert; Walker, Jearl. Fundamentos de Física. Rio de Janeiro: Livros Técnicos e Científicos, 2009. ISBN 97885216166078
+(V.3). Disponível em: http://www.grupogen.com.br/ch/prod/6034/3467/fundamentos-de-fisica---vol-3---eletromagnetismo.aspx
+SERWAY, Raymond A.; JEWETT JR., John W.. Princípios de física. sp: Cengage Learning, 2015. ISBN 9788522118069.
+
+Básica
+Chabay, Ruth W. Física básica : matéria e interações,. rj: ltc, 2018. ISBN 9788521635031. Disponível em:
+https://integrada.minhabiblioteca.com.br/books/9788521635390
+Tipler, Paul A.. Física : para cientistas e engenheiros. Rio de Janeiro: Livros Técnicos e Científicos, 2000. ISBN 852161215X.
+
+Complementar
+Herch Moysés Nussenzveig. Curso de Física Básica: Eletromagnetismo. sp: Editora Blucher, 2015.
+Randall D. Knight. Física - Uma Abordagem Estratégica. rj: Bookman Editora, 2009.
+
+
+
+Outras Referências
+                                              Não existem outras referências para este plano de ensino.
+
+Observações
+Página do curso: http://www.ufrgs.br/eletromagnetismo
+
+
+Essa disciplina poderá contar com a participação de estudantes de Pós-Graduação que estejam matriculados na disciplina de
+Estágio em Docência.
+
+
+
+
+                                                                           Página 5
+

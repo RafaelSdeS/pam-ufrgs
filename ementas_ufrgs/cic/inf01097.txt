@@ -1,0 +1,219 @@
+                                                      PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+                                                           Instituto de Informática
+                                                  Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: Eder John Scheid
+Disciplina: SEGURANÇA DE REDES DE COMPUTADORES E SISTEMAS DISTRIBUÍDOS
+Sigla: INF01097                 Créditos: 4
+
+Carga Horária
+CH Teórica: 50h       CH Prática: 10h         Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h            CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Conceitos, propriedades e princípios em segurança de redes de computadores e sistemas distribuídos. Arquiteturas para redes
+seguras. Mecanismos de defesa de redes e contramedidas. Segurança de redes sem fio. Censura e Privacidade em Redes de
+Computadores.
+
+Currículos
+                                          Currículos                                                Etapa Aconselhada               Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                                  Eletiva
+
+Objetivos
+Estudar segurança em três aspectos distintos da computação: segurança de dados, segurança em redes e segurança de
+computadores pessoais. Apresentar os principais tipos de ataques e as principais ferramentas utilizadas para sua prevenção.
+Permitir que o aluno compreenda e saiba analisar as características de um sistema de computação quanto a sua segurança.
+A disciplina visa desenvolver a seguinte habilidades específica:
+- Desenvolver um sistema que incorpore vários princípios de segurança e avaliar sua resiliência a ataques.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Conceitos, propriedades e princípios em segurança de redes de computadores e sistemas distribuídos
+Conteúdo: Apresentação da disciplina (plano de ensino, Moodle, sistema de avaliação). Fundamentos de Segurança; Tipos de ataque; Introdução
+              à Criptografia; Geração de números aleatórios e funções de hash;
+  Semana: 3 a 4
+    Título: Arquiteturas para redes seguras e ambientes distribuídos modernos
+Conteúdo: Computação em nuvem e implicações para arquiteturas seguras (XaaS; modelos público e privado; riscos; proteção de dados;
+              controle de acesso). Ferramentas: análise de tráfego com TCPDUMP e Wireshark.
+  Semana: 5 a 6
+    Título: Mecanismos de defesa de redes e contramedidas
+Conteúdo: Firewalls (filtragem de pacotes, stateful, proxy); IDS/IPS; NFV (service chaining). Ferramentas: ufw, iptables/nftables, Snort/Suricata.
+  Semana: 7 a 8
+    Título: Serviços de segurança em redes e sistemas distribuídos
+Conteúdo: Segurança IP; Intermediários confiáveis; VPN
+  Semana: 9 a 10
+    Título: Segurança de redes sem fio
+Conteúdo: Princípios de Segurança de redes sem fio; autenticação em redes wireless; segurança de dispositivos móveis (casos de ataques em
+              redes sem fio).
+  Semana: 11 a 12
+    Título: Censura e Privacidade em Redes de Computadores
+Conteúdo: Segurança na camada de transporte e aplicação; SSH; segurança de e-mail; autenticação de pessoas; ferramentas (Tor, PGP).
+
+
+
+
+                                                                         Página 1
+                                                 PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+  Semana: 13 a 15
+    Título: Tópicos Emergentes
+Conteúdo: Seleção de tópicos emergentes em segurança de redes; criptografia avançada; segurança em sistemas modernos.
+
+Metodologia
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
+discussão e acompanhamento geral da disciplina. A disciplina é apresentada em aulas teórico-práticas, em que se combina aulas
+expositivas para apresentação dos conceitos e técnicas com o desenvolvimento de eventuais exercícios e discussões. Algumas das
+aulas serão realizadas em laboratórios, para a implementação/visualização dos conceitos vistos em aula (por exemplo, criptografia
+de dados e exemplos de ataques e contramedidas de rede).
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse a serem avaliados.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Os estudantes participarão de aulas expositivas dialogadas para compreender os principais conceitos, protocolos e ameaças
+relacionados à segurança de redes; realizarão aulas em laboratório voltadas à análise de tráfego, implementação de mecanismos de
+defesa e experimentação com ferramentas de segurança (por exemplo, firewalls); apresentarão artigos sobre tópicos emergentes na
+área; poderão realizar leituras de materiais técnicos disponibilizados ao longo da disciplina e assistir a vídeos e vídeo-aulas que
+complementam temas como criptografia, ataques em redes e contramedidas. Além disso, poderão responder a questionários que
+auxiliarão na consolidação do aprendizado e na verificação da compreensão dos tópicos abordados.
+
+
+Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
+As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+A avaliação será realizada por meio de duas atividades de avaliação de aprendizagem (P1 e P2), que poderão conter questões
+discursivas, analíticas ou objetivas de múltipla escolha sobre o conteúdo apresentado, incluindo os tópicos abordados nos exercícios
+e trabalhos extraclasse.
+Além dessas atividades, serão propostas Atividades Autônomas (AA) ao longo do semestre (por exemplo, a entrega e apresentação
+de um resumo sobre um tópico emergente em segurança de redes, escolhido pelo próprio aluno), cuja média integrará a média final
+com peso de 20%.
+Será considerado aprovado o discente que obtiver Média Final (MF) mínima de SEIS (6,0), calculada da seguinte forma:
+
+
+MF = 0,4 * P1 + 0,4 * P2 + 0,20 * AA
+
+
+onde P1 e P2 são, respectivamente, as notas da primeira e segunda atividades de avaliação de aprendizagem, e AA a média das
+Atividades Autônomas. O conceito final do discente será atribuído com base na nota final (MF), conforme a seguinte tabela:
+
+
+- Conceito A, para MF>=9,0;
+- Conceito B, para MF>=7,5 e MF<9,0;
+- Conceito C, para MF>=6,0 e MF<7,5;
+- Conceito D, para MF<6,0.
+
+
+Conforme regulamento da Universidade, é obrigatório uma frequência mínima de 75% de presença nas aulas. A não observância a
+
+
+
+
+                                                                   Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+esse requisito implicará conceito FF.
+
+Atividades de Recuperação Previstas
+Os discentes que não alcançarem média final para aprovação (MF >= 6,0) poderão realizar uma atividade avaliativa de recuperação,
+que versará sobre todos os conteúdos apresentados na disciplina ao longo do semestre
+Para ser aprovado na disciplina, o discente deverá atingir uma nota mínima na atividade avaliativa de recuperação (MR) determinada
+pela seguinte expressão:
+
+
+MR = (0,4 * MF) + (0,6 * NR)
+
+
+onde NR é a nota obtida na recuperação e MF sendo a Média Final obtida pelo discente como resultado de todas as atividades de
+avaliação de aprendizagem realizadas na disciplina. O discente em recuperação que atingir a nota mínima necessária será aprovado
+com conceito "C", caso contrário, será reprovado (conceito "D").
+
+
+No caso de falta justificada a qualquer uma das atividades de avaliação, o discente poderá recuperá-la em data, horário e local a
+serem marcados pelo professor. Por falta justificada, entendem-se os casos previstos em legislação (saúde, parto, serviço militar,
+convocação judicial etc.) devidamente comprovados segundo as normas da UFRGS.
+
+Bibliografia
+Básica Essencial
+Kaufman, Charlie; Perlman, Radia; Speciner, Mike; Perlner, Ray. Network Security: Private Communication in a Public World. Boston: ?
+Addison-Wesley Professional, 2022. ISBN 0136643604.
+Stallings, William. Criptografia e Segurança de Redes: Princípios e Práticas. São Paulo: ? Pearson Universidades, 2014. ISBN 8543005892.
+
+Básica
+Kurose, Jim; Ross, Keith. Redes de Computadores e a Internet: uma abordagem top-down. São Paulo: Pearson Universidades, 2013. ISBN ?
+978-8581436777.
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                         Título                                                          Texto
+Tor: The second-generation onion router                    DINGLEDINE, R., MATHEWSON, N., SYVERSON, P. Tor:
+                                                           The second-generation onion router, 13th USENIX Security
+                                                           Symposium (USENIX Security 04) 2004.
+Network function virtualization: State-of-the-art and rese MIJUMBI, R., SERRAT, J., GORRICHO, J. L., BOUTEN,
+                                                           N., DE TURCK, F., & BOUTABA, R. Network function
+                                                           virtualization: State-of-the-art and research challenges.
+                                                           IEEE Communications surveys & tutorials, 18(1), 236-262,
+                                                           2015.
+RFC 4949: Internet Security Glossary, version 2            SHIREY, R. RFC 4949: Internet Security Glossary, version
+                                                           2, 2007. https://datatracker.ietf.org/doc/html/rfc4949
+A Survey on Network Security for Cyber?Physical Systems: FS. Kim, K. -J. Park and C. Lu, "A Survey on Network
+                                                           Security for Cyber?Physical Systems: From Threats to
+                                                           Resilient Design," in IEEE Communications Surveys &
+                                                           Tutorials, vol. 24, no. 3, pp. 1534-1573, 2022, doi:
+                                                           10.1109/COMST.2022.3187531.
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+
+
+
+
+                                                                        Página 3
+                                                PLANO DE ENSINO
+                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                  Página 4
+

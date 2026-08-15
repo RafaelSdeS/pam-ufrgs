@@ -1,0 +1,149 @@
+                                                    PLANO DE ENSINO
+                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+                                                         Instituto de Informática
+                                                Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: Jeferson Campos Nobre
+Disciplina: GERÊNCIA E APLICAÇÕES EM REDES
+Sigla: INF01015               Créditos: 4
+
+Carga Horária
+CH Teórica: 40h     CH Prática: 20h         Total: 60h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+1. Visão geral dos componentes das redes, seu uso e formas de gerenciamento: 1.1 Componentes físicos: modens, linhas, CHUBS,
+pontes, roteadores, servidores, estações de trabalho, etc. 1.2 Componentes lógicos: recursos de informação e aplicações. 2.
+Arquiteturas de gerenciamento de redes. 2.1 Protocolos de gerenciamento: OSI e SNMP. 2.2 Objetos gerenciados. 3.
+Interoperabilidade entre aplicações em rede: 3.1 Serviços e protocolos: internet: SMTP, FTP, GOPHER, WWW etc. OSI: X400, X500,
+FTTAM 2.2 API(Application Program Interface).
+
+Currículos
+                                        Currículos                                          Etapa Aconselhada        Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                   Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                               Eletiva
+
+Objetivos
+Fornecer ao aluno uma visão ampla e abrangente das principais aplicações em diversos ambientes de redes de computadores.
+Apresentar as principais metodologias de gerenciamento de redes. Estudar as APIs de programação mais utilizadas.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução
+Conteúdo: Evolução do gerenciamento das redes de computadores
+             Elementos de uma arquitetura de gerenciamento de redes
+             Visão geral dos componentes das redes, seu uso e formas de gerenciamento
+  Semana: 2
+    Título: Network Operation Center (NOC)
+Conteúdo: Objetivos de um NOC
+             Estudos de caso
+  Semana: 3 a 5
+    Título: Arquiteturas de Gerenciamento de Redes
+Conteúdo: A arquitetura de gerenciamento Internet (introdução ao SNMP; CMIP sobre TCP/IP)
+             A arquitetura de gerenciamento OSI (introdução ao CMIP/CMISE)
+             Objetos gerenciados
+  Semana: 6 a 8
+    Título: Management Information Base (MIB)
+Conteúdo: Introdução às informações de gerenciamento e regras de codificação
+             Introdução à MIB
+             O desenvolvimento da MIB
+             MIB I e MIB II
+             MIBs de uso específico
+             RMON e RMON2
+
+
+
+
+                                                                      Página 1
+                                                   PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+               MIBs privadas e acesso às MIBs
+  Semana: 9 a 11
+    Título: Simple Network Management Protocol (SNMP)
+Conteúdo: Arquitetura e objetivos do SNMP
+               Operações do SNMP
+               SNMP Protocol Data Units (PDUs)
+               Exemplos de utilização
+               SNMPv2
+               SNMPv3
+               Estudo de casos
+  Semana: 12
+    Título: Plataformas e Aplicações de Gerenciamento
+Conteúdo: HP OpenView
+               TNG Unicenter
+               IBM NetView
+               Outras
+  Semana: 13 a 14
+    Título: Tópicos avançados
+Conteúdo: Gerenciamento baseado em políticas
+               Gerenciamento distribuído
+               Gerenciamento autonômico
+               Gerenciamento de TI orientado a negócios
+               Outros
+  Semana: 15
+    Título: Verificação
+Conteúdo: Verificação de cunho teórico-prático (P)
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas. Nas aulas teóricas serão apresentados conceitos básicos e técnicas, as quais
+serão complementadas nas atividades práticas.
+
+Experiências de Aprendizagem
+Serão realizadas uma verificação de aproveitamento de cunho teórico-prático (P), 2 (dois) trabalhos de cunho prático (T1 e T2) e
+diversas atividades práticas (AP).
+
+Critérios de avaliação
+Será realizada uma verificação de cunho teórico-prático (P), onde o aluno deverá ter conceito, no mínimo, igual a 5,0 (cinco). Haverá,
+também, 2 trabalhos extra-classe de cunho prático (T1 e T2), além de atividades desenvolvidas em aula (AP). Será considerado
+aprovado o aluno que obtiver Média Final (MF) no mínimo 6,0 (seis). MF, para efeito dos conceitos de aprovação (A, B e C), é
+calculada da seguinte forma: MF = (P + T1 + T2 + AP) / 4
+
+Atividades de Recuperação Previstas
+O aluno que obtiver conceito final D poderá recuperá-lo realizando uma verificação de recuperação (R) que versará sobre o todo o
+conteúdo do programa. A verificação substitutuirá a nota da verificação de aproveitamento de cunho teórico-prático (P). A média final
+será recalculada usando as notas da verificação de recuperação (R), dos 2 (dois) trabalhos de cunho prático (T1 e T2) e das
+diversas atividades práticas (AP). Não é previsto nenhum tipo de recuperação para as notas dos 2 (dois) trabalhos de cunho prático
+(T1 e T2) e das diversas atividades práticas (AP), exceto para os casos de falta justificada previstos na legislação (saúde, parto,
+serviço militar, convocação judicial, luto etc, devidamente comprovados).
+
+Bibliografia
+Básica Essencial
+Stallings, William. SNMP, SNMPv2, and RMON :practical network management. Reading: Addison-Wesley, c1996. ISBN 0201634791.
+
+
+
+
+                                                                   Página 2
+                                                  PLANO DE ENSINO
+                                                                                                               Data de Emissão: 15/08/2026
+
+
+
+Básica
+Leinwand, Allan; Conroy, Karen Fang. Network management :a practical perspective. Boston: Addison-Wesley, c1996. ISBN 0201609991.
+Tanenbaum, Andrew S.. Computer networks. Upper Saddle River: Prentice Hall PTR, c2003. ISBN 0130661023.
+
+Complementar
+                                                      Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                          Não existem outras referências para este plano de ensino.
+
+Observações
+                                                       Nenhuma observação incluída.
+
+
+
+
+                                                                      Página 3
+

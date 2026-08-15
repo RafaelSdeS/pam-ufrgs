@@ -1,0 +1,195 @@
+                                                     PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                 Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: MARCUS ROLF PETER RITT
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLIV
+Sigla: INF05032              Créditos: 4
+
+Carga Horária
+CH Teórica: 40h      CH Prática: 20h       Total: 60h
+CH Coletiva: 40h      CH Autônoma: 20h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes, aplicações específicas, interessando a um
+grupo restrito ou tendo caráter de temporariedade, aspectos abordados superficialmente em disciplinas regulares.
+
+Currículos
+                                         Currículos                                                   Etapa Aconselhada          Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                               Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                           Eletiva
+
+Objetivos
+A disciplina tem por objetivo apresentar os fundamentos da computação quântica e dos principais algoritmos quânticos, com ênfase
+na compreensão algorítmica, implementação em circuitos quânticos e experimentação computacional.
+
+
+Ao final da disciplina, espera-se que o aluno:
+
+
+- compreenda os conceitos básicos de estados quânticos, qubits, medição, portas quânticas, circuitos e composição tensorial de
+sistemas;
+- saiba implementar e simular circuitos quânticos simples usando ferramentas computacionais, em particular Qiskit;
+- compreenda algoritmos quânticos fundamentais, como Deutsch, Deutsch-Jozsa, Bernstein-Vazirani, Simon e Grover;
+- saiba modelar pequenos problemas de busca e otimização usando oráculos, formulações QUBO/Ising e algoritmos variacionais;
+- compreenda os princípios de algoritmos variacionais, incluindo QAOA e VQE;
+- conheça os fundamentos da transformada quântica de Fourier, estimação de fase, algoritmo de Shor e HHL;
+- seja capaz de avaliar criticamente as possibilidades e limitações atuais da computação quântica, distinguindo algoritmos para
+dispositivos NISQ e algoritmos para computação quântica tolerante a falhas.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Fundamentos da computação quântica
+Conteúdo: Motivação, panorama da computação quântica, qubits, estados, amplitudes, probabilidades, medição, espaços de Hilbert, produtos
+              tensoriais, sistemas de múltiplos qubits, emaranhamento, esfera de Bloch e postulados básicos em formulação operacional.
+  Semana: 2 a 3
+    Título: Portas, circuitos e programação quântica
+Conteúdo: Portas quânticas de um e dois qubits, portas controladas, reversibilidade, medição, circuitos quânticos, noção de universalidade e
+              introdução prática ao Qiskit, incluindo construção, simulação e medição de circuitos.
+  Semana: 3 a 5
+    Título: Protocolos básicos e algoritmos com oráculos
+Conteúdo: Teletransporte quântico, no-cloning, phase kickback, modelo de oráculo, algoritmos de Deutsch, Deutsch-Jozsa, Bernstein-Vazirani e
+              Simon, problemas de estrutura escondida e vantagem em complexidade de consultas.
+
+
+
+
+                                                                          Página 1
+                                                      PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 15/08/2026
+
+
+
+  Semana: 5
+    Título: Algoritmo de Grover e amplificação de amplitude
+Conteúdo: Busca não estruturada, construção de oráculos, operador de difusão, interpretação geométrica, amplificação de amplitude, múltiplas
+              soluções, número desconhecido de soluções, implementação e limitações.
+  Semana: 5 a 6
+    Título: Projeto 1
+Conteúdo: Atividade autônoma sobre algoritmos com oráculos e Grover. Implementação, experimentação e análise de pequenos problemas de
+              busca.
+  Semana: 6 a 7
+    Título: Busca, otimização e formulações QUBO/Ising
+Conteúdo: Uso de Grover em problemas de otimização, busca adaptativa, minimum finding, relação com busca exaustiva e branch-and-bound.
+              Formulações QUBO, modelos de Ising, MaxCut, coloração de grafos, mochila, TSP e outras reduções simples.
+  Semana: 7 a 9
+    Título: Algoritmos variacionais e otimização quântica
+Conteúdo: Estrutura híbrida quântico-clássica, circuitos parametrizados, estimação de valores esperados, ansätze, QAOA, VQE, computação
+              adiabática, quantum annealing, FALQON, warm-start QAOA, ruído, custo de medição, barren plateaus e limitações práticas.
+  Semana: 9 a 10
+    Título: Projeto 2
+Conteúdo: Atividade autônoma sobre otimização quântica e algoritmos variacionais. Formulação, implementação, experimentação e comparação
+              em pequenos problemas.
+  Semana: 10 a 12
+    Título: QFT, estimação de fase e algoritmo de Shor
+Conteúdo: Transformada Quântica de Fourier, QFT inversa, estimação de fase, period finding, order finding, redução da fatoração à ordem,
+              algoritmo de Shor, exemplos pequenos e implicações criptográficas.
+  Semana: 12 a 13
+    Título: HHL e perspectiva moderna de algoritmos quânticos
+Conteúdo: Algoritmo HHL para sistemas lineares, hipóteses e limitações, codificações em bloco, simulação Hamiltoniana, amplitude estimation,
+              QSVT em alto nível, estado da arte e leitura crítica de resultados.
+  Semana: 14
+    Título: Apresentação de projetos e revisão
+Conteúdo: Apresentação e discussão dos projetos desenvolvidos pelos alunos. Revisão dos principais conteúdos da disciplina e discussão de
+              exercícios.
+  Semana: 15
+    Título: Prova final
+Conteúdo: Avaliação individual sobre o conteúdo da disciplina.
+
+Metodologia
+Aulas teórico-expositivas, exercícios individuais e em classe, práticas computacionais com simulação de circuitos quânticos,
+desenvolvimento de pequenos projetos individuais ou em grupo, discussão de resultados e prova individual.
+
+
+As atividades práticas utilizarão preferencialmente Qiskit e simuladores quânticos, podendo incluir a execução de circuitos simples
+em hardware quântico disponível, quando tecnicamente viável.
+
+Experiências de Aprendizagem
+A disciplina proporcionará experiências de aprendizagem por meio de aulas expositivas, resolução de exercícios, implementação de
+circuitos e algoritmos quânticos, uso de ferramentas computacionais, desenvolvimento de projetos e apresentação dos
+resultados.
+
+
+Estão previstas atividades autônomas do aluno com carga horária total de 20 horas, divididas em dois projetos de 10 horas cada.
+Essas atividades consistirão no desenvolvimento, implementação, experimentação e análise de algoritmos quânticos ou formulações
+de problemas relacionados ao conteúdo da disciplina.
+
+
+
+                                                                           Página 2
+                                                   PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 15/08/2026
+
+
+
+Critérios de avaliação
+A avaliação será composta por duas listas de exercícios, dois projetos e uma prova final. Todas as notas serão atribuídas na escala
+de 0 a 10.
+
+
+- Lista de exercícios 1: L&#8321;, peso 1/9;
+- Lista de exercícios 2: L&#8322;, peso 1/9;
+- Projeto 1: P&#8321;, peso 2/9;
+- Projeto 2: P&#8322;, peso 2/9;
+- Prova final: E, peso 3/9.
+
+
+A média final M será calculada por:
+
+
+M = (L&#8321; + L&#8322; + 2P&#8321; + 2P&#8322; + 3E)/9.
+
+
+O conceito final corresponde à média final M e à frequência f da seguinte maneira:
+
+
+Conceito final =
+ A, caso 9,0 &#8804; M &#8804; 10,0 e f &#8805; 75%,
+ B, caso 7,5 &#8804; M < 9,0 e f &#8805; 75%,
+ C, caso 6,0 &#8804; M < 7,5 e f &#8805; 75%,
+ D, caso M < 6,0 e f &#8805; 75%, observado o direito à recuperação,
+ FF, caso f < 75%.
+
+
+Para ser aprovado é necessário obter conceito final A, B ou C.
+
+Atividades de Recuperação Previstas
+Alunos com média final M < 6,0 e frequência suficiente poderão realizar uma prova de recuperação sobre todo o conteúdo da
+disciplina, após a divulgação dos resultados e respeitado o prazo mínimo regulamentar. Em caso de desempenho satisfatório na
+recuperação, o aluno será aprovado com conceito C; caso contrário, será atribuído conceito D.
+
+Bibliografia
+Básica Essencial
+Combarro, Elías F.; González-Castillo, Samuel. A Practical Guide to Quantum Machine Learning and Quantum Optimization: Hands-on Approach to
+Modern Quantum Algorithms. Birmingham: Packt Publishing, 2023. ISBN 9781804613832..
+Nielsen, Michael A.; Chuang, Isaac L.. Quantum Computation and Quantum Information. Cambridge: Cambridge University Press, 2010. ISBN
+9781107002173.
+
+Básica
+Kaye, Phillip; Laflamme, Raymond; Mosca, Michele. An Introduction to Quantum Computing. Oxford: Oxford University Press, 2007. ISBN
+9780198570493.
+Rieffel, Eleanor G.; Polak, Wolfgang H.. Quantum Computing: A Gentle Introduction. Cambridge, MA: MIT Press, 2011. ISBN 9780262015066.
+
+Complementar
+Wong, Thomas G.. Introduction to Classical and Quantum Computing. Omaha: Rooted Grove, 2022. ISBN 9798985593105.
+
+
+
+Outras Referências
+                                           Não existem outras referências para este plano de ensino.
+
+Observações
+                                                        Nenhuma observação incluída.
+
+
+
+
+                                                                       Página 3
+

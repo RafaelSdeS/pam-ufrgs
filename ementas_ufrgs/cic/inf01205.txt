@@ -1,0 +1,164 @@
+                                                      PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: ANDRE INACIO REIS
+Disciplina: CAD PARA SISTEMAS DIGITAIS
+Sigla: INF01205              Créditos: 4
+
+Carga Horária
+CH Teórica: 60h       CH Prática: 0h     Total: 60h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Introdução a ferramentas de CAD. Metodologias de projeto de sistemas digitais. Representação de circuitos digitais. Validação,
+simulação e verificação. Algoritmos para Síntese Lógica, Síntese Física e Otimização. Tópicos avançados em Ferramentas de CAD.
+
+Currículos
+                                         Currículos                                                Etapa Aconselhada                Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                                  Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                        9                     Eletiva
+ENGENHARIA ELÉTRICA                                                                                             8                     Eletiva
+
+Objetivos
+O objetivo da disciplina e&#769; capacitar o aluno compreender as ferramentas de CAD associadas a diferentes metodologias de
+si&#769;ntese de sistemas digitais complexos. Para tanto o aluno estudara&#769; os algoritmos envolvidos nas diversas etapas de
+si&#769;ntese e verificac&#807;a&#771;o encontradas em fluxos de projeto atuais. Algoritmos de cara&#769;ter geral que
+sera&#771;o utilizados em diversas etapas de projeto para modelagem e soluc&#807;a&#771;o dos problemas associados. A
+inserc&#807;a&#771;o destes me&#769;todos em diferentes etapas de um ambiente de trabalho sera&#769; analisada.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Introdução a Ferramentas de Projeto de Circuitos Digitais
+Conteúdo: 1.1 Características de tecnologia, objetivos e ações de projeto
+              1.2 Metodologias de Projeto e Implementação, Diagrama Y
+              1.3 Ferramentas de Automação de Projeto de circuitos VLSI
+              1.4 Caracterização de Síntese de alto-Nível, Síntese Lógica e Síntese Física
+              1.5 Revisão de Programação em C/C++/STL/lex/yacc
+  Semana: 3 a 5
+    Título: Grafos, Problemas, Algoritmos e Tratabilidade
+Conteúdo: 2.1 Grafos: terminologia, estruturas de dados, problemas e algoritmos
+              2.2 Algoritmos de Pesquisa de Caminhos: BFS, DFS, A*
+              2.3 Computabilidade, Tratabilidade, Complexidade, Notação Assintótica, Classes de Problemas, Redução, Importância relativa entre
+              Complexidade e Velocidade
+              2.4 Algoritmos de Otimização Combinatorial: modelos analíticos (lineares, quadráticos, geométricos); Busca (local, exaustiva,
+              branch-and-bound, etc..); Programação Dinâmica, Métodos Gulosos; Meta-heurísticas (Resfriamento Simulado, Simulação Evolutiva,
+              Colônia de Formigas)
+  Semana: 6
+    Título: Leiaute
+Conteúdo: 3.1 Representação e problemas de leiate
+              3.2 Compactação
+              3.3 Geração de Células e Módulos
+
+
+
+
+                                                                         Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+  Semana: 7 a 8
+     Título: Particionamento, Posicionamento e Roteamento
+Conteúdo: 4.1 Caracterização e Aplicações de Particionamento e Posicionamento
+              4.2 Algoritmos para Particionamento
+              4.3 Algoritmos para Posicionamento
+              4.4 Algoritmos para Roteamento Global e Detalhado
+              4.5 Problema e Algoritmos para Geração de Árvores de Steiner
+              4.6 Planejamento Topológico: representações e algoritmos
+  Semana: 9
+     Título: Avaliação Intermediária e Revisão
+Conteúdo: Revisão, exercícios, definição de trabalhos práticos
+              Primeira Verificação
+  Semana: 10
+     Título: Simulação e Verificação Formal
+Conteúdo: 5.1 Métodos de Cimulação discreta e contínua
+              5.2 Simulação por lista de eventos e por código compilado
+              5.3 Modelos de células e valores lógicos
+  Semana: 11 a 12
+     Título: Síntese Lógica e Mapeamento Tecnológico
+Conteúdo: 6.1 Conceitos de álgebra Booleana e representação de funções lógicas;
+              6.2 Síntese lógica de 2-níveis;
+              6.3 Síntese lógica Multinível;
+              6.4 Mapeamento Tecnológico;
+              6.5 Síntese Lógica Sequencial: assinalamento de estados e retemporização;
+  Semana: 13
+     Título: Síntese de Alto-Nível
+Conteúdo: 7.1 Linguagens para descrição comporrtamental algorítmica; vantagens, limitações, exemplos;
+              7.2 Objetivos e arquiteturas-alvo;
+              7.3 Definição e caracterização de bibliotecas funcionais;
+              7.4 Problemas de seleção, alocação, escalonamento, assinalamento (de registradores, unidades funcionais e portas);
+              7.5 Algoritmos para síntese de alto-nível;
+  Semana: 14
+     Título: Tópicos Relacionados e Atuais e segunda verificação
+Conteúdo: 8.1 Tópicos atuais de pesquisa e necessidades industriais;
+              8.2 Tópicos de CAD não cobertos na disciplina;
+              8.3 Segunda verificação escrita;
+  Semana: 15
+     Título: Apresentação de Trabalhos Práticos
+Conteúdo: Apresentação de trabalhos práticos de implementação, estudo ou pesquisa realizados pelos alunos, individualmente ou em grupos.
+
+Metodologia
+A disciplina é de caráter teórico, e será ministrada com aulas expositivas, contendo exemplos práticos, exercícios, demonstrações de
+algoritmos e ferramentas rodando em sala de aula.
+
+Experiências de Aprendizagem
+Realização de trabalho prático de estudo, implementação ou pesquisa, em horário extra-classe, a ser apresentado ao final da
+disciplina.
+
+Critérios de avaliação
+O conceito final sera&#769; obtido atrave&#769;s da me&#769;dia aritme&#769;tica simples entre as notas de duas provas escritas
+(P1 e P2) e uma nota de trabalhos pra&#769;ticos (T).
+
+
+
+
+                                                                          Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                        Data de Emissão: 15/08/2026
+
+
+
+Sera&#769; considerado aprovado o aluno que obtiver uma me&#769;dia final igual ou superior a 6.0 (seis). A
+participac&#807;a&#771;o em aula pode ser considerada para aumento de nota ou arredondamento. Os conceitos sera&#771;o
+atribui&#769;dos em func&#807;a&#771;o das notas da seguinte forma:
+A: me&#769;dia &#8805; 9,0; B: 7.5 &#8804; me&#769;dia < 9.0; C: 6.0 &#8804; me&#769;dia < 7.5; D: me&#769;dia < 6.0
+
+Atividades de Recuperação Previstas
+O aluno que obtiver me&#769;dia inferior a 6.0 podera&#769; fazer uma recuperac&#807;a&#771;o escrita. Esta
+recuperac&#807;a&#771;o substitui a menor nota do conjunto {P1, P2} no co&#770;mputo da me&#769;dia final. A prova de
+recuperação versa sobre todo o conteúdo da disciplina.
+
+Bibliografia
+Básica Essencial
+Gerez, Sabih H.. Algorithms for vlsi design automation. Chichester: John Wiley, c1999. ISBN 0471984892.
+
+Básica
+                                                          Sem bibliografias acrescentadas
+
+Complementar
+De Micheli, Giovanni. Synthesis and optimization of digital circuits. New York: Mcgraw-Hill, c1994. ISBN 0070163332.
+Michalewicz, Zbigniew; Fogel, David B.. How to solve it: modern heuristics. Berlin: Springer, c2000. ISBN 3540660615.
+T.Cormen, C.Leiserson, R.Rivest, Clifford, S.. Introduction to Algorithms. McGraw-Hill, 2001. ISBN 0-262-53196-8.
+Weiss, Mark Allen. Data Strucutures and Algorithm Analysis in C .. Boston: Pearson Education, c2006. ISBN 032144146X.
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+                                                           Nenhuma observação incluída.
+
+
+
+
+                                                                         Página 3
+

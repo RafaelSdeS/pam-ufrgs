@@ -1,0 +1,167 @@
+                                                      PLANO DE ENSINO
+                                                                                                                        Data de Emissão: 15/08/2026
+
+
+
+                                                             Escola de Engenharia
+                                                   Departamento de Engenharia Elétrica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: HAMILTON DUARTE KLIMACH
+Disciplina: CIRCUITOS ELETRÔNICOS I
+Sigla: ENG04077              Créditos: 6
+
+Carga Horária
+CH Teórica: 60h      CH Prática: 30h          Total: 90h
+CH Coletiva: 90h      CH Autônoma: 0h            CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Diodos, transistores de junção e efeito de campo: semicondutores e junção p-n, estrutura física e operação, características elétricas,
+polarização, estabilidade térmica e aplicações. Circuitos conformadores. Amplificadores de um e de diversos estágios.
+Amplificadores operacionais. Realimentação: princípios básicos, modelos e topologias, efeito nos amplificadores. Análise e projeto
+de circuitos eletrônicos.
+
+Currículos
+                                          Currículos                                                  Etapa Aconselhada                Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                                          6                   Obrigatória
+ENGENHARIA ELÉTRICA                                                                                               4                   Obrigatória
+
+Objetivos
+Estudo dos dispositivos eletrônicos semicondutores fundamentais, que são o diodo e os transistores de junção bipolar e de efeito de
+campo MOS, de modo a compreender sua operação, suas características e aplicações.
+Estudo de diversas topologias de circuitos eletrônicos, incluindo o treino dos procedimentos de análise e de síntese destes circuitos.
+Desenvolvimento de habilidades experimentais voltadas à eletrônica.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: 1. Introdução
+Conteúdo: Apresentação da disciplina.
+              Breve histórico da eletrônica.
+              A Indústria de Semicondutores.
+              Desenvolvendo um produto.
+              Sinais analógicos e digitais.
+              Amplificadores: conceito, modelos e distorção
+  Semana: 3 a 6
+    Título: 2. Diodos
+Conteúdo: O diodo ideal e seu comportamento não-linear.
+              O semicondutor e a física da junção p-n.
+              Análises CC e CA, aplicadas a circuitos contendo diodos.
+              Os diodos retificador e zener: características elétricas, curvas e modelos.
+              Aplicações: fonte de alimentação, circuitos retificadores, regulador de tensão, portas lógicas, circuitos limitadores e conformadores.
+              Diodos especiais: diodo Schottky, LED, Fotodiodo, diodo varactor, diodo túnel.
+  Semana: 7 a 11
+    Título: 3. Transistor de junção bipolar (TJB)
+Conteúdo: A estrutura física e o comportamento do TJB n-p-n e p-n-p.
+              Características elétricas, curvas e modelos.
+
+
+
+
+                                                                          Página 1
+                                                      PLANO DE ENSINO
+                                                                                                               Data de Emissão: 15/08/2026
+
+
+
+              Análise CC, polarização e estabilidade.
+              O TJB como amplificador e a análise CA.
+              Configurações amplificadoras fundamentais.
+              Excursão de sinal de saída e distorção.
+  Semana: 12 a 14
+    Título: 4. Transistor de efeito de campo MOS (MOSFET)
+Conteúdo: A estrutura física e comportamento do MOSFET canal N e P.
+              Características elétricas, curvas e modelos.
+              O MOSFET como chave e as portas lógicas CMOS.
+              Polarização e estabilidade.
+              Análises CC e CA.
+              Configurações amplificadoras.
+  Semana: 15 a 16
+    Título: 5. Amplificadores multi-transistores
+Conteúdo: Amplificadores de mais de um estágio e configurações compostas: darlington, par diferencial, par complementar e espelho de
+              corrente. O amplificador operacional.
+  Semana: 17
+    Título: 6. Realimentação
+Conteúdo: Princípios básicos da realimentação negativa. Alteração de ganho e das impedâncias de entrada e de saída de amplificadores por
+              efeito da realimentação.
+  Semana: 18
+    Título: Recuperação
+Conteúdo: Atividade de Recuperação.
+
+Metodologia
+A disciplina será desenvolvida através de aulas expositivas, aulas de laboratório e de atividades extra-classe. É fundamental, para
+um bom desempenho, que o aluno exercite fora de aula o conteúdo desenvolvido. É importante que o aluno complemente seu
+aprendizado através de diversas fontes de informação (livros, manuais, periódicos, internet, etc).
+De acordo com as normas vigentes, atividades à distância também poderão ser previstas.
+
+Experiências de Aprendizagem
+Para um bom aproveitamento da disciplina, o aluno deverá:
+- Participar de forma ATIVA nas aulas teóricas e de laboratório.
+- Manter-se atualizado no estudo dos capítulos do livro-texto e do material de aula, conforme o andamento da disciplina.
+- Realizar com empenho as atividades extra-classe da disciplina.
+- Estudar e exercitar os temas abordados.
+- Buscar outras fontes de informação, relacionadas à disciplina.
+- Agir com dedicação, responsabilidade e ética nas atividades da disciplina.
+
+Critérios de avaliação
+Serão realizadas duas provas teóricas (P1 e P2), com duração de 2 h-aula cada, que junto com a nota das atividades de laboratório
+(L), definirão uma média ponderada:
+MP = 0,3xP1 + 0,4xP2 + 0,3xL.
+É considerado:
+a)APROVADO por média, o aluno que obteve NM => 6,0 e teve freqüência => 75%, com conceito:
+- A se 9,0 <= NM
+- B se 7,5 <= NM < 9,0
+- C se 6,0 <= NM < 7,5
+b)REPROVADO com conceito FF, o aluno que teve freqüência < 75%.
+c)EM RECUPERAÇÃO, o aluno que obteve NM < 6,0 e teve freqüência => 75%.
+
+Atividades de Recuperação Previstas
+
+
+
+                                                                     Página 2
+                                                       PLANO DE ENSINO
+                                                                                                                        Data de Emissão: 15/08/2026
+
+
+
+O aluno com frequência igual ou superior a 75% e que não obteve média (NM) suficiente para aprovação, tem direito a uma prova de
+recuperação (R), abrangendo todo o programa da disciplina. Sua média final (MF) será dada pela expressão: MF = (4xNM + 6xR)/10
+Este aluno é considerado:
+a)APROVADO, caso obtenha MF => 6,0, com conceito:
+- B se 7,5 <= MF
+- C se 6,0 <= MF < 7,5
+b)REPROVADO, caso obtenha MF < 6,0, com conceito D.
+
+Bibliografia
+Básica Essencial
+Behzad Razavi. Fundamentos de Microeletrônica. Rio de Janeiro: LTC - Grupo GEN, 2017. ISBN 9788521633525.
+Sedra, Adel S.; Smith, Kenneth C.. Microeletrônica. São Paulo: Editora Pearson Prentice Hall, 2007. ISBN 9788576050223.
+
+Básica
+Boylestad, Robert L.; Nashelsky, Louis. Dispositivos eletrônicos e teoria de circuitos. Editora Prentice-Hall do Brasil, ISBN 8587918222.
+
+Complementar
+Millman, Jacob; Halkias, Christos C.. Eletrônica :dispositivos e circuitos. Editora McGraw-Hill,
+Schilling, Donald L.; Belove, Charles. Circuitos eletrônicos :discretos e integrados. Editora Guanabara Dois,
+
+
+
+Outras Referências
+                             Título                                                                       Texto
+IEEE - Institute of Electrical and Electronic Engineers                       Artigos e livros publicados pela sociedade IEEE podem ser
+                                                                              obtidos pelo site:
+                                                                              https://ieeexplore.ieee.org/Xplore/home.jsp
+
+                                                                              O acesso a este material é gratuito, desde que através das
+                                                                              Universidades Federais (o IP da instituição é verificado).
+Manuais de fabricantes e Application Notes                                    Philips, NXP, Fairchild, Vishay, National, Texas, etc.
+Observações
+                                                             Nenhuma observação incluída.
+
+
+
+
+                                                                             Página 3
+

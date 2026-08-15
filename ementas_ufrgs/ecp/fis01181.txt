@@ -1,0 +1,226 @@
+                                                PLANO DE ENSINO
+                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Física
+                                                     Departamento de Física
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LEANDRO LANGIE ARAUJO
+Disciplina: FÍSICA I-C
+Sigla: FIS01181           Créditos: 6
+
+Carga Horária
+CH Teórica: 75h     CH Prática: 15h     Total: 90h
+CH Coletiva: 90h    CH Autônoma: 0h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Medidas físicas. Cinemática, estática e dinâmica do ponto e do corpo rígido. Gravitação.
+
+Currículos
+                                      Currículos                                           Etapa Aconselhada          Natureza
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                   2                 Obrigatória
+BACHARELADO EM MATEMÁTICA- ÊNFASE MATEMÁTICA PURA                                                   2                 Obrigatória
+BACHARELADO EM QUÍMICA                                                                              2                 Obrigatória
+BIOINFORMÁTICA                                                                                      2                 Obrigatória
+BIOTECNOLOGIA MOLECULAR                                                                             2                 Obrigatória
+ENGENHARIA AMBIENTAL                                                                                1                 Obrigatória
+ENGENHARIA CARTOGRÁFICA E DE AGRIMENSURA - NOTURNO                                                  1                 Obrigatória
+ENGENHARIA CIVIL                                                                                    1                 Obrigatória
+ENGENHARIA DE ALIMENTOS                                                                             1                 Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                            1                 Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                                  1                 Obrigatória
+ENGENHARIA DE ENERGIA                                                                               1                 Obrigatória
+ENGENHARIA DE MATERIAIS                                                                             1                 Obrigatória
+ENGENHARIA DE MINAS                                                                                 1                 Obrigatória
+ENGENHARIA DE PRODUÇÃO                                                                              1                 Obrigatória
+ENGENHARIA ELÉTRICA                                                                                 1                 Alternativa
+ENGENHARIA FÍSICA                                                                                   1                 Obrigatória
+ENGENHARIA HÍDRICA                                                                                  1                 Obrigatória
+ENGENHARIA MECÂNICA                                                                                 1                 Obrigatória
+ENGENHARIA METALÚRGICA                                                                              1                 Obrigatória
+ENGENHARIA QUÍMICA                                                                                  1                 Obrigatória
+LICENCIATURA EM QUÍMICA - NOTURNO - V1                                                              2                 Obrigatória
+QUÍMICA INDUSTRIAL                                                                                  2                 Obrigatória
+QUÍMICA INDUSTRIAL - NOTURNO                                                                        2                 Obrigatória
+
+Objetivos
+Sendo uma disciplina das etapas iniciais de muitos cursos da UFRGS, a Física 1C (FIS01181) não só tem o objetivo de proporcionar
+conhecimentos específicos aos alunos mas também visa auxiliá-los a desenvolver habilidades e práticas de estudo que serão úteis
+durante sua vida acadêmica e até mesmo profissional. Mais especificamente, podemos elencar os seguintes objetivos:
+- Proporcionar aos alunos o conhecimento dos conceitos básicos, dos princípios e das leis que regem a Mecânica Newtoniana, para
+o movimento de uma partícula e de um sistema de partículas.
+- Capacitar os alunos, mediante a compreensão de tais leis, princípios e conceitos, a aplicá-los na solução de problemas conceituais
+e em situações reais.
+
+
+
+                                                                  Página 1
+                                                  PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+- Habilitar os alunos a equacionar matematicamente um problema de Física, fazendo uso inclusive dos conteúdos lecionados nas
+disciplinas de Cálculo, ilustrando algumas aplicações de tais conteúdos.
+- Desenvolver nos alunos determinados processos lógicos e linhas de raciocínio que lhes serão úteis na continuação de seus
+estudos em Física Geral, bem como em Engenharias, Matemática, Química, Biotecnologia e Bioinformática.
+- Nas aulas de laboratório, proporcionar aos alunos uma visão prática de leis, princípios e conceitos abordados nas aulas teóricas.
+Também permitir oportunidades de trabalhar colaborativamente, em grupos.
+
+Conteúdo Programático
+  Semana: 1 a 5
+    Título: Cinemática e dinâmica translacional. Gravitação Universal.
+Conteúdo: Grandezas e unidades. Vetores. Movimento em uma e duas dimensões. Leis de Newton. Gravitação universal. Atrito. Dinâmica do
+              movimento circular uniforme.
+  Semana: 6 a 10
+    Título: Trabalho, energia e sistema de partículas.
+Conteúdo: Trabalho e energia. Potência. Energia potencial e conservação de energia. Velocidade de escape. Centro de massa. Momento linear
+              de uma partícula e de um sistema de partículas. Conservação do momento
+              linear. Colisões.
+  Semana: 11 a 16
+    Título: Cinemática e dinâmica rotacional.
+Conteúdo: Cinemática de rotação. Torque sobre uma partícula. Momento angular de uma partícula. Energia cinética de rotação e momento de
+              inércia. Dinâmica de rotação de um corpo rígido. Movimento de rolamento. Conservação do momento angular.
+  Semana: 17 a 18
+    Título: Equilíbrio e oscilações
+Conteúdo: Equilíbrio dos corpos rígidos. Oscilações.
+
+Metodologia
+Majoritariamente aulas expositivas complementadas com aulas de problemas e aulas de laboratório.
+
+Experiências de Aprendizagem
+Aulas de problemas e experimentais. Participação nas atividades em sala de aula. Estudo individual e resolução de exercícios para
+reflexão e fixação.
+
+Critérios de avaliação
+O aproveitamento na disciplina será avaliado através de 4 provas (P1, P2, P3 e P4) e 6 relatórios de laboratório. As provas têm que
+ser feitas presencialmente, no horário de aula. Nenhuma das provas pode ter mais que 40% do valor total na forma de questões
+objetivas, devendo 60% ou mais do valor total de cada prova consistir em questões dissertativas, envolvendo resolução de
+problemas. O cálculo da média do semestre (M) será dado pela relação:
+
+
+M = 0,9*[(P1+P2+P3+P4)/4] + 0,1*RL
+
+
+onde P1, P2, P3 e P4 são as notas obtidas nas provas correspondentes e RL é a média aritmética das 5 melhores notas dos
+relatórios de laboratório.
+No caso excepcional em que não seja possível realizar presencialmente alguma aula prática de laboratório, esta poderá ser
+substituída pela realização de uma tarefa autônoma pelos alunos que verse sobre a análise e interpretação de dados experimentais.
+Neste caso excepcional, RL passará a ser a média aritmética simples de todas as atividades feitas presencialmente com as
+autônomas.
+As provas P1, P2, P3 e P4, escritas, serão realizadas ao término das áreas correspondentes:
+P1 -> abrange os conteúdos de: Grandezas e unidades, Vetores, Movimento em uma e duas dimensões, Leis de Newton, Gravitação
+universal, Atrito, Dinâmica do movimento circular uniforme.
+P2 -> abrange os conteúdos de: Trabalho e energia, Potência, Energia potencial e conservação de energia, Velocidade de escape,
+Centro de massa, Momento linear de uma partícula e de um sistema de partículas, Conservação do momento linear, Colisões.
+P3 -> abrange os conteúdos de: Cinemática de rotação, Torque sobre uma partícula, Energia cinética de rotação, Momento de
+
+
+
+                                                                     Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+inércia, Dinâmica de rotação de um corpo rígido, Movimento de rolamento.
+P4 -> abrange os conteúdos de: Momento angular de uma partícula, Conservação do momento angular, Equilíbrio dos corpos
+rígidos, Oscilações.
+As verificações deverão enfocar o domínio do conteúdo das aulas, incluindo os laboratórios, e a capacidade de resolver problemas e
+questões.
+
+
+Para aprovação, será exigida nota mínima 3,0 (três) em cada uma das provas P1, P2, P3 e P4, assim como média do semestre M
+igual ou superior a 6,0 (seis).
+
+
+Os alunos que não tiverem 75% de frequência serão reprovados com conceito FF, exceto em caso de vigência de portarias
+específicas vetando temporariamente o conceito FF em casos excepcionais. Aos demais alunos serão atribuídos conceitos de
+acordo com a média do semestre M:
+
+
+A: M &#8805; 9,0
+B: 7,5 &#8804; M < 9,0
+C: 6,0 &#8804; M < 7,5
+D: M<6,0
+
+Atividades de Recuperação Previstas
+Vale a mesma regra sobre a composição da avaliação mencionada no item anterior (pelo menos 60% do valor total da avaliação
+composta de questões dissertativas, na forma de problemas). As notas obtidas em atividades de recuperação automaticamente
+substituem as notas anteriores.
+
+
+Alunos que tiverem duas ou mais notas menores do que 3,0 (três) entre P1, P2, P3 e P4 só terão direito a fazer um exame final, no
+qual será cobrada toda a matéria vista durante o semestre. A média final atualizada de um aluno que prestar o exame final será
+calculada por MF = 0,4*(M) + 0,6*(EX), onde M é a média obtida durante o semestre (composta de P1, P2, P3, P4 e RL, conforme
+explicado no item critérios de avaliação), e EX é a nota obtida no exame. Alunos que prestarem o exame final e obtiverem média
+final atualizada MF igual ou superior a 6,0 (seis) serão considerados aprovados.
+
+
+Alunos que não tiverem nenhuma nota menor do que 3,0 (três) entre P1, P2, P3 e P4, assim como alunos que tiverem apenas uma
+nota menor do que 3,0 (três) entre P1, P2, P3 e P4, terão direito a optar entre prestar o exame final descrito acima OU fazer uma
+prova de recuperação relativa à nota inferior a 3,0 (três). Caso nenhuma nota seja menor do que 3,0 (três), o aluno pode escolher
+qual recuperação irá fazer, entre as notas de P1, P2, P3 ou P4. A recuperação abarcará os conteúdos da respectiva área e
+substituirá a nota correspondente. Caso a média final atualizada seja igual ou superior a 6,0 (seis), e as notas mínimas mencionadas
+acima sejam obedecidas, o aluno será considerado aprovado.
+Não há recuperação para as atividades de laboratório, visto a sua natureza prática e as limitações para montagens de diferentes
+experimentos. Além disso, tal componente corresponde a apenas 10% da média do aluno no semestre.
+
+
+As atividades de recuperação serão realizadas na décima nona semana do semestre, após o término do conteúdo programático e
+das avaliações a serem feitas durante o semestre.
+
+Bibliografia
+Básica Essencial
+Halliday, David; Resnick, Robert; Walker, Jearl. Fundamentos de Fí-sica. Rio de Janeiro: GEN-LTC, 2016. ISBN 978-8521630371 (v1);
+978-8521630364 (v2). Disponível em: https://app.minhabiblioteca.com.br/reader/books/9788521638551/
+Tipler, Paul A.; Mosca, Gene. Física :para cientistas e engenheiros. Rio de Janeiro: LTC, 2009. ISBN 9788521617105 (v.1); 9788521617112 (v.2);.
+Disponível em: https://app.minhabiblioteca.com.br/reader/books/978-85-216-2618-3/
+Young, Hugh D; Freedman, Roger A. Fí-sica, Sears. São Paulo: Pearson Education do Brasil, 2016. ISBN 978-8543005683 (v1); 978-8543005737
+(v2).
+
+Básica
+Alaor Chaves e J. F. Sampaio. Física Básica - Mecânica. Rio de Janeiro: Livros Técnicos e Científicos, 2007. ISBN 978-85-216-1549-1. Disponível
+
+
+
+
+                                                                        Página 3
+                                                    PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+em: https://app.minhabiblioteca.com.br/reader/books/978-85-216-1932-1/
+Nussenzveig, Hersh Moyses. Curso de física básica. Sao Paulo: Ed. Edgar Blucher, c2002. ISBN 8521202989 (v.1); 8521202997 (v.2);. Disponível
+em: https://app.minhabiblioteca.com.br/reader/books/9788521207467/
+Resnick, Robert; Halliday, David; Krane, Kenneth S.. Física. Rio de Janeiro: LTC Editora, c2003. ISBN 8521613520 (V.1); 9788521613527 (V.1);
+8521613687 (V.2); 9788521613688 (V.2); 9788521614067.
+Serway, Raymond A.; Jewett, Jr., John W.. Princípios de física :. São Paulo: Pioneira Thomson Learning, [2004]. ISBN 8522103828 (v.1);
+9788522103829 (v.1); 8522104131 (v.2); 9788522104130 (v.2);. Disponível em: https://app.minhabiblioteca.com.br/reader/books/9788522127078/
+
+Complementar
+Wagner Corradi, Rodrigo Tárcia e colaboradores. Fundamentos de Física I. Belo Horizonte: UFMG, 2010.
+
+
+
+Outras Referências
+                                            Não existem outras referências para este plano de ensino.
+
+Observações
+A disciplina FIS01181 poderá contar com a participação, como estagiários docentes, de alunos de cursos de Mestrado ou de
+Doutorado, devidamente matriculados na disciplina de Estágio Docência de Programas de Pós-Graduação da UFRGS.
+
+
+A disciplina também poderá contar com a atuação de pós-doutorandos lecionando a matéria, desde que devidamente registrados em
+Programas de Pós-Graduação da UFRGS, com planos de trabalho que prevejam atuação na graduação.
+
+
+
+
+                                                                         Página 4
+

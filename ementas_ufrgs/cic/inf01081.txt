@@ -1,0 +1,235 @@
+                                                    PLANO DE ENSINO
+                                                                                                              Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Informática
+                                               Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: MANUEL MENEZES DE OLIVEIRA NETO
+Disciplina: APRENDIZADO PROFUNDO PARA COMPUTAÇÃO VISUAL
+Sigla: INF01081             Créditos: 4
+
+Carga Horária
+CH Teórica: 50h      CH Prática: 10h      Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Redes Neurais Convolucionais. Classificação de Imagens. Detecção de Objetos. Segmentação de Imagens. Modelos Generativos.
+Questões Éticas e Sociais envolvendo Imagens e Modelos Generativos. Tópicos Especiais em Aprendizado Profundo. Questões
+Éticas e Sociais Envolvendo Imagens e Vídeos.
+
+Currículos
+                                        Currículos                                           Etapa Aconselhada             Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                         Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                     Eletiva
+
+Objetivos
+A disciplina visa desenvolver as seguinte habilidades específicas:
+
+
+- Desenvolver, implementar e avaliar aplicações que manipulam a representação digital de dados visuais, como imagens e vídeos,
+utilizando com plena capacidade os princípios matemáticos associados;
+- Compreender os diversos paradigmas, classes de métodos e métodos de aprendizado de máquina;
+- Obter modelos pré-treinados e ajustá-los para aplicação em problemas de predição;
+- Compreender a relação entre representações digitais e os fenômenos visuais que ali estão codificados;
+- Capacitar os alunos a desenvolver, implementar e avaliar soluções capazes de extrair informações relevantes a partir de dados
+visuais.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: 1. Introdução
+Conteúdo: Apresentação da disciplina; visão geral de aprendizado de máquina e Deep Learning; Redes Neurais e funções de ativação;
+              treinamento de redes redes neurais.
+  Semana: 3 a 4
+    Título: 2. Redes Neurais Convolucionais (CNNs)
+Conteúdo: Camadas Convolucionais; Overfitting e Generalização.
+  Semana: 5 a 6
+    Título: 3. Classificação de Imagens
+Conteúdo: Classificação de imagens; explorando transfer learning e fine-tuning.
+  Semana: 7 a 8
+    Título: 4. Segmentação de Imagens e Detecção de Objetos
+Conteúdo: Segmentação de Imagens; Detecção de Objetos.
+  Semana: 9 a 10
+    Título: 5. Interpretabilidade de CNNs e Transferência de Estilo
+Conteúdo: Interpretabilidade de CNNs; Grad-CAM, Deep Dream, Transferência de Estilos.
+
+
+
+
+                                                                      Página 1
+                                                   PLANO DE ENSINO
+                                                                                                             Data de Emissão: 15/08/2026
+
+
+
+  Semana: 11 a 13
+    Título: 6. IA Generativa e Tópicos Recentes
+Conteúdo: Generative Adversarial Networks (GANs), Variational AutoEncoders (VAEs), Modelos de Difusão; Tópicos recentes na área.
+  Semana: 14 a 15
+    Título: 7. Apresentação de Trabalhos e Prova Final
+Conteúdo: Apresentação de projetos finais e prova final.
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação de conceitos e técnicas. Algumas das
+aulas serão realizadas em laboratórios para a implementação/visualização dos conceitos vistos em aula.
+
+
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
+discussão e acompanhamento geral da disciplina.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse, conforme Resolução 11/2013 do CEPE/UFRGS, Artigos 36 a 38. O professor poderá se valer de aulas
+presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para disciplinas presenciais e empregando
+ferramentas para atividades remotas), assim como do apoio de Professores Assistentes (Alunos de Pós-Graduação) em Atividades
+Didáticas. O conteúdo da disciplina é abordado tanto em aulas expositivas como em trabalhos práticos. Os assuntos são
+complementados e reforçados através da realização de exercícios em aula ou extra-classe e do desenvolvimento de programas.
+
+Experiências de Aprendizagem
+Atividades a serem a serem realizadas pelos(as) estudantes:
+
+
+- Participar de aulas expositivas dialogadas
+- Realizar trabalhos de programação em laboratório
+- Desenvolver um trabalho final de implementação
+- Realizar leitura de material disponibilizado
+- Assistir vídeos ou vídeoaulas disponibilizadas
+
+
+Durante a disciplina serão realizados:
+
+
+1) Trabalhos Práticos (TPs) realizados ao longo do semestre. Nestes trabalhos, os estudantes serão solicitados a executar,
+modificar, complementar, estender e desenvolver códigos visando a fixação dos conhecimentos estudados;
+
+
+2) Um Projeto Final (PF) realizado ao final da disciplina. O projeto prevê uma implementação, escrita de relatório e apresentação dos
+resultados para a turma;
+
+
+3) Duas provas, P1, na metade do semestre, e P2, prova final.
+
+
+Sobre o uso de ferramentas de Inteligência Artificial: Os estudantes devem seguir as regras definidas pelo professor responsável
+sobre o uso de ferramentas de Inteligência Artificial (IA). As diretrizes relativas ao uso de IA podem variar entre os diferentes
+trabalhos e atividades práticas ou teóricas que compõem as experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+Os alunos serão avaliados com base no desempenho nas provas, trabalhos práticos e no projeto final, bem como por sua
+participação em aula. As provas, trabalhos e projeto final serão avaliados com nota entre 0.0 e 10.0. Conforme regulamento da
+Universidade, a frequência às aulas é obrigatória. Ao longo do semestre, serão realizados:
+
+
+
+
+                                                                    Página 2
+                                                   PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+i. Duas provas, P1, na metade do semestre, e P2, prova final. P1 corresponderá a 20% da nota final; P2, a 20% da nota final;
+ii. Trabalhos Práticos (TP) correspondendo a 30% da nota final;
+iii. Um projeto final (PF) da disciplina, a ser realizado em grupos de até dois estudantes, representando 25% da nota final.
+
+
+Os Trabalhos Praticos (TP), realizados ao longo do semestre, e o Projeto Final (PF), realizado ao final da disciplina, correspondem a
+atividades autônomas.
+
+
+Além disso, será atribuída nota pela participação (NP) em sala de aula, o que representará 5% da nota final. A realização dos
+trabalhos é obrigatória, mesmo que o aluno obtenha bons resultados nas provas.
+
+
+A média geral (MG) será obtida por meio da seguinte fórmula:
+
+
+MG = 0,20 * P1+ 0.20* P2 + 0.30*TP + 0.25* PF + 0.05* NP
+
+
+A conversão da MG para conceitos é feita por meio da seguinte tabela:
+
+
+9,0 <= MG <= 10,0: conceito A (aprovado).
+7,5 <= MG < 9,0: conceito B (aprovado).
+6,0 <= MG < 7,5: conceito C (aprovado).
+0,0 < MG < 6,0: sem conceito (recuperação).
+
+
+Observações :
+
+
+Somente serão calculadas as médias gerais dos(as) estudantes que tiverem, ao longo do semestre, obtido um índice de freqência às
+aulas igual ou superior a 75% das aulas previstas. Aos que não satisfizerem este requisito, será atribuído o conceito FF.
+
+Atividades de Recuperação Previstas
+Alunos com média geral MG < 6,0 poderão realizar atividade de recuperação, que consistirá de uma prova (PR) sobre todo o
+conteúdo do semestre. A nota final (NF) será computada como NF = 0,6*PR + 0,4*MG. Aqueles que obtiverem NF igual ou superior
+a 6,0 receberão conceito "C"; os demais receberão conceito "D".
+
+Bibliografia
+Básica Essencial
+Goodfellow, Ian; Bengio, Yoshua; Courville, Aaron. Deep Learning. Cambridge, MA: The MIT Press, 2016. ISBN 978-0262035613. Disponível em:
+https://www.deeplearningbook.org/ (Versão eletrônica disponível gratuitamente neste link)
+
+Básica
+Chollet, François. Deep Learning with Python. Shelter Island, NY: Manning, 2021. ISBN 978-1617296864.
+
+Complementar
+Bishop, Christopher. Pattern Recognition and Machine Learning. USA: Springer, 2016. ISBN 978-1493938438.
+Ekman, Magnus. Learning Deep Learning: Theory and Practice of Neural Networks, Computer Vision, Natural Language Processing, and
+Transformers Using TensorFlow. Boston, MA: Addison-Wesley Professional, 2021. ISBN 978-0137470358.
+Glassner, Andrew. Deep Learning: A Visual Approach. USA: No Starch Press, 2021. ISBN 978-1718500723.
+
+
+
+Outras Referências
+                          Título                                                                    Texto
+Artigos de Periódicos e Conferências                                    Artigos de Periódicos e Conferências recentes informados
+                                                                        pelo professor.
+Slides e Notas de Aulas                                                 Slides, notas de aulas e videos disponibilizados pelo
+                                                                        professor.
+
+
+
+
+                                                                       Página 3
+                                                PLANO DE ENSINO
+                                                                                                           Data de Emissão: 15/08/2026
+
+
+
+Observações
+Informações sobre Plágio e IA
+
+
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade
+
+
+Informações sobre Direitos Autorais e de Imagem:
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja a licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.?
+
+
+
+
+                                                                   Página 4
+

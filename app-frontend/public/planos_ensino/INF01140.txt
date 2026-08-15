@@ -1,0 +1,183 @@
+                                                    PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: DANTE AUGUSTO COUTO BARONE
+Disciplina: COMPUTADOR E SOCIEDADE
+Sigla: INF01140              Créditos: 4
+
+Carga Horária
+CH Teórica: 20h      CH Prática: 40h       Total: 60h
+CH Coletiva: 20h      CH Autônoma: 20h         CH Individual: 20h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+A disciplina abrange: as repercussões das novas tecnologias na sociedade, considerando-se os aspectos sociais, econômicos,
+políticos e educacionais; as principais formas de automação (industrial, comercial, bancária e de escritórios); aplicações da
+Informática nas diversas áreas do conhecimento; Ergonomia e Doenças Profissionais; Política e Indústria Nacional de Informática.
+
+Currículos
+                                         Currículos                                                Etapa Aconselhada                Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                                 Eletiva
+
+Objetivos
+OBJETIVO GERAL
+
+
+Desenvolver aptidões para avaliar os impactos da utilização das tecnologias da computação sobre a sociedade e seus cidadãos,
+bem como sobre o papel, e a ética, do profissional de computação no desenvolvimento socialmente justo, ecologicamente
+responsável e economicamente viável.
+
+Conteúdo Programático
+  Semana: 1 a 4
+    Título: Semana 1-4 1. Sociedade e o Desenvolvimento Tecnológico: Estudo do que são sociedades, e como o desenvolvimento tecnológico as modifica
+Conteúdo: 1.1 Introdução ao pensamento sociológico, ao conceito de ideologia e análise crítica.
+              1.2 Análise de casos sobre o desenvolvimento tecnológico, como o desenvolvimento dos motores no século XIX, e dos sistemas de
+              telecomunicação.
+              1.3 Visão holística sobre desenvolvimento industrial, incluindo avanços para qualidade de vida e riscos envolvidos.
+              1.4 A relação retroalimentada das tecnologias com os comportamentos coletivos.
+              1.5 A Sociedade em Rede: Breve análise do desenvolvimento da sociedade sob a luz dos avanços na economia e discussão sobre
+              quais tecnologias mais impactaram /impactam a sociedade até hoje.
+  Semana: 5 a 8
+    Título: Semana 5-8 2. O século XXI: A Ascensão da sociedade em rede
+Conteúdo: 2.1 Breve histórico da computação, com ênfase aos séculos XX e XXI, traçando relações da história com o conceito de Sociedade
+              em Rede.
+              2.2 Análise das tecnologias que propiciaram as bases da sociedade em rede: Web 1.0, Web 2.0, estouro da bolha de Internet e uso
+              massivo de Smartphones
+              2.3 Análise do ambiente empresarial de alta competitividade e suas inspirações na contra-cultura americana, o Vale do Silício, assim
+              como das principais empresas que hoje existem na informática.
+              2.4 Estudos de casos emblemáticos de impactos da tecnologia em níveis individuais, sociais, econômicos, estatais e geopolíticos: a
+              monetização da informação na internet, a ascensão da economia gig, das redes sociais e da figura intermediadora do ?algoritmo?, o
+              impacto do Stuxnet e cyber-armas e a Muralha de Ferro da Internet.
+  Semana: 9 a 12
+
+
+
+
+                                                                         Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+    Título: Semana 9-12 3. Ética da informática
+Conteúdo: 3.1 Estudo de alguns códigos de ética trazidos no desenvolvimento da computação, do manifesto cripto-anarquista ao código de ética
+              da IEEE.
+              3.2 Análise de diferentes casos relacionados à ética da computação, a partir de um olhar da tecnologia que potencializa rupturas,
+              incluindo, mas não limitado à: Blockchains, Robôs Autônomos, Algoritmos Enviesados, Privacidade e Vigilância, Representatividade
+              na informática, Software (e Hardware) como serviço,
+              3.3 Breves relações de outros movimentos de desenvolvimento tecnológico, como a tecnologia aberta, o gambiarrismo e o hacking.
+  Semana: 12 a 15
+    Título: Semana 12-15 4. De hoje para o futuro
+Conteúdo: 4.1 Reflexões sobre o impacto das tecnologias no mundo do trabalho, envolvendo questões como o modelo de startups e o
+              empreendedorismo, home office, fuga de cérebros e o capitalismo da informação.
+              4.2 Marcos legais da informática no Brasil, e uma comparação com o resto do mundo
+              4.3 Estudo de casos de pesquisas de ponta que podem, ou não, serem os próximos breakthroughs da informática.
+              4.4 Modelo de desenvolvimento tecnológico atual, dividido entre pesquisa acadêmica, desenvolvimento livre e a licença de uso de
+              grandes plataformas, utilizando conceitos de conhecimento livre, patentes, copyright e copyleft.
+
+Metodologia
+A disciplina será desenvolvida através de aulas, seminários e visitas ou palestras de convidados. As aulas são compostas de dois
+momentos, um para apresentações e um segundo para discussões abertas de diferentes materiais, sempre referentes a leituras
+sugeridas e/ou materiais disponibilizados .Os palestrantes poderão ser tanto nacionais como estrangeiros. Caso os palestrantes não
+se encontrem em Porto Alegre, suas palestras serão viabilizadas através de EAD.
+
+
+Simultaneamente, cada aluno irá desenvolver um trabalho próprio, uma projeção de impacto de uma tecnologia sobre a sociedade.
+Isso será feito em três etapas, que contarão como o método de avaliação da disciplina.
+
+
+Na primeira etapa, o aluno deverá selecionar um caso para estudo e apresentá-lo para a turma durante um seminário rápido (modelo
+Pecha-Kucha, com apresentações de 5 minutos e três minutos para perguntas). A segunda etapa consiste na elaboração de um
+estudo de potencialidades da tecnologia, também a ser apresentada para a turma. A etapa final é a elaboração de um ensaio, livre,
+produzindo monografia, que cruze o estudo do aluno com outras análises, sejam estas análises de impacto, teorias sociológicas,
+documentários, ou mesmo trabalhos de ficção.
+
+Experiências de Aprendizagem
+Discussão e Argumentação sobre temas abordados na disciplina :Sociedade e o Desenvolvimento Tecnológico, O Século XXI, Ética
+da Informática e De Hoje para o Futuro
+Elaboração de seminários e monografia sobre temas abordados na disciplina.
+Relatos de casos , de estudos de potencialidades tecnológicas e escrita de monografia
+
+Critérios de avaliação
+A Avaliação Final será feita por média aritmética das notas totais recebidas pelos alunos, divididas em duas partes. A primeira é
+relativa à apresentação e a entrega das análises supracitadas, com cada entrega valendo dois pontos, para um total de 6.
+
+
+Os outros quatro pontos que o aluno pode receber serão dados pela média aritmética das notas recebidas por avaliações por pares
+das apresentações e a avaliação dada pelo professor ao ensaio entregue.
+
+
+MF = E1 + E2 + E3 + (MAP1 + MAP2 + NEn)*0,4
+
+
+&#9679;MF é a média final
+&#9679;E1, E2 e E3 referem-se às entregas dos trabalhos, cada uma de valor 2
+&#9679;MAP1 e MAP2 referem-se às médias das notas das apresentações pelos pares
+&#9679;NEn é a nota dada pelo professor ao ensaio entregue
+
+
+
+
+                                                                         Página 2
+                                                      PLANO DE ENSINO
+                                                                                                                       Data de Emissão: 15/08/2026
+
+
+
+O conceito final obedece aos seguintes critérios:
+
+
+- A [9,1; 10,0];
+ B [7,5; 9,0];
+ C[6,0; 7,4];
+ D[0,0; 5,9]
+ FF (<75% de frequência);
+
+
+- O conceito final para as médias não cobertas acima será definido segundo critérios de participação nas aulas teóricas e práticas,
+frequência, e avaliações individuais.
+
+Atividades de Recuperação Previstas
+O aluno com nota menor que 6 pode entregar uma resenha de livro ou artigo, abordando os temas vistos em aula. Esta entrega pode
+adicionar 4 pontos a serem adicionados à sua nota para o critério de aprovação.
+
+Bibliografia
+Básica Essencial
+CASTELLS, Michell. The Rise of the Network Society. 2ª Edição. Malden: Wiley-Blackwell, 2010.
+Lèvy, Pierre. As Tecnologias da Inteligência. São Paulo: 34, 1997.
+
+Básica
+ALDOUS HUXLEY. O ADMIRAVEL MUNDO NOVO. EDITORA GLOBO, ISBN 250-3347-2. Disponível em:
+http://pt.wikipedia.org/wiki/Admirável_Mundo_Novo
+BARONE, Dante.. Sociedades Artificiais. Porto Alegre, 2003.
+BARONE, Dante; BOESING, Ivan. Inteligência Artificial: Diálogos entre Mentes e Máquinas.. Porto Alegre: Evangraf, 2015.
+HARARI, Yuval.. Sapiens, uma breve história da humanidade. Rio de Janeiro: L, 2015.
+Institute for Electrical and Electronics Engineers. -IEEE Ethically Aligned Design Version 2. New York: IEEE, 2017. Disponível em:
+<https://standards.ieee.org/content/dam/ieee-standards/standards/web/documents/other/ead_v2.pdf>,
+NEIL, Cathy. Weapons of Math Destruction. Nova York: Crown, 2016.
+THOMAS FRIEDMAN. O MUNDO É PLANO- UMA BREVE HISTORIA DO SECULO XXI. OBJETIVA LTDA, ISBN ISBN 0-374-29288-4. Disponível
+em: http://pt.wikipedia.org/wiki/O_Mundo_é_Plano
+
+Complementar
+BAUMAN, Zygmunt. Mundo Líquido. Rio de Janeiro: Zahar, 2001.
+
+
+
+Outras Referências
+                                              Não existem outras referências para este plano de ensino.
+
+Observações
+                                                           Nenhuma observação incluída.
+
+
+
+
+                                                                          Página 3
+

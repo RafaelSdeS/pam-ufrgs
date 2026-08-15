@@ -1,0 +1,158 @@
+                                                     PLANO DE ENSINO
+                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                 Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: ANDERSON ROCHA TAVARES
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLI
+Sigla: INF01080             Créditos: 4
+
+Professores Responsáveis durante 2026/2
+                       Professor                                           Início                              Fim
+ANDERSON ROCHA TAVARES                                               29/05/2026 (2026/2)                           -
+EDUARDO SIMÕES LOPES GASTAL                                          04/12/2025 (2026/1)               28/05/2026 (2026/2)
+
+Carga Horária
+CH Teórica: 40h      CH Prática: 20h      Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h           CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes, aplicações específicas, interessando a um
+grupo restrito ou tendo caráter de temporariedade, aspectos abordados superficialmente em disciplinas regulares.
+
+Currículos
+                                         Currículos                                        Etapa Aconselhada           Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                    Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                Eletiva
+
+Objetivos
+Apresentar conceitos, técnicas e aplicações de aprendizado por reforço para problemas de decisão sequencial, assim como as
+principais ferramentas para modelagem de problemas, implementação e avaliação de algoritmos.
+
+Conteúdo Programático
+  Semana: 1 a 3
+    Título: Fundamentos
+Conteúdo: Introdução à disciplina
+              Processo de Decisão de Markov
+              Métodos de programação dinâmica
+  Semana: 4 a 8
+    Título: Métodos de Aprendizado Básicos
+Conteúdo: Métodos de Monte Carlo
+              Aprendizado por diferença temporal (TD)
+              Integrando planejamento e aprendizado
+  Semana: 9 a 15
+    Título: Métodos avançados
+Conteúdo: Predição e controle com aproximação de função
+              Aprendizado por reforço profundo
+              Métodos de gradiente de política
+              Introdução ao aprendizado multiagente
+              Aplicações modernas
+
+Metodologia
+A disciplina tem um carácter teórico-prático. Além das aulas expositivas, o caráter prático das técnicas estudadas é compreendido
+por meio de exercícios e implementações de técnicas selecionadas em laboratório.
+
+
+
+                                                                     Página 1
+                                                    PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+
+Os seminários envolvem a apresentação e discussão de alguma técnica ou aplicação além das apresentadas em aula. O projeto
+final envolve a implementação, aplicação e/ou melhoria de sistema de aprendizado por reforço para um benchmark ou problema
+relevante.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse, conforme Resolução 11/2013 do CEPE/UFRGS, Artigos 36 a 38.
+
+
+Os Seminários, o Projeto final e parte das implementações e exercícios serão desenvolvidos pelos alunos em atividades autônomas.
+
+Experiências de Aprendizagem
+Os procedimentos didáticos a serem adotados nestas aulas são os seguintes:
+- Aulas expositivas teóricas ou em laboratório sobre os conteúdos;
+- Exercícios realizados pelos alunos individualmente ou em pequenos grupos;
+- Provas: avaliação teórica dos fundamentos e conceitos da disciplina;
+- Seminários: apresentação de temas relevantes e participação nos seminários dos colegas;
+- Projeto final: aplicação e/ou melhoria de sistema de aprendizado profundo para um benchmark ou problema relevante;
+
+Critérios de avaliação
+O desempenho do aluno será avaliado da seguinte forma:
+- Provas teóricas (P1, P2 e P3): avaliação teórica dos fundamentos e conceitos da disciplina;
+- Laboratórios e Exercicios (LE): exercícios; implementações de ambientes, algoritmos e avaliação de modelos;
+- Seminários (S): apresentação de temas relevantes e participação nos seminários dos colegas.
+- Projeto final (PF): implementação, aplicação e/ou melhoria de sistema de aprendizado por reforço para um benchmark ou problema
+relevante.
+
+
+Composição da nota final (NF):
+NF = (P1*0,1) + (P2*0,2) + (P3*0,3)+ (LE*0,15) + (PF*0,25) + (S*0,1)
+
+
+Será aprovado o aluno que obtiver nota final (NF) acima de 6. Os conceitos serão atribuídos da seguinte forma:
+
+
+Conceito A: NF >= 9,0
+Conceito B: NF >=7,5 e < 9,0
+Conceito C: NF >= 6,0 e < 7,5
+Conceito D: NF < 6,0
+Conceito FF: caso o aluno não obtenha frequência mínima de 75% (sem direito a recuperação)
+
+Atividades de Recuperação Previstas
+Será oferecida uma oportunidade de recuperação ao aluno que não alcançar média mínima 6.0 e que atender à condição de ter a
+frequência mínima exigida de 75%.
+
+
+A prova de recuperação versará sobre todo o conteúdo da disciplina e será avaliada com um grau de 0 (zero) a 10 (dez) gerando a
+nota de recuperação (NR). A avaliação final, após a recuperação, será a seguinte:
+
+
+Se NR < 6.0: reprovado com conceito D
+Se NR &#8805; 6.0: aprovado com conceito C
+
+Bibliografia
+Básica Essencial
+Sutton, Richart; Barto, Andrew. Reinforcement learning: An introduction. Cambridge: MIT Press, 2018. ISBN 0262039249. Disponível em:
+
+
+
+
+                                                                       Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+http://incompleteideas.net/book/the-book-2nd.html
+
+Básica
+RUSSEL, Stuart; NORVIG, Peter. Artificial Intelligence: A Modern Approach. London: Pearson, 2020. ISBN 978-0134610993.
+
+Complementar
+PRINCE, Simon JD. Understanding deep learning. Cambridge: MIT Press, 2023. ISBN 9780262048644. Disponível em: http://udlbook.com
+
+
+
+Outras Referências
+                                            Não existem outras referências para este plano de ensino.
+
+Observações
+                                                         Nenhuma observação incluída.
+
+
+
+
+                                                                        Página 3
+

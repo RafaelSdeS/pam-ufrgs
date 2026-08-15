@@ -1,0 +1,216 @@
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+                                                         Instituto de Informática
+                                               Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: Arthur Francisco Lorenzon
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXVIII
+Sigla: INF01077             Créditos: 4
+
+Carga Horária
+CH Teórica: 15h     CH Prática: 45h       Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes, aplicações específicas, interessando a um
+grupo restrito ou tendo caráter de temporariedade, aspectos abordados superficialmente em disciplinas regulares.
+
+Currículos
+                                        Currículos                                                Etapa Aconselhada               Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                                Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                            Eletiva
+
+Objetivos
+A disciplina visa desenvolver as seguintes habilidades específicas: (i) Capacitar o estudante a compreender e aplicar os princípios
+fundamentais da programação paralela e distribuída, dominando modelos de concorrência, sincronização e comunicação entre
+processos e threads. (ii) Projetar, implementar e avaliar aplicações paralelas em arquiteturas multicore, vetoriais e heterogêneas
+(CPU-GPU), além de compreender mecanismos de distribuição de dados e tarefas em ambientes de memória distribuída. (iii)
+Competências para analisar desempenho, identificar gargalos, aplicar técnicas de escalabilidade e utilizar ferramentas e bibliotecas
+modernas para construir soluções eficientes e corretas em contextos de alto desempenho computacional.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução
+Conteúdo: Motivação para paralelismo (limites de computação sequencial, Lei de Amdahl e Lei de Gustafsson). Conceitos básicos de
+             concorrência e paralelismo. Visão geral de arquiteturas paralelas: multicore, manycore, GPUs e clusters.
+  Semana: 2
+    Título: Conceitos de concorrência
+Conteúdo: Processos e threads (modelos de execução, estados e operações); Condições de corrida, exclusão mútua, deadlock, starvation;
+             Mecanismos de sincronização (mutex, semáforos, barreiras, spinlocks)
+  Semana: 3 a 4
+    Título: Paralelismo em Arquiteturas Multicore
+Conteúdo: Fundamentos de OpenMP: modelo de programação paralelo baseado em diretivas; regiões paralelas, fork-join, criação e
+             gerenciamento de threads; escopos de variáveis e boas práticas. Worksharing (parallel for, sections, tasks e task dependencies);
+             Sincronização em OpenMP (critical, atomic, barrier, ordered).
+  Semana: 5
+    Título: Programação Paralela Vetorial e SIMD
+Conteúdo: Arquiteturas Vetoriais e SIMD: modelo de execução SIMD, vetorização automática e introdução às intrínsecas SIMD (e.g., SSE, AVX,
+             NEON). Vetorização de laços e interação entre paralelismo multinúcleo e vetorial.
+  Semana: 6
+    Título: Arquitetura e Organização de GPUs
+Conteúdo: Diferenças fundamentais entre CPUs e GPUs; Organização interna; Noções de hardware de vendors; Modelos de programação
+
+
+
+
+                                                                        Página 1
+                                                    PLANO DE ENSINO
+                                                                                                              Data de Emissão: 15/08/2026
+
+
+
+              suportados pelo hardware;
+  Semana: 7
+    Título: Paradigmas de Programação em GPUs
+Conteúdo: Paralelismo de dados; Movimentação de dados entre CPU e GPU; Modelos conceituais de deploy de kernels na GPU (e.g., grids,
+              grupos de threads, vetorização).
+  Semana: 8 a 9
+    Título: Programação em GPUs com APIs de baixo nível
+Conteúdo: Modelos SPMD em CUDA/HIP/SYCL; estrutura básica de um kernel; gerenciamento de dados; tipos de memória e controle de
+              threads; otimizações clássicas; streams.
+  Semana: 10
+    Título: Programação em GPUs com Diretivas de alto nível
+Conteúdo: Motivação para o uso de diretivas; modelo host-device com OpenMP/OpenACC; construção de loops paralelos; gerenciamento de
+              dados. Visão geral de Numba/CUDA; execução de kernels a partir de Python; UFuncs e gerenciamento de memória; implementação
+              de kernels com Numba.
+  Semana: 11 a 13
+    Título: Programação Paralela em Memória Distribuída
+Conteúdo: Conceitos e comunicação ponto a ponto; comunicação coletiva e distribuição de dados; estratégias de decomposição de domínio e
+              balanceamento de carga.
+  Semana: 14
+    Título: Programação Paralela em Memória Distribuída Híbrida
+Conteúdo: Modelos híbridos de programação paralela MPI +X, como MPI+CUDA, MPI+OpenMP, etc; estratégias de balanceamento de carga
+              dinâmicos.
+  Semana: 15
+    Título: Avaliação Final
+Conteúdo: Apresentação de projeto prático desenvolvido durante a disciplina.
+
+Metodologia
+A disciplina será conduzida por meio de aulas teóricas e práticas integradas, combinando exposição dialogada, análise de exemplos
+e estudos de caso com atividades de programação em laboratório. As aulas teóricas utilizarão recursos audiovisuais, enquanto as
+práticas envolverão exercícios dirigidos de implementação com OpenMP, MPI, diretivas de offloading e ferramentas para GPU, além
+de experimentos de desempenho e uso de ferramentas de tracing e profiling. O Moodle será empregado como ambiente de apoio
+para a disponibilização de materiais, a submissão de atividades e a participação em fóruns de discussão. Ao longo do semestre, os
+estudantes desenvolvem atividades individuais e em grupo, explorando diferentes arquiteturas e estratégias paralelas, de modo a
+consolidar a autonomia técnica, a análise crítica e a capacidade de aplicar conceitos de programação paralela a problemas reais.
+A disciplina é apresentada em aulas teórico-práticas, nas quais se combinam a apresentação de conceitos e técnicas com o
+desenvolvimento de exercícios e discussões. As 45 horas de carga prática serão realizadas em laboratórios de ensino para a
+implementação/visualização dos conceitos vistos em aula.
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse a serem avaliados.
+O professor poderá se valer de aulas presenciais e atividades a distância (desde que nos limites previstos pela UFRGS para as
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Ao longo da disciplina, os estudantes vivenciaram experiências de aprendizagem que combinam exploração prática, investigação
+orientada e reflexão crítica sobre o desenvolvimento de aplicações paralelas, incluindo:
+Exploração prática de conceitos de programação paralela.
+Experimentação de diferentes modelos de paralelismo e estratégias de otimização.
+Análise de desempenho e interpretação de métricas de escalabilidade.
+
+
+
+                                                                     Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+Testes de hipóteses, comparação de abordagens e depuração de código em laboratório.
+Desenvolvimento de autonomia, pensamento analítico e tomada de decisão técnica.
+
+
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor responsável.
+
+Critérios de avaliação
+A avaliação da disciplina será baseada no desempenho do estudante em atividades práticas e em um projeto final. Ao longo do
+semestre, serão propostos trabalhos práticos que visam consolidar os conteúdos apresentados em aula, promover a experimentação
+em diferentes modelos de paralelismo e desenvolver a capacidade de análise de desempenho e correção de programas paralelos.
+Esses trabalhos serão avaliados quanto à implementação correta, ao uso adequado das técnicas de paralelismo, à clareza do
+código, à experimentação conduzida e à interpretação dos resultados obtidos. Complementarmente, os alunos realizarão um projeto
+final, individual ou em dupla, no qual deverão aplicar, de forma integrada, os conceitos e ferramentas estudados para resolver um
+problema prático em programação paralela. O projeto será avaliado considerando critérios como complexidade da solução proposta,
+justificativa das escolhas técnicas, qualidade dos experimentos, análise crítica dos resultados e apresentação final do trabalho. A
+nota final refletirá tanto o domínio conceitual quanto a capacidade do estudante de aplicar os conhecimentos adquiridos em
+situações reais.
+A nota final será composta pela soma das notas obtidas nos trabalhos desenvolvidos ao longo do semestre (40% da nota final) e do
+projeto final (60% da nota final). A nota será convertida em conceito através da tabela abaixo.
+
+
+Nota Conceito
+>= 9,0 A
+>= 7,5 e < 9,0 B
+>= 6,0 e < 7,5 C
+< 6,0 D
+
+Atividades de Recuperação Previstas
+Ao final do semestre, será oferecida uma atividade de recuperação aos estudantes que não atingirem o desempenho mínimo exigido
+para aprovação na disciplina. Essas atividades poderão incluir a realização de um trabalho prático adicional, exercícios específicos
+de reforço ou uma avaliação suplementar que aborde os principais conteúdos abordados ao longo do curso.
+A nota mínima para a aprovação na disciplina é 6,0. Portanto, após a recuperação, o aluno estará aprovado se a nota for superior ou
+igual a 6,0.
+
+Bibliografia
+Básica Essencial
+David Patterson E jOHN hENNESSY. Arquitetura de Computadores: Uma Abordagem Quantitativa. USA: Elsevier, 2013. ISBN 978-8535261226.
+Disponível em: https://www.amazon.com.br/Arquitetura-Computadores-Uma-Abordagem-Quantitativa/dp/8535261222
+Ian Foster. Designing and building parallel programs: concepts and tools for parallel software engineering. USA: Addison-Wesley, 1995.
+Pavan Balaji. Programming Models for Parallel Computing. USA: The MIT Press, 2015. ISBN 9780262528818. Disponível em:
+https://mitpress.mit.edu/9780262528818/programming-models-for-parallel-computing/
+
+Básica
+Abraham Silberschatz, Peter Galvin, Greg Gagne. Operating System Concepts. USA: John Wiley, 2008. ISBN 978-0470128725. Disponível em:
+https://www.amazon.com.br/Operating-System-Concepts-Abraham-Silberschatz/dp/0470128720
+Andrew Tanenbaum, Herbert Bos. Modern Operating Systems. USA: Pearson, 2014. ISBN 978-0133591620. Disponível em:
+https://www.amazon.com/Modern-Operating-Systems-Andrew-Tanenbaum/dp/013359162X
+
+Complementar
+                                                          Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                 Título                                                               Texto
+CUDA Toolkit                                                               https://developer.nvidia.com/cuda-toolkit-archive
+
+
+
+                                                                         Página 3
+                                                PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+OpenMP Specification                                                https://www.openmp.org/specifications/
+OpenACC Specification                                               https://www.openacc.org/specification
+MPI Forum                                                           https://www.mpi-forum.org/docs/
+ROCm Specification                                                  https://rocm.docs.amd.com/en/latest/
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para qualquer outra
+finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a
+autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as atividades síncronas propostas mediante concordância
+prévia dos professores e colegas, sob as penas legais. É proibido disponibilizar, por quaisquer meios digitais ou físicos, os dados, a
+imagem e a voz de colegas e do professor, sem autorização específica para a finalidade pretendida. Os materiais disponibilizados no
+ambiente virtual possuem licença de uso e distribuição específica, sendo vedada a distribuição do material cuja licença não permita
+ou sem a autorização prévia dos professores para o material de sua autoria.
+
+
+
+
+                                                                   Página 4
+

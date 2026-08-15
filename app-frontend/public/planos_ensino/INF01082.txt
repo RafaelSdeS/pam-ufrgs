@@ -1,0 +1,238 @@
+                                                     PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 15/08/2026
+
+
+
+                                                        Instituto de Informática
+                                               Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: VALTER ROESLER
+Disciplina: LABORATÓRIO DE REDES DE COMPUTADORES
+Sigla: INF01082             Créditos: 2
+
+Carga Horária
+CH Teórica: 0h      CH Prática: 30h     Total: 30h
+CH Coletiva: 25h      CH Autônoma: 5h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Prática em laboratório sobre fundamentos de sistemas de comunicação e redes de computadores. Análise aprofundada dos diversos
+protocolos de redes, como Ethernet, IP, TCP, UDP e protocolos de aplicação. Experimentos com redes sem fio, roteamento,
+segurança e modulação digital.
+
+Currículos
+                                        Currículos                                              Etapa Aconselhada            Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                           Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                    6                Obrigatória
+
+Objetivos
+Proporcionar aos discentes uma vivência prática visando uma solidificação dos conceitos de Redes de Computadores e Internet. A
+disciplina visa desenvolver as seguintes habilidades específicas de forma prática:
+
+
+. Compreender a organização e o funcionamento da Internet, incluindo suas principais terminologias, componentes, protocolos,
+mecanismos e interações.
+
+
+. Compreender protocolos de rede de forma prática e criar autonomia para sua análise.
+
+
+. Compreender na prática demandas de diferentes aplicações em rede, incluindo controle de fluxo e de congestionamento,
+sub-redes, roteamento e escalabilidade na Internet.
+
+
+. Caracterizar métricas e indicadores-chave de desempenho em redes, como atraso, perda, jitter e vazão, bem como reconhecer
+fontes e causas de interferência nesses indicadores.
+
+
+. Compreender fundamentos de funcionamento de tecnologias de redes, cabeadas e sem fio, de diferentes alcances.
+
+
+. Compreender como funciona fisicamente a transmissão de um sinal, tanto em redes cabeadas como sem fio.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução / Desempenho
+Conteúdo: Visão geral da justiça de tráfego na Internet. Uso de ferramentas de geração de tráfego, como Iperf.
+  Semana: 2 a 4
+    Título: Nível de aplicação
+Conteúdo: Análise com sniffer de protocolos de aplicação como, por exemplo, DNS e HTTP
+  Semana: 5 a 7
+    Título: Nível de transporte
+
+
+
+
+                                                                       Página 1
+                                                    PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: Análise com sniffer de protocolos de transporte da Internet como, por exemplo, TCP e UDP. Uso de simulação (ex: ns2) para análise
+              de filas. P1.
+  Semana: 8 a 10
+    Título: Nível de rede
+Conteúdo: Análise com sniffer de protocolos de rede, como o IP. Uso de simulador para gerar sub-redes. Análise com sniffer de comandos como
+              o traceroute e ping. Uso de máquinas virtuais (VMs) para prática de protocolos de roteamento.
+  Semana: 11 a 12
+    Título: Nível de enlace
+Conteúdo: Análise com sniffer de protocolos da camada de enlace como, por exemplo, Ethernet e DHCP
+  Semana: 13 a 15
+    Título: Nível físico
+Conteúdo: Teoria e prática em modulação digital com apoio de simuladores (como de análise de Fourier e Matlab). P2.
+
+Metodologia
+A disciplina é apresentada em aulas práticas em laboratório utilizando diversas ferramentas para visualizar o que acontece na
+comunicação através das redes e da Internet. Será utilizado, principalmente, um sniffer de redes para analisar com detalhes os
+principais protocolos, buscando dar autonomia e independência ao aluno na análise de outros protocolos. A disciplina também prevê
+o uso de simuladores para executar algumas práticas, bem como o uso de máquinas virtuais (VMs) para outras práticas. Também
+serão realizados trabalhos e exercícios extraclasse para fixação dos conteúdos. O Professor poderá se valer de aulas presenciais ou
+remotas.
+
+
+A disciplina utilizará uma plataforma de Ambiente Virtual de Aprendizado (AVA) para distribuição de material, entrega de trabalhos,
+organização de grupos de discussão e acompanhamento geral da disciplina.
+
+
+As 30 horas previstas para atividades teóricas indicadas neste Plano de Ensino incluem 15 encontros de 100 minutos de duração (2
+períodos de 50 minutos por encontro, 1 encontro por semana, durante 15 semanas), num total de 1.500 minutos, e mais 5 horas (300
+minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes aos exercícios e trabalhos
+extraclasse a serem avaliados.
+
+Experiências de Aprendizagem
+As experiências de aprendizagem previstas para a disciplina consistem, principalmente, na participação dos discentes nas aulas
+práticas de forma ativa (atividade coletiva), realizando os desafios das atividades de laboratório.
+
+
+Além disso, os discentes devem executar práticas remotas (atividade autônoma) enquanto assistem vídeo aulas com tutoriais de
+como executar as atividades, bem como a teoria por trás dessas práticas.
+
+
+Serão solicitadas também realização de atividades de verificação de aprendizagem dos conteúdos vistos até a data das mesmas
+(Atividade Coletiva). É prevista ainda a indicação de material adicional, suplementar, para apoio ao aprendizado, como sugestões de
+leitura de material e vídeo aulas disponibilizadas na plataforma AVA utilizada na disciplina.
+
+
+Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
+As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades que compõem as experiências de
+aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+90% da Média Final corresponde a duas atividades de avaliação de aprendizagem (P1 e P2), podendo conter questões discursivas,
+analíticas ou objetivas de múltipla escolha sobre o conteúdo apresentado.
+
+
+10% da Média Final corresponde a atividades em sala de aula (AA).
+
+
+Além dessas atividades de avaliação de aprendizagem, haverá a realização de atividades autônomas a serem definidas no decorrer
+
+
+
+
+                                                                        Página 2
+                                                      PLANO DE ENSINO
+                                                                                                              Data de Emissão: 15/08/2026
+
+
+
+do semestre, cuja média será uma componente a ser integrada nas notas das avaliações de aprendizagem (P1 e P2).
+
+
+Será considerado aprovado o discente que obtiver média final (MF) de no mínimo SEIS (6,0), calculada da seguinte forma:
+
+
+MF = 0,45*P1 + 0,45*P2 + 0,1*AA
+
+
+O conceito final do discente será atribuído com base na nota final (MF), conforme a seguinte tabela:
+
+
+- Conceito A, para MF>=9,0;
+- Conceito B, para MF>=7,5 e MF<9,0;
+- Conceito C, para MF>=6,0 e MF<7,5;
+- Conceito D, para MF<6,0.
+
+
+Conforme regulamento da Universidade, é obrigatória uma frequência mínima de 75% de presença nas aulas. A não observância a
+esse requisito implicará conceito FF.
+
+Atividades de Recuperação Previstas
+Os discentes que não alcançarem média final para aprovação (MF >= 6,0) poderão realizar uma atividade avaliativa de recuperação,
+que versará sobre todos os conteúdos apresentados na disciplina ao longo do semestre.
+
+
+Para ser aprovado na disciplina, o discente deverá atingir uma nota mínima na atividade avaliativa de recuperação (NMR)
+determinada pela seguinte expressão:
+
+
+NMR = 12 - MF
+
+
+com NMR limitado a um valor máximo igual a 10 (dez) e MF sendo a Média Final obtida pelo discente como resultado de todas as
+atividades de avaliação de aprendizagem realizadas na disciplina. O discente em recuperação que atingir a nota mínima necessária
+será aprovado com conceito "C", caso contrário, será reprovado (conceito "D").
+
+
+No caso de falta justificada a qualquer uma das atividades de avaliação, o discente poderá recuperá-la em data, horário e local a
+serem marcados pelo professor. Por falta justificada, entendem-se os casos previstos em legislação (saúde, parto, serviço militar,
+convocação judicial, entre outros) devidamente comprovados segundo as normas da UFRGS.
+
+
+As atividades de recuperação serão realizadas após um intervalo mínimo de 3 (três) dias contado a partir do dia seguinte à
+publicação aos discentes, pelo docente, da Média Final (MF) da disciplina.
+
+Bibliografia
+Básica Essencial
+KUROSE, J. F.; ROSS, K. W.. Redes de Computadores e a Internet: uma abordagem top-down (6ª ed.). São Paulo: Pearson, 2013. ISBN
+9788581436777.
+Valter Roesler. Material fornecido pelo professor no AVA Institucional. Porto Alegre: Não se aplica, 2025.
+
+Básica
+KUROSE, J.F.; ROSS, K.W.. Redes de Computadores e a Internet: uma abordagem top-down. Porto Alegre: Bookman, 2021. ISBN 9788582605585.
+TANENBAUM, A.; WETHERALL, D.. Redes de Computadores. São Paulo: Pearson, 2011. ISBN 9788576059240.
+
+Complementar
+                                                           Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                           Título                                                                     Texto
+Material fornecido pelo professor no AVA Institucional                      O ambiente virtual de aprendizagem (AVA) recomendado é
+
+
+                                                                           Página 3
+                                                PLANO DE ENSINO
+                                                                                                           Data de Emissão: 15/08/2026
+
+
+
+                                                                    o Moodle institucional da UFRGS, e contém material
+                                                                    básico e complementar para cada aula, na forma de
+                                                                    vídeos, textos, slides, artigos, entre outros.
+Observações
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                   Página 4
+

@@ -1,0 +1,166 @@
+                                                        PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+                                                           Escola de Engenharia
+                                Departamento de Sistemas Elétricos de Automação e Energia
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: VALNER JOAO BRUSAMARELLO
+Disciplina: CIRCUITOS ELÉTRICOS II - C
+Sigla: ENG10002              Créditos: 4
+
+Carga Horária
+CH Teórica: 60h       CH Prática: 0h       Total: 60h
+CH Coletiva: 60h      CH Autônoma: 0h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Análise fasorial. Potência. Acoplamento magnético e transformadores. Circuitos polifásicos. introdução básica de Fourier e Laplace.
+Análise de circuitos no domínio da frequência. Aplicação de Transformadas de Fourier e de Laplace em circuitos.
+
+Currículos
+                                           Currículos                                            Etapa Aconselhada              Natureza
+ENGENHARIA DE COMPUTAÇÃO                                                                                    5                  Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                                          4                  Obrigatória
+ENGENHARIA DE ENERGIA                                                                                       5                  Obrigatória
+
+Objetivos
+A disciplina visa a capacitar o alunos a entender e aplicar os conceitos e leis básicas de circuitos elétricos na solução de problemas
+típicos envolvendo correntes e tensões variáveis no tempo. O aluno deverá ser capaz de modelar os componentes básicos,
+estabelecer as equações fundamentais e encontrar a solução de circuitos, bem como interpretar e analisar a solução. O foco
+principal da disciplina é a análise do regime permanente senoidal usando fasores, análise de circuitos trifásicos equilibrados e
+desequilibrados, aplicação das transformadas de Fourier e Laplace na obtenção da solução de circuitos e a resposta em frequência
+de circuitos elétricos.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Introdução
+Conteúdo: Introdução ao conteúdo programático de Circuitos II.
+              Re-mapeamento dos conceitos de Circuitos I aplicados a circuitos II.
+              Breve apresentação das transformadas de Laplace e Fourier.
+              Correlação entre as mesmas e com as soluções do domínio tempo (equações diferenciais e variáveis de estado) e domínio fasorial.
+  Semana: 2 a 10
+    Título: Circuitos em regime permanente senoidal
+Conteúdo: 1.1. Caracterização de funções senoidais
+              1.2. Transformada fasorial
+              1.3. Impedância e admitância
+              1.4. Análise de redes utilizando as Leis de Kirchhoff e Fasores
+              1.5. Transformação de fontes
+              1.6. Circuitos equivalentes de Thévenin e Norton
+              1.7. Acoplamento magnético
+              2.1. Energia, potência instantânea e média
+              2.1.Potências ativa, reativa, aparente, complexa e fator de potência
+              2.3.Máxima transferência de potência
+              3.1. Grandezas de fase e de linha
+
+
+
+
+                                                                          Página 1
+                                                       PLANO DE ENSINO
+                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+              3.2. Conexões básicas com e sem neutro
+              3.3. Análise de circuitos equilibrados e desequilibrados
+              3.4. Conexão estrela-triângulo
+              3.5. Potência em circuitos trifásicos
+  Semana: 10 a 18
+    Título: Aplicação de Transformadas de Laplace e Fourier a Circuitos Elétricos
+Conteúdo: 4.1. Conceitos Básicos de Transformada de Laplace (Revisão)
+              4.2. Transformada de componentes básicos e circuitos equivalentes
+              4.3. Aplicação da Transformada na solução de circuitos
+              4.4. Teoremas de valor final e inicial
+              5.1Conceitos Básicos da Transformada de Fourier (Revisão)
+              5.2Circuitos equivalentes no domínio da Transformada de Fourier
+              5.3Aplicação da Transformada de Fourier a circuitos elétricos
+              6.1Escala decibel
+              6.2Diagrama de Bode
+              6.3Conceitos Básicos de Ressonância
+  Semana: 19
+    Título: Atividade de Recuperação
+Conteúdo: Reservada a realização de atividade exame/recuperação
+
+Metodologia
+O conteúdo será abordado através de aulas expositivas teóricas e aulas de exercícios dirigidos, os quais serão propostos e
+desenvolvidos em sala de aula de forma individual e em grupos. Serão disponibilizadas listas de exercícios, os quais poderão ser
+acessadas através da página da disciplina, assim como outros materiais contendo tópicos abordados ao longo do semestre.
+Também está prevista a realização de exercícios práticos mais complexos, os quais poderão ser resolvidos pelos alunos de forma
+individual ou em grupos, a quais permitirão um maior aprofundamento dos conteúdos e conexão com outras disciplinas.
+
+Experiências de Aprendizagem
+- solução de exercícios em aula
+- realização de provas
+- desenvolvimento de diagramas de simulação
+- utilização de programas de simulação
+
+Critérios de avaliação
+Caso a frequência de presença do aluno (F) for menor que 75% o aluno receberá conceito FF independente das demais avaliações
+do mesmo.
+F &#8804; 75% -> FF
+
+
+Nos demais casos, a avaliação de desempenho será feita com base em duas provas teóricas cumulativas (P1 e P2), usando-se a
+expressão:
+N = (P1*0,5+P2*0,5)
+Será considerado aprovado o aluno que obtiver N &#8805; 6.
+Sendo atribuído os Conceitos conforme a tabela abaixo
+N &#8805; 9,0 -> A
+7,5 <= N < 9,0 -> B
+6,0 <= N < 7,5 -> C
+
+Atividades de Recuperação Previstas
+Caso o aluno não tenha atendido os critérios de aprovação, poderá realizar uma prova de Exame (E), ao final do semestre, sendo
+considerado aprovado o aluno que:
+E &#8805; 6
+recebendo, neste caso, conceito C.
+
+
+
+                                                                         Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+Caso contrário (E < 6) o alunos receberá conceito D, tendo presença mínima (F &#8805; 75%), ou FF, caso o mesmo não tenha
+atendido a presença mínima.
+
+Bibliografia
+Básica Essencial
+1. Charles K. Alexander e Matthew N. O. Sadiku. Fundamentos de circuitos elétricos.. McGrawHill, 2003. ISBN 978-85-86804-97-7.
+J. David Irwin. Análise básica de circuitos para engenharia. LTC Editora, 2003. ISBN 85-216-1374-1.
+James W. Nilsson e Susan A. Riedel. Circuitos elétricos. LTC Editora, 2003. ISBN 85-216-1374-1.
+
+Básica
+J. Bird. Circuitos Elétricos - Teoria e Tecnologia. Editora Campus, 2009. ISBN 978-85-352-2771-0.
+
+Complementar
+Charles A. Desoer e Ernest S. Kuh. Teoria básica de circuitos lineares. Guanabara Dois, 1979.
+R. C. Dorf, J. A. Svoboda. Introdução aos Circuitos Elétricos. LTC, 2003. ISBN 85-216-1367-9.
+W. H. Hayt Jr., J. E. Kemmerly, S. M. Durbin. Análise de Circuitos em Engenharia. McGraw-Hill, 2008. ISBN 978-85-7726-021-8.
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+ATENDIMENTO AOS ALUNOS: o professor estará à disposição dos alunos, para revisão das provas e resolução de dúvidas sobre o
+conteúdo ministrado, em datas e horários previamente combinados com os mesmos.
+
+
+- O DELAE não autoriza que alunos frequentem disciplinas/turmas para as quais não estejam regularmente matriculados e não
+reconhece as atividades realizadas de tal forma;
+- Fraude em prova acarretará na anulação da atividade de avaliação do aluno;
+- Plágio de trabalhos acarretará na anulação da atividade em avaliação.
+
+
+
+
+                                                                         Página 3
+

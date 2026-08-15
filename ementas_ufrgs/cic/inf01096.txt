@@ -1,0 +1,196 @@
+                                                   PLANO DE ENSINO
+                                                                                                        Data de Emissão: 15/08/2026
+
+
+
+                                                         Instituto de Informática
+                                               Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: VIVIANE PEREIRA MOREIRA
+Disciplina: RECUPERAÇÃO DE INFORMAÇÃO
+Sigla: INF01096             Créditos: 4
+
+Carga Horária
+CH Teórica: 45h      CH Prática: 15h      Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Pré-processamento de Textos, Modelos de Recuperação de Informação, Metodologia de Avaliação, Técnicas de melhoria de
+qualidade e Tópicos Emergentes.
+
+Currículos
+                                        Currículos                                         Etapa Aconselhada        Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                  Eletiva
+
+Objetivos
+A disciplina tem por objetivo fornecer fundamentos teóricos e práticos da área de Recuperação de Informações.
+Habilidades desenvolvidas:
+GD-H-006 Avaliar os princípios da organização e busca por dados não estruturados (principalmente textuais)
+GD-H-007 Aplicar a metodologia da avaliação experimental em Recuperação de Informação
+
+Conteúdo Programático
+  Semana: 1
+    Título: Apresentação e Introdução
+Conteúdo: Apresentação da disciplina. Conceitos fundamentais de RI
+  Semana: 2
+    Título: Pré-processamento e Indexação
+Conteúdo: Tokenização, remoção de stopwords, stemming e indexação. Laboratório.
+  Semana: 3
+    Título: Avaliação de qualidade em RI
+Conteúdo: Paradigma de avaliação em RI. Coleções de teste. Laboratório.
+  Semana: 4 a 5
+    Título: Modelos Clássicos de RI
+Conteúdo: Modelo booleano, vetorial e probabilístico. Laboratório
+  Semana: 6
+    Título: Técnicas de melhoria de desempenho
+Conteúdo: Expansão de consultas. Realimentação de relevantes
+  Semana: 7
+    Título: Recuperação tolerante a erros & Trabalho 1
+Conteúdo: Funções de similaridade, correção ortográfica, consultas com wildcards.
+              Apresentação do trabalho de teste de ferramentas de RI.
+  Semana: 8
+    Título: Modelos de Linguagem e Learning to Rank
+Conteúdo: Modelos de linguagem no contexto de RI. Query likelihood, métodos de smoothing
+  Semana: 9 a 10
+
+
+
+
+                                                                        Página 1
+                                                 PLANO DE ENSINO
+                                                                                                             Data de Emissão: 15/08/2026
+
+
+
+     Título: Busca Semântica e RI Neural
+Conteúdo: Métodos baseados em vetores densos, approximate nearest neighbor, bancos de vetores, modelos baseados em Transformers
+  Semana: 11
+     Título: IR & Web
+Conteúdo: Características da web, coleta de dados, spam.
+  Semana: 12
+     Título: Aplicações
+Conteúdo: Recuperação multilíngue, RAG, sistemas de perguntas e respostas, sistemas de recomendação.
+  Semana: 13 a 14
+     Título: Desenvolvimento do Trabalho Final
+Conteúdo: Acompanhamento do desenvolvimento do trabalho final com apresentações do andamento.
+  Semana: 15
+     Título: Apresentação de Trabalhos e Prova
+Conteúdo: Entrega e apresentação do Trabalho 2 e Prova.
+
+Metodologia
+A disciplina é apresentada em aulas de cunho teórico-expositivo intercaladas com discussões sobre os exercícios e os trabalhos
+extraclasse, além de aulas em laboratório, quando couber. As 60 horas previstas para atividades teóricas e práticas indicadas neste
+Plano de Ensino incluem 30 encontros de 100 minutos de duração (2 períodos de 50 minutos por encontro, 2 encontros por semana,
+durante 15 semanas), num total de 3.000 minutos, e mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato
+direto com o professor, correspondentes a exercícios e trabalhos extraclasse. As atividades previstas incluem a realização de
+trabalhos a serem entregues, apresentados e avaliados. O professor poderá se valer de aulas presenciais e de atividades a distância
+(desde que nos limites previstos pela UFRGS para disciplinas presenciais e empregando ferramentas para atividades remotas),
+assim como do apoio de Professores Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Os estudantes participarão ativamente do processo de aprendizagem por meio de aulas teórico-práticas e laboratoriais, avaliações,
+exercícios práticos, trabalhos de implementação e atividades autônomas.
+
+
+As experiências de aprendizagem previstas incluem participar de aulas expositivas, realizar exercícios práticos em laboratório,
+resolver listas de exercícios extraclasse, desenvolver um trabalho de teste de ferramenta de RI e um trabalho final de
+pesquisa/implementação, realizar eventuais leituras e consultas ao material disponibilizado no Moodle/UFRGS, responder a
+eventuais questionários e atividades de autoavaliação para acompanhamento do progresso individual.
+
+
+Uso de Inteligência Artificial (IA):
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor responsável.
+
+Critérios de avaliação
+A avaliação da aprendizagem será composta por atividades teóricas e práticas realizadas ao longo do semestre. Serão atribuídas
+quatro notas principais, correspondentes às seguintes atividades:
+
+
+T1 - Trabalho Ferramenta (20%): experimentos com coleções de teste utilizando ferramentas de Recuperação de Informação.
+
+
+T2 - Trabalho Final (30%): desenvolvimento e apresentação de um projeto final envolvendo os principais tópicos estudados.
+
+
+P - Prova (35%): avaliação teórico-prática abrangendo os conteúdos da disciplina.
+
+
+E - Exercícios (15%): exercícios em classe e extraclasse.
+
+
+A Média Final (MF) será calculada pela seguinte fórmula:
+
+
+
+
+                                                                    Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                     Data de Emissão: 15/08/2026
+
+
+
+MF = 0,2 × T1 + 0,3 × T2 + 0,35 × P + 0,15 × E
+
+
+As atividades autônomas incluem listas de exercícios e o trabalho final, realizadas fora do horário regular de aula, contribuindo para
+o desenvolvimento das competências práticas e teóricas da disciplina.
+
+
+A conversão da Média Final (MF) em conceito final será realizada conforme a escala institucional:
+Conceito A: MF maior ou igual a 9,0
+Conceito B: MF maior ou igual a 7,5 e menor que 9,0
+Conceito C: MF maior ou igual a 6,0 e menor que 7,5
+Conceito D: MF menor que 6,0
+Conceito FF: Frequência inferior a 75%, independentemente da nota
+
+Atividades de Recuperação Previstas
+Se o aluno não atingir nota 6,0 na Média Final, poderá realizar uma prova de recuperação sobre toda a matéria. Se a média entre a
+prova de recuperação e a nota final da disciplina for maior ou igual a 6,0, o aluno será aprovado com C.
+(Media Final * 0.4 + Prova de Recuperação*0.6 ) >= 6,0 => Conceito C
+
+Bibliografia
+Básica Essencial
+Caseli, H.M.; Nunes, M.G.V. (org.). Processamento de Linguagem Natural: Conceitos, Técnicas e Aplicações em Português. São Carlos: BPLN, 2024.
+Disponível em: https://brasileiraspln.com/livro-pln/3a-edicao/
+Manning, Christopher D.; Raghavan, Prabhakar; Schütze, Hinrich,. Introduction to information retrieval. Cambridge: Cambridge University Press,
+2008. ISBN 0521865719. Disponível em: https://nlp.stanford.edu/IR-book/information-retrieval-book.html
+
+Básica
+Jimmy Lin, Rodrigo Nogueira e Andrew Yates. Pretrained Transformers for Text Ranking: BERT and Beyond. SL: arxiv, 2021. Disponível em:
+https://arxiv.org/abs/2010.06467
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                          Título                                                                       Texto
+Material disponível no Moodle da UFRGS.                                   A disciplina utiliza a ferramenta do Moodle da UFRGS
+                                                                          onde são colocados materiais para consulta e estudo,
+                                                                          especificação das atividades práticas desenvolvidas em
+                                                                          aula e extraclasse, cronograma atualizado e cópia do
+                                                                          plano de ensino.
+Observações
+Informações sobre Plágio e IA:
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+Informações sobre Direitos Autorais e de Imagem:
+Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para qualquer outra
+finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a
+autoria, sob pena de plágio. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição específica,
+sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o material de sua
+autoria.
+
+
+
+
+                                                                         Página 3
+

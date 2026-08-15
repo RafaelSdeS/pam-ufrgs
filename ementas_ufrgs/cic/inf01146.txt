@@ -1,0 +1,293 @@
+                                                      PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+                                                       Instituto de Informática
+                                              Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LUCAS MELLO SCHNORR
+Disciplina: AVALIAÇÃO DE DESEMPENHO
+Sigla: INF01146             Créditos: 4
+
+Carga Horária
+CH Teórica: 60h     CH Prática: 0h       Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Introdução à avaliação de desempenho de sistemas computacionais. Métodos de avaliação: vantagens, desvantagens, aplicações.
+Métodos analíticos: abordagens estocástica e operacional. Modelos baseados em redes de filas e em redes de Petri. Simulação
+discreta: conceitos, algoritmos de simulação. Abordagens de modelagem de sistemas discretos: orientação a eventos e a processos.
+Estudo de uma linguagem de simulação de propósitos gerais. Mensuração, benchmarking.
+
+Currículos
+                                         Currículos                                         Etapa Aconselhada            Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                       Eletiva
+BACHARELADO EM FÍSICA                                                                                  4                   Eletiva
+BACHARELADO EM FÍSICA: ASTROFÍSICA                                                                     6                   Eletiva
+BACHARELADO EM FÍSICA: FÍSICA COMPUTACIONAL                                                                                Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                               5                   Eletiva
+
+Objetivos
+O objetivo da disciplina de Análise de Desempenho de Sistemas Computacionais é capacitar o estudante a compreender, modelar,
+medir, comparar e avaliar, de forma científica e sistemática, o desempenho de sistemas computacionais, com base nos princípios
+apresentados por Jain (1991). Ao longo do curso, o aluno desenvolverá habilidades para selecionar métricas adequadas, planejar
+experimentos, coletar e interpretar dados, construir e validar modelos analíticos e de simulação, bem como identificar gargalos e
+propor otimizações em hardware e software, formando uma base sólida para o projeto, a avaliação e a melhoria de sistemas em
+contextos reais de ciência e engenharia da computação.
+
+
+A disciplina visa desenvolver as seguintes habilidades específicas:
+ALG-H5: Avaliar e selecionar uma estratégia adequada para a resolução de um problema.
+ALG-H6: Construir soluções computacionais eficientes para a organização e busca de dados.
+SOC-H1: Avaliar o impacto e a sustentabilidade ambiental de soluções e serviços computacionais.
+ES-H8: Planejar e executar testes de software e analisar os resultados.
+ES-H9: Analisar criticamente um sistema de software sob vários aspectos (correção, usabilidade, eficiência).
+SIS-H6: Caracterizar métricas e indicadores-chave de desempenho em redes, como atraso, perda, jitter e vazão, bem como
+reconhecer fontes e causas de interferência nesses indicadores.
+ARQ-H10: Avaliar requisitos não-funcionais (e.g., desempenho, potência e consumo de energia) de sistemas computacionais.
+MAT-H12: Ser capaz de sintetizar grandes quantidades de dados por meio de estatísticas adequadas e de testar a validade
+estatística de hipóteses.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Apresentação da disciplina
+Conteúdo: Visão geral da disciplina e procedimentos administrativos. Erros comuns na análise de desempenho e os passos para uma abordagem
+
+
+
+
+                                                                    Página 1
+                                                   PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+              sistemática.
+  Semana: 2
+    Título: Técnicas e Métricas de análise de desempenho
+Conteúdo: Metodologias de análise de desempenho. Seleção de técnicas e seleção de métricas.
+  Semana: 3
+    Título: Epistemologia e Pesquisa Reprodutível
+Conteúdo: Ciência e Princípios da pesquisa reprodutível na área de Sistemas Computacionais.
+  Semana: 4
+    Título: Projeto: Inicial
+Conteúdo: Apresentação das propostas de trabalho extraclasse
+  Semana: 5
+    Título: Projeto Experimental e Workloads
+Conteúdo: Uma introdução rápida a projetos experimentais. Técnicas de caracterização de workloads
+  Semana: 6
+    Título: Medição e Monitores
+Conteúdo: Técnicas e ferramentas de medição. Monitores da execução de programas
+  Semana: 7
+    Título: Boas práticas
+Conteúdo: Boas práticas para experimentos computacionais e o emprego da programação literal na análise de dados.
+  Semana: 8
+    Título: Ciência de dados
+Conteúdo: Emprego de ferramentas modernas de ciência de dados para a análise de desempenho de sistemas computacionais.
+  Semana: 9
+    Título: Projeto: Parcial
+Conteúdo: Apresentação parcial do trabalho extraclasse
+  Semana: 10
+    Título: Visualização de Métricas
+Conteúdo: A arte da apresentação de dados e a estatística de dados medidos (estimadores estatísticos de centralidade e variabilidade).
+  Semana: 11
+    Título: Comparando sistemas computacionais
+Conteúdo: Comparando alternativas com intervalos de confiança. Validação de distribuições e da taxa de rejeição experimental.
+  Semana: 12
+    Título: Modelos lineares
+Conteúdo: Conceitos básicos de regressão linear e emprego de regressão para construção de modelos lineares para predição de desempenho e
+              detecção de outliers.
+  Semana: 13
+    Título: Projeto Experimental
+Conteúdo: Projetos de 2 fatores sem/com replicações. Projeto fatorial completo com =k= fatores e replicação.
+  Semana: 14
+    Título: Simulação
+Conteúdo: Introdução à simulação e análise de resultados de simulação. Conceito de validação.
+  Semana: 15
+    Título: Projeto: Final
+Conteúdo: Apresentação final do trabalho extraclasse.
+
+Metodologia
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
+discussão e acompanhamento geral da disciplina.
+
+
+A disciplina será desenvolvida através de aulas expositivas e de exercícios dirigidos de aplicação dos conceitos apresentados por
+
+
+
+
+                                                                       Página 2
+                                                 PLANO DE ENSINO
+                                                                                                             Data de Emissão: 15/08/2026
+
+
+
+intermédio de exemplos. As aulas seguem o cronograma divulgado no início do semestre. Ao longo da disciplina, também serão
+exigidos trabalhos práticos na forma de etapas incrementais, proporcionando a aplicação prática dos conteúdos desenvolvidos.
+Esses trabalhos serão desenvolvidos principalmente em período extraclasse na forma de atividades autônomas.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes ao projeto de
+análise de desempenho de um sistema computacional.
+
+
+O professor poderá valer-se de aulas presenciais e de atividades a distância (desde que dentro dos limites previstos pela UFRGS
+para disciplinas presenciais e empregando ferramentas para atividades remotas).
+
+Experiências de Aprendizagem
+O conteúdo programático previsto para cada semana será apresentado na forma de aulas expositivas. De acordo com a
+disponibilidade de salas de laboratório, o professor pode realizar algumas aulas na forma de atividades dirigidas onde os alunos
+replicam o passo-a-passo antes de realizar exercícios de maneira independente. Uma parte importante das experiências de
+aprendizagem envolve a realização do projeto de análise de desempenho. As atividades referentes ao projeto são realizadas em
+etapas incrementais, com data-limite para conclusão ao longo do semestre (etapa inicial, etapa parcial e etapa final). A escolha do
+sistema computacional que será objeto de estudo no projeto de análise de desempenho deve ser definida em comum acordo entre o
+professor e o grupo.
+
+
+Ao longo da disciplina, os alunos serão sensibilizados às seguintes temáticas:
+
+
+1. Fundamentos da Análise de Desempenho.
+2. Formação Científica e Metodológica, com princípios de pesquisa reprodutível.
+3. Caracterização e Medição de Sistemas Computacionais
+4. Projeto e Análise de Experimentos computacionais
+5. Simulação Computacional para avaliação de desempenho
+6. Ciência de Dados Aplicada incluindo estatística e modelos lineares
+7. Aprendizagem Baseada em Projetos (Trabalho Extraclasse)
+
+
+O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
+disciplina, a menos que haja autorização explícita e guiada do professor responsável.
+
+Critérios de avaliação
+São empregadas avaliações das etapas do projeto para verificar a absorção dos conceitos e métodos práticos vistos durante a
+disciplina. A avaliação de cada uma das etapas do projeto é realizada com base em critérios estabelecidos pelo professor no início
+do semestre, que incluem, necessariamente, um mapeamento dos conceitos abordados ao longo da disciplina, de maneira
+incremental.
+
+
+Etapas do Projeto: O projeto é realizado em grupo de alunos, com etapas ao longo do semestre. Ele deve ser realizado
+principalmente de forma assíncrona (atividades autônomas), sendo cada etapa entregue por meio de um link específico no AVA
+institucional, nas datas estabelecidas pelo professor. São adotadas três etapas assim nomeadas: Inicial, Parcial e Final. As etapas
+abordam os assuntos listados em "Experiências de Aprendizagem". Para cada etapa, o professor retorna uma avaliação detalhando
+seu julgamento do andamento da atividade, com dicas e sugestões para melhorar a execução do projeto. Esse retorno pode ser
+tanto de maneira assíncrona através do AVA Institucional quanto de maneira presencial nos encontros, por intermédio de conversa
+com os grupos.
+
+
+Os pesos das etapas ficam assim distribuídos: Inicial (Peso 10), Parcial (Peso 20) e Final (Peso 70). O projeto com suas etapas e
+pesos define a média final (MF) do discente, que será convertida em conceito através da tabela abaixo, levando-se também em
+conta nesse conceito a participação e o interesse em aula, a critério do professor.
+
+
+
+                                                                    Página 3
+                                                     PLANO DE ENSINO
+                                                                                                                      Data de Emissão: 15/08/2026
+
+
+
+
+Nota Conceito
+>= 9,0 A
+>= 7,5 e < 9,0 B
+>= 6,0 e < 7,5 C
+< 6,0 D
+
+Atividades de Recuperação Previstas
+Ao final do semestre, os alunos que não tiverem atingido desempenho suficiente para a aprovação (MF >= 6.0) poderão realizar uma
+atividade avaliativa geral de recuperação, que versará sobre todo o conteúdo da disciplina. Para ser aprovado na disciplina, o
+discente deverá atingir uma nota mínima na atividade avaliativa de recuperação (Nota Mínima de Recuperação - NMR) determinada
+pela seguinte expressão:
+
+
+NMR = 12 - MF
+
+
+com NMR limitado ao valor máximo igual a 10 (dez) e MF sendo a Média
+Final obtida pelo discente e descrita na seção "Critérios de
+Avaliação". O discente em recuperação que atingir a nota mínima de
+recuperação (NMR >= 6.0), será aprovado com conceito "C", caso
+contrário, será reprovado (conceito "D").
+
+Bibliografia
+Básica Essencial
+Jain, Raj. The art of computer systems performance analysis :techniques for experimental design, measurement, simulation, and modeling. New York:
+John Wiley, c1991. ISBN 0471503363.
+
+Básica
+David J. Lilja. Measuring Computer Performance: A Practitioner?s Guide. USA: Cambridge University Press, 2005. ISBN 9780521646703.
+Donald E. Knuth. Literate Programming. USA: Cambridge University Press, 1992. ISBN 0937073806.
+Douglas C. Montgomery, George C. Runger. Applied Statistics and Probability for Engineers. USA: John Wiley, 1996. ISBN 9781119570615.
+Gross, Donald; Harris, Carl M.. Fundamentals of queueing theory. New York: John Wiley, 2002. ISBN 9814126705.
+Law, Averill M.. Simulation modeling and analysis. New York: McGraw-Hill, 2006. ISBN 0073294411.
+
+Complementar
+Allen, Arnold O.. Probability, statistics, and queueing theory :with computer science applications. Boston: Academic, c1990. ISBN 0120510510.
+Douglas C. Montgomery. Design and Analysis of Experiments. USA: Wiley, 1993. ISBN 1439849935.
+Giozza, William Ferreira. Redes locais de computadores :tecnologia e aplicacoes. Sao Paulo: Mcgraw-Hill, 1986. ISBN 0074501410.
+Hadley Wickham, Garrett Grolemund. R for Data Science. USA: O'Reilly Media, 2016. ISBN 9781491910344.
+Jean-Yves Le Boudec. Performance Evaluation of Computer and Communication Systems. USA: CRC Press, 2011. ISBN 1439849935.
+Julian J. Faraway. Linear Models with R. USA: Routledge, 2025. ISBN 9781032583983.
+Peter Kosso. A Summary of Scientific Method. USA: SpringerBriefs, 2011. ISBN 978-94-007-1613-1.
+Randolph Nelson. Probability stochastic processes and queuing theory: the mathematics of computer performance modeling. USA: Springer, 1995.
+ISBN 9780387944524.
+
+
+
+Outras Referências
+                            Título                                                                  Texto
+Introdução às Redes de Petri                                               Anais da 10º escola de computação
+Petri Nets: An introduction                                                REISIG, W.
+                                                                           Monographs on Computer Science. Springer-Verlang. 1985
+Petri Nets                                                                 PETERSON, J. L.
+                                                                           Computing Surveys. Vol 9, Nº 3, Sep. 1977.
+A Practical Guide to Queuing Analysis                                      STALLINGS, W.
+
+
+
+                                                                         Página 4
+                                                PLANO DE ENSINO
+                                                                                                           Data de Emissão: 15/08/2026
+
+
+
+                                                                    Byte, Feb 1991, pp.309-316.
+A detailed look at some popular benchmarks                          WEICKER, R.
+                                                                    Parallel Computing. Vol 17, Nº 10 e Nº 11, Dec 1991.
+The SPEC Benchmark                                                  DIXIT, K.
+                                                                    Parallel Computing. Vol 17, Nº 10 e Nº 11, Dec 1991
+Scientific Methodology for Performance Evaluation                   https://github.com/schnorr/SMPE/
+Observações
+Disciplina que ocorre de maneira concomitante com a disciplina CMP223 do Programa de Pós-Graduação em Computação (PPGC)
+da UFRGS.
+
+
+O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
+atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
+uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
+disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
+desligamento da Universidade.
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                   Página 5
+

@@ -1,0 +1,237 @@
+                                                    PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+                                                         Instituto de Informática
+                                                Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: Karina Kohl Silveira
+Disciplina: TENDÊNCIAS EM ENGENHARIA DE SOFTWARE
+Sigla: INF01217               Créditos: 4
+
+Carga Horária
+CH Teórica: 50h      CH Prática: 10h        Total: 60h
+CH Coletiva: 50h       CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Tópicos avançados e atuais em Engenharia de Software. Engenharia de Software Experimental.
+
+Currículos
+                                        Currículos                                             Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                            Eletiva
+
+Objetivos
+A disciplina oferece uma visão geral das tendências atuais da Engenharia de Software, combinando fundamentos essenciais da área
+com conhecimentos avançados e emergentes. São apresentados tópicos contemporâneos que revelam sinergias entre Engenharia
+de Software e inteligência artificial, bem como outras tendências relevantes para a pesquisa e a prática profissional. Um dos eixos
+centrais é a engenharia de software experimental, cujo propósito é motivar os estudantes a propor, analisar e demonstrar a
+efetividade de inovações em ES.
+A disciplina também introduz princípios do método científico e do projeto de pesquisa, preparando os estudantes para elaborar, ao
+longo do semestre, um trabalho exploratório teórico ou prático relacionado aos temas abordados. Adicionalmente, mesas-redondas e
+discussões de artigos recentes permitem contato direto com resultados de pesquisa atuais e desenvolvem a capacidade de análise
+crítica.
+Ao final do semestre, espera-se que o estudante seja capaz de:
+1. Conhecer e compreender tendências contemporâneas da Engenharia de Software, incluindo seus fundamentos e trabalhos
+recentes relevantes.
+2. Analisar criticamente abordagens, técnicas e resultados propostos na área, avaliando contribuições, limitações e oportunidades de
+avanço.
+3. Aplicar princípios da metodologia científica em Engenharia de Software, incluindo formulação de questões, condução de
+experimentos e interpretação de evidências.
+4.Elaborar e executar uma proposta de trabalho exploratório, teórico ou prático, viável dentro do semestre e alinhada aos tópicos
+discutidos.
+
+Conteúdo Programático
+   Semana: 1
+     Título: O Panorama da Engenharia de Software na Era dos LLMs
+Conteúdo: 1. Apresentação da disciplina
+              1.1 Metodologia
+              1.2 Avaliação
+              2. Pesquisa na Engenharia de Software
+              3. Introdução às tendências da Engenharia de Software
+
+
+              Evolução das ferramentas de assistência. O debate sobre a "morte da programação" vs. a ascensão do engenheiro de sistemas.
+
+
+
+
+                                                                      Página 1
+                                                      PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+              Mudança no perfil de competências do desenvolvedor e o impacto na formação acadêmica.
+  Semana: 2
+    Título: Engenharia Baseada em Especificações (Spec-Driven Engineering)
+Conteúdo: O código como artefato efêmero. Centralidade em especificações claras, contratos e documentação executável que os LLMs usam
+              para gerar e manter sistemas.
+  Semana: 3
+    Título: RAG (Retrieval-Augmented Generation) na Prática de Dev
+Conteúdo: Arquitetura de RAG, bancos de dados vetoriais, estratégias de chunking e incorporação de bases de conhecimento internas (legados
+              de código, wikis de arquitetura) para contextualizar a IA
+  Semana: 4
+    Título: Sistemas Multi-Agentes e Engenharia de Orquestração
+Conteúdo: Frameworks de agentes (LangGraph, CrewAI, AutoGen). Padrões de design para agentes: reflexão, planejamento, uso de ferramentas
+              e cooperação entre agentes especialistas (ex: agente testador, agente revisor, agente coder).
+  Semana: 5
+    Título: MCP (Model Context Protocol)
+Conteúdo: Protocolo para conectar LLMs a fontes de dados e ferramentas de forma segura e padronizada.
+  Semana: 6
+    Título: Harness Engineering e Avaliação de LLMs
+Conteúdo: Como testar e garantir o comportamento de sistemas probabilísticos. Criação de suítes de teste (test harnesses) para avaliar prompts,
+              saídas de RAG e comportamento de agentes. Frameworks de avaliação automatizada.
+  Semana: 7
+    Título: Engenharia de Prompt
+Conteúdo: Técnicas como Chain-of-Thought, Few-Shot, Self-Consistency aplicadas à geração de código. Técnicas de fine-tuning vs. RAG para
+              domínio de software específico.
+  Semana: 8
+    Título: Experiência do Desenvolvedor (DevEx) e Débito Cognitivo
+Conteúdo: Dimensões de DevEx (loops de feedback, estado de fluxo, fricção cognitiva). Como as ferramentas de IA afetam a carga cognitiva e
+              podem gerar débito cognitivo
+  Semana: 9
+    Título: Dinâmicas de Times e Colaboração Humano-IA
+Conteúdo: O IA como um "parceiro de equipe". Impactos no onboarding de desenvolvedores juniores, assimetria de conhecimento em times e
+              evolução do Code Review síncrono e assíncrono.
+  Semana: 10
+    Título: Fatores Ocupacionais, Burnout e Identidade Profissional
+Conteúdo: O impacto psicossocial da automação acelerada. Síndrome do impostor amplificada por IAs produtivas, burnout digital e a redefinição
+              do que significa "saber programar".
+  Semana: 11 a 14
+    Título: Engenharia de Software Empírica/Experimental
+Conteúdo: Introdução à Engenharia de Software Empírica/Experimental
+              Metodología Científica
+              Análise quantativa e qualitativa
+  Semana: 15
+    Título: Projeto Final
+Conteúdo: Apresentação do projeto final da disciplina
+  Semana: 16
+    Título: Recuperação
+Conteúdo: Recuperação
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, nas quais são combinadas a apresentação de conceitos e técnicas com a
+
+
+
+
+                                                                          Página 2
+                                                PLANO DE ENSINO
+                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+aplicação destes pelos alunos sobre os exemplos, exercícios e os trabalhos extraclasse. As 60 horas previstas para atividades
+teóricas e teórico-práticas indicadas neste Plano de Ensino incluem 15 encontros de 200 minutos de duração (4 períodos de 50
+minutos por encontro, 1 encontro por semana, durante 15 semanas), num total de 3.000 minutos, e mais 10 horas (600 minutos) de
+atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e trabalhos extraclasse.
+
+
+O professor poderá utilizar tanto aulas presenciais quanto atividades a distância, respeitados os limites estabelecidos pela UFRGS
+para disciplinas presenciais e empregando ferramentas apropriadas para atividades remotas. As atividades poderão contar com o
+apoio de professores assistentes (alunos de Pós-Graduação), especialmente em ações de natureza didática e de acompanhamento.
+Para tanto, poderão ser utilizados recursos como aulas síncronas ou assíncronas, gravações, demonstrações e demais tecnologias
+de apoio à aprendizagem.
+O Moodle será utilizado como ambiente central de ensino, reunindo os planos de aula, materiais didáticos disponibilizados pelo
+professor, fóruns de comunicação, envio de tarefas, acompanhamento do desempenho e organização geral da disciplina.
+Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
+As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Experiências de Aprendizagem
+A disciplina será conduzida por meio de uma combinação equilibrada de exposição teórica, estudos de caso, discussões guiadas,
+atividades práticas em laboratório, exercícios orientados em sala de aula, tarefas autônomas e um trabalho aplicado (artigo e
+apresentação). O objetivo é promover uma compreensão abrangente das principais tendências contemporâneas em Engenharia de
+Software, articulada à aprendizagem das metodologias de pesquisa utilizadas para investigar essas tendências, incentivando
+reflexão crítica e aplicação prática.
+Os exercícios serão realizados individualmente ou em pequenos grupos, estimulando a colaboração, o diálogo técnico e a troca de
+perspectivas sobre os temas emergentes da área. As atividades autônomas complementarão os conteúdos abordados em aula,
+incluindo leituras, análises de artigos, exploração de ferramentas e preparação para debates, ampliando a autonomia do estudante
+na investigação e aplicação dos conceitos.
+
+Critérios de avaliação
+A avaliação da disciplina será composta por atividades distribuídas ao longo do semestre, envolvendo participação em aula, entrega
+de exercícios e laboratórios, além de um trabalho prático final. A seguir, apresentam-se os componentes avaliativos e seus
+respectivos pesos.
+1. Participação, Laboratórios e Exercícios ? 40%
+Incluem-se neste item as atividades realizadas em aula, exercícios orientados, laboratórios práticos, tarefas autônomas e demais
+atividades propostas ao longo do semestre. Essas atividades visam estimular o engajamento, acompanhar a evolução do
+aprendizado e promover a aplicação contínua dos conteúdos apresentados.
+2. Trabalho Prático Final: 60%
+Os estudantes desenvolverão, ao longo do semestre, um trabalho prático relacionado a um dos tópicos discutidos em aula, cuja
+execução ocorrerá predominantemente fora do horário regular. O trabalho será avaliado em pelo menos três etapas ? proposta,
+andamento e apresentação final ? podendo ser subdivididas conforme a dinâmica da disciplina. Ao final, deverá ser entregue um
+texto no formato de artigo, com aproximadamente 5 páginas.
+Composição da nota do Trabalho Prático Final:
+Proposta: 5%
+Andamento: 5%
+Apresentação final: 20%
+Texto final (artigo): 30%
+3. Cálculo do Conceito Final
+O conceito final será obtido a partir da média ponderada dos componentes:
+Participação, Laboratórios e Exercícios: peso 0,4
+Trabalho Prático Final: peso 0,6
+A média resultante será convertida em conceito conforme a escala:
+Nota &#8805; 9,0 &#8594; A
+
+
+
+                                                                  Página 3
+                                                        PLANO DE ENSINO
+                                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+7,5 &#8804; Nota < 9,0 &#8594; B
+6,0 &#8804; Nota < 7,5 &#8594; C
+Nota < 6,0 &#8594; D
+4. Divulgação das Avaliações
+As notas das atividades e etapas do trabalho prático serão divulgadas em até 3 semanas após sua realização ou 72 horas antes da
+prova de recuperação, prevalecendo o que ocorrer primeiro.
+5. Observações
+A média geral somente será calculada para os estudantes que obtiverem frequência mínima de 75% das aulas previstas. Os demais
+receberão o conceito FF (Falta de Frequência).
+
+Atividades de Recuperação Previstas
+O aluno que obtiver conceito final D pode realizar uma prova de recuperação versando sobre todo o conteúdo da disciplina. Se a
+nota obtida nessa prova for igual ou superior a 6,0, o conceito mudará para C.
+A recuperação final será realizada somente para os casos previstos na legislação: saúde, parto, serviço militar, convocação judicial,
+luto, etc., devidamente comprovados por processo aberto na Junta Médica da UFRGS ou no órgão competente, conforme o caso.
+Tendo o direito à recuperação final, o professor estipulará a data, o horário e o local de sua realização.
+
+Bibliografia
+Básica Essencial
+Claes Wohlin, Per Runeson, Martin Höst, Magnus C. Ohlsson, Björn Regnell, Anders Wesslén. Experimentation in Software Engineering. Berlin:
+Springer, 2012. ISBN 978-3642290435.
+Pressman, Roger. Engenharia de Software: Uma Abordagem Profissional. New York: McGraw-Hill, 2011. ISBN 9788563308337.
+Sommerville, Ian. Engenharia de software. New York: Pearson Education, 2012. ISBN 9788579361081.
+
+Básica
+Easterbrook, S., Singer, J., Storey, MA., Damian, D.. Selecting Empirical Methods for Software Engineering Research. In: Shull, F., Singer, J.,
+Sjøberg, D.I.K. (eds) Guide to Advanced Empirical Software Engineering.. Longon: Springer, 2008. ISBN 978-1-84800-044-5. Disponível em:
+https://link.springer.com/chapter/10.1007/978-1-84800-044-5_11
+Singer, J., Sim, S.E., Lethbridge, T.C.. Software Engineering Data Collection for Field Studies. In: Shull, F., Singer, J., Sjøberg, D.I.K. (eds) Guide to
+Advanced Empirical Software Engineering. London: Springer, 2008. ISBN 978-1-84800-044-5. Disponível em:
+https://link.springer.com/book/10.1007/978-1-84800-044-5
+
+Complementar
+Kitchenham, B.A., Pfleeger, S.L.. Personal Opinion Surveys. In: Shull, F., Singer, J., Sjøberg, D.I.K. (eds) Guide to Advanced Empirical Software
+Engineering. London: Springer, 2008. ISBN 978-1-84800-044-5. Disponível em: https://link.springer.com/chapter/10.1007/978-1-84800-044-5_3
+
+
+
+Outras Referências
+                                               Não existem outras referências para este plano de ensino.
+
+Observações
+                                                              Nenhuma observação incluída.
+
+
+
+
+                                                                             Página 4
+

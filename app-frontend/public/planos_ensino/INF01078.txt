@@ -1,0 +1,170 @@
+                                                     PLANO DE ENSINO
+                                                                                                                     Data de Emissão: 15/08/2026
+
+
+
+                                                          Instituto de Informática
+                                                Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: Jeferson Campos Nobre
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXIX
+Sigla: INF01078              Créditos: 4
+
+Carga Horária
+CH Teórica: 50h       CH Prática: 10h      Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h          CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes, aplicações específicas, interessando a um
+grupo restrito ou tendo caráter de temporariedade, aspectos abordados superficialmente em disciplinas regulares.
+
+Currículos
+                                         Currículos                                                Etapa Aconselhada               Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                                 Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                             Eletiva
+
+Objetivos
+Estudar segurança em três aspectos distintos da computação: segurança de dados, segurança em redes e segurança de
+computadores pessoais. Apresentar os principais tipos de ataques e as principais ferramentas utilizadas para sua prevenção.
+Permitir que o aluno compreenda e saiba analisar as características de um sistema de computação quanto a sua segurança.
+
+Conteúdo Programático
+  Semana: 1 a 3
+    Título: Introdução
+Conteúdo: Apresentação da disciplina (plano de ensino, Moodle, sistema de avaliação). Conceitos e propriedades em segurança. Risco,
+              vulnerabilidades, ameaças e vetores de ataque. Princípios de segurança. Princípios de privacidade. Segurança de ponta a ponta.
+              Defesa em profundidade . Segurança por design. Tensões entre segurança e outros objetivos de design. Ataques à privacidade e ao
+              anonimato.
+  Semana: 4
+    Título: Questões legais, éticas e humanas
+Conteúdo: Questões legais e ética. Objetivos, capacidades e motivações do invasor. Engenharia social
+  Semana: 5 a 9
+    Título: Criptografia e esteganografia
+Conteúdo: Tipos de cifras juntamente com métodos de ataque típicos. Cifras de bloco e de fluxo. Criptografia de chave simétrica.
+              Criptografia de chave pública. Criptografia quântica e resistente à computação quântica. Canais secretos e esteganografia.
+  Semana: 10 a 11
+    Título: Protocolos criptográficos e aplicações de criptografia
+Conteúdo: Protocolos criptográficos. Infraestrutura de chave pública (PKI) e certificados. Assinaturas digitais. Códigos de autenticação de
+              mensagem. Integridade da mensagem. Suporte de infraestrutura de chave pública para assinatura digital e criptografia e seus
+              desafios. Criptografia para segurança de dados e rede.
+  Semana: 12 a 13
+    Título: Autenticação e autorização, controle de acesso
+Conteúdo: Modelos de autenticação e autorização, controle de acesso. Mecanismos de autenticação e autorização, controle de acesso.
+  Semana: 14
+    Título: Blockchain
+
+
+
+
+                                                                         Página 1
+                                                PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: Consenso seguro. Árvores de Merkel. Livro razão.
+  Semana: 15
+    Título: Governança de Cibersegurança
+Conteúdo: Gestão da Segurança da Informação. Gestão de Continuidade de Negócio
+
+Metodologia
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
+discussão e acompanhamento geral da disciplina. A disciplina é apresentada em aulas teórico-práticas, em que se combina aulas
+expositivas para apresentação dos conceitos e técnicas com o desenvolvimento de eventuais exercícios e discussões. Algumas das
+aulas serão realizadas em laboratórios, para a implementação/visualização dos conceitos vistos em aula (por exemplo, criptografia
+de dados e exemplos de ataques e contramedidas de rede).
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse a serem avaliados.
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+Os estudantes participarão de aulas expositivas dialogadas para compreender os principais conceitos relacionados com
+Cibersegurança; realizarão aulas em laboratório voltadas aos aspectos discutidos nas aulas teóricas; apresentarão artigos sobre
+tópicos emergentes na área; poderão realizar leituras de materiais técnicos disponibilizados ao longo da disciplina e assistir a vídeos
+e vídeo-aulas que complementam os temas discutidos. Além disso, poderão responder a questionários que auxiliarão na
+consolidação do aprendizado e na verificação da compreensão dos tópicos abordados.
+Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
+As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+A avaliação será realizada por meio de duas atividades de avaliação de aprendizagem (P1 e P2), que poderão conter questões
+discursivas, analíticas ou objetivas de múltipla escolha sobre o conteúdo apresentado, incluindo os tópicos abordados nos exercícios
+e trabalhos extraclasse.
+Além dessas atividades, serão propostas Atividades Autônomas (AA) ao longo do semestre (por exemplo, a entrega e apresentação
+de um resumo sobre um tópico emergente em segurança de redes, escolhido pelo próprio aluno), cuja média integrará a média final
+com peso de 20%.
+Será considerado aprovado o discente que obtiver Média Final (MF) mínima de SEIS (6,0), calculada da seguinte forma:
+MF = 0,4 * P1 + 0,4 * P2 + 0,20 * AA
+
+
+onde P1 e P2 são, respectivamente, as notas da primeira e segunda atividades de avaliação de aprendizagem, e AA a média das
+Atividades Autônomas. O conceito final do discente será atribuído com base na nota final (MF), conforme a seguinte tabela:
+
+
+- Conceito A, para MF>=9,0;
+- Conceito B, para MF>=7,5 e MF<9,0;
+- Conceito C, para MF>=6,0 e MF<7,5;
+- Conceito D, para MF<6,0.
+
+
+Conforme regulamento da Universidade, é obrigatório uma frequência mínima de 75% de presença nas aulas. A não observância a
+esse requisito implicará conceito FF.
+
+Atividades de Recuperação Previstas
+Os discentes que não alcançarem média final para aprovação (MF >= 6,0) poderão realizar uma atividade avaliativa de recuperação
+
+
+
+                                                                   Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+(NMR) , que versará sobre todos os conteúdos apresentados na disciplina ao longo do semestre. Para ser aprovado na disciplina, o
+discente deverá atingir uma nota mínima de SEIS (6,0) na seguinte expressão:
+
+
+0,6 * NMR + 0,4 * MF
+
+
+O discente em recuperação que atingir a nota mínima necessária será aprovado com conceito "C", caso contrário, será reprovado
+(conceito "D").
+
+
+No caso de falta justificada a qualquer uma das atividades de avaliação, o discente poderá recuperá-la em data, horário e local a
+serem marcados pelo professor. Por falta justificada, entendem-se os casos previstos em legislação (saúde, parto, serviço militar,
+convocação judicial etc.) devidamente comprovados segundo as normas da UFRGS.
+
+Bibliografia
+Básica Essencial
+Michael T. Goodrich, Roberto Tamassia. Introdução à Segurança de Computadores. Porto Alegre: Bookman, 2012. ISBN 978-8540701922.
+Willian Stallings. Criptografia e Segurança de Redes: Princípios e Práticas.. São Paulo: Pearson Universidades, 2014. ISBN 978-8543005898.
+
+Básica
+                                                         Sem bibliografias acrescentadas
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                            Não existem outras referências para este plano de ensino.
+
+Observações
+                                                         Nenhuma observação incluída.
+
+
+
+
+                                                                        Página 3
+

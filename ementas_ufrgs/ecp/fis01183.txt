@@ -1,0 +1,189 @@
+                                                 PLANO DE ENSINO
+                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+                                                         Instituto de Física
+                                                      Departamento de Física
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: MARCO AURELIO PIRES IDIART
+Disciplina: FÍSICA III-C
+Sigla: FIS01183            Créditos: 6
+
+Carga Horária
+CH Teórica: 74h     CH Prática: 16h      Total: 90h
+CH Coletiva: 90h     CH Autônoma: 0h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Temperatura. Calor. Teoria cinética dos gases. Termodinâmica. Física ondulatória: ondas mecânicas e eletro-magnéticas. Reflexão e
+refração.
+
+Currículos
+                                        Currículos                                        Etapa Aconselhada          Natureza
+BACHARELADO EM MATEMÁTICA - ÊNFASE MATEMÁTICA APLIC COMPUTACIONAL                                    3               Obrigatória
+BACHARELADO EM MATEMÁTICA- ÊNFASE MATEMÁTICA PURA                                                    3               Obrigatória
+ENGENHARIA CIVIL                                                                                     2               Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                             3               Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                                   3               Obrigatória
+ENGENHARIA DE ENERGIA                                                                                2               Obrigatória
+ENGENHARIA DE MATERIAIS                                                                              2               Obrigatória
+ENGENHARIA DE MINAS                                                                                  2               Obrigatória
+ENGENHARIA DE PRODUÇÃO                                                                               2               Obrigatória
+ENGENHARIA ELÉTRICA                                                                                  2               Obrigatória
+ENGENHARIA FÍSICA                                                                                    2               Obrigatória
+ENGENHARIA HÍDRICA                                                                                   3               Obrigatória
+
+Objetivos
+1. Aprendizagem de conceitos, relações, leis, princípios e teorias.
+2. Treinamento das habilidades necessárias para a solução de problemas, para uso de instrumentos de laboratório e para o relato de
+resultados.
+3. Compreensão dos conceitos e aplicações dos princípios da Física, nas áreas acima citadas, relevantes à Engenharia.
+
+Conteúdo Programático
+  Semana: 1 a 2
+    Título: Temperatura
+Conteúdo: Estudo de termometria
+  Semana: 3 a 4
+    Título: Calor
+Conteúdo: Noções de calor e primeira lei da termodinâmica
+  Semana: 5 a 6
+    Título: Teoria Cinética dos Gases
+Conteúdo: Noções da gás ideal e de seu comportamento bem como distribuição de velocidades de gases
+  Semana: 7 a 10
+    Título: Termodinâmica
+Conteúdo: Lei zero , primeira e segunda leis da termodinâmica
+
+
+
+
+                                                                      Página 1
+                                                  PLANO DE ENSINO
+                                                                                                              Data de Emissão: 15/08/2026
+
+
+
+  Semana: 11 a 12
+    Título: Ondas Mecânicas
+Conteúdo: Equação da onda, ondas em uma corda, energia da onda
+  Semana: 13 a 14
+    Título: Ondas Sonoras
+Conteúdo: Ondas longitudinais. Ondas sonoras em um tubo aberto e fechado, instrumentos musicais, efeito doppler.
+  Semana: 15 a 16
+    Título: Ondas Eletromagnéticas
+Conteúdo: Equação das ondas eletromagnéticas, velocidade da luz, reflexão e refração.
+  Semana: 17
+    Título: Lentes
+Conteúdo: Estudo de lentes
+  Semana: 18
+    Título: Recuperação
+Conteúdo: recuperação
+
+Metodologia
+Vamos usar três tipos de aulas coletivas
+
+
+Carga horária coletiva - Aulas teóricas, de problemas
+
+
+Carga horária coletiva prática - Aulas de laboratório
+
+
+Carga horária coletiva -- Atividades remotas sob formato de tarefas de extensão limitadas a até 20% da carga horária prevista para a
+disciplina. As atividades remotas serão enviadas via moodle. Poderão ter atividades guiadas de resolução de problemas e de uso de
+aplicativos on line.
+
+Experiências de Aprendizagem
+Serão ministradas aulas teóricas, complementadas por aulas de problemas presenciais ou remotas e aulas de laboratório (até 8
+práticas durante o semestre).
+As aulas de laboratório constarão de experimentos a serem realizados por grupos de 5 a 6 alunos, quando possível, e serão
+marcadas com antecedência de acordo com o cronograma. Os conceitos abordados nas aulas de laboratório serão exigidos nas
+verificações ou avaliados via relatórios. A modalidade de atividades remotas poderá ser usada para aulas de problemas e para
+projetos de extensão sobre o conteúdo da matéria. Estas atividades serão avaliadas.
+
+Critérios de avaliação
+Serão realizadas 4 (quatro) avaliações de aproveitamento nas semanas indicadas no cronograma. A cada avaliação será atribuído
+um grau entre 0 (zero) e 10 (dez).
+
+
+A média geral será determinada pela média aritmética das 4 avaliações que contabilizarão verificações e, quando for o caso, notas
+dos relatórios e notas das atividades remotas. No caso do uso de avaliações de relatórios e atividades remotas cada uma
+contabilizará 10% da nota da avaliação.
+
+
+O/A aluno(a) que tiver média geral igual ou superior a 6 e nota mínima 3 em cada área será considerado(a) aprovado(a).
+
+
+Se tiver nota inferior a 3 somente em um área, terá direito a fazer uma recuperação específica desta área. A nota na recuperação
+específica irá substituir a nota da área para efeito de média.
+
+
+Caso tenha média inferior a 3,0 em mais de uma área e/ou média de todas as avaliações inferior a 6,0 terá direito à um exame.
+
+
+Para todas as turmas serão atribuídos, respeitando a tabela de conversão abaixo, os conceitos segundo a média geral obtida:
+
+
+
+
+                                                                     Página 2
+                                                      PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+9,0 a 10,0 - A
+7,5 a 8,9 - B
+6,0 a 7,4 - C
+0 a 5,9 - D
+Falta de frequência ? FF
+
+Atividades de Recuperação Previstas
+O/A aluno(a) que tiver nota inferior a 3,0 em uma avaliação, terá direito a recuperar esta prova. A nota da recuperação irá substituir a
+nota da referida avaliação.
+
+
+O/A aluno(a) que não tiver obtido no mínimo média 6 nas quatro avaliações e/ou tiver tirado nota menor que 3,0 em duas áreas, terá
+direito de fazer um exame final de toda a matéria. O exame terá peso 6 e cada uma das quatro avaliações terá peso 1. Após o
+exame, se a média final for igual ou superior a 6, o(a) aluno(a) será considerado(a) aprovado(a).
+
+
+O conceito será atribuído de acordo com a tabela descrita na seção Critérios de Avaliação.
+
+Bibliografia
+Básica Essencial
+Halliday, David; Resnick, Robert; Walker, Jearl. Fundamentos de física. Rio de Janeiro: Livros Técnicos e Científicos, 2006-2007. ISBN 8521614845
+(V.1); 9788521614845 (v.1); 8521614853 (V.2); 9788521614869 (V.3); 9788521614876 (V.4).
+Nussenzveig, Hersh Moyses. Curso de física básica. Sao Paulo: Ed. Edgar Blucher, c2002. ISBN 8521202989 (v.1); 8521202997 (v.2); 8521201346
+(v.3); 852120163X (v.4).
+
+Básica
+Alonso, Marcelo; Finn, Edward J.. Fisica. Harlow: Addison-Wesley, c1999. ISBN 8478290273.
+Alonso, Marcelo; Finn, Edward J.; Moscati, Giorgio. Fisica um Curso Universitario :campos e Ondas. Sao Paulo: Edgard Blucher, c1967.
+Halliday, David; Resnick, Robert; Walker, Jearl. Fundamentos de física. Rio de Janeiro: Livros Técnicos e Científicos, 2006-2007. ISBN 8521614845
+(V.1); 9788521614845 (v.1); 8521614853 (V.2); 9788521614869 (V.3); 9788521614876 (V.4).
+Mckelvey, John P.; Grotch, Howard; Nunes, Frederico Dias. Fisica. Sao Paulo: Ed. Harper, c1979.
+Nussenzveig, Hersh Moyses. Curso de física básica. Sao Paulo: Ed. Edgar Blucher, c2002. ISBN 8521202989 (v.1); 8521202997 (v.2); 8521201346
+(v.3); 852120163X (v.4).
+Sears, Francis Weston. Fisica. Rio de Janeiro: Livros Tecnicos e Cientificos, 1983-1985.
+Tipler, Paul A.; Mosca, Gene. Física :para cientistas e engenheiros. Rio de Janeiro: LTC, 2009. ISBN 9788521617105 (v.1); 9788521617112 (v.2);
+9788521617129 (v.3).
+
+Complementar
+                                                          Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+As atividades EAD serão limitadas a até 20% da carga horária didática da disciplina.
+
+
+
+
+                                                                          Página 3
+

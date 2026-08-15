@@ -1,0 +1,148 @@
+                                                    PLANO DE ENSINO
+                                                                                                               Data de Emissão: 15/08/2026
+
+
+
+                                                       Instituto de Informática
+                                              Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LUIGI CARRO
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XII
+Sigla: INF01063              Créditos: 4
+
+Carga Horária
+CH Teórica: 60h      CH Prática: 0h    Total: 60h
+CH Coletiva: 30h     CH Autônoma: 30h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes ou a aplicações específicas de interesse a um
+grupo restrito ou tendo caráter de temporalidade, enfocando aspectos não abordados ou abordados superficialmente em disciplinas
+regulares.
+
+Currículos
+                                       Currículos                                             Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                          Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                      Eletiva
+
+Objetivos
+Com o fim da Lei de Moore o incremento de desempenho de processadores de propósito geral tornou-se mais difícil. Ao mesmo
+tempo, novas aplicações, como Inteligência Artificial, Internet das Coisas e Saúde demandam cada vez mais velocidade de
+execução e eficiência energética. Neste novo cenário, onde o avanço da tecnologia é muito mais lento, os ganhos energéticos que
+os consumidores necessitam devem ser obtidos por melhores técnicas de desenvolvimento de software.
+O objetivo da disciplina é capacitar o aluno a compreender as diferentes fontes de dissipação de energia de uma sistema com
+processadores, e através desta compreensão identificar alterações de software que possam ser feitas em algoritmos clássicos dos
+domínios acima definidos para melhorar a eficiência energética destas aplicações, possivelmente sem (ou com um mínimo de)
+modificações no hardware de execução.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Apresentação disciplina
+Conteúdo: Apresentação da disciplina e conceitos básicos; ambiente de simulação e performance counters
+  Semana: 2
+    Título: definição de potência e energia
+Conteúdo: Definição de potência e energia em sistemas computacionais; revisão da organização; multicicloXsinglecycleXsuperscalar; caches e
+              cache misses
+  Semana: 3 a 4
+    Título: consumo em CPUs; exercícios
+Conteúdo: Caracterização de consumo energético em CPUs, DVFS, custo de barramentos e transferencia de dados; exercícios
+  Semana: 5 a 6
+    Título: caracterização de consumo em memórias
+Conteúdo: caracterização de consumo em memórias; tipos de memórias; exercícios
+  Semana: 7 a 8
+    Título: estrutura de dados e consumo
+Conteúdo: listas, grafos, vetores, matrizes esparsas
+  Semana: 9 a 11
+
+
+
+
+                                                                     Página 1
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+    Título: consumo em multicores
+Conteúdo: consumo em multicores; hierarquia de memórias; exercícios
+  Semana: 12 a 15
+    Título: estudo de caso em algoritmos populares
+Conteúdo: algortimos clássicos e algoritmos de machine learning
+  Semana: 15 a 18
+    Título: Trabalho Prático - Final
+Conteúdo: 1. Apresentação do trabalho prático
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, nas quais são combinadas a apresentação de conceitos e técnicas, com a
+aplicação destes pelos alunos sobre os exemplos, exercícios e os trabalhos extra-classe. As 60 horas previstas para atividades
+teóricas e teórico-práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de duração (2 períodos de 50
+minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais 10 horas (600 minutos) de
+atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e trabalhos extraclasse. O
+moodle será utilizado como arcabouço de ensino, concentrando os planos de aula, o material didático disponibilizado pelo professor,
+comunicação e tarefas.
+
+Experiências de Aprendizagem
+- aulas expositivas
+- trabalhos individuais e em grupos
+- realização de trabalhos extra-classe
+
+Critérios de avaliação
+O conceito final será obtido através de uma prova escrita (P1) e dois trabalhos práticos (T1 e T2), utilizando-se a seguinte
+ponderação:
+
+
+média final total = 0.4 P1 + 0.4 T2 + 0.2 T1
+
+
+Os conceitos serão distribuídos da seguinte forma:
+A ? Nota maior ou igual a 9,0
+B ? Nota menor que 9,0 e maior ou igual a 7,5
+C ? Nota menor que 7,5 e maior ou igual a 6,0
+D ? Nota menor que 6,0
+F ? Reprovação por frequência
+
+Atividades de Recuperação Previstas
+O aluno que obtiver conceito final D pode realizar um trabalho de recuperação versando sobre todo o conteúdo da disciplina, junto
+com uma prova, também sobre todo o conteúdo da disciplina. Se a nota obtida nessa prova for igual ou superior a 6,0, e o trabalho
+entregue obtiver nota superior a 6,0, então o conceito mudará para C.
+
+Bibliografia
+Básica Essencial
+GROMOV, V.. Optimize data structures and memory access patterns to improve data locality. web: gromov, 2019. Disponível em:
+https://software.intel.com/en-us/articles/optimize-data-structures-and-memory-access-patterns-to-improve-data-locality
+Nysttrom, R.. Data Locality. web: Genever, 2019. Disponível em: https://gameprogrammingpatterns.com/data-locality.html
+Patterson, D. Hennessy, J.. Organização e projeto de computadores. Rio de Janeiro: LTC, 2000. ISBN 9788535235852.
+
+Básica
+Thomas Stahl, Markus Voelter, and Krzysztof Czarnecki. Model-Driven Software Development: Technology, Engineering, Management. John Wiley,
+2006. ISBN 978-0-470-02570-3.
+Wayne C. Booth, Gregory G. Colomb, Joseph M. Williams. The Craft of Research. The University of Chicago, 2008. ISBN 978-0226065663.
+
+Complementar
+
+
+
+
+                                                                        Página 2
+                             PLANO DE ENSINO
+                                                                                 Data de Emissão: 15/08/2026
+
+
+
+                                 Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                     Não existem outras referências para este plano de ensino.
+
+Observações
+                                  Nenhuma observação incluída.
+
+
+
+
+                                                 Página 3
+

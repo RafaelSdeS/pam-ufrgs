@@ -1,0 +1,164 @@
+                                                  PLANO DE ENSINO
+                                                                                                           Data de Emissão: 15/08/2026
+
+
+
+                                                       Instituto de Informática
+                                              Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: LUIGI CARRO
+Disciplina: TÓPICOS ESPECIAIS EM ENGENHARIA DE COMPUTAÇÃO IV
+Sigla: INF01053             Créditos: 2
+
+Professores Responsáveis durante 2026/2
+                       Professor                                         Início                                  Fim
+LUIGI CARRO                                                       27/05/2026 (2026/2)                              -
+LEILA RIBEIRO                                                     18/06/2025 (2025/2)                     26/05/2026 (2026/2)
+
+Carga Horária
+CH Teórica: 10h      CH Prática: 20h      Total: 30h
+CH Coletiva: 20h     CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Invocações tecnológicas decorrentes de pesquisa recentes. Aplicações específicas, interessando a um grupo restrito ou tendo
+caráter de temporariedade. Aspectos específicos, de áreas do conhecimento já abordadas anteriormente, mas cobertos
+superficialmente, interessando a um grupo restrito de alunos e sendo objeto de pesquisa recente.
+
+Currículos
+                                       Currículos                                          Etapa Aconselhada            Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                     Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                              9                  Eletiva
+
+Objetivos
+Súmula: Introdução ao Projeto de Sistemas. LLMs e SLMs. Geração automática de código e testes embutidos. Ciclo de
+desenvolvimento de sistemas e gargalos estruturais. Redução de custos de desenvolvimento e proteção.
+
+
+Objetivos:
+Nesta disciplina de tópicos pretende-se investigar quais as possíveis oportunidades e desafios para produção massiva de software
+usando IA. Os alunos terão oportunidade de fazer do zero sistemas complexos como por exemplo, Amazon, Netflix e SalesForce.
+Contudo, a simples aplicação da IA não garantirá confiabilidade ao produto final. Nesta disciplina serão propostos e utilizados
+mecanismos de teste e validação, a serem embutidos nos projetos, para garantir que o objetivo final seja alcançado sem prejuízo de
+qualidade e confiabilidade. Além disto, os alunos serão incentivados a desenvolver sua base de conhecimento para produção de
+código localmente.
+
+
+A disciplina propõe-se a oferecer ao aluno de Computação os fundamentos para automação do processo de produção de código, e
+de sua confiabilidade, inspirando-se em problemas que se referem a empresas reais. Em especial, propõe-se a:
+
+
+* Desenvolver postura de análise crítica de requisitos e especificações de sistemas de software
+* Desenvolver habilidades básicas para planejar, implementar e executar ferramentas de geração de software.
+* Desenvolver habilidades para verificar automaticamente o resultado produzido por ferramentas.
+* Desenvolver habilidades para montar um eco-sistema de desenvolvimeto com garantias de proteção e segurança de
+desenvolvimento.
+
+Conteúdo Programático
+  Semana: 1
+    Título: Introdução à disciplina
+
+
+
+
+                                                                   Página 1
+                                                    PLANO DE ENSINO
+                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: Sistemas complexos, especificação e plano de negócios.
+  Semana: 2
+    Título: System Design Interviews
+Conteúdo: padrões de sistemas complexos
+  Semana: 3 a 6
+    Título: partição, desenvolvimento e teste
+Conteúdo: partição do problema; desenvolvimento de código e validação com testes
+  Semana: 7
+    Título: desenvolvimento com o uso de LLMs locais
+Conteúdo: desenvolvimento com o uso de LLMs locais; instalação e compromissos de desempenho e acurácia
+  Semana: 8 a 12
+    Título: desenvovimento adaptado a LLMs locais
+Conteúdo: repetindo o trabalho, mas agora com LLM locais
+  Semana: 13 a 15
+    Título: resultados e discussões
+Conteúdo: análise de resultados, discussão sobre caminhos possíveis
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, nas quais são combinadas a apresentação de conceitos e técnicas com a
+aplicação desses pelos alunos em exercícios e trabalhos práticos em aula e extraclasse.
+
+Experiências de Aprendizagem
+Ale&#769;m das aulas expositivas, os alunos tera&#771;o oportunidade de utilizar um software em laborato&#769;rio para a
+verificac&#807;a&#771;o prática dos conteu&#769;dos apresentados em aula. Havera&#769; uma se&#769;rie de exerci&#769;cios
+realizados em laboratório, bem como propostas de exercícios para serem realizados de forma autônoma pelo estudante, a fim de
+auxiliar no processo de ensino-aprendizagem.
+
+Critérios de avaliação
+Sera&#771;o realizados diversos trabalhos ao longo da disciplina, alguns em aula e outros como atividades autônomas.
+
+
+média final total = 0.4 T1 + 0.4 T2 + 0.1 R1 +0.1 R2
+T1, T2: Nota dos trabalhos
+R1, R2: Nota dos relatórios parciais
+
+
+A conversa&#771;o da me&#769;dia para conceitos sera&#769; realizada como descrito a seguir:
+Faltas > 25% : FF (reprovado)
+0 <= M < 6.0 : sem conceito (recuperac&#807;a&#771;o) ou D - ver Ativ. de recuperac&#807;a&#771;o previstas
+6.0<= M < 7.5 : C (aprovado)
+7.5 <= M < 9.0 : B (aprovado)
+9.0 <= M : A (aprovado)
+
+
+Obs: Somente sera&#771;o calculadas as me&#769;dias gerais daqueles alunos que tiverem obtido, ao longo do semestre, um
+i&#769;ndice de frequência a&#768;s aulas igual ou superior a 75% das aulas previstas. Aos que na&#771;o satisfizerem este
+requisito, sera&#769; atribui&#769;do o conceito FF (Falta de Frequência)
+
+Atividades de Recuperação Previstas
+O aluno que não obtiver média 6.0 poderá efetuar uma atividade de recuperação, que será uma prova que versará sobre todo o
+conteúdo da disciplina. Será considerado aprovado com conceito C o aluno que obtiver pelo menos a nota 6,0 na prova de
+recuperação. Em caso de não aprovação, será concedido o conceito D.
+
+Bibliografia
+Básica Essencial
+Grahl, Andre. Property-Guided LLM Program Synthesis for Planning. us: arxiv, 2026.
+
+
+
+                                                                        Página 2
+                                                     PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 15/08/2026
+
+
+
+Myers, G. J., Sandler, C.,. The art of software testing. Londres: John Wiley, 2011. ISBN 978-1118031964.
+Valente, M.. Engenharia de Software Moderna: Princípios e Práticas para Desenvolvimento de Software com Produtividade. Brasil: Independente,
+2020. ISBN 978-65-00-00077-1.
+
+Básica
+Alex Xu and Sahn Lam. System Design Interview - An Insider's Guide: Volume 2. us: bytebytego, 2020. ISBN 979-8664653403. Disponível em:
+https://bytebytego.com/
+
+Complementar
+                                                          Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+As 30 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 12 encontros de 100 minutos de
+duração (ao longo de 15 semanas) num total de 1200 minutos e mais 10 horas (600 minutos) de atividades autônomas, realizadas
+sem contato direto com o professor, correspondentes à implementação das atividades propostas, conforme Resolução 11/2013 do
+CEPE/UFRGS, Artigos 36 a 38. O Professor poderá se valer de aulas presenciais ou à distância (utilização de recursos da EAD),
+assim como do apoio de Professores Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas.
+
+
+
+
+                                                                         Página 3
+

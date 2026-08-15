@@ -1,0 +1,193 @@
+                                                     PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+                                                              Instituto de Informática
+                                                 Departamento de Informática Teórica
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: MARCIO DORN
+Disciplina: BIOLOGIA COMPUTACIONAL
+Sigla: INF05018              Créditos: 4
+
+Carga Horária
+CH Teórica: 45h       CH Prática: 15h      Total: 60h
+CH Coletiva: 50h       CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Algoritmos, Modelos e Métodos da Ciência da Computação aplicados à biologia e ciências naturais, com ênfase em problemas de
+interesse biológico. Pré-requisitos: INF05512 Teoria dos Grafos e Análise Combinatória.
+
+Currículos
+                                          Currículos                                           Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                           Eletiva
+BIOINFORMÁTICA                                                                                             6                 Obrigatória
+BIOTECNOLOGIA MOLECULAR                                                                                                        Eletiva
+
+Objetivos
+A disciplina visa desenvolver as seguinte habilidades específicas:
+
+
+AL-H-001Analisar problemas e elaborar programas que os solucionem, utilizando para isto uma linguagem de programção.
+AL-H-003Construir soluções computacionais utilizando conceitos de subprogramação, recursão, meta-programação e manipulação
+de arquivos
+AL-H-004Avaliar e selecionar uma estratégia adequada para a resolução de um problema
+AL-H-006Resolver problemas usando o pensamento computacional, aplicando as principais técnicas de construção de soluções
+computacionais e analisando criticamente as soluções
+IA-H-008Compreender os diversos paradigmas, classes de métodos e métodos de aprendizado de máquina.
+IA-H-009Identificar se a tarefa é preditiva ou descritiva, de acordo com os requisitos do problema e os dados disponíveis
+
+Conteúdo Programático
+  Semana: 1 a 3
+    Título: Introdução a Biologia Computacional
+Conteúdo: 1. Introdução à disciplina.
+              2. Conceitos básicos de Biologia Molecular.
+              3. Conceitos introdutórios de Bioinformática.
+              4. Conceitos introdutórios de Biologia Computacional.
+  Semana: 4 a 6
+    Título: Comparação de Sequências
+Conteúdo: 1. Introdução ao alinhamento de sequências: motivação biológica e conceitos fundamentais.
+              2. Alinhamento Global: algoritmo de Needleman-Wunsch.
+              3. Alinhamento Local: algoritmo de Smith-Waterman;
+              4. Extensões aos algoritmos clássicos: funções de penalidade de gap;
+              5. Alinhamento Múltiplo de Sequências (MSA): programação dinâmica (método exato) e abordagens heurísticas (progressivas e
+              iterativas).
+  Semana: 7 a 9
+
+
+
+
+                                                                         Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                       Data de Emissão: 15/08/2026
+
+
+
+    Título: Reconstrução de Árvores Filogenéticas
+Conteúdo: 1. Introdução à Filogenia: conceitos de evolução molecular e sistemática;
+              2. Terminologia de árvores (raízes, nós, ramos) e topologias;
+              3. Definição formal do problema;
+              4. Métodos baseados em caracteres
+              5. Métodos baseados em distância
+  Semana: 10 a 12
+    Título: Análise de Dados Expressão Gênica
+Conteúdo: 1. Introdução à Transcriptômica: tecnologias de aquisição de dados (Microarranjos vs RNA-Seq) e desafios computacionais;
+              2. Pré-processamento e Normalização: controle de qualidade, remoção de ruído e métodos de normalização;
+              3. Identificação de Genes Diferencialmente Expressos (DEGs);
+              4. Visualização de Dados;
+  Semana: 13 a 15
+    Título: Aprendizado de Máquina Aplicada a Biologia
+Conteúdo: 1. Fundamentos de Aprendizado de Máquina: conceitos de aprendizado supervisionado versus não supervisionado;
+              2. Pré-processamento de Dados: normalização, limpeza e seleção de características (feature selection);
+              3. Redução de Dimensionalidade: Análise de Componentes Principais (PCA) para visualização de dados biológicos;
+              4. Aprendizado Não Supervisionado (Agrupamento): algoritmos K-means e Agrupamento Hierárquico (dendrogramas);
+              5. Aprendizado Supervisionado (Classificação): Árvores de Decisão
+              6. Avaliação e Validação de Modelos: matriz de confusão, métricas (acurácia, sensibilidade, especificidade) e validação cruzada
+              (cross-validation).
+              7. Validação Cruzada
+              8. Redes Neurais Artificiais
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, nas quais são combinadas a apresentação de
+conceitos e técnicas com a aplicação destes pelos alunos sobre os exemplos, exercícios e os
+trabalhos extraclasse. As 60 horas previstas para atividades teóricas e práticas indicadas neste
+Plano de Ensino incluem 30 encontros de 100 minutos de duração (2 períodos de 50 minutos por
+encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais 10
+horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor,
+correspondentes a exercícios e trabalhos extraclasse. O professor poderá se valer de aulas
+presenciais e de atividades à distância (desde que nos limites previstos pela UFRGS para disciplinas
+presenciais e empregando ferramentas para atividades remotas), assim como do apoio de
+Professores Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas. Nesses casos, poderão
+ser utilizados recursos como aulas síncronas ou assíncronas, com o apoio de tecnologias adequadas.
+O Moodle será utilizado como arcabouço de ensino, concentrando os planos de aula, o material
+didático disponibilizado pelo professor, comunicação e tarefas.
+
+Experiências de Aprendizagem
+O estudante vivenciará o processo de aprendizagem por meio da imersão teórica e da participação em aulas expositivas para a
+compreensão dos modelos. Os alunos desenvolverão trabalhos práticos, implementando e aplicando os conceitos estudados em
+sala de aula. Além disso, os alunos realizarão a leitura e complementar de textos selecionados. Os estudantes devem seguir as
+regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA). As diretrizes relativas ao uso de
+IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as experiências de aprendizagem e os
+critérios de avaliação da disciplina."
+
+Critérios de avaliação
+ara ser aprovado, é necessário obter média final igual ou superior a 6,0 e frequência igual ou superior a 75%. A avaliação é realizada
+por meio da entrega e apresentação de 04 (quatro) trabalhos práticos, envolvendo a implementação de soluções computacionais
+para os problemas estudados na disciplina, e 04 (quatro) questionários. Cada atividade tem peso 10,0. A nota final da disciplina é
+
+
+
+
+                                                                         Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+obtida pela média aritmética dos trabalhos e questionários.
+
+
+A correspondência entre notas e conceitos é a seguinte:
+
+
+- Frequência final <75%: conceito final FF (reprovação por falta de frequência).
+- NOTA < 6.0: Conceito final D (insuficiente).
+- NOTA no intervalo [6.0; 7.5): Conceito final C.
+- NOTA no intervalo [7.5; 9.0): Conceito final B.
+- NOTA no intervalo [9.0; 10.0]: Conceito final A.
+
+Atividades de Recuperação Previstas
+Os alunos que obtiveram nota final menor do que 6.0 (após a realização das atividades), podem realizar somente uma única
+Atividade de Recuperação. A Atividade de Recuperação avalia conteúdos de todas as unidades do conteúdo da disciplina. Para ser
+aprovado é necessário obter nota final igual ou superior a 6.0.
+
+
+A correspondência entre notas e conceitos é a seguinte:
+- NOTA < 6.0: Conceito final D (insuficiente).
+- NOTA no intervalo [6.0; 7.5): Conceito final C.
+- NOTA no intervalo [7.5; 9.0): Conceito final B.
+- NOTA no intervalo [9.0; 10.0]: Conceito final A.
+
+
+Não há recuperação dos trabalhos e questionários por não comparecimento/entrega, exceto nos casos previstos na legislação
+(saúde, parto, serviço militar, convocação judicial, luto, etc.), sendo necessária a devida comprovação por parte do aluno e a
+aprovação pela instância responsável dentro da universidade.
+
+Bibliografia
+Básica Essencial
+Hugo Verli. Bioinformática da Biologia à Flexibilidade Molecular. Porto Alegre: SBBq, 2014. ISBN 978-85-69288-00-8. Disponível em:
+http://www.ufrgs.br/bioinfo/ebook/
+Setubal, Joao Carlos. Meidanis, Joao. Introduction to computational molecular biology. USA: Boston Pws, 1997. ISBN 9780534952624.
+
+Básica
+LESK, Arthur M.. Introdução à Bioinformática. Porto Alegre: Artmed, 2008. ISBN 8536311045.
+
+Complementar
+                                                         Sem bibliografias acrescentadas
+
+
+
+Outras Referências
+                                            Não existem outras referências para este plano de ensino.
+
+Observações
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos. Além
+destas, estão previstas mais 10 (dez) horas, totalizando 600 minutos, de atividades autônomas, realizadas sem contato direto com o
+professor, correspondentes a trabalhos extraclasse, conforme Resolução 11/2013 do CEPE/UFRGS. As atividades previstas incluem
+a realização de trabalhos a serem entregues, apresentados e avaliados. Havendo a necessidade de carga horária superior a 10
+horas de atividades autônomas para a realização dos trabalhos e seminário, estas serão realizadas na modalidade atividade coletiva
+(em sala de aula).
+
+
+O Professor poderá se valer de aulas presenciais ou à distância (utilização de recursos da EAD). A Disciplina poderá contar com o
+apoio de alunos de Pós-Graduação em Atividade Didática.
+
+
+
+
+                                                                        Página 3
+

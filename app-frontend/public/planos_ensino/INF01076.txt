@@ -1,0 +1,255 @@
+                                                  PLANO DE ENSINO
+                                                                                                            Data de Emissão: 15/08/2026
+
+
+
+                                                       Instituto de Informática
+                                              Departamento de Informática Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: MARIANA RECAMONDE MENDOZA GUERREIRO
+Disciplina: TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXVII
+Sigla: INF01076             Créditos: 4
+
+Carga Horária
+CH Teórica: 45h      CH Prática: 15h      Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h         CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Assuntos relacionados a inovações tecnológicas decorrentes de pesquisas recentes, aplicações específicas, interessando a um
+grupo restrito ou tendo caráter de temporariedade, aspectos abordados superficialmente em disciplinas regulares.
+
+Currículos
+                                       Currículos                                           Etapa Aconselhada           Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                                      Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                                  Eletiva
+
+Objetivos
+A disciplina tem como objetivo fornecer uma ampla introdução ao aprendizado de máquina (AM), apresentando conceitos
+fundamentais relacionados à área, os principais algoritmos para tarefas preditivas (com aprendizado supervisionado) e descritivas
+(com aprendizado não-supervisionado) e aspectos metodológicos para preparação de dados e validação de modelos. A disciplina
+também visa discutir aspectos de explicabilidade de modelos, vieses preditivos, e aplicações recentes de aprendizado de máquina
+em uma variedade de problemas do mundo real.
+
+
+A disciplina visa desenvolver as seguintes habilidades específicas:
+
+
+- Compreender os diversos paradigmas, classes de métodos e métodos de aprendizado de máquina.
+- Identificar impactos positivos e negativos da implantação de um sistema de IA.
+- Identificar se a tarefa é preditiva ou descritiva, de acordo com os requisitos do problema e os dados disponíveis.
+- Propor uma solução adequada em termos de eficácia e eficiência para um problema de aprendizado de máquina de acordo com a
+descrição e requisitos do problema, os dados e recursos computacionais disponíveis.
+- Avaliar de forma correta e robusta diferentes algoritmos de aprendizado de máquina, utilizando métricas de desempenho e
+estratégias de avaliação apropriadas para o tipo de tarefa em questão.
+- Preparar um conjunto de dados para uso por algoritmos de aprendizado de máquina, tratando a dimensionalidade, escala de
+valores, entradas ausentes e atributos menos relevantes para a tarefa em questão, de acordo com os requisitos dos algoritmos
+utilizados.
+- Prototipar uma solução de aprendizado supervisionado para um problema de predição
+- Identificar e mitigar under- e overfitting em aprendizado supervisionado
+- Identificar a necessidade de combinação de modelos preditivos (ensemble) e avaliar as abordagens (bagging, boosting, stacking).
+- Definir métricas de similaridade e o método de agrupamento mais apropriados de acordo com os dados e recursos computacionais
+disponíveis
+- Identificar a necessidade de redução de dimensionalidade dos dados e avaliar a técnica apropriada para o problema.
+
+Conteúdo Programático
+  Semana: 1
+     Título: Introdução ao aprendizado de máquina e aprendizado supervisionado
+
+
+
+
+                                                                    Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: Introdução ao aprendizado de máquina. Principais paradigmas e tipos de tarefas.
+              Métodos baseados em distância: k-Nearest Neighbors (kNN)
+              Introdução ao pré-processamento de dados: normalização e codificação de dados.
+  Semana: 2
+    Título: Aprendizado supervisionado com modelos baseados em árvores e introdução à avaliação de modelos
+Conteúdo: Árvores de decisão. Estratégias de poda em árvores de decisão.
+              Métricas básicas de avaliação de desempenho preditivo e divisão de dados com holdout.
+  Semana: 3 a 4
+    Título: Aprendizado supervisionado com modelos lineares e redes neurais
+Conteúdo: Regressão linear e logística. Otimização por gradiente descendente
+              Neurônio artificial. Perceptron multicamada.
+              Backpropagation: Intuição, Derivação, Exemplos.
+  Semana: 5 a 6
+    Título: Metodologia de modelagem preditiva: treinamento e avaliação de modelos
+Conteúdo: Overfitting e underfitting.
+              Otimização de hiperparâmetros.
+              Estratégias de desenvolvimento, avaliação e comparação de modelos. Aspectos práticos. Data leakage.
+  Semana: 7
+    Título: Aprendizado supervisionado com modelos ensemble
+Conteúdo: Aprendizado ensemble. Bagging, Boosting, Stacking. Principais algoritmos e aplicações
+  Semana: 8
+    Título: Avaliação
+Conteúdo: Revisão. Aplicação da prova teórica.
+  Semana: 9 a 10
+    Título: Metodologia de modelagem preditiva: preparação de dados e IA explicável
+Conteúdo: Pré-processamento de dados: Limpeza de Dados, Imputação de Valores Ausentes, Tratamento de Outliers. Seleção de features.
+              Redução de dimensionalidade e visualização: PCA e t-SNE. Interpretabilidade e explicabilidade de modelos preditivos.
+  Semana: 11 a 12
+    Título: Aprendizado não-supervisionado
+Conteúdo: Introdução ao aprendizado não-supervisionado. Algoritmos de agrupamentos: k-means e clustering hierárquico. Medidas de
+              proximidade. Validação de modelos descritivos
+              Mineração de padrões frequentes.
+  Semana: 13
+    Título: Aplicações práticas e aspectos sociais e éticos da IA
+Conteúdo: Exemplos reais de aplicações de aprendizado de máquina. Considerações éticas sobre aplicação de algoritmos de aprendizado de
+              máquina no mundo real. Vieses, usos maliciosos, impactos sociais, econômicos e ambientais.
+  Semana: 14 a 15
+    Título: Apresentação de trabalhos e considerações finais
+Conteúdo: Apresentação de trabalhos práticos. Discussão sobre aspectos práticos no uso de aprendizado de máquina
+
+Metodologia
+A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com o
+desenvolvimento de eventuais exercícios e discussões. Algumas das aulas serão realizadas em laboratórios para a
+implementação/visualização dos conceitos vistos em aula.
+
+
+As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
+duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais
+10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e
+trabalhos extraclasse a serem avaliados.
+
+
+
+
+                                                                       Página 2
+                                                  PLANO DE ENSINO
+                                                                                                          Data de Emissão: 15/08/2026
+
+
+
+A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos e
+acompanhamento geral da disciplina. Adicionalmente, outras plataformas também podem ser usadas para facilitar a comunicação, a
+realização e a avaliação de atividades.
+
+
+O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
+disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
+(Alunos de Pós-Graduação) em Atividades Didáticas.
+
+Experiências de Aprendizagem
+A disciplina será conduzida através de uma combinação de aulas expositivas dialogadas e do desenvolvimento de trabalhos de
+programação em laboratório, promovendo a aplicação prática dos conceitos. O aprendizado será complementado pela resolução de
+atividades de reforço extraclasse e pela dedicação aos trabalhos práticos de implementação, que consolidam as habilidades de
+projeto e prototipagem de soluções de aprendizado de máquina, e também exercitam habilidades de preparar e apresentar
+problemas técnicos e suas soluções de forma escrita e oral. Além disso, os estudantes utilizarão recursos didáticos como leituras e
+vídeos disponibilizados na plataforma de ensino. A avaliação do progresso e da compreensão do conteúdo será realizada por meio
+de questionários e pequenas atividades autônomas realizadas ao longo do semestre.
+
+
+Os estudantes devem seguir as regras definidas pelo(a) professor(a) responsável sobre o uso de ferramentas de Inteligência Artificial
+(IA). As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
+experiências de aprendizagem e os critérios de avaliação da disciplina.
+
+Critérios de avaliação
+O desempenho do aluno será avaliado da seguinte forma:
+
+
+- Prova teórica (P1): prova teórica (ou, eventualmente, um trabalho teórico) a ser desenvolvido individualmente, abordando
+conceitos e fundamentos da disciplina;
+- Trabalhos Práticos (T1 e T2): dois trabalhos práticos a serem desenvolvidos em grupos, extraclasse, envolvendo implementação
+e/ou aplicação de algoritmos de aprendizado de máquina para resolução de problemas;
+- Atividades de reforço (AT): atividades práticas e/ou teóricas, propostas ao longo do semestre e disponibilizadas via Moodle, de
+realização individual. Designamos AT como a média ponderada das notas dessas atividades. O peso atribuído a cada atividade será
+definido pelo professor, de acordo com os requisitos e características de cada atividade proposta.
+
+
+A composição da Nota Final (NF) será definida como:
+NF = (0,3 * P1) + (0,3 * T1) + (0,2 * T2) + (0,2 * AT)
+
+
+P1 e T1 serão realizados aproximadamente na metade do semestre letivo, e T2 será realizado mais próximo ao final do semestre.
+
+
+Será aprovado o aluno que obtiver nota final (NF) acima de 6 e frequência mínima de 75%. A NF será convertida em conceito de
+acordo com as seguintes regras:
+Conceito A: NF >= 9,0
+Conceito B: NF >=7,5 e < 9,0
+Conceito C: NF >= 6,0 e < 7,5
+Conceito D: NF < 6,0
+Conceito FF: caso o aluno não obtenha frequência mínima de 75%, independentemente da nota e sem direito a recuperação.
+
+
+O aluno que não obtiver NF >= 6,0 poderá realizar uma prova de recuperação, conforme definido no item ?Atividades de
+Recuperação Previstas?.
+
+Atividades de Recuperação Previstas
+Será oferecida uma oportunidade de recuperação aos alunos que atingirem a frequência mínima exigida de 75% e cuja nota final
+(NF), calculada conforme o item ?Critérios de Avaliação?, seja inferior a 6,0.
+
+
+
+
+                                                                   Página 3
+                                                      PLANO DE ENSINO
+                                                                                                                       Data de Emissão: 15/08/2026
+
+
+
+
+A prova de recuperação abrangerá todo o conteúdo da disciplina e será avaliada com um grau de 0 (zero) a 10 (dez), resultando na
+nota de recuperação (NR). Essa nota será então utilizada para calcular a média final (MF). O cálculo da MF pondera tanto o
+desempenho na recuperação quanto o esforço contínuo demonstrado ao longo do semestre, refletido na NF (calculada conforme
+definição no item ?Critérios de Avaliação?). Assim, para os alunos que realizarem a recuperação, a média final será dada por:
+MF = (0,6 * NR) + (0,4 * NF)
+
+
+O aluno será aprovado com conceito final C se obtiver MF igual ou superior a 6,0; caso contrário, será reprovado com conceito final
+D.
+
+Bibliografia
+Básica Essencial
+Faceli, K., Lorena, A. C., Gama, J., Almeida, T. A. de,. Inteligência artificial: uma abordagem de aprendizado de máquina.. Rio de Janeiro: LTC, 2021.
+ISBN 9788521637349.
+
+Básica
+Zaki, J. Z., Meira, W.. Data Mining and Machine Learning: Fundamental Concepts and Algorithms. Inglaterra: Cambridge University Press, 2020. ISBN
+9781108473989. Disponível em: https://dataminingbook.info/book_html/
+
+Complementar
+Géron, A.. Hands-on machine learning with Scikit-Learn, Keras, and TensorFlow: Concepts, tools, and techniques to build intelligent systems. Estados
+Unidos: O?Reilly Media, 2022. ISBN 9798228679245.
+Goodfellow, I., Bengio, Y., Courville, A.. Deep learning. Estados Unidos: MIT press, 2016. ISBN 9780262035613.
+Haykin, S.; Engel, P. M.. Redes neurais: princípios e prática. Porto Alegre: Bookman, 2001. ISBN 9788573077186.
+Prince, S. J. D.. Understanding deep learning. Estados Unidos: MIT press, 2023. ISBN 9780262377102. Disponível em: http://udlbook.com
+Russel, S. J.; Norvig, P.. Artificial Intelligence: A Modern Approach. Estados Unidos: Prentice-Hall, 2010. ISBN 9780136042594.
+
+
+
+Outras Referências
+                                 Título                                                                Texto
+Referências adicionais                                                      Outros materiais para consulta e estudo, como artigos de
+                                                                            conferências e periódicos relevantes ou vídeos didáticos,
+                                                                            serão disponibilizados no Moodle ao longo do semestre.
+Observações
+Informações sobre Plágio e IA: O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência
+artificial, no desempenho de tarefa ou atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas,
+tais como fraude ou plágio, constitui uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de
+penalidades impostas no contexto avaliativo da disciplina, o estudante estará sujeito à sanções que incluem advertência, repreensão
+por escrito, suspensão ou, na maior gravidade, desligamento da Universidade.
+
+
+
+Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
+vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
+utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
+atividades síncronas propostas mediante concordância prévia dos professores e colegas, sob as penas legais. É proibido
+disponibilizar, por quaisquer meios digitais ou físicos, os dados, a imagem e a voz de colegas e do professor, sem autorização
+específica para a finalidade pretendida. Os materiais disponibilizados no ambiente virtual possuem licença de uso e distribuição
+específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
+material de sua autoria.
+
+
+
+
+                                                                          Página 4
+

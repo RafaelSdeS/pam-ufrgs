@@ -1,0 +1,319 @@
+                                                    PLANO DE ENSINO
+                                                                                                               Data de Emissão: 15/08/2026
+
+
+
+                                               Instituto de Matemática e Estatística
+                                         Departamento de Matemática Pura e Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: EVANDRO MANICA
+Disciplina: EQUAÇÕES DIFERENCIAIS II
+Sigla: MAT01167            Créditos: 6
+
+Carga Horária
+CH Teórica: 90h     CH Prática: 0h     Total: 90h
+CH Coletiva: 90h     CH Autônoma: 0h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Equações diferenciais ordinárias e lineares. Elementos de séries de Fourier, polinômios de Legendre e funções de Bessel. Equações
+diferenciais lineares a derivadas parciais (problemas de contorno: equações da Física Clássica).
+
+Currículos
+                                       Currículos                                             Etapa Aconselhada              Natureza
+BIOMEDICINA                                                                                                                    Eletiva
+CIÊNCIAS ECONÔMICAS                                                                                                            Eletiva
+CIÊNCIAS ECONÔMICAS - NOTURNO                                                                                                  Eletiva
+CIÊNCIAS ECONÔMICAS - V 2                                                                                                      Eletiva
+CIÊNCIAS ECONÔMICAS - V3                                                                                                       Eletiva
+ENGENHARIA AMBIENTAL                                                                                      3                 Obrigatória
+ENGENHARIA CARTOGRÁFICA E DE AGRIMENSURA - NOTURNO                                                        3                  Alternativa
+ENGENHARIA CIVIL                                                                                          3                 Obrigatória
+ENGENHARIA DE ALIMENTOS                                                                                   3                 Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                                  3                 Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                                        3                 Obrigatória
+ENGENHARIA DE ENERGIA                                                                                     3                 Obrigatória
+ENGENHARIA DE MATERIAIS                                                                                   3                 Obrigatória
+ENGENHARIA DE MINAS                                                                                       3                 Obrigatória
+ENGENHARIA DE PRODUÇÃO                                                                                    4                 Obrigatória
+ENGENHARIA ELÉTRICA                                                                                       3                 Obrigatória
+ENGENHARIA FÍSICA                                                                                         3                 Obrigatória
+ENGENHARIA HÍDRICA                                                                                        3                 Obrigatória
+ENGENHARIA MECÂNICA                                                                                       3                 Obrigatória
+ENGENHARIA METALÚRGICA                                                                                    3                 Obrigatória
+ENGENHARIA QUÍMICA                                                                                        3                 Obrigatória
+
+Objetivos
+-Desenvolver no aluno a percepção da importância e do grau de aplicabilidade das equações diferenciais na modelagem
+matemática de situações concretas.
+
+
+-Estudar os métodos básicos de resolução de equações diferenciais. Propiciar ao aluno desenvoltura em classificar e manipular
+problemas que envolvam equações diferenciais, com técnicas específicas de abordagem, adequadas à resolução de cada um.
+
+Conteúdo Programático
+  Semana: 1 a 6
+    Título: 1 Equações Diferenciais Ordinárias de 1ª Ordem. Equações Diferenciais Ordinárias de 2ª Ordem Redutíveis a 1ª Ordem. Equações Diferenciais
+
+
+
+
+                                                                     Página 1
+                                                   PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: 1.1 Generalidades sobre Equações Diferenciais Ordinárias:
+               - Classificação das equações diferenciais em Equação Diferenciais Ordinárias (EDOs) e Equações Diferenciais Parciais (EDPs)
+               - Ordem e Linearidade de uma EDO
+               - Solução Geral, Solução Particular e Solução Singular de uma EDO
+               - Problemas de valor inicial e Problemas de contorno
+
+
+             1.2 EDOs de 1ª Ordem:
+                - Interpretação Geométrica - Campo de Direções
+                - Equações diferenciais a variáveis separáveis
+                - Estudo qualitativo das equações diferenciais autônomas de 1ª ordem
+                - Equações diferenciais ordinárias lineares (EDOLs) de 1ª ordem
+                - Equações de Bernoulli
+                - Equações exatas. Fatores integrantes.
+               - Teorema de existência e unicidade.
+               - Aplicações em modelos de dinâmica populacional, decaimento radioativo, circuitos elétricos simples RL e RC, entre outras, que
+             constituem problemas de valor inicial envolvendo equações diferenciais ordinárias de 1ª ordem
+
+
+             1.3 Equações Diferenciais Ordinárias de 2ª Ordem Redutíveis a 1ª Ordem.
+               - Ausência explícita da variável dependente
+               - Ausência explícita da variável independente
+
+
+             1.4 Equações Diferenciais Ordinárias Lineares (EDOLs) de 2ª Ordem Homogêneas
+               - Princípio da superposição de soluções
+               - Determinação de um Sistema fundamental de soluções para uma EDOL de 2ª ordem homogênea a Coeficientes Constantes -
+             equação característica
+               - Aplicações a problemas de valor inicial que descrevem oscilações livres, amortecidas e não amortecidas, em sistemas mecânicos
+             e em sistemas elétricos
+
+
+             1.5 Avaliação do conteúdo da primeira Área
+  Semana: 7 a 11
+    Título: 2. EDOLs de 2ª Ordem Não Homogêneas. Ponto Ordinário de uma EDOL Homogênea a Coeficientes Variáveis. Resolução por Série de Potênc
+Conteúdo: 2.1 EDOLs de 2ª Ordem, Não Homogêneas:
+               - Método de variação dos parâmetros
+               - Método dos coeficientes a determinar
+               - Solução transiente e solução estacionária
+               - Aplicações a problemas de valor inicial que modelam oscilações forçadas, amortecidas e não amortecidas, em sistemas
+             mecânicos (massa-mola) e em sistemas elétricos (circuito elétrico RLC)
+               - Equação diferencial de Cauchy-Euler.
+
+
+             2.2 Ponto Ordinário de uma EDOL Homogênea a Coeficientes Variáveis
+               - Resolução por série de potências, em torno de um ponto ordinário
+
+
+             2.3 Equação diferencial e Polinômios de Legendre
+               - Resolução da Equação de Legendre
+               - Polinômios de Legendre
+
+
+             2.4 Avaliação do conteúdo da segunda Área
+  Semana: 12 a 16
+    Título: 3. Ponto Singular Regular de uma EDOL Homogênea a Coeficientes Variáveis. Método de Frobenius. Equação e Funções de Bessel. Conjuntos
+
+
+
+
+                                                                       Página 2
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+Conteúdo: 3.1 Ponto Singular Regular de uma EDOL Homogênea a Coeficientes Variáveis
+                - Resolução pelo método de Frobenius
+
+
+              3.2 Equação Diferencial e Funções de Bessel
+                - Resolução da Equação de Bessel
+                - Funções de Bessel de 1ª e de 2ª espécie
+
+
+              3.3 Conjuntos Ortogonais de Funções. Séries de Fourier
+                - Produto interno de duas funções e conjunto ortogonal de funções, em algum intervalo
+                - Série de Fourier generalizada de uma função em relação a um conjunto ortogonal completo
+                - Série de Fourier. Série de Fourier seno. Série de Fourier Cosseno
+                - Série de Fourier-Legendre. Série de Fourier-Bessel
+
+
+              3.4 Problemas de Contorno com Equações Diferenciais Parciais da Física Clássica
+               - Equações Diferenciais Parciais (EDPs) - Generalidades
+               - O operador Laplaciano nos sistemas de coordenadas cartesianas, cilíndricas, plano-polares e esféricas.
+               - Resolução de EDPs lineares homogêneas pelo método de Separação de Variáveis
+               - Aplicacões na Resolução de Problemas de Contorno envolvendo a Equação da Difusão, a Equação da Onda e a Equação de
+              Laplace, em diversos sistemas de coordenadas
+
+
+              3.5 Avaliação do conteúdo da terceira Área
+  Semana: 17 a 18
+    Título: Revisão e atendimento individual
+Conteúdo: Revisão dos conteúdos para as provas de recuperação e atendimento individual.
+  Semana: 19
+    Título: Recuperações
+Conteúdo: Período destinado a atividades de recuperações.
+
+Metodologia
+O conteúdo programático será apresentado na modalidade presencial, em sala de aula, na forma expositivo/dialogada, ao longo de
+todo o período letivo.
+
+
+Adicionalmente, poderão ser utilizadas outras formas de apresentação do conteúdo, incluindo apresentações multimídia, em sala de
+aula ou em laboratório computacional.
+
+
+Outros recursos, tais como leituras de algum material complementar, poderão ser sugeridos aos alunos, através do Ambiente Virtual
+de Aprendizagem (AVA) institucional Moodle, eventualmente vinculado a alguma turma específica da disciplina.
+
+Experiências de Aprendizagem
+- Visando uma maior fixação dos conteúdos ministrados presencialmente em sala de aula, e também para que o aluno adquira maior
+desenvoltura e segurança na abordagem dos diversas tópicos estudados, serão disponibilizados no decorrer do curso, listas de
+exercícios contendo questões dissertativas (o aluno deve desenvolver a resposta, de forma completa, explicando raciocínio e
+cálculos para chegar ao resultado) e/ou objetivas (com alternativas das quais o aluno deve assinalar a resposta correta), do tipo
+múltipla escolha ou ainda do tipo certo ou errado.
+
+
+- Outras atividades complementares poderão ser propostas através do Ambiente Virtual de Aprendizagem(AVA) institucional Moodle
+eventualmente vinculado a alguma turma da disciplina.
+
+
+- Horários para atendimento extraclasse, em formato presencial ou à distância, serão agendados com os alunos,
+proporcionando-lhes oportunidades de esclarecerem suas eventuais dúvidas.
+
+
+
+
+                                                                         Página 3
+                                                   PLANO DE ENSINO
+                                                                                                             Data de Emissão: 15/08/2026
+
+
+
+Critérios de avaliação
+Os conteúdos programáticos da disciplina serão divididos em 3 áreas, especificadas no conteúdo programático. Conteúdos
+referentes às semanas 1 a 6 correspondem à Área 1; conteúdos referentes às semanas 7 a 11 correspondem à Área 2 e conteúdos
+referentes às semanas 11 a 16 correspondem à Área 3. Ao final de cada área será realizada uma prova escrita envolvendo o
+conteúdo desta área. Desta forma, ao final do semestre o aluno terá realizado 3 provas escritas, sendo que, a cada área
+corresponderá um grau de aproveitamento registrado em notas V1, V2 e V3, respectivamente.
+
+
+Aos alunos que tiverem frequentado menos que 75% da carga horária prevista para atividades coletivas, será atribuído um conceito
+final de reprovação FF, por falta de frequência.
+
+
+Para os alunos que tiverem frequentado no mínimo 75% da carga horária prevista para atividades coletivas, será atribuído um
+conceito final A, B ou C, de aprovação, dependendo da nota obtida em cada área e também da média aritmética MV das notas de
+área,
+                                  MV = (V1+V2+V3)/3,
+como segue:
+        A - nenhuma nota de área < 4,0 e média MV maior ou igual a 9,0;
+        B - nenhuma nota de área < 4,0 e média MV maior ou igual a 7,5 e menor que 9,0;
+        C - nenhuma nota de área < 4,0 e média MV maior ou igual a 6,0 e menor que 7,5.
+
+
+Aos alunos que não fizerem jus a nenhum dos conceitos finais acima estabelecidos, serão oportunizadas atividades de recuperação,
+como especificadas a seguir.
+
+
+Ao aluno já aprovado pelo critério exposto acima, será facultada a oportunidade de melhorar o seu conceito final, através da
+realização da prova de recuperação correspondente a uma única área, de sua escolha. Neste caso, para o cálculo do seu conceito
+final, valerá a nota mais alta entre a prova original e a prova de recuperação correspondente.
+
+Atividades de Recuperação Previstas
+Ao aluno que não obtiver média MV maior ou igual a 6,0 (seis) ou que possuir nota menor que 4,0 (quatro) em alguma área, será
+oportunizada uma atividade de recuperação, que consistirá em realizar uma prova de Recuperação de Área, ou realizar um Exame,
+conforme especificado a seguir:
+
+
+i) Prova de recuperação sobre os conteúdos de uma única área - substituirá a nota correspondente à área que o aluno estiver
+recuperando. Esta nota substituirá a nota de Área obtida anteriormente no cálculo do novo conceito final, com os mesmos critérios e
+atribuição de conceitos acima descritos para a aprovação. Caso, após este novo cálculo, o aluno não fizer jus a nenhum conceito de
+aprovação, seu conceito final será D, de reprovação por falta de aproveitamento.
+Esta modalidade de atividade de recuperação só é permitida ao aluno que tiver obtido apenas uma ou nenhuma nota de área inferior
+a 4,0 (quatro).
+
+
+ii) Exame sobre todos os conteúdos da disciplina. Esta modalidade é obrigatória ao aluno que tiver obtido duas ou três notas de área
+inferiores a 4,0 (quatro). O conceito final na disciplina será atribuído de acordo com a nota final NF, calculada por
+               NF= (2 * MV + 3 * NE) / 5,
+onde MV é a média calculada anteriormente e NE é a nota do exame. Para ser aprovado após realizar este exame, o aluno deverá
+obter a nota final NF maior ou igual a 6,0, e seu conceito final na disciplina será atribuído como segue:
+
+
+Conceitos de aprovação após realizar Exame de recuperação:
+        B - NF maior ou igual a 8,0
+        C - NF maior ou igual a 6,0 e menor que 8,0
+
+
+Conceito de reprovação por desempenho acadêmico insatisfatório:
+        D - NF menor que 6,0
+
+
+
+
+                                                                    Página 4
+                                                      PLANO DE ENSINO
+                                                                                                                       Data de Emissão: 15/08/2026
+
+
+
+
+Esta modalidade de atividade de recuperação também é permitida ao aluno que não tiver obtido nenhuma nota de área menor que
+4,0 mas tiver média MV menor que 6,0.
+
+
+
+O período de 72 horas após a divulgação do resultado das provas regulares é o tempo mínimo exigido para realizar as atividades de
+recuperação da disciplina.
+
+Bibliografia
+Básica Essencial
+Boyce, William E.; DiPrima, Richard C.. Equações diferenciais elementares e problemas de valores de contorno. Rio de Janeiro: LTC, 2015. ISBN
+978-85-216-2735-7.
+Edwards Jr., C.Henry; Penney, David E.. Equações elementares com problemas de contorno. Rio de Janeiro: LTC, 1995. ISBN 978-85-705-4057-7.
+Zill, Dennis G.. Equações diferenciais com aplicações em modelagem. São Paulo: Cengage CTP, 2016. ISBN 978-85-221-2389-6.
+
+Básica
+Borelli, Robert L.; Coleman, Courtney S.. Differential equations: a modeling perspective. New Jersey: John Wiley, 2004. ISBN 978-04-714-3332-3.
+Brietzke, Eduardo. Notas de aula de Equações Diferenciais II. Porto Alegre, 2010. Disponível em: http://www.mat.ufrgs.br/~brietzke/textos
+Lomen, David O.; Lovelock, David. Differential Equations: graphics, models, data. New Jersey: John Wiley, 1998. ISBN 978-04-710-7648-3.
+Spiegel, Murray R.. Fourier Analysis with applications to boundary value problems. New York: McGraw-Hill, 1998. ISBN 978-00-706-0219-9.
+
+Complementar
+Asmar, Nakhle H.. Partial differential equations with Fourier series and boundary value problems. Mineola: Dover Publications Inc., 2016. ISBN
+978-04-868-0737-9.
+Brannan, James R.; Boyce, William E.. Differential Equations: An introduction to modern methods and applications. New Jersey: John Wiley, 2015.
+ISBN 978-11-185-3177-8.
+Figueiredo, Djairo G. de. Análise de Fourier e equações diferenciais parciais. Rio de Janeiro: IMPA, 2003. ISBN 978-85-244-0120-6.
+Kreyszig, Erwin. Advanced engineering mathematics. New Jersey: John Wiley, 2015. ISBN 978-81-265-5423-2.
+Simmons, George F.. Differential equations with applications and historical notes. Boca Raton: CRC Press, 2023. ISBN 978-10-324-7714-5.
+Spiegel, Murray R.; Lipschutz, Seymour et al.. Mathematical handbook of formulas and tables. New York: McGraw-Hill, 2017. ISBN
+978-12-600-1053-4.
+Tenenbaum, Morris; Pollard, Harry. Ordinary differential equations: an elementary texbook for students of mathematics, engineering, and the
+sciences.. Mineola: Dover Publications, 1985. ISBN 978-04-866-4940-5.
+
+
+
+Outras Referências
+                                             Não existem outras referências para este plano de ensino.
+
+Observações
+1. Alunos de pós-graduação vinculados aos programas de pós-graduação em Matemática e em Matemática Aplicada poderão fazer
+estágio de docência nesta disciplina.
+
+
+
+
+                                                                          Página 5
+

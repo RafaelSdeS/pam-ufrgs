@@ -1,0 +1,214 @@
+                                                     PLANO DE ENSINO
+                                                                                                                Data de Emissão: 15/08/2026
+
+
+
+                                               Instituto de Matemática e Estatística
+                                          Departamento de Matemática Pura e Aplicada
+
+Dados de identificação
+Período Letivo: 2026/2
+Professor Responsável: FABIO SOUTO DE AZEVEDO
+Disciplina: MATEMÁTICA APLICADA II
+Sigla: MAT01168             Créditos: 6
+
+Carga Horária
+CH Teórica: 90h      CH Prática: 0h     Total: 90h
+CH Coletiva: 90h     CH Autônoma: 0h        CH Individual: 0h
+Carga Horária de prática Extensionista (CHE) 0h
+
+Súmula
+Séries de Fourier. Integral de Fourier. Transformadas de Fourier e de Laplace. Análise vetorial.
+
+Currículos
+                                        Currículos                                             Etapa Aconselhada             Natureza
+BACHARELADO EM QUÍMICA                                                                                                         Eletiva
+CIÊNCIAS ECONÔMICAS                                                                                                            Eletiva
+CIÊNCIAS ECONÔMICAS - NOTURNO                                                                                                  Eletiva
+CIÊNCIAS ECONÔMICAS - V 2                                                                                                      Eletiva
+CIÊNCIAS ECONÔMICAS - V3                                                                                                       Eletiva
+ENGENHARIA CIVIL                                                                                                               Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                   4                 Obrigatória
+ENGENHARIA DE CONTROLE E AUTOMAÇÃO                                                                         4                 Obrigatória
+ENGENHARIA DE ENERGIA                                                                                      4                 Obrigatória
+ENGENHARIA DE MATERIAIS                                                                                                       Adicional
+ENGENHARIA ELÉTRICA                                                                                        4                 Obrigatória
+ENGENHARIA FÍSICA                                                                                          4                 Obrigatória
+ENGENHARIA HÍDRICA                                                                                         5                 Obrigatória
+ENGENHARIA MECÂNICA                                                                                        4                 Obrigatória
+ENGENHARIA METALÚRGICA                                                                                     6                   Eletiva
+ENGENHARIA QUÍMICA                                                                                         4                 Obrigatória
+
+Objetivos
+Objetivos:
+
+
+Desenvolver a habilidade matemática necessária para a solução de problemas aplicados, envolvendo aspectos de modelagem,
+solução, interpretação de resultados e tomada de decisões.
+    A primeira área trata de tópicos importantes da análise vetorial, as aplicações incluem problemas clássicos da Mecânica, do
+movimento de fluidos e do eletromagnetismo, como as equações de Maxwell.
+A segunda área trata das transformadas integrais e sinais. A ênfase será dada à representação de funções por séries e integrais de
+Fourier, visando à obtenção e interpretação de espectros de sinais. Também, serão estudados alguns problemas clássicos da Física
+usando o método das transformadas de Fourier e de Laplace. Exemplos de aplicações são problemas envolvendo circuitos elétricos,
+osciladores, vigas, transmissão de calor e acústica.
+
+Conteúdo Programático
+  Semana: 1 a 6
+    Título: Área I: Análise Vetorial
+Conteúdo: Cálculo Vetorial: Revisão. Triedro de Frenet-Serret. Curvatura e Torção. Equação de Frenet-Serret. Aplicações à cinemática de uma
+
+
+
+
+                                                                      Página 1
+                                                      PLANO DE ENSINO
+                                                                                                                         Data de Emissão: 15/08/2026
+
+
+
+              partícula. Parametrização de superfícies. Vetor normal à superfície. Campos escalares e vetoriais. Representação gráfica de campos
+              vetoriais. Campos radiais em coordenadas retangulares. O operador vetorial del, o gradiente, o divergente, o rotacional e o laplaciano.
+              Suas propriedades, interpretações físicas e aplicações. Integração vetorial: integrais simples, integrais de linha e integrais de
+              superfície. Fluxo de um campo vetorial através de uma superfície. Teorema trabalho-energia. Circulação de um campo vetorial ao
+              longo de uma curva. Teoremas de Gauss e Stokes. Equações de Maxwell. Outras aplicações
+  Semana: 7 a 12
+    Título: Área IIA: Transformada de Laplace
+Conteúdo: Números complexos. A Transformada de Laplace como método operacional para
+              solução de problemas de valor inicial. Definição e propriedades da Transformada de Laplace. A transformada inversa. A função de
+              Heaviside e a delta de Dirac. O teorema da convolução. Frações parciais. Funções periódicas e a retificação. O uso de transformada
+              de Laplace na solução de equações diferenciais ordinárias e
+              parciais. Aplicações.
+  Semana: 13 a 18
+    Título: Área IIB: Transformada de Fourier
+Conteúdo: Sinais: Transformada de Fourier.
+              A série de Fourier e a integral de Fourier. Forma complexa da série e da integral de Fourier. Espectros de Fourier. Representação de
+              funções por integrais de Fourier. Representações para a delta de Dirac. A Transformada de Fourier. Transformada seno e cosseno de
+              Fourier. Transformada de sinais periódicos. Sinais discretos e contínuos. Teorema da amostragem. Propriedades. O uso das Séries
+              de Fourier, Transformadas de Fourier na solução de equações diferenciais ordinárias e parciais. Aplicações.
+  Semana: 19
+    Título: Recuperação
+Conteúdo: Recuperação.
+
+Metodologia
+A disciplina será desenvolvida através 54 encontros de atividades coletivas, com 100min cada. Estes encontros totalizarão 5400
+minutos de aula.
+
+
+Nas atividades coletivas, o conteúdo será apresentado de forma expositivo-dialogada, de modo a fornecer ao aluno conhecimentos
+e técnicas que lhe sejam úteis posteriormente, capacitando-o à aplicação dos temas abordados, mediante exemplos práticos e
+teóricos.
+
+
+Serão fornecidas listas de exercícios para fixação e discussão dos conteúdos vistos em aulas.
+
+
+Desta forma, visamos desenvolver e consolidar atitudes de participação, comprometimento, organização, flexibilidade, crítica e
+autocrítica no desenrolar do processo de ensino-aprendizagem, visando a aprendizagem significativa em detrimento do ensino
+puramente mecânico.
+
+Experiências de Aprendizagem
+(i) Aulas expositivas para ensino e aprendizagem dos tópicos do conteúdo programático, totalizando a carga horária da disciplina.
+(ii) Havendo disponibilidade de recursos multimídia, serão realizadas aulas prático-demonstrativas.
+(iii) Resolução das listas de exercícios propostas pelo professor, bem como a leitura de textos complementares disponibilizados
+pelos professores.
+(iv) Atendimento com alunos bolsistas monitores, uma vez que estes sejam disponibilizados pela Pró-Reitoria de Graduação e pelo
+Departamento de Matemática Pura e Aplicada.
+
+Critérios de avaliação
+Será realizada uma prova presencial escrita e individual ao final de cada uma das áreas, I, IIA e IIB. Cada uma dessas provas
+receberá nota (P1, P2 e P3, respectivamente) entre 0 e 10 (zero e dez).
+O aluno será considerado aprovado na disciplina se os seguintes requisitos forem atingidos:
+1) Se tiver comparecido a pelo menos 75% das aulas expositivas previstas na disciplina;
+2) Média aritmética simples das três provas maior ou igual a seis;
+
+
+
+
+                                                                           Página 2
+                                                      PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 15/08/2026
+
+
+
+3) Média aritmética simples entre P2 e P3 maior igual a cinco;
+4) P1 maior igual a cinco.
+
+
+Para os alunos aprovados, o conceito final será atribuído de acordo com a tabela abaixo, onde M é a média aritmética simples das
+notas das três avaliações:
+Se M maior ou igual a 6.0 e M menor do que 7.5, o conceito é C;
+Se M maior ou igual a 7.5 e M menor do que 9.0, o conceito é B;
+Se M maior ou igual a 9.0, o conceito é A;
+Os demais alunos receberão conceito D.
+
+
+Para qualquer uma das provas, estruturação, duração, data, uso de ferramentas e ambientes de auxílio, e critérios de correção ficam
+a critério de cada professor, devendo ser comunicados aos respectivos estudantes com a antecedência legal.
+
+Atividades de Recuperação Previstas
+Caso o aluno realize a prova de recuperação da primeira área e obtenha grau R1, a nota da área será substituída por N1 = (P1+3
+R1)/4 onde P1 é a nota da avaliação da primeira área.
+
+
+Caso o aluno realize a prova de recuperação das áreas IIA e IIB e obtenha grau R2, a nota das duas áreas serão substituídas por N2
+= (P2+P3 +6 R2)/8 onde P2 e P3 são as notas das avaliações das áreas IIA e IIB, respectivamente.
+
+
+A aprovação exigirá que cada uma das notas de área, N1 e N2, forem iguais ou superiores a cinco e se a média aritmética
+M:=(N1+2*N2)/3 for igual ou superior a seis.
+
+
+Se o aluno tiver comparecido a pelo menos 75% dos encontros previstos na disciplina e,
+1) Se M maior ou igual a 6.0 e M menor do que 7.5, então o conceito é C;
+2) Se M maior ou igual a 7.5 e M menor do que 9.0, então o conceito é B;
+3) Se M maior ou igual a 9.0, então o conceito é A;
+4) Os demais alunos receberão conceito D.
+
+
+Independente de suas notas, o aluno que faltar a mais do que 25% dos encontros previstos, será considerado reprovado com
+conceito FF.
+
+Bibliografia
+Básica Essencial
+Múltiplos autores. Cálculo Vetorial, um livro colaborativo. Porto Alegre: REAMAT, 2024. Disponível em:
+https://www.ufrgs.br/reamat/Calculo/livro-cv/main.html
+Múltiplos autores. Transformadas integrais, um livro colaborativo. Porto Alegre: REAMAT, 2024. Disponível em:
+https://www.ufrgs.br/reamat/TransformadasIntegrais/index.html
+
+Básica
+Anton, Howard; Bivens, Irl; Davis, Stephen;. Cálculo. Porto Alegre: Bookman, 2007. ISBN 9788560031634 (V.1); 9788560031801 (V.2).
+Hsu, Hwei P.. Análise de Fourier. Rio de Janeiro: Livros Técnicos e Científicos, 1973.
+Hwei P. Hsu. Sinais e Sistemas. Porto Alegre: Bookman Cia. Editora, 2011. ISBN 978-85-7780-938-7.
+Zill, Dennis G.. Equações diferenciais com aplicações em modelagem. São Paulo: Thomson, 2003. ISBN 8522103143; 9788522103140.
+
+Complementar
+Asmar, Nakhle. Partial differential equations and boundary value problems. New Jersey: Prentice-Hall, c2005. ISBN 0131480960.
+O'Neil, Peter V.. Advanced engineering mathematics. New York: Brooks/Cole Pub. Co., 2003. ISBN 9780534401306.
+Spiegel, Murray Ralph. Transformadas de Laplace :resumo da teoria, 263 problemas resolvidos, 614 problemas propostos. São Paulo: McGraw-Hill
+do Brasil, c1978.
+Strang, Gilbert. Calculus. Cambridge: Wellesley-Cambridge Press, 1991. ISBN 0961408820.
+Stroud, K.A.; Booth, Dexter J.. Advanced engineering mathematics :a new edition of further engineering mathematics. New York: Palgrave Macmillan,
+c2003. ISBN 1403903123.
+
+
+
+
+                                                                           Página 3
+                                               PLANO DE ENSINO
+                                                                                                   Data de Emissão: 15/08/2026
+
+
+
+
+Outras Referências
+                                       Não existem outras referências para este plano de ensino.
+
+Observações
+Alunos de pós-graduação vinculados aos programas de pós-graduação em Matemática e em Matemática Aplicada poderão fazer
+estágio de docência nesta disciplina
+
+
+
+
+                                                                   Página 4
+
