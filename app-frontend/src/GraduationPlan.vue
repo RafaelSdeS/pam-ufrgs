@@ -191,7 +191,8 @@ function recalculateFrom(semIndex, newLimit) {
     completedCodes: completed,
     creditLimit: creditLimit.value,
     electiveCreditsRemaining: remainingElectiveCredits,
-    firstSemesterCreditLimit: newLimit
+    firstSemesterCreditLimit: newLimit,
+    electiveCreditsAlreadyPlaced: prefixElectiveCredits
   })
 
   const tail = result.semesters.map(sem => sem.subjects.map(s => s.code))

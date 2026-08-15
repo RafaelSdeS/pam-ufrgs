@@ -16,7 +16,7 @@ function makeElectivePlaceholder(credits) {
 }
 
 export const predictionService = {
-  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0, firstSemesterCreditLimit = null }) {
+  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0, firstSemesterCreditLimit = null, electiveCreditsAlreadyPlaced = 0 }) {
     const completedSet = new Set(completedCodes.map(c => String(c).toUpperCase()))
     let remaining = subjects.filter(s => !completedSet.has(String(s.code).toUpperCase()))
     const simulatedCompleted = [...completedCodes]
@@ -28,7 +28,7 @@ export const predictionService = {
       // Eletivas colocadas em semestres anteriores desta mesma simulação - usado só para o
       // limiar de "créditos eletivos" de algumas disciplinas (ex.: Trabalho de Graduação no ECP).
       // Não conta as eletivas do próprio semestre sendo montado agora.
-      const electivesPlacedSoFar = initialElectiveCredits - electivesLeft
+      const electivesPlacedSoFar = electiveCreditsAlreadyPlaced + (initialElectiveCredits - electivesLeft)
       // Só o primeiro semestre gerado nesta chamada usa o limite customizado - os demais
       // seguem o limite padrão, mesmo quando essa chamada está regerando só uma "cauda" do plano.
       const semesterLimit = (semesters.length === 0 && firstSemesterCreditLimit != null) ? firstSemesterCreditLimit : creditLimit
