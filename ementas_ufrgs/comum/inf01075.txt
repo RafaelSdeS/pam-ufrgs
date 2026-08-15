@@ -1,60 +1,34 @@
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+                                                     PLANO DE ENSINO
+                                                                                                                Data de Emissão: 14/08/2026
 
-Instituto de Informática
-Departamento de Informática Aplicada
+
+
+                                                        Instituto de Informática
+                                              Departamento de Informática Aplicada
+
 Dados de identificação
 Período Letivo: 2026/2
 Professor Responsável: Claudio Machado Diniz
 Disciplina: ARQUITETURA DE COMPUTADORES
-Sigla: INF01075
-
-Créditos: 4
+Sigla: INF01075             Créditos: 4
 
 Carga Horária
-CH Teórica: 50h
-
-CH Prática: 10h
-
-Total: 60h
-
-CH Coletiva: 50h
-
-CH Autônoma: 10h
-
-CH Individual: 0h
-
+CH Teórica: 50h      CH Prática: 10h      Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h        CH Individual: 0h
 Carga Horária de prática Extensionista (CHE) 0h
+
 Súmula
 Representação de dados: sistemas de numeração, aritmética binária e decimal, representação de caracteres. Noções básicas de
 arquitetura de computadores: organização básica da UCP; conjunto, formato, modos de endereçamento e armazenamento de
 instruções. Programação em linguagem de máquina e linguagem simbólica. Sub-rotinas: tipos, características e passagem de
 parâmetros. Interrupções e rotinas de tratamento.
+
 Currículos
-Currículos
-BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
-
-Etapa Aconselhada
-
-Natureza
-
-2
-
-Obrigatória
-
-BIOINFORMÁTICA
-
-Eletiva
-
-BIOTECNOLOGIA MOLECULAR
-
-Eletiva
-
-ENGENHARIA DE COMPUTAÇÃO
-
-2
-
-Obrigatória
+                                        Currículos                                             Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                       2                  Obrigatória
+BIOINFORMÁTICA                                                                                                                  Eletiva
+BIOTECNOLOGIA MOLECULAR                                                                                                         Eletiva
+ENGENHARIA DE COMPUTAÇÃO                                                                                   2                  Obrigatória
 
 Objetivos
 A disciplina visa desenvolver as seguinte habilidades específicas:
@@ -62,66 +36,68 @@ A disciplina visa desenvolver as seguinte habilidades específicas:
 - AR-H-003 - Analisar o funcionamento e utilizar os componentes básicos para composição de arquiteturas computacionais.
 - AR-H-005 - Avaliar o funcionamento de arquiteturas de von Neumann e seus principais componentes.
 - AR-H-006 - Criar programas utilizando arquiteturas de conjuntos de instruções para resolver diferentes problemas.
+
 Conteúdo Programático
-Semana: 1
-Título: Representação de dados
+  Semana: 1
+    Título: Representação de dados
 Conteúdo: Revisão de conversão de bases, inteiros positivos, sinal-magnitude (interpretação de valores, operações de soma e subtração, estouro
-de representação).
-
-Semana: 2
-Título: Representação de dados
+              de representação).
+  Semana: 2
+    Título: Representação de dados
 Conteúdo: Complemento de B (interpretação de valores, operações de soma e subtração, estouro de representação). Representação de
-caracteres.
-
-Semana: 3
-Título: Representação de dados e Arquitetura de von Neumann
+              caracteres.
+  Semana: 3
+    Título: Representação de dados e Arquitetura de von Neumann
 Conteúdo: Componentes básicos, ciclo de busca-decodificação-execução.
-Semana: 4
-Título: Arquiteturas de conjunto de instruções
+  Semana: 4
+    Título: Arquiteturas de conjunto de instruções
 Conteúdo: Instruções, formatos de instruções (3, 2, 1 e 0 endereços).
-Semana: 5
-Título: Arquiteturas de conjunto de instruções
+  Semana: 5
+    Título: Arquiteturas de conjunto de instruções
 Conteúdo: Modos de endereçamento, conjuntos de instruções RISC e CISC. Endianness.
 
-Página 1
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
 
-Semana: 6
-Título: Revisão, exercícios, avaliação 1
+
+                                                                        Página 1
+                                                        PLANO DE ENSINO
+                                                                                                               Data de Emissão: 14/08/2026
+
+
+
+  Semana: 6
+    Título: Revisão, exercícios, avaliação 1
 Conteúdo: Revisão, exercícios, avaliação 1.
-Semana: 7
-Título: Programação em linguagem de montagem
+  Semana: 7
+    Título: Programação em linguagem de montagem
 Conteúdo: Introdução à programação com linguagem de montagem, uso de montadores e simuladores.
-Semana: 8
-Título: Programação em linguagem de montagem
+  Semana: 8
+    Título: Programação em linguagem de montagem
 Conteúdo: Exercícios e exemplos de programas básicos em linguagem de montagem (desvios, laços). Aula prática em laboratório, utilizando
-montadores e simuladores.
-
-Semana: 9
-Título: Representação de dados
+               montadores e simuladores.
+  Semana: 9
+    Título: Representação de dados
 Conteúdo: Ponto fixo e ponto flutuante.
-Semana: 10
-Título: Programação em linguagem de montagem
+  Semana: 10
+    Título: Programação em linguagem de montagem
 Conteúdo: Exercícios e exemplos de programas em linguagem de montagem. Algoritmos de multiplicação e divisão. Operações em ponto
-flutuante de precisão simples e dupla.
-
-Semana: 11
-Título: Mecanismos de chamada de sub-rotinas e de interrupção
+               flutuante de precisão simples e dupla.
+  Semana: 11
+    Título: Mecanismos de chamada de sub-rotinas e de interrupção
 Conteúdo: Chamada de sub-rotinas, passagem de parâmetros, uso da pilha, exemplos.
-Semana: 12
-Título: Mecanismos de chamada de sub-rotinas e de interrupção
+  Semana: 12
+    Título: Mecanismos de chamada de sub-rotinas e de interrupção
 Conteúdo: Exercícios e exemplos de programas em linguagem de montagem, aula prática em laboratório (chamada de sub-rotinas).
-Semana: 13
-Título: Mecanismos de chamada de sub-rotinas e de interrupção
+  Semana: 13
+    Título: Mecanismos de chamada de sub-rotinas e de interrupção
 Conteúdo: Interrupções, rotinas de tratamento de interrupção.
-Semana: 14
-Título: Mecanismos de chamada de sub-rotinas e de interrupção
+  Semana: 14
+    Título: Mecanismos de chamada de sub-rotinas e de interrupção
 Conteúdo: Chamadas de sistema, exemplos de programas em linguagem de montagem, aula prática em laboratório.
-Semana: 15
-Título: Revisão, exercícios, avaliação 2
+  Semana: 15
+    Título: Revisão, exercícios, avaliação 2
 Conteúdo: Revisão, exercícios, avaliação 2.
+
 Metodologia
 A disciplina utilizará o sistema Moodle/UFRGS para distribuição de material, entrega de trabalhos, organização de grupos de
 discussão e acompanhamento geral da disciplina. A disciplina é apresentada em aulas teórico-práticas, em que se combina a
@@ -132,6 +108,7 @@ encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minuto
 autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios e trabalhos extraclasse a serem avaliados.
 O Professor poderá se valer do apoio de Alunos de Pós-Graduação em Atividades Didáticas para auxílio das aulas práticas em
 laboratório.
+
 Experiências de Aprendizagem
 Os alunos participarão das seguintes experiências de aprendizagem: aulas expositivas dialogadas; realizar atividades em
 laboratórios de informática; realizar trabalhos de desenvolvimento e avaliação experimental extraclasse; resolver listas de exercícios
@@ -140,27 +117,38 @@ escritas. Os estudantes devem seguir as regras definidas pelo professor respons�
 Artificial (IA). As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que
 compõem as experiências de aprendizagem e os critérios de avaliação da disciplina.
 
-Página 2
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+                                                                     Página 2
+                                                   PLANO DE ENSINO
+                                                                                                                 Data de Emissão: 14/08/2026
+
+
 
 Critérios de avaliação
 A média final (MF) será obtida através de duas provas escritas (P1 e P2) e a média obtida pelos alunos em trabalhos práticos (T),
 utilizando-se a seguinte ponderação:
+
+
 MF = 0.3 P1 + 0.3 P2 + 0.4 T
+
+
 Será considerado aprovado o aluno que obtiver:
 a) MF igual ou superior a 6,0 (seis); e
 b) pelo menos 75% de presença.
+
+
 A conversão da média final M para conceito é feita através do atendimento aos seguintes critérios:
 9,0 <= MF <= 10,0: conceito A (aprovado)
 7,5 <= MF < 9,0: conceito B (aprovado)
 6,0 <= MF < 7,5: conceito C (aprovado)
 MF < 6,0: conceito D (reprovado)
 Faltas > 25%: conceito FF (reprovado)
+
 Atividades de Recuperação Previstas
 Cada prova pode ser individualmente recuperada através da realização de nova prova que substituirá a nota da prova
 correspondente.
+
 Bibliografia
 Básica Essencial
 HENNESSY, John. Organização e Projeto de Computadores. Rio de Janeiro: GEN LTC, 2017. ISBN 9788595152908. Disponível em:
@@ -173,8 +161,10 @@ Complementar
 David Patterson, Andrew Waterman. Guia prático RISC-V Atlas de uma Arquitetura Aberta. Virtual: Strawberry Canyon LLC, 2019. ISBN
 978-0-9992491-1-6. Disponível em: http://www.riscbook.com/portuguese/
 
+
+
 Outras Referências
-Não existem outras referências para este plano de ensino.
+                                           Não existem outras referências para este plano de ensino.
 
 Observações
 O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
@@ -182,6 +172,8 @@ atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de pr
 uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
 disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
 desligamento da Universidade.
+
+
 Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
 vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
 utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
@@ -191,6 +183,8 @@ específica para a finalidade pretendida. Os materiais disponibilizados no ambie
 específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
 material de sua autoria.
 
-Página 3
 
+
+
+                                                                       Página 3
 

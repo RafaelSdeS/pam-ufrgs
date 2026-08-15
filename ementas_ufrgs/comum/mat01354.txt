@@ -1,107 +1,78 @@
-354
-UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
-INSTITUTO DE MATEMÁTICA
-DEPARTAMENTO DE MATEMÁTICA PURA E APLICADA
+                                                                                             354
+                            UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                                     INSTITUTO DE MATEMÁTICA
+                           DEPARTAMENTO DE MATEMÁTICA PURA E APLICADA
 
-PLANO DE ENSINO
-Código MAT
 
-Nome
 
-01354 Cálculo e Geometria Analítica II – A
+                           PLANO DE ENSINO
+Código MAT          Nome
+
+       01354 Cálculo e Geometria Analítica II – A
 Créditos/horas-aula Súmula
 
-06 / 90
-Semestre
+      06 / 90
+Semestre            Geometria Analítica Espacial. Derivadas Parciais. Integrais Múltiplas. Séries.
 
-Geometria Analítica Espacial. Derivadas Parciais. Integrais Múltiplas. Séries.
-
-2008-2
-Cursos
-Ciência da Computação
-Ciências Atuariais – Noturno
-Design de Produto
-Engenharia Ambiental
-Engenharia Cartográfica – Noturno
-Engenharia Civil
-Engenharia de Alimentos
-Engenharia de Computação
-Engenharia de Controle e Automação
-Engenharia de Materiais
-Engenharia de Minas
-Engenharia de Produção
-Engenharia Elétrica
-Engenharia Mecânica
-Engenharia Metalúrgica
-Engenharia Química
-Bacharelado em Estatística
-Bacharelado em Física
-Licenciatura em Física
-Bacharelado em Matemática
-Licenciatura em Matemática
-Bacharelado em Química
-Licenciatura em Química
-Química Industrial
+     2008-2
+Cursos                                 Etapa          Pré-Requisitos
+Ciência da Computação                  2ª
+Ciências Atuariais – Noturno           2ª
+Design de Produto                      2ª
+Engenharia Ambiental                   2ª
+Engenharia Cartográfica – Noturno      2ª
+Engenharia Civil                       2ª
+Engenharia de Alimentos                2ª
+Engenharia de Computação               2ª
+Engenharia de Controle e Automação     2ª
+Engenharia de Materiais                2ª
+Engenharia de Minas                    2ª
+Engenharia de Produção                 2ª
+Engenharia Elétrica                    2ª             MAT01353 Cálculo e Geometria Analítica I – A
+Engenharia Mecânica                    2ª
+Engenharia Metalúrgica                 2ª
+Engenharia Química                     2ª
+Bacharelado em Estatística             2ª
+Bacharelado em Física                  2ª
+Licenciatura em Física                 2ª
+Bacharelado em Matemática              2ª
+Licenciatura em Matemática             4ª
+Bacharelado em Química                 2ª
+Licenciatura em Química                2ª
+Química Industrial                     2ª
 Professor Responsável
 
-Etapa
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-2ª
-4ª
-2ª
-2ª
-2ª
-
-Pré-Requisitos
-
-MAT01353 Cálculo e Geometria Analítica I – A
-
-Vânia Kraemer
+                    Vânia Kraemer
 Professores Ministrantes
-
-Ada Maria de Souza Doering (Turma B3)
-Claus Ivo Doering (Turma B1)
-Dagoberto Adriano Rizotto Justo (Turma A2)
-Edite Taufer (Turmas A1, C2 e D2)
-João Plínio Juchem Neto (Turmas C1 e D1)
-Rosandra S. Mottola Lemos (Turmas C3 e D3)
-Vanderlei Manica (Turmas E1 e F1)
-Vânia Kraemer (Turmas A3 e B2)
-
+                    Ada Maria de Souza Doering (Turma B3)
+                    Claus Ivo Doering (Turma B1)
+                    Dagoberto Adriano Rizotto Justo (Turma A2)
+                    Edite Taufer (Turmas A1, C2 e D2)
+                    João Plínio Juchem Neto (Turmas C1 e D1)
+                    Rosandra S. Mottola Lemos (Turmas C3 e D3)
+                    Vanderlei Manica (Turmas E1 e F1)
+                    Vânia Kraemer (Turmas A3 e B2)
 Objetivos:
+
 a) Conhecer e compreender, analisar e sintetizar as principais idéias referentes ao estudo da
 derivação e integração de funções de várias variáveis reais, bem como ao estudo de séries de
 Taylor de funções de uma variável real e, mais geralmente, de séries de potências.
+
 b) Aplicar a questões relevantes os principais resultados ligados ao estudo de funções de
 várias variáveis reais, bem como ao estudo de séries de Taylor de funções de uma variável
 real e, mais geralmente, de séries de potências, estabelecendo juízos de valor a respeito dos
 métodos e processos empregados.
+
 c) Fornecer ao aluno conhecimentos e técnicas que lhe sejam úteis posteriormente,
 capacitando o aluno à aplicação dos temas abordados, mediante exemplos práticos e
 desenvolvimento de métodos nos exercícios apresentados.
+
 d) Desenvolver e consolidar atitudes de participação, comprometimento, organização,
 flexibilidade, crítica e autocrítica no desenrolar do processo de ensino-aprendizagem.
 
 Metodologia e Experiências de Aprendizagem:
-Aulas expositivo-dialogadas com apelo à intuição do estudante, exemplificando com
+
+        Aulas expositivo-dialogadas com apelo à intuição do estudante, exemplificando com
 abundância os tópicos abordados e seguindo uma sistematização adequada ao curso de
 Cálculo. Indicação de exercícios relevantes, que cubram a matéria ministrada e que capacitem
 o aluno a sintetizar as técnicas utilizadas. Pelo menos duas horas-aula de resolução de
@@ -111,12 +82,14 @@ escala de horários a ser divulgada no início das aulas. Atendimento extraclass
 semanais por cada um dos monitores disponíveis da disciplina.
 
 Conteúdo Programático:
+
 Unidade 1:
 Geometria analítica espacial: coordenadas e vetores tridimensionais, produto escalar e
 vetorial, retas e planos, cilindros e superfícies de revolução, superfícies quádricas.
 Derivadas parciais: funções de várias variáveis, derivadas parciais, planos tangentes a
 superfícies, derivadas direcionais, vetor gradiente, regra da cadeia, problemas de máximos e
 mínimos, multiplicador de Lagrange.
+
 Unidade 2:
 Integrais múltiplas: volumes como integrais iteradas, integrais duplas, aplicações físicas,
 sistema de coordenadas polares, gráficos de equações polares, integrais duplas em
@@ -124,12 +97,13 @@ coordenadas polares, integrais triplas, sistemas de coordenadas cilíndricas e e
 integrais triplas em coordenadas cilíndricas e esféricas.
 Integrais de linha: equações paramétricas de curvas, derivadas de funções vetoriais, integrais
 de linha, independência de caminho, campos conservativos, Teorema de Green.
+
 Unidade 3:
 Seqüências, seqüências monótonas.
 Séries infinitas: convergência e divergência de séries, a série geométrica e a série harmônica.
 
-2
 
+                                               2
 A teoria das séries infinitas: propriedades, testes de convergência, série alternada, estimativa
 do erro, convergência condicional e absoluta.
 Séries de potências: intervalo de convergência, derivação e integração, operações com séries
@@ -137,48 +111,59 @@ de potências.
 Polinômios de Taylor e Maclaurin, séries de Taylor e de Maclaurin, métodos computacionais.
 
 Cronograma de Atividades:
-Em anexo.
+
+       Em anexo.
 
 Critérios de Avaliação:
+
 A disciplina será dividida em três áreas de conhecimento:
-Primeira área: Geometria Analítica e Derivadas Parciais (Unidade 1).
-Segunda área: Integrais Múltiplas (Unidade 2).
-Terceira área: Séries (Unidade 3).
+
+       Primeira área: Geometria Analítica e Derivadas Parciais (Unidade 1).
+       Segunda área: Integrais Múltiplas (Unidade 2).
+       Terceira área: Séries (Unidade 3).
+
 Serão realizadas três provas de área. O aluno estará aprovado na disciplina se:
- cumprir a exigência de um mínimo de 75% de presença nas aulas ministradas, cf.
-Art. 134 do Regimento Geral da Universidade (R.G.U.);
- a nota de cada uma das três provas de área for superior ou igual a 5,0 (cinco);
- e a média aritmética M das três notas das provas de área for superior ou igual a 6,0
-(seis).
-A atribuição dos conceitos aos alunos aprovados ocorrerá em correspondência com a
+      cumprir a exigência de um mínimo de 75% de presença nas aulas ministradas, cf.
+         Art. 134 do Regimento Geral da Universidade (R.G.U.);
+      a nota de cada uma das três provas de área for superior ou igual a 5,0 (cinco);
+      e a média aritmética M das três notas das provas de área for superior ou igual a 6,0
+         (seis).
+
+        A atribuição dos conceitos aos alunos aprovados ocorrerá em correspondência com a
 nota final, que é a média aritmética M das três notas das provas de área: Conceito A
 corresponde a M superior ou igual a 9,0 (nove), conceito B corresponde a M superior ou igual
 a 7,5 (sete virgula cinco) e inferior a 9,0 (nove) e conceito C corresponde a M superior ou
 igual a 6 (seis) e inferior a 7,5 (sete virgula cinco).
-O aluno aprovado com conceito C ou B e que quiser melhorar o conceito, poderá
+
+        O aluno aprovado com conceito C ou B e que quiser melhorar o conceito, poderá
 prestar, ao final do semestre letivo, uma das três provas de recuperação R1, R2 ou R3 de uma
 área descritas abaixo, à escolha do aluno. A nota da recuperação substitui a nota da prova da
 área no cômputo da média aritmética M das três notas das provas de área, podendo acarretar a
 troca de conceito de B para C, mas não de aprovado para reprovado.
-Aos alunos reprovados nos critérios acima e nos de recuperação abaixo e que
+
+      Aos alunos reprovados nos critérios acima e nos de recuperação abaixo e que
 cumpriram a exigência do Art. 134 do R.G.U., é atribuído o conceito D e aos alunos que não
 cumpriram a exigência do Art. 134 do R.G.U. é atribuído o conceito FF.
 
+
 Atividades de Recuperação:
-Os alunos que não foram aprovados neste critério mas que obtiveram pelo menos uma
+
+        Os alunos que não foram aprovados neste critério mas que obtiveram pelo menos uma
 das três notas das provas de área superior ou igual a 5,0 (cinco) bem como média aritmética
 M das três notas das provas de área superior ou igual a 3,0 (três) e que cumpriram a exigência
 do Art. 134 do R.G.U., poderão prestar, dependendo do rendimento obtido pelo aluno no
 
-3
 
+                                               3
 semestre, uma única de seis provas de recuperação que serão realizadas simultaneamente num
 único dia ao final do semestre.
-As provas R1, R2 e R3 são provas substitutivas das três provas de área,
+
+        As provas R1, R2 e R3 são provas substitutivas das três provas de área,
 respectivamente, de mesmo caráter das provas de área, sendo que a nota obtida numa destas
 provas substitui a nota de prova de área no cômputo da média aritmética M e conseqüente
 atribuição de conceito.
-Além destas três provas substitutivas serão oferecidas as três Provas de Recuperação
+
+        Além destas três provas substitutivas serão oferecidas as três Provas de Recuperação
 Geral G12, G13 e G23, cujo conteúdo abrange somente duas áreas de conhecimento da
 disciplina. Para ser considerado aprovado, é necessário que o aluno obtenha, no mínimo, 50%
 dos pontos disponíveis em cada uma das duas áreas contempladas na prova. A nota destas
@@ -187,391 +172,131 @@ de conceitos é a seguinte: conceito B se a nota da Prova de Recuperação Geral
 igual a 9,0 (nove) e conceito C se a nota da Prova de Recuperação Geral for inferior a 9,0
 (nove) e superior ou igual a 6 (seis), não ocorrendo a atribuição de conceito A para quem
 realizar uma Prova de Recuperação Geral.
-As opções dos alunos para realizar uma prova de recuperação são as seguintes:
-1) O aluno com três notas de área superiores ou iguais a 5,0 (cinco) mas com média
-aritmética M das três notas das provas de área inferior a 6,0 (seis), deverá escolher
-uma dentre as seis provas R1, R2, R3, G12, G13 e G23.
-2) O aluno com uma nota de área inferior a 5,0 (cinco) poderá prestar a prova de
-recuperação da área com a nota inferior a 5,0 ou então a Prova de Recuperação Geral
-de duas áreas, uma em que obteve a nota inferior a cinco e a outra a escolher.
-3) O aluno com duas notas de área inferiores a 5,0 (cinco) deverá prestar a Prova de
-Recuperação Geral nestas duas áreas.
+
+       As opções dos alunos para realizar uma prova de recuperação são as seguintes:
+
+    1) O aluno com três notas de área superiores ou iguais a 5,0 (cinco) mas com média
+       aritmética M das três notas das provas de área inferior a 6,0 (seis), deverá escolher
+       uma dentre as seis provas R1, R2, R3, G12, G13 e G23.
+    2) O aluno com uma nota de área inferior a 5,0 (cinco) poderá prestar a prova de
+       recuperação da área com a nota inferior a 5,0 ou então a Prova de Recuperação Geral
+       de duas áreas, uma em que obteve a nota inferior a cinco e a outra a escolher.
+    3) O aluno com duas notas de área inferiores a 5,0 (cinco) deverá prestar a Prova de
+       Recuperação Geral nestas duas áreas.
 
 Bibliografia Básica:
+
 1. Anton, Howard , Bivens, Irl, Davis, Stephen, Cálculo, 8ª Edição, Vol 2. Porto Alegre:
-Bookman, 2007
+   Bookman, 2007
 
 Bibliografia Complementar:
+
 1. Ávila, G.: Cálculo, Vols. 2 e 3
 2. McCallum, W., Hughes--Hallett, D.et al.: Cálculo de Várias Variáveis
 3. Simmons, G.: Cálculo com Geometria Analítica, Vol. 2
 
-4
 
-MAT01354 CÁLCULO E GEOMETRIA ANALÍTICA II – A
 
-CRONOGRAMA 2008/02 segundo ANTON, Volume 2
-04/08
 
-Aula 1
-Introdução + 12.1 + 12.2
-Coord. Ret. + Vetores
+                                              4
+                  MAT01354 CÁLCULO E GEOMETRIA ANALÍTICA II – A
+                CRONOGRAMA 2008/02 segundo ANTON, Volume 2
+
+04/08     Aula 1                            06/08    Aula 2                        08/08   Aula 3
+         Introdução + 12.1 + 12.2                              12.3                               12.4 + 12.5
+          Coord. Ret. + Vetores                     Produto Interno+ Projeções       Produto vetorial +Retas no plano e no
+                                                                                                    espaço
+11/08      Aula 4                           13/08    Aula 5                        15/08 Aula 6
+                12.5+12.6                                      12.7                               14.1+14.2
+              Retas +Planos                           Superfícies Quádricas              Funções de várias variáveis
+                                                                                        Dom, curvas de nível, gráficos
+18/08    Aula 7                             20/08    Aula 8                        22/08 Aula 9
+               14.3+14.4                                      14.5                                    14.6
+        Der. Parciais + Superiores                      Regras de Cadeia              Derivadas Direcionais e Gradientes
+ Dif (sem def de dif.) + Aprox. lin local
+25/08                                       27/08    Aula 10                       29/08   Aula 11
+            Prova de Física 2                                14.7                                 14.8
+        Não haverá aula de Calc2              Planos Tangentes e Vetores Normais   Máximos e Mínimos de funções de 2 var.
+                                                         Retas normais
+01/09      Aula 12                          03/09 Aula 13                          05/09   Aula 14
+                  14.8                                       14.9
+ Máximos e Mínimos Abs. de funções                Multiplicadores de Lagrange                   EXERCÍCIOS
+    definidas em regiões fech e lim
+08/09 Aula 15                               12/09    Aula 1                   16   14/09   Aula 2                  17
+     Aula de revisão por horários                              15.1                                   15.2
+             (08, 10,13,15)                              Integrais Duplas               Integrais duplas em regiões não
+                                                                                                  retangulares
+    PROVA 1 (18:30)
+15/09   Aula 3                18            17/09    Aula 4                  19    19/09   Aula 5                  20
+              11.1+15.3                                         15.3                                15.5+15.6
+           Coord. Polares +                         Integrais duplas em polares    Integrais triplas+Aplicação: apenas Massa
+     Integrais duplas em polares
+22/09 Aula 6                  21            24/09    Aula 7                   22   26/09 Aula 8                  23
+             12.8 + 15.7                                    12.8+15.7                     13.1+13.2+13.4+16.1
+         Coord. Cilíndricas +                          Coord. Esféricas +                Curvas no esp. +Vet tgs +
+        Triplas em cilíndricas                         Triplas em esféricas                Campos Vetoriais +
+                                                                                            Campos gradientes
+29/09                                       01/10    Aula 9                   24   03/10 Aula 10                 25
+            Prova de Física 2                                  16.2                             16.2+16.3
+         Não haverá aula de Calc2                        Integrais de linha                   Int. de linha +
+                                                                                          Campos Conservativos
+06/10 Aula 11                          26   08/10    Aula 12                  27   10/10 Aula 13                28
+                 16.3                                         16.4
+          Campos Conservativos                          Teorema de Green                        EXERCÍCIOS
+13/10     Aula 14               29          15/10    Aula 1                   30   17/10   Aula 2                  31
+        Aula de revisão por horários                       10.1 +10.2                                10.3
+               (08, 10,13,15)                              Sequências                           Séries infinitas
+                                                      Limites de seqüências                   Séries geométricas
+   PROVA 2                (18:30)
+20/10 Aula 3                   32           22/10                                  24/10
+                 10.4                         SEMANA ACADÊMICA                       SEMANA ACADÊMICA
+        Testes de convergência
+  Teste da Divergência Propriedades             DIA NÃO LETIVO p/ CALC 2                DIA NÃO LETIVO p/ CALC 2
+
+
+
+
+                                                               5
+27/10                                   29/10    Aula 4                  33        31/10   Aula 5                 34
+  Dia do Servidor Público                                 10.5                                        10.5
+          Não haverá Expediente          Testes da Integral Séries p - Testes de           Testes da Razão e da Raiz
+                                                      Comparação
+03/11                                   05/11    Aula 6                35          07/11   Aula 7                36
+            Prova de Física 2                             10.6                                      10.7
+         Não haverá aula de Calc2         Conv. Absoluta + Séries Alternadas:              Polinômios de Maclaurin
+                                                      TSA e Erro
+10/11      Aula 8            37         12/11 Aula 9                   38          14/11   Aula 10               39
+                10.8                                      10.8                                      10.9
+   Séries de Maclaurin e de Taylor                Séries de Potências               Convergência das Séries de Taylor e de
+                                                Raio e intervalo de conv                         Maclaurin
+17/11 Aula 11                40         19/11 Aula 12                  41          21/11 Aula 13                 42
+                 10.10                                   10.10
+ Operações com séries de Maclaurin e     Operações com séries de Maclaurin e de                 EXERCÍCIOS
+              de Taylor                                  Taylor
+24/11 Aula 14                43         26/11                                      28/11                          44
+     Aula de revisão por horários
+            (08, 10,13,15)                       Dia não letivo para Calc2                 Apresentação das provas
+                                                                                             Aula de exercícios
+    PROVA 3 (18:30)
+01/12                           45      03/12                            46        05/12
+                                                Aula de revisão por horários
+        Aula de revisão por horários                   (08, 10,13,15)                      Dia não letivo para Calc2
+               (08, 10,13,15)
+                                             RECUPERAÇÕES
+                                                 (18:30)
+08/12                                   10/12                                      12/12
+
+         Apresentação das provas
+
+
+
+
+                          Término das aulas: terça-feira, dia 09 de dezembro de 2008
+                                     Último dia para apropriar conceitos:
+                           quinta-feira, dia 11 de dezembro de 2008, até às 18 horas.
+
+
 
-06/08
 
-Aula 4
-12.5+12.6
-Retas +Planos
-
-13/08
-
-Aula 7
-14.3+14.4
-Der. Parciais + Superiores
-Dif (sem def de dif.) + Aprox. lin local
-25/08
-Prova de Física 2
-Não haverá aula de Calc2
-
-20/08
-
-11/08
-
-08/08
-
-12.3
-Produto Interno+ Projeções
-Aula 5
-12.7
-Superfícies Quádricas
-
-18/08
-
-01/09
-
-Aula 2
-
-Aula 12
-
-14.8
-Máximos e Mínimos Abs. de funções
-definidas em regiões fech e lim
-08/09 Aula 15
-Aula de revisão por horários
-(08, 10,13,15)
-
-Aula 8
-14.5
-Regras de Cadeia
-
-27/08
-
-Aula 10
-
-29/08
-
-05/09
-
-12/09
-
-16
-
-14/09
-
-Aula 2
-
-Aula 5
-
-Aula 1
-15.1
-Integrais Duplas
-
-17
-15.2
-Integrais duplas em regiões não
-retangulares
-
-19
-15.3
-Integrais duplas em polares
-
-19/09
-
-24/09
-
-Aula 7
-
-26/09
-
-29/09
-
-01/10
-Prova de Física 2
-Não haverá aula de Calc2
-26
-
-Aula 14
-29
-Aula de revisão por horários
-(08, 10,13,15)
-
-20/10 Aula 3
-
-Aula 9
-
-24
-
-16.2
-Integrais de linha
-08/10
-
-16.3
-Campos Conservativos
-
-PROVA 2
-
-22
-
-12.8+15.7
-Coord. Esféricas +
-Triplas em esféricas
-
-27
-
-20
-15.5+15.6
-Integrais triplas+Aplicação: apenas Massa
-Aula 8
-23
-13.1+13.2+13.4+16.1
-Curvas no esp. +Vet tgs +
-Campos Vetoriais +
-Campos gradientes
-03/10 Aula 10
-25
-16.2+16.3
-Int. de linha +
-Campos Conservativos
-10/10 Aula 13
-28
-
-16.4
-Teorema de Green
-15/10
-
-Aula 1
-
-EXERCÍCIOS
-30
-
-17/10
-
-10.1 +10.2
-Sequências
-Limites de seqüências
-
-(18:30)
-
-32
-10.4
-Testes de convergência
-Teste da Divergência Propriedades
-
-Aula 12
-
-Aula 14
-EXERCÍCIOS
-
-17/09
-
-13/10
-
-Aula 4
-
-14.8
-Máximos e Mínimos de funções de 2 var.
-
-Aula 3
-18
-11.1+15.3
-Coord. Polares +
-Integrais duplas em polares
-22/09 Aula 6
-21
-12.8 + 15.7
-Coord. Cilíndricas +
-Triplas em cilíndricas
-
-06/10 Aula 11
-
-Aula 11
-
-14.7
-Planos Tangentes e Vetores Normais
-Retas normais
-03/09 Aula 13
-14.9
-Multiplicadores de Lagrange
-
-PROVA 1 (18:30)
-15/09
-
-Aula 3
-12.4 + 12.5
-Produto vetorial +Retas no plano e no
-espaço
-15/08 Aula 6
-14.1+14.2
-Funções de várias variáveis
-Dom, curvas de nível, gráficos
-22/08 Aula 9
-14.6
-Derivadas Direcionais e Gradientes
-
-22/10
-
-Aula 2
-
-31
-
-10.3
-Séries infinitas
-Séries geométricas
-24/10
-
-SEMANA ACADÊMICA
-
-SEMANA ACADÊMICA
-
-DIA NÃO LETIVO p/ CALC 2
-
-DIA NÃO LETIVO p/ CALC 2
-
-5
-
-27/10
-
-29/10
-
-Dia do Servidor Público
-Não haverá Expediente
-03/11
-
-10/11
-
-Aula 8
-
-37
-10.8
-Séries de Maclaurin e de Taylor
-
-17/11 Aula 11
-
-40
-10.10
-Operações com séries de Maclaurin e
-de Taylor
-24/11 Aula 14
-43
-Aula de revisão por horários
-(08, 10,13,15)
-
-33
-
-31/10
-
-10.5
-Testes da Integral Séries p - Testes de
-Comparação
-05/11
-
-Prova de Física 2
-Não haverá aula de Calc2
-
-Aula 4
-
-Aula 6
-
-35
-10.6
-Conv. Absoluta + Séries Alternadas:
-TSA e Erro
-12/11 Aula 9
-38
-10.8
-Séries de Potências
-Raio e intervalo de conv
-19/11 Aula 12
-41
-10.10
-Operações com séries de Maclaurin e de
-Taylor
-26/11
-
-45
-
-07/11
-
-36
-10.7
-Polinômios de Maclaurin
-
-14/11
-
-Aula 10
-
-Aula de revisão por horários
-(08, 10,13,15)
-
-08/12
-
-46
-Aula de revisão por horários
-(08, 10,13,15)
-
-Aula 7
-
-39
-10.9
-Convergência das Séries de Taylor e de
-Maclaurin
-21/11 Aula 13
-42
-EXERCÍCIOS
-28/11
-
-Dia não letivo para Calc2
-03/12
-
-44
-Apresentação das provas
-Aula de exercícios
-
-05/12
-Dia não letivo para Calc2
-
-RECUPERAÇÕES
-(18:30)
-10/12
-
-12/12
-
-Apresentação das provas
-
-Término das aulas: terça-feira, dia 09 de dezembro de 2008
-Último dia para apropriar conceitos:
-quinta-feira, dia 11 de dezembro de 2008, até às 18 horas.
-
-6
-
-34
-
-10.5
-Testes da Razão e da Raiz
-
-PROVA 3 (18:30)
-01/12
-
-Aula 5
-
+                                                           6
 

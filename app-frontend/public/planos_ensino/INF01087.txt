@@ -1,30 +1,22 @@
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+                                                 PLANO DE ENSINO
+                                                                                                           Data de Emissão: 14/08/2026
 
-Instituto de Informática
-Departamento de Informática Aplicada
+
+
+                                                      Instituto de Informática
+                                             Departamento de Informática Aplicada
+
 Dados de identificação
 Período Letivo: 2026/2
 Professor Responsável: DENNIS GIOVANI BALREIRA
 Disciplina: INTRODUÇÃO À CIÊNCIA DA COMPUTAÇÃO
-Sigla: INF01087
-
-Créditos: 4
+Sigla: INF01087            Créditos: 4
 
 Carga Horária
-CH Teórica: 40h
-
-CH Prática: 20h
-
-Total: 60h
-
-CH Coletiva: 50h
-
-CH Autônoma: 10h
-
-CH Individual: 0h
-
+CH Teórica: 40h     CH Prática: 20h      Total: 60h
+CH Coletiva: 50h     CH Autônoma: 10h        CH Individual: 0h
 Carga Horária de prática Extensionista (CHE) 0h
+
 Súmula
 História da Computação. Estrutura do curso de Ciência da Computação. Áreas da Computação. Grandes desafios da Computação.
 A carreira profissional de um Cientista da Computação. Impactos da Computação. Dispositivos computacionais, sistemas de
@@ -33,18 +25,10 @@ segurança. Técnicas de organização pessoal e do tempo. Técnicas de estudo e
 Cientista da Computação: versionamento de código, preparação de documentos estruturados com Markdown e LaTeX, panorama de
 editores de código e ambientes de programação, uso de terminal de comandos e automatização com 'scripts', manipulação de dados
 com expressões regulares, acesso remoto a computadores, uso crítico de ferramentas de inteligência artificial, e outras.
+
 Currículos
-Currículos
-
-Etapa Aconselhada
-
-Natureza
-
-1
-
-Obrigatória
-
-BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
+                                      Currículos                                           Etapa Aconselhada           Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                  1                Obrigatória
 
 Objetivos
 Esta disciplina tem por objetivo apresentar os fundamentos conceituais, históricos e práticos da Ciência da Computação, oferecendo
@@ -57,6 +41,8 @@ software e a prática da programação. O aluno que cursar esta disciplina deve 
 - Avaliar questões éticas, de direitos digitais, privacidade e segurança envolvidas na prática computacional.
 - Conhecer princípios fundamentais de Ciência da Computação e sua relevância para o desenvolvimento de sistemas.
 - Fazer uso de ferramentas que auxiliem no decorrer do curso seja para estruturar documentos, editar e versionar códigos, etc.
+
+
 A disciplina visa desenvolver as seguintes habilidades específicas:
 ARQ-H1: Escolher sistemas de representação de dados adequados para aplicações com diferentes necessidades.
 ES-H6: Utilizar facilidades de ambientes de Engenharia de Software - versionamento, depuração, refatoração, busca, dependências,
@@ -68,91 +54,122 @@ SOC-H4: Compreender as responsabilidades profissionais relacionadas às diferent
 SOC-H5: Compreender os processos regulatórios e legislativos e as políticas públicas que se aplicam a soluções e serviços
 computacionais e compreender suas implicações sociais e econômicas .
 SOC-H6: Compreender questões de propriedade intelectual relativas ao desenvolvimento de software.
+
 Conteúdo Programático
 
-Página 1
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
 
-Semana: 1
-Título: Introdução ao curso e à ciência da computação, métodos de organização, estudo e gestão do tempo
+
+                                                                   Página 1
+                                                     PLANO DE ENSINO
+                                                                                                                          Data de Emissão: 14/08/2026
+
+
+
+  Semana: 1
+     Título: Introdução ao curso e à ciência da computação, métodos de organização, estudo e gestão do tempo
 Conteúdo: O que é ciência da computação? O que esperar do curso? Moodle e ao Sistema do INF. Estrutura do curso. Currículo. Áreas da
-computação. Técnicas de organização pessoal e do tempo. Técnicas de estudo e aprendizado.
-
-Semana: 2
-Título: História da computação, modelos computacionais
+              computação. Técnicas de organização pessoal e do tempo. Técnicas de estudo e aprendizado.
+  Semana: 2
+     Título: História da computação, modelos computacionais
 Conteúdo: História da computação. Modelos computacionais e histórico.
-Semana: 3 a 6
-Título: Dispositivos computacionais, sistemas de numeração e aritmética binária
+  Semana: 3 a 6
+     Título: Dispositivos computacionais, sistemas de numeração e aritmética binária
 Conteúdo: Sistemas de numeração. Números binários e hexadecimais. Conversão entre bases. Aritmética básica de números binários.
-Representação de números negativos: sinal-magnitude e complemento de 2. Introdução à arquitetura de computadores. Processador
-Neander.
-
-Semana: 7 a 10
-Título: Áreas da computação e Avaliação
+              Representação de números negativos: sinal-magnitude e complemento de 2. Introdução à arquitetura de computadores. Processador
+              Neander.
+  Semana: 7 a 10
+     Título: Áreas da computação e Avaliação
 Conteúdo: Principios de Engenharia de Software, Inteligência Artificial, Ética, Privacidade e Segurança e outras áreas importantes da
-computação.
-
-Semana: 11 a 15
-Título: Ferramentas para Ciência da Computação e Avaliação
+              computação.
+  Semana: 11 a 15
+     Título: Ferramentas para Ciência da Computação e Avaliação
 Conteúdo: Versionamento de código, preparação de documentos estruturados com Markdown e LaTeX, panorama de editores de código e
-ambientes de programação, uso de terminal de comandos e automatização com 'scripts', manipulação de dados com expressões
-regulares, acesso remoto a computadores, uso crítico de ferramentas de inteligência artificial, e outras.
+              ambientes de programação, uso de terminal de comandos e automatização com 'scripts', manipulação de dados com expressões
+              regulares, acesso remoto a computadores, uso crítico de ferramentas de inteligência artificial, e outras.
 
 Metodologia
 A disciplina poderá utilizar o sistema Moodle/UFRGS ou similares para distribuição de material, entrega de trabalhos, organização de
 grupos de discussão e acompanhamento geral da disciplina, como informado pelo professor ministrante ao início do semestre.
+
+
 A disciplina poderá usar ferramentas como o Moodle/UFRGS, sistemas de submissão de problemas de programação online (como
 online judges) ou similares para avaliações e atividades didáticas.
+
+
 A disciplina é apresentada em aulas teórico-práticas, em que se combina a apresentação dos conceitos e técnicas com o
 desenvolvimento de eventuais exercícios e discussões. Algumas das aulas poderão ser realizadas em laboratórios, para a
 implementação/visualização dos conceitos vistos em aula.
+
+
 As 60 horas previstas para atividades teóricas e práticas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de
 duração (2 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), em um total de 3.000 minutos, e
 mais 10 horas (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes a exercícios
 e trabalhos extraclasse a serem avaliados.
+
+
 O professor poderá se valer de aulas presenciais e de atividades a distância (desde que nos limites previstos pela UFRGS para
 disciplinas presenciais e empregando ferramentas para atividades remotas), assim como do apoio de Professores Assistentes
 (Alunos de Pós-Graduação) em Atividades Didáticas.
+
 Experiências de Aprendizagem
 Os estudantes participarão ativamente do processo de aprendizagem por meio de aulas teórico-práticas e laboratoriais, avaliações,
 exercícios práticos, trabalhos de implementação e atividades autônomas.
+
+
 As experiências de aprendizagem previstas incluem participar de aulas expositivas, realizar exercícios práticos em laboratório,
 resolver listas de exercícios extraclasse, realizar eventuais leituras e consultas ao material disponibilizado no Moodle/UFRGS,
 responder eventuais questionários e atividades de autoavaliação para acompanhamento do progresso individual.
+
+
 Uso de Inteligência Artificial (IA):
 
-Página 2
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+                                                                          Página 2
+                                                  PLANO DE ENSINO
+                                                                                                               Data de Emissão: 14/08/2026
+
+
 
 O uso de ferramentas de Inteligência Artificial (IA) para a realização de tarefas e atividades avaliativas é estritamente proibido nesta
 disciplina, a menos que haja autorização explícita e guiada do professor responsável.
+
 Critérios de avaliação
 A avaliação da aprendizagem será composta por atividades teóricas e práticas realizadas ao longo do semestre. Serão atribuídas
 quatro notas principais, correspondentes às seguintes atividades:
+
+
 P1 - Prova 1 (40%): avaliação teórico-prática sobre os conteúdos da primeira parte da disciplina.
 P2 - Prova 2 (20%): avaliação teórico-prática sobre os conteúdos da segunda parte da disciplina.
 TLE - Trabalhos, Laboratórios e Exercícios (40%): avaliações realizadas ao longo da disciplina, envolvendo atividades práticas,
 exercícios e trabalhos aplicados.
+
+
 A Média Final (MF) será calculada pela seguinte fórmula:
 MF = P1 × 0,40 + P2 × 0,20 + TLE × 0,40
+
+
 As atividades autônomas incluem listas de exercícios e laboratórios, realizadas fora do horário regular de aula, contribuindo para o
 desenvolvimento das competências práticas e teóricas da disciplina.
+
+
 A conversão da Média Final (MF) em conceito final será realizada conforme a escala institucional:
 Conceito A: MF maior ou igual a 9,0
 Conceito B: MF maior ou igual a 7,5 e menor que 9,0
 Conceito C: MF maior ou igual a 6,0 e menor que 7,5
 Conceito D: MF menor que 6,0
 Conceito FF: Frequência inferior a 75%, independentemente da nota
+
 Atividades de Recuperação Previstas
 Se o aluno não atingir nota 6,0 na média final, poderá realizar uma prova de recuperação sobre toda a matéria. Se a média
 ponderada entre a prova de recuperação (PR) (60%) e a média final (MF) (40%) for maior ou igual a 6,0, o aluno será aprovado com
 C. Ou seja,
+
+
 Se (MF * 0.4 + PR * 0.6 >= 6,0) então o conceito é C.
 Caso contrário, o conceito é D.
+
 Bibliografia
 Básica Essencial
 BROOKSHEAR, J. Glenn; BRYLOW, Dennis. Ciência da Computação: uma visão abrangente. Porto Alegre: Bookman, 2013. ISBN 9788580550385.
@@ -169,27 +186,25 @@ SHOTTS JR., William. The Linux Command Line. San Francisco: No Starch Press, 201
 https://nostarch.com/tlcl2
 
 Complementar
-Sem bibliografias acrescentadas
+                                                      Sem bibliografias acrescentadas
+
+
 
 Outras Referências
+                               Título                                                                 Texto
 
-Título
 
-Texto
+                                                                     Página 3
+                                                PLANO DE ENSINO
+                                                                                                           Data de Emissão: 14/08/2026
 
-Página 3
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
 
-Material disponível no Moodle da UFRGS
-
-A disciplina utiliza a ferramenta do Moodle da UFRGS
-onde são colocados materiais para consulta e estudo,
-especificação das atividades práticas desenvolvidas em
-aula e extraclasse, cronograma atualizado e cópia do
-plano de ensino.
-
+Material disponível no Moodle da UFRGS                              A disciplina utiliza a ferramenta do Moodle da UFRGS
+                                                                    onde são colocados materiais para consulta e estudo,
+                                                                    especificação das atividades práticas desenvolvidas em
+                                                                    aula e extraclasse, cronograma atualizado e cópia do
+                                                                    plano de ensino.
 Observações
 Informações sobre Plágio e IA:
 O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
@@ -197,6 +212,8 @@ atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de pr
 uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
 disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
 desligamento da Universidade.
+
+
 Informações sobre Direitos Autorais e de Imagem:
 Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo vedada a sua utilização para qualquer outra
 finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser utilizados devem ser referenciados, indicando a
@@ -204,6 +221,8 @@ autoria, sob pena de plágio. Os materiais disponibilizados no ambiente virtual 
 sendo vedada a distribuição do material cuja a licença não permita ou sem a autorização prévia dos professores para o material de
 sua autoria.
 
-Página 4
 
+
+
+                                                                   Página 4
 

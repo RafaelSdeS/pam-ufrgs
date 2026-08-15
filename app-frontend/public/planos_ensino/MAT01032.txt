@@ -1,173 +1,154 @@
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+                                                    PLANO DE ENSINO
+                                                                                                               Data de Emissão: 14/08/2026
 
-Instituto de Matemática e Estatística
-Departamento de Matemática Pura e Aplicada
+
+
+                                               Instituto de Matemática e Estatística
+                                          Departamento de Matemática Pura e Aplicada
+
 Dados de identificação
 Período Letivo: 2026/2
 Professor Responsável: DAGOBERTO ADRIANO RIZZOTTO JUSTO
 Disciplina: CÁLCULO NUMÉRICO A
-Sigla: MAT01032
-
-Créditos: 4
+Sigla: MAT01032             Créditos: 4
 
 Carga Horária
-CH Teórica: 60h
-
-CH Prática: 0h
-
-Total: 60h
-
-CH Coletiva: 60h
-
-CH Autônoma: 0h
-
-CH Individual: 0h
-
+CH Teórica: 60h      CH Prática: 0h    Total: 60h
+CH Coletiva: 60h     CH Autônoma: 0h         CH Individual: 0h
 Carga Horária de prática Extensionista (CHE) 0h
+
 Súmula
 Erros; ajustamento de equações; interpolação, derivação e integração; solução de equações lineares e não lineares; solução de
 sistemas de equações lineares e não lineares; noções de otimização; solução de equações diferenciais e equações diferenciais
 parciais; noções do método Monte Carlo em suas diferentes aplicações.
+
 Currículos
-Currículos
-
-Etapa Aconselhada
-
-Natureza
-
-BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
-
-5
-
-Obrigatória
-
-BACHARELADO EM ESTATÍSTICA
-
-4
-
-Alternativa
-
-7
-
-Alternativa
-
-LICENCIATURA EM MATEMÁTICA
-
-8
-
-Alternativa
-
-LICENCIATURA EM MATEMÁTICA - NOTURNO
-
-10
-
-Alternativa
-
-BACHARELADO EM QUÍMICA
-
-Eletiva
-
-CIÊNCIAS ATUARIAIS - NOTURNO
-
-QUÍMICA INDUSTRIAL
-
-Eletiva
-
-QUÍMICA INDUSTRIAL - NOTURNO
-
-Eletiva
+                                       Currículos                                             Etapa Aconselhada             Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                     5                  Obrigatória
+BACHARELADO EM ESTATÍSTICA                                                                               4                  Alternativa
+BACHARELADO EM QUÍMICA                                                                                                        Eletiva
+CIÊNCIAS ATUARIAIS - NOTURNO                                                                             7                  Alternativa
+LICENCIATURA EM MATEMÁTICA                                                                               8                  Alternativa
+LICENCIATURA EM MATEMÁTICA - NOTURNO                                                                     10                 Alternativa
+QUÍMICA INDUSTRIAL                                                                                                            Eletiva
+QUÍMICA INDUSTRIAL - NOTURNO                                                                                                  Eletiva
 
 Objetivos
 Discutir e aplicar técnicas de solução de alguns problemas matemáticos do Cálculo
 Numérico, com a utilização de computadores e/ou calculadoras científicas programáveis.
+
 Conteúdo Programático
-Semana: 1 a 2
-Título: Introdução ao Cálculo Numérico
+  Semana: 1 a 2
+    Título: Introdução ao Cálculo Numérico
 Conteúdo: Aritmética ponto flutuante. Erros de arredondamento, precisão e exatidão em máquinas digitais. Erros Computacionais e medidas de
-exatidão. Subtração catastrófica. Propagação de erro nas operações numéricas.
-
-Semana: 3 a 6
-Título: Resolução numérica de equações não lineares
+             exatidão. Subtração catastrófica. Propagação de erro nas operações numéricas.
+  Semana: 3 a 6
+    Título: Resolução numérica de equações não lineares
 Conteúdo: Método da Bissecção e variantes, métodos de ponto fixo e método de Newton.
-Semana: 7 a 8
-Título: Resolução numérica de sistemas de equações algébricas
+  Semana: 7 a 8
+    Título: Resolução numérica de sistemas de equações algébricas
 Conteúdo: Resolução de sistemas de equações lineares. Eliminação gaussiana com pivotamento. Estabilidade numérica, número de
-condicionamento. Introdução aos métodos iterativos: Jacobi, Gauss-Seidel e SOR. Resolução numérica de sistemas de equações
-não-lineares pelo método de Newton.
-
-Semana: 9
-Título: Exercícios e avaliação
+             condicionamento. Introdução aos métodos iterativos: Jacobi, Gauss-Seidel e SOR. Resolução numérica de sistemas de equações
+             não-lineares pelo método de Newton.
+  Semana: 9
+    Título: Exercícios e avaliação
 Conteúdo: Exercícios e primeira avaliação
-Semana: 10 a 12
-Título: Interpolação polinomial e ajuste de dados via mínimos quadrados
+  Semana: 10 a 12
+    Título: Interpolação polinomial e ajuste de dados via mínimos quadrados
 
-Página 1
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+
+                                                                     Página 1
+                                                   PLANO DE ENSINO
+                                                                                                                  Data de Emissão: 14/08/2026
+
+
 
 Conteúdo: Técnicas de interpolação polinomial. Splines Cúbicos. Ajuste via critério dos mínimos quadrados e introdução ao ajuste não linear
-(Leverberg-Marquardt).
-
-Semana: 12 a 14
-Título: Diferenciação e Integração Numérica
+              (Leverberg-Marquardt).
+  Semana: 12 a 14
+    Título: Diferenciação e Integração Numérica
 Conteúdo: Aproximações por diferenças finitas. Quadraturas: Aproximação polinomial, algoritmos de Newton-Cotes, fórmulas do trapézio e
-Simpson; Romberg. Quadraturas Gaussianas: Legendre, Chebychev, Laguerre, Hermite. Método Estocástico: Noções do método de
-Monte Carlo.
-
-Semana: 15 a 17
-Título: Resolução numérica de equações diferenciais, otimização
+              Simpson; Romberg. Quadraturas Gaussianas: Legendre, Chebychev, Laguerre, Hermite. Método Estocástico: Noções do método de
+              Monte Carlo.
+  Semana: 15 a 17
+    Título: Resolução numérica de equações diferenciais, otimização
 Conteúdo: Problema de Valor Inicial: Euler, Runge-Kutta, métodos de passo múltiplo. Método adaptativo com controle de erro.
-Problema de Valor de contorno: Método de Diferenças finitas. Noções do método de diferença finita para EDPs.
-Noções de otimização: Método da procura em uma dimensão, problemas multidimensionais.
-
-Semana: 18
-Título: Exercícios e avaliação
+              Problema de Valor de contorno: Método de Diferenças finitas. Noções do método de diferença finita para EDPs.
+              Noções de otimização: Método da procura em uma dimensão, problemas multidimensionais.
+  Semana: 18
+    Título: Exercícios e avaliação
 Conteúdo: Exercícios e segunda avaliação.
-Semana: 19
-Título: Avaliação de Recuperação
+  Semana: 19
+    Título: Avaliação de Recuperação
 Conteúdo: Avaliações de recuperação
+
 Metodologia
 O ensino e a aprendizagem nessa disciplina será feito através de aulas expositivas presenciais, destinadas à apresentação e à
 exemplificação dos métodos e das técnicas do conteúdo programático onde recursos computacionais e/ou de multimídia podem ser
 empregados e através de listas de exercícios a serem disponibilizadas (ou indicadas) pelo professor.
 O professor poderá utilizar recursos como o Moodle para disponibilizar material de apoio, listas de exercícios ou atividades para o
 aluno.
+
+
 Desta forma, visamos desenvolver e consolidar atitudes de participação, comprometimento, organização, flexibilidade, crítica e
 autocrítica no desenrolar do processo de ensino-aprendizagem.
+
 Experiências de Aprendizagem
 (i) Atividades coletivas em salas de aulas com computadores.
 (ii) Resolução de listas de exercícios pelo estudante com aplicação dos métodos e técnicas desenvolvidos na disciplina.
+
 Critérios de avaliação
 A avaliação do desempenho do aluno será através de duas avaliações versando sobre o conteúdo programático dividido em duas
 áreas com notas N1 e N2 (cada nota terá uma nota entre 0.0 e 10.0 pontos). A média das avaliações será dada por M=(N1+N2)/2.
+
+
 O conceito do aluno será atribuído tal que:
+
+
 a) Se a frequência do aluno for inferior a 75%, então o conceito será FF conforme legislação vigente da UFRGS.
+
+
 b) Se a frequência do aluno for maior ou igual a 75%, então:
 Se M>=6 e M<7.5,então o conceito será C (aprovado);
 Se M>=7.5 e M<9, então o conceito será B (aprovado);
 Se M>=9, então o conceito será A (aprovado).
 Se M<6, então o conceito será D (reprovado).
+
+
 Para qualquer uma das avaliações ou atividades de recuperação, a estruturação, duração, data, uso de ferramentas e ambientes de
 auxílio, e critérios de correção ficam a critério de cada professor, devendo ser comunicados aos respectivos estudantes com
 antecedência.
+
 Atividades de Recuperação Previstas
 
-Página 2
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+                                                                       Página 2
+                                                      PLANO DE ENSINO
+                                                                                                                        Data de Emissão: 14/08/2026
+
+
 
 A recuperação ocorrerá após o término da carga horária prevista para a disciplina.
+
+
 A recuperação consiste na realização de uma avaliação substitutiva (com nota S) de uma única área ou de uma avaliação geral (com
 nota G) abordando todos os conteúdos da disciplina.
+
+
 (i) Se 4.0<=M<6.0, então o aluno poderá realizar uma avaliação (com nota S) substituindo a avaliação Ni onde obteve menor nota
 (de tal forma que a nota S substitui a nota Ni para fins de conceito final utilizando a escala de conceito acima).
+
+
 (ii) Se M<4.0, então o aluno poderá realizar uma avaliação geral com nota G. A nota G substituirá a nota M para fins de atribuição do
 conceito final conforme escalas de conceito descritos anteriormente.
+
+
 Para qualquer uma das avaliações de recuperação, a estruturação, duração, data, uso de ferramentas e ambientes de auxílio, e
 critérios de correção ficam a critério de cada professor, devendo ser comunicados aos respectivos estudantes com antecedência.
+
 Bibliografia
 Básica Essencial
 Dalcídio Moraes Cláudio. Cálculo Numérico Computacional: Teoria e Prática. São Paulo: Atlas, 2000. ISBN 8522424853.
@@ -188,13 +169,17 @@ Lambert, J. D.. Numerical methods for ordinary differential systems. New York: W
 Press, Saul A.; Vetterling, William T.; Flannery, Brian P.. Numerical Recipes in Fortran 77 :the Art of Scientific Computing. Cambridge, UK, 1992. ISBN
 9780521430647.
 
+
+
 Outras Referências
-Não existem outras referências para este plano de ensino.
+                                              Não existem outras referências para este plano de ensino.
 
 Observações
 Alunos de doutorado vinculados aos programas de pós-graduação em Matemática ou em Matemática Aplicada poderão realizar seu
 estágio de docência nesta disciplina.
 
-Página 3
 
+
+
+                                                                           Página 3
 

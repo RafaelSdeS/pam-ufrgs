@@ -7,6 +7,7 @@ import { calculateSubjectStatuses } from './composables/useCurriculumStatus'
 import { matchCourse } from './utils/searchUtils'
 import { getCourseDifficulty, getDifficultyLabel, getDifficultyColor } from './data/courseDifficulty'
 import { getCourseCampus } from './data/courseCampus'
+import { parsePlano, ICON_BY_CATEGORY } from './utils/planoParser'
 
 const emit = defineEmits(['change-page'])
 
@@ -425,6 +426,7 @@ const planoSubject = ref(null)
 const planoText = ref('')
 const planoLoading = ref(false)
 const planoError = ref(false)
+const planoSections = computed(() => parsePlano(planoText.value))
 
 async function openPlano(subj) {
   if (!subj || subj.isPlaceholder) return
@@ -700,7 +702,21 @@ async function openPlano(subj) {
             <v-icon icon="mdi-file-document-remove-outline" size="48" class="mb-2"></v-icon>
             <div>Plano de ensino ainda não disponível para esta disciplina.</div>
           </div>
-          <pre v-else class="plano-text">{{ planoText }}</pre>
+          <div v-else>
+            <div
+              v-for="(section, idx) in planoSections"
+              :key="idx"
+              class="plano-section"
+              :class="{ 'mt-5': idx > 0 }"
+            >
+              <div class="d-flex align-center ga-2 mb-2">
+                <v-icon :icon="ICON_BY_CATEGORY[section.category] || ICON_BY_CATEGORY.generic" color="primary" size="20"></v-icon>
+                <span class="text-subtitle-1 font-weight-bold">{{ section.title }}</span>
+              </div>
+              <v-divider class="mb-3"></v-divider>
+              <pre class="plano-text">{{ section.text }}</pre>
+            </div>
+          </div>
         </v-card-text>
       </v-card>
     </v-dialog>

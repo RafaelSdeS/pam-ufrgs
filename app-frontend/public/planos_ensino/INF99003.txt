@@ -1,45 +1,30 @@
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+                                                   PLANO DE ENSINO
+                                                                                                                Data de Emissão: 14/08/2026
 
-Instituto de Informática
-Comissão de Graduação de Ciência da Computação
+
+
+                                                         Instituto de Informática
+                                      Comissão de Graduação de Ciência da Computação
+
 Dados de identificação
 Período Letivo: 2026/2
 Professor Responsável: LEILA RIBEIRO
 Disciplina: PROJETO EM CIÊNCIA E INOVAÇÃO
-Sigla: INF99003
-
-Créditos: 8
+Sigla: INF99003              Créditos: 8
 
 Carga Horária
-CH Teórica: 60h
-
-CH Prática: 60h
-
-Total: 120h
-
-CH Coletiva: 50h
-
-CH Autônoma: 70h
-
-CH Individual: 0h
-
+CH Teórica: 60h       CH Prática: 60h      Total: 120h
+CH Coletiva: 50h      CH Autônoma: 70h         CH Individual: 0h
 Carga Horária de prática Extensionista (CHE) 0h
+
 Súmula
 Planejamento e execução de um projeto de pesquisa de pequeno porte na área de Computação. Método científico. Identificação de
 problemas relevantes e impactos das suas soluções. Inovação tecnológica a partir de projetos de base científica. Escrita científica.
 Divulgação científica. Pesquisa bibliográfica. Reprodutibilidade e Ciência Aberta.
+
 Currículos
-Currículos
-BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
-
-Etapa Aconselhada
-
-Natureza
-
-5
-
-Obrigatória
+                                        Currículos                                             Etapa Aconselhada              Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                       5                 Obrigatória
 
 Objetivos
 A disciplina propo&#771;e-se a oferecer ao aluno de Computac&#807;a&#771;o a pra&#769;tica do me&#769;todo cienti&#769;fico e
@@ -55,42 +40,44 @@ interpretando resultados de forma rigorosa e meto&#769;dica.
 pesquisa, seguindo convenc&#807;o&#771;es acade&#770;micas.
 * Análise crítica de impacto de soluc&#807;o&#771;es computacionais em diferentes dimenso&#771;es - por exemplo: e&#769;tica,
 ambiental, social, cultural, legal.
+
 Conteúdo Programático
-Semana: 1
-Título: Introdução à Ciência e Inovação
+  Semana: 1
+    Título: Introdução à Ciência e Inovação
 Conteúdo: Apresentac&#807;a&#771;o da Disciplina. Me&#769;todo Cienti&#769;fico (Observac&#807;a&#771;o, Ana&#769;lise,
-Hipo&#769;teses, Experimentos, Validac&#807;a&#771;o/ Falsificac&#807;a&#771;o), Conti&#769;nuo entre Cie&#770;ncia
-Ba&#769;sica e Inovac&#807;a&#771;o / Tecnologias (Aplicabilidade em longo / me&#769;dio / curto prazo). Pensamento dedutivo e
-pensamento indutivo. Papel da Graduac&#807;a&#771;o, Mestrado, Doutorado, Po&#769;s-doutorado. Iniciac&#807;a&#771;o
-Cienti&#769;fica. Transfere&#770;ncia de Conhecimento. Unidades de P&D em grandes empresas.
-
-Semana: 2 a 3
-Título: Pesquisa Bibliográfica
+              Hipo&#769;teses, Experimentos, Validac&#807;a&#771;o/ Falsificac&#807;a&#771;o), Conti&#769;nuo entre Cie&#770;ncia
+              Ba&#769;sica e Inovac&#807;a&#771;o / Tecnologias (Aplicabilidade em longo / me&#769;dio / curto prazo). Pensamento dedutivo e
+              pensamento indutivo. Papel da Graduac&#807;a&#771;o, Mestrado, Doutorado, Po&#769;s-doutorado. Iniciac&#807;a&#771;o
+              Cienti&#769;fica. Transfere&#770;ncia de Conhecimento. Unidades de P&D em grandes empresas.
+  Semana: 2 a 3
+    Título: Pesquisa Bibliográfica
 Conteúdo: Ferramentas de busca bibliogra&#769;fica e na Web. Ana&#769;lise da literatura. Organizac&#807;a&#771;o de bibliografia.
-Definic&#807;a&#771;o do estado da arte.
+              Definic&#807;a&#771;o do estado da arte.
+  Semana: 4 a 8
+    Título: Método científico
 
-Semana: 4 a 8
-Título: Método científico
 
-Página 1
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+                                                                      Página 1
+                                                    PLANO DE ENSINO
+                                                                                                                   Data de Emissão: 14/08/2026
+
+
 
 Conteúdo: Fundamentos do método científico. Ana&#769;lise experimental. Controle de experimentos e dados. Documentac&#807;a&#771;o.
-Cie&#770;ncia aberta e reproduti&#769;vel. Ana&#769;lise de resultado de experimentos. Cie&#770;ncia de Dados.
-Visualizac&#807;a&#771;o de dados. Ana&#769;lise de correc&#807;a&#771;o das soluc&#807;o&#771;es propostas.
-
-Semana: 9 a 11
-Título: Escrita científica
+              Cie&#770;ncia aberta e reproduti&#769;vel. Ana&#769;lise de resultado de experimentos. Cie&#770;ncia de Dados.
+              Visualizac&#807;a&#771;o de dados. Ana&#769;lise de correc&#807;a&#771;o das soluc&#807;o&#771;es propostas.
+  Semana: 9 a 11
+    Título: Escrita científica
 Conteúdo: Redação te&#769;cnica. Descrição de algoritmos de maneira intuitiva e precisa. Visualização de resultados usando diagramas e
-gra&#769;ficos. Apresentac&#807;a&#771;o de concluso&#771;es sem vie&#769;s. Tipos diferentes de publicac&#807;o&#771;es
-cienti&#769;ficas (confere&#770;ncias, journals, posteres, short papers, surveys). Processo de publicac&#807;a&#771;o de um artigo,
-DOI. Sociedades cienti&#769;ficas (SBC, ACM, IEEE, ?). E&#769;tica.
-
-Semana: 12 a 15
-Título: Análise crítica
+              gra&#769;ficos. Apresentac&#807;a&#771;o de concluso&#771;es sem vie&#769;s. Tipos diferentes de publicac&#807;o&#771;es
+              cienti&#769;ficas (confere&#770;ncias, journals, posteres, short papers, surveys). Processo de publicac&#807;a&#771;o de um artigo,
+              DOI. Sociedades cienti&#769;ficas (SBC, ACM, IEEE, ?). E&#769;tica.
+  Semana: 12 a 15
+    Título: Análise crítica
 Conteúdo: Ana&#769;lise cri&#769;tica e ana&#769;lise de impactos (econo&#770;micos, sociais). Ética.
+
 Metodologia
 Os conteúdos serão desenvolvidos de várias formas usando diferentes metodologias de ensino-aprendizagem. Serão realizadas
 aulas teo&#769;ricas expositivas, aulas com dinâmicas diversas, bem como utilizadas técnicas de sala de aula invertida, na qual os
@@ -121,6 +108,8 @@ produto via&#769;vel executa&#769;vel. A apresentac&#807;a&#771;o sera&#769; fei
 uma apresentac&#807;a&#771;o no formato de pitch onde o grupo resume o problema e seus desafios, a soluc&#807;a&#771;o
 proposta e uma ana&#769;lise comparativa a outras soluc&#807;o&#771;es existentes, seu desenvolvimento, desafios,
 aprendizados, impactos e limitac&#807;o&#771;es da soluc&#807;a&#771;o proposta e potencial evoluc&#807;a&#771;o da mesma.
+
+
 Recursos disponibilizados: As atividades previstas assim como as instruções para sua realização serão disponibilizadas no Moodle
 da UFRGS. Eventuais componentes externos ao Moodle e necessários para a realização das atividades estarão indicados no próprio
 Moodle. Também serão disponibilizados no Moodle links para os livros e artigos online e gratuitos, indicados para leitura e estudo,
@@ -128,10 +117,14 @@ visando auxiliar na realização das atividades propostas.
 As 120 horas previstas para atividades teo&#769;ricas e pra&#769;ticas indicadas neste Plano de Ensino incluem 15 encontros de
 200 minutos de durac&#807;a&#771;o (ao longo de 15 semanas) num total de 3000 minutos e mais 70 horas (4200 minutos) de
 
-Página 2
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+
+                                                                        Página 2
+                                                 PLANO DE ENSINO
+                                                                                                           Data de Emissão: 14/08/2026
+
+
 
 atividades auto&#770;nomas, realizadas sem contato direto com o professor, correspondentes a&#768;
 implementac&#807;a&#771;o das atividades propostas, conforme Resoluc&#807;a&#771;o 11/2013 do CEPE/UFRGS, Artigos 36 a
@@ -143,20 +136,24 @@ alunos no início do semestre.
 O professor ministrante poderá se valer de aulas presenciais ou à distância (essa última para as atividades de sala de aula invertida,
 conforme previsto no cronograma que será divulgado para os alunos no início do semestre), assim como do apoio de Professores
 Assistentes (Alunos de Pós-Graduação) em Atividades Didáticas.
+
 Experiências de Aprendizagem
 Participar de aulas expositivas dialogadas
 Realizar projetos individualmente e em grupo
 Resolver listas de exercícios extraclasse ou implementação de trabalho ou responder questionários
 Realizar leitura de material disponibilizado ou assistir a vídeos ou vídeoaulas
+
+
 Os estudantes devem seguir as regras definidas pelos professores responsáveis sobre o uso de ferramentas de Inteligência Artificial
 (IA). As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades práticas ou teóricas que compõem as
 experiências de aprendizagem e os critérios de avaliação da disciplina.
+
 Critérios de avaliação
 O conceito final sera&#769; obtido atrave&#769;s de um projeto que sera&#769; dividido em tre&#770;s etapas (T1, T2 e T3),
 utilizando-se a seguinte ponderac&#807;a&#771;o:
-T1: ana&#769;lise, discussa&#771;o e apresentac&#807;a&#771;o do problema (20%)
-T2: ana&#769;lise, discussa&#771;o e implementac&#807;a&#771;o da soluc&#807;a&#771;o computacional (50%)
-T3: ana&#769;lise, discussa&#771;o e apresentac&#807;a&#771;o da soluc&#807;a&#771;o geral e seus impactos (30%)
+ T1: ana&#769;lise, discussa&#771;o e apresentac&#807;a&#771;o do problema (20%)
+ T2: ana&#769;lise, discussa&#771;o e implementac&#807;a&#771;o da soluc&#807;a&#771;o computacional (50%)
+ T3: ana&#769;lise, discussa&#771;o e apresentac&#807;a&#771;o da soluc&#807;a&#771;o geral e seus impactos (30%)
 O trabalho deverá ser realizado em grupo e a apresentac&#807;a&#771;o de cada etapa inclui um relato&#769;rio te&#769;cnico
 (no formato de artigo cienti&#769;fico) e uma apresentac&#807;a&#771;o oral com apoio visual em formato de
 divulgac&#807;a&#771;o cienti&#769;fica.
@@ -176,17 +173,23 @@ FF - Reprovac&#807;a&#771;o por freque&#770;ncia
 Obs.: Somente sera&#771;o calculadas as me&#769;dias gerais daqueles alunos que tiverem obtido, ao longo do semestre, um
 i&#769;ndice de freque&#770;ncia a&#768;s aulas igual ou superior a 75% das aulas previstas. Aos que na&#771;o satisfizerem este
 requisito, sera&#769; atribui&#769;do o conceito FF (Falta de Frequência)
+
 Atividades de Recuperação Previstas
 Nesta disciplina e&#769; desenvolvido um projeto, que e&#769; avaliado ao longo do semestre atrave&#769;s das entregas parciais
 e conversas com professores, portanto, a recuperac&#807;a&#771;o da aprendizagem se da&#769; ao longo do semestre.
 Na&#771;o havera&#769; prova de recuperac&#807;a&#771;o, dadas as caracteri&#769;sticas da disciplina, esse tipo de
 
-Página 3
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+
+                                                                    Página 3
+                                                        PLANO DE ENSINO
+                                                                                                                Data de Emissão: 14/08/2026
+
+
 
 avaliac&#807;a&#771;o na&#771;o e&#769; adequado.
+
 Bibliografia
 Básica Essencial
 Abraham Flexner. The Usefulness of Useless Knowledge. Princeton: Princeton University Press,, 2017. ISBN 978- 0691174761.
@@ -202,8 +205,10 @@ https://lume.ufrgs.br/bitstream/handle/10183/52806/000728684.pdf?sequence=1
 Complementar
 Valtencir Zucolotto. Escrita cienti?fica. online, 2015. Disponível em: http://www.escritacientifica.com/
 
+
+
 Outras Referências
-Não existem outras referências para este plano de ensino.
+                                               Não existem outras referências para este plano de ensino.
 
 Observações
 O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
@@ -211,6 +216,8 @@ atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de pr
 uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
 disciplina, o estudante estará sujeito à sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
 desligamento da Universidade.
+
+
 Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
 vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
 utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
@@ -220,6 +227,8 @@ específica para a finalidade pretendida. Os materiais disponibilizados no ambie
 específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
 material de sua autoria.
 
-Página 4
 
+
+
+                                                                             Página 4
 

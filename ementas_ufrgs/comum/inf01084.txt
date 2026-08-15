@@ -1,51 +1,30 @@
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+                                                      PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 14/08/2026
 
-Instituto de Informática
-Departamento de Informática Aplicada
+
+
+                                                         Instituto de Informática
+                                               Departamento de Informática Aplicada
+
 Dados de identificação
 Período Letivo: 2026/2
 Professor Responsável: ALEXANDRE DA SILVA CARISSIMI
 Disciplina: REDES DE COMPUTADORES E INTERNET
-Sigla: INF01084
-
-Créditos: 4
+Sigla: INF01084             Créditos: 4
 
 Carga Horária
-CH Teórica: 60h
-
-CH Prática: 0h
-
-Total: 60h
-
-CH Coletiva: 50h
-
-CH Autônoma: 10h
-
-CH Individual: 0h
-
+CH Teórica: 60h      CH Prática: 0h      Total: 60h
+CH Coletiva: 50h      CH Autônoma: 10h         CH Individual: 0h
 Carga Horária de prática Extensionista (CHE) 0h
+
 Súmula
 Fundamentos e conceitos de redes de comunicação, com ênfase na Internet. Camada de Aplicação. Camada de Transporte.
 Camada de Rede. Camada de Enlace.
-Currículos
-Etapa Aconselhada
-
-Natureza
-
-BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO
 
 Currículos
-
-6
-
-Obrigatória
-
-ENGENHARIA DE COMPUTAÇÃO
-
-6
-
-Obrigatória
+                                         Currículos                                               Etapa Aconselhada               Natureza
+BACHARELADO EM CIÊNCIA DA COMPUTAÇÃO                                                                          6                  Obrigatória
+ENGENHARIA DE COMPUTAÇÃO                                                                                      6                  Obrigatória
 
 Objetivos
 A disciplina visa desenvolver as seguintes habilidades específicas:
@@ -58,100 +37,135 @@ rede, incluindo controle de fluxo e de congestionamento.
 - Desenvolver as bases conceituais necessárias à compreensão da função e da necessidade de roteamento em redes de
 computadores, o que envolve algoritmos, protocolos e roteamento hierárquico (intradomínio e interdomínios)
 - Compreender fundamentos de funcionamento de tecnologias de redes, com cabos e sem fio, de diferentes alcances.
+
 Conteúdo Programático
-Semana: 1 a 2
-Título: Introdução
+  Semana: 1 a 2
+    Título: Introdução
 Conteúdo: Apresentação da disciplina (plano de ensino, sistema de avaliação). O que é a Internet? Descrição de componentes da rede, de
-serviços e de protocolos. Redes de acesso e meios físicos. Estrutura da Internet: atrasos, perdas e vazão. Camadas de protocolos e
-modelos de serviço. Princípios de segurança em redes. Histórico de redes de computadores e da Internet.
-
-Semana: 3 a 4
-Título: Camada de aplicação
+              serviços e de protocolos. Redes de acesso e meios físicos. Estrutura da Internet: atrasos, perdas e vazão. Camadas de protocolos e
+              modelos de serviço. Princípios de segurança em redes. Histórico de redes de computadores e da Internet.
+  Semana: 3 a 4
+    Título: Camada de aplicação
 Conteúdo: Princípios de aplicações de rede: arquitetura, comunicação entre processos, serviços de transporte, protocolos de camada de
-aplicação. Protocolos de acesso à web (HTTP e suas variantes). Correio eletrônico: SMTP, protocolos de acesso (POP e IMAP). DNS:
-serviços fornecidos pelo DNS, visão geral do modo de funcionamento do DNS, registros e mensagens DNS.
-
-Semana: 5 a 8
-Título: Camada de Transporte
+              aplicação. Protocolos de acesso à web (HTTP e suas variantes). Correio eletrônico: SMTP, protocolos de acesso (POP e IMAP). DNS:
+              serviços fornecidos pelo DNS, visão geral do modo de funcionamento do DNS, registros e mensagens DNS.
+  Semana: 5 a 8
+    Título: Camada de Transporte
 Conteúdo: Serviços e protocolos da camada de transporte. Relação entre a camada de transporte e a camada de rede. Multiplexação e
-demultiplexação. Transporte não orientado à conexão (UDP). Princípios da transferência confiável de dados: protocolos de
-transferência de dados com paralelismo, Go back-N (GBN), Repetição seletiva (SR).Transporte orientado à conexão (TCP): conexão
-TCP, segmento TCP, estimativa do tempo de viagem e esgotamento da temporização, transferência confiável de dados, controle de
+              demultiplexação. Transporte não orientado à conexão (UDP). Princípios da transferência confiável de dados: protocolos de
+              transferência de dados com paralelismo, Go back-N (GBN), Repetição seletiva (SR).Transporte orientado à conexão (TCP): conexão
+              TCP, segmento TCP, estimativa do tempo de viagem e esgotamento da temporização, transferência confiável de dados, controle de
 
-Página 1
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
 
-fluxo, gerenciamento da conexão TCP. Noções de controle de congestionamento. Controle de congestionamento no TCP.
 
-Semana: 9 a 12
-Título: Camada de rede
+                                                                        Página 1
+                                                    PLANO DE ENSINO
+                                                                                                                    Data de Emissão: 14/08/2026
+
+
+
+              fluxo, gerenciamento da conexão TCP. Noções de controle de congestionamento. Controle de congestionamento no TCP.
+  Semana: 9 a 12
+    Título: Camada de rede
 Conteúdo: Introdução: encaminhamento e roteamento, modelos de serviço de rede. Plano de controle e plano de dados. Redes de circuitos
-virtuais e de datagramas. Roteadores: visão interna, arquitetura, processamento de entrada e de saída, elementos de comutação,
-filas. Protocolo Internet (IP): formato do datagrama, endereçamento IPv4, sub-redes, noções básicas de IPv6, atribuição de
-endereços IP (DHCP), agregação de prefixos, NAT, ICMP. Algoritmos de roteamento: estado de enlace, vetor de distância,
-roteamento hierárquico. Sistemas autônomos. Noções de roteamento na Internet: intradomínio (OSPF), interdomínio (BGP). Princípios
-de redes definidas por Software.
-
-Semana: 13 a 15
-Título: Camada de enlace
+              virtuais e de datagramas. Roteadores: visão interna, arquitetura, processamento de entrada e de saída, elementos de comutação,
+              filas. Protocolo Internet (IP): formato do datagrama, endereçamento IPv4, sub-redes, noções básicas de IPv6, atribuição de
+              endereços IP (DHCP), agregação de prefixos, NAT, ICMP. Algoritmos de roteamento: estado de enlace, vetor de distância,
+              roteamento hierárquico. Sistemas autônomos. Noções de roteamento na Internet: intradomínio (OSPF), interdomínio (BGP). Princípios
+              de redes definidas por Software.
+  Semana: 13 a 15
+    Título: Camada de enlace
 Conteúdo: Introdução à camada de enlace. Técnicas de detecção e correção de erros. Enlaces e protocolos de acesso múltiplo. Endereços MAC.
-Protocolo ARP. Redes locais comutadas: switches e VLANs. Virtualização de enlaces: MPLS. Redes de centro de dados. Redes sem
-fio e redes móveis: características de enlaces de redes sem fio: IEEE 802.11 (Wi&#8209;Fi).
+              Protocolo ARP. Redes locais comutadas: switches e VLANs. Virtualização de enlaces: MPLS. Redes de centro de dados. Redes sem
+              fio e redes móveis: características de enlaces de redes sem fio: IEEE 802.11 (Wi&#8209;Fi).
 
 Metodologia
 A disciplina é apresentada em aulas teóricas expositivas com a realização de trabalhos e exercícios extraclasse para fixação dos
 conteúdos.
+
+
 A disciplina utilizará uma plataforma de Ambiente Virtual de Aprendizado (AVA) para distribuição de material, entrega de trabalhos,
 organização de grupos de discussão e acompanhamento geral da disciplina.
+
+
 As 60 horas previstas para atividades teóricas indicadas neste Plano de Ensino incluem 30 encontros de 100 minutos de duração (2
 períodos de 50 minutos por encontro, 2 encontros por semana, durante 15 semanas), num total de 3.000 minutos, e mais 10 horas
 (600 minutos) de atividades autônomas, realizadas sem contato direto com o professor, correspondentes aos exercícios e trabalhos
 extraclasse a serem avaliados.
+
 Experiências de Aprendizagem
 As experiências de aprendizagem previstas para a disciplina consistem, basicamente, na participação dos discentes nas aulas
 expositivas de forma dialogada (atividade coletiva), na realização de listas de exercícios extraclasse (atividade autônoma) e na
 realização de atividades de verificação de aprendizagem dos conteúdos vistos até a data das mesmas (atividade coletiva). É prevista
 ainda a indicação de material adicional, suplementar, para apoio ao aprendizado, como sugestões de leitura de material, vídeos e/ou
 videoaulas disponibilizados na plataforma AVA utilizada na disciplina.
+
+
 Os estudantes devem seguir as regras definidas pelo professor responsável sobre o uso de ferramentas de Inteligência Artificial (IA).
 As diretrizes relativas ao uso de IA podem variar entre os diferentes trabalhos e atividades que compõem as experiências de
 aprendizagem e os critérios de avaliação da disciplina.
+
 Critérios de avaliação
 A avaliação será realizada através de duas atividades de avaliação de aprendizagem (P1 e P2), podendo conter questões
 discursivas, analíticas ou objetivas de múltipla escolha sobre o conteúdo apresentado, incluindo aqueles abordados nos exercícios e
 nos trabalhos extraclasse propostos.
+
+
 Além dessas atividades de avaliação de aprendizagem, haverá a realização de atividades autônomas a serem definidas no decorrer
 do semestre, cuja média será uma componente a ser integrada nas notas das avaliações de aprendizagem (P1 e P2).
+
+
 Será considerado aprovado o discente que obtiver média final (MF) de no mínimo SEIS (6,0), calculada da seguinte forma:
+
+
 MF = 0,5*P1 + 0,5*P2
+
+
 onde P1 e P2 são, respectivamente, as notas da primeira e segunda atividades de avaliação de aprendizagem. O conceito final do
 
-Página 2
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+
+                                                                        Página 2
+                                                  PLANO DE ENSINO
+                                                                                                               Data de Emissão: 14/08/2026
+
+
 
 discente será atribuído com base na nota final (MF), conforme a seguinte tabela:
+
+
 - Conceito A, para MF>=9,0;
 - Conceito B, para MF>=7,5 e MF<9,0;
 - Conceito C, para MF>=6,0 e MF<7,5;
 - Conceito D, para MF<6,0.
+
+
 Conforme regulamento da Universidade, é obrigatória uma frequência mínima de 75% de presença nas aulas. A não observância a
 esse requisito implicará conceito FF.
+
 Atividades de Recuperação Previstas
 Os discentes que não alcançarem média final para aprovação (MF >= 6,0) poderão realizar uma atividade avaliativa de recuperação,
 que versará sobre todos os conteúdos apresentados na disciplina ao longo do semestre
+
+
 Para ser aprovado na disciplina, o discente deverá atingir uma nota mínima na atividade avaliativa de recuperação (NMR)
 determinada pela seguinte expressão:
+
+
 NMR = 12 - MF
+
+
 com NMR limitado a um valor máximo igual a 10 (dez) e MF sendo a Média Final obtida pelo discente como resultado de todas as
 atividades de avaliação de aprendizagem realizadas na disciplina. O discente em recuperação que atingir a nota mínima necessária
 será aprovado com conceito "C", caso contrário, será reprovado (conceito "D").
+
+
 No caso de falta justificada a qualquer uma das atividades de avaliação, o discente poderá recuperá-la em data, horário e local a
 serem marcados pelo professor. Por falta justificada, entendem-se os casos previstos em legislação (saúde, parto, serviço militar,
 convocação judicial etc.) devidamente comprovados segundo as normas da UFRGS.
+
 Bibliografia
 Básica Essencial
 KUROSE, J. F.; ROSS, K. W.. Redes de Computadores e a Internet: uma abordagem top-down (6ª ed.). São Paulo: Pearson Education do Brasil,
@@ -163,31 +177,34 @@ KUROSE, J. F.; ROSS, K. W.. Redes de Computadores e a Internet: uma abordagem to
 TANENBAUM, A.; WETHERALL, D. Redes de Computadores (5ª ed.). São Paulo: Pearson Education do Brasil, 2011. ISBN 9788576059240.
 
 Complementar
-Sem bibliografias acrescentadas
+                                                      Sem bibliografias acrescentadas
+
+
 
 Outras Referências
-
-Título
-Outras Referências
-
-Texto
-O ambiente virtual de aprendizagem (AVA) recomendado é
-o Moodle institucional da UFRGS que pode ser acessado
-através da URL http://moodle.ufrgs.br com o usuário e a
-senha do portal do aluno.
-
+                               Título                                                            Texto
+Outras Referências                                                    O ambiente virtual de aprendizagem (AVA) recomendado é
+                                                                      o Moodle institucional da UFRGS que pode ser acessado
+                                                                      através da URL http://moodle.ufrgs.br com o usuário e a
+                                                                      senha do portal do aluno.
 Observações
 O uso de qualquer ferramenta, recurso ou meio, incluindo o uso de ferramenta de inteligência artificial, no desempenho de tarefa ou
 atividade acadêmica que seja de responsabilidade do aluno, com o objetivo de práticas ilícitas, tais como fraude ou plágio, constitui
 uma infração disciplinar segundo o Código Disciplinar Discente da UFRGS. Além de penalidades impostas no contexto avaliativo da
 disciplina, o estudante estará sujeito a sanções que incluem advertência, repreensão por escrito, suspensão ou, na maior gravidade,
 
-Página 3
 
-PLANO DE ENSINO
-Data de Emissão: 14/08/2026
+
+
+                                                                     Página 3
+                                                PLANO DE ENSINO
+                                                                                                          Data de Emissão: 14/08/2026
+
+
 
 desligamento da Universidade.
+
+
 Informações sobre Direitos Autorais e de Imagem: Todos os materiais disponibilizados são exclusivamente para fins didáticos, sendo
 vedada a sua utilização para qualquer outra finalidade, sob as penas legais. Todos os materiais de terceiros que venham a ser
 utilizados devem ser referenciados, indicando a autoria, sob pena de plágio. Somente poderão ser gravadas pelos alunos as
@@ -197,6 +214,8 @@ específica para a finalidade pretendida. Os materiais disponibilizados no ambie
 específica, sendo vedada a distribuição do material cuja licença não permita ou sem a autorização prévia dos professores para o
 material de sua autoria.
 
-Página 4
 
+
+
+                                                                  Página 4
 

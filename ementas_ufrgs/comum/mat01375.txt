@@ -1,40 +1,31 @@
-375
-UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
-INSTITUTO DE MATEMÁTICA
-DEPARTAMENTO DE MATEMÁTICA PURA E APLICADA
+                                                                                        375
+                         UNIVERSIDADE FEDERAL DO RIO GRANDE DO SUL
+                                  INSTITUTO DE MATEMÁTICA
+                        DEPARTAMENTO DE MATEMÁTICA PURA E APLICADA
 
-PLANO DE ENSINO
-Código MAT
 
-Nome
 
-01375 Matemática Discreta B
+                        PLANO DE ENSINO
+
+Código MAT         Nome
+
+      01375 Matemática Discreta B
 Créditos/horas-aula Súmula
 
-04 / 60 Indução matemática. Conjuntos. Álgebra de conjuntos. Relações binárias.
-Semestre
-
-2008-2
-
-Funções. Estruturas algébricas. Reticulados. Álgebra booleana. Técnicas de
-demonstração de teoremas.
-
-Cursos
-Ciência da Computação
-Engenharia de Computação
-
-Etapa
-1ª
-1ª
-
-Pré-Requisitos
-Nenhum
-
+     04 / 60 Indução matemática. Conjuntos. Álgebra de conjuntos. Relações binárias.
+Semestre           Funções. Estruturas algébricas. Reticulados. Álgebra booleana. Técnicas de
+                   demonstração de teoremas.
+     2008-2
+Cursos                         Etapa           Pré-Requisitos
+Ciência da Computação          1ª
+Engenharia de Computação       1ª              Nenhum
 Professor Responsável
 
-Luisa Rodríguez Doering
+                   Luisa Rodríguez Doering
+
 Objetivos:
-Estudar os conceitos e resultados básicos dos conteúdos da súmula, fornecendo ao
+
+        Estudar os conceitos e resultados básicos dos conteúdos da súmula, fornecendo ao
 estudante conhecimentos e técnicas que lhe sejam úteis posteriormente. Capacitar o aluno a
 uma apreciação da disciplina não só como expressão da criatividade intelectual, mas como
 instrumento para o domínio da ciência e da técnica atual. Desenvolver e consolidar atitudes de
@@ -42,123 +33,91 @@ participação, comprometimento, organização, flexibilidade, crítica e autocr
 do processo de ensino-aprendizagem.
 
 Metodologia e Experiências de Aprendizagem:
-Os conteúdos programáticos serão abordados através de aulas expositivo-dialogadas,
+
+        Os conteúdos programáticos serão abordados através de aulas expositivo-dialogadas,
 estudos em pequenos grupos e estudos individualizados. A resolução de exercícios será
 enfatizada, também como atividade extra classe. Para tanto o aluno contará com a assistência
 do professor em horários extra classe a serem divulgados ao iniciar o semestre.
 
 Conteúdo Programático:
+
 1. Noções de Lógica Matemática: proposições, valor-verdade, conjunção, disjunção,
-implicação e equivalência de proposições.
+   implicação e equivalência de proposições.
 2. Técnicas de demonstração de teoremas.
 3. Conjuntos: subconjuntos, igualdade de conjuntos, conjunto das partes, diagramas de
-Venn.
-
+   Venn.
 4. Operações com conjuntos, álgebra de conjuntos, relação das operações com conjuntos
-com as operações lógicas.
+    com as operações lógicas.
 5. Relações: representações de relações por grafos, matrizes e diagramas, composição de
-relações, relação inversa ou dual. Propriedades de relações.
+    relações, relação inversa ou dual. Propriedades de relações.
 6. Relações de equivalência: classes de equivalência e partições.
 7. Relações de ordem: diagrama de Hasse, conjuntos parcialmente ordenados, totalmente
-ordenados, reticulados.
+    ordenados, reticulados.
 8. Funções: imagem, funções injetoras e sobrejetoras, composição de funções, função
-inversa. Seqüências.
+    inversa. Seqüências.
 9. Indução matemática; recursão.
 10. Álgebras booleanas: expressões booleanas.
 11. Estruturas algébricas: grupos e aplicações.
 
 Cronograma de Atividades:
-Aula Data Dia
-Conteúdo
-1 05/08 Ter
-Noções de Lógica Matemática
-2 07/08 Qui
-Noções de Lógica Matemática
-3 12/08 Ter
-Noções de Lógica Matemática
-4 14/08 Qui
-Noções de Lógica Matemática
-5 19/08 Ter Técnicas de demonstração de teoremas
-6 21/08 Qui Técnicas de demonstração de teoremas
-7 26/08 Ter
-Conjuntos
-8 28/08 Qui
-Operações com conjuntos
-9 02/09 Ter
-Operações com conjuntos
-10 04/09 Qui
-Relações
-11 09/09 Ter
-Relações e Funções
-12 11/09 Qui
-Relações
-13 16/09 Ter
-Relações de equivalência
-14 18/09 Qui
-Relações de equivalência
-15 23/09 Ter
-Aula de exercícios
-16 25/09 Qui
-PROVA DE ÁREA I
-17 30/09 Ter
-Relações de ordem
-18 02/10 Qui
-Relações de ordem
-19 07/10 Ter
-Reticulados
-20 09/10 Qui
-Reticulados e Seqüências
-21 14/10 Ter
-Seqüências
-22 16/10 Qui
-Indução
-21/10 Ter
-Salão de INCI
-23/10 Qui
-Salão de INCI
-23 28/10 Ter
-Indução
-24 30/10 Qui
-Indução
-25 04/11 Ter
-Álgebras Booleanas
-26 06/11 Qui
-Álgebras Booleanas
-27 11/11 Ter
-Álgebras Booleanas
-28 13/11 Qui
-Estruturas algébricas: grupos
-29 18/11 Ter
-Estruturas algébricas: grupos
-30 20/11 Qui
-Aula de exercícios
-31 25/11 Ter
-PROVA DE ÁREA II
-32 27/11 Qui
-Atendimento/resultados da prova
-33 02/12 Ter
-Recuperações
-04/12 Qui
-09/12 Ter
-Divulgação dos resultados
 
-2
+                      Aula Data Dia               Conteúdo
+                        1 05/08 Ter    Noções de Lógica Matemática
+                        2 07/08 Qui    Noções de Lógica Matemática
+                        3 12/08 Ter    Noções de Lógica Matemática
+                        4 14/08 Qui    Noções de Lógica Matemática
+                        5 19/08 Ter Técnicas de demonstração de teoremas
+                        6 21/08 Qui Técnicas de demonstração de teoremas
+                        7 26/08 Ter               Conjuntos
+                        8 28/08 Qui       Operações com conjuntos
+                        9 02/09 Ter       Operações com conjuntos
+                       10 04/09 Qui               Relações
+                       11 09/09 Ter          Relações e Funções
+                       12 11/09 Qui               Relações
+                       13 16/09 Ter       Relações de equivalência
+                       14 18/09 Qui       Relações de equivalência
+                       15 23/09 Ter           Aula de exercícios
+                       16 25/09 Qui        PROVA DE ÁREA I
+                       17 30/09 Ter          Relações de ordem
+                       18 02/10 Qui          Relações de ordem
+                       19 07/10 Ter              Reticulados
+                       20 09/10 Qui       Reticulados e Seqüências
+                       21 14/10 Ter              Seqüências
+                       22 16/10 Qui                Indução
+                           21/10 Ter            Salão de INCI
+                           23/10 Qui            Salão de INCI
+                       23 28/10 Ter                Indução
+                       24 30/10 Qui                Indução
+                       25 04/11 Ter          Álgebras Booleanas
+                       26 06/11 Qui          Álgebras Booleanas
+                       27 11/11 Ter          Álgebras Booleanas
+                       28 13/11 Qui     Estruturas algébricas: grupos
+                       29 18/11 Ter     Estruturas algébricas: grupos
+                       30 20/11 Qui           Aula de exercícios
+                       31 25/11 Ter        PROVA DE ÁREA II
+                       32 27/11 Qui   Atendimento/resultados da prova
+                       33 02/12 Ter             Recuperações
+                           04/12 Qui
+                           09/12 Ter  Divulgação dos resultados
 
+
+
+
+                                              2
 Critérios de Avaliação:
-O sistema de avaliação consiste na realização de duas provas. Os assuntos a serem
+
+        O sistema de avaliação consiste na realização de duas provas. Os assuntos a serem
 abordados na primeira prova são os itens de 1 a 6 da lista do Conteúdo Programático e os da
 segunda prova são os itens de 7 a 11, podendo haver pequenas variações; podem ser
 realizados testes e trabalhos extra classe .
 
--
+    O aluno estará aprovado na disciplina se:
+-   cumprir a exigência de no mínimo 75% de presença nas aulas ministradas, conforme rege
+    o artigo 134 do RGU,
+-   a nota de cada uma das provas for superior ou igual a 5,0 (cinco) e a média aritmética das
+    duas provas for igual ou superior a 6,0(seis).
 
-O aluno estará aprovado na disciplina se:
-cumprir a exigência de no mínimo 75% de presença nas aulas ministradas, conforme rege
-o artigo 134 do RGU,
-a nota de cada uma das provas for superior ou igual a 5,0 (cinco) e a média aritmética das
-duas provas for igual ou superior a 6,0(seis).
-
-A atribuição do conceito final ao aluno será feita em correspondência com a nota final M
+   A atribuição do conceito final ao aluno será feita em correspondência com a nota final M
 do mesmo (que é a média das duas notas obtidas), usando-se a seguinte referência:
 - M  9 corresponde a conceito final A;
 - 7,5  M  9,0 corresponde a conceito final B;
@@ -167,47 +126,58 @@ Os alunos não aprovados e que cumpriram a exigência de freqüência mínima re
 conceito final D e os demais receberão conceito final FF.
 
 Atividades de Recuperação:
-O aluno que não tiver sido aprovado no critério acima, mas que cumpriu a exigência
+
+        O aluno que não tiver sido aprovado no critério acima, mas que cumpriu a exigência
 do Artigo 134 do RGU e que tiver média aritmética M das duas notas de prova superior ou
 igual a 3,0 (três):
-o recuperará a nota de uma única prova, caso tenha obtido apenas uma nota de prova
-inferior a 5,0 (cinco), fazendo uma prova cujo conteúdo abrange apenas o conteúdo da
-prova no qual o aluno obteve a nota inferior a 5,0 (cinco).
-o prestará um exame, caso tenha obtido mais de uma nota de prova inferior a 5,0
-(cinco), cujo conteúdo abrange toda matéria vista na disciplina durante o semestre.
+
+    o recuperará a nota de uma única prova, caso tenha obtido apenas uma nota de prova
+      inferior a 5,0 (cinco), fazendo uma prova cujo conteúdo abrange apenas o conteúdo da
+      prova no qual o aluno obteve a nota inferior a 5,0 (cinco).
+    o prestará um exame, caso tenha obtido mais de uma nota de prova inferior a 5,0
+      (cinco), cujo conteúdo abrange toda matéria vista na disciplina durante o semestre.
+
 Caso tenha obtido nota maior ou igual a 5,0 (cinco) nas duas provas, mas não tenha
 conseguido obter média maior ou igual a 6,0 (seis), poderá escolher qual das duas provas de
 recuperação deseja prestar.
-No caso do aluno recuperar uma só nota de prova, a nota da recuperação substituirá a
+
+        No caso do aluno recuperar uma só nota de prova, a nota da recuperação substituirá a
 nota da prova em questão e o aluno estará aprovado na disciplina se a média aritmética M das
 duas notas das provas for superior ou igual a 6,0 (seis), valendo a atribuição de conceitos
 descrita acima.
-No caso do aluno prestar o exame, a nota do exame substituirá a média aritmética M e
+
+        No caso do aluno prestar o exame, a nota do exame substituirá a média aritmética M e
 o aluno estará aprovado na disciplina se M for superior ou igual a 6,0 (seis), valendo a
 atribuição de conceitos descrita acima.
-Observação: Para melhorar o conceito (aluno já aprovado), o aluno poderá prestar
+
+      Observação: Para melhorar o conceito (aluno já aprovado), o aluno poderá prestar
 somente uma das provas parciais de recuperação.
 
-3
 
+
+                                               3
 Bibliografia Básica:
+
 1. Menezes, Paulo B. – Matemática Discreta para Computação e Informática, Série Livros
-Didáticos, número 16, Instituto de Informática da UFRGS, Editora Sagra Luzzatto, 2004.
+   Didáticos, número 16, Instituto de Informática da UFRGS, Editora Sagra Luzzatto, 2004.
 2. Gersting, J. L. – Fundamentos Matemáticos para a Ciência da Computação, LTC, 1993.
 3. Scheinerman, Eduard R. – Matemática Discreta: uma introdução, Thomson Learning,
-2006.
+   2006.
 
 Bibliografia Complementar:
+
 1. Ross, Kenneth & Wright, Charles – Discrete Mathematics, Prentice Hall, 1992.
 2. Lipschutz, Seymour & Lipson, Marc – Matemática Discreta, Coleção Schaum, Bookman,
-2004.
+   2004.
 3. Prather, R. – Discrete Mathematical Structures for Computer Science
 4. Preparata, Franco P. e Yeh, Raymond T. – Introduction to Discrete Structures for
-Computer Science and Engineering.
+   Computer Science and Engineering.
 5. Domingues, Hygino H. e Iezzi, Gelson – Álgebra Moderna
 6. Epp, Susanna S. – Discrete Mathematics with Applications, PWS, 1995.
 7. Rosen, Kenneth H. – Discrete Mathematics and Its Applications, McGraw-Hill, 1999.
 
-4
 
+
+
+                                             4
 
