@@ -10,7 +10,8 @@ function findMentionedCourseCodes(question, courses) {
   const normQuestion = normalizeText(question)
   const codes = new Set()
   courses.forEach(c => {
-    if (normalizeText(c.nome).length > 3 && normQuestion.includes(normalizeText(c.nome))) codes.add(c.codigo)
+    const baseName = normalizeText(c.nome).split(' - ')[0]
+    if (baseName.length > 3 && normQuestion.includes(baseName)) codes.add(c.codigo)
     else if (normalizeText(c.codigo) && normQuestion.includes(normalizeText(c.codigo))) codes.add(c.codigo)
   })
   return codes
