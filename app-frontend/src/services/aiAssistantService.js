@@ -6,7 +6,7 @@ const WORKER_URL = import.meta.env.VITE_AI_WORKER_URL
 
 // ponytail: casamento por substring simples, não pega abreviações/typos - trocar por
 // fuzzyMatchName (searchUtils.js) se isso se mostrar curto demais na prática
-function findMentionedCourseCodes(question, courses) {
+export function findMentionedCourseCodes(question, courses) {
   const normQuestion = normalizeText(question)
   const codes = new Set()
   courses.forEach(c => {
