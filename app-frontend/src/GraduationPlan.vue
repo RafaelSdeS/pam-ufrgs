@@ -428,6 +428,34 @@ const planoLoading = ref(false)
 const planoError = ref(false)
 const planoSections = computed(() => parsePlano(planoText.value))
 
+const DAY_ORDER = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo']
+
+const formatRoom = (room) => {
+  if (!room) return ''
+  let cleaned = room.normalize('NFC')
+    .replace(/SALA DE AULA/gi, 'Sala')
+    .replace(/\s*(?:-|-)?\s*Campus:\s*[^\s-].*$/i, '')
+    .replace(/\s*(?:-|-)?\s*Campus\s+(?:do\s+Vale|Centro|da\s+Sa[uú]de|Litoral\s+Norte|Olhos\s+d['']?Água|EAD|Outros).*$/i, '')
+    .trim()
+  return cleaned.replace(/^[-\s]+|[-\s]+$/g, '')
+}
+
+const planoTurmas = computed(() => {
+  if (!planoSubject.value) return []
+  const code = planoSubject.value.code
+  return dataService.getTurmas()
+    .filter(t => (t.course_code || t.course_id) === code)
+    .map(t => ({
+      section_code: t.section_code,
+      professor_name: (t.professor_name || '').trim() || (Array.isArray(t.ministrantes) ? t.ministrantes.join(', ') : ''),
+      schedules: [...(t.schedules || [])].sort((a, b) => {
+        const dayDiff = DAY_ORDER.indexOf(a.day_of_week) - DAY_ORDER.indexOf(b.day_of_week)
+        return dayDiff !== 0 ? dayDiff : (a.start_time || '').localeCompare(b.start_time || '')
+      }).map(s => ({ ...s, room: formatRoom(s.room) }))
+    }))
+    .sort((a, b) => (a.section_code || '').localeCompare(b.section_code || ''))
+})
+
 async function openPlano(subj) {
   if (!subj || subj.isPlaceholder) return
   planoSubject.value = subj
@@ -695,6 +723,28 @@ async function openPlano(subj) {
           <v-btn icon="mdi-close" variant="text" @click="planoDialogOpen = false"></v-btn>
         </v-card-title>
         <v-card-text class="pa-4">
+          <div v-if="planoTurmas.length" class="plano-section mb-5">
+            <div class="d-flex align-center ga-2 mb-2">
+              <v-icon icon="mdi-calendar-clock-outline" color="primary" size="20"></v-icon>
+              <span class="text-subtitle-1 font-weight-bold">Turmas e Horários</span>
+            </div>
+            <v-divider class="mb-3"></v-divider>
+            <div
+              v-for="turma in planoTurmas"
+              :key="turma.section_code"
+              class="mb-3"
+            >
+              <div class="text-body-2">
+                <strong>Turma {{ turma.section_code }}</strong>
+                <span v-if="turma.professor_name"> — {{ turma.professor_name }}</span>
+              </div>
+              <div v-if="turma.schedules.length" class="text-body-2 text-medium-emphasis">
+                <div v-for="(s, i) in turma.schedules" :key="i">
+                  {{ s.day_of_week }}: {{ s.start_time?.slice(0, 5) }} às {{ s.end_time?.slice(0, 5) }}{{ s.room ? ` — ${s.room}` : '' }}
+                </div>
+              </div>
+            </div>
+          </div>
           <div v-if="planoLoading" class="d-flex justify-center py-8">
             <v-progress-circular indeterminate color="primary"></v-progress-circular>
           </div>
