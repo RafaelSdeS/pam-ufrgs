@@ -302,6 +302,7 @@ const loadSchedules = async () => {
   loading.value = true
   error.value = ''
   conflictReasons.value = []
+  compareSelection.value = []
 
   try {
     const selectedCourses = dataService.getDesiredCourses()
@@ -1254,6 +1255,19 @@ function confirmExportICS() {
   icsDialogOpen.value = false
 }
 
+const compareSelection = ref([]) // até 2 gradeObj selecionados para comparação lado a lado
+const compareDialogOpen = ref(false)
+
+const isSelectedForCompare = (gradeObj) => compareSelection.value.includes(gradeObj)
+
+function toggleCompareSelection(gradeObj) {
+  if (isSelectedForCompare(gradeObj)) {
+    compareSelection.value = compareSelection.value.filter(g => g !== gradeObj)
+  } else if (compareSelection.value.length < 2) {
+    compareSelection.value = [...compareSelection.value, gradeObj]
+  }
+}
+
 onMounted(() => {
   loadSchedules()
 })
@@ -1408,6 +1422,22 @@ onMounted(() => {
             </v-card-text>
           </v-card>
 
+          <v-alert
+            v-if="compareSelection.length === 2"
+            type="info"
+            variant="tonal"
+            class="mb-4"
+            closable
+            @click:close="compareSelection = []"
+          >
+            <div class="d-flex align-center justify-space-between flex-wrap ga-2">
+              <span class="font-weight-medium">2 opções selecionadas para comparar.</span>
+              <v-btn color="primary" variant="flat" size="small" class="font-weight-bold rounded-lg" @click="compareDialogOpen = true">
+                Comparar agora
+              </v-btn>
+            </div>
+          </v-alert>
+
           <v-row>
           <v-col
             v-for="(gradeObj, scheduleIndex) in scheduleOptions"
@@ -1465,6 +1495,17 @@ onMounted(() => {
                     @click="openIcsDialog(gradeObj)"
                   >
                     Exportar .ics
+                  </v-btn>
+                  <v-btn
+                    :color="isSelectedForCompare(gradeObj) ? 'primary' : undefined"
+                    :variant="isSelectedForCompare(gradeObj) ? 'flat' : 'outlined'"
+                    size="small"
+                    prepend-icon="mdi-compare-horizontal"
+                    class="rounded-lg font-weight-bold"
+                    :disabled="!isSelectedForCompare(gradeObj) && compareSelection.length >= 2"
+                    @click="toggleCompareSelection(gradeObj)"
+                  >
+                    {{ isSelectedForCompare(gradeObj) ? 'Selecionado p/ comparar' : 'Comparar' }}
                   </v-btn>
                 </div>
               </v-card-title>
@@ -1783,6 +1824,75 @@ onMounted(() => {
 
     <!-- Modal de Sugestão de Eletivas -->
     <ElectiveSuggestionsModal ref="electivesModalRef" @add-section="onAddElectiveSection" />
+
+    <v-dialog v-model="compareDialogOpen" max-width="1600" scrollable>
+      <v-card class="rounded-xl">
+        <v-card-title class="d-flex align-center justify-space-between pa-4 border-bottom">
+          <span class="text-h6 font-weight-bold">Comparar horários</span>
+          <v-btn icon="mdi-close" variant="text" @click="compareDialogOpen = false"></v-btn>
+        </v-card-title>
+        <v-card-text class="pa-4">
+          <v-row>
+            <v-col v-for="(gradeObj, i) in compareSelection" :key="i" cols="12" md="6">
+              <div class="text-subtitle-1 font-weight-bold mb-2">
+                Opção {{ scheduleOptions.indexOf(gradeObj) + 1 }}
+                <v-chip size="small" color="success" variant="tonal" class="ml-2 font-weight-bold">
+                  {{ dataService.getScheduleTotalCredits(gradeObj.items) }} créditos
+                </v-chip>
+              </div>
+              <div class="calendar-wrapper rounded-xl border-thin bg-surface">
+                <div class="calendar-container">
+                  <div class="calendar-header border-bottom">
+                    <div class="time-axis-header"></div>
+                    <div v-for="dia in daysArray" :key="dia.index" class="day-header-col">{{ dia.name }}</div>
+                  </div>
+                  <div class="calendar-body">
+                    <div class="time-axis">
+                      <div
+                        v-for="hour in (gradeObj.endHour - gradeObj.startHour + 1)"
+                        :key="hour"
+                        class="time-label-container"
+                        :style="{ height: `${HOUR_HEIGHT}px` }"
+                      >
+                        <span class="time-label">{{ String(gradeObj.startHour + hour - 1).padStart(2, '0') }}:00</span>
+                      </div>
+                    </div>
+                    <div class="grid-area">
+                      <div class="grid-lines-bg">
+                        <div
+                          v-for="hour in (gradeObj.endHour - gradeObj.startHour + 1)"
+                          :key="hour"
+                          class="grid-hour-row"
+                          :style="{ height: `${HOUR_HEIGHT}px` }"
+                        ></div>
+                      </div>
+                      <div class="columns-container" :style="{ height: `${gradeObj.totalHeight}px` }">
+                        <div v-for="dia in daysArray" :key="dia.index" class="day-column">
+                          <v-card
+                            v-for="item in gradeObj.groupedByDay[dia.index]"
+                            :key="item.id || item.course_code + '-' + item.start_time"
+                            variant="tonal"
+                            :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))"
+                            class="pa-2 rounded-xl text-left class-card"
+                            elevation="0"
+                            :class="{ 'conflict-border': getCellConflict(gradeObj.items, item) }"
+                            :style="getCardStyle(item, gradeObj.startHour)"
+                          >
+                            <div class="text-caption font-weight-bold card-title-clamp">{{ item.course_name }}</div>
+                            <div class="text-caption opacity-90 card-text-clamp">Turma {{ item.section_code }}</div>
+                            <div class="text-caption opacity-85 card-text-clamp">📍 {{ item.room ? formatRoom(item.room) : item.campus }}</div>
+                          </v-card>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </v-col>
+          </v-row>
+        </v-card-text>
+      </v-card>
+    </v-dialog>
 
     <v-dialog v-model="icsDialogOpen" max-width="420">
       <v-card class="rounded-xl">
