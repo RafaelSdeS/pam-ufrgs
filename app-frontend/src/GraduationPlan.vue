@@ -228,7 +228,13 @@ watch(selectedCourse, loadOrGenerate)
 const semesterCards = computed(() => semesters.value.map((codes, index) => {
   const subjects = codes.map(code => resolveSubject(code)).filter(Boolean)
   const totalCredits = subjects.reduce((sum, s) => sum + (s.credits || 0), 0)
-  return { index, subjects, totalCredits }
+  const difficultyCounts = { medio: 0, dificil: 0 }
+  subjects.forEach(s => {
+    if (s.isPlaceholder) return
+    const level = getCourseDifficulty(s.code)
+    if (level === 'medio' || level === 'dificil') difficultyCounts[level]++
+  })
+  return { index, subjects, totalCredits, difficultyCounts }
 }))
 
 const totalMandatoryRemaining = computed(() => semesterCards.value.reduce(
@@ -547,17 +553,37 @@ async function openPlano(subj) {
           </v-avatar>
           <div class="d-flex flex-column align-start">
             <span class="text-subtitle-1 font-weight-bold">{{ sem.index + 1 }}º Semestre</span>
-            <v-chip
-              size="x-small"
-              variant="tonal"
-              class="font-weight-bold mt-1 cursor-pointer"
-              :color="sem.totalCredits > effectiveLimit(sem.index) ? 'error' : 'primary'"
-              append-icon="mdi-pencil-outline"
-              title="Ajustar limite de créditos deste semestre"
-              @click="openLimitDialog(sem.index)"
-            >
-              {{ sem.totalCredits }}/{{ effectiveLimit(sem.index) }} créditos
-            </v-chip>
+            <div class="d-flex flex-wrap ga-1 mt-1">
+              <v-chip
+                size="x-small"
+                variant="tonal"
+                class="font-weight-bold cursor-pointer"
+                :color="sem.totalCredits > effectiveLimit(sem.index) ? 'error' : 'primary'"
+                append-icon="mdi-pencil-outline"
+                title="Ajustar limite de créditos deste semestre"
+                @click="openLimitDialog(sem.index)"
+              >
+                {{ sem.totalCredits }}/{{ effectiveLimit(sem.index) }} créditos
+              </v-chip>
+              <v-chip
+                v-if="sem.difficultyCounts.dificil > 0"
+                size="x-small"
+                variant="tonal"
+                :color="getDifficultyColor('dificil')"
+                class="font-weight-bold"
+              >
+                {{ sem.difficultyCounts.dificil }} {{ getDifficultyLabel('dificil') }}
+              </v-chip>
+              <v-chip
+                v-if="sem.difficultyCounts.medio > 0"
+                size="x-small"
+                variant="tonal"
+                :color="getDifficultyColor('medio')"
+                class="font-weight-bold"
+              >
+                {{ sem.difficultyCounts.medio }} {{ getDifficultyLabel('medio') }}
+              </v-chip>
+            </div>
           </div>
         </v-card-title>
         <v-card-text class="pa-3">
