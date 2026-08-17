@@ -253,9 +253,11 @@ const totalElectiveRemaining = computed(() => semesterCards.value.reduce(
 const violationSet = computed(() => {
   const violations = new Set()
   const subjects = Object.values(subjectsMap.value)
+  const mandatoryCodes = new Set(Object.keys(subjectsMap.value).map(c => c.toUpperCase()))
   const cumulative = [...dataService.getCompletedCourses()]
+  let cumulativeElectiveCredits = completedElectiveCredits.value
   semesters.value.forEach((codes, semIndex) => {
-    const statuses = calculateSubjectStatuses(subjects, cumulative)
+    const statuses = calculateSubjectStatuses(subjects, cumulative, cumulativeElectiveCredits)
     codes.forEach(code => {
       if (ELECTIVE_CODE_RE.test(code)) return
       const subj = subjectsMap.value[code]
@@ -263,7 +265,15 @@ const violationSet = computed(() => {
         violations.add(`${semIndex}:${code}`)
       }
     })
-    codes.forEach(code => { if (!ELECTIVE_CODE_RE.test(code)) cumulative.push(code) })
+    codes.forEach(code => {
+      const m = ELECTIVE_CODE_RE.exec(code)
+      if (m) {
+        cumulativeElectiveCredits += parseInt(m[1])
+        return
+      }
+      cumulative.push(code)
+      if (!mandatoryCodes.has(code.toUpperCase())) cumulativeElectiveCredits += dataService.getCourseCredits(code, selectedCourse.value)
+    })
   })
   return violations
 })

@@ -190,8 +190,16 @@ const handlePdfUpload = async (event) => {
   }
 }
 
+const completedElectiveCredits = (completedList) => {
+  const mandatoryCodes = new Set(rawSubjects.value.map(s => (s.code || s.id || '').toUpperCase()))
+  return completedList.reduce((sum, code) => {
+    if (mandatoryCodes.has(String(code).toUpperCase())) return sum
+    return sum + dataService.getCourseCredits(code, curriculumService.getSelectedCourse())
+  }, 0)
+}
+
 const updateGridStatuses = (completedList) => {
-  const statuses = calculateSubjectStatuses(rawSubjects.value, completedList)
+  const statuses = calculateSubjectStatuses(rawSubjects.value, completedList, completedElectiveCredits(completedList))
   subjectsWithCoords.value = subjectsWithCoords.value.map(s => {
     const st = statuses[s.id] || 'blocked'
     return {
@@ -232,7 +240,7 @@ const setupLayout = () => {
     semestersGroups[sem].push(subject)
   })
 
-  const statuses = calculateSubjectStatuses(rawSubjects.value, completedSubjectIds.value)
+  const statuses = calculateSubjectStatuses(rawSubjects.value, completedSubjectIds.value, completedElectiveCredits(completedSubjectIds.value))
   maxSemester.value = maxSem
 
   let maxRows = 0

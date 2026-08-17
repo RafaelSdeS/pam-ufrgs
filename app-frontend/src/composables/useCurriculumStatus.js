@@ -1,4 +1,4 @@
-export function calculateSubjectStatuses(subjects, completedIds = []) {
+export function calculateSubjectStatuses(subjects, completedIds = [], completedElectiveCredits = 0) {
   const completedSet = new Set(completedIds.map(id => String(id).trim().toLowerCase()))
   const statuses = {}
   const subjectMap = new Map()
@@ -34,8 +34,9 @@ export function calculateSubjectStatuses(subjects, completedIds = []) {
     })
 
     const creditsMet = completedCredits >= (subject.min_credits_required || 0)
+    const electiveCreditsMet = completedElectiveCredits >= (subject.min_elective_credits_required || 0)
 
-    statuses[subject.id] = (prereqsMet && creditsMet) ? 'available' : 'blocked'
+    statuses[subject.id] = (prereqsMet && creditsMet && electiveCreditsMet) ? 'available' : 'blocked'
   })
 
   return statuses

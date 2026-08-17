@@ -35,10 +35,9 @@ export const predictionService = {
 
       // Status calculado sobre TODAS as disciplinas (não só as pendentes), para que
       // a soma de créditos concluídos usada nos pré-requisitos por crédito seja correta.
-      const statuses = calculateSubjectStatuses(subjects, simulatedCompleted)
+      const statuses = calculateSubjectStatuses(subjects, simulatedCompleted, electivesPlacedSoFar)
       const available = remaining
         .filter(s => statuses[s.id] === 'available')
-        .filter(s => (s.min_elective_credits_required || 0) <= electivesPlacedSoFar)
         .sort((a, b) => (a.semester - b.semester) || ((b.credits || 0) - (a.credits || 0)))
 
       const chosen = []
