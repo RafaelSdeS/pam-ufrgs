@@ -151,6 +151,10 @@ function checkStale() {
 }
 
 function recalculate() {
+  if (!creditLimit.value || creditLimit.value < 1) {
+    showSnackbar('Informe um limite de créditos válido (mínimo 1) antes de recalcular.', 'error')
+    return
+  }
   const subjects = Object.values(subjectsMap.value)
   const completed = dataService.getCompletedCourses()
   const result = predictionService.generateGraduationPlan({
