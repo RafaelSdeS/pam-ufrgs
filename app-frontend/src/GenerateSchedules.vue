@@ -13,7 +13,7 @@
           variant="tonal"
           closable
           class="mb-4"
-          @click:close="showPreviewBanner = false"
+          @click:close="restoreDesiredCourses"
         >
           Você está vendo um preview de horário de um semestre futuro da Previsão de Formatura - sua lista de disciplinas desejadas foi trocada temporariamente.
           <v-btn size="small" variant="text" color="primary" class="text-none ml-2" @click="restoreDesiredCourses">Restaurar minha lista</v-btn>
