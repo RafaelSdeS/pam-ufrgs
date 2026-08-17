@@ -122,14 +122,6 @@ function selectElective(course) {
   pickerOpen.value = false
 }
 
-function clearElectiveChoice(semIndex, subjectIndex) {
-  const subj = resolveSubject(semesters.value[semIndex][subjectIndex])
-  const next = semesters.value.map(sem => [...sem])
-  next[semIndex][subjectIndex] = `ELETIVA-${subj?.credits || 4}`
-  semesters.value = next
-  persist()
-}
-
 function resolveSubject(code) {
   if (subjectsMap.value[code]) return subjectsMap.value[code]
   const m = ELECTIVE_CODE_RE.exec(code)
@@ -721,7 +713,7 @@ function previewSemesterSchedule(sem) {
                 size="x-small"
                 variant="text"
                 class="px-0 text-none"
-                @click.stop="clearElectiveChoice(sem.index, idx)"
+                @click.stop="openPicker(sem.index, idx)"
               >
                 Trocar
               </v-btn>
