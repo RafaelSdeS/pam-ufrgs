@@ -38,16 +38,18 @@ const pendingSubjectCodes = computed(() => {
   return Object.keys(subjectsMap.value).filter(code => !completed.has(code.toUpperCase()))
 })
 
-const electiveCreditsRemaining = computed(() => {
+const completedElectiveCredits = computed(() => {
   const mandatoryCodes = new Set(Object.keys(subjectsMap.value).map(c => c.toUpperCase()))
-  let completedElectiveCredits = 0
+  let total = 0
   dataService.getCompletedCourses().forEach(code => {
     if (!mandatoryCodes.has(code.toUpperCase())) {
-      completedElectiveCredits += dataService.getCourseCredits(code, selectedCourse.value)
+      total += dataService.getCourseCredits(code, selectedCourse.value)
     }
   })
-  return Math.max(0, graduationRequirements.value.elective - completedElectiveCredits)
+  return total
 })
+
+const electiveCreditsRemaining = computed(() => Math.max(0, graduationRequirements.value.elective - completedElectiveCredits.value))
 
 const electiveCatalog = computed(() => dataService.getElectiveCatalog(selectedCourse.value))
 
@@ -155,7 +157,8 @@ function recalculate() {
     subjects,
     completedCodes: completed,
     creditLimit: creditLimit.value,
-    electiveCreditsRemaining: electiveCreditsRemaining.value
+    electiveCreditsRemaining: electiveCreditsRemaining.value,
+    electiveCreditsAlreadyPlaced: completedElectiveCredits.value
   })
   semesters.value = result.semesters.map(sem => sem.subjects.map(s => s.code))
   semesterCreditLimits.value = {}
@@ -192,7 +195,7 @@ function recalculateFrom(semIndex, newLimit) {
     creditLimit: creditLimit.value,
     electiveCreditsRemaining: remainingElectiveCredits,
     firstSemesterCreditLimit: newLimit,
-    electiveCreditsAlreadyPlaced: prefixElectiveCredits
+    electiveCreditsAlreadyPlaced: completedElectiveCredits.value + prefixElectiveCredits
   })
 
   const tail = result.semesters.map(sem => sem.subjects.map(s => s.code))

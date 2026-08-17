@@ -6,6 +6,8 @@ A **PAM - UFRGS** nasceu para anestesiar a dor que o indivíduo que vos escreve 
 
 Essa dor era tamanha que eu fui capaz de convencer dois grupos de pessoas distintos a orientarem trabalhos de disciplina em torno dela. No entanto, em ambos os casos, o cerne teve de ser degenerado para atender às especificações dos trabalhos. Na disciplina que então era chamada de Técnicas de Construção de Programas, em razão da tecnologia utilizada e dificuldade de distribuição. E depois, em Engenharia de Software, em razão da complexidade mínima, que era excessiva. O primeiro destes trabalhos ([acessível aqui](https://github.com/SW-Engineering-Courses-Karina-Kohl/tcp-20252-final-grupo_07)) é um predecessor espiritual. E o segundo ([acessível aqui](https://github.com/MagnusLazuta/PMA-portal-de-matricula-auxiliar)), teve seu código usado como base para este projeto. A adaptação do trabalho de disciplina para este projeto foi feita com auxílio de LLMs.
 
+Além da geração de horários, a PAM também oferece uma **Previsão de Formatura**: a partir das disciplinas já cursadas, ela projeta um plano semestre a semestre até a conclusão do curso, respeitando pré-requisitos, limites de crédito e créditos eletivos pendentes, e permite salvar e ajustar esse plano.
+
 ---
 
 ## Projetos Relacionados
