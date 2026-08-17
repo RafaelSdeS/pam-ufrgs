@@ -198,6 +198,18 @@ const completedElectiveCredits = (completedList) => {
   }, 0)
 }
 
+const completedMandatoryCredits = (completedList) => {
+  const completedSet = new Set(completedList.map(c => String(c).toUpperCase()))
+  return rawSubjects.value.reduce((sum, s) => {
+    return completedSet.has(String(s.code || s.id).toUpperCase()) ? sum + (s.credits || 0) : sum
+  }, 0)
+}
+
+// Usados na tooltip pra explicar bloqueios por limiar de créditos (min_credits_required /
+// min_elective_credits_required), que não aparecem na lista de pré-requisitos.
+const currentMandatoryCredits = computed(() => completedMandatoryCredits(isEditMode.value ? tempCompletedSubjectIds.value : completedSubjectIds.value))
+const currentElectiveCreditsTotal = computed(() => completedElectiveCredits(isEditMode.value ? tempCompletedSubjectIds.value : completedSubjectIds.value))
+
 const updateGridStatuses = (completedList) => {
   const statuses = calculateSubjectStatuses(rawSubjects.value, completedList, completedElectiveCredits(completedList))
   subjectsWithCoords.value = subjectsWithCoords.value.map(s => {
@@ -850,6 +862,17 @@ const miniViewportRect = computed(() => {
                 </v-chip>
               </div>
 
+              <div v-if="item.min_credits_required || item.min_elective_credits_required" class="text-caption d-flex flex-column ga-1 mt-1">
+                <div v-if="item.min_credits_required" :class="currentMandatoryCredits >= item.min_credits_required ? 'text-success' : 'text-error'">
+                  <v-icon size="14" class="mr-1">mdi-counter</v-icon>
+                  Exige {{ item.min_credits_required }} créditos obrigatórios cursados (você tem {{ currentMandatoryCredits }})
+                </div>
+                <div v-if="item.min_elective_credits_required" :class="currentElectiveCreditsTotal >= item.min_elective_credits_required ? 'text-success' : 'text-error'">
+                  <v-icon size="14" class="mr-1">mdi-counter</v-icon>
+                  Exige {{ item.min_elective_credits_required }} créditos eletivos cursados (você tem {{ currentElectiveCreditsTotal }})
+                </div>
+              </div>
+
               <!-- Indicador visual de clique no Modo Edição -->
               <div v-if="isEditMode" class="d-flex align-center justify-end mt-2">
                 <v-btn
@@ -1104,6 +1127,18 @@ const miniViewportRect = computed(() => {
                       <ul class="pl-4 text-caption">
                         <li v-for="prereq in s.prerequisites" :key="prereq">
                           {{ prereq }}
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div v-if="s.min_credits_required || s.min_elective_credits_required" class="mt-2 pt-1 border-top-thin">
+                      <div class="text-caption font-weight-bold mb-1">Limiar de créditos:</div>
+                      <ul class="pl-4 text-caption">
+                        <li v-if="s.min_credits_required" :class="currentMandatoryCredits >= s.min_credits_required ? 'text-success' : 'text-error'">
+                          {{ s.min_credits_required }} créditos obrigatórios cursados (você tem {{ currentMandatoryCredits }})
+                        </li>
+                        <li v-if="s.min_elective_credits_required" :class="currentElectiveCreditsTotal >= s.min_elective_credits_required ? 'text-success' : 'text-error'">
+                          {{ s.min_elective_credits_required }} créditos eletivos cursados (você tem {{ currentElectiveCreditsTotal }})
                         </li>
                       </ul>
                     </div>

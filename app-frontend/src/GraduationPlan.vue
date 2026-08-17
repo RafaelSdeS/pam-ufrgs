@@ -3,6 +3,7 @@ import { ref, computed, onMounted, watch, reactive } from 'vue'
 import { dataService, escapeHtml } from './services/dataService'
 import { curriculumService } from './services/curriculumService'
 import { predictionService } from './services/predictionService'
+import { scheduleGeneratorService } from './services/scheduleGeneratorService'
 import { calculateSubjectStatuses } from './composables/useCurriculumStatus'
 import { matchCourse } from './utils/searchUtils'
 import { getCourseDifficulty, getDifficultyLabel, getDifficultyColor } from './data/courseDifficulty'
@@ -51,7 +52,36 @@ const completedElectiveCredits = computed(() => {
 
 const electiveCreditsRemaining = computed(() => Math.max(0, graduationRequirements.value.elective - completedElectiveCredits.value))
 
+const completedMandatoryCredits = computed(() => {
+  const mandatoryCodes = new Set(Object.keys(subjectsMap.value).map(c => c.toUpperCase()))
+  let total = 0
+  dataService.getCompletedCourses().forEach(code => {
+    if (mandatoryCodes.has(code.toUpperCase())) total += dataService.getCourseCredits(code, selectedCourse.value)
+  })
+  return total
+})
+
+// Explica por que o predictionService não conseguiu encaixar cada disciplina - sem isso o
+// usuário só via "verifique os pré-requisitos", o que não cobre o caso (raro, mas real p/ ex.
+// em ECP99001/TG-I-ECP) de bloqueio por limiar de créditos já cursados.
+const unscheduledDetails = computed(() => {
+  const completedSet = new Set(dataService.getCompletedCourses().map(c => String(c).toUpperCase()))
+  return unscheduled.value.map(s => {
+    const missingPrereqs = (s.prerequisites || []).filter(p => !completedSet.has(String(p).toUpperCase()))
+    const parts = []
+    if (missingPrereqs.length) parts.push(`pré-requisito(s) pendente(s): ${missingPrereqs.join(', ')}`)
+    if (s.min_credits_required && completedMandatoryCredits.value < s.min_credits_required) {
+      parts.push(`exige ${s.min_credits_required} créditos obrigatórios cursados (você tem ${completedMandatoryCredits.value})`)
+    }
+    if (s.min_elective_credits_required && completedElectiveCredits.value < s.min_elective_credits_required) {
+      parts.push(`exige ${s.min_elective_credits_required} créditos eletivos cursados (você tem ${completedElectiveCredits.value})`)
+    }
+    return { code: s.code, name: s.name, reason: parts.length ? parts.join('; ') : 'pré-requisitos ainda não atendidos dentro do horizonte de planejamento' }
+  })
+})
+
 const electiveCatalog = computed(() => dataService.getElectiveCatalog(selectedCourse.value))
+const electiveCatalogCodes = computed(() => new Set(electiveCatalog.value.map(c => (c.code || '').toUpperCase())))
 
 const usedElectiveCodes = computed(() => {
   const mandatorySet = new Set(Object.keys(subjectsMap.value).map(c => c.toUpperCase()))
@@ -79,9 +109,11 @@ function isElectiveEligible(course, cumulativeSet, cumulativeCredits) {
   return prereqs.every(p => {
     const upper = (p || '').toUpperCase()
     if (cumulativeSet.has(upper)) return true
-    // Pré-requisito fora da grade obrigatória do curso selecionado não bloqueia -
-    // mesma regra que dataService.getEligibleCourses já usa.
-    if (!subjectsMap.value[upper]) return true
+    // Só ignora o pré-requisito se ele nem existir no catálogo do curso atual (obrigatória ou
+    // eletiva) - ex.: código de grade obrigatória de outro currículo. Se for uma eletiva real
+    // ainda não concluída/planejada, bloqueia (antes só considerava a grade obrigatória, deixando
+    // pré-requisito eletiva->eletiva passar batido - ver dataService.getEligibleCourses).
+    if (!subjectsMap.value[upper] && !electiveCatalogCodes.value.has(upper)) return true
     return false
   })
 }
@@ -119,6 +151,7 @@ function selectElective(course) {
   next[semIndex][subjectIndex] = course.code
   semesters.value = next
   persist()
+  clearScheduleChecks()
   pickerOpen.value = false
 }
 
@@ -142,6 +175,65 @@ function checkStale() {
   staleNotice.value = pendingSubjectCodes.value.some(code => !plannedCodes.has(code.toUpperCase()))
 }
 
+// Cruza a previsão com as turmas realmente oferecidas hoje - a previsão em si só sabe de
+// pré-requisitos/créditos, não de conflito de horário. Só é fidedigno para os semestres mais
+// próximos, já que a oferta de turmas muda a cada semestre; por isso é uma checagem sob demanda
+// (manual), não recalculada automaticamente a cada mudança do plano.
+const scheduleChecks = reactive({})
+const checkingSemIndex = ref(null)
+
+function clearScheduleChecks() {
+  Object.keys(scheduleChecks).forEach(k => delete scheduleChecks[k])
+}
+
+function getTurmasForCodes(codes) {
+  const codesSet = new Set(codes.map(c => c.toUpperCase()))
+  return dataService.getTurmas().filter(t => {
+    const code = (t.course_code || t.course_id || '').toUpperCase()
+    return codesSet.has(code) && t.semester === '2026/2' && curriculumService.matchesSelectedCurriculum(t.curriculums, selectedCourse.value)
+  })
+}
+
+function checkSemesterSchedule(sem) {
+  const courses = sem.subjects.filter(s => !s.isPlaceholder)
+  if (courses.length === 0) return
+  checkingSemIndex.value = sem.index
+  // Adia o trabalho síncrono (pode levar até ~1.5s) um tick, só pra o spinner do botão pintar antes.
+  setTimeout(() => {
+    const turmas = getTurmasForCodes(courses.map(c => c.code))
+    const offeredCodes = new Set(turmas.map(t => (t.course_code || t.course_id || '').toUpperCase()))
+    const missing = courses.filter(c => !offeredCodes.has(c.code.toUpperCase()))
+    if (missing.length > 0) {
+      scheduleChecks[sem.index] = { status: 'unavailable', detail: `Sem turma oferecida no semestre atual: ${missing.map(c => c.code).join(', ')}.` }
+    } else {
+      const results = scheduleGeneratorService.generateRankedSchedules({
+        selectedCourses: courses,
+        restrictions: dataService.getRestrictions(),
+        turmas,
+        limit: 1
+      })
+      scheduleChecks[sem.index] = results.length > 0
+        ? { status: 'ok', detail: '' }
+        : { status: 'conflict', detail: 'As turmas oferecidas colidem entre si ou com suas restrições de horário salvas.' }
+    }
+    checkingSemIndex.value = null
+  }, 0)
+}
+
+function scheduleCheckLabel(semIndex) {
+  const check = scheduleChecks[semIndex]
+  if (!check) return 'Verificar disponibilidade de horário'
+  if (check.status === 'ok') return 'Compatível com as turmas atuais'
+  if (check.status === 'unavailable') return 'Disciplina sem turma oferecida'
+  return 'Conflito de horário nas turmas atuais'
+}
+
+function scheduleCheckColor(semIndex) {
+  const check = scheduleChecks[semIndex]
+  if (!check) return 'secondary'
+  return check.status === 'ok' ? 'success' : 'error'
+}
+
 function recalculate() {
   if (!creditLimit.value || creditLimit.value < 1) {
     showSnackbar('Informe um limite de créditos válido (mínimo 1) antes de recalcular.', 'error')
@@ -161,6 +253,7 @@ function recalculate() {
   unscheduled.value = result.unscheduled
   persist()
   staleNotice.value = false
+  clearScheduleChecks()
 }
 
 // Recalcula só a partir de semIndex (inclusive) com um novo limite de créditos para esse
@@ -207,9 +300,11 @@ function recalculateFrom(semIndex, newLimit) {
   unscheduled.value = result.unscheduled
   persist()
   checkStale()
+  clearScheduleChecks()
 }
 
 function loadOrGenerate() {
+  clearScheduleChecks()
   creditLimit.value = dataService.getCreditLimit()
   semesterCreditLimits.value = dataService.getSemesterCreditLimits()
   const saved = dataService.getGraduationPlan()
@@ -448,6 +543,7 @@ function moveCourse(fromIndex, subjectIndex, direction) {
   semesters.value = next.filter(sem => sem.length > 0)
   persist()
   checkStale()
+  clearScheduleChecks()
 }
 
 const limitDialogOpen = ref(false)
@@ -600,7 +696,12 @@ function previewSemesterSchedule(sem) {
     </v-alert>
 
     <v-alert v-if="unscheduled.length" type="warning" variant="tonal" class="mb-4">
-      Não foi possível posicionar: {{ unscheduled.map(s => s.name).join(', ') }}. Verifique os pré-requisitos dessas disciplinas na Matriz Curricular.
+      <div class="font-weight-bold mb-1">Não foi possível posicionar {{ unscheduled.length }} disciplina(s):</div>
+      <ul class="pl-4">
+        <li v-for="d in unscheduledDetails" :key="d.code">
+          <strong>{{ d.code }}</strong> ({{ d.name }}) — {{ d.reason }}
+        </li>
+      </ul>
     </v-alert>
 
     <v-card v-if="semesterCards.length === 0" class="rounded-xl pa-10 text-center border-thin bg-surface mb-6">
@@ -723,7 +824,7 @@ function previewSemesterSchedule(sem) {
             </v-btn>
           </div>
         </v-card-text>
-        <v-card-actions class="pa-3 pt-0">
+        <v-card-actions class="pa-3 pt-0 d-flex flex-column align-stretch ga-1">
           <v-btn
             block
             size="small"
@@ -735,6 +836,21 @@ function previewSemesterSchedule(sem) {
           >
             Gerar horário (preview)
           </v-btn>
+          <v-btn
+            block
+            size="small"
+            variant="tonal"
+            :color="scheduleCheckColor(sem.index)"
+            :loading="checkingSemIndex === sem.index"
+            prepend-icon="mdi-calendar-search-outline"
+            class="text-none"
+            @click="checkSemesterSchedule(sem)"
+          >
+            {{ scheduleCheckLabel(sem.index) }}
+          </v-btn>
+          <div v-if="scheduleChecks[sem.index]?.detail" class="text-caption text-medium-emphasis px-1">
+            {{ scheduleChecks[sem.index].detail }}
+          </div>
         </v-card-actions>
       </v-card>
     </div>

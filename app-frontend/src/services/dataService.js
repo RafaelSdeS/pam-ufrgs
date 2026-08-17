@@ -459,6 +459,7 @@ export const dataService = {
 
     const currSubjects = curriculumService.getCurriculumSubjects(selectedCourseCode)
     const currSubjectCodes = new Set(currSubjects.map(s => (s.code || s.id || '').toUpperCase()))
+    const allCourseCodes = new Set(allCourses.map(c => (c.code || '').toUpperCase()))
 
     const { mandatory: totalCompletedCredits, elective: totalCompletedElectiveCredits } = this.getCompletedCreditsByType(selectedCourseCode)
 
@@ -471,9 +472,11 @@ export const dataService = {
       const allPrereqsMet = prereqs.every(p => {
         const upper = (p || '').toUpperCase()
         if (completedSet.has(upper)) return true
-        // Se o pré-requisito não faz parte da grade curricular obrigatória do curso atual
-        // (por ex., MAT02219 para alunos de ECP), não deve bloquear a elegibilidade da disciplina eletiva
-        if (!currSubjectCodes.has(upper)) return true
+        // Só ignora o pré-requisito se ele nem existir no catálogo do curso atual (ex.: código
+        // de grade obrigatória de outro currículo). Se for uma disciplina real daqui - obrigatória
+        // OU eletiva - e não tiver sido concluída, bloqueia sim (antes só checava obrigatórias,
+        // deixando pré-requisito eletiva->eletiva passar batido).
+        if (!currSubjectCodes.has(upper) && !allCourseCodes.has(upper)) return true
         return false
       })
       return allPrereqsMet

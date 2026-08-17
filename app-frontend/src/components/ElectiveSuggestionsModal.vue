@@ -68,7 +68,11 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
     if (prereqs.length > 0 && !prereqs.every(p => {
       const upper = (p || '').toUpperCase()
       if (completedCodes.has(upper)) return true
-      if (!mandatoryCodes.has(upper)) return true
+      // Só ignora o pré-requisito se ele nem existir no catálogo do curso atual (obrigatória ou
+      // eletiva) - mesma correção aplicada em dataService.getEligibleCourses e
+      // GraduationPlan.isElectiveEligible. Antes só olhava mandatoryCodes, deixando pré-requisito
+      // eletiva->eletiva passar batido mesmo sem a eletiva-base cursada.
+      if (!mandatoryCodes.has(upper) && !allCoursesMap[upper]) return true
       return false
     })) {
       return

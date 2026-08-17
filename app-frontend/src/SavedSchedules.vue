@@ -236,6 +236,14 @@ const onAddElectiveSection = ({ gradeObj, section, course }) => {
     })
   }
 
+  recomputeGradeLayout(gradeObj)
+  dataService.saveSavedSchedules(savedSchedules.value)
+  showSnackbar(`Eletiva "${course.code} - ${course.name}" adicionada com sucesso à grade salva!`, 'success')
+}
+
+// Recalcula os campos derivados (ordenação, faixa de horário, agrupamento por dia) depois de
+// qualquer alteração em gradeObj.items - usado tanto ao adicionar quanto ao remover uma eletiva.
+const recomputeGradeLayout = (gradeObj) => {
   const sortedItems = sortSchedule(gradeObj.items)
   gradeObj.items = sortedItems
 
@@ -273,9 +281,16 @@ const onAddElectiveSection = ({ gradeObj, section, course }) => {
   gradeObj.endHour = endHour
   gradeObj.totalHeight = (endHour - startHour + 1) * HOUR_HEIGHT
   gradeObj.selected_course_count = new Set(sortedItems.map(i => i.course_code || i.course_id)).size
+}
 
+const removeElectiveFromSchedule = (gradeObj, item) => {
+  if (!gradeObj || !item) return
+  const sectionId = item.section_id
+  const removedName = `${item.course_code} - ${item.course_name}`
+  gradeObj.items = (gradeObj.items || []).filter(i => i.section_id !== sectionId)
+  recomputeGradeLayout(gradeObj)
   dataService.saveSavedSchedules(savedSchedules.value)
-  showSnackbar(`Eletiva "${course.code} - ${course.name}" adicionada com sucesso à grade salva!`, 'success')
+  showSnackbar(`Eletiva "${removedName}" removida da grade salva.`, 'success')
 }
 
 const formatPrintRoom = (room) => {
@@ -1062,9 +1077,20 @@ const exportToPDF = (gradeObj) => {
                 >
                   <div class="d-flex justify-space-between align-center flex-wrap ga-2">
                     <span class="font-weight-bold text-subtitle-1 text-primary">{{ item.course_code }} - {{ item.course_name }}</span>
-                    <v-chip size="small" color="primary" variant="flat" class="font-weight-bold">
-                      {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
-                    </v-chip>
+                    <div class="d-flex align-center ga-1">
+                      <v-chip size="small" color="primary" variant="flat" class="font-weight-bold">
+                        {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
+                      </v-chip>
+                      <v-btn
+                        v-if="isElectiveItem(item)"
+                        icon="mdi-close"
+                        size="x-small"
+                        variant="text"
+                        color="error"
+                        title="Remover eletiva da grade salva"
+                        @click="removeElectiveFromSchedule(grade, item)"
+                      ></v-btn>
+                    </div>
                   </div>
 
                   <div class="d-flex align-center ga-4 text-body-2 flex-wrap">
@@ -1138,6 +1164,16 @@ const exportToPDF = (gradeObj) => {
                           :class="{ 'elective-card-hatched': isElectiveItem(item) }"
                           :style="getCardStyle(item, grade.startHour || 8)"
                         >
+                          <v-btn
+                            v-if="isElectiveItem(item)"
+                            icon="mdi-close"
+                            size="x-small"
+                            variant="flat"
+                            color="error"
+                            class="elective-remove-btn"
+                            title="Remover eletiva da grade salva"
+                            @click.stop="removeElectiveFromSchedule(grade, item)"
+                          ></v-btn>
                           <div class="text-caption font-weight-bold card-title-clamp">
                             {{ item.course_name }}
                           </div>
@@ -1327,6 +1363,14 @@ const exportToPDF = (gradeObj) => {
 
 .elective-card-hatched {
   border: 1.5px dashed currentColor !important;
+}
+
+.elective-remove-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 5;
+  opacity: 0.85;
 }
 
 .card-title-clamp {
