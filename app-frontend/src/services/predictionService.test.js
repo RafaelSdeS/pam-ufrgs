@@ -43,6 +43,14 @@ describe('generateGraduationPlan', () => {
     expect(electives.length).toBeGreaterThan(0)
   })
 
+  it('interleaves elective placeholders into early semesters instead of only the tail', () => {
+    // A1+A2 exactly fill the 24-credit cap on their own, so without a reserved
+    // elective slot the first semester would have zero slack for electives.
+    const subjects = [subj('A1', 12, [], 1), subj('A2', 12, [], 1)]
+    const plan = predictionService.generateGraduationPlan({ subjects, completedCodes: [], creditLimit: 24, electiveCreditsRemaining: 8 })
+    expect(plan.semesters[0].subjects.some(s => s.isElective)).toBe(true)
+  })
+
   it('reports leftover subjects as unscheduled when the semester cap is hit', () => {
     const subjects = [subj('A', 6, [])]
     const plan = predictionService.generateGraduationPlan({ subjects, completedCodes: [], creditLimit: 24 })

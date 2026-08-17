@@ -43,9 +43,18 @@ export const predictionService = {
       const chosen = []
       let totalCredits = 0
 
+      // Reserva um bloco de eletiva antes de encaixar obrigatórias, pra elas não ficarem
+      // só espremidas na folga do fim do semestre (o que empurra todas pro final do curso).
+      // ponytail: reserva fixa de 1 bloco/semestre, não proporcional a quantos semestres faltam;
+      // se ficar grosseiro demais, trocar por electivesLeft / semestres restantes estimados.
+      const electiveReserve = electivesLeft > 0
+        ? Math.min(ELECTIVE_BLOCK_CREDITS, electivesLeft, semesterLimit)
+        : 0
+      const mandatoryLimit = semesterLimit - electiveReserve
+
       for (const s of available) {
         const credits = s.credits || 0
-        if (chosen.length === 0 || totalCredits + credits <= semesterLimit) {
+        if (chosen.length === 0 || totalCredits + credits <= mandatoryLimit) {
           chosen.push(s)
           totalCredits += credits
         }
