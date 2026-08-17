@@ -436,6 +436,22 @@ export const dataService = {
   setSelectedCurriculum(key) {
     this._setItemScoped(STORAGE_KEYS.SELECTED_CURRICULUM, key)
   },
+  // Créditos obrigatórios x eletivos já concluídos, para os limiares min_credits_required/
+  // min_elective_credits_required (que são sobre "Créditos Obrigatórios"/"Créditos Eletivos" da
+  // grade oficial - ver comentário em curriculumService.js - não sobre créditos concluídos em geral).
+  getCompletedCreditsByType(courseCode = null) {
+    const selectedCourseCode = courseCode || curriculumService.getSelectedCourse() || 'CIC'
+    const mandatorySet = new Set(curriculumService.getCurriculumSubjects(selectedCourseCode).map(s => (s.code || s.id || '').toUpperCase()))
+    let mandatory = 0
+    let elective = 0
+    this.getCompletedCourses().forEach(code => {
+      const credits = this.getCourseCredits(code, selectedCourseCode)
+      if (mandatorySet.has(code.toUpperCase())) mandatory += credits
+      else elective += credits
+    })
+    return { mandatory, elective }
+  },
+
   getEligibleCourses(courseCode = null) {
     const selectedCourseCode = courseCode || curriculumService.getSelectedCourse() || 'CIC'
     const completedSet = new Set(this.getCompletedCourses())
@@ -444,15 +460,12 @@ export const dataService = {
     const currSubjects = curriculumService.getCurriculumSubjects(selectedCourseCode)
     const currSubjectCodes = new Set(currSubjects.map(s => (s.code || s.id || '').toUpperCase()))
 
-    let totalCompletedCredits = 0
-    completedSet.forEach(code => {
-      const c = this.getCourseByCode(code)
-      if (c) totalCompletedCredits += (c.credits || 0)
-    })
+    const { mandatory: totalCompletedCredits, elective: totalCompletedElectiveCredits } = this.getCompletedCreditsByType(selectedCourseCode)
 
     return allCourses.filter(course => {
       if (completedSet.has(course.code)) return false
       if ((course.min_credits_required || 0) > totalCompletedCredits) return false
+      if ((course.min_elective_credits_required || 0) > totalCompletedElectiveCredits) return false
 
       const prereqs = course.prerequisites || []
       const allPrereqsMet = prereqs.every(p => {

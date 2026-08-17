@@ -37,11 +37,7 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
     if (c.id) allCoursesMap[c.id.toUpperCase()] = c
   })
 
-  let totalCompletedCredits = 0
-  completedCodes.forEach(code => {
-    const c = allCoursesMap[code]
-    if (c) totalCompletedCredits += (c.credits || 0)
-  })
+  const { mandatory: totalCompletedCredits, elective: totalCompletedElectiveCredits } = dataService.getCompletedCreditsByType(curriculumService.selectedCourseRef.value)
 
   // 3. Get course codes already in targetGradeObj
   const existingItems = targetGradeObj.value?.items || []
@@ -63,6 +59,9 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
 
     const courseInfo = allCoursesMap[code] || dataService.getCourseByCode(code) || {}
     if ((courseInfo.min_credits_required || 0) > totalCompletedCredits) {
+      return
+    }
+    if ((courseInfo.min_elective_credits_required || 0) > totalCompletedElectiveCredits) {
       return
     }
     const prereqs = courseInfo.prerequisites || []
