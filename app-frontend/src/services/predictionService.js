@@ -18,7 +18,7 @@ function makeElectivePlaceholder(credits) {
 }
 
 export const predictionService = {
-  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0, firstSemesterCreditLimit = null, electiveCreditsAlreadyPlaced = 0, canAdd = null, groupByCampus = false, maxHardPerSemester = null }) {
+  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0, firstSemesterCreditLimit = null, electiveCreditsAlreadyPlaced = 0, canAdd = null, groupByCampus = false, maxHardPerSemester = null, frozenCourses = {} }) {
     const completedSet = new Set(completedCodes.map(c => String(c).toUpperCase()))
     let remaining = subjects.filter(s => !completedSet.has(String(s.code).toUpperCase()))
     const simulatedCompleted = [...completedCodes]
@@ -46,6 +46,22 @@ export const predictionService = {
       const postponed = []
       let totalCredits = 0
 
+      // Adiciona cursos congelados para este semestre primeiro
+      const frozenCodesThisSem = Object.entries(frozenCourses)
+        .filter(([_, semIdx]) => semIdx === semesters.length)
+        .map(([code, _]) => code.toUpperCase())
+
+      if (frozenCodesThisSem.length > 0) {
+        const availableByCode = new Map(available.map(s => [s.code.toUpperCase(), s]))
+        frozenCodesThisSem.forEach(code => {
+          const subject = availableByCode.get(code)
+          if (subject) {
+            chosen.push(subject)
+            totalCredits += subject.credits || 0
+          }
+        })
+      }
+
       // Reserva um bloco de eletiva antes de encaixar obrigatórias, pra elas não ficarem
       // só espremidas na folga do fim do semestre (o que empurra todas pro final do curso).
       // ponytail: reserva fixa de 1 bloco/semestre, não proporcional a quantos semestres faltam;
@@ -57,7 +73,7 @@ export const predictionService = {
 
       // Lista mutável: quando groupByCampus está ligado, a "cauda" ainda não processada é
       // reordenada a cada aceite para priorizar o câmpus já escolhido neste semestre.
-      const pool = [...available]
+      const pool = [...available].filter(s => !chosen.includes(s))
       let i = 0
       while (i < pool.length) {
         const s = pool[i]

@@ -9,6 +9,7 @@ import { matchCourse } from './utils/searchUtils'
 import { getCourseDifficulty, getDifficultyLabel, getDifficultyColor } from './data/courseDifficulty'
 import { getCourseCampus } from './data/courseCampus'
 import { parsePlano, ICON_BY_CATEGORY } from './utils/planoParser'
+import GeneratedSchedule from './GeneratedSchedule.vue'
 
 const emit = defineEmits(['change-page'])
 
@@ -21,6 +22,7 @@ const semesterCreditLimits = ref({}) // mapa esparso { semIndex: limite } para s
 const unscheduled = ref([])
 const staleNotice = ref(false)
 const postponedBySemester = ref([]) // paralelo a semesters.value - só preenchido pelo próprio recálculo, não persistido
+const frozenCourses = ref({}) // mapa { courseCode: semesterIndex } para cursos congelados a semestres
 
 const planPrefs = reactive({ avoidScheduleConflicts: false, groupByCampus: false, limitHardSubjects: false })
 const MAX_HARD_PER_SEMESTER = 2 // ponytail: teto fixo, virar configurável se pedirem ajuste fino
@@ -173,10 +175,26 @@ function resolveSubject(code) {
   return null
 }
 
+function toggleFrozen(courseCode, semesterIndex) {
+  const codeUpper = courseCode.toUpperCase()
+  if (frozenCourses.value[codeUpper] === semesterIndex) {
+    delete frozenCourses.value[codeUpper]
+  } else {
+    frozenCourses.value[codeUpper] = semesterIndex
+  }
+  persist()
+  recalculate()
+}
+
+function isFrozen(courseCode, semesterIndex) {
+  return frozenCourses.value[courseCode.toUpperCase()] === semesterIndex
+}
+
 function persist() {
   dataService.saveGraduationPlan(semesters.value)
   dataService.saveCreditLimit(creditLimit.value)
   dataService.saveSemesterCreditLimits(semesterCreditLimits.value)
+  dataService.saveFrozenCourses(frozenCourses.value)
 }
 
 function checkStale() {
@@ -297,7 +315,8 @@ function recalculate() {
     electiveCreditsAlreadyPlaced: completedElectiveCredits.value,
     canAdd: planPrefs.avoidScheduleConflicts ? makeCanAdd() : null,
     groupByCampus: planPrefs.groupByCampus,
-    maxHardPerSemester: planPrefs.limitHardSubjects ? MAX_HARD_PER_SEMESTER : null
+    maxHardPerSemester: planPrefs.limitHardSubjects ? MAX_HARD_PER_SEMESTER : null,
+    frozenCourses: frozenCourses.value
   })
   semesters.value = result.semesters.map(sem => sem.subjects.map(s => s.code))
   postponedBySemester.value = result.semesters.map(sem => sem.postponed)
@@ -339,7 +358,8 @@ function recalculateFrom(semIndex, newLimit) {
     electiveCreditsAlreadyPlaced: completedElectiveCredits.value + prefixElectiveCredits,
     canAdd: planPrefs.avoidScheduleConflicts ? makeCanAdd() : null,
     groupByCampus: planPrefs.groupByCampus,
-    maxHardPerSemester: planPrefs.limitHardSubjects ? MAX_HARD_PER_SEMESTER : null
+    maxHardPerSemester: planPrefs.limitHardSubjects ? MAX_HARD_PER_SEMESTER : null,
+    frozenCourses: frozenCourses.value
   })
 
   const tail = result.semesters.map(sem => sem.subjects.map(s => s.code))
@@ -414,6 +434,7 @@ function loadOrGenerate() {
   clearScheduleChecks()
   creditLimit.value = dataService.getCreditLimit()
   semesterCreditLimits.value = dataService.getSemesterCreditLimits()
+  frozenCourses.value = dataService.getFrozenCourses()
   loadPlanPrefs()
   const saved = dataService.getGraduationPlan()
   if (saved && saved.length) {
@@ -679,6 +700,16 @@ const planoLoading = ref(false)
 const planoError = ref(false)
 const planoSections = computed(() => parsePlano(planoText.value))
 
+const schedulePreviewOpen = ref(false)
+
+// Fecha o modal restaurando a lista de "Disciplinas Desejadas" que foi temporariamente trocada
+// pelas disciplinas do semestre - ver dataService.previewDesiredCourses/restoreDesiredCoursesBackup.
+// Diferente do fluxo de navegação em GenerateSchedules.vue (que mostra um banner pra restaurar
+// depois), aqui a troca é só enquanto o modal está aberto, então a restauração é automática.
+watch(schedulePreviewOpen, (newVal) => {
+  if (!newVal) dataService.restoreDesiredCoursesBackup()
+})
+
 const DAY_ORDER = ['Segunda-feira', 'Terça-feira', 'Quarta-feira', 'Quinta-feira', 'Sexta-feira', 'Sábado', 'Domingo']
 
 const formatRoom = (room) => {
@@ -728,7 +759,7 @@ async function openPlano(subj) {
   }
 }
 
-function previewSemesterSchedule(sem) {
+function openSchedulePreview(sem) {
   // getDesiredCourses/saveDesiredCourses guardam objetos de disciplina completos (ver
   // GenerateSchedules.vue: item.course), não só o código - GeneratedSchedule.vue lê
   // course.name/course.code direto, daí precisar resolver o objeto aqui também.
@@ -736,10 +767,8 @@ function previewSemesterSchedule(sem) {
     .filter(s => !s.isPlaceholder)
     .map(s => dataService.getCourseByCode(s.code) || { code: s.code, name: s.name, credits: s.credits })
   if (courses.length === 0) return
-  const confirmed = confirm(`Isso vai substituir temporariamente sua lista de "Disciplinas Desejadas" pelas ${courses.length} disciplina(s) do ${sem.index + 1}º Semestre, para gerar um preview de horário com as turmas do semestre atual. Sua lista atual será salva e pode ser restaurada depois na tela de Gerar Horários. Continuar?`)
-  if (!confirmed) return
   dataService.previewDesiredCourses(courses)
-  emit('change-page', 'generated_schedule')
+  schedulePreviewOpen.value = true
 }
 </script>
 
@@ -973,10 +1002,23 @@ function previewSemesterSchedule(sem) {
                 v-else-if="subj.isElective"
                 size="x-small"
                 variant="text"
-                class="px-0 text-none"
+                class="px-0 text-none me-3"
                 @click.stop="openPicker(sem.index, idx)"
+                prepend-icon="mdi-pencil"
               >
-                Trocar
+                Alterar
+              </v-btn>
+              <v-btn
+                v-if="!subj.isPlaceholder"
+                size="x-small"
+                :variant="isFrozen(subj.code, sem.index) ? 'tonal' : 'text'"
+                :color="isFrozen(subj.code, sem.index) ? 'warning' : 'secondary'"
+                :prepend-icon="isFrozen(subj.code, sem.index) ? 'mdi-lock' : 'mdi-lock-open-outline'"
+                :class="isFrozen(subj.code, sem.index) ? 'px-2' : 'px-0'"
+                class="text-none"
+                @click.stop="toggleFrozen(subj.code, sem.index)"
+              >
+                {{ isFrozen(subj.code, sem.index) ? 'Fixada' : 'Fixar' }}
               </v-btn>
             </div>
             <v-btn icon size="x-small" variant="text" @click="moveCourse(sem.index, idx, 1)">
@@ -992,7 +1034,7 @@ function previewSemesterSchedule(sem) {
             color="primary"
             prepend-icon="mdi-calendar-clock-outline"
             class="text-none"
-            @click="previewSemesterSchedule(sem)"
+            @click="openSchedulePreview(sem)"
           >
             Gerar horário (preview)
           </v-btn>
@@ -1159,6 +1201,12 @@ function previewSemesterSchedule(sem) {
       </div>
     </div>
 
+    <v-dialog v-model="schedulePreviewOpen" max-width="1600">
+      <div v-if="schedulePreviewOpen" class="schedule-preview-scroll rounded-xl bg-background">
+        <GeneratedSchedule @back="schedulePreviewOpen = false" />
+      </div>
+    </v-dialog>
+
     <v-snackbar
       v-model="snackbar.show"
       :color="snackbar.color"
@@ -1178,6 +1226,14 @@ function previewSemesterSchedule(sem) {
 </template>
 
 <style scoped>
+.schedule-preview-scroll {
+  max-height: 90vh;
+  overflow-y: auto;
+  /* Mesmo reset que o Vuetify aplica em .v-dialog > .v-overlay__content > .v-card: sem ele
+     o offset da scrollbar da página (herdado do <html> pelo scroll-lock) vaza pra dentro do
+     modal e desloca da borda direita quem o consome - ex.: o v-snackbar do GeneratedSchedule. */
+  --v-scrollbar-offset: 0px;
+}
 .semester-row {
   display: flex;
   gap: 16px;

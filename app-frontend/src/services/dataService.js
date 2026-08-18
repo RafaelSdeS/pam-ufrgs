@@ -28,7 +28,8 @@ const STORAGE_KEYS = {
   GRADUATION_PLAN: 'ufrgs_pma_graduation_plan',
   SEMESTER_CREDIT_LIMITS: 'ufrgs_pma_semester_credit_limits',
   SAVED_GRADUATION_PLANS: 'ufrgs_pma_saved_graduation_plans',
-  PLAN_PREFERENCES: 'ufrgs_pma_plan_preferences'
+  PLAN_PREFERENCES: 'ufrgs_pma_plan_preferences',
+  FROZEN_COURSES: 'ufrgs_pma_frozen_courses'
 }
 
 const DEFAULT_PLAN_PREFERENCES = { avoidScheduleConflicts: false, groupByCampus: false, limitHardSubjects: false }
@@ -621,6 +622,21 @@ export const dataService = {
 
   savePlanPreferences(prefs) {
     this._setItemScoped(STORAGE_KEYS.PLAN_PREFERENCES, JSON.stringify(prefs))
+  },
+
+  getFrozenCourses() {
+    const raw = this._getItemScoped(STORAGE_KEYS.FROZEN_COURSES)
+    if (!raw) return {}
+    try {
+      const parsed = JSON.parse(raw)
+      return (parsed && typeof parsed === 'object') ? parsed : {}
+    } catch (e) {
+      return {}
+    }
+  },
+
+  saveFrozenCourses(frozen) {
+    this._setItemScoped(STORAGE_KEYS.FROZEN_COURSES, JSON.stringify(frozen))
   },
 
   getGraduationPlan() {
