@@ -58,25 +58,30 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
     }
 
     const courseInfo = allCoursesMap[code] || dataService.getCourseByCode(code) || {}
+
+    // Em vez de descartar eletivas com pré-requisito/limiar de créditos pendente, elas são
+    // mantidas na lista (jogadas pro final, greyed-out) com o motivo - ver ineligibleReason.
+    const ineligibleParts = []
     if ((courseInfo.min_credits_required || 0) > totalCompletedCredits) {
-      return
+      ineligibleParts.push(`exige ${courseInfo.min_credits_required} créditos obrigatórios cursados (você tem ${totalCompletedCredits})`)
     }
     if ((courseInfo.min_elective_credits_required || 0) > totalCompletedElectiveCredits) {
-      return
+      ineligibleParts.push(`exige ${courseInfo.min_elective_credits_required} créditos eletivos cursados (você tem ${totalCompletedElectiveCredits})`)
     }
     const prereqs = courseInfo.prerequisites || []
-    if (prereqs.length > 0 && !prereqs.every(p => {
+    const missingPrereqs = prereqs.filter(p => {
       const upper = (p || '').toUpperCase()
-      if (completedCodes.has(upper)) return true
-      // Só ignora o pré-requisito se ele nem existir no catálogo do curso atual (obrigatória ou
-      // eletiva) - mesma correção aplicada em dataService.getEligibleCourses e
+      if (completedCodes.has(upper)) return false
+      // Só considera pendente se o pré-requisito existir no catálogo do curso atual (obrigatória
+      // ou eletiva) - mesma correção aplicada em dataService.getEligibleCourses e
       // GraduationPlan.isElectiveEligible. Antes só olhava mandatoryCodes, deixando pré-requisito
       // eletiva->eletiva passar batido mesmo sem a eletiva-base cursada.
-      if (!mandatoryCodes.has(upper) && !allCoursesMap[upper]) return true
-      return false
-    })) {
-      return
+      return mandatoryCodes.has(upper) || Boolean(allCoursesMap[upper])
+    })
+    if (missingPrereqs.length > 0) {
+      ineligibleParts.push(`pré-requisito(s) pendente(s): ${missingPrereqs.join(', ')}`)
     }
+    const ineligibleReason = ineligibleParts.length ? ineligibleParts.join('; ') : null
 
     // Check conflict with hard blocks
     if (scheduleGeneratorService.sectionViolatesHardBlock(t, hardBlocks)) {
@@ -106,6 +111,7 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
           code,
           name: t.course_name || courseInfo.name || code,
           credits: courseInfo.credits || t.credits || 4,
+          ineligibleReason,
           sections: []
         }
       }
@@ -113,7 +119,12 @@ const open = (gradeObj, turmasList = null, restrictionsList = null, options = {}
     }
   })
 
-  compatibleCoursesList.value = Object.values(courseSectionsMap).sort((a, b) => a.name.localeCompare(b.name))
+  compatibleCoursesList.value = Object.values(courseSectionsMap).sort((a, b) => {
+    if (Boolean(a.ineligibleReason) !== Boolean(b.ineligibleReason)) {
+      return a.ineligibleReason ? 1 : -1
+    }
+    return a.name.localeCompare(b.name)
+  })
   isOpen.value = true
 }
 
@@ -217,6 +228,7 @@ defineExpose({
             :key="course.code"
             variant="outlined"
             class="rounded-xl border-thin bg-surface transition-swing"
+            :class="{ 'opacity-60': course.ineligibleReason }"
           >
             <v-card-item class="pa-4 pb-2">
               <template v-slot:title>
@@ -244,6 +256,10 @@ defineExpose({
             </v-card-item>
 
             <v-card-text class="px-4 pb-4 pt-2">
+              <div v-if="course.ineligibleReason" class="text-caption text-warning font-weight-medium d-flex align-start ga-1 mb-3">
+                <v-icon icon="mdi-lock-outline" size="small" class="mr-1 mt-1"></v-icon>
+                <span>Você ainda não pode selecionar esta eletiva: {{ course.ineligibleReason }}.</span>
+              </div>
               <div class="text-caption text-medium-emphasis mb-2 font-weight-medium">
                 Turmas disponíveis compatíveis com a grade:
               </div>
@@ -291,6 +307,7 @@ defineExpose({
                     size="small"
                     prepend-icon="mdi-bookmark-plus-outline"
                     class="rounded-lg font-weight-bold text-none"
+                    :disabled="Boolean(course.ineligibleReason)"
                     @click="handleAddSection(course, section)"
                   >
                     {{ isSavedGrade ? 'Adicionar à Grade Salva' : 'Salvar grade e adicionar eletiva' }}

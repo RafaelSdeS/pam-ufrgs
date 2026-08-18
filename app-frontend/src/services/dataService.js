@@ -7,6 +7,14 @@ export function escapeHtml(str) {
   }[c]))
 }
 
+// Disciplinas equivalentes (mesma matéria, ofertada em modalidades diferentes) - concluir uma
+// dispensa a outra. Único caso hoje: Probabilidade e Estatística presencial (MAT02219, matriz
+// obrigatória) e EAD (MAT02050, aparece no catálogo como eletiva).
+const EQUIVALENT_COURSE_CODES = {
+  MAT02219: ['MAT02050'],
+  MAT02050: ['MAT02219']
+}
+
 const STORAGE_KEYS = {
   COMPLETED_COURSES: 'ufrgs_pma_completed_courses',
   DESIRED_COURSES: 'ufrgs_pma_desired_courses',
@@ -19,8 +27,11 @@ const STORAGE_KEYS = {
   CREDIT_LIMIT: 'ufrgs_pma_credit_limit',
   GRADUATION_PLAN: 'ufrgs_pma_graduation_plan',
   SEMESTER_CREDIT_LIMITS: 'ufrgs_pma_semester_credit_limits',
-  SAVED_GRADUATION_PLANS: 'ufrgs_pma_saved_graduation_plans'
+  SAVED_GRADUATION_PLANS: 'ufrgs_pma_saved_graduation_plans',
+  PLAN_PREFERENCES: 'ufrgs_pma_plan_preferences'
 }
+
+const DEFAULT_PLAN_PREFERENCES = { avoidScheduleConflicts: false, groupByCampus: false, limitHardSubjects: false }
 
 export const dataService = {
   _getScopedKey(baseKey, courseCode = null) {
@@ -199,6 +210,7 @@ export const dataService = {
 
   getCourseObservation(courseCode, semester = null) {
     if (!courseCode) return null
+    const equivalentNote = this._getEquivalentCourseNote(courseCode)
     const targetSemester = semester || curriculumService.selectedSemesterRef?.value || '2026/2'
     const turmas = this.getTurmas().filter(t => (t.course_code === courseCode || t.course_id === courseCode) && (!semester || t.semester === targetSemester))
     const obsMap = new Map()
@@ -207,16 +219,28 @@ export const dataService = {
         obsMap.set(t.section_code, t.observacao.trim())
       }
     })
-    if (obsMap.size === 0) return null
-    const uniqueObs = Array.from(new Set(obsMap.values()))
-    if (uniqueObs.length === 1) {
-      return uniqueObs[0]
+    let turmaObs = null
+    if (obsMap.size === 1) {
+      turmaObs = Array.from(new Set(obsMap.values()))[0]
+    } else if (obsMap.size > 1) {
+      const lines = []
+      obsMap.forEach((obs, section) => lines.push(`Turma ${section}: ${obs}`))
+      turmaObs = lines.join('\n')
     }
-    const lines = []
-    obsMap.forEach((obs, section) => {
-      lines.push(`Turma ${section}: ${obs}`)
+    if (equivalentNote && turmaObs) return `${equivalentNote}\n\n${turmaObs}`
+    return equivalentNote || turmaObs
+  },
+
+  // Nota fixa (independente das turmas importadas) para disciplinas com equivalência de
+  // modalidade cadastrada em EQUIVALENT_COURSE_CODES.
+  _getEquivalentCourseNote(courseCode) {
+    const equivalents = EQUIVALENT_COURSE_CODES[String(courseCode).toUpperCase()]
+    if (!equivalents || equivalents.length === 0) return null
+    const names = equivalents.map(code => {
+      const course = this.getCourseByCode(code)
+      return course ? `${code} - ${course.name}` : code
     })
-    return lines.join('\n')
+    return `Equivalente a: ${names.join(', ')}. Cursar uma dispensa a outra.`
   },
 
   getSectionObservation(courseCode, sectionCode, semester = null) {
@@ -409,7 +433,12 @@ export const dataService = {
     if (!raw) return []
     try {
       const parsed = JSON.parse(raw)
-      return Array.isArray(parsed) ? parsed : []
+      const codes = Array.isArray(parsed) ? parsed : []
+      const withEquivalents = new Set(codes)
+      codes.forEach(code => {
+        (EQUIVALENT_COURSE_CODES[code.toUpperCase()] || []).forEach(eq => withEquivalents.add(eq))
+      })
+      return [...withEquivalents]
     } catch (e) {
       return []
     }
@@ -577,6 +606,21 @@ export const dataService = {
 
   saveCreditLimit(limit) {
     this._setItemScoped(STORAGE_KEYS.CREDIT_LIMIT, String(limit))
+  },
+
+  getPlanPreferences() {
+    const raw = this._getItemScoped(STORAGE_KEYS.PLAN_PREFERENCES)
+    if (!raw) return { ...DEFAULT_PLAN_PREFERENCES }
+    try {
+      const parsed = JSON.parse(raw)
+      return { ...DEFAULT_PLAN_PREFERENCES, ...(parsed && typeof parsed === 'object' ? parsed : {}) }
+    } catch (e) {
+      return { ...DEFAULT_PLAN_PREFERENCES }
+    }
+  },
+
+  savePlanPreferences(prefs) {
+    this._setItemScoped(STORAGE_KEYS.PLAN_PREFERENCES, JSON.stringify(prefs))
   },
 
   getGraduationPlan() {

@@ -485,7 +485,6 @@
         "credits": 4,
         "min_credits_required": 0,
         "prerequisites": [
-          "ENG10001",
           "INF01086"
         ]
       },
@@ -549,7 +548,7 @@
         "code": "ADM01134",
         "name": "ADMINISTRAÇÃO E FINANÇAS",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 100,
         "prerequisites": []
       },
       "INF01092": {
@@ -557,42 +556,58 @@
         "name": "APRENDIZADO PROFUNDO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01017"
+        ]
       },
       "INF01081": {
         "code": "INF01081",
         "name": "APRENDIZADO PROFUNDO PARA COMPUTAÇÃO VISUAL",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01355",
+          "INF01202",
+          "MAT01354",
+          "MAT02219"
+        ]
       },
       "INF01191": {
         "code": "INF01191",
         "name": "ARQUITETURAS AVANÇADAS DE COMPUTADORES",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01113"
+        ]
       },
       "INF01146": {
         "code": "INF01146",
         "name": "AVALIAÇÃO DE DESEMPENHO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT02219"
+        ]
       },
       "INF05018": {
         "code": "INF05018",
         "name": "BIOLOGIA COMPUTACIONAL",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01202"
+        ]
       },
       "INF01205": {
         "code": "INF01205",
         "name": "CAD PARA SISTEMAS DIGITAIS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01203",
+          "INF01175"
+        ]
       },
       "INF01140": {
         "code": "INF01140",
@@ -606,139 +621,158 @@
         "name": "COMUNICAÇÃO DE DADOS E TECNOLOGIAS DE REDES EMERGENTES",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01084"
+        ]
       },
       "INF01001": {
         "code": "INF01001",
         "name": "ESPECIFICAÇÃO FORMAL N",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF05501"
+        ]
       },
       "INF01015": {
         "code": "INF01015",
         "name": "GERÊNCIA E APLICAÇÕES EM REDES",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01084"
+        ]
       },
       "INT00003": {
         "code": "INT00003",
         "name": "INTRODUÇÃO AO EMPREENDEDORISMO E INOVAÇÃO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF99003"
+        ]
       },
       "INF01216": {
         "code": "INF01216",
         "name": "MODELAGEM E GERENCIAMENTO DE PROCESSOS DE NEGÓCIO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01127"
+        ]
       },
       "INF01089": {
         "code": "INF01089",
         "name": "PROCESSAMENTO DE IMAGENS II",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT02219",
+          "INF01046"
+        ]
       },
       "INF01006": {
         "code": "INF01006",
         "name": "PROJETO DE BANCO DE DADOS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01145"
+        ]
       },
       "INF01096": {
         "code": "INF01096",
         "name": "RECUPERAÇÃO DE INFORMAÇÃO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01203"
+        ]
       },
       "INF01097": {
         "code": "INF01097",
         "name": "SEGURANÇA DE REDES DE COMPUTADORES E SISTEMAS DISTRIBUÍDOS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01045"
+        ]
       },
       "INF01063": {
         "code": "INF01063",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01079": {
         "code": "INF01079",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XL",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01080": {
         "code": "INF01080",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLI",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF05030": {
         "code": "INF05030",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF05032": {
         "code": "INF05032",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLIV",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF05033": {
         "code": "INF05033",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLV",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01060": {
         "code": "INF01060",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XVIII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01078": {
         "code": "INF01078",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXIX",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01076": {
         "code": "INF01076",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXVII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01077": {
         "code": "INF01077",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXVIII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01053": {
         "code": "INF01053",
         "name": "TÓPICOS ESPECIAIS EM ENGENHARIA DE COMPUTAÇÃO IV",
         "credits": 2,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01030": {
@@ -746,34 +780,45 @@
         "name": "VISÃO COMPUTACIONAL II",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01046"
+        ]
       },
       "MAT01169": {
         "code": "MAT01169",
         "name": "CÁLCULO NUMÉRICO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01167",
+          "INF01203"
+        ]
       },
       "ENG04078": {
         "code": "ENG04078",
         "name": "CIRCUITOS ELETRÔNICOS II",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10002",
+          "ENG04077"
+        ]
       },
       "ENG10051": {
         "code": "ENG10051",
         "name": "DINÂMICA E CONTROLE DE ROBÔS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10026",
+          "ENG10004"
+        ]
       },
       "ECO02254": {
         "code": "ECO02254",
         "name": "ECONOMIA A",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 120,
         "prerequisites": []
       },
       "ENG04434": {
@@ -781,47 +826,64 @@
         "name": "PRINCÍPIOS DE COMUNICAÇÃO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG04077",
+          "ENG10017",
+          "ENG04010"
+        ]
       },
       "MAT02050": {
         "code": "MAT02050",
         "name": "PROBABILIDADE E ESTATÍSTICA",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01353"
+        ]
       },
       "ENG10019": {
         "code": "ENG10019",
         "name": "SISTEMAS DE CONTROLE  DIGITAIS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10004"
+        ]
       },
       "ENG10004": {
         "code": "ENG10004",
         "name": "SISTEMAS DE CONTROLE I",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10017"
+        ]
       },
       "ENG10055": {
         "code": "ENG10055",
         "name": "SISTEMAS DE TEMPO REAL",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01113"
+        ]
       },
       "ENG10017": {
         "code": "ENG10017",
         "name": "SISTEMAS E SINAIS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01168"
+        ]
       },
       "INF01217": {
         "code": "INF01217",
         "name": "TENDÊNCIAS EM ENGENHARIA DE SOFTWARE",
-        "credits": 4
+        "credits": 4,
+        "prerequisites": [
+          "INF01127"
+        ]
       }
     },
     "ecp": {
@@ -1309,7 +1371,6 @@
         "credits": 4,
         "min_credits_required": 0,
         "prerequisites": [
-          "ENG10001",
           "INF01086"
         ]
       },
@@ -1373,7 +1434,7 @@
         "code": "ADM01134",
         "name": "ADMINISTRAÇÃO E FINANÇAS",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 100,
         "prerequisites": []
       },
       "INF01092": {
@@ -1381,42 +1442,58 @@
         "name": "APRENDIZADO PROFUNDO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01017"
+        ]
       },
       "INF01081": {
         "code": "INF01081",
         "name": "APRENDIZADO PROFUNDO PARA COMPUTAÇÃO VISUAL",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01355",
+          "INF01202",
+          "MAT01354",
+          "MAT02219"
+        ]
       },
       "INF01191": {
         "code": "INF01191",
         "name": "ARQUITETURAS AVANÇADAS DE COMPUTADORES",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01113"
+        ]
       },
       "INF01146": {
         "code": "INF01146",
         "name": "AVALIAÇÃO DE DESEMPENHO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT02219"
+        ]
       },
       "INF05018": {
         "code": "INF05018",
         "name": "BIOLOGIA COMPUTACIONAL",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01202"
+        ]
       },
       "INF01205": {
         "code": "INF01205",
         "name": "CAD PARA SISTEMAS DIGITAIS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01203",
+          "INF01175"
+        ]
       },
       "INF01140": {
         "code": "INF01140",
@@ -1430,139 +1507,158 @@
         "name": "COMUNICAÇÃO DE DADOS E TECNOLOGIAS DE REDES EMERGENTES",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01084"
+        ]
       },
       "INF01001": {
         "code": "INF01001",
         "name": "ESPECIFICAÇÃO FORMAL N",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF05501"
+        ]
       },
       "INF01015": {
         "code": "INF01015",
         "name": "GERÊNCIA E APLICAÇÕES EM REDES",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01084"
+        ]
       },
       "INT00003": {
         "code": "INT00003",
         "name": "INTRODUÇÃO AO EMPREENDEDORISMO E INOVAÇÃO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF99003"
+        ]
       },
       "INF01216": {
         "code": "INF01216",
         "name": "MODELAGEM E GERENCIAMENTO DE PROCESSOS DE NEGÓCIO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01127"
+        ]
       },
       "INF01089": {
         "code": "INF01089",
         "name": "PROCESSAMENTO DE IMAGENS II",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT02219",
+          "INF01046"
+        ]
       },
       "INF01006": {
         "code": "INF01006",
         "name": "PROJETO DE BANCO DE DADOS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01145"
+        ]
       },
       "INF01096": {
         "code": "INF01096",
         "name": "RECUPERAÇÃO DE INFORMAÇÃO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01203"
+        ]
       },
       "INF01097": {
         "code": "INF01097",
         "name": "SEGURANÇA DE REDES DE COMPUTADORES E SISTEMAS DISTRIBUÍDOS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01045"
+        ]
       },
       "INF01063": {
         "code": "INF01063",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01079": {
         "code": "INF01079",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XL",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01080": {
         "code": "INF01080",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLI",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF05030": {
         "code": "INF05030",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF05032": {
         "code": "INF05032",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLIV",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF05033": {
         "code": "INF05033",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XLV",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01060": {
         "code": "INF01060",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XVIII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01078": {
         "code": "INF01078",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXIX",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01076": {
         "code": "INF01076",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXVII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01077": {
         "code": "INF01077",
         "name": "TÓPICOS ESPECIAIS EM COMPUTAÇÃO XXXVIII",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01053": {
         "code": "INF01053",
         "name": "TÓPICOS ESPECIAIS EM ENGENHARIA DE COMPUTAÇÃO IV",
         "credits": 2,
-        "min_credits_required": 0,
+        "min_credits_required": 94,
         "prerequisites": []
       },
       "INF01030": {
@@ -1570,34 +1666,45 @@
         "name": "VISÃO COMPUTACIONAL II",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01046"
+        ]
       },
       "MAT01169": {
         "code": "MAT01169",
         "name": "CÁLCULO NUMÉRICO",
         "credits": 6,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01167",
+          "INF01203"
+        ]
       },
       "ENG04078": {
         "code": "ENG04078",
         "name": "CIRCUITOS ELETRÔNICOS II",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10002",
+          "ENG04077"
+        ]
       },
       "ENG10051": {
         "code": "ENG10051",
         "name": "DINÂMICA E CONTROLE DE ROBÔS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10026",
+          "ENG10004"
+        ]
       },
       "ECO02254": {
         "code": "ECO02254",
         "name": "ECONOMIA A",
         "credits": 4,
-        "min_credits_required": 0,
+        "min_credits_required": 120,
         "prerequisites": []
       },
       "ENG04434": {
@@ -1605,47 +1712,64 @@
         "name": "PRINCÍPIOS DE COMUNICAÇÃO",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG04077",
+          "ENG10017",
+          "ENG04010"
+        ]
       },
       "MAT02050": {
         "code": "MAT02050",
         "name": "PROBABILIDADE E ESTATÍSTICA",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01353"
+        ]
       },
       "ENG10019": {
         "code": "ENG10019",
         "name": "SISTEMAS DE CONTROLE  DIGITAIS",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10004"
+        ]
       },
       "ENG10004": {
         "code": "ENG10004",
         "name": "SISTEMAS DE CONTROLE I",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "ENG10017"
+        ]
       },
       "ENG10055": {
         "code": "ENG10055",
         "name": "SISTEMAS DE TEMPO REAL",
         "credits": 4,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "INF01113"
+        ]
       },
       "ENG10017": {
         "code": "ENG10017",
         "name": "SISTEMAS E SINAIS",
         "credits": 6,
         "min_credits_required": 0,
-        "prerequisites": []
+        "prerequisites": [
+          "MAT01168"
+        ]
       },
       "INF01217": {
         "code": "INF01217",
         "name": "TENDÊNCIAS EM ENGENHARIA DE SOFTWARE",
-        "credits": 4
+        "credits": 4,
+        "prerequisites": [
+          "INF01127"
+        ]
       }
     }
   },

@@ -56,4 +56,35 @@ describe('generateGraduationPlan', () => {
     const plan = predictionService.generateGraduationPlan({ subjects, completedCodes: [], creditLimit: 24 })
     expect(plan.unscheduled).toEqual([])
   })
+
+  it('postpones a candidate rejected by canAdd to the next semester', () => {
+    const subjects = [subj('A', 6, [], 1), subj('B', 6, [], 1)]
+    const canAdd = (chosen, candidate) => (candidate.code === 'B' && chosen.some(c => c.code === 'A')) ? 'conflita com A' : null
+    const plan = predictionService.generateGraduationPlan({ subjects, completedCodes: [], creditLimit: 12, canAdd })
+    expect(plan.semesters[0].subjects.map(s => s.code)).toEqual(['A'])
+    expect(plan.semesters[0].postponed).toEqual([{ code: 'B', reason: 'conflita com A' }])
+    expect(plan.semesters[1].subjects.map(s => s.code)).toEqual(['B'])
+  })
+
+  it('never lets canAdd block every subject of a semester (progress guarantee)', () => {
+    const subjects = [subj('A', 6, [], 1), subj('B', 6, [], 1)]
+    const canAdd = () => 'sempre recusa'
+    const plan = predictionService.generateGraduationPlan({ subjects, completedCodes: [], creditLimit: 24, canAdd })
+    const allPlanned = plan.semesters.flatMap(s => s.subjects.map(x => x.code))
+    expect(allPlanned.sort()).toEqual(['A', 'B'])
+    expect(plan.unscheduled).toEqual([])
+  })
+
+  it('groups same-campus subjects together when groupByCampus is set', () => {
+    const subjects = [subj('INF001', 6, [], 1), subj('ENG001', 6, [], 1), subj('INF002', 6, [], 1)]
+    const plan = predictionService.generateGraduationPlan({ subjects, completedCodes: [], creditLimit: 24, groupByCampus: true })
+    expect(plan.semesters[0].subjects.map(s => s.code)).toEqual(['INF001', 'INF002', 'ENG001'])
+  })
+
+  it('caps hard subjects per semester when maxHardPerSemester is set', () => {
+    const subjects = [subj('MAT01353', 4, [], 1), subj('MAT01354', 4, [], 1), subj('INF01087', 4, [], 1)]
+    const plan = predictionService.generateGraduationPlan({ subjects, completedCodes: [], creditLimit: 24, maxHardPerSemester: 1 })
+    expect(plan.semesters[0].subjects.map(s => s.code)).toEqual(['MAT01353', 'INF01087'])
+    expect(plan.semesters[1].subjects.map(s => s.code)).toEqual(['MAT01354'])
+  })
 })

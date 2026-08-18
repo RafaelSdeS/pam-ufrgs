@@ -1050,7 +1050,6 @@ const miniViewportRect = computed(() => {
                         size="14"
                         color="warning"
                         class="ml-1"
-                        @click.stop
                       >
                         mdi-information-outline
                       </v-icon>

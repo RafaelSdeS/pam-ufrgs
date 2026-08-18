@@ -96,6 +96,18 @@ describe('generateRankedSchedules', () => {
     expect(result).toEqual([])
   })
 
+  it('penalizes a same-day campus switch, ranking the same-campus combo higher', () => {
+    const turmas = [
+      section('INF01202', 'A1', [sched('Segunda-feira', '08:00', '10:00', 'Sala 1 - Campus: Vale')]),
+      section('INF01202', 'A2', [sched('Segunda-feira', '08:00', '10:00', 'Sala 2 - Campus: Centro')]),
+      section('MAT01353', 'B', [sched('Segunda-feira', '10:00', '12:00', 'Sala 3 - Campus: Vale')])
+    ]
+    const result = sgs.generateRankedSchedules({ selectedCourses: [{ course: courseA }, { course: courseB }], turmas })
+    expect(result).toHaveLength(2)
+    expect(result[0].schedule.some(s => s.section_code === 'A1')).toBe(true)
+    expect(result[0].score).toBeGreaterThan(result[1].score)
+  })
+
   it('ranks the higher-priority course combination first', () => {
     const turmas = [
       section('INF01202', 'A', [sched('Segunda-feira', '08:00', '10:00')]),

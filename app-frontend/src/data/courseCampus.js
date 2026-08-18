@@ -16,3 +16,7 @@ export function getCourseCampus(code) {
   const prefix = String(code || '').toUpperCase().match(/^[A-Z]+/)?.[0]
   return CAMPUS_BY_PREFIX[prefix] || null
 }
+
+export function getCampusFromRoom(room) {
+  return String(room || '').match(/Campus:\s*(.+)$/)?.[1]?.trim() || null
+}

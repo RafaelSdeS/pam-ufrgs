@@ -20,6 +20,15 @@ const semesters = ref([]) // array of arrays of course codes (or "ELETIVA-<credi
 const semesterCreditLimits = ref({}) // mapa esparso { semIndex: limite } para semestres com limite customizado
 const unscheduled = ref([])
 const staleNotice = ref(false)
+const postponedBySemester = ref([]) // paralelo a semesters.value - só preenchido pelo próprio recálculo, não persistido
+
+const planPrefs = reactive({ avoidScheduleConflicts: false, groupByCampus: false, limitHardSubjects: false })
+const MAX_HARD_PER_SEMESTER = 2 // ponytail: teto fixo, virar configurável se pedirem ajuste fino
+
+function loadPlanPrefs() {
+  Object.assign(planPrefs, dataService.getPlanPreferences())
+}
+watch(planPrefs, () => dataService.savePlanPreferences({ ...planPrefs }), { deep: true })
 
 function effectiveLimit(semIndex) {
   const override = semesterCreditLimits.value[semIndex]
@@ -194,6 +203,45 @@ function getTurmasForCodes(codes) {
   })
 }
 
+// Predicado injetado no predictionService pra ele adiar disciplinas que colidem entre si nas
+// turmas de hoje. Memoiza por combinação de códigos e tem orçamento próprio de tempo -
+// generateRankedSchedules já tem budget de 1.5s por chamada, mas um recálculo de plano faz
+// várias chamadas (uma por candidato por semestre); sem teto agregado o pior caso trava a UI
+// por minutos. Ao estourar o orçamento, libera sem checar - o efeito é só perder um adiamento,
+// nunca travar o plano.
+function makeCanAdd() {
+  const memo = new Map()
+  const budgetStart = performance.now()
+  const BUDGET_MS = 2000
+  return (chosen, candidate) => {
+    if (performance.now() - budgetStart > BUDGET_MS) return null
+
+    const codes = [...chosen.map(c => c.code), candidate.code].sort()
+    const key = codes.join(',')
+    if (memo.has(key)) return memo.get(key)
+
+    const turmas = getTurmasForCodes(codes)
+    const offeredCodes = new Set(turmas.map(t => (t.course_code || t.course_id || '').toUpperCase()))
+    // Sem turma conhecida pra ela em 2026/2 - neutro, nunca bloqueia (senão disciplina de
+    // oferta alternada seria adiada pra sempre até MAX_SEMESTERS).
+    if (!offeredCodes.has(candidate.code.toUpperCase())) {
+      memo.set(key, null)
+      return null
+    }
+
+    const chosenOffered = chosen.filter(c => offeredCodes.has(c.code.toUpperCase()))
+    const results = scheduleGeneratorService.generateRankedSchedules({
+      selectedCourses: [...chosenOffered, candidate],
+      restrictions: dataService.getRestrictions(),
+      turmas,
+      limit: 1
+    })
+    const reason = results.length > 0 ? null : `conflita com as turmas atuais de ${chosenOffered.map(c => c.code).join(', ')}`
+    memo.set(key, reason)
+    return reason
+  }
+}
+
 function checkSemesterSchedule(sem) {
   const courses = sem.subjects.filter(s => !s.isPlaceholder)
   if (courses.length === 0) return
@@ -246,9 +294,13 @@ function recalculate() {
     completedCodes: completed,
     creditLimit: creditLimit.value,
     electiveCreditsRemaining: electiveCreditsRemaining.value,
-    electiveCreditsAlreadyPlaced: completedElectiveCredits.value
+    electiveCreditsAlreadyPlaced: completedElectiveCredits.value,
+    canAdd: planPrefs.avoidScheduleConflicts ? makeCanAdd() : null,
+    groupByCampus: planPrefs.groupByCampus,
+    maxHardPerSemester: planPrefs.limitHardSubjects ? MAX_HARD_PER_SEMESTER : null
   })
   semesters.value = result.semesters.map(sem => sem.subjects.map(s => s.code))
+  postponedBySemester.value = result.semesters.map(sem => sem.postponed)
   semesterCreditLimits.value = {}
   unscheduled.value = result.unscheduled
   persist()
@@ -284,11 +336,15 @@ function recalculateFrom(semIndex, newLimit) {
     creditLimit: creditLimit.value,
     electiveCreditsRemaining: remainingElectiveCredits,
     firstSemesterCreditLimit: newLimit,
-    electiveCreditsAlreadyPlaced: completedElectiveCredits.value + prefixElectiveCredits
+    electiveCreditsAlreadyPlaced: completedElectiveCredits.value + prefixElectiveCredits,
+    canAdd: planPrefs.avoidScheduleConflicts ? makeCanAdd() : null,
+    groupByCampus: planPrefs.groupByCampus,
+    maxHardPerSemester: planPrefs.limitHardSubjects ? MAX_HARD_PER_SEMESTER : null
   })
 
   const tail = result.semesters.map(sem => sem.subjects.map(s => s.code))
   semesters.value = [...prefix, ...tail]
+  postponedBySemester.value = [...postponedBySemester.value.slice(0, semIndex), ...result.semesters.map(sem => sem.postponed)]
 
   const nextLimits = {}
   Object.entries(semesterCreditLimits.value).forEach(([idx, val]) => {
@@ -303,14 +359,67 @@ function recalculateFrom(semIndex, newLimit) {
   clearScheduleChecks()
 }
 
+function autoCompleteElectives() {
+  const catalog = electiveCatalog.value
+  const mandatoryCodes = new Set(Object.keys(subjectsMap.value).map(c => c.toUpperCase()))
+  const usedElectiveCodes = new Set()
+  let placeholdersFound = 0
+  let placeholdersReplaced = 0
+
+  const newSemesters = semesters.value.map((semesterCodes, semIndex) => {
+    const cumulative = cumulativeCompletedBefore(semIndex)
+    return semesterCodes.map(code => {
+      const m = ELECTIVE_CODE_RE.exec(code)
+      if (!m) return code
+
+      placeholdersFound++
+      const requiredCredits = parseInt(m[1])
+
+      const eligible = catalog.filter(c => {
+        const codeUpper = c.code.toUpperCase()
+        if (cumulative.has(codeUpper) || usedElectiveCodes.has(codeUpper)) return false
+        if (c.credits !== requiredCredits) return false
+        const prereqs = c.prerequisites || []
+        return prereqs.every(p => {
+          const upper = (p || '').toUpperCase()
+          if (cumulative.has(upper)) return true
+          if (!subjectsMap.value[upper] && !mandatoryCodes.has(upper)) return true
+          return false
+        })
+      })
+
+      if (eligible.length > 0) {
+        const chosen = eligible[0]
+        usedElectiveCodes.add(chosen.code.toUpperCase())
+        cumulative.add(chosen.code.toUpperCase())
+        placeholdersReplaced++
+        return chosen.code
+      }
+      return code
+    })
+  })
+
+  if (placeholdersFound === 0) {
+    showSnackbar('Nenhuma eletiva a completar nesta previsão.', 'info')
+    return
+  }
+
+  semesters.value = newSemesters
+  persist()
+  clearScheduleChecks()
+  showSnackbar(`${placeholdersReplaced} de ${placeholdersFound} eletiva(s) completada(s) com sucesso!`, 'success')
+}
+
 function loadOrGenerate() {
   clearScheduleChecks()
   creditLimit.value = dataService.getCreditLimit()
   semesterCreditLimits.value = dataService.getSemesterCreditLimits()
+  loadPlanPrefs()
   const saved = dataService.getGraduationPlan()
   if (saved && saved.length) {
     semesters.value = saved
     unscheduled.value = []
+    postponedBySemester.value = []
     checkStale()
   } else {
     recalculate()
@@ -392,7 +501,8 @@ function saveCurrentPlan() {
     courseCode: selectedCourse.value,
     semesters: JSON.parse(JSON.stringify(semesters.value)),
     creditLimit: creditLimit.value,
-    semesterCreditLimits: JSON.parse(JSON.stringify(semesterCreditLimits.value))
+    semesterCreditLimits: JSON.parse(JSON.stringify(semesterCreditLimits.value)),
+    preferenceTags: { ...planPrefs }
   })
   dataService.saveSavedGraduationPlans(saved)
   showSnackbar(`Previsão "${name}" salva com sucesso em 'Previsões Salvas'!`, 'success')
@@ -658,6 +768,28 @@ function previewSemesterSchedule(sem) {
             style="max-width: 260px; min-width: 220px"
             hide-details
           ></v-text-field>
+          <v-checkbox
+            v-model="planPrefs.avoidScheduleConflicts"
+            label="Evitar conflitos de horário"
+            density="compact"
+            hide-details
+            class="flex-grow-0"
+            title="Usa as turmas ofertadas hoje pra adiar disciplinas que colidiriam entre si"
+          ></v-checkbox>
+          <v-checkbox
+            v-model="planPrefs.groupByCampus"
+            label="Agrupar por câmpus"
+            density="compact"
+            hide-details
+            class="flex-grow-0"
+          ></v-checkbox>
+          <v-checkbox
+            v-model="planPrefs.limitHardSubjects"
+            label="Equilibrar disciplinas difíceis"
+            density="compact"
+            hide-details
+            class="flex-grow-0"
+          ></v-checkbox>
           <v-btn color="primary" variant="flat" class="rounded-lg font-weight-bold" prepend-icon="mdi-refresh" @click="recalculate">
             Recalcular Previsão
           </v-btn>
@@ -680,6 +812,17 @@ function previewSemesterSchedule(sem) {
           >
             Exportar PDF
           </v-btn>
+          <v-btn
+            color="info"
+            variant="tonal"
+            class="rounded-lg font-weight-bold"
+            prepend-icon="mdi-auto-fix"
+            :disabled="!semesterCards.length"
+            title="Preencher automaticamente as eletivas com cursos elegíveis"
+            @click="autoCompleteElectives"
+          >
+            Auto completar eletivas
+          </v-btn>
           <v-btn variant="text" class="rounded-lg font-weight-bold" prepend-icon="mdi-bookmark-multiple-outline" @click="emit('change-page', 'saved_graduation_plans')">
             Previsões Salvas
           </v-btn>
@@ -690,6 +833,10 @@ function previewSemesterSchedule(sem) {
         </div>
       </v-card-text>
     </v-card>
+
+    <v-alert v-if="planPrefs.avoidScheduleConflicts" type="info" variant="tonal" density="compact" class="mb-4">
+      A checagem de conflito de horário usa a oferta de turmas do semestre atual (2026/2) e assume que ela se repete nos próximos semestres. Confirme sempre no Portal do Aluno antes de se matricular.
+    </v-alert>
 
     <v-alert v-if="staleNotice" type="info" variant="tonal" class="mb-4" closable>
       Suas disciplinas cursadas mudaram desde a última previsão. Clique em "Recalcular Previsão" para atualizar.
@@ -753,6 +900,19 @@ function previewSemesterSchedule(sem) {
             </div>
           </div>
         </v-card-title>
+        <div v-if="postponedBySemester[sem.index]?.length" class="d-flex flex-wrap ga-1 px-3 pt-2">
+          <v-chip
+            v-for="p in postponedBySemester[sem.index]"
+            :key="p.code"
+            size="x-small"
+            color="warning"
+            variant="tonal"
+            class="font-weight-bold"
+            :title="`${p.code} adiada: ${p.reason}`"
+          >
+            {{ p.code }} adiada
+          </v-chip>
+        </div>
         <v-card-text class="pa-3">
           <div v-for="(subj, idx) in sem.subjects" :key="idx" class="subject-item d-flex align-center rounded-lg pa-2">
             <v-btn icon size="x-small" variant="text" :disabled="sem.index === 0" @click="moveCourse(sem.index, idx, -1)">

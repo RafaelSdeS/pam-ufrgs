@@ -46,12 +46,28 @@ function semesterCardsFor(plan) {
   return plan.semesters.map((codes, index) => {
     const subjects = codes.map(code => resolveSubject(plan.courseCode, code))
     const totalCredits = subjects.reduce((sum, s) => sum + (s.credits || 0), 0)
-    return { index, subjects, totalCredits }
+    const difficultyCounts = { medio: 0, dificil: 0 }
+    subjects.forEach(s => {
+      if (s.isPlaceholder) return
+      const level = getCourseDifficulty(s.code)
+      if (level === 'medio' || level === 'dificil') difficultyCounts[level]++
+    })
+    return { index, subjects, totalCredits, difficultyCounts }
   })
 }
 
 function courseLabel(courseCode) {
   return curriculumService.normalizeCurriculumCode(courseCode) === 'ECP' ? 'Engenharia de Computação' : 'Ciência da Computação'
+}
+
+const PREFERENCE_TAG_LABELS = {
+  avoidScheduleConflicts: { label: 'Sem conflito de horário', icon: 'mdi-calendar-check-outline' },
+  groupByCampus: { label: 'Agrupado por câmpus', icon: 'mdi-map-marker-outline' },
+  limitHardSubjects: { label: 'Dificuldade equilibrada', icon: 'mdi-scale-balance' }
+}
+
+function activeTags(plan) {
+  return Object.entries(plan.preferenceTags || {}).filter(([, v]) => v).map(([k]) => PREFERENCE_TAG_LABELS[k]).filter(Boolean)
 }
 
 const deleteSavedPlan = (id) => {
@@ -90,6 +106,69 @@ function loadPlan(plan) {
   dataService.saveCreditLimit(plan.creditLimit)
   dataService.saveSemesterCreditLimits(plan.semesterCreditLimits || {})
   emit('change-page', 'graduation_plan')
+}
+
+function autoCompleteElectives(plan) {
+  const subjectsMap = {}
+  curriculumService.getCurriculumSubjects(plan.courseCode).forEach(s => { subjectsMap[s.code] = s })
+
+  const electiveCatalog = dataService.getElectiveCatalog(plan.courseCode)
+  const mandatoryCodes = new Set(Object.keys(subjectsMap).map(c => c.toUpperCase()))
+  const usedElectiveCodes = new Set()
+
+  let placeholdersFound = 0
+  let placeholdersReplaced = 0
+
+  const newSemesters = plan.semesters.map((semesterCodes, semIndex) => {
+    const cumulative = new Set(dataService.getCompletedCourses().map(c => c.toUpperCase()))
+    for (let i = 0; i < semIndex; i++) {
+      plan.semesters[i].forEach(code => {
+        if (!ELECTIVE_CODE_RE.test(code)) cumulative.add(code.toUpperCase())
+      })
+    }
+
+    return semesterCodes.map(code => {
+      const m = ELECTIVE_CODE_RE.exec(code)
+      if (!m) return code
+
+      placeholdersFound++
+      const requiredCredits = parseInt(m[1])
+
+      const eligible = electiveCatalog.filter(c => {
+        const codeUpper = c.code.toUpperCase()
+        if (cumulative.has(codeUpper) || usedElectiveCodes.has(codeUpper)) return false
+        if (c.credits !== requiredCredits) return false
+        const prereqs = c.prerequisites || []
+        return prereqs.every(p => {
+          const upper = (p || '').toUpperCase()
+          if (cumulative.has(upper)) return true
+          if (!subjectsMap[upper] && !mandatoryCodes.has(upper)) return true
+          return false
+        })
+      })
+
+      if (eligible.length > 0) {
+        const chosen = eligible[0]
+        usedElectiveCodes.add(chosen.code.toUpperCase())
+        cumulative.add(chosen.code.toUpperCase())
+        placeholdersReplaced++
+        return chosen.code
+      }
+      return code
+    })
+  })
+
+  if (placeholdersFound === 0) {
+    showSnackbar('Nenhuma eletiva a completar nesta previsão.', 'info')
+    return
+  }
+
+  const idx = savedPlans.value.findIndex(p => p.id === plan.id)
+  if (idx >= 0) {
+    savedPlans.value[idx].semesters = newSemesters
+    dataService.saveSavedGraduationPlans(savedPlans.value)
+    showSnackbar(`${placeholdersReplaced} de ${placeholdersFound} eletiva(s) completada(s) com sucesso!`, 'success')
+  }
 }
 
 function exportToPDF(plan) {
@@ -308,6 +387,19 @@ function exportToPDF(plan) {
                 <span>•</span>
                 <span class="font-weight-bold text-success">{{ plan.semesters.length }} semestre(s)</span>
               </div>
+              <div v-if="activeTags(plan).length" class="d-flex flex-wrap ga-1 mt-2">
+                <v-chip
+                  v-for="tag in activeTags(plan)"
+                  :key="tag.label"
+                  size="x-small"
+                  variant="tonal"
+                  color="info"
+                  :prepend-icon="tag.icon"
+                  class="font-weight-bold"
+                >
+                  {{ tag.label }}
+                </v-chip>
+              </div>
             </div>
           </div>
 
@@ -330,6 +422,17 @@ function exportToPDF(plan) {
               @click="exportToPDF(plan)"
             >
               Exportar PDF
+            </v-btn>
+            <v-btn
+              color="info"
+              variant="tonal"
+              size="small"
+              prepend-icon="mdi-auto-fix"
+              class="rounded-lg font-weight-bold"
+              title="Preencher automaticamente as eletivas com cursos elegíveis"
+              @click="autoCompleteElectives(plan)"
+            >
+              Auto completar eletivas
             </v-btn>
             <v-btn
               color="error"
@@ -361,7 +464,27 @@ function exportToPDF(plan) {
                   </v-avatar>
                   <div class="d-flex flex-column">
                     <span class="text-subtitle-2 font-weight-bold">{{ sem.index + 1 }}º Semestre</span>
-                    <v-chip size="x-small" variant="tonal" color="primary" class="font-weight-bold mt-1">{{ sem.totalCredits }} créditos</v-chip>
+                    <div class="d-flex flex-wrap ga-1 mt-1">
+                      <v-chip size="x-small" variant="tonal" color="primary" class="font-weight-bold">{{ sem.totalCredits }} créditos</v-chip>
+                      <v-chip
+                        v-if="sem.difficultyCounts.dificil > 0"
+                        size="x-small"
+                        variant="tonal"
+                        :color="getDifficultyColor('dificil')"
+                        class="font-weight-bold"
+                      >
+                        {{ sem.difficultyCounts.dificil }} {{ getDifficultyLabel('dificil') }}
+                      </v-chip>
+                      <v-chip
+                        v-if="sem.difficultyCounts.medio > 0"
+                        size="x-small"
+                        variant="tonal"
+                        :color="getDifficultyColor('medio')"
+                        class="font-weight-bold"
+                      >
+                        {{ sem.difficultyCounts.medio }} {{ getDifficultyLabel('medio') }}
+                      </v-chip>
+                    </div>
                   </div>
                 </v-card-title>
                 <v-card-text class="pa-2">
@@ -371,7 +494,18 @@ function exportToPDF(plan) {
                       <span v-else>{{ subj.code }}</span>
                     </div>
                     <div class="text-caption text-medium-emphasis mb-1">{{ subj.name }}</div>
-                    <v-chip size="x-small" color="secondary" variant="tonal" class="font-weight-bold">{{ subj.credits }}cr</v-chip>
+                    <div class="d-flex align-center flex-wrap ga-1">
+                      <v-chip size="x-small" color="secondary" variant="tonal" class="font-weight-bold">{{ subj.credits }}cr</v-chip>
+                      <v-chip
+                        v-if="!subj.isPlaceholder"
+                        size="x-small"
+                        :color="getDifficultyColor(getCourseDifficulty(subj.code))"
+                        variant="tonal"
+                        class="font-weight-bold"
+                      >
+                        {{ getDifficultyLabel(getCourseDifficulty(subj.code)) }}
+                      </v-chip>
+                    </div>
                   </div>
                 </v-card-text>
               </v-card>

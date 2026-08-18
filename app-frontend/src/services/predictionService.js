@@ -1,4 +1,6 @@
 import { calculateSubjectStatuses } from '../composables/useCurriculumStatus'
+import { getCourseDifficulty } from '../data/courseDifficulty'
+import { getCourseCampus } from '../data/courseCampus'
 
 const MAX_SEMESTERS = 40
 const ELECTIVE_BLOCK_CREDITS = 4
@@ -16,7 +18,7 @@ function makeElectivePlaceholder(credits) {
 }
 
 export const predictionService = {
-  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0, firstSemesterCreditLimit = null, electiveCreditsAlreadyPlaced = 0 }) {
+  generateGraduationPlan({ subjects = [], completedCodes = [], creditLimit = 24, electiveCreditsRemaining = 0, firstSemesterCreditLimit = null, electiveCreditsAlreadyPlaced = 0, canAdd = null, groupByCampus = false, maxHardPerSemester = null }) {
     const completedSet = new Set(completedCodes.map(c => String(c).toUpperCase()))
     let remaining = subjects.filter(s => !completedSet.has(String(s.code).toUpperCase()))
     const simulatedCompleted = [...completedCodes]
@@ -41,6 +43,7 @@ export const predictionService = {
         .sort((a, b) => (a.semester - b.semester) || ((b.credits || 0) - (a.credits || 0)))
 
       const chosen = []
+      const postponed = []
       let totalCredits = 0
 
       // Reserva um bloco de eletiva antes de encaixar obrigatórias, pra elas não ficarem
@@ -52,11 +55,45 @@ export const predictionService = {
         : 0
       const mandatoryLimit = semesterLimit - electiveReserve
 
-      for (const s of available) {
+      // Lista mutável: quando groupByCampus está ligado, a "cauda" ainda não processada é
+      // reordenada a cada aceite para priorizar o câmpus já escolhido neste semestre.
+      const pool = [...available]
+      let i = 0
+      while (i < pool.length) {
+        const s = pool[i]
         const credits = s.credits || 0
-        if (chosen.length === 0 || totalCredits + credits <= mandatoryLimit) {
-          chosen.push(s)
-          totalCredits += credits
+        // O primeiro aceito do semestre nunca é recusado (nem por limite, nem por canAdd,
+        // nem por dificuldade) - senão uma disciplina que colide com tudo travaria o plano
+        // pra sempre. Virando "primeira" em algum semestre, o plano sempre avança.
+        const isFirst = chosen.length === 0
+
+        if (!isFirst && totalCredits + credits > mandatoryLimit) { i++; continue }
+
+        if (!isFirst && maxHardPerSemester != null && getCourseDifficulty(s.code) === 'dificil') {
+          const hardCount = chosen.filter(c => getCourseDifficulty(c.code) === 'dificil').length
+          if (hardCount >= maxHardPerSemester) { i++; continue }
+        }
+
+        if (!isFirst && canAdd) {
+          const reason = canAdd(chosen, s)
+          if (reason) {
+            postponed.push({ code: s.code, reason })
+            i++
+            continue
+          }
+        }
+
+        chosen.push(s)
+        totalCredits += credits
+        i++
+
+        if (groupByCampus) {
+          const campus = getCourseCampus(s.code)
+          if (campus) {
+            const tail = pool.slice(i)
+            tail.sort((a, b) => (getCourseCampus(a.code) === campus ? 0 : 1) - (getCourseCampus(b.code) === campus ? 0 : 1))
+            pool.splice(i, tail.length, ...tail)
+          }
         }
       }
 
@@ -77,7 +114,7 @@ export const predictionService = {
 
       if (chosen.length === 0) break
 
-      semesters.push({ subjects: chosen, totalCredits })
+      semesters.push({ subjects: chosen, totalCredits, postponed })
     }
 
     return { semesters, unscheduled: remaining }

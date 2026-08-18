@@ -1,4 +1,5 @@
 import { fuzzyMatchName } from '../utils/searchUtils'
+import { getCampusFromRoom } from '../data/courseCampus'
 
 export const scheduleGeneratorService = {
   normalizeDay(dayStr) {
@@ -94,7 +95,8 @@ export const scheduleGeneratorService = {
           t._precomputed_slots = (t.schedules || []).map(s => ({
             dayNorm: this.normalizeDay(s.day_of_week),
             start: this.timeToMinutes(s.start_time),
-            end: this.timeToMinutes(s.end_time)
+            end: this.timeToMinutes(s.end_time),
+            campus: getCampusFromRoom(s.room)
           }))
         }
         if (!this.sectionViolatesHardBlock(t, hardBlocks)) {
@@ -187,7 +189,7 @@ export const scheduleGeneratorService = {
         const slots = section._precomputed_slots || []
         slots.forEach(s => {
           if (!daySlots[s.dayNorm]) daySlots[s.dayNorm] = []
-          daySlots[s.dayNorm].push({ start: s.start, end: s.end })
+          daySlots[s.dayNorm].push({ start: s.start, end: s.end, campus: s.campus })
 
           preferredWindows.forEach(pw => {
             const pwDayNorm = this.normalizeDay(pw.day_of_week || pw.dia)
@@ -205,17 +207,20 @@ export const scheduleGeneratorService = {
 
       const activeDays = Object.keys(daySlots).length
       let totalGapMinutes = 0
+      let campusSwitches = 0
 
       Object.values(daySlots).forEach(slots => {
         slots.sort((a, b) => a.start - b.start)
         for (let i = 0; i < slots.length - 1; i++) {
           const gap = slots[i + 1].start - slots[i].end
           if (gap > 0) totalGapMinutes += gap
+          if (slots[i].campus && slots[i + 1].campus && slots[i].campus !== slots[i + 1].campus) campusSwitches++
         }
       })
 
       score -= (Math.max(0, activeDays - 1) * 0.35)
       score -= (totalGapMinutes / 60) * 0.08
+      score -= campusSwitches * 0.5
 
       return {
         score: parseFloat(score.toFixed(2)),
