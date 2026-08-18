@@ -24,7 +24,7 @@ const staleNotice = ref(false)
 const postponedBySemester = ref([]) // paralelo a semesters.value - só preenchido pelo próprio recálculo, não persistido
 const frozenCourses = ref({}) // mapa { courseCode: semesterIndex } para cursos congelados a semestres
 
-const planPrefs = reactive({ avoidScheduleConflicts: false, groupByCampus: false, limitHardSubjects: false })
+const planPrefs = reactive({ avoidScheduleConflicts: true, groupByCampus: false, limitHardSubjects: false })
 const MAX_HARD_PER_SEMESTER = 2 // ponytail: teto fixo, virar configurável se pedirem ajuste fino
 
 function loadPlanPrefs() {
@@ -270,7 +270,7 @@ function checkSemesterSchedule(sem) {
     const offeredCodes = new Set(turmas.map(t => (t.course_code || t.course_id || '').toUpperCase()))
     const missing = courses.filter(c => !offeredCodes.has(c.code.toUpperCase()))
     if (missing.length > 0) {
-      scheduleChecks[sem.index] = { status: 'unavailable', detail: `Sem turma oferecida no semestre atual: ${missing.map(c => c.code).join(', ')}.` }
+      scheduleChecks[sem.index] = { status: 'unavailable', detail: `Ainda sem turma cadastrada para: ${missing.map(c => c.code).join(', ')}. Normal para semestres futuros - não é um conflito.` }
     } else {
       const results = scheduleGeneratorService.generateRankedSchedules({
         selectedCourses: courses,
@@ -290,14 +290,16 @@ function scheduleCheckLabel(semIndex) {
   const check = scheduleChecks[semIndex]
   if (!check) return 'Verificar disponibilidade de horário'
   if (check.status === 'ok') return 'Compatível com as turmas atuais'
-  if (check.status === 'unavailable') return 'Disciplina sem turma oferecida'
+  if (check.status === 'unavailable') return 'Sem turma cadastrada ainda'
   return 'Conflito de horário nas turmas atuais'
 }
 
 function scheduleCheckColor(semIndex) {
   const check = scheduleChecks[semIndex]
   if (!check) return 'secondary'
-  return check.status === 'ok' ? 'success' : 'error'
+  if (check.status === 'ok') return 'success'
+  if (check.status === 'unavailable') return 'secondary'
+  return 'error'
 }
 
 function recalculate() {
@@ -385,9 +387,19 @@ function autoCompleteElectives() {
   const usedElectiveCodes = new Set()
   let placeholdersFound = 0
   let placeholdersReplaced = 0
+  let placeholdersBlockedBySchedule = 0
+
+  const canAdd = planPrefs.avoidScheduleConflicts ? makeCanAdd() : null
 
   const newSemesters = semesters.value.map((semesterCodes, semIndex) => {
     const cumulative = cumulativeCompletedBefore(semIndex)
+    // Disciplinas já resolvidas deste semestre (obrigatórias + eletivas já preenchidas nesta
+    // mesma passada) - usado como base pro canAdd checar se a próxima eletiva ainda cabe junto.
+    const chosenThisSemester = semesterCodes
+      .filter(code => !ELECTIVE_CODE_RE.test(code))
+      .map(code => resolveSubject(code))
+      .filter(Boolean)
+
     return semesterCodes.map(code => {
       const m = ELECTIVE_CODE_RE.exec(code)
       if (!m) return code
@@ -408,13 +420,16 @@ function autoCompleteElectives() {
         })
       })
 
-      if (eligible.length > 0) {
-        const chosen = eligible[0]
+      const chosen = canAdd ? eligible.find(c => !canAdd(chosenThisSemester, c)) : eligible[0]
+
+      if (chosen) {
         usedElectiveCodes.add(chosen.code.toUpperCase())
         cumulative.add(chosen.code.toUpperCase())
+        chosenThisSemester.push(chosen)
         placeholdersReplaced++
         return chosen.code
       }
+      if (canAdd && eligible.length > 0) placeholdersBlockedBySchedule++
       return code
     })
   })
@@ -427,7 +442,10 @@ function autoCompleteElectives() {
   semesters.value = newSemesters
   persist()
   clearScheduleChecks()
-  showSnackbar(`${placeholdersReplaced} de ${placeholdersFound} eletiva(s) completada(s) com sucesso!`, 'success')
+  const scheduleNote = placeholdersBlockedBySchedule > 0
+    ? ` ${placeholdersBlockedBySchedule} ficaram sem opção compatível com as turmas atuais.`
+    : ''
+  showSnackbar(`${placeholdersReplaced} de ${placeholdersFound} eletiva(s) completada(s) com sucesso!${scheduleNote}`, 'success')
 }
 
 function loadOrGenerate() {

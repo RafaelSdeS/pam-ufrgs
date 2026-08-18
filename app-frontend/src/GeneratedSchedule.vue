@@ -35,6 +35,7 @@ const filterInterCampus = ref(true)
 const loading = ref(false)
 const error = ref('')
 const conflictReasons = ref([])
+const unavailableReasons = ref([])
 
 const extractCampus = (roomStr) => {
   if (!roomStr || typeof roomStr !== 'string') return 'Não Informado'
@@ -302,6 +303,7 @@ const loadSchedules = async () => {
   loading.value = true
   error.value = ''
   conflictReasons.value = []
+  unavailableReasons.value = []
   compareSelection.value = []
 
   try {
@@ -335,7 +337,8 @@ const loadSchedules = async () => {
     })
     if (raw.length === 0) {
       const diag = scheduleGeneratorService.diagnoseConflicts(selectedCourses, turmas, restrictions)
-      conflictReasons.value = diag.reasons
+      conflictReasons.value = diag.conflictReasons
+      unavailableReasons.value = diag.unavailableReasons
     }
     allScheduleOptions.value = raw.map((option, gi) => {
       const flatItems = []
@@ -1294,11 +1297,11 @@ onMounted(() => {
 
         <v-progress-linear v-if="loading" indeterminate color="primary" class="mb-4 rounded-lg" />
 
-        <div v-if="!loading && allScheduleOptions.length === 0 && !error">
+        <div v-if="!loading && allScheduleOptions.length === 0 && !error && conflictReasons.length > 0">
           <v-alert type="warning" variant="tonal" icon="mdi-alert-circle-outline" class="rounded-xl pa-5 border-thin">
             <div class="text-h6 font-weight-bold mb-2">Não foi possível gerar grades de horários</div>
             <div class="text-body-1 mb-3">
-              Encontramos conflitos ou indisponibilidades que impedem a combinação das disciplinas selecionadas:
+              Encontramos conflitos que impedem a combinação das disciplinas selecionadas:
             </div>
             <ul class="pl-5 mb-4">
               <li v-for="(reason, rIdx) in conflictReasons" :key="rIdx" class="mb-3 font-weight-medium text-body-1" style="white-space: pre-line;">
@@ -1307,6 +1310,23 @@ onMounted(() => {
             </ul>
             <v-btn color="primary" variant="flat" prepend-icon="mdi-arrow-left" class="text-none font-weight-bold rounded-lg" @click="$emit('back')">
               Voltar e Ajustar Disciplinas
+            </v-btn>
+          </v-alert>
+        </div>
+
+        <div v-else-if="!loading && allScheduleOptions.length === 0 && !error && unavailableReasons.length > 0">
+          <v-alert type="info" variant="tonal" icon="mdi-calendar-remove-outline" class="rounded-xl pa-5 border-thin">
+            <div class="text-h6 font-weight-bold mb-2">Sem turma cadastrada para este período ainda</div>
+            <div class="text-body-1 mb-3">
+              Normal para semestres futuros - só existem turmas cadastradas para o período atual (2026/2). Não é um conflito de horário.
+            </div>
+            <ul class="pl-5 mb-4">
+              <li v-for="(reason, rIdx) in unavailableReasons" :key="rIdx" class="mb-2 text-body-1" style="white-space: pre-line;">
+                {{ reason }}
+              </li>
+            </ul>
+            <v-btn color="primary" variant="flat" prepend-icon="mdi-arrow-left" class="text-none font-weight-bold rounded-lg" @click="$emit('back')">
+              Voltar
             </v-btn>
           </v-alert>
         </div>

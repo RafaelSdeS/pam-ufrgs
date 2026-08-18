@@ -128,8 +128,11 @@ describe('diagnoseConflicts', () => {
   })
 
   it('reports when a course has no turmas at all', () => {
-    const { reasons } = sgs.diagnoseConflicts([{ code: 'INF01202', name: 'Algoritmos' }], [])
+    const { reasons, unavailableReasons, conflictReasons } = sgs.diagnoseConflicts([{ code: 'INF01202', name: 'Algoritmos' }], [])
     expect(reasons[0]).toMatch(/não possui turmas/)
+    // Falta de oferta não é um conflito real - não deve entrar no balde de conflitos.
+    expect(unavailableReasons).toHaveLength(1)
+    expect(conflictReasons).toHaveLength(0)
   })
 
   it('reports a direct conflict between two courses whose only sections overlap', () => {
@@ -137,10 +140,12 @@ describe('diagnoseConflicts', () => {
       section('INF01202', 'A', [sched('Segunda-feira', '08:00', '10:00')]),
       section('MAT01353', 'B', [sched('Segunda-feira', '09:00', '11:00')])
     ]
-    const { reasons } = sgs.diagnoseConflicts(
+    const { reasons, unavailableReasons, conflictReasons } = sgs.diagnoseConflicts(
       [{ code: 'INF01202', name: 'Algoritmos' }, { code: 'MAT01353', name: 'Cálculo I' }],
       turmas
     )
     expect(reasons.some(r => r.includes('Coincidência direta'))).toBe(true)
+    expect(conflictReasons.some(r => r.includes('Coincidência direta'))).toBe(true)
+    expect(unavailableReasons).toHaveLength(0)
   })
 })

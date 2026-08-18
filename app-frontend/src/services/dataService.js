@@ -32,7 +32,7 @@ const STORAGE_KEYS = {
   FROZEN_COURSES: 'ufrgs_pma_frozen_courses'
 }
 
-const DEFAULT_PLAN_PREFERENCES = { avoidScheduleConflicts: false, groupByCampus: false, limitHardSubjects: false }
+const DEFAULT_PLAN_PREFERENCES = { avoidScheduleConflicts: true, groupByCampus: false, limitHardSubjects: false }
 
 export const dataService = {
   _getScopedKey(baseKey, courseCode = null) {

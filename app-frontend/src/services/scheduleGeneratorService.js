@@ -289,6 +289,11 @@ export const scheduleGeneratorService = {
     }
 
     const reasons = []
+    // unavailableReasons: disciplina simplesmente não tem turma cadastrada neste período - normal
+    // pra semestres futuros (só existe dado de turma do período corrente), não é um conflito real.
+    // conflictReasons: turmas existem mas colidem entre si ou com bloqueios - problema de verdade.
+    const unavailableReasons = []
+    const conflictReasons = []
     const unschedulableSubsets = []
 
     const isSupersetOfKnownUnschedulable = (codesSet) => {
@@ -299,6 +304,7 @@ export const scheduleGeneratorService = {
       const secs = sectionsByCourse[code] || []
       if (secs.length === 0) {
         reasons.push(`A disciplina "${c.name || code}" não possui turmas oferecidas para o seu curso neste semestre.`)
+        unavailableReasons.push(`A disciplina "${c.name || code}" não possui turmas oferecidas para o seu curso neste semestre.`)
         unschedulableSubsets.push([code])
       } else if ((validSectionsByCourse[code] || []).length === 0) {
         const uniqueSecSlots = new Set()
@@ -328,6 +334,7 @@ export const scheduleGeneratorService = {
           msg += `\n• Turmas da disciplina ocorrem em: ${secSlotsStr || 'horários bloqueados'}\n• Colidem diretamente com os bloqueios em: ${blocksStr}`
         }
         reasons.push(msg)
+        conflictReasons.push(msg)
         unschedulableSubsets.push([code])
       }
     })
@@ -383,6 +390,7 @@ export const scheduleGeneratorService = {
               msg += `\n• Coincidência obrigatória nos horários: ${overlapStr}`
             }
             reasons.push(msg)
+            conflictReasons.push(msg)
             unschedulableSubsets.push([codeA, codeB])
           }
         }
@@ -401,7 +409,9 @@ export const scheduleGeneratorService = {
           })
           if (res.length === 0) {
             const names = currentSubset.map(c => `"${c.name || c.code}"`).join(', ')
-            reasons.push(`Incompatibilidade indireta entre ${size} disciplinas: O conjunto formado por ${names} não pode ser cursado junto pois a escolha da turma de uma disciplina bloqueia os horários das únicas turmas restantes das outras. Ao remover qualquer uma dessas disciplinas, torna-se possível gerar a grade.`)
+            const indirectMsg = `Incompatibilidade indireta entre ${size} disciplinas: O conjunto formado por ${names} não pode ser cursado junto pois a escolha da turma de uma disciplina bloqueia os horários das únicas turmas restantes das outras. Ao remover qualquer uma dessas disciplinas, torna-se possível gerar a grade.`
+            reasons.push(indirectMsg)
+            conflictReasons.push(indirectMsg)
             unschedulableSubsets.push(Array.from(codesSet))
           }
         }
@@ -420,9 +430,11 @@ export const scheduleGeneratorService = {
     }
 
     if (reasons.length === 0) {
-      reasons.push('Não foi possível gerar uma grade sem colisões combinando todas as disciplinas selecionadas e os bloqueios de horário. Tente remover ao menos uma disciplina ou liberar mais horários no seu calendário.')
+      const fallbackMsg = 'Não foi possível gerar uma grade sem colisões combinando todas as disciplinas selecionadas e os bloqueios de horário. Tente remover ao menos uma disciplina ou liberar mais horários no seu calendário.'
+      reasons.push(fallbackMsg)
+      conflictReasons.push(fallbackMsg)
     }
 
-    return { reasons }
+    return { reasons, unavailableReasons, conflictReasons }
   }
 }
