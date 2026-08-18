@@ -128,10 +128,24 @@ describe('diagnoseConflicts', () => {
   })
 
   it('reports when a course has no turmas at all', () => {
-    const { reasons, unavailableReasons, conflictReasons } = sgs.diagnoseConflicts([{ code: 'INF01202', name: 'Algoritmos' }], [])
+    const { reasons, unavailableReasons, restrictedReasons, conflictReasons } = sgs.diagnoseConflicts([{ code: 'INF01202', name: 'Algoritmos' }], [])
     expect(reasons[0]).toMatch(/não possui turmas/)
     // Falta de oferta não é um conflito real - não deve entrar no balde de conflitos.
     expect(unavailableReasons).toHaveLength(1)
+    expect(restrictedReasons).toHaveLength(0)
+    expect(conflictReasons).toHaveLength(0)
+  })
+
+  it('reports when a course only has a turma registered for the other curriculum', () => {
+    const { unavailableReasons, restrictedReasons, conflictReasons } = sgs.diagnoseConflicts(
+      [{ code: 'INF01092', name: 'Aprendizado Profundo' }],
+      [],
+      [],
+      new Set(['INF01092'])
+    )
+    expect(restrictedReasons).toHaveLength(1)
+    expect(restrictedReasons[0]).toMatch(/outro currículo/)
+    expect(unavailableReasons).toHaveLength(0)
     expect(conflictReasons).toHaveLength(0)
   })
 

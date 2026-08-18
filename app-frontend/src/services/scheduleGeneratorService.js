@@ -237,9 +237,9 @@ export const scheduleGeneratorService = {
     return scoredOptions.slice(0, limit)
   },
 
-  diagnoseConflicts(selectedCourses = [], turmas = [], restrictions = []) {
+  diagnoseConflicts(selectedCourses = [], turmas = [], restrictions = [], otherCurriculumCodes = new Set()) {
     if (!selectedCourses || selectedCourses.length === 0) {
-      return { reasons: ['Nenhuma disciplina foi selecionada.'] }
+      return { reasons: ['Nenhuma disciplina foi selecionada.'], unavailableReasons: [], conflictReasons: [], restrictedReasons: [] }
     }
 
     const hardBlocks = (restrictions || []).filter(r => r.restriction_type === 'hard_block' || !r.restriction_type)
@@ -289,10 +289,13 @@ export const scheduleGeneratorService = {
     }
 
     const reasons = []
-    // unavailableReasons: disciplina simplesmente não tem turma cadastrada neste período - normal
-    // pra semestres futuros (só existe dado de turma do período corrente), não é um conflito real.
+    // unavailableReasons: disciplina simplesmente não tem turma cadastrada em nenhum currículo
+    // neste período - normal pra semestres futuros, não é um conflito real.
+    // restrictedReasons: a turma existe neste período, mas só foi importada/aberta pro OUTRO
+    // currículo - não é "sem dado", é uma restrição real que vale a pena o aluno conferir.
     // conflictReasons: turmas existem mas colidem entre si ou com bloqueios - problema de verdade.
     const unavailableReasons = []
+    const restrictedReasons = []
     const conflictReasons = []
     const unschedulableSubsets = []
 
@@ -303,8 +306,15 @@ export const scheduleGeneratorService = {
       const code = c.code || c.id
       const secs = sectionsByCourse[code] || []
       if (secs.length === 0) {
-        reasons.push(`A disciplina "${c.name || code}" não possui turmas oferecidas para o seu curso neste semestre.`)
-        unavailableReasons.push(`A disciplina "${c.name || code}" não possui turmas oferecidas para o seu curso neste semestre.`)
+        if (otherCurriculumCodes.has(String(code).toUpperCase())) {
+          const msg = `A disciplina "${c.name || code}" tem turma neste semestre, mas só aberta para o outro currículo. Confirme no Portal do Aluno se abre vaga para o seu currículo também.`
+          reasons.push(msg)
+          restrictedReasons.push(msg)
+        } else {
+          const msg = `A disciplina "${c.name || code}" não possui turmas oferecidas para o seu curso neste semestre.`
+          reasons.push(msg)
+          unavailableReasons.push(msg)
+        }
         unschedulableSubsets.push([code])
       } else if ((validSectionsByCourse[code] || []).length === 0) {
         const uniqueSecSlots = new Set()
@@ -435,6 +445,6 @@ export const scheduleGeneratorService = {
       conflictReasons.push(fallbackMsg)
     }
 
-    return { reasons, unavailableReasons, conflictReasons }
+    return { reasons, unavailableReasons, restrictedReasons, conflictReasons }
   }
 }

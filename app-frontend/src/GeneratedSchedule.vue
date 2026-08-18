@@ -36,6 +36,7 @@ const loading = ref(false)
 const error = ref('')
 const conflictReasons = ref([])
 const unavailableReasons = ref([])
+const restrictedReasons = ref([])
 
 const extractCampus = (roomStr) => {
   if (!roomStr || typeof roomStr !== 'string') return 'Não Informado'
@@ -304,6 +305,7 @@ const loadSchedules = async () => {
   error.value = ''
   conflictReasons.value = []
   unavailableReasons.value = []
+  restrictedReasons.value = []
   compareSelection.value = []
 
   try {
@@ -336,9 +338,19 @@ const loadSchedules = async () => {
       limit: 200
     })
     if (raw.length === 0) {
-      const diag = scheduleGeneratorService.diagnoseConflicts(selectedCourses, turmas, restrictions)
+      // Códigos com turma neste período só do OUTRO currículo - separa "sem turma cadastrada em
+      // lugar nenhum" (normal pra semestre futuro) de "turma existe mas restrita ao outro
+      // currículo" (situação real do período atual, vale conferir no Portal do Aluno).
+      const otherCourseCode = curriculumService.normalizeCurriculumCode(selectedCourseCode) === 'ECP' ? 'CIC' : 'ECP'
+      const otherCurriculumCodes = new Set(
+        dataService.getTurmas(otherCourseCode)
+          .filter(t => t.semester === '2026/2')
+          .map(t => (t.course_code || t.course_id || '').toUpperCase())
+      )
+      const diag = scheduleGeneratorService.diagnoseConflicts(selectedCourses, turmas, restrictions, otherCurriculumCodes)
       conflictReasons.value = diag.conflictReasons
       unavailableReasons.value = diag.unavailableReasons
+      restrictedReasons.value = diag.restrictedReasons
     }
     allScheduleOptions.value = raw.map((option, gi) => {
       const flatItems = []
@@ -1314,21 +1326,32 @@ onMounted(() => {
           </v-alert>
         </div>
 
-        <div v-else-if="!loading && allScheduleOptions.length === 0 && !error && unavailableReasons.length > 0">
-          <v-alert type="info" variant="tonal" icon="mdi-calendar-remove-outline" class="rounded-xl pa-5 border-thin">
+        <div v-else-if="!loading && allScheduleOptions.length === 0 && !error && (unavailableReasons.length > 0 || restrictedReasons.length > 0)">
+          <v-alert v-if="unavailableReasons.length > 0" type="info" variant="tonal" icon="mdi-calendar-remove-outline" class="rounded-xl pa-5 border-thin mb-4">
             <div class="text-h6 font-weight-bold mb-2">Sem turma cadastrada para este período ainda</div>
             <div class="text-body-1 mb-3">
               Normal para semestres futuros - só existem turmas cadastradas para o período atual (2026/2). Não é um conflito de horário.
             </div>
-            <ul class="pl-5 mb-4">
+            <ul class="pl-5" :class="restrictedReasons.length > 0 ? '' : 'mb-4'">
               <li v-for="(reason, rIdx) in unavailableReasons" :key="rIdx" class="mb-2 text-body-1" style="white-space: pre-line;">
                 {{ reason }}
               </li>
             </ul>
-            <v-btn color="primary" variant="flat" prepend-icon="mdi-arrow-left" class="text-none font-weight-bold rounded-lg" @click="$emit('back')">
-              Voltar
-            </v-btn>
           </v-alert>
+          <v-alert v-if="restrictedReasons.length > 0" type="warning" variant="tonal" icon="mdi-account-alert-outline" class="rounded-xl pa-5 border-thin">
+            <div class="text-h6 font-weight-bold mb-2">Turma existe, mas restrita a outro currículo</div>
+            <div class="text-body-1 mb-3">
+              Essas disciplinas têm turma aberta neste período, mas só para o outro currículo. Confirme no Portal do Aluno se também há vaga para o seu currículo:
+            </div>
+            <ul class="pl-5 mb-4">
+              <li v-for="(reason, rIdx) in restrictedReasons" :key="rIdx" class="mb-2 text-body-1" style="white-space: pre-line;">
+                {{ reason }}
+              </li>
+            </ul>
+          </v-alert>
+          <v-btn color="primary" variant="flat" prepend-icon="mdi-arrow-left" class="text-none font-weight-bold rounded-lg mt-2" @click="$emit('back')">
+            Voltar
+          </v-btn>
         </div>
 
         <div v-else-if="!loading && allScheduleOptions.length > 0 && scheduleOptions.length === 0 && !error">

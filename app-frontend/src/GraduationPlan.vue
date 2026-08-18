@@ -221,6 +221,19 @@ function getTurmasForCodes(codes) {
   })
 }
 
+// Códigos com turma cadastrada neste período só pro OUTRO currículo (importador guarda turmas
+// separadas por curso-fonte do HTML - ver importar_turmas_data.py) - usado só pra diferenciar,
+// na mensagem, "sem dado nenhum" (normal pra semestre futuro) de "turma existe mas restrita ao
+// outro currículo neste período" (vale a pena o aluno conferir no Portal do Aluno).
+function getOtherCurriculumOfferedCodes() {
+  const otherCourse = curriculumService.normalizeCurriculumCode(selectedCourse.value) === 'ECP' ? 'CIC' : 'ECP'
+  return new Set(
+    dataService.getTurmas(otherCourse)
+      .filter(t => t.semester === '2026/2')
+      .map(t => (t.course_code || t.course_id || '').toUpperCase())
+  )
+}
+
 // Predicado injetado no predictionService pra ele adiar disciplinas que colidem entre si nas
 // turmas de hoje. Memoiza por combinação de códigos e tem orçamento próprio de tempo -
 // generateRankedSchedules já tem budget de 1.5s por chamada, mas um recálculo de plano faz
@@ -270,7 +283,17 @@ function checkSemesterSchedule(sem) {
     const offeredCodes = new Set(turmas.map(t => (t.course_code || t.course_id || '').toUpperCase()))
     const missing = courses.filter(c => !offeredCodes.has(c.code.toUpperCase()))
     if (missing.length > 0) {
-      scheduleChecks[sem.index] = { status: 'unavailable', detail: `Ainda sem turma cadastrada para: ${missing.map(c => c.code).join(', ')}. Normal para semestres futuros - não é um conflito.` }
+      const otherOfferedCodes = getOtherCurriculumOfferedCodes()
+      const restricted = missing.filter(c => otherOfferedCodes.has(c.code.toUpperCase()))
+      const trulyMissing = missing.filter(c => !otherOfferedCodes.has(c.code.toUpperCase()))
+      const parts = []
+      if (trulyMissing.length > 0) {
+        parts.push(`Ainda sem turma cadastrada para: ${trulyMissing.map(c => c.code).join(', ')}. Normal para semestres futuros - não é um conflito.`)
+      }
+      if (restricted.length > 0) {
+        parts.push(`Tem turma neste período, mas só aberta para o outro currículo: ${restricted.map(c => c.code).join(', ')}. Confirme no Portal do Aluno se abre vaga para o seu currículo também.`)
+      }
+      scheduleChecks[sem.index] = { status: restricted.length > 0 ? 'restricted' : 'unavailable', detail: parts.join(' ') }
     } else {
       const results = scheduleGeneratorService.generateRankedSchedules({
         selectedCourses: courses,
@@ -291,6 +314,7 @@ function scheduleCheckLabel(semIndex) {
   if (!check) return 'Verificar disponibilidade de horário'
   if (check.status === 'ok') return 'Compatível com as turmas atuais'
   if (check.status === 'unavailable') return 'Sem turma cadastrada ainda'
+  if (check.status === 'restricted') return 'Turma restrita a outro currículo'
   return 'Conflito de horário nas turmas atuais'
 }
 
@@ -299,6 +323,7 @@ function scheduleCheckColor(semIndex) {
   if (!check) return 'secondary'
   if (check.status === 'ok') return 'success'
   if (check.status === 'unavailable') return 'secondary'
+  if (check.status === 'restricted') return 'warning'
   return 'error'
 }
 
@@ -549,27 +574,47 @@ function saveCurrentPlan() {
 
 function exportToPDF() {
   const courseLabel = selectedCourse.value === 'ecp' ? 'Engenharia de Computação' : 'Ciência da Computação'
+  const exportDate = new Date().toLocaleDateString('pt-BR', { year: 'numeric', month: 'long', day: 'numeric' })
 
-  const semestersHtml = semesterCards.value.map(sem => `
-    <div class="semester-block">
-      <div class="semester-title">${sem.index + 1}º Semestre <span class="credits-badge">${sem.totalCredits}/${effectiveLimit(sem.index)} créditos</span></div>
-      <table class="summary-table">
-        <thead>
-          <tr><th>Código</th><th>Disciplina</th><th>Créditos</th><th>Dificuldade</th></tr>
-        </thead>
-        <tbody>
-          ${sem.subjects.map(s => `
+  const semestersHtml = semesterCards.value.map(sem => {
+    const hardSubjects = sem.subjects.filter(s => !s.isPlaceholder && (getCourseDifficulty(s.code) === 'dificil')).length
+    const mediumSubjects = sem.subjects.filter(s => !s.isPlaceholder && (getCourseDifficulty(s.code) === 'medio')).length
+
+    return `
+      <div class="semester-block">
+        <div class="semester-header">
+          <div class="semester-number">${sem.index + 1}º Semestre</div>
+          <div class="semester-info">
+            <span class="credits-badge">${sem.totalCredits}/${effectiveLimit(sem.index)} cr</span>
+            ${hardSubjects > 0 ? `<span class="difficulty-badge hard">${hardSubjects} difícil</span>` : ''}
+            ${mediumSubjects > 0 ? `<span class="difficulty-badge medium">${mediumSubjects} médio</span>` : ''}
+          </div>
+        </div>
+        <table class="summary-table">
+          <thead>
             <tr>
-              <td>${s.isPlaceholder ? '—' : escapeHtml(s.code)}</td>
-              <td>${escapeHtml(s.name)}</td>
-              <td>${s.credits}cr</td>
-              <td>${s.isPlaceholder ? '—' : escapeHtml(getDifficultyLabel(getCourseDifficulty(s.code)))}</td>
+              <th class="col-code">Código</th>
+              <th class="col-name">Disciplina</th>
+              <th class="col-credits">Cr</th>
+              <th class="col-difficulty">Dif.</th>
+              ${selectedCourse.value === 'cic' ? '<th class="col-campus">Campus</th>' : ''}
             </tr>
-          `).join('')}
-        </tbody>
-      </table>
-    </div>
-  `).join('')
+          </thead>
+          <tbody>
+            ${sem.subjects.map(s => `
+              <tr>
+                <td class="col-code">${s.isPlaceholder ? '—' : escapeHtml(s.code)}</td>
+                <td class="col-name">${escapeHtml(s.name)}</td>
+                <td class="col-credits">${s.credits}</td>
+                <td class="col-difficulty">${s.isPlaceholder ? '—' : escapeHtml(getDifficultyLabel(getCourseDifficulty(s.code))).charAt(0)}</td>
+                ${selectedCourse.value === 'cic' ? `<td class="col-campus">${s.isPlaceholder ? '—' : (getCourseCampus(s.code) || '—')}</td>` : ''}
+              </tr>
+            `).join('')}
+          </tbody>
+        </table>
+      </div>
+    `
+  }).join('')
 
   const htmlContent = `
     <!DOCTYPE html>
@@ -578,81 +623,172 @@ function exportToPDF() {
       <meta charset="utf-8">
       <title>Previsão de Formatura - ${courseLabel}</title>
       <style>
-        @page { size: A4 portrait; margin: 12mm; }
+        @page { size: A4 portrait; margin: 10mm; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-          font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-          color: #333;
-          margin: 0;
+          font-family: 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+          color: #1a1a1a;
           background-color: #fff;
           -webkit-print-color-adjust: exact;
           print-color-adjust: exact;
+          line-height: 1.4;
         }
-        .header-bar {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 14px;
-          border-bottom: 2px solid #1976d2;
-          padding-bottom: 8px;
+        .header-container {
+          border-bottom: 3px solid #1976d2;
+          padding-bottom: 10px;
+          margin-bottom: 16px;
         }
-        .header-bar h1 { font-size: 20px; color: #1976d2; margin: 0; }
-        .header-bar .subtitle { font-size: 12px; color: #666; margin-top: 2px; }
+        .header-title {
+          font-size: 22px;
+          font-weight: 700;
+          color: #1976d2;
+          margin-bottom: 2px;
+        }
+        .header-subtitle {
+          font-size: 12px;
+          color: #666;
+          margin-bottom: 4px;
+        }
+        .header-date {
+          font-size: 10px;
+          color: #999;
+        }
         .print-btn {
           padding: 8px 16px;
           background-color: #1976d2;
           color: #fff;
           border: none;
           border-radius: 4px;
-          font-weight: bold;
+          font-weight: 600;
           cursor: pointer;
+          font-size: 12px;
         }
-        .semester-block { break-inside: avoid; margin-bottom: 16px; }
-        .semester-title {
-          font-size: 13px;
-          font-weight: bold;
-          color: #1976d2;
-          margin-bottom: 4px;
+        .semester-block {
+          break-inside: avoid;
+          margin-bottom: 14px;
+          page-break-inside: avoid;
+        }
+        .semester-header {
+          background-color: #f5f5f5;
+          border-left: 4px solid #1976d2;
+          padding: 8px 10px;
+          margin-bottom: 6px;
           display: flex;
+          justify-content: space-between;
           align-items: center;
-          gap: 8px;
+        }
+        .semester-number {
+          font-size: 13px;
+          font-weight: 700;
+          color: #1976d2;
+        }
+        .semester-info {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+          justify-content: flex-end;
         }
         .credits-badge {
+          background-color: #e3f2fd;
+          color: #0d47a1;
+          padding: 2px 6px;
+          border-radius: 3px;
           font-size: 10px;
-          font-weight: bold;
-          background-color: #e3f2fd !important;
-          color: #0d47a1 !important;
-          border-radius: 10px;
-          padding: 2px 8px;
+          font-weight: 600;
         }
-        .summary-table { width: 100%; border-collapse: collapse; }
-        .summary-table th, .summary-table td {
-          border: 1px solid #e0e0e0;
-          padding: 5px 8px;
+        .difficulty-badge {
+          padding: 2px 6px;
+          border-radius: 3px;
+          font-size: 9px;
+          font-weight: 600;
+        }
+        .difficulty-badge.hard {
+          background-color: #ffebee;
+          color: #c62828;
+        }
+        .difficulty-badge.medium {
+          background-color: #fff3e0;
+          color: #e65100;
+        }
+        .summary-table {
+          width: 100%;
+          border-collapse: collapse;
+          font-size: 10px;
+        }
+        .summary-table thead tr {
+          background-color: #f9f9f9;
+          border-bottom: 2px solid #ddd;
+        }
+        .summary-table th {
+          padding: 6px 5px;
           text-align: left;
-          font-size: 11px;
+          font-weight: 600;
+          color: #333;
+          border-right: 1px solid #eee;
         }
-        .summary-table th { background-color: #f5f5f5 !important; font-weight: bold; }
-        .footer-note { margin-top: 8px; font-size: 11px; color: #444; }
+        .summary-table th:last-child {
+          border-right: none;
+        }
+        .summary-table tbody tr {
+          border-bottom: 1px solid #f0f0f0;
+        }
+        .summary-table tbody tr:nth-child(odd) {
+          background-color: #fafafa;
+        }
+        .summary-table td {
+          padding: 5px;
+          border-right: 1px solid #eee;
+        }
+        .summary-table td:last-child {
+          border-right: none;
+        }
+        .col-code { width: 10%; font-weight: 600; }
+        .col-name { width: ${selectedCourse.value === 'cic' ? '50' : '60'}%; }
+        .col-credits { width: 6%; text-align: center; }
+        .col-difficulty { width: 8%; text-align: center; }
+        .col-campus { width: 18%; text-align: center; }
+        .summary-section {
+          background-color: #f5f5f5;
+          border: 1px solid #ddd;
+          border-radius: 4px;
+          padding: 10px;
+          margin-top: 12px;
+          font-size: 10px;
+          line-height: 1.6;
+        }
+        .summary-section strong {
+          color: #1976d2;
+          display: block;
+          margin-bottom: 4px;
+        }
+        .summary-item {
+          margin-bottom: 3px;
+          padding-left: 10px;
+        }
         @media print {
           body { padding: 0; }
-          .no-print { display: none; }
+          .no-print { display: none !important; }
         }
       </style>
     </head>
     <body>
-      <div class="header-bar">
-        <div>
-          <h1>Previsão de Formatura</h1>
-          <div class="subtitle">${courseLabel}</div>
-        </div>
-        <button class="print-btn no-print" onclick="window.print()">Imprimir PDF</button>
+      <div class="header-container">
+        <div class="header-title">Previsão de Formatura</div>
+        <div class="header-subtitle">${courseLabel}</div>
+        <div class="header-date">Gerado em ${exportDate}</div>
       </div>
 
       ${semestersHtml}
 
-      <div class="footer-note">
-        <strong>Resumo:</strong> ${semesterCards.value.length} semestre(s) restante(s), ${totalMandatoryRemaining.value} crédito(s) obrigatório(s) + ${totalElectiveRemaining.value} crédito(s) eletivo(s) no total.
-        Além disso, o currículo exige ${graduationRequirements.value.complementary} créditos de atividades complementares, que não ocupam horário de aula e por isso não aparecem nos semestres acima.
+      <div class="summary-section">
+        <strong>Resumo da Previsão</strong>
+        <div class="summary-item"><strong>Semestres restantes:</strong> ${semesterCards.value.length}</div>
+        <div class="summary-item"><strong>Créditos obrigatórios:</strong> ${totalMandatoryRemaining.value} cr</div>
+        <div class="summary-item"><strong>Créditos eletivos:</strong> ${totalElectiveRemaining.value} cr</div>
+        <div class="summary-item"><strong>Atividades complementares:</strong> ${graduationRequirements.value.complementary} cr (não aparecem nos semestres)</div>
+        <div class="summary-item" style="margin-top: 6px; font-size: 9px; color: #666;">
+          <em>Nota: Verifique sempre a disponibilidade de turmas no Portal do Aluno antes de se matricular. Esta previsão é baseada na oferta atual e pode sofrer alterações.</em>
+        </div>
       </div>
     </body>
     </html>
