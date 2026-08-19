@@ -24,7 +24,7 @@ const staleNotice = ref(false)
 const postponedBySemester = ref([]) // paralelo a semesters.value - só preenchido pelo próprio recálculo, não persistido
 const frozenCourses = ref({}) // mapa { courseCode: semesterIndex } para cursos congelados a semestres
 
-const planPrefs = reactive({ avoidScheduleConflicts: true, groupByCampus: false, limitHardSubjects: false })
+const planPrefs = reactive({ avoidScheduleConflicts: true, groupByCampus: false, limitHardSubjects: false, avoidRestrictedElectives: false })
 const MAX_HARD_PER_SEMESTER = 2 // ponytail: teto fixo, virar configurável se pedirem ajuste fino
 
 function loadPlanPrefs() {
@@ -217,7 +217,7 @@ function getTurmasForCodes(codes) {
   const codesSet = new Set(codes.map(c => c.toUpperCase()))
   return dataService.getTurmas().filter(t => {
     const code = (t.course_code || t.course_id || '').toUpperCase()
-    return codesSet.has(code) && t.semester === '2026/2' && curriculumService.matchesSelectedCurriculum(t.curriculums, selectedCourse.value)
+    return codesSet.has(code) && t.semester === dataService.getCurrentSemester() && curriculumService.matchesSelectedCurriculum(t.curriculums, selectedCourse.value)
   })
 }
 
@@ -229,7 +229,7 @@ function getOtherCurriculumOfferedCodes() {
   const otherCourse = curriculumService.normalizeCurriculumCode(selectedCourse.value) === 'ECP' ? 'CIC' : 'ECP'
   return new Set(
     dataService.getTurmas(otherCourse)
-      .filter(t => t.semester === '2026/2')
+      .filter(t => t.semester === dataService.getCurrentSemester())
       .map(t => (t.course_code || t.course_id || '').toUpperCase())
   )
 }
@@ -415,6 +415,10 @@ function autoCompleteElectives() {
   let placeholdersBlockedBySchedule = 0
 
   const canAdd = planPrefs.avoidScheduleConflicts ? makeCanAdd() : null
+  // Códigos com turma neste período só pro outro currículo - reaproveita a mesma checagem
+  // usada em "Verificar disponibilidade de horário" (ver getOtherCurriculumOfferedCodes acima).
+  const otherCurriculumOnlyCodes = planPrefs.avoidRestrictedElectives ? getOtherCurriculumOfferedCodes() : null
+  const ownOfferedCodes = planPrefs.avoidRestrictedElectives ? new Set(getTurmasForCodes(catalog.map(c => c.code)).map(t => (t.course_code || t.course_id || '').toUpperCase())) : null
 
   const newSemesters = semesters.value.map((semesterCodes, semIndex) => {
     const cumulative = cumulativeCompletedBefore(semIndex)
@@ -436,6 +440,7 @@ function autoCompleteElectives() {
         const codeUpper = c.code.toUpperCase()
         if (cumulative.has(codeUpper) || usedElectiveCodes.has(codeUpper)) return false
         if (c.credits !== requiredCredits) return false
+        if (otherCurriculumOnlyCodes && otherCurriculumOnlyCodes.has(codeUpper) && !ownOfferedCodes.has(codeUpper)) return false
         const prereqs = c.prerequisites || []
         return prereqs.every(p => {
           const upper = (p || '').toUpperCase()
@@ -940,7 +945,10 @@ function openSchedulePreview(sem) {
 
         <v-divider class="mb-4"></v-divider>
 
-        <div class="d-flex align-center flex-wrap ga-4">
+        <div class="text-caption text-medium-emphasis font-weight-bold text-uppercase mb-1">
+          Opções da previsão
+        </div>
+        <div class="d-flex align-center flex-wrap ga-4 mb-4">
           <v-text-field
             v-model.number="creditLimit"
             type="number"
@@ -951,6 +959,9 @@ function openSchedulePreview(sem) {
             style="max-width: 260px; min-width: 220px"
             hide-details
           ></v-text-field>
+          <v-btn color="primary" variant="flat" class="rounded-lg font-weight-bold" prepend-icon="mdi-refresh" @click="recalculate">
+            Recalcular Previsão
+          </v-btn>
           <v-checkbox
             v-model="planPrefs.avoidScheduleConflicts"
             label="Evitar conflitos de horário"
@@ -973,9 +984,12 @@ function openSchedulePreview(sem) {
             hide-details
             class="flex-grow-0"
           ></v-checkbox>
-          <v-btn color="primary" variant="flat" class="rounded-lg font-weight-bold" prepend-icon="mdi-refresh" @click="recalculate">
-            Recalcular Previsão
-          </v-btn>
+        </div>
+
+        <div class="text-caption text-medium-emphasis font-weight-bold text-uppercase mb-1">
+          Ações
+        </div>
+        <div class="d-flex align-center flex-wrap ga-4">
           <v-btn
             color="success"
             variant="flat"
@@ -995,17 +1009,27 @@ function openSchedulePreview(sem) {
           >
             Exportar PDF
           </v-btn>
-          <v-btn
-            color="info"
-            variant="tonal"
-            class="rounded-lg font-weight-bold"
-            prepend-icon="mdi-auto-fix"
-            :disabled="!semesterCards.length"
-            title="Preencher automaticamente as eletivas com cursos elegíveis"
-            @click="autoCompleteElectives"
-          >
-            Auto completar eletivas
-          </v-btn>
+          <div class="d-flex align-center ga-2 flex-grow-0">
+            <v-btn
+              color="info"
+              variant="tonal"
+              class="rounded-lg font-weight-bold"
+              prepend-icon="mdi-auto-fix"
+              :disabled="!semesterCards.length"
+              title="Preencher automaticamente as eletivas com cursos elegíveis"
+              @click="autoCompleteElectives"
+            >
+              Auto completar eletivas
+            </v-btn>
+            <v-checkbox
+              v-model="planPrefs.avoidRestrictedElectives"
+              label="Só com turma no seu currículo"
+              density="compact"
+              hide-details
+              class="flex-grow-0"
+              title="Ao auto completar eletivas, ignora as que só têm turma aberta pra outro currículo neste período"
+            ></v-checkbox>
+          </div>
           <v-btn variant="text" class="rounded-lg font-weight-bold" prepend-icon="mdi-bookmark-multiple-outline" @click="emit('change-page', 'saved_graduation_plans')">
             Previsões Salvas
           </v-btn>

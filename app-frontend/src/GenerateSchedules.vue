@@ -662,8 +662,9 @@ const loadCourses = async () => {
 }
 
 const loadSemesters = async () => {
-  semestersList.value = ['2026/2']
-  selectedSemester.value = '2026/2'
+  const current = dataService.getCurrentSemester()
+  semestersList.value = [current]
+  selectedSemester.value = current
 }
 
 const loadDesiredCourses = async () => {
@@ -795,7 +796,7 @@ const loadSectionsForSemester = async () => {
 }
 
 watch(selectedSemester, (val) => {
-  if (val) localStorage.setItem('ufrgs_selected_semester', val)
+  if (val) dataService.setCurrentSemester(val)
   loadSectionsForSemester()
 })
 

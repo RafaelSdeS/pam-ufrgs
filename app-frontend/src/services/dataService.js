@@ -34,7 +34,17 @@ const STORAGE_KEYS = {
 
 const DEFAULT_PLAN_PREFERENCES = { avoidScheduleConflicts: true, groupByCampus: false, limitHardSubjects: false }
 
+const CURRENT_SEMESTER = '2026/2' // ponytail: só existe 1 semestre hoje; trocar aqui na virada
+
 export const dataService = {
+  getCurrentSemester() {
+    return localStorage.getItem('ufrgs_selected_semester') || CURRENT_SEMESTER
+  },
+
+  setCurrentSemester(semester) {
+    localStorage.setItem('ufrgs_selected_semester', semester)
+  },
+
   _getScopedKey(baseKey, courseCode = null) {
     const code = (courseCode || curriculumService.getSelectedCourse() || 'CIC').toUpperCase()
     return `${baseKey}_${code}`
@@ -190,7 +200,7 @@ export const dataService = {
       rawDate = academicData.last_updated[selectedCode] || academicData.last_updated['CIC'] || Object.values(academicData.last_updated)[0]
     }
     if (!rawDate) {
-      rawDate = academicData.last_updated || '2026/2'
+      rawDate = academicData.last_updated || this.getCurrentSemester()
     }
     if (typeof rawDate === 'string') {
       if (/^\d{4}-\d{2}-\d{2}\s+\d{2}:\d{2}/.test(rawDate)) {
@@ -212,7 +222,7 @@ export const dataService = {
   getCourseObservation(courseCode, semester = null) {
     if (!courseCode) return null
     const equivalentNote = this._getEquivalentCourseNote(courseCode)
-    const targetSemester = semester || curriculumService.selectedSemesterRef?.value || '2026/2'
+    const targetSemester = semester || this.getCurrentSemester()
     const turmas = this.getTurmas().filter(t => (t.course_code === courseCode || t.course_id === courseCode) && (!semester || t.semester === targetSemester))
     const obsMap = new Map()
     turmas.forEach(t => {
@@ -246,7 +256,7 @@ export const dataService = {
 
   getSectionObservation(courseCode, sectionCode, semester = null) {
     if (!courseCode || !sectionCode) return null
-    const targetSemester = semester || curriculumService.selectedSemesterRef?.value || '2026/2'
+    const targetSemester = semester || this.getCurrentSemester()
     const turma = this.getTurmas().find(t => (t.course_code === courseCode || t.course_id === courseCode) && t.section_code === sectionCode && (!semester || t.semester === targetSemester))
     if (turma && turma.observacao && typeof turma.observacao === 'string' && turma.observacao.trim()) {
       return turma.observacao.trim()
@@ -419,7 +429,7 @@ export const dataService = {
         course_code: currentCode,
         course_name: currentName,
         section_code: sectionCode,
-        semester: '2026/2',
+        semester: this.getCurrentSemester(),
         capacity: capacity,
         observacao: observacao,
         professor_name: profRaw.replace(/\n+/g, ' ').trim(),

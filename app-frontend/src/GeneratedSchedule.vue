@@ -318,7 +318,7 @@ const loadSchedules = async () => {
     const selectedCourseCodesSet = new Set((selectedCourses || []).map(c => c.code || c.id || c))
     const allTurmas = dataService.getTurmas()
     const turmas = allTurmas.filter(t => {
-      const semMatch = t.semester === '2026/2'
+      const semMatch = t.semester === dataService.getCurrentSemester()
       const isSelected = selectedCourseCodesSet.has(t.course_code) || selectedCourseCodesSet.has(t.course_id)
       const disciplineMatch = isSelected || courseCodesSet.has(t.course_code) || courseCodesSet.has(t.course_id)
       const currMatch = curriculumService.matchesSelectedCurriculum(t.curriculums, selectedCourseCode)
@@ -330,6 +330,10 @@ const loadSchedules = async () => {
       if (c.code) courseNameMap[c.code] = c.name
       if (c.id) courseNameMap[c.id] = c.name
     })
+
+    // Cede o main thread antes da busca síncrona pesada, senão a barra de loading
+    // nunca chega a pintar na tela (fica tudo travado até o resultado sair).
+    await new Promise(resolve => setTimeout(resolve, 0))
 
     const raw = scheduleGeneratorService.generateRankedSchedules({
       selectedCourses,
@@ -344,7 +348,7 @@ const loadSchedules = async () => {
       const otherCourseCode = curriculumService.normalizeCurriculumCode(selectedCourseCode) === 'ECP' ? 'CIC' : 'ECP'
       const otherCurriculumCodes = new Set(
         dataService.getTurmas(otherCourseCode)
-          .filter(t => t.semester === '2026/2')
+          .filter(t => t.semester === dataService.getCurrentSemester())
           .map(t => (t.course_code || t.course_id || '').toUpperCase())
       )
       const diag = scheduleGeneratorService.diagnoseConflicts(selectedCourses, turmas, restrictions, otherCurriculumCodes)
@@ -609,7 +613,7 @@ const exportToPDF = (gradeObj, scheduleIndex) => {
   const printHourHeight = Math.min(56, Math.max(36, Math.floor(620 / numHours)))
   const printScaleY = printHourHeight / 60
   const printTotalHeight = numHours * printHourHeight
-  const semesterStr = gradeObj.semester || localStorage.getItem('ufrgs_selected_semester') || '2026/2'
+  const semesterStr = gradeObj.semester || dataService.getCurrentSemester()
   
   // 1. Generate the table rows for the summary (deduplicated across all courses and electives)
   const uniqueSectionsMap = new Map()

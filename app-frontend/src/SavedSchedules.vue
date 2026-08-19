@@ -312,7 +312,7 @@ const exportToPDF = (gradeObj) => {
   const printHourHeight = Math.min(56, Math.max(36, Math.floor(620 / numHours)))
   const printScaleY = printHourHeight / 60
   const printTotalHeight = numHours * printHourHeight
-  const semesterStr = gradeObj.semester || localStorage.getItem('ufrgs_selected_semester') || '2026/2'
+  const semesterStr = gradeObj.semester || dataService.getCurrentSemester()
   
   const uniqueSectionsMap = new Map()
   ;(gradeObj.items || []).forEach(item => {
