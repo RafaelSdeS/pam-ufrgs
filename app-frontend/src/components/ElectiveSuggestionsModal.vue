@@ -310,7 +310,7 @@ defineExpose({
                     :disabled="Boolean(course.ineligibleReason)"
                     @click="handleAddSection(course, section)"
                   >
-                    {{ isSavedGrade ? 'Adicionar à Grade Salva' : 'Salvar grade e adicionar eletiva' }}
+                    {{ isSavedGrade ? 'Adicionar à Grade Salva' : 'Adicionar Eletiva' }}
                   </v-btn>
                 </div>
               </div>

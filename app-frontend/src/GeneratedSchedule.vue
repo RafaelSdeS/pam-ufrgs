@@ -496,8 +496,7 @@ const openElectivesModal = (gradeObj) => {
 
 const onAddElectiveSection = ({ gradeObj, section, course }) => {
   if (!gradeObj || !section) return
-  const newGrade = JSON.parse(JSON.stringify(gradeObj))
-  if (!newGrade.items) newGrade.items = []
+  if (!gradeObj.items) gradeObj.items = []
 
   const allCourses = dataService.getAllCourses()
   const courseNameMap = {}
@@ -508,7 +507,7 @@ const onAddElectiveSection = ({ gradeObj, section, course }) => {
 
   if (Array.isArray(section.schedules)) {
     section.schedules.forEach(sched => {
-      newGrade.items.push({
+      gradeObj.items.push({
         id: sched.id || (Date.now() + Math.random()),
         section_id: section.section_id || section.id,
         section_code: section.section_code || section.section_id,
@@ -535,8 +534,8 @@ const onAddElectiveSection = ({ gradeObj, section, course }) => {
     })
   }
 
-  const sortedItems = sortSchedule(newGrade.items)
-  newGrade.items = sortedItems
+  const sortedItems = sortSchedule(gradeObj.items)
+  gradeObj.items = sortedItems
 
   let minStartMin = Infinity
   let maxEndMin = -Infinity
@@ -567,30 +566,13 @@ const onAddElectiveSection = ({ gradeObj, section, course }) => {
     }
   })
 
-  newGrade.groupedByDay = groupedByDay
-  newGrade.startHour = startHour
-  newGrade.endHour = endHour
-  newGrade.totalHeight = (endHour - startHour + 1) * HOUR_HEIGHT
-  const count = new Set(sortedItems.map(i => i.course_code || i.course_id)).size
-  newGrade.selected_course_count = count
+  gradeObj.groupedByDay = groupedByDay
+  gradeObj.startHour = startHour
+  gradeObj.endHour = endHour
+  gradeObj.totalHeight = (endHour - startHour + 1) * HOUR_HEIGHT
+  gradeObj.selected_course_count = new Set(sortedItems.map(i => i.course_code || i.course_id)).size
 
-  const saved = dataService.getSavedSchedules()
-  const name = `Grade (${count} disciplinas, incl. Eletiva ${course.code || ''}) - ${new Date().toLocaleDateString('pt-BR')}`
-  const newSchedule = {
-    id: Date.now() + Math.random(),
-    name,
-    createdAt: new Date().toISOString(),
-    items: newGrade.items,
-    groupedByDay: newGrade.groupedByDay,
-    startHour: newGrade.startHour,
-    endHour: newGrade.endHour,
-    totalHeight: newGrade.totalHeight,
-    score: newGrade.score || 0,
-    selected_course_count: count
-  }
-  saved.push(newSchedule)
-  dataService.saveSavedSchedules(saved)
-  showSnackbar(`Grade salva em 'Grades Salvas' com a eletiva "${course.code} - ${course.name}" adicionada!`, 'success')
+  showSnackbar(`Eletiva "${course.code} - ${course.name}" adicionada à grade!`, 'success')
 }
 
 const formatPrintRoom = (room) => {
