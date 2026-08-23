@@ -534,6 +534,13 @@ const onAddElectiveSection = ({ gradeObj, section, course }) => {
     })
   }
 
+  recomputeGradeLayout(gradeObj)
+  showSnackbar(`Eletiva "${course.code} - ${course.name}" adicionada à grade!`, 'success')
+}
+
+// Recalcula os campos derivados (ordenação, faixa de horário, agrupamento por dia) depois de
+// qualquer alteração em gradeObj.items - usado tanto ao adicionar quanto ao remover uma eletiva.
+const recomputeGradeLayout = (gradeObj) => {
   const sortedItems = sortSchedule(gradeObj.items)
   gradeObj.items = sortedItems
 
@@ -571,8 +578,15 @@ const onAddElectiveSection = ({ gradeObj, section, course }) => {
   gradeObj.endHour = endHour
   gradeObj.totalHeight = (endHour - startHour + 1) * HOUR_HEIGHT
   gradeObj.selected_course_count = new Set(sortedItems.map(i => i.course_code || i.course_id)).size
+}
 
-  showSnackbar(`Eletiva "${course.code} - ${course.name}" adicionada à grade!`, 'success')
+const removeElectiveFromSchedule = (gradeObj, item) => {
+  if (!gradeObj || !item) return
+  const sectionId = item.section_id
+  const removedName = `${item.course_code} - ${item.course_name}`
+  gradeObj.items = (gradeObj.items || []).filter(i => i.section_id !== sectionId)
+  recomputeGradeLayout(gradeObj)
+  showSnackbar(`Eletiva "${removedName}" removida da grade.`, 'success')
 }
 
 const formatPrintRoom = (room) => {
@@ -1607,9 +1621,20 @@ onMounted(() => {
                             </v-icon>
                           </span>
                         </div>
-                        <v-chip size="small" :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))" variant="flat" class="font-weight-bold">
-                          {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
-                        </v-chip>
+                        <div class="d-flex align-center ga-1">
+                          <v-chip size="small" :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))" variant="flat" class="font-weight-bold">
+                            {{ item.start_time.slice(0,5) }} às {{ item.end_time.slice(0,5) }}
+                          </v-chip>
+                          <v-btn
+                            v-if="isElectiveItem(item)"
+                            icon="mdi-close"
+                            size="x-small"
+                            variant="text"
+                            color="error"
+                            title="Remover eletiva desta grade"
+                            @click="removeElectiveFromSchedule(gradeObj, item)"
+                          ></v-btn>
+                        </div>
                       </div>
 
                       <div class="d-flex align-center ga-4 text-body-2 flex-wrap">
@@ -1712,9 +1737,19 @@ onMounted(() => {
                               :color="getCampusColor(item.campus, getCellConflict(gradeObj.items, item))"
                               class="pa-2 rounded-xl text-left class-card cursor-pointer"
                               elevation="0"
-                              :class="{ 'conflict-border': getCellConflict(gradeObj.items, item) }"
+                              :class="{ 'conflict-border': getCellConflict(gradeObj.items, item), 'elective-card-hatched': isElectiveItem(item) }"
                               :style="getCardStyle(item, gradeObj.startHour)"
                             >
+                              <v-btn
+                                v-if="isElectiveItem(item)"
+                                icon="mdi-close"
+                                size="x-small"
+                                variant="flat"
+                                color="error"
+                                class="elective-remove-btn"
+                                title="Remover eletiva desta grade"
+                                @click.stop="removeElectiveFromSchedule(gradeObj, item)"
+                              ></v-btn>
                               <div class="text-caption font-weight-bold card-title-clamp d-flex align-center justify-space-between ga-1">
                                 <div class="d-flex align-center ga-1">
                                   <span v-if="hasCampusWarning(gradeObj.items, item)" title="Campus não informado em aula próxima a outra">⚠️</span>
@@ -2138,6 +2173,14 @@ onMounted(() => {
 
 .elective-card-hatched {
   border: 1.5px dashed currentColor !important;
+}
+
+.elective-remove-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  z-index: 5;
+  opacity: 0.85;
 }
 
 .card-title-clamp {
