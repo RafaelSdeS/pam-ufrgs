@@ -65,6 +65,8 @@ Para atualizar as disciplinas e vagas com os dados do Portal do Aluno da UFRGS, 
    ```
    Acesse a aplicação no navegador em: `http://localhost:5173`
 
+   Isso já é suficiente para usar geração de grade, matriz curricular, previsão de formatura, exportação em PDF/.ics etc. O **Assistente de IA** é a exceção: ele depende de um worker próprio (`ai-worker/`, feito para Cloudflare Workers) com uma chave da Groq configurada como secret, e de um `app-frontend/.env` apontando `VITE_AI_WORKER_URL` para esse worker. Sem isso, o resto do app funciona normalmente e só o assistente retorna erro de configuração ausente.
+
 ### Para publicar em um servidor
 
 A nossa aplicação gera arquivos estáticos (HTML, CSS e JavaScript), não precisando de servidor por trás.
